@@ -1,0 +1,74 @@
+# Dated moments. On the day (and lead_days before), one "engage" slot is swapped for this post.
+# needs_offer: the post stays off until that offer is enabled with text in config.yaml.
+- date: '2026-10-19'
+  lead_days: 1
+  k: NATIONAL HEROES DAY
+  h: Happy Heroes Day.
+  b: Honouring the people who built Jamaica. Enjoy the holiday safely.
+- date: '2026-12-24'
+  lead_days: 3
+  k: CHRISTMAS IN JAMAICA
+  h: Coming home for Christmas?
+  b: Book your ride before you land. arahrides.com
+- date: '2026-12-25'
+  lead_days: 0
+  k: MERRY CHRISTMAS
+  h: Merry Christmas, Jamaica.
+  b: From all of us at Arah Rides.
+- date: '2026-12-26'
+  lead_days: 0
+  k: BOXING DAY
+  h: Boxing Day road trip?
+  b: Pick your car and your beach.
+- date: '2026-12-31'
+  lead_days: 1
+  k: NEW YEAR
+  h: See in the new year.
+  b: Wishing you safe roads and big adventures.
+- date: '2027-01-01'
+  lead_days: 0
+  k: HAPPY NEW YEAR
+  h: Happy New Year.
+  b: Here is to more road trips in 2027.
+- date: '2027-02-06'
+  lead_days: 1
+  k: REGGAE MONTH
+  h: Reggae Month is here.
+  b: Put the playlist on and hit the road.
+- date: '2027-02-14'
+  lead_days: 2
+  k: VALENTINE'S WEEKEND
+  h: Plan a date with a view.
+  b: Pick a car and a coastline.
+- date: '2027-03-28'
+  lead_days: 3
+  k: EASTER WEEKEND
+  h: Easter weekend plans?
+  b: Book early and plan your route.
+- date: '2027-05-09'
+  lead_days: 1
+  k: MOTHER'S DAY
+  h: Happy Mother's Day.
+  b: Take her somewhere beautiful.
+- date: '2027-08-01'
+  lead_days: 1
+  k: EMANCIPATION DAY
+  h: Emancipation Day.
+  b: Reflect, celebrate and travel safely.
+- date: '2027-08-06'
+  lead_days: 2
+  k: INDEPENDENCE DAY
+  h: Happy Independence Day, Jamaica.
+  b: Jamaica 🇯🇲 proud. Rent Jamaican.
+- date: '2026-11-27'
+  lead_days: 0
+  k: BLACK FRIDAY
+  h: Black Friday.
+  b: '{offer}'
+  needs_offer: black_friday
+- date: '2026-11-30'
+  lead_days: 0
+  k: CYBER MONDAY
+  h: Cyber Monday.
+  b: '{offer}'
+  needs_offer: black_friday

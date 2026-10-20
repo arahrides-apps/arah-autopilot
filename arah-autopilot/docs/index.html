@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arah Review Queue</title>
+<style>
+:root{--g:#0B6B3A;--y:#E8A93A;--c:#F1ECE0;--k:#1A1F1C;--bg:#F1ECE0;--card:#fff;--mut:#5b645e;--line:#d9d2c0;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root{--bg:#141815;--card:#1d231f;--c:#F1ECE0;--k:#F1ECE0;--mut:#a3aea6;--line:#2f3832}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--k);font:16px/1.4 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--g);color:#F1ECE0;padding:12px 16px;display:flex;align-items:center;gap:12px}
+header h1{font-size:18px;margin:0;flex:1}header button{background:transparent;color:#F1ECE0;border:1px solid #F1ECE066;border-radius:8px;padding:6px 10px;font-size:14px}
+main{max-width:1100px;margin:0 auto;padding:16px}
+.note{background:#fff3d6;color:#4a3a10;border-left:4px solid var(--y);padding:10px 12px;border-radius:8px;margin:0 0 10px;font-size:14px}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;margin-bottom:8px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--k);border-radius:20px;padding:8px 14px;white-space:nowrap;font-size:14px;cursor:pointer}
+.tab.on{background:var(--g);color:#F1ECE0;border-color:var(--g)}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 14px}.bar b{flex:1;min-width:160px}
+.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;font-size:15px;cursor:pointer}
+.ok{background:var(--g);color:#F1ECE0}.no{background:transparent;color:var(--bad);border:1px solid var(--bad)}.ghost{background:transparent;color:var(--mut);border:1px solid var(--line)}
+.btn:disabled{opacity:.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card.approved{border-color:var(--g);box-shadow:0 0 0 2px var(--g) inset}.card.rejected{opacity:.55}
+.imgs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:#000}.imgs img{width:100%;flex:0 0 100%;scroll-snap-align:center;display:block;aspect-ratio:4/5;object-fit:cover}
+.meta{padding:10px 12px 0;display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mut)}
+.chip{background:var(--y);color:#1A1F1C;border-radius:6px;padding:2px 8px;font-weight:700;font-size:12px}
+.st{margin-left:auto;font-weight:700}.st.approved,.st.published{color:var(--g)}.st.rejected,.st.skipped,.st.failed{color:var(--bad)}
+.flags{padding:6px 12px 0;font-size:13px;color:#7a4b00}.flags div:before{content:"⚠ "}
+textarea{margin:8px 12px 0;width:calc(100% - 24px);min-height:130px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:14px;background:transparent;color:inherit;resize:vertical}
+.cnt{padding:2px 12px;font-size:12px;color:var(--mut)}.cnt.bad{color:var(--bad);font-weight:700}
+.act{display:flex;gap:8px;padding:10px 12px 12px;margin-top:auto}.act .btn{flex:1}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--k);max-width:520px;width:calc(100% - 24px)}
+dialog input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;margin:4px 0 12px;background:transparent;color:inherit}
+dialog label{font-size:13px;color:var(--mut)}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#1A1F1C;color:#fff;padding:10px 16px;border-radius:10px;display:none;z-index:9}
+.empty{padding:40px 10px;text-align:center;color:var(--mut)}
+</style></head><body>
+<header><h1>Arah Rides · Review queue</h1><button id="refresh">Refresh</button><button id="gear">Settings</button></header>
+<main>
+ <div id="notes"></div>
+ <div class="tabs" id="tabs"></div>
+ <div id="day"></div>
+</main>
+<dialog id="dlg"><form method="dialog">
+ <h3 style="margin-top:0">Connect to GitHub</h3>
+ <p style="font-size:14px;color:var(--mut)">One-time setup. The token only lives in this browser and lets this page save your approvals. Use a fine-grained token limited to this one repository with <b>Contents: Read and write</b>.</p>
+ <label>Repository (owner/name)</label><input id="repo" placeholder="yourname/arah-autopilot">
+ <label>Branch</label><input id="branch" value="main">
+ <label>Token</label><input id="tok" type="password" placeholder="github_pat_...">
+ <div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn ghost" value="cancel">Close</button><button class="btn ok" id="save" value="default">Save</button></div>
+</form></dialog>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+let S={repo:LS.get("repo"),branch:LS.get("branch")||"main",tok:LS.get("tok")};
+if(!S.repo){const h=location.hostname.match(/^(.+)\.github\.io$/),p=location.pathname.split("/")[1];if(h&&p)S.repo=h[1]+"/"+p}
+let IDX={posts:[],notes:[]},DEC={},PUB={},DAY=null;
+const toast=m=>{const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display="none",2600)};
+const api=(path,opt={})=>fetch(`https://api.github.com/repos/${S.repo}/${path}`,{...opt,headers:{Accept:"application/vnd.github+json",...(S.tok?{Authorization:"Bearer "+S.tok}:{}),...(opt.headers||{})}});
+const dec64=s=>decodeURIComponent(escape(atob(s.replace(/\n/g,""))));
+const enc64=s=>btoa(unescape(encodeURIComponent(s)));
+async function load(){
+  const bust="?t="+Date.now();
+  try{IDX=await (await fetch("index.json"+bust)).json()}catch(e){IDX={posts:[],notes:["Could not load the queue yet."]}}
+  try{PUB=await (await fetch("published.json"+bust)).json()}catch(e){PUB={}}
+  DEC={};
+  if(S.repo){
+    try{
+      const r=await api(`contents/docs/decisions?ref=${S.branch}&t=${Date.now()}`);
+      if(r.ok){const files=(await r.json()).filter(f=>f.name.endsWith(".json"));
+        await Promise.all(files.map(async f=>{try{const x=await (await api(`contents/docs/decisions/${f.name}?ref=${S.branch}`)).json();const d=JSON.parse(dec64(x.content));DEC[d.id]={...d,sha:x.sha}}catch(e){}}))}
+    }catch(e){}
+  }
+  render();
+}
+function status(p){const u=PUB[p.id];if(u&&u.status!=="retrying")return u.status;const d=DEC[p.id];if(d&&d.decision!=="pending")return d.decision==="approve"?"approved":"rejected";return "pending"}
+function render(){
+  $("#notes").innerHTML=(IDX.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join("")+(S.tok&&S.repo?"":'<div class="note">Tap <b>Settings</b> and add your GitHub token so Approve works.</div>');
+  const days=[...new Set(IDX.posts.map(p=>p.date))].sort();
+  if(!DAY||!days.includes(DAY))DAY=days.find(d=>IDX.posts.some(p=>p.date===d&&status(p)==="pending"))||days[0];
+  $("#tabs").innerHTML=days.map(d=>{const ps=IDX.posts.filter(p=>p.date===d),a=ps.filter(p=>["approved","published"].includes(status(p))).length;return `<div class="tab ${d===DAY?"on":""}" data-d="${d}">${fmtDay(d)} · ${a}/${ps.length}</div>`}).join("");
+  document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{DAY=t.dataset.d;render()});
+  const ps=IDX.posts.filter(p=>p.date===DAY).sort((a,b)=>a.slot.localeCompare(b.slot));
+  if(!ps.length){$("#day").innerHTML='<div class="empty">Nothing queued yet. New days are drafted automatically each evening.</div>';return}
+  const pend=ps.filter(p=>status(p)==="pending").length;
+  $("#day").innerHTML=`<div class="bar"><b>${fmtDay(DAY,true)}: ${ps.length} posts</b><button class="btn ok" id="all" ${pend&&S.tok?"":"disabled"}>Approve all ${pend} pending</button></div><div class="grid">${ps.map(card).join("")}</div>`;
+  $("#all")&&($("#all").onclick=approveAll);
+  document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>act(b.dataset.id,b.dataset.a));
+  document.querySelectorAll("textarea").forEach(t=>t.oninput=()=>cnt(t));
+  document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=async()=>{const v=$("#t-"+b.dataset.copy).value;try{await navigator.clipboard.writeText(v);toast("Caption copied")}catch(e){const t=$("#t-"+b.dataset.copy);t.select();document.execCommand("copy");toast("Caption copied")}});
+}
+const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fmtDay(d,l){const x=new Date(d+"T12:00:00");return x.toLocaleDateString(undefined,l?{weekday:"long",month:"long",day:"numeric"}:{weekday:"short",month:"short",day:"numeric"})}
+function fmtTime(s){const m=s.match(/T(\d\d):(\d\d)/);let h=+m[1];return `${h%12||12}:${m[2]} ${h<12?"AM":"PM"}`}
+function card(p){
+  const s=status(p),d=DEC[p.id],cap=(d&&d.caption)||p.caption,locked=["published","skipped"].includes(s),u=PUB[p.id]||{};
+  return `<div class="card ${s}" id="c-${p.id}"><div class="imgs">${p.images.map(i=>`<img loading="lazy" src="${i}" alt="${esc(p.alt)}">`).join("")}</div>
+  <div class="meta"><span class="chip">${p.type.replace("_"," ")}</span><span>${fmtTime(p.slot)}</span>${p.images.length>1?`<span>${p.images.length} slides</span>`:""}<span class="st ${s}">${s}</span></div>
+  ${(p.flags||[]).length?`<div class="flags">${p.flags.map(f=>`<div>${esc(f)}</div>`).join("")}</div>`:""}
+  <textarea id="t-${p.id}" ${locked?"disabled":""}>${esc(cap)}</textarea><div class="cnt" id="n-${p.id}"></div>
+  ${u.permalink?`<div class="cnt"><a href="${u.permalink}" target="_blank">View on Instagram</a></div>`:""}${u.note&&!locked?`<div class="cnt bad">${esc(u.note)}</div>`:""}
+  <div class="act" style="padding-bottom:0"><button class="btn ghost" data-copy="${p.id}">Copy caption</button>${p.images.map((i,k)=>`<a class="btn ghost" style="text-align:center;text-decoration:none" href="${i}" download="${p.id}_${k+1}.jpg">Image${p.images.length>1?" "+(k+1):""}</a>`).join("")}</div>
+  <div class="act">${locked?"":`<button class="btn ok" data-a="approve" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"?"Save edit":"Approve"}</button><button class="btn no" data-a="reject" data-id="${p.id}" ${S.tok?"":"disabled"}>Reject</button>${s!=="pending"?`<button class="btn ghost" data-a="pending" data-id="${p.id}" ${S.tok?"":"disabled"}>Undo</button>`:""}`}</div></div>`
+}
+function cnt(t){const id=t.id.slice(2),n=$("#n-"+id),tags=(t.value.match(/#\w+/g)||[]).length,bad=tags>5||t.value.length>2200;n.textContent=`${t.value.length}/2200 characters · ${tags}/5 hashtags`;n.className="cnt"+(bad?" bad":"")}
+async function put(p,decision,caption){
+  const path=`contents/docs/decisions/${p.id}.json`;let sha=DEC[p.id]&&DEC[p.id].sha;
+  const body={id:p.id,decision,caption:caption&&caption!==p.caption?caption:null,at:new Date().toISOString()};
+  for(let i=0;i<3;i++){
+    const r=await api(path,{method:"PUT",body:JSON.stringify({message:`${decision} ${p.id}`,content:enc64(JSON.stringify(body,null,1)),branch:S.branch,...(sha?{sha}:{})})});
+    if(r.ok){const j=await r.json();DEC[p.id]={...body,sha:j.content.sha};return true}
+    if(r.status===409||r.status===422){const g=await api(path+"?ref="+S.branch);if(g.ok)sha=(await g.json()).sha;continue}
+    toast(r.status===401||r.status===403||r.status===404?"GitHub says no: check your token in Settings":"Save failed ("+r.status+")");return false
+  }
+  return false
+}
+async function act(id,a){
+  const p=IDX.posts.find(x=>x.id===id),t=$("#t-"+id).value;
+  if(a==="approve"){const tags=(t.match(/#\w+/g)||[]).length;if(tags>5||t.length>2200){toast("Fix the caption first: max 5 hashtags");return}}
+  document.querySelectorAll(`#c-${id} .btn`).forEach(b=>b.disabled=true);
+  const ok=await put(p,a==="approve"?"approve":a==="reject"?"reject":"pending",t);
+  if(ok)toast(a==="approve"?"Approved":a==="reject"?"Rejected":"Back to pending");
+  render();document.querySelectorAll("textarea").forEach(cnt)
+}
+async function approveAll(){
+  const ps=IDX.posts.filter(p=>p.date===DAY&&status(p)==="pending");
+  if(!confirm(`Approve all ${ps.length} pending posts for this day? Check the warnings first.`))return;
+  $("#all").disabled=true;let n=0;
+  for(const p of ps){const t=$("#t-"+p.id).value;if(await put(p,"approve",t)){n++;toast(`Approved ${n}/${ps.length}`)}else break}
+  render();document.querySelectorAll("textarea").forEach(cnt)
+}
+$("#refresh").onclick=()=>{toast("Refreshing");load()};
+$("#gear").onclick=()=>{$("#repo").value=S.repo;$("#branch").value=S.branch;$("#tok").value=S.tok;$("#dlg").showModal()};
+$("#save").onclick=()=>{S.repo=$("#repo").value.trim();S.branch=$("#branch").value.trim()||"main";S.tok=$("#tok").value.trim();LS.set("repo",S.repo);LS.set("branch",S.branch);LS.set("tok",S.tok);load()};
+load().then(()=>document.querySelectorAll("textarea").forEach(cnt));
+</script></body></html>
