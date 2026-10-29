@@ -48,6 +48,9 @@ sources:
   local:
     enabled: true
     dir: photos                                          # optional: drop extra photos here
+  unsplash:
+    enabled: true                                        # free key: unsplash.com/developers (New Application > Access Key)
+    api_key_env: UNSPLASH_ACCESS_KEY
   pexels:
     enabled: true                                        # free key: pexels.com/api
     api_key_env: PEXELS_API_KEY
