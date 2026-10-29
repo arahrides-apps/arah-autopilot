@@ -1,9 +1,13 @@
 name: Post approved
 on:
   schedule:
-    - cron: "*/10 * * * *"      # checks every 10 minutes (GitHub may run it a few minutes late)
+    - cron: "*/30 * * * *"      # GitHub often skips or delays short schedules, so each run keeps checking for ~20 minutes
   workflow_dispatch:
     inputs:
+      catch_up:
+        description: "Catch up: post everything approved and due right now"
+        type: boolean
+        default: true
       dry_run:
         description: "Dry run (do not post)"
         type: boolean
@@ -16,28 +20,32 @@ permissions:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pyyaml requests
-      - name: Post what is approved and due
+      - name: Post what is approved and due (checks 3 times, 10 minutes apart)
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           POST_WEBHOOK_URL: ${{ secrets.POST_WEBHOOK_URL }}
           MEDIA_BRANCH: ${{ github.ref_name }}
           DRY: ${{ inputs.dry_run }}
-        run: |
-          if [ "$DRY" = "true" ]; then python -m autopilot publish --dry-run; else python -m autopilot publish; fi
-      - name: Save results
+          CATCH: ${{ inputs.catch_up }}
         run: |
           git config user.name "arah-autopilot"
           git config user.email "autopilot@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet && exit 0
-          git commit -m "Post results"
-          git pull --rebase
-          git push
+          for i in 1 2 3; do
+            git pull --rebase || true
+            if [ "$DRY" = "true" ]; then python -m autopilot publish --dry-run
+            elif [ "$CATCH" = "true" ]; then python -m autopilot publish --catch-up
+            else python -m autopilot publish; fi
+            git add -A
+            if ! git diff --cached --quiet; then git commit -m "Post results"; git pull --rebase; git push; fi
+            [ "$i" = "3" ] && break
+            [ -n "$CATCH" ] && [ "$CATCH" = "true" ] && break
+            sleep 600
+          done
