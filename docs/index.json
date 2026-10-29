@@ -1,6 +1,8 @@
 {
- "generated": "2026-10-28T21:46:04.119618-05:00",
- "notes": [],
+ "generated": "2026-10-28T23:12:48.868914-05:00",
+ "notes": [
+  "Photo library is running thin: similar photos from the same shoot are coming back sooner than 14 days. Add new photos to the Drive folder."
+ ],
  "posts": [
   {
    "id": "2026-10-29_0630_car_hero",
@@ -128,14 +130,14 @@
     "media/2026-10-29/2026-10-29_1330_experience_1.jpg"
    ],
    "photo": {
-    "id": "drive:1giRDUN_1FNmHTgpFPfrHWv4Bwqig-3aM",
-    "name": "IMG_9913",
+    "id": "drive:1rpvr7NLz6JVSc7xGV3xTXn39NYg_kHw-",
+    "name": "IMG_9328",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Skip the tour bus. Take the back road. ✨\n\nPick your car, pick your route, discover the real Jamaica.\n\nRent a car and go see it for yourself.",
+   "copy_text": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.",
    "alt": "Scenery in Jamaica",
-   "caption": "Skip the tour bus. Take the back road. ✨\n\nPick your car, pick your route, discover the real Jamaica.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "caption": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -147,9 +149,9 @@
    "images": [
     "media/2026-10-29/2026-10-29_1430_tip_1.jpg"
    ],
-   "copy_text": "Patois 101: Big up. 💡\n\nIt means: A shout-out or praise.",
-   "alt": "Tip graphic: Big up.",
-   "caption": "Patois 101: Big up. 💡\n\nIt means: A shout-out or praise.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Respect. 💡\n\nIt means: A friendly greeting or thanks.",
+   "alt": "Tip graphic: Respect.",
+   "caption": "Patois 101: Respect. 💡\n\nIt means: A friendly greeting or thanks.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -249,21 +251,19 @@
    "date": "2026-10-30",
    "slot": "2026-10-30T06:30:00-05:00",
    "type": "car_hero",
-   "flags": [
-    "Number plate visible (kept sharp on purpose)"
-   ],
+   "flags": [],
    "images": [
     "media/2026-10-30/2026-10-30_0630_car_hero_1.jpg"
    ],
    "photo": {
-    "id": "drive:1TaQuXe6YwRr7Fa_aBsby9YjXNPZUtNtR",
-    "name": "IMG_9889",
+    "id": "drive:19EYWARPnpSbJ7_51rlgGsHQ9zJUE39yF",
+    "name": "DSC_1411",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Say Hi. Get a quote. 🚗\n\nWinston is on WhatsApp 24/7. No app to download.",
-   "alt": "A rental car in Jamaica. Say Hi. Get a quote.",
-   "caption": "Say Hi. Get a quote. 🚗\n\nWinston is on WhatsApp 24/7. No app to download.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #RoadTrip",
+   "copy_text": "Five pickup spots. One easy booking. 🚗\n\nKingston ArahPro, Norman Manley, Montego Bay, MBJ and OCJ.",
+   "alt": "A rental car in Jamaica. Five pickup spots. One easy booking.",
+   "caption": "Five pickup spots. One easy booking. 🚗\n\nKingston ArahPro, Norman Manley, Montego Bay, MBJ and OCJ.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #RoadTrip",
    "status": "pending"
   },
   {
@@ -275,9 +275,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_0730_qa_1.jpg"
    ],
-   "copy_text": "Can I pick up in Montego Bay? 🤔\n\nYes. Choose MBJ (Sangster) or our local Montego Bay offices.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: Can I pick up in Montego Bay?",
-   "caption": "Can I pick up in Montego Bay? 🤔\n\nYes. Choose MBJ (Sangster) or our local Montego Bay offices.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
+   "copy_text": "How high is Blue Mountain Peak? 🤔\n\n2,256 metres. It is Jamaica's highest point.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: How high is Blue Mountain Peak?",
+   "caption": "How high is Blue Mountain Peak? 🤔\n\n2,256 metres. It is Jamaica's highest point.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
    "status": "pending"
   },
   {
@@ -292,14 +292,14 @@
     "media/2026-10-30/2026-10-30_0830_experience_1.jpg"
    ],
    "photo": {
-    "id": "drive:1rpvr7NLz6JVSc7xGV3xTXn39NYg_kHw-",
-    "name": "IMG_9328",
+    "id": "drive:1io7SVt0NTld9trncjyYaSNu8NXQtGN45",
+    "name": "dji_fly_20240310_120314_996_1710271037741_photo",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Jamaica goes far beyond the beach. ✨\n\nRent a car and find the rest.\n\nRent a car and go see it for yourself.",
+   "copy_text": "Taste it. See it. Drive there. ✨\n\nJamaica is best explored on your own time.\n\nRent a car and go see it for yourself.",
    "alt": "Scenery in Jamaica",
-   "caption": "Jamaica goes far beyond the beach. ✨\n\nRent a car and find the rest.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "caption": "Taste it. See it. Drive there. ✨\n\nJamaica is best explored on your own time.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -311,9 +311,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_0930_tip_1.jpg"
    ],
-   "copy_text": "Patois 101: Soon come. 💡\n\nIt means it's on the way, in island time.",
-   "alt": "Tip graphic: Soon come.",
-   "caption": "Patois 101: Soon come. 💡\n\nIt means it's on the way, in island time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Likkle bit. 💡\n\nIt means: A little bit.",
+   "alt": "Tip graphic: Likkle bit.",
+   "caption": "Patois 101: Likkle bit. 💡\n\nIt means: A little bit.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -325,9 +325,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1030_chat_1.jpg"
    ],
-   "copy_text": "No app. No stress. 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
-   "alt": "WhatsApp chat with Winston: Do I need to download anything? / No. Everything happens right here in WhatsApp.",
-   "caption": "No app. No stress. 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Winston",
+   "copy_text": "Landing at MBJ? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
+   "alt": "WhatsApp chat with Winston: I land at MBJ on Friday. / Welcome! Tell me your dates and I will set up your pickup.",
+   "caption": "Landing at MBJ? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Winston",
    "status": "pending"
   },
   {
@@ -335,7 +335,10 @@
    "date": "2026-10-30",
    "slot": "2026-10-30T11:30:00-05:00",
    "type": "carousel",
-   "flags": [],
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place NOT confirmed by the photo description"
+   ],
    "images": [
     "media/2026-10-30/2026-10-30_1130_carousel_1.jpg",
     "media/2026-10-30/2026-10-30_1130_carousel_2.jpg",
@@ -343,14 +346,14 @@
     "media/2026-10-30/2026-10-30_1130_carousel_4.jpg"
    ],
    "photo": {
-    "id": "drive:1SHtTDvtlRd6SycO4ROBQVSvKipwJLfks",
-    "name": "IMG_9921",
-    "source": "drive",
-    "credit": "Arah Rides"
+    "id": "wikimedia:64319690",
+    "name": "wikimedia-64319690",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (Public domain)"
    },
-   "copy_text": "Book in 3 steps. 👉\n\nSwipe to see how.\n\n• 1. Say Hi: Message Winston on WhatsApp.\n• 2. Get a quote: Share your dates and pickup spot.\n• 3. Book and pay: Pay by Stripe to confirm.",
-   "alt": "Carousel: Book in 3 steps.",
-   "caption": "Book in 3 steps. 👉\n\nSwipe to see how.\n\n• 1. Say Hi: Message Winston on WhatsApp.\n• 2. Get a quote: Share your dates and pickup spot.\n• 3. Book and pay: Pay by Stripe to confirm.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "copy_text": "Learn 3 words. 👉\n\nSwipe to learn.\n\n• Wah gwaan?: What's going on?\n• Irie: All good.\n• Likkle more: See you later.",
+   "alt": "Carousel: Learn 3 words.",
+   "caption": "Learn 3 words. 👉\n\nSwipe to learn.\n\n• Wah gwaan?: What's going on?\n• Irie: All good.\n• Likkle more: See you later.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -362,9 +365,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1230_engage_1.jpg"
    ],
-   "copy_text": "Driven through St Thomas? 💬\n\nTell us your favourite stop there.",
-   "alt": "Question for followers: Driven through St Thomas?",
-   "caption": "Driven through St Thomas? 💬\n\nTell us your favourite stop there.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Sandy toes or Muddy boots? 💬\n\nComment your pick.",
+   "alt": "Question for followers: Sandy toes or Muddy boots?",
+   "caption": "Sandy toes or Muddy boots? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -379,14 +382,14 @@
     "media/2026-10-30/2026-10-30_1330_experience_1.jpg"
    ],
    "photo": {
-    "id": "drive:1-zEDTL-4H8WqCWSVuKeztrvLhs9XtR5a",
-    "name": "IMG_9912",
+    "id": "drive:1v7vod47C6Kor73caqM-ERzswCOu6_EfG",
+    "name": "IMG_9080",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.",
+   "copy_text": "Jamaica goes far beyond the beach. ✨\n\nRent a car and find the rest.\n\nRent a car and go see it for yourself.",
    "alt": "Scenery in Jamaica",
-   "caption": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "caption": "Jamaica goes far beyond the beach. ✨\n\nRent a car and find the rest.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -398,9 +401,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1430_tip_1.jpg"
    ],
-   "copy_text": "Driving Tip: Hills take time. 💡\n\nMountain roads wind. Slow down, enjoy the view and plan extra time.",
-   "alt": "Tip graphic: Hills take time.",
-   "caption": "Driving Tip: Hills take time. 💡\n\nMountain roads wind. Slow down, enjoy the view and plan extra time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Irie. 💡\n\nIt means: All good.",
+   "alt": "Tip graphic: Irie.",
+   "caption": "Patois 101: Irie. 💡\n\nIt means: All good.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -412,9 +415,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1530_engage_1.jpg"
    ],
-   "copy_text": "Sunrise or Sunset? 💬\n\nComment your pick.",
-   "alt": "Question for followers: Sunrise or Sunset?",
-   "caption": "Sunrise or Sunset? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Tell a friend. 💬\n\nSend this to someone who needs a road trip.",
+   "alt": "Question for followers: Tell a friend.",
+   "caption": "Tell a friend. 💬\n\nSend this to someone who needs a road trip.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -426,9 +429,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1630_brand_1.jpg"
    ],
-   "copy_text": "Support local. 🇯🇲\n\nRent Jamaican and see Jamaica from the driver's seat.",
-   "alt": "Arah Rides graphic: Support local.",
-   "caption": "Support local. 🇯🇲\n\nRent Jamaican and see Jamaica from the driver's seat.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
+   "copy_text": "Local roads. 🇯🇲\n\nLocal rides. Real Jamaica.",
+   "alt": "Arah Rides graphic: Local roads.",
+   "caption": "Local roads. 🇯🇲\n\nLocal rides. Real Jamaica.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
    "status": "pending"
   },
   {
@@ -437,20 +440,21 @@
    "slot": "2026-10-30T17:30:00-05:00",
    "type": "place",
    "flags": [
-    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description"
    ],
    "images": [
     "media/2026-10-30/2026-10-30_1730_place_1.jpg"
    ],
    "photo": {
-    "id": "drive:1JeJl98capmqkHjiPrSwcxuawKFJvWn7F",
-    "name": "IMG_9922",
-    "source": "drive",
-    "credit": "Arah Rides"
+    "id": "wikimedia:30908340",
+    "name": "wikimedia-30908340",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (Public domain)"
    },
-   "copy_text": "This is why we drive. 🌴\n\nPick your car and your route.",
-   "alt": "Scenery in Jamaica",
-   "caption": "This is why we drive. 🌴\n\nPick your car and your route.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "copy_text": "Blue Mountains. Cool air. Big views. 🌴\n\nCoffee country above Kingston. Drive up and look out.",
+   "alt": "Scenery in Blue Mountains, Jamaica",
+   "caption": "Blue Mountains. Cool air. Big views. 🌴\n\nCoffee country above Kingston. Drive up and look out.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica #BlueMountains",
    "status": "pending"
   },
   {
@@ -462,9 +466,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1830_tip_1.jpg"
    ],
-   "copy_text": "Travel Tip: Download offline maps. 💡\n\nSignal can drop in the hills. Save your route before you go.",
-   "alt": "Tip graphic: Download offline maps.",
-   "caption": "Travel Tip: Download offline maps. 💡\n\nSignal can drop in the hills. Save your route before you go.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Likkle more. 💡\n\nIt means see you later. Say it at drop-off.",
+   "alt": "Tip graphic: Likkle more.",
+   "caption": "Patois 101: Likkle more. 💡\n\nIt means see you later. Say it at drop-off.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -476,9 +480,9 @@
    "images": [
     "media/2026-10-30/2026-10-30_1930_engage_1.jpg"
    ],
-   "copy_text": "Your best Jamaica road trip? 💬\n\nTell us about the drive you still talk about.",
-   "alt": "Question for followers: Your best Jamaica road trip?",
-   "caption": "Your best Jamaica road trip? 💬\n\nTell us about the drive you still talk about.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Road trip or Staycation? 💬\n\nComment your pick.",
+   "alt": "Question for followers: Road trip or Staycation?",
+   "caption": "Road trip or Staycation? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -486,22 +490,27 @@
    "date": "2026-10-30",
    "slot": "2026-10-30T20:30:00-05:00",
    "type": "carousel",
-   "flags": [],
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place NOT confirmed by the photo description"
+   ],
    "images": [
     "media/2026-10-30/2026-10-30_2030_carousel_1.jpg",
     "media/2026-10-30/2026-10-30_2030_carousel_2.jpg",
     "media/2026-10-30/2026-10-30_2030_carousel_3.jpg",
-    "media/2026-10-30/2026-10-30_2030_carousel_4.jpg"
+    "media/2026-10-30/2026-10-30_2030_carousel_4.jpg",
+    "media/2026-10-30/2026-10-30_2030_carousel_5.jpg",
+    "media/2026-10-30/2026-10-30_2030_carousel_6.jpg"
    ],
    "photo": {
-    "id": "drive:10L0PhDGARGbSHNpOH4ZIPUtDeA7DeV_o",
-    "name": "IMG_9920",
-    "source": "drive",
-    "credit": "Arah Rides"
+    "id": "wikimedia:111544538",
+    "name": "wikimedia-111544538",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (Public domain)"
    },
-   "copy_text": "Driving 101. 👉\n\nSwipe for the basics.\n\n• Keep left: Jamaica drives on the left.\n• Speeds in km/h: Check your speedometer units.\n• Roundabouts: Give way to traffic from your right.",
-   "alt": "Carousel: Driving 101.",
-   "caption": "Driving 101. 👉\n\nSwipe for the basics.\n\n• Keep left: Jamaica drives on the left.\n• Speeds in km/h: Check your speedometer units.\n• Roundabouts: Give way to traffic from your right.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "copy_text": "A Portland weekend. 👉\n\nSwipe for the route.\n\n• Port Antonio: Start on the coast and settle in.\n• Boston Bay: Jerk country. Bring an appetite.\n• Reach Falls: Hidden pools in the green hills.\n• Winnifred Beach: End the day on the sand.\n• Book your car: arahrides.com or WhatsApp Winston: wa.me/12013713152",
+   "alt": "Carousel: A Portland weekend.",
+   "caption": "A Portland weekend. 👉\n\nSwipe for the route.\n\n• Port Antonio: Start on the coast and settle in.\n• Boston Bay: Jerk country. Bring an appetite.\n• Reach Falls: Hidden pools in the green hills.\n• Winnifred Beach: End the day on the sand.\n• Book your car: arahrides.com or WhatsApp Winston: wa.me/12013713152\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -516,14 +525,14 @@
     "media/2026-10-31/2026-10-31_0630_car_hero_1.jpg"
    ],
    "photo": {
-    "id": "drive:13UoovVtRYm0nYJridl1k-573f1B4G0tL",
-    "name": "IMG_9894",
+    "id": "drive:1qc76ZhlIi1BN_snEf723e115gHLu8bNu",
+    "name": "Photoroom_20250527_162910",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Home for a visit? Drive the island. 🚗\n\nBook for family, friends and everywhere between.",
-   "alt": "A rental car in Jamaica. Home for a visit? Drive the island.",
-   "caption": "Home for a visit? Drive the island. 🚗\n\nBook for family, friends and everywhere between.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #RoadTrip",
+   "copy_text": "Three days or more? 🚗\n\nRentals other than 1 Day Rentals have a 3-day minimum. Plan your trip.",
+   "alt": "A rental car in Jamaica. Three days or more?",
+   "caption": "Three days or more? 🚗\n\nRentals other than 1 Day Rentals have a 3-day minimum. Plan your trip.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #RoadTrip",
    "status": "pending"
   },
   {
@@ -535,9 +544,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_0730_qa_1.jpg"
    ],
-   "copy_text": "What is there to do besides the beach? 🤔\n\nWaterfalls, river rafting, Blue Mountain coffee, jerk in Portland, reggae in Kingston and plenty more. A car makes it easy.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: What is there to do besides the beach?",
-   "caption": "What is there to do besides the beach? 🤔\n\nWaterfalls, river rafting, Blue Mountain coffee, jerk in Portland, reggae in Kingston and plenty more. A car makes it easy.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
+   "copy_text": "Why rent a car in Jamaica? 🤔\n\nYou go on your own timetable. Waterfalls, food stops and hidden beaches are easier with your own wheels.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: Why rent a car in Jamaica?",
+   "caption": "Why rent a car in Jamaica? 🤔\n\nYou go on your own timetable. Waterfalls, food stops and hidden beaches are easier with your own wheels.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
    "status": "pending"
   },
   {
@@ -546,20 +555,21 @@
    "slot": "2026-10-31T08:30:00-05:00",
    "type": "experience",
    "flags": [
-    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description"
    ],
    "images": [
     "media/2026-10-31/2026-10-31_0830_experience_1.jpg"
    ],
    "photo": {
-    "id": "drive:11V8y1d-Yxr0TBlsWXVx-RMaNjVw6pyl3",
-    "name": "IMG_9917",
-    "source": "drive",
-    "credit": "Arah Rides"
+    "id": "wikimedia:165167668",
+    "name": "wikimedia-165167668",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (Public domain)"
    },
-   "copy_text": "Wake up, go somewhere new. ✨\n\nRent a car and say yes to the next turn.\n\nRent a car and go see it for yourself.",
-   "alt": "Scenery in Jamaica",
-   "caption": "Wake up, go somewhere new. ✨\n\nRent a car and say yes to the next turn.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "copy_text": "Waterfall days start with the keys. ✨\n\nYS Falls is a south coast favourite. Pack a towel.\n\nRent a car and go see it for yourself.",
+   "alt": "Scenery in YS Falls, Jamaica",
+   "caption": "Waterfall days start with the keys. ✨\n\nYS Falls is a south coast favourite. Pack a towel.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica #YSFalls",
    "status": "pending"
   },
   {
@@ -571,9 +581,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_0930_tip_1.jpg"
    ],
-   "copy_text": "Patois 101: Irie. 💡\n\nIt means all good. Perfect for a good road trip day.",
-   "alt": "Tip graphic: Irie.",
-   "caption": "Patois 101: Irie. 💡\n\nIt means all good. Perfect for a good road trip day.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Seen. 💡\n\nIt means: Understood. Got it.",
+   "alt": "Tip graphic: Seen.",
+   "caption": "Patois 101: Seen. 💡\n\nIt means: Understood. Got it.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -585,9 +595,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1030_brand_1.jpg"
    ],
-   "copy_text": "Beyond the resort. 🇯🇲\n\nWaterfalls, jerk, coffee, music and views. Rent a car and find them.",
-   "alt": "Arah Rides graphic: Beyond the resort.",
-   "caption": "Beyond the resort. 🇯🇲\n\nWaterfalls, jerk, coffee, music and views. Rent a car and find them.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
+   "copy_text": "Winston never sleeps. 🇯🇲\n\nMessage any time. Winston replies on WhatsApp, 24/7.",
+   "alt": "Arah Rides graphic: Winston never sleeps.",
+   "caption": "Winston never sleeps. 🇯🇲\n\nMessage any time. Winston replies on WhatsApp, 24/7.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
    "status": "pending"
   },
   {
@@ -599,9 +609,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1130_list_1.jpg"
    ],
-   "copy_text": "Pack for the beach ✅\n\n1) Water and snacks\n2) Sunscreen and a hat\n3) A towel\n4) A little cash",
-   "alt": "List graphic: Pack for the beach",
-   "caption": "Pack for the beach ✅\n\n1) Water and snacks\n2) Sunscreen and a hat\n3) A towel\n4) A little cash\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelJamaica",
+   "copy_text": "4 things that are not the beach ✅\n\n1) A waterfall swim\n2) A mountain coffee morning\n3) A river raft\n4) A Kingston music story",
+   "alt": "List graphic: 4 things that are not the beach",
+   "caption": "4 things that are not the beach ✅\n\n1) A waterfall swim\n2) A mountain coffee morning\n3) A river raft\n4) A Kingston music story\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelJamaica",
    "status": "pending"
   },
   {
@@ -613,9 +623,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1230_engage_1.jpg"
    ],
-   "copy_text": "Jerk chicken or Jerk pork? 💬\n\nComment your pick.",
-   "alt": "Question for followers: Jerk chicken or Jerk pork?",
-   "caption": "Jerk chicken or Jerk pork? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Road snacks or Beach lunch? 💬\n\nComment your pick.",
+   "alt": "Question for followers: Road snacks or Beach lunch?",
+   "caption": "Road snacks or Beach lunch? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -630,14 +640,14 @@
     "media/2026-10-31/2026-10-31_1330_experience_1.jpg"
    ],
    "photo": {
-    "id": "drive:1QXhxLSTFdaVk-csmW-PQYsXqWPUlOM_e",
-    "name": "IMG_9910",
+    "id": "drive:1-zEDTL-4H8WqCWSVuKeztrvLhs9XtR5a",
+    "name": "IMG_9912",
     "source": "drive",
     "credit": "Arah Rides"
    },
-   "copy_text": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.",
+   "copy_text": "Jamaica is a road trip. ✨\n\nPick up your car and start exploring.\n\nRent a car and go see it for yourself.",
    "alt": "Scenery in Jamaica",
-   "caption": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "caption": "Jamaica is a road trip. ✨\n\nPick up your car and start exploring.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
    "status": "pending"
   },
   {
@@ -649,9 +659,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1430_tip_1.jpg"
    ],
-   "copy_text": "Patois 101: Walk good. 💡\n\nIt means: Travel safely.",
-   "alt": "Tip graphic: Walk good.",
-   "caption": "Patois 101: Walk good. 💡\n\nIt means: Travel safely.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Patois 101: Nyam. 💡\n\nIt means: To eat.",
+   "alt": "Tip graphic: Nyam.",
+   "caption": "Patois 101: Nyam. 💡\n\nIt means: To eat.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -663,9 +673,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1530_engage_1.jpg"
    ],
-   "copy_text": "Driver or DJ? 💬\n\nComment your pick.",
-   "alt": "Question for followers: Driver or DJ?",
-   "caption": "Driver or DJ? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Driven through St James? 💬\n\nTell us your favourite stop there.",
+   "alt": "Question for followers: Driven through St James?",
+   "caption": "Driven through St James? 💬\n\nTell us your favourite stop there.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -677,9 +687,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1630_qa_1.jpg"
    ],
-   "copy_text": "Can I book a car for tomorrow? 🤔\n\n1 Day Rentals need 24 hours' notice. Message Winston to plan your dates.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: Can I book a car for tomorrow?",
-   "caption": "Can I book a car for tomorrow? 🤔\n\n1 Day Rentals need 24 hours' notice. Message Winston to plan your dates.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
+   "copy_text": "Can I pick up at the airport? 🤔\n\nYes. Pickup is available at Norman Manley, MBJ (Sangster) and OCJ (Ian Fleming).\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: Can I pick up at the airport?",
+   "caption": "Can I pick up at the airport? 🤔\n\nYes. Pickup is available at Norman Manley, MBJ (Sangster) and OCJ (Ian Fleming).\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
    "status": "pending"
   },
   {
@@ -688,21 +698,21 @@
    "slot": "2026-10-31T17:30:00-05:00",
    "type": "place",
    "flags": [
-    "Number plate visible (kept sharp on purpose)",
-    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description"
    ],
    "images": [
     "media/2026-10-31/2026-10-31_1730_place_1.jpg"
    ],
    "photo": {
-    "id": "drive:1VpYa3IQmOh_e9iBwykfIA_Md3f4vSVbf",
-    "name": "IMG_9326",
-    "source": "drive",
-    "credit": "Arah Rides"
+    "id": "wikimedia:142414030",
+    "name": "wikimedia-142414030",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (CC0)"
    },
-   "copy_text": "Jamaica from the driver's seat. 🌴\n\nBook at arahrides.com or with Winston.",
-   "alt": "Scenery in Jamaica",
-   "caption": "Jamaica from the driver's seat. 🌴\n\nBook at arahrides.com or with Winston.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "copy_text": "Cockpit Country. Wild green hills. 🌴\n\nJamaica away from the crowds.",
+   "alt": "Scenery in Cockpit Country, Jamaica",
+   "caption": "Cockpit Country. Wild green hills. 🌴\n\nJamaica away from the crowds.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica #CockpitCountry",
    "status": "pending"
   },
   {
@@ -714,9 +724,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1830_tip_1.jpg"
    ],
-   "copy_text": "Before You Go: Confirm your pickup. 💡\n\nCheck the pickup spot and time before you travel.",
-   "alt": "Tip graphic: Confirm your pickup.",
-   "caption": "Before You Go: Confirm your pickup. 💡\n\nCheck the pickup spot and time before you travel.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "copy_text": "Driving Tip: Keep left. 💡\n\nJamaica drives on the left. Take it easy on your first drive and look right at junctions.",
+   "alt": "Tip graphic: Keep left.",
+   "caption": "Driving Tip: Keep left. 💡\n\nJamaica drives on the left. Take it easy on your first drive and look right at junctions.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
    "status": "pending"
   },
   {
@@ -728,9 +738,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_1930_engage_1.jpg"
    ],
-   "copy_text": "Small town or big city? 💬\n\nTell us where you love to drive.",
-   "alt": "Question for followers: Small town or big city?",
-   "caption": "Small town or big city? 💬\n\nTell us where you love to drive.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "copy_text": "Coconut water or Sugar cane juice? 💬\n\nComment your pick.",
+   "alt": "Question for followers: Coconut water or Sugar cane juice?",
+   "caption": "Coconut water or Sugar cane juice? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
    "status": "pending"
   },
   {
@@ -742,9 +752,9 @@
    "images": [
     "media/2026-10-31/2026-10-31_2030_list_1.jpg"
    ],
-   "copy_text": "5 experiences to drive to ✅\n\n1) Waterfall day at YS Falls\n2) Jerk in Boston Bay\n3) Blue Mountain coffee\n4) Bamboo rafting in Portland\n5) Sunset in Negril",
-   "alt": "List graphic: 5 experiences to drive to",
-   "caption": "5 experiences to drive to ✅\n\n1) Waterfall day at YS Falls\n2) Jerk in Boston Bay\n3) Blue Mountain coffee\n4) Bamboo rafting in Portland\n5) Sunset in Negril\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelJamaica",
+   "copy_text": "Why rent with Arah ✅\n\n1) Pick the car you want\n2) Five pickup spots\n3) Winston on WhatsApp 24/7\n4) Pay by Stripe",
+   "alt": "List graphic: Why rent with Arah",
+   "caption": "Why rent with Arah ✅\n\n1) Pick the car you want\n2) Five pickup spots\n3) Winston on WhatsApp 24/7\n4) Pay by Stripe\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelJamaica",
    "status": "pending"
   }
  ]
