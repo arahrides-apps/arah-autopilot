@@ -1,286 +1,75 @@
-"""Finds a fresh photo: Google Drive first (your own shoots), then free web photos (Pexels, Openverse CC0)."""
-import os, io, re, json, random, hashlib, logging
-from dataclasses import dataclass, field
-from pathlib import Path
-from PIL import Image, ImageOps
-from . import ledger as L
-from .config import ROOT, load_yaml
+# Arah Rides Instagram Autopilot - settings you may want to change.
+timezone: America/Jamaica          # UTC-5 all year, no daylight saving
+posts_per_day: 15                  # Instagram scheduling limit you gave me
+days_ahead: 3                      # keep this many future days drafted for your review
+publish_grace_hours: 4             # if a post is still unapproved/undelivered this long after its slot, it is skipped (never posted late)
+max_posts_per_day_hard_cap: 15
+min_gap_minutes: 20               # posts approved late are spaced at least this far apart
+max_posts_per_run: 1              # the publisher runs every 10 minutes
 
-log = logging.getLogger("photos")
-IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
+# Times in Jamaica time. Must contain at least posts_per_day entries.
+slots: ["06:30","07:30","08:30","09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:30","17:30","18:30","19:30","20:30"]
 
-@dataclass
-class Photo:
-    id: str                 # e.g. drive:<fileId>, local:<stem>, pexels:123
-    name: str               # file stem (also stored in the ledger)
-    source: str             # drive | local | pexels | openverse
-    path: str               # local file, already downsized
-    kind: str = "car"       # car | scenery
-    credit: str = ""
-    text: str = ""          # title/alt text from the source (used to confirm the place)
-    flags: list = field(default_factory=list)
-    hash: int = 0
-    w: int = 0
-    h: int = 0
+# Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
+pattern: [car_hero, qa, experience, tip, brand|chat, carousel|list, engage, experience, tip, engage, qa|brand, place, tip, engage, list|carousel]
+copy_cooldown_days: 30             # same wording is not reused sooner than this (photos follow the stricter rule below)
 
-    @property
-    def portrait(self):
-        return self.h >= self.w * 1.1
+brand:
+  name: Arah Rides
+  handle: "@arahrides"
+  site: arahrides.com
+  whatsapp: "+1 201-371-3152"
+  wa_link: "wa.me/12013713152"        # opens a WhatsApp chat with Winston
+  tagline: "Rent Jamaican. Discover the Real Jamaica."
+  green: "#0B6B3A"
+  gold: "#E8A93A"
+  cream: "#F1ECE0"
+  dark: "#1A1F1C"
 
-    def keys(self):
-        return [self.id, "name:" + self.name]
+hashtags:
+  always: ["#ArahRides", "#RentJamaican", "#JamaicaCarRental"]
+  max_total: 5                     # your account only allows 5
 
-# ---------------------------------------------------------------- helpers
-def prep(src, dest, max_side=1800):
-    """Auto-rotate, shrink and save as JPEG. Never alters the picture itself (no blur, no overlays)."""
-    im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
-    im.thumbnail((max_side, max_side), Image.LANCZOS)
-    Path(dest).parent.mkdir(parents=True, exist_ok=True)
-    im.save(dest, "JPEG", quality=90)
-    return im.size
+photos:
+  reuse_days: 90                   # the same photo is never used again within this many days
+  near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
+  near_duplicate_distance: 6
+  min_short_side: 1000
+  allow_unreviewed_drive: false    # true = also use Drive photos I have not looked at. Only switch on after checking the Drive folder holds nothing private
+  allow_people_photos: false       # photos with identifiable people stay out unless content/photo_meta.yaml says consent: true
 
-_cascade = None
-def has_face(path):
-    """Best-effort face check (OpenCV, open source). Returns None when OpenCV is not installed."""
-    global _cascade
-    try:
-        import cv2
-        if _cascade is None:
-            _cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-    except Exception:
-        return None
-    g = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
-    if g is None:
-        return None
-    s = 800 / max(g.shape)
-    if s < 1:
-        g = cv2.resize(g, None, fx=s, fy=s)
-    faces = _cascade.detectMultiScale(g, 1.1, 6, minSize=(max(24, g.shape[1] // 30),) * 2)
-    return len(faces) > 0
+sources:
+  drive:
+    enabled: true
+    folder_ids: ["1IDnQxdig0etzbxv_Z98iotUDpi9HiFg3"]   # Arah Rides Content (sub-folders are scanned too)
+    service_account_env: GDRIVE_SA_JSON                  # GitHub secret holding the service account key
+    max_download_mb: 40
+  local:
+    enabled: true
+    dir: photos                                          # optional: drop extra photos here
+  pexels:
+    enabled: true                                        # free key: pexels.com/api
+    api_key_env: PEXELS_API_KEY
+  wikimedia:
+    enabled: true                                        # Wikimedia Commons, no key; only public-domain / CC0 files are used
+  openverse:
+    enabled: true                                        # needs free credentials (OPENVERSE_CLIENT_ID / SECRET); skipped without them
+    licenses: "cc0,pdm"
 
-def http_json(url, headers=None, params=None, timeout=25):
-    import requests
-    r = requests.get(url, headers=headers, params=params, timeout=timeout)
-    r.raise_for_status()
-    return r.json()
+# Offers I could not confirm. Posts about them stay OFF until you fill the text and enable them.
+offers:
+  lounge_pass:
+    enabled: false
+    text: ""        # e.g. "Book 7 days or more and get a departure pass for 1 adult at Club Mobay or Club Kingston. Valid until ..."
+  black_friday:
+    enabled: false
+    text: ""
+  smile_jamaica:
+    enabled: false
+    url: ""
 
-def http_file(url, dest, timeout=60, max_mb=40):
-    import requests
-    with requests.get(url, stream=True, timeout=timeout) as r:
-        r.raise_for_status()
-        Path(dest).parent.mkdir(parents=True, exist_ok=True)
-        n = 0
-        with open(dest, "wb") as f:
-            for ch in r.iter_content(1 << 16):
-                n += len(ch)
-                if n > max_mb << 20:
-                    raise IOError("file too large")
-                f.write(ch)
-
-# ---------------------------------------------------------------- sources
-class LocalSource:
-    """A folder of photos (optional extra pool; the tests use it as a stand-in for Drive)."""
-    name = "local"
-    def __init__(self, cfg):
-        c = cfg["sources"]["local"]
-        d = Path(c["dir"]); self.dir = d if d.is_absolute() else ROOT / d
-    def list(self):
-        if not self.dir.exists():
-            return []
-        return [{"id": "local:" + p.stem, "name": p.stem, "ref": str(p)} for p in sorted(self.dir.rglob("*")) if p.suffix.lower() in IMG_EXT]
-    def fetch(self, item, dest):
-        return prep(item["ref"], dest)
-
-class DriveSource:
-    """Reads every image under the Drive folder(s) with a service account (read-only)."""
-    name = "drive"
-    def __init__(self, cfg):
-        self.c = cfg["sources"]["drive"]; self._svc = None; self._items = None
-    def _service(self):
-        if self._svc is None:
-            from google.oauth2 import service_account
-            from googleapiclient.discovery import build
-            raw = os.environ.get(self.c["service_account_env"], "")
-            if not raw:
-                raise RuntimeError("Drive secret %s is empty" % self.c["service_account_env"])
-            creds = service_account.Credentials.from_service_account_info(
-                json.loads(raw), scopes=["https://www.googleapis.com/auth/drive.readonly"])
-            self._svc = build("drive", "v3", credentials=creds, cache_discovery=False)
-        return self._svc
-    def list(self):
-        if self._items is not None:
-            return self._items
-        s = self._service(); out = []; seen = set(); stack = list(self.c["folder_ids"])
-        cap = self.c.get("max_download_mb", 40) << 20
-        while stack:
-            fid = stack.pop()
-            if fid in seen:
-                continue
-            seen.add(fid); tok = None
-            while True:
-                r = s.files().list(q=f"'{fid}' in parents and trashed=false", pageSize=200, pageToken=tok,
-                                   fields="nextPageToken,files(id,name,mimeType,size)",
-                                   supportsAllDrives=True, includeItemsFromAllDrives=True).execute()
-                for f in r.get("files", []):
-                    if f["mimeType"] == "application/vnd.google-apps.folder":
-                        stack.append(f["id"])
-                    elif f["name"].lower().endswith(IMG_EXT) and int(f.get("size", 0)) <= cap:
-                        out.append({"id": "drive:" + f["id"], "name": os.path.splitext(f["name"])[0], "ref": f["id"]})
-                tok = r.get("nextPageToken")
-                if not tok:
-                    break
-        self._items = out
-        log.info("Drive: %d images found", len(out))
-        return out
-    def fetch(self, item, dest):
-        from googleapiclient.http import MediaIoBaseDownload
-        buf = io.BytesIO()
-        dl = MediaIoBaseDownload(buf, self._service().files().get_media(fileId=item["ref"], supportsAllDrives=True))
-        done = False
-        while not done:
-            _, done = dl.next_chunk()
-        tmp = Path(dest).with_suffix(".orig")
-        tmp.parent.mkdir(parents=True, exist_ok=True); tmp.write_bytes(buf.getvalue())
-        try:
-            return prep(tmp, dest)
-        finally:
-            tmp.unlink(missing_ok=True)
-
-class PexelsSource:
-    name = "pexels"
-    def __init__(self, cfg):
-        self.key = os.environ.get(cfg["sources"]["pexels"]["api_key_env"], "")
-    def search(self, query, rng):
-        if not self.key:
-            return []
-        d = http_json("https://api.pexels.com/v1/search", headers={"Authorization": self.key},
-                      params={"query": query, "per_page": 40, "page": rng.randint(1, 3), "orientation": "portrait"})
-        return [{"id": "pexels:%s" % p["id"], "name": "pexels-%s" % p["id"], "url": p["src"].get("large2x") or p["src"]["original"],
-                 "w": p["width"], "h": p["height"], "text": " ".join([p.get("alt") or "", p.get("url") or ""]),
-                 "credit": "Photo by %s on Pexels" % p.get("photographer", "?")} for p in d.get("photos", [])]
-    def fetch(self, item, dest):
-        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
-
-class OpenverseSource:
-    """Only CC0 and public-domain images, so no attribution is needed."""
-    name = "openverse"
-    def __init__(self, cfg):
-        self.lic = cfg["sources"]["openverse"].get("licenses", "cc0,pdm")
-    def search(self, query, rng):
-        d = http_json("https://api.openverse.org/v1/images/", params={
-            "q": query, "license": self.lic, "category": "photograph", "page_size": 30, "page": rng.randint(1, 2), "extension": "jpg"})
-        out = []
-        for p in d.get("results", []):
-            if not p.get("url"):
-                continue
-            out.append({"id": "openverse:%s" % p["id"], "name": "openverse-%s" % p["id"], "url": p["url"],
-                        "w": p.get("width") or 0, "h": p.get("height") or 0,
-                        "text": " ".join([p.get("title") or ""] + [t.get("name", "") for t in p.get("tags") or []]),
-                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", (p.get("license") or "").upper())})
-        return out
-    def fetch(self, item, dest):
-        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
-
-def _finish(dest):
-    o = Path(str(dest) + ".orig")
-    try:
-        return prep(o, dest)
-    finally:
-        o.unlink(missing_ok=True)
-
-# ---------------------------------------------------------------- picker
-class Picker:
-    def __init__(self, cfg, ledger, today, rng, cache=None, drive=None, web=None):
-        self.cfg, self.led, self.today, self.rng = cfg, ledger, today, rng
-        self.cache = Path(cache or ROOT / "cache")
-        self.meta = load_yaml("photo_meta.yaml")
-        s = cfg["sources"]
-        self.pool = []          # own photos (Drive / local)
-        if drive is not None:
-            self.pool.append(drive)
-        else:
-            if s["drive"]["enabled"] and os.environ.get(s["drive"]["service_account_env"]):
-                self.pool.append(DriveSource(cfg))
-            if s["local"]["enabled"]:
-                self.pool.append(LocalSource(cfg))
-        self.web = web if web is not None else [x(cfg) for k, x in (("pexels", PexelsSource), ("openverse", OpenverseSource)) if s[k]["enabled"]]
-        self.notes = []
-        self.tried = set()
-
-    def _meta(self, name):
-        return self.meta.get(name) or self.meta.get(name.split(".")[0])
-
-    def _load(self, src, item, kind, flags, extra=None):
-        dest = self.cache / src.name / (hashlib.md5(item["id"].encode()).hexdigest()[:16] + ".jpg")
-        try:
-            if not dest.exists():
-                src.fetch(item, dest)
-            im = Image.open(dest); w, h = im.size
-        except Exception as e:
-            log.warning("fetch failed %s: %s", item["id"], e); return None
-        if min(w, h) < self.cfg["photos"]["min_short_side"]:
-            return None
-        hv = L.dhash(dest)
-        why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
-        if why:
-            log.info("skip %s: %s", item["id"], why); return None
-        if not self.cfg["photos"]["allow_people_photos"] and has_face(dest):
-            log.info("skip %s: face detected", item["id"]); return None
-        e = extra or {}
-        return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
-                     e.get("text", ""), flags, hv, w, h)
-
-    def _own(self, want):
-        cands = []
-        for src in self.pool:
-            try:
-                items = src.list()
-            except Exception as e:
-                self.notes.append("%s unavailable: %s" % (src.name, e)); continue
-            for it in items:
-                if it["id"] in self.tried or self.led.blocked(["name:" + it["name"], it["id"]], None, self.today, self.cfg):
-                    continue
-                m = self._meta(it["name"]); q = 3
-                if m:
-                    if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"]) or m["quality"] < 3:
-                        continue
-                    q = m["quality"]; flags = [] 
-                else:
-                    if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"]:
-                        continue
-                    flags = ["New Drive photo I have not looked at: check the picture"]
-                cands.append((-q, self.rng.random(), src, it, flags))
-        cands.sort(key=lambda t: t[:2])
-        for _, _, src, it, flags in cands[:25]:
-            self.tried.add(it["id"])
-            p = self._load(src, it, want, flags)
-            if p:
-                if self._meta(it["name"]) and self._meta(it["name"]).get("plate_visible"):
-                    p.flags.append("Number plate visible (kept sharp on purpose)")
-                return p
-        return None
-
-    def car(self):
-        return self._own("car")
-
-    def scene(self, query, place=None):
-        """Scenery photo for a place: free web photos first, then own scenery photos."""
-        for web in self.web:
-            try:
-                items = web.search(query, self.rng)
-            except Exception as e:
-                self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
-            self.rng.shuffle(items)
-            good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
-                    and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
-            if place:   # prefer pictures whose own description names the place
-                good.sort(key=lambda i: 0 if place.lower() in i.get("text", "").lower() else 1)
-            for it in good[:8]:
-                self.tried.add(it["id"])
-                p = self._load(web, it, "scenery", ["Web photo: check it shows Jamaica and has no recognisable people or brands"],
-                               {"credit": it.get("credit", ""), "text": it.get("text", "")})
-                if p:
-                    p.flags.append("Place confirmed by photo description" if place and place.lower() in p.text.lower()
-                                   else "Place NOT confirmed by the photo description")
-                    return p
-        return self._own("scenery")
+instagram:
+  api_host: "https://graph.instagram.com"   # Instagram API with Instagram Login
+  api_version: "v21.0"
+  user_id_env: IG_USER_ID
+  token_env: IG_ACCESS_TOKEN
