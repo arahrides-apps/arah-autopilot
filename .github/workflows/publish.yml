@@ -1,33 +1,36 @@
 name: Post approved
 on:
   schedule:
-    - cron: "*/30 * * * *"      # GitHub often skips or delays short schedules, so each run keeps checking for ~20 minutes
+    - cron: "11,41 * * * *"     # safety net only: starts the watcher if it ever stopped
   workflow_dispatch:
     inputs:
       catch_up:
-        description: "Catch up: post everything approved and due right now"
+        description: "Catch up: post everything approved and due right now, then stop"
         type: boolean
         default: true
       dry_run:
         description: "Dry run (do not post)"
         type: boolean
         default: false
+# The watcher checks every 5 minutes for about 5.5 hours, then starts its own replacement,
+# so it does not depend on GitHub's unreliable timer. A manual catch-up runs separately and finishes in a minute.
 concurrency:
-  group: autopilot
+  group: publisher-${{ github.event.inputs.catch_up == 'true' && 'manual' || 'watcher' }}
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: write
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pyyaml requests
-      - name: Post what is approved and due (checks 3 times, 10 minutes apart)
+      - name: Post what is approved and due
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -35,17 +38,21 @@ jobs:
           MEDIA_BRANCH: ${{ github.ref_name }}
           DRY: ${{ inputs.dry_run }}
           CATCH: ${{ inputs.catch_up }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "arah-autopilot"
           git config user.email "autopilot@users.noreply.github.com"
-          for i in 1 2 3; do
+          save() { git add -A; if ! git diff --cached --quiet; then git commit -m "Post results"; git pull --rebase; git push; fi; }
+          if [ "$CATCH" = "true" ] || [ "$DRY" = "true" ]; then
             git pull --rebase || true
-            if [ "$DRY" = "true" ]; then python -m autopilot publish --dry-run
-            elif [ "$CATCH" = "true" ]; then python -m autopilot publish --catch-up
-            else python -m autopilot publish; fi
-            git add -A
-            if ! git diff --cached --quiet; then git commit -m "Post results"; git pull --rebase; git push; fi
-            [ "$i" = "3" ] && break
-            [ -n "$CATCH" ] && [ "$CATCH" = "true" ] && break
-            sleep 600
+            if [ "$DRY" = "true" ]; then python -m autopilot publish --dry-run; else python -m autopilot publish --catch-up; fi
+            save; exit 0
+          fi
+          END=$((SECONDS + 19800))
+          while [ $SECONDS -lt $END ]; do
+            git pull --rebase || true
+            python -m autopilot publish || true
+            save || true
+            sleep 300
           done
+          gh workflow run publish.yml --ref "${{ github.ref_name }}" -f catch_up=false -f dry_run=false
