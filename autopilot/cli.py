@@ -6,7 +6,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
     p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true")
-    sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status")
+    sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     cfg = config.load()
@@ -20,6 +20,19 @@ def main(argv=None):
         if not a.dry_run and ig is None:
             print("Manual mode: no posting connection set (IG_USER_ID + IG_ACCESS_TOKEN, or POST_WEBHOOK_URL). Nothing posted."); return 0
         out = publish_due(cfg, ig, a.dry_run); print("\n".join(out) or "nothing due")
+    elif a.cmd == "test-webhook":
+        import os as _os
+        from .instagram import WebhookPoster
+        from .config import media_base
+        if not _os.environ.get("POST_WEBHOOK_URL"):
+            print("POST_WEBHOOK_URL secret is not set."); return 1
+        posts = Q.all_posts()
+        if not posts:
+            print("No drafts yet. Run Draft new posts first."); return 1
+        p = posts[0]; base = media_base(cfg)
+        urls = [base + i for i in p["images"][:1]]
+        WebhookPoster(cfg).post(urls, "TEST ONLY - this is a connection test from Arah Autopilot. Do not publish.", "test", meta={"id": "TEST", "slot": ""})
+        print("Test sent to Make with image", urls[0])
     elif a.cmd == "refresh-token":
         from .instagram import refresh_token
         tok, exp = refresh_token(cfg)
