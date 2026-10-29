@@ -114,7 +114,7 @@ def due_posts(cfg, now, posts, decisions, pub):
         out.append((p, d.get("caption") or p["caption"]))
     return out, skipped
 
-def publish_due(cfg, ig=None, dry_run=False, max_posts=None):
+def publish_due(cfg, ig=None, dry_run=False, max_posts=None, spacing=True):
     now = now_fn(cfg); posts = Q.all_posts(); dec = Q.decisions(); pub = Q.published()
     due, skipped = due_posts(cfg, now, posts, dec, pub)
     log_ = []
@@ -133,7 +133,7 @@ def publish_due(cfg, ig=None, dry_run=False, max_posts=None):
             break
         if count >= cap:
             log_.append(f"daily cap {cap} reached, holding {p['id']}"); break
-        if last and now - last < gap and not dry_run:
+        if spacing and last and now - last < gap and not dry_run:
             log_.append(f"spacing posts out, holding {p['id']}"); break
         tries = pub.get(p["id"], {}).get("tries", 0)
         if tries >= 3:
