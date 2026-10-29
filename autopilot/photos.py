@@ -162,6 +162,35 @@ class PexelsSource:
     def fetch(self, item, dest):
         http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
 
+class UnsplashSource:
+    """Unsplash: free key (unsplash.com/developers). Licence allows commercial use; the API rules ask for a photo credit and a download ping."""
+    name = "unsplash"
+    def __init__(self, cfg):
+        self.key = os.environ.get(cfg["sources"]["unsplash"]["api_key_env"], "")
+        self.h = {"Authorization": "Client-ID " + self.key, "Accept-Version": "v1"}
+    def search(self, query, rng):
+        if not self.key:
+            return []
+        d = http_json("https://api.unsplash.com/search/photos", headers=self.h,
+                      params={"query": query, "per_page": 30, "page": rng.randint(1, 2), "orientation": "portrait", "content_filter": "high"})
+        out = []
+        for p in d.get("results", []):
+            loc = (p.get("location") or {}).get("name") or ""
+            tags = " ".join(t.get("title", "") for t in p.get("tags", []) if isinstance(t, dict))
+            out.append({"id": "unsplash:%s" % p["id"], "name": "unsplash-%s" % p["id"], "url": p["urls"]["raw"] + "&w=1800&q=85&fm=jpg",
+                        "dl": (p.get("links") or {}).get("download_location", ""), "w": p["width"], "h": p["height"],
+                        "text": " ".join([p.get("description") or "", p.get("alt_description") or "", loc, tags]),
+                        "credit": "Photo by %s on Unsplash" % (p.get("user") or {}).get("name", "?")})
+        return out
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig")
+        if item.get("dl"):
+            try:
+                http_json(item["dl"], headers=self.h)      # Unsplash asks apps to report each download
+            except Exception:
+                pass
+        return _finish(dest)
+
 class OpenverseSource:
     """Only CC0 and public-domain images. Openverse now needs free API credentials (OPENVERSE_CLIENT_ID / OPENVERSE_CLIENT_SECRET);
     without them this source is skipped."""
@@ -255,7 +284,7 @@ class Picker:
                 self.pool.append(DriveSource(cfg))
             if s["local"]["enabled"]:
                 self.pool.append(LocalSource(cfg))
-        order = (("wikimedia", WikimediaSource), ("pexels", PexelsSource), ("openverse", OpenverseSource))
+        order = (("unsplash", UnsplashSource), ("wikimedia", WikimediaSource), ("pexels", PexelsSource), ("openverse", OpenverseSource))
         self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": True})["enabled"]]
         self.notes = []
         self.tried = set()
