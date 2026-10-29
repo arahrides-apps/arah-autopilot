@@ -29,7 +29,7 @@ class Ledger:
     def __init__(self, path=PATH):
         self.path = path
         self.data = json.load(open(path)) if path.exists() else {"photos": {}, "copy": {}, "hashes": []}
-        self.data.setdefault("photos", {}); self.data.setdefault("copy", {})
+        self.data.setdefault("photos", {}); self.data.setdefault("copy", {}); self.data.setdefault("series", [])
         if not isinstance(self.data.get("hashes"), list):
             self.data["hashes"] = []
 
@@ -53,7 +53,24 @@ class Ledger:
                     return f"near-identical to {e.get('id', '?')} used {e['date']}"
         return None
 
-    def record(self, keys, h, today, source=""):
+    def series_age(self, series, today):
+        """Days since a photo from the same shoot/series was last used (9999 = never)."""
+        ages = [(today - _d(e["date"])).days for e in self.data["series"] if e["s"] == series]
+        return min(ages) if ages else 9999
+
+    def release(self, photo_id, name, date):
+        """Un-use a photo that was only drafted (never approved) so it can be picked again."""
+        for k in (photo_id, "name:" + name):
+            e = self.data["photos"].get(k)
+            if e and e.get("last_used") == date:
+                if e.get("first_used") == date: del self.data["photos"][k]
+                else: e["last_used"] = e["first_used"]
+        self.data["hashes"] = [e for e in self.data["hashes"] if not (e.get("id") == photo_id and e["date"] == date)]
+        self.data["series"] = [e for e in self.data["series"] if not (e.get("id") == photo_id and e["date"] == date)]
+
+    def record(self, keys, h, today, source="", series=""):
+        if series:
+            self.data["series"].append({"s": series, "date": today.isoformat(), "id": keys[0]})
         for k in keys:
             e = self.data["photos"].setdefault(k, {"first_used": today.isoformat(), "source": source})
             e["last_used"] = today.isoformat()
@@ -79,3 +96,4 @@ class Ledger:
 
     def prune(self, today, keep_days=400):
         self.data["hashes"] = [e for e in self.data["hashes"] if (today - _d(e["date"])).days < keep_days]
+        self.data["series"] = [e for e in self.data["series"] if (today - _d(e["date"])).days < keep_days]

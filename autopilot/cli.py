@@ -5,6 +5,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(prog="autopilot")
     sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
+    r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true")
     p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true")
     sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
     a = ap.parse_args(argv)
@@ -14,6 +15,10 @@ def main(argv=None):
         from .generate import run
         made, notes = run(cfg, render=not a.no_render, days=a.days)
         print("generated:", made or "nothing new"); [print("note:", n) for n in notes]
+    elif a.cmd == "regenerate":
+        from .regen import run as regen
+        made, kept, dropped, notes = regen(cfg, a.start, render=not a.no_render)
+        print(f"kept {kept} approved/published posts, redid {dropped}, new drafts:", made or "none"); [print("note:", n) for n in notes]
     elif a.cmd == "publish":
         from .instagram import get_poster, publish_due
         ig = None if a.dry_run else get_poster(cfg)

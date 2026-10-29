@@ -33,9 +33,10 @@ hashtags:
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
   near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
-  near_duplicate_distance: 6
+  near_duplicate_distance: 10
+  series_days: 14                  # photos from the same shoot (same car, same spot) are spaced at least this many days apart
   min_short_side: 1000
-  allow_unreviewed_drive: true     # Drive photos I have not catalogued yet are allowed (you still review every post)
+  allow_unreviewed_drive: false    # true = also use Drive photos I have not looked at. Only switch on after checking the Drive folder holds nothing private
   allow_people_photos: false       # photos with identifiable people stay out unless content/photo_meta.yaml says consent: true
 
 sources:
@@ -50,8 +51,10 @@ sources:
   pexels:
     enabled: true                                        # free key: pexels.com/api
     api_key_env: PEXELS_API_KEY
+  wikimedia:
+    enabled: true                                        # Wikimedia Commons, no key; only public-domain / CC0 files are used
   openverse:
-    enabled: true                                        # no key needed; only CC0 / public-domain images are used
+    enabled: true                                        # needs free credentials (OPENVERSE_CLIENT_ID / SECRET); skipped without them
     licenses: "cc0,pdm"
 
 # Offers I could not confirm. Posts about them stay OFF until you fill the text and enable them.

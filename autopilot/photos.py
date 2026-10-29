@@ -20,6 +20,7 @@ class Photo:
     text: str = ""          # title/alt text from the source (used to confirm the place)
     flags: list = field(default_factory=list)
     hash: int = 0
+    series: str = ""        # photos from the same shoot share a series; a series is spaced out (photos.series_days)
     w: int = 0
     h: int = 0
 
@@ -262,6 +263,10 @@ class Picker:
     def _meta(self, name):
         return self.meta.get(name) or self.meta.get(name.split(".")[0])
 
+    def _series(self, name):
+        m = self._meta(name)
+        return (m or {}).get("series") or re.sub(r"[_\-]?\d+(_\d+)?$", "", name.split(".")[0]) or name
+
     def _load(self, src, item, kind, flags, extra=None):
         dest = self.cache / src.name / (hashlib.md5(item["id"].encode()).hexdigest()[:16] + ".jpg")
         try:
@@ -280,7 +285,7 @@ class Picker:
             log.info("skip %s: face detected", item["id"]); return None
         e = extra or {}
         return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
-                     e.get("text", ""), flags, hv, w, h)
+                     e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
 
     def _own(self, want):
         cands = []
@@ -301,9 +306,18 @@ class Picker:
                     if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"]:
                         continue
                     flags = ["New Drive photo I have not looked at: check the picture"]
-                cands.append((-q, self.rng.random(), src, it, flags))
-        cands.sort(key=lambda t: t[:2])
-        for _, _, src, it, flags in cands[:25]:
+                cands.append([-q, self.rng.random(), src, it, flags])
+        # Spread the picks out: prefer shoots (series) not used recently, then mix at random with a mild lean to better photos.
+        gap = self.cfg["photos"].get("series_days", 21)
+        for c in cands:
+            c.append(self.led.series_age(self._series(c[3]["name"]), self.today))
+        fresh = [c for c in cands if c[5] >= gap]
+        if not fresh and cands:
+            n = "Photo library is running thin: similar photos from the same shoot are coming back sooner than %d days. Add new photos to the Drive folder." % gap
+            if n not in self.notes: self.notes.append(n)
+            fresh = sorted(cands, key=lambda c: -c[5])[:max(3, len(cands) // 3)]
+        fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
+        for q, _, src, it, flags, _age in fresh[:25]:
             self.tried.add(it["id"])
             p = self._load(src, it, want, flags)
             if p:

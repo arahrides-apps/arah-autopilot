@@ -5,6 +5,7 @@
   people: true
   plate_visible: false
   quality: 2
+  series: arah-graphics
 '20240310_094839':
   about: maroon Toyota RAV4 front 3/4 at rocky shoreline, blue sky
   kind: car
@@ -12,6 +13,7 @@
   people: false
   plate_visible: true
   quality: 5
+  series: maroon-rav4-shore
 '20240310_094847':
   about: maroon RAV4 front 3/4 shoreline, slightly closer
   kind: car
@@ -19,6 +21,7 @@
   people: false
   plate_visible: true
   quality: 5
+  series: maroon-rav4-shore
 '20240310_094922':
   about: maroon RAV4 front 3/4 shoreline, lower angle
   kind: car
@@ -26,6 +29,7 @@
   people: false
   plate_visible: true
   quality: 5
+  series: maroon-rav4-shore
 '3':
   about: navy SUV with couple sitting on open tailgate at beach, bright blue sky
   kind: car
@@ -47,6 +51,7 @@ DSC_1401:
   people: false
   plate_visible: true
   quality: 4
+  series: red-rav4-driveway
 DSC_1403:
   about: Interior cockpit from rear seats, RAV4 dashboard, touchscreen, steering wheel (right-hand drive)
   kind: car
@@ -54,6 +59,7 @@ DSC_1403:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1404:
   about: Interior cockpit from rear seats, slightly wider and brighter than 1403, console and gear shift
   kind: car
@@ -61,6 +67,7 @@ DSC_1404:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1406:
   about: Interior rear cargo view over folded rear seats toward front dash, tailgate open at top
   kind: car
@@ -68,6 +75,7 @@ DSC_1406:
   people: false
   plate_visible: false
   quality: 2
+  series: red-rav4-driveway
 DSC_1410:
   about: Red RAV4 rear, tailgate open showing cargo space with black suitcase, paved courtyard
   kind: car
@@ -75,6 +83,7 @@ DSC_1410:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1411:
   about: Red RAV4 rear, tailgate open with suitcase, slightly wider than 1410, dual exhaust visible
   kind: car
@@ -82,6 +91,7 @@ DSC_1411:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1415:
   about: 'Interior detail: Toyota RAV4-style dashboard, CarPlay screen, climate dials, steering wheel right (RHD); blurred greenery outside'
   kind: car
@@ -89,6 +99,7 @@ DSC_1415:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1418:
   about: 'Interior: black leather seats with red piping, steering wheel/centre console from passenger side, Toyota badge'
   kind: car
@@ -96,6 +107,7 @@ DSC_1418:
   people: false
   plate_visible: false
   quality: 4
+  series: red-rav4-driveway
 DSC_1419:
   about: 'Interior: black seats with red stitching, steering wheel, armrest, gear selector, close angle'
   kind: car
@@ -103,6 +115,7 @@ DSC_1419:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1423:
   about: 'Interior detail: infotainment screen showing rear camera, climate controls, steering wheel edge'
   kind: car
@@ -110,6 +123,7 @@ DSC_1423:
   people: false
   plate_visible: false
   quality: 3
+  series: red-rav4-driveway
 DSC_1425:
   about: 'Scenery: hazy view over Kingston from hillside, trees and yellow structure lower right, no car'
   kind: scenery
@@ -117,6 +131,7 @@ DSC_1425:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 DSC_1429:
   about: 'Scenery: Kingston city and Long Mountain, hillside trees foreground, partly cloudy'
   kind: scenery
@@ -124,6 +139,7 @@ DSC_1429:
   people: false
   plate_visible: false
   quality: 3
+  series: kingston-view
 DSC_1430:
   about: 'Scenery: Kingston city and hill, trees lower-left, slightly clearer'
   kind: scenery
@@ -131,6 +147,7 @@ DSC_1430:
   people: false
   plate_visible: false
   quality: 3
+  series: kingston-view
 DSC_1431:
   about: 'Scenery: Long Mountain and Kingston cityscape, trees foreground'
   kind: scenery
@@ -138,6 +155,7 @@ DSC_1431:
   people: false
   plate_visible: false
   quality: 3
+  series: kingston-view
 DSC_1432:
   about: 'Scenery: hazy wide city view, dark foreground, no landmark'
   kind: scenery
@@ -145,6 +163,7 @@ DSC_1432:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 DSC_1433:
   about: 'Scenery: hazy cityscape to harbour, rooftops lower right'
   kind: scenery
@@ -152,6 +171,7 @@ DSC_1433:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 DSC_1434:
   about: 'Scenery: Kingston and Long Mountain under dramatic blue sky and clouds'
   kind: scenery
@@ -159,6 +179,7 @@ DSC_1434:
   people: false
   plate_visible: false
   quality: 4
+  series: kingston-view
 DSC_1437:
   about: 'scenery: hillside view over Kingston-area plain with clouds; small vehicle partly visible at bottom right, tiny rooftops/buildings foregroun'
   kind: scenery
@@ -166,6 +187,7 @@ DSC_1437:
   people: false
   plate_visible: false
   quality: 3
+  series: kingston-view
 DSC_1440:
   about: 'scenery: city view with hill and Kingston skyline, hazy sky'
   kind: scenery
@@ -173,6 +195,7 @@ DSC_1440:
   people: false
   plate_visible: false
   quality: 3
+  series: kingston-view
 DSC_1441:
   about: 'scenery: aerial-style view over Kingston harbour/coast, overcast gray sky'
   kind: scenery
@@ -180,6 +203,7 @@ DSC_1441:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 DSC_1443:
   about: 'scenery: harbour view with tree, hazy; dark post/pole on right edge'
   kind: scenery
@@ -187,6 +211,7 @@ DSC_1443:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 DSC_1445:
   about: 'scenery: harbour and city view, hazy, tree lower center'
   kind: scenery
@@ -194,20 +219,23 @@ DSC_1445:
   people: false
   plate_visible: false
   quality: 2
+  series: kingston-view
 F34E45D7-83AF-4285-B5B5-21BE9B3F0B16:
   about: 'collage: grey Toyota RAV4 front at Windsor Lodge Children''s Home plus donation bags'
   kind: car
   orientation: square
   people: false
   plate_visible: true
-  quality: 3
+  quality: 2
+  series: arah-graphics
 IMG_0380:
   about: 'Arah graphic: Find Your Perfect Car, $200/day, 15-seater silver van, logo'
   kind: car
   orientation: square
   people: false
   plate_visible: false
-  quality: 3
+  quality: 2
+  series: arah-graphics
 IMG_0419:
   about: 'video-frame style: 2 people in car interior in letterboxed black bars'
   kind: car
@@ -236,6 +264,7 @@ IMG_4242:
   people: false
   plate_visible: false
   quality: 2
+  series: arah-graphics
 IMG_4260:
   about: Arah graphic $90/day blue Haval Jolion SUV
   kind: car
@@ -243,6 +272,7 @@ IMG_4260:
   people: false
   plate_visible: false
   quality: 2
+  series: arah-graphics
 IMG_4262:
   about: Arah graphic $85/day black Toyota Noah minivan
   kind: car
@@ -250,6 +280,7 @@ IMG_4262:
   people: false
   plate_visible: false
   quality: 2
+  series: arah-graphics
 IMG_5319:
   about: Arah holiday graphic $48/day red Mazda 2
   kind: scenery
@@ -257,6 +288,7 @@ IMG_5319:
   people: false
   plate_visible: false
   quality: 2
+  series: arah-graphics
 IMG_5468:
   about: Arah holiday graphic $75/day grey Kia Seltos
   kind: scenery
@@ -264,6 +296,7 @@ IMG_5468:
   people: false
   plate_visible: false
   quality: 2
+  series: arah-graphics
 IMG_5544:
   about: rear of dark grey Kia Seltos in city lot, Arah logo overlay at right
   kind: scenery
@@ -271,6 +304,7 @@ IMG_5544:
   people: false
   plate_visible: true
   quality: 3
+  series: grey-kia-seltos
 IMG_9076:
   about: 'interior: Toyota steering wheel and gauge cluster'
   kind: car
@@ -278,6 +312,7 @@ IMG_9076:
   people: false
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9077:
   about: 'interior: Toyota gauge cluster, near-duplicate of 9076'
   kind: car
@@ -285,6 +320,7 @@ IMG_9077:
   people: false
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9078:
   about: 'interior: steering wheel and gauges, Toyota'
   kind: car
@@ -292,6 +328,7 @@ IMG_9078:
   people: false
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9079:
   about: 'interior: steering wheel and gauges, near-duplicate of 9078'
   kind: car
@@ -299,6 +336,7 @@ IMG_9079:
   people: false
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9080:
   about: 'scenery: turquoise sea and sky from seawall, aircraft in sky'
   kind: scenery
@@ -313,6 +351,7 @@ IMG_9102:
   people: true
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9103:
   about: 'interior: Toyota dash with hand, airport pickup area, traveller with luggage'
   kind: car
@@ -320,6 +359,7 @@ IMG_9103:
   people: true
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9104:
   about: 'interior: Toyota dash/infotainment with hand on wheel, airport pickup area through windshield'
   kind: car
@@ -327,6 +367,7 @@ IMG_9104:
   people: true
   plate_visible: false
   quality: 2
+  series: toyota-dash-drive
 IMG_9194:
   about: driver POV through windshield on bamboo-lined dirt road, digital dash in view
   kind: scenery
@@ -334,6 +375,7 @@ IMG_9194:
   people: false
   plate_visible: false
   quality: 4
+  series: toyota-dash-drive
 IMG_9216:
   about: RAV4 interior rear view of front seats and infotainment, RHD
   kind: car
@@ -341,6 +383,7 @@ IMG_9216:
   people: false
   plate_visible: false
   quality: 3
+  series: interiors-lot
 IMG_9227:
   about: rear seats and cabin of Toyota SUV, infotainment
   kind: car
@@ -348,6 +391,7 @@ IMG_9227:
   people: false
   plate_visible: false
   quality: 2
+  series: interiors-lot
 IMG_9262:
   about: open liftgate cargo area of silver SUV
   kind: car
@@ -355,6 +399,7 @@ IMG_9262:
   people: false
   plate_visible: false
   quality: 2
+  series: interiors-lot
 IMG_9291:
   about: red Suzuki Vitara rear detail, lot
   kind: car
@@ -362,6 +407,7 @@ IMG_9291:
   people: false
   plate_visible: true
   quality: 2
+  series: red-vitara-lot
 IMG_9292:
   about: red Suzuki Vitara rear 3/4 in car lot, wide-angle
   kind: car
@@ -369,6 +415,7 @@ IMG_9292:
   people: false
   plate_visible: true
   quality: 2
+  series: red-vitara-lot
 IMG_9325:
   about: 'exterior: grey Kia Seltos 3/4 front in car park, industrial fence behind'
   kind: car
@@ -376,6 +423,7 @@ IMG_9325:
   people: false
   plate_visible: true
   quality: 4
+  series: grey-kia-seltos
 IMG_9326:
   about: 'exterior: grey Kia Seltos 3/4 front, same lot'
   kind: scenery
@@ -383,6 +431,7 @@ IMG_9326:
   people: false
   plate_visible: true
   quality: 4
+  series: grey-kia-seltos
 IMG_9327:
   about: 'exterior: grey Kia Seltos 3/4 front from lower angle'
   kind: scenery
@@ -390,6 +439,7 @@ IMG_9327:
   people: false
   plate_visible: true
   quality: 4
+  series: grey-kia-seltos
 IMG_9328:
   about: 'exterior: grey Kia Seltos side profile, palm tree behind'
   kind: scenery
@@ -397,6 +447,7 @@ IMG_9328:
   people: false
   plate_visible: false
   quality: 4
+  series: grey-kia-seltos
 IMG_9331:
   about: grey Suzuki Vitara open trunk in garage lot, cargo area
   kind: car
@@ -404,6 +455,7 @@ IMG_9331:
   people: false
   plate_visible: false
   quality: 2
+  series: red-vitara-lot
 IMG_9347:
   about: Honda CR-V style interior from rear seats, RHD
   kind: car
@@ -411,6 +463,7 @@ IMG_9347:
   people: false
   plate_visible: false
   quality: 2
+  series: interiors-lot
 IMG_9364:
   about: 'interior: grey cloth seats and dash of a right-hand-drive hatchback, from rear door'
   kind: car
@@ -418,6 +471,7 @@ IMG_9364:
   people: false
   plate_visible: false
   quality: 2
+  series: interiors-lot
 IMG_9366:
   about: interior Mazda sedan driver seat and dash, steering wheel Mazda logo
   kind: car
@@ -425,6 +479,7 @@ IMG_9366:
   people: false
   plate_visible: false
   quality: 3
+  series: interiors-lot
 IMG_9387:
   about: interior front seats grey cloth sedan from back (Nissan-style), RHD
   kind: car
@@ -432,6 +487,7 @@ IMG_9387:
   people: false
   plate_visible: false
   quality: 2
+  series: interiors-lot
 IMG_9398:
   about: interior cabin, heavily blurred/lens smudge
   kind: car
@@ -439,6 +495,7 @@ IMG_9398:
   people: false
   plate_visible: false
   quality: 1
+  series: interiors-lot
 IMG_9503:
   about: 'exterior: red Suzuki Vitara front view on gravel lot'
   kind: car
@@ -446,6 +503,7 @@ IMG_9503:
   people: false
   plate_visible: true
   quality: 3
+  series: red-vitara-lot
 IMG_9857:
   about: interior driver POV, steering wheel, winding coastal road through windshield
   kind: car
@@ -453,6 +511,7 @@ IMG_9857:
   people: true
   plate_visible: false
   quality: 3
+  series: toyota-dash-drive
 IMG_9862:
   about: 'scenery: coastal bay and hills, bright sun, no car'
   kind: scenery
@@ -467,6 +526,7 @@ IMG_9865:
   people: true
   plate_visible: false
   quality: 4
+  series: black-suv-coast
 IMG_9867:
   about: black Toyota Rush front 3/4 at coastal lookout, tilted wide angle
   kind: car
@@ -474,6 +534,7 @@ IMG_9867:
   people: false
   plate_visible: true
   quality: 2
+  series: black-suv-coast
 IMG_9870:
   about: black SUV rear 3/4 on seaside road, harsh sun
   kind: car
@@ -481,6 +542,7 @@ IMG_9870:
   people: false
   plate_visible: true
   quality: 3
+  series: black-suv-coast
 IMG_9885:
   about: 'Exterior: blue Toyota Corolla sedan, low-angle 3/4 front on grass, palm tree and dramatic sunset sky behind'
   kind: car
@@ -488,6 +550,7 @@ IMG_9885:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9886:
   about: 'Exterior: blue Corolla 3/4 front, driver door open, grass lot, palm, sunset clouds'
   kind: car
@@ -495,6 +558,7 @@ IMG_9886:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9887:
   about: 'Exterior: blue Corolla, door open, similar to 9886 slightly farther'
   kind: car
@@ -502,6 +566,7 @@ IMG_9887:
   people: false
   plate_visible: true
   quality: 3
+  series: corolla-fit-sunset
 IMG_9888:
   about: 'Exterior: blue Corolla, door open, car at left edge, sun flare right'
   kind: car
@@ -509,6 +574,7 @@ IMG_9888:
   people: false
   plate_visible: true
   quality: 3
+  series: corolla-fit-sunset
 IMG_9889:
   about: 'Exterior: white Honda Fit and blue Corolla side by side on grass, palm, sunset sky, sea horizon'
   kind: car
@@ -516,6 +582,7 @@ IMG_9889:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9890:
   about: 'Exterior: white Honda Fit front-left with blue Corolla behind, palm, clouds'
   kind: car
@@ -523,6 +590,7 @@ IMG_9890:
   people: false
   plate_visible: true
   quality: 5
+  series: corolla-fit-sunset
 IMG_9891:
   about: 'Exterior: white Fit and blue Corolla, palm, sea horizon'
   kind: car
@@ -530,6 +598,7 @@ IMG_9891:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9892:
   about: 'Exterior: white Fit and blue Corolla, closer framing, palm centered'
   kind: car
@@ -537,6 +606,7 @@ IMG_9892:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9893:
   about: 'Exterior: white Fit and blue Corolla, wider, more grass foreground'
   kind: car
@@ -544,6 +614,7 @@ IMG_9893:
   people: false
   plate_visible: true
   quality: 3
+  series: corolla-fit-sunset
 IMG_9894:
   about: 'Exterior: white Fit close-up front 3/4 with blue Corolla behind, palm'
   kind: car
@@ -551,6 +622,7 @@ IMG_9894:
   people: false
   plate_visible: true
   quality: 4
+  series: corolla-fit-sunset
 IMG_9895:
   about: 'Exterior: white Fit very close with Corolla behind right, palm'
   kind: car
@@ -558,6 +630,7 @@ IMG_9895:
   people: false
   plate_visible: true
   quality: 3
+  series: corolla-fit-sunset
 IMG_9897:
   about: 'Scenery/people: woman with tripod and camera on sandy beach, sea, boat, blue sky (behind-the-scenes)'
   kind: scenery
@@ -565,6 +638,7 @@ IMG_9897:
   people: true
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9901:
   about: 'People: selfie of man in black ARAH cap and blue sleeveless shirt on yellow boat, sea and sunset sky'
   kind: scenery
@@ -572,6 +646,7 @@ IMG_9901:
   people: true
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9902:
   about: 'People: selfie, man in ARAH cap on boat, sea and clouds, slightly closer than 9901'
   kind: scenery
@@ -579,6 +654,7 @@ IMG_9902:
   people: true
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9906:
   about: 'Detail: hand holding black ARAH cap against sunset over sea, wake behind'
   kind: scenery
@@ -586,6 +662,7 @@ IMG_9906:
   people: true
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9907:
   about: 'Detail: hand holding ARAH cap toward sunset, sea wake'
   kind: scenery
@@ -593,6 +670,7 @@ IMG_9907:
   people: true
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9910:
   about: 'Detail: ARAH cap resting on yellow boat bow, sunset and ship on horizon'
   kind: scenery
@@ -600,6 +678,7 @@ IMG_9910:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9911:
   about: 'Detail: ARAH cap on yellow boat bow, sun and distant ship at horizon'
   kind: scenery
@@ -607,6 +686,7 @@ IMG_9911:
   people: false
   plate_visible: false
   quality: 5
+  series: arah-cap-sunset
 IMG_9912:
   about: 'Detail: ARAH cap on yellow bow, sunset, ship on horizon'
   kind: scenery
@@ -614,6 +694,7 @@ IMG_9912:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9913:
   about: 'Detail: ARAH cap on yellow bow, sunset glitter on water'
   kind: scenery
@@ -621,6 +702,7 @@ IMG_9913:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9917:
   about: 'detail: black ARAH logo cap on wooden picnic table, sunset over sea behind'
   kind: scenery
@@ -628,6 +710,7 @@ IMG_9917:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9918:
   about: 'detail: ARAH cap on carved wooden table, sun low over sea with reflection'
   kind: scenery
@@ -635,6 +718,7 @@ IMG_9918:
   people: false
   plate_visible: false
   quality: 5
+  series: arah-cap-sunset
 IMG_9920:
   about: 'detail: ARAH cap on carved table, sunset with clouds'
   kind: scenery
@@ -642,6 +726,7 @@ IMG_9920:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9921:
   about: 'detail: ARAH cap on carved table, sunset with clouds'
   kind: scenery
@@ -649,6 +734,7 @@ IMG_9921:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9922:
   about: 'detail: ARAH cap, sun just above clouds and sea'
   kind: scenery
@@ -656,6 +742,7 @@ IMG_9922:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9923:
   about: 'detail: ARAH cap silhouetted against orange horizon'
   kind: scenery
@@ -663,6 +750,7 @@ IMG_9923:
   people: false
   plate_visible: false
   quality: 4
+  series: arah-cap-sunset
 IMG_9924:
   about: 'detail: ARAH cap against sunset, clouds'
   kind: scenery
@@ -670,6 +758,7 @@ IMG_9924:
   people: false
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9925:
   about: 'scenery: sunset over sea, table edge with carvings'
   kind: scenery
@@ -677,6 +766,7 @@ IMG_9925:
   people: false
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9926:
   about: 'scenery: sunset over sea, table edge bottom'
   kind: scenery
@@ -684,6 +774,7 @@ IMG_9926:
   people: false
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9929:
   about: 'scenery: dusk sea and cloudy sky, ocean spray foreground'
   kind: scenery
@@ -691,6 +782,7 @@ IMG_9929:
   people: false
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9930:
   about: 'scenery: dusk sea and cloudy sky, near-duplicate of 9929'
   kind: scenery
@@ -698,6 +790,7 @@ IMG_9930:
   people: false
   plate_visible: false
   quality: 3
+  series: arah-cap-sunset
 IMG_9975:
   about: 'interior: Toyota steering wheel and gauge cluster, road through windshield with palms and hills'
   kind: car
@@ -705,6 +798,7 @@ IMG_9975:
   people: false
   plate_visible: false
   quality: 3
+  series: toyota-dash-drive
 PHOTO-2024-03-10-22-13-21_2:
   about: 'interior: man and woman in front seats of RAV4 laughing, view out windshield'
   kind: car
@@ -712,6 +806,7 @@ PHOTO-2024-03-10-22-13-21_2:
   people: true
   plate_visible: false
   quality: 4
+  series: maroon-rav4-shore
 PHOTO-2024-03-10-22-13-23:
   about: maroon Toyota RAV4 front 3/4 on gravel, rocky shore, blue sky, small Arah logo bottom-left
   kind: car
@@ -719,6 +814,7 @@ PHOTO-2024-03-10-22-13-23:
   people: false
   plate_visible: false
   quality: 5
+  series: maroon-rav4-shore
 Photoroom_20240407_114813:
   about: maroon RAV4 front on gravel with Arah logo and tagline 'Finding a car to rent in Jamaica just got easier'
   kind: car
@@ -726,13 +822,15 @@ Photoroom_20240407_114813:
   people: false
   plate_visible: false
   quality: 4
+  series: maroon-rav4-shore
 Photoroom_20240825_224455:
   about: 'Arah branded graphic: grey RAV4 trunk loaded with gift boxes, Geneva Primary School donation'
   kind: car
   orientation: portrait
   people: false
   plate_visible: false
-  quality: 3
+  quality: 2
+  series: arah-graphics
 Photoroom_20250527_162910:
   about: two tour minibuses (Toyota Coaster) in lot with palms
   kind: car
@@ -747,6 +845,7 @@ Photoroom_20250531_033744:
   people: false
   plate_visible: true
   quality: 4
+  series: black-suv-coast
 dji_fly_20240310_074536_961_1710270269633_photo:
   about: 'drone low: 3 SUVs (black, black, red) parked at seawall, 3 people nearby, ocean'
   kind: car
@@ -754,6 +853,7 @@ dji_fly_20240310_074536_961_1710270269633_photo:
   people: true
   plate_visible: true
   quality: 4
+  series: drone-mar2024
 dji_fly_20240310_075328_978_1710270550303_photo:
   about: 'drone: maroon RAV4 on wide coastal road, mountains and harbor behind'
   kind: car
@@ -761,6 +861,7 @@ dji_fly_20240310_075328_978_1710270550303_photo:
   people: false
   plate_visible: false
   quality: 4
+  series: maroon-rav4-shore
 dji_fly_20240310_075336_980_1710270553883_photo:
   about: 'drone: maroon RAV4 on coastal road, 3 people near rocks, sea'
   kind: car
@@ -768,6 +869,7 @@ dji_fly_20240310_075336_980_1710270553883_photo:
   people: true
   plate_visible: false
   quality: 4
+  series: maroon-rav4-shore
 dji_fly_20240310_120314_996_1710271037741_photo:
   about: 'drone top-down: fishing boats at beach/jetty, road with 3 small cars'
   kind: scenery
@@ -775,6 +877,7 @@ dji_fly_20240310_120314_996_1710271037741_photo:
   people: false
   plate_visible: false
   quality: 3
+  series: drone-mar2024
 dji_fly_20250510_102502_228_1746890770004_photo_optimized:
   about: street scene small Jamaican town, white bus in distance
   kind: scenery

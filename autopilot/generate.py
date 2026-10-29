@@ -48,7 +48,7 @@ class DayBuilder:
     def photo_flags(self, post, ph):
         post["photo"] = {"id": ph.id, "name": ph.name, "source": ph.source, "credit": ph.credit}
         post["flags"] += ph.flags
-        self.led.record(ph.keys(), ph.hash, self.today, ph.source)
+        self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
 
     # ---- each builder returns (post_fields, [(html,height)])
     def car_hero(self, post):
@@ -170,7 +170,7 @@ def active_moment(cfg, moments, date):
             return m, left
     return None, 0
 
-def generate_day(cfg, led, picker, date, now, render=True, notes=None):
+def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     rng = random.Random(f"{date}-{now.timestamp() // 60}")
     b = DayBuilder(cfg, led, picker, date, rng, load_yaml("moments.yaml"))
     mom, left = active_moment(cfg, b.moments, date)
@@ -183,7 +183,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None):
             opts = typ0.split("|"); typ0 = opts[(date.toordinal() + idx) % len(opts)]
         hhmm = cfg["slots"][idx]
         at = dt.datetime.combine(date, dt.time.fromisoformat(hhmm), zone)
-        if at <= now:
+        if at <= now or hhmm in skip:
             continue
         typ = typ0
         if mom and typ0 == "engage" and not used_mom:
