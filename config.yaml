@@ -11,7 +11,7 @@ max_posts_per_run: 1              # the publisher runs every 10 minutes
 slots: ["06:30","07:30","08:30","09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:30","17:30","18:30","19:30","20:30"]
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: [car_hero, qa, experience, tip, brand|chat, carousel|list, engage, experience, tip, engage, qa|brand, place, tip, engage, list|carousel]
+pattern: [car_hero, qa, experience, tip, brand|chat, carousel|list, engage, experience, tip, engage, qa|trust, place, brand, engage, list|carousel]
 copy_cooldown_days: 30             # same wording is not reused sooner than this (photos follow the stricter rule below)
 
 brand:
@@ -63,14 +63,15 @@ sources:
 # Offers I could not confirm. Posts about them stay OFF until you fill the text and enable them.
 offers:
   lounge_pass:
-    enabled: false
-    text: ""        # e.g. "Book 7 days or more and get a departure pass for 1 adult at Club Mobay or Club Kingston. Valid until ..."
+    enabled: true
+    text: "Book a rental for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Cannot be combined with other promo codes or discounts. Conditions apply."
+    buy_url: "https://booking.vipattractions.com/affiliate/8285"     # buy a lounge pass without renting
   black_friday:
     enabled: false
-    text: ""
+    text: ""        # waiting for the terms
   smile_jamaica:
-    enabled: false
-    url: ""
+    enabled: true
+    url: "https://youtu.be/vMKRKG8bN-8"
 
 instagram:
   api_host: "https://graph.instagram.com"   # Instagram API with Instagram Login
