@@ -8,9 +8,9 @@ from .photos import Picker, Photo
 from .render import render_all
 
 log = logging.getLogger("generate")
-EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️"}
+EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
-            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica"}
+            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica"}
 FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip"}
 BGS = ["green", "dark", "gold", "cream"]
 
@@ -27,6 +27,12 @@ def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None):
         text = f"{text}\n\n📷 {credit}"
     cta = cta or f"Book: {b['site']}\nWhatsApp Winston: https://{b['wa_link']}"
     return f"{text}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag)}"
+
+def credit_for(ph):
+    """Photo credit line for the caption: stock sites and named photographers; our own Arah Rides photos need none."""
+    if not ph or not ph.credit or ph.credit == "Arah Rides" or ph.source == "wikimedia":
+        return None
+    return ph.credit
 
 def tidy(*parts):
     return " ".join(p.strip() for p in parts if p and p.strip())
@@ -54,10 +60,17 @@ class DayBuilder:
 
     # ---- each builder returns (post_fields, [(html,height)])
     def car_hero(self, post):
-        ph = self.pk.car()
+        ph = e = None
+        if self.date.toordinal() % 3 == 0 and self.bank.get("hero_big"):      # every third day: a 7, 12 or 15 seater, if one is in the library
+            ph = self.pk.car(tag="big")
+            if ph:
+                e = self.pick("hero_big")
         if not ph:
-            return None
-        e = self.pick("hero"); self.photo_flags(post, ph)
+            ph = self.pk.car()
+            if not ph:
+                return None
+            e = self.pick("hero")
+        self.photo_flags(post, ph)
         pos = "50% 50%"
         if ph.portrait:
             html = T.hero(ph.path, e["kicker"], e["h1"], e["h2"], e["sub"], pos, at=self.rng.choice("bt"))
@@ -65,7 +78,7 @@ class DayBuilder:
             html = T.split(ph.path, e["kicker"], tidy(e["h1"], e["h2"]), e["sub"], pos, self.rng.choice(["green", "cream"]))
         post["copy_text"] = tidy(e["h1"], e["h2"]) + " " + EMOJI["car_hero"] + "\n\n" + e["sub"]
         post["alt"] = "A rental car in Jamaica. " + tidy(e["h1"], e["h2"])
-        post["caption"] = caption(self.cfg, "car_hero", post["copy_text"])
+        post["caption"] = caption(self.cfg, "car_hero", post["copy_text"], credit=credit_for(ph))
         return [(html, 1350)]
 
     def place(self, post, kind="place"):
@@ -91,8 +104,8 @@ class DayBuilder:
             post["flags"].append("Place/experience name left out because the photo does not confirm it. Add it only if you know it is right.")
         hook = "" if kind == "place" else "\n\nRent a car and go see it for yourself."
         post["copy_text"] = tidy(use["h1"], use["h2"]) + " " + EMOJI[kind] + "\n\n" + use["sub"] + hook
-        post["alt"] = ("Scenery in " + e["place"] + ", Jamaica") if ok else "Scenery in Jamaica"
-        post["caption"] = caption(self.cfg, kind, post["copy_text"], "#" + re.sub(r"\W", "", e["place"]) if ok else None, credit=ph.credit if ph.source == "unsplash" else None)
+        post["alt"] = (("Scenery in " + e["place"] + ", Jamaica") if kind == "place" else "Jamaica: " + e["k"].title()) if ok else "Scenery in Jamaica"
+        post["caption"] = caption(self.cfg, kind, post["copy_text"], "#" + re.sub(r"\W", "", e["place"]) if ok else None, credit=credit_for(ph))
         return [(html, 1350)]
 
     def simple(self, post, kind):
@@ -112,6 +125,13 @@ class DayBuilder:
         elif kind == "list":
             html = T.lst(e["k"], e["h"], e["items"], e.get("cta")); txt = f"{e['h']} {EMOJI['list']}\n\n" + "\n".join(f"{i + 1}) {x}" for i, x in enumerate(e["items"]))
             alt = f"List graphic: {e['h']}"
+        elif kind == "trust":
+            link = self.cfg["offers"]["smile_jamaica"]["url"]
+            html = T.big(e["k"], e["h"], e["b"], "dark", cta="Watch: Smile Jamaica interview"); txt = f"{e['h']} {EMOJI['trust']}\n\n{e['b']}"
+            alt = f"Arah Rides on Smile Jamaica: {e['h']}"
+            post["copy_text"] = txt; post["alt"] = alt
+            post["caption"] = caption(self.cfg, kind, txt, cta=f"Watch the interview: {link}\nBook: {self.cfg['brand']['site']}")
+            return [(html, 1350)]
         elif kind == "chat":
             html = T.chat(e["h"], e["u"], e["b"]); txt = f"{e['h']} {EMOJI['chat']}\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app."
             alt = f"WhatsApp chat with Winston: {e['u']} / {e['b']}"
@@ -133,7 +153,7 @@ class DayBuilder:
         body = "\n".join(f"• {h}: {b}" for h, b in e["slides"])
         post["copy_text"] = f"{e['title']} {EMOJI['carousel']}\n\n{e['sub']}\n\n{body}"
         post["alt"] = f"Carousel: {e['title']}"
-        post["caption"] = caption(self.cfg, "carousel", post["copy_text"], credit=ph.credit if ph and ph.source == "unsplash" else None)
+        post["caption"] = caption(self.cfg, "carousel", post["copy_text"], credit=credit_for(ph))
         return pages
 
     def moment(self, post, m, days_left):
@@ -146,9 +166,15 @@ class DayBuilder:
         return [(html, 1350)]
 
     def offer(self, post, name, o):
-        html = T.big(name.replace("_", " ").upper(), "Offer", o["text"], "gold")
-        post["copy_text"] = o["text"]; post["alt"] = "Offer graphic"
-        post["caption"] = caption(self.cfg, "offer", post["copy_text"])
+        e = self.pick("offer")
+        html = T.big(e["k"], e["h"], e["b"], "gold")
+        link = o.get("buy_url", "")
+        post["copy_text"] = f"{e['h']} {EMOJI['offer']}\n\n{e['b']}"
+        post["alt"] = "Offer graphic: " + e["h"]
+        cta = None
+        if e.get("buy") and link:
+            cta = f"Buy a lounge pass without renting: {link}\nOr book 7+ days: {self.cfg['brand']['site']}\nWhatsApp Winston: https://{self.cfg['brand']['wa_link']}"
+        post["caption"] = caption(self.cfg, "offer", post["copy_text"], cta=cta)
         return [(html, 1350)]
 
 def expand_bank(b):

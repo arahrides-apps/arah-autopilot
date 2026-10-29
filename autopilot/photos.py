@@ -165,18 +165,24 @@ class PexelsSource:
 class UnsplashSource:
     """Unsplash: free key (unsplash.com/developers). Licence allows commercial use; the API rules ask for a photo credit and a download ping."""
     name = "unsplash"
+    JAM = ("jamaica", "kingston", "montego", "negril", "ocho rios", "port antonio", "portland", "blue mountain", "treasure beach", "dunn", "reggae", "rasta", "marley", "jerk", "ackee", "blue hole", "falls", "st. ann", "mandeville", "black river")
     def __init__(self, cfg):
         self.key = os.environ.get(cfg["sources"]["unsplash"]["api_key_env"], "")
         self.h = {"Authorization": "Client-ID " + self.key, "Accept-Version": "v1"}
     def search(self, query, rng):
         if not self.key:
             return []
+        if "jamaica" not in query.lower():
+            query += " Jamaica"
         d = http_json("https://api.unsplash.com/search/photos", headers=self.h,
                       params={"query": query, "per_page": 30, "page": rng.randint(1, 2), "orientation": "portrait", "content_filter": "high"})
         out = []
         for p in d.get("results", []):
             loc = (p.get("location") or {}).get("name") or ""
             tags = " ".join(t.get("title", "") for t in p.get("tags", []) if isinstance(t, dict))
+            blob = " ".join([p.get("description") or "", p.get("alt_description") or "", loc, tags]).lower()
+            if not any(w in blob for w in self.JAM):          # Jamaica only: the photo must say so
+                continue
             out.append({"id": "unsplash:%s" % p["id"], "name": "unsplash-%s" % p["id"], "url": p["urls"]["raw"] + "&w=1800&q=85&fm=jpg",
                         "dl": (p.get("links") or {}).get("download_location", ""), "w": p["width"], "h": p["height"],
                         "text": " ".join([p.get("description") or "", p.get("alt_description") or "", loc, tags]),
@@ -316,7 +322,7 @@ class Picker:
         return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                      e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
 
-    def _own(self, want):
+    def _own(self, want, tag=None):
         cands = []
         for src in self.pool:
             try:
@@ -327,6 +333,8 @@ class Picker:
                 if it["id"] in self.tried or self.led.blocked(["name:" + it["name"], it["id"]], None, self.today, self.cfg):
                     continue
                 m = self._meta(it["name"]); q = 3
+                if tag and (not m or m.get("tag") != tag):
+                    continue
                 if m:
                     if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"]) or m["quality"] < 3:
                         continue
@@ -348,15 +356,15 @@ class Picker:
         fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
         for q, _, src, it, flags, _age in fresh[:25]:
             self.tried.add(it["id"])
-            p = self._load(src, it, want, flags)
+            p = self._load(src, it, want, flags, {"credit": (self._meta(it["name"]) or {}).get("credit")} if (self._meta(it["name"]) or {}).get("credit") else None)
             if p:
                 if self._meta(it["name"]) and self._meta(it["name"]).get("plate_visible"):
                     p.flags.append("Number plate visible (kept sharp on purpose)")
                 return p
         return None
 
-    def car(self):
-        return self._own("car")
+    def car(self, tag=None):
+        return self._own("car", tag)
 
     def scene(self, query, place=None):
         """Scenery photo for a place: free web photos first, then own scenery photos."""

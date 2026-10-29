@@ -102,7 +102,7 @@ def sticker(a, b, left=False, y="top:150px", rot=-9, s=250):
 
 def hero(path, k, h1, h2, sub, pos="50% 50%", at="b", cta=None, st=None):
     G, Y, C, K = c()
-    g = ("linear-gradient(180deg,rgba(26,31,28,.55) 0%,rgba(26,31,28,0) 28%,rgba(26,31,28,0) 38%,rgba(26,31,28,.88) 100%)" if at == "b" else
+    g = ("linear-gradient(180deg,rgba(26,31,28,.55) 0%,rgba(26,31,28,0) 26%,rgba(26,31,28,.55) 52%,rgba(26,31,28,.92) 100%)" if at == "b" else
          "linear-gradient(180deg,rgba(26,31,28,.9) 0%,rgba(26,31,28,.55) 45%,rgba(26,31,28,.15) 62%,rgba(26,31,28,.6) 100%)")
     right = 330 if (st and at == "t") else 64
     size = min(fs(h1 + h2, 118), 96) if (st and at == "t") else fs(h1 + h2, 118)
