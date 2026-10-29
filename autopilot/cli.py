@@ -31,6 +31,8 @@ def main(argv=None):
             print("No drafts yet. Run Draft new posts first."); return 1
         p = max(posts, key=lambda x: len(x["images"])); base = media_base(cfg)   # a carousel, so Make learns image_url_1 to image_url_6
         urls = [base + i for i in p["images"][:6]]
+        while len(urls) < 6:               # pad to 6 so Make learns every carousel field (test message only)
+            urls.append(urls[len(urls) % len(p["images"])])
         WebhookPoster(cfg).post(urls, "TEST ONLY - this is a connection test from Arah Autopilot. Do not publish.", "test", meta={"id": "TEST", "slot": ""})
         print("Test sent to Make with image", urls[0])
     elif a.cmd == "refresh-token":
