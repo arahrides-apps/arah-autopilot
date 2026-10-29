@@ -21,8 +21,10 @@ def hashtags(cfg, typ, extra=None):
     seen = []; [seen.append(t) for t in tags if t.lower() not in [s.lower() for s in seen]]
     return " ".join(seen[: min(h["max_total"], 5)])
 
-def caption(cfg, typ, text, extra_tag=None, cta=None):
+def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None):
     b = cfg["brand"]
+    if credit:
+        text = f"{text}\n\n📷 {credit}"
     cta = cta or f"Book: {b['site']}\nWhatsApp Winston: https://{b['wa_link']}"
     return f"{text}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag)}"
 
@@ -90,7 +92,7 @@ class DayBuilder:
         hook = "" if kind == "place" else "\n\nRent a car and go see it for yourself."
         post["copy_text"] = tidy(use["h1"], use["h2"]) + " " + EMOJI[kind] + "\n\n" + use["sub"] + hook
         post["alt"] = ("Scenery in " + e["place"] + ", Jamaica") if ok else "Scenery in Jamaica"
-        post["caption"] = caption(self.cfg, kind, post["copy_text"], "#" + re.sub(r"\W", "", e["place"]) if ok else None)
+        post["caption"] = caption(self.cfg, kind, post["copy_text"], "#" + re.sub(r"\W", "", e["place"]) if ok else None, credit=ph.credit if ph.source == "unsplash" else None)
         return [(html, 1350)]
 
     def simple(self, post, kind):
@@ -131,7 +133,7 @@ class DayBuilder:
         body = "\n".join(f"• {h}: {b}" for h, b in e["slides"])
         post["copy_text"] = f"{e['title']} {EMOJI['carousel']}\n\n{e['sub']}\n\n{body}"
         post["alt"] = f"Carousel: {e['title']}"
-        post["caption"] = caption(self.cfg, "carousel", post["copy_text"])
+        post["caption"] = caption(self.cfg, "carousel", post["copy_text"], credit=ph.credit if ph and ph.source == "unsplash" else None)
         return pages
 
     def moment(self, post, m, days_left):
