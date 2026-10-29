@@ -1,5 +1,51 @@
 {
- "copy": {},
+ "copy": {
+  "brand:0": "2026-10-29",
+  "brand:10": "2026-10-30",
+  "brand:14": "2026-10-31",
+  "carousel:2": "2026-10-30",
+  "carousel:3": "2026-10-30",
+  "chat:6": "2026-10-30",
+  "engage:11": "2026-10-30",
+  "engage:13": "2026-10-29",
+  "engage:19": "2026-10-31",
+  "engage:26": "2026-10-30",
+  "engage:28": "2026-10-31",
+  "engage:40": "2026-10-31",
+  "engage:46": "2026-10-29",
+  "engage:48": "2026-10-29",
+  "engage:66": "2026-10-30",
+  "experience:1": "2026-10-30",
+  "experience:13": "2026-10-31",
+  "experience:17": "2026-10-29",
+  "experience:21": "2026-10-29",
+  "experience:6": "2026-10-31",
+  "experience:7": "2026-10-30",
+  "hero:18": "2026-10-29",
+  "hero:29": "2026-10-31",
+  "hero:6": "2026-10-30",
+  "list:10": "2026-10-31",
+  "list:2": "2026-10-31",
+  "list:4": "2026-10-29",
+  "list:6": "2026-10-29",
+  "place:21": "2026-10-29",
+  "place:22": "2026-10-31",
+  "place:9": "2026-10-30",
+  "qa:11": "2026-10-31",
+  "qa:13": "2026-10-29",
+  "qa:16": "2026-10-30",
+  "qa:18": "2026-10-31",
+  "qa:20": "2026-10-29",
+  "tip:10": "2026-10-31",
+  "tip:12": "2026-10-30",
+  "tip:13": "2026-10-29",
+  "tip:27": "2026-10-29",
+  "tip:29": "2026-10-31",
+  "tip:3": "2026-10-30",
+  "tip:5": "2026-10-29",
+  "tip:6": "2026-10-30",
+  "tip:8": "2026-10-31"
+ },
  "hashes": [
   {
    "date": "2026-10-07",
@@ -270,9 +316,149 @@
    "date": "2026-10-08",
    "h": "7e7a3c1e3e6a583a",
    "id": "name:pool"
+  },
+  {
+   "date": "2026-10-29",
+   "h": "303270931050873c",
+   "id": "drive:1-Qm1J2qrZ-cjv8NWWEcJAii4N2B5utPD"
+  },
+  {
+   "date": "2026-10-29",
+   "h": "3d3b353139d88003",
+   "id": "drive:1dWle6innOvAiXwfTw05jGSc3FyeL0Z-o"
+  },
+  {
+   "date": "2026-10-29",
+   "h": "3d332b337380000b",
+   "id": "drive:1giRDUN_1FNmHTgpFPfrHWv4Bwqig-3aM"
+  },
+  {
+   "date": "2026-10-29",
+   "h": "0b4766cc6be9c8f0",
+   "id": "drive:1pIyoy4gjK53E2IjpP1yYrUFgEKB1CAR-"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "98982b2430889e8e",
+   "id": "drive:1TaQuXe6YwRr7Fa_aBsby9YjXNPZUtNtR"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "7e1061d9d91c6050",
+   "id": "drive:1rpvr7NLz6JVSc7xGV3xTXn39NYg_kHw-"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "0f0f2c2c3131f814",
+   "id": "drive:1SHtTDvtlRd6SycO4ROBQVSvKipwJLfks"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "3d3b392373738102",
+   "id": "drive:1-zEDTL-4H8WqCWSVuKeztrvLhs9XtR5a"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "66e2cc3361e4f070",
+   "id": "drive:1JeJl98capmqkHjiPrSwcxuawKFJvWn7F"
+  },
+  {
+   "date": "2026-10-30",
+   "h": "3f1fd8d463e37068",
+   "id": "drive:10L0PhDGARGbSHNpOH4ZIPUtDeA7DeV_o"
+  },
+  {
+   "date": "2026-10-31",
+   "h": "98b83848090cc305",
+   "id": "drive:13UoovVtRYm0nYJridl1k-573f1B4G0tL"
+  },
+  {
+   "date": "2026-10-31",
+   "h": "2e6c23e9ccc0d0d0",
+   "id": "drive:11V8y1d-Yxr0TBlsWXVx-RMaNjVw6pyl3"
+  },
+  {
+   "date": "2026-10-31",
+   "h": "5b1f1d1d3139c400",
+   "id": "drive:1QXhxLSTFdaVk-csmW-PQYsXqWPUlOM_e"
+  },
+  {
+   "date": "2026-10-31",
+   "h": "d8e068d8c1a42671",
+   "id": "drive:1VpYa3IQmOh_e9iBwykfIA_Md3f4vSVbf"
   }
  ],
  "photos": {
+  "drive:1-Qm1J2qrZ-cjv8NWWEcJAii4N2B5utPD": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "drive:1-zEDTL-4H8WqCWSVuKeztrvLhs9XtR5a": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "drive:10L0PhDGARGbSHNpOH4ZIPUtDeA7DeV_o": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "drive:11V8y1d-Yxr0TBlsWXVx-RMaNjVw6pyl3": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "drive:13UoovVtRYm0nYJridl1k-573f1B4G0tL": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "drive:1JeJl98capmqkHjiPrSwcxuawKFJvWn7F": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "drive:1QXhxLSTFdaVk-csmW-PQYsXqWPUlOM_e": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "drive:1SHtTDvtlRd6SycO4ROBQVSvKipwJLfks": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "drive:1TaQuXe6YwRr7Fa_aBsby9YjXNPZUtNtR": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "drive:1VpYa3IQmOh_e9iBwykfIA_Md3f4vSVbf": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "drive:1dWle6innOvAiXwfTw05jGSc3FyeL0Z-o": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "drive:1giRDUN_1FNmHTgpFPfrHWv4Bwqig-3aM": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "drive:1pIyoy4gjK53E2IjpP1yYrUFgEKB1CAR-": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "drive:1rpvr7NLz6JVSc7xGV3xTXn39NYg_kHw-": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
   "name:20240310_094839": {
    "first_used": "2026-10-09",
    "last_used": "2026-10-09",
@@ -353,10 +539,20 @@
    "last_used": "2026-10-11",
    "source": "Drive"
   },
+  "name:IMG_9326": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
   "name:IMG_9327": {
    "first_used": "2026-10-14",
    "last_used": "2026-10-14",
    "source": "Drive"
+  },
+  "name:IMG_9328": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
   },
   "name:IMG_9366": {
    "first_used": "2026-10-15",
@@ -398,15 +594,75 @@
    "last_used": "2026-10-10",
    "source": "Drive"
   },
+  "name:IMG_9889": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
   "name:IMG_9890": {
    "first_used": "2026-10-15",
    "last_used": "2026-10-15",
    "source": "Drive"
   },
+  "name:IMG_9892": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "name:IMG_9894": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "name:IMG_9910": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
+  "name:IMG_9911": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "name:IMG_9912": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "name:IMG_9913": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
+  },
+  "name:IMG_9917": {
+   "first_used": "2026-10-31",
+   "last_used": "2026-10-31",
+   "source": "drive"
+  },
   "name:IMG_9918": {
    "first_used": "2026-10-12",
    "last_used": "2026-10-12",
    "source": "Drive"
+  },
+  "name:IMG_9920": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "name:IMG_9921": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "name:IMG_9922": {
+   "first_used": "2026-10-30",
+   "last_used": "2026-10-30",
+   "source": "drive"
+  },
+  "name:IMG_9923": {
+   "first_used": "2026-10-29",
+   "last_used": "2026-10-29",
+   "source": "drive"
   },
   "name:IMG_9929": {
    "first_used": "2026-10-11",
