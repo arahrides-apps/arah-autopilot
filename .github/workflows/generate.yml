@@ -1,7 +1,10 @@
 name: Draft new posts
 on:
   schedule:
-    - cron: "0 23 * * *"        # every day at 6:00 pm Jamaica time
+    - cron: "13 23 * * *"       # 6:13 pm Jamaica time; the repeats below catch a skipped timer (a day already drafted is left alone)
+    - cron: "43 23 * * *"
+    - cron: "43 0 * * *"
+    - cron: "43 2 * * *"
   workflow_dispatch: {}         # or press "Run workflow" any time
 concurrency:
   group: autopilot
