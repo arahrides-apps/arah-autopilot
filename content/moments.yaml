@@ -1,10 +1,55 @@
-# Dated moments. On the day (and lead_days before), one "engage" slot is swapped for this post.
-# needs_offer: the post stays off until that offer is enabled with text in config.yaml.
 - date: '2026-10-19'
   lead_days: 1
   k: NATIONAL HEROES DAY
   h: Happy Heroes Day.
   b: Honouring the people who built Jamaica. Enjoy the holiday safely.
+- date: '2026-11-01'
+  lead_days: 0
+  k: NEW MONTH
+  h: Welcome to November.
+  b: Book the exact car you see. December is filling up and supply is limited. arahrides.com
+- date: '2026-11-06'
+  lead_days: 5
+  k: TREASURE BEACH FOOD, RUM AND REGGAE
+  h: Food, rum and reggae in Treasure Beach.
+  b: Nov 6 to 8 on the south coast. Jamaica has plenty going on, so book your exact car early.
+- date: '2026-11-19'
+  lead_days: 5
+  k: JAMAICA INTERNATIONAL FASHION WEEK
+  h: Fashion week in Ocho Rios.
+  b: Nov 19 to 22. Rent a car and see the north coast. Book before December sells out.
+- date: '2026-11-26'
+  lead_days: 2
+  k: THANKSGIVING WEEK
+  h: Visiting from the States?
+  b: Book your exact car before you land. No same-day bookings, so plan ahead.
+- date: '2026-11-27'
+  lead_days: 0
+  k: BLACK FRIDAY
+  h: Black Friday.
+  b: '{offer}'
+  needs_offer: black_friday
+- date: '2026-11-30'
+  lead_days: 0
+  k: LAST CALL
+  h: December is almost here.
+  b: Cars are limited for the holidays. Secure your exact car today.
+- date: '2026-11-30'
+  lead_days: 0
+  k: CYBER MONDAY
+  h: Cyber Monday.
+  b: '{offer}'
+  needs_offer: black_friday
+- date: '2026-12-05'
+  lead_days: 5
+  k: DECEMBER IN JAMAICA
+  h: December is packed.
+  b: Racing at Caymanas Park Dec 5, Reggae Marathon Dec 6, Kingston International Festival Dec 6 to 13. Cars are limited. Book now.
+- date: '2026-12-20'
+  lead_days: 3
+  k: PARTY SEASON
+  h: Boxing Day fetes are coming.
+  b: Kingston gets loud from Dec 24 to 31. No same-day bookings, so lock in your car now.
 - date: '2026-12-24'
   lead_days: 3
   k: CHRISTMAS IN JAMAICA
@@ -25,6 +70,11 @@
   k: NEW YEAR
   h: See in the new year.
   b: Wishing you safe roads and big adventures.
+- date: '2026-12-31'
+  lead_days: 2
+  k: FIREWORKS ON THE WATERFRONT
+  h: See the new year in, Kingston.
+  b: Dec 31 on the Kingston Waterfront. Plan your ride early.
 - date: '2027-01-01'
   lead_days: 0
   k: HAPPY NEW YEAR
@@ -60,15 +110,3 @@
   k: INDEPENDENCE DAY
   h: Happy Independence Day, Jamaica.
   b: Jamaica 🇯🇲 proud. Rent Jamaican.
-- date: '2026-11-27'
-  lead_days: 0
-  k: BLACK FRIDAY
-  h: Black Friday.
-  b: '{offer}'
-  needs_offer: black_friday
-- date: '2026-11-30'
-  lead_days: 0
-  k: CYBER MONDAY
-  h: Cyber Monday.
-  b: '{offer}'
-  needs_offer: black_friday

@@ -1,11 +1,3 @@
-# Content bank. Every line here is checked against facts you confirmed (pickups, 1 Day Rentals, Winston, Stripe, 3-day minimum).
-# To add posts: copy a line, change the words. The bot cycles through each list, least-recently-used first.
-# Do NOT add prices, discounts, insurance or licence rules unless they are true and current.
-
-
-# this_or_that, patois and parishes are expanded into engage and tip posts automatically.
-
-
 hero:
 - kicker: ROAD TRIP MODE
   h1: Palm trees optional.
@@ -135,6 +127,38 @@ hero:
   h1: Rent Jamaican.
   h2: Go where locals go.
   sub: Find the Jamaica beyond the resort.
+- kicker: THE EXACT CAR
+  h1: This is the car
+  h2: you will drive.
+  sub: No category guessing. Pick it on arahrides.com.
+- kicker: SEE BEFORE YOU BOOK
+  h1: Real car.
+  h2: Real photos.
+  sub: Book the one you see at arahrides.com.
+- kicker: NO COUNTER SURPRISES
+  h1: Book the car,
+  h2: not the category.
+  sub: Your exact ride, ready when you land.
+- kicker: LIMITED SUPPLY
+  h1: Your December
+  h2: ride is waiting.
+  sub: Cars are limited. Secure yours today.
+- kicker: ROAD TRIP READY
+  h1: Pick it.
+  h2: Book it. Go.
+  sub: Choose your exact car and see Jamaica your way.
+- kicker: THE REAL JAMAICA
+  h1: Waterfalls,
+  h2: beaches and a great ride.
+  sub: Book the car you see, then go see Jamaica.
+- kicker: HOLIDAY SEASON
+  h1: Coming home?
+  h2: Your car is ready.
+  sub: Book your exact car before you land.
+- kicker: KINGSTON PICKUP
+  h1: Kingston to
+  h2: everywhere.
+  sub: Pick up in Kingston and the road is yours.
 place:
 - place: Blue Mountains
   query: Blue Mountains Jamaica
@@ -286,6 +310,40 @@ place:
   h1: Black River.
   h2: St Elizabeth on the water.
   sub: River, mangroves and a slow south coast pace.
+- place: Dunn's River Falls
+  query: Dunn's River Falls Jamaica
+  h1: Dunn's River Falls.
+  h2: Climb the waterfall.
+  sub: Ocho Rios, St. Ann. Rent a car and go see it for yourself.
+  also:
+  - dunn
+  - falls
+  - ocho rios
+- place: YS Falls
+  query: YS Falls Jamaica
+  h1: YS Falls.
+  h2: Rope swings and rivers.
+  sub: St. Elizabeth. A great day trip with the right ride.
+- place: Blue Hole
+  query: Blue Hole Ocho Rios Jamaica
+  h1: The Blue Hole.
+  h2: Jump in.
+  sub: Ocho Rios. Cool water, hidden spots, a day to remember.
+- place: Reach Falls
+  query: Reach Falls Portland Jamaica
+  h1: Reach Falls.
+  h2: Portland at its best.
+  sub: Pools and cascades in the hills. Drive out and find them.
+- place: Seven Mile Beach
+  query: Seven Mile Beach Negril Jamaica
+  h1: Seven Mile Beach.
+  h2: Sand, sun, sunset.
+  sub: Negril. Rent a car and stay for the sunset.
+- place: Rio Grande
+  query: Rio Grande rafting Port Antonio Jamaica
+  h1: Rio Grande.
+  h2: Float through Portland.
+  sub: Bamboo rafts and green hills. Drive to Port Antonio.
 neutral:
 - h1: Discover
   h2: the real Jamaica.
@@ -352,6 +410,22 @@ qa:
   a: In the Blue Mountains above Kingston. A morning drive up is worth it.
 - q: How high is Blue Mountain Peak?
   a: 2,256 metres. It is Jamaica's highest point.
+- q: Do I choose my exact car?
+  a: Yes. You book the exact car you see on arahrides.com, not a category.
+- q: Can I book a car for today?
+  a: No. We do not do same-day bookings. Book at least a day ahead and your car will be ready.
+- q: Do you have vans for big groups?
+  a: Yes. We have 7, 12 and 15 seaters. Supply is limited, so book early.
+- q: Can I rent for just one day?
+  a: Yes. One-day rentals are available with pickup and drop-off in the Kingston area.
+- q: Is there a lounge pass offer?
+  a: Book a rental for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- q: Can I combine the lounge pass with other promos?
+  a: No. It cannot be combined with other promo codes or discounts. Conditions apply.
+- q: Why book with Arah Rides?
+  a: You see the exact car, check its photos and book it. No category guessing at the counter.
+- q: Will cars sell out for December?
+  a: Supply is limited and the holidays are busy. Book early to secure your exact car.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -416,6 +490,24 @@ tip:
 - k: NOT SURE?
   h: Ask Winston.
   b: Dates, pickup spots or how booking works. WhatsApp +1 201-371-3152.
+- k: BOOKING TIP
+  h: Book early for December.
+  b: Cars are limited around the holidays. Reserve the exact car you want today.
+- k: BOOKING TIP
+  h: No same-day bookings.
+  b: Book at least a day ahead so your exact car is prepared and waiting.
+- k: BOOKING TIP
+  h: Check the photos.
+  b: Every Arah Rides car is listed with real photos. What you see is what you book.
+- k: GROUP TIP
+  h: Travelling with a crowd?
+  b: We have 7, 12 and 15 seaters. They are limited, so book early.
+- k: KINGSTON TIP
+  h: Just need one day?
+  b: One-day rentals are available with pickup and drop-off in the Kingston area.
+- k: TRAVEL TIP
+  h: Staying a week or more?
+  b: Book a rental of 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
 brand:
 - k: RENT JAMAICAN
   h: Discover the real Jamaica.
@@ -468,6 +560,48 @@ brand:
 - k: RENT JAMAICAN
   h: Experience Jamaica.
   b: Rent a car, pick a parish and say yes to the next turn.
+- k: BOOK THE CAR YOU SEE
+  h: The car you see is the car you get.
+  b: Big rental companies sell a category and you find out at the counter. At Arah Rides you pick the exact car on our site.
+- k: NO COUNTER SURPRISES
+  h: No "or similar."
+  b: Choose the exact car from the listing, check the photos, then book. That is the Arah Rides way.
+- k: CATEGORY VS CAR
+  h: Category or the actual car?
+  b: 'Other companies: book "midsize SUV" and hope. Arah Rides: book the SUV in the photo.'
+- k: LIMITED SUPPLY
+  h: December is filling up.
+  b: Our cars are limited and the holidays are close. Secure your exact car today at arahrides.com.
+- k: PLAN AHEAD
+  h: No same-day bookings.
+  b: We prepare your exact car in advance. Book at least a day ahead and walk straight to it.
+- k: ONE-DAY RENTALS
+  h: Need a car for just one day?
+  b: One-day rentals are available with pickup and drop-off in the Kingston area. Book a day ahead.
+- k: BIG GROUPS
+  h: 7, 12 and 15 seaters.
+  b: Family reunion, church trip or team outing? Pick the big vehicle you see on our site. Supply is limited, so book early.
+- k: FAMILY TRIP
+  h: One big ride. Everybody in.
+  b: Our 7, 12 and 15 seaters keep the whole group together. Reserve yours before December sells out.
+- k: HOLIDAY SEASON
+  h: Coming home for the holidays?
+  b: Lock in your exact car before you land. Cars are limited in December.
+- k: SEE IT. BOOK IT.
+  h: See it. Book it. Drive it.
+  b: Real cars, real photos, real prices on arahrides.com.
+- k: BOOK EARLY
+  h: Jamaica is busy this season.
+  b: Festivals, holidays and visitors coming home. Our cars are limited, so book your exact car now, not last minute.
+- k: DON'T WAIT
+  h: Last-minute means no car.
+  b: We do not do same-day bookings and December sells out. Reserve the car you see today.
+- k: HOLIDAY SEASON
+  h: Plan your Jamaica December.
+  b: Markets, music, beaches and family. Secure your exact car early at arahrides.com.
+- k: LIMITED SUPPLY
+  h: Cars are going.
+  b: Every booking takes a car off the site. Choose yours before someone else does.
 engage:
 - h: Beach, hills or river?
   b: Comment your pick for the perfect Jamaica day.
@@ -517,6 +651,22 @@ engage:
   b: Tell us where you are headed.
 - h: Tell a friend.
   b: Send this to someone who needs a road trip.
+- h: Jerk chicken or jerk pork?
+  b: Comment your pick.
+- h: Waterfall or beach today?
+  b: Comment your pick.
+- h: 'Patty with coco bread: yes or no?'
+  b: Tell us your order.
+- h: Best Jamaican breakfast?
+  b: Ackee and saltfish, or something else?
+- h: Reggae or dancehall for the drive?
+  b: Comment your pick.
+- h: What is your favourite Jamaican river?
+  b: Tell us where you would go.
+- h: Where is the first place you visit when you land?
+  b: Tell us below.
+- h: Who is your road trip crew?
+  b: Tag them below.
 list:
 - k: HOW IT WORKS
   h: Book in 3 steps
@@ -640,6 +790,38 @@ list:
   - A waterfall visit
   - Ice cream stop in Kingston
   cta: 'Book: arahrides.com'
+- k: WHY ARAH RIDES
+  h: Book the car you see
+  items:
+  - Pick the exact car on our site
+  - Check the real photos
+  - Book and pay by Stripe
+  - Walk straight to your car
+  cta: See cars at arahrides.com
+- k: BIG GROUPS
+  h: Vehicles for the whole crew
+  items:
+  - 7 seaters
+  - 12 seaters
+  - 15 seaters
+  - 'Limited supply: book early'
+  cta: Reserve at arahrides.com
+- k: GOOD TO KNOW
+  h: Before you book
+  items:
+  - No same-day bookings
+  - 'One-day rentals: Kingston area'
+  - '7+ rental days: free lounge pass'
+  - Cars are limited for December
+  cta: Ask Winston
+- k: LOUNGE PASS OFFER
+  h: Rent 7+ days, fly out in style
+  items:
+  - Book 7 days or more
+  - Get a Club Mobay or Club Kingston pass
+  - Pass is for 1 guest
+  - Conditions apply
+  cta: Book at arahrides.com
 chat:
 - h: Say Hi. Get a quote.
   u: Hi
@@ -820,6 +1002,58 @@ carousel:
     - Finish with the west coast sky.
   - - Book your car
     - 'arahrides.com or WhatsApp Winston: wa.me/12013713152'
+- k: WHY ARAH RIDES
+  title: Book the car you see.
+  sub: Swipe to see how it works.
+  query: Jamaica road trip
+  slides:
+  - - Pick your exact car
+    - Browse real cars with real photos on arahrides.com.
+  - - No category guessing
+    - What you see is the car you get. No "or similar."
+  - - Book at least a day ahead
+    - No same-day bookings, so your car is ready when you arrive.
+  - - Secure it today
+    - Supply is limited for December. Book at arahrides.com.
+- k: BIG GROUPS
+  title: Vehicles for the whole crew.
+  sub: Swipe for the options.
+  query: Jamaica family beach
+  slides:
+  - - 7 seaters
+    - Family trips and airport runs.
+  - - 12 seaters
+    - Church groups, teams and reunions.
+  - - 15 seaters
+    - The biggest group, one vehicle.
+  - - Limited supply
+    - Book early at arahrides.com.
+- k: LOUNGE PASS OFFER
+  title: Free lounge pass with 7+ days.
+  sub: Swipe for the details.
+  query: Jamaica airport sunset
+  slides:
+  - - Rent 7 days or more
+    - Book your rental.
+  - - Get a departure pass
+    - Club Mobay or Club Kingston, for 1 guest.
+  - - Not combinable
+    - Cannot be used with other promo codes or discounts.
+  - - Conditions apply
+    - Book at arahrides.com or ask Winston.
+- k: TASTE OF JAMAICA
+  title: Eat your way around the island.
+  sub: Swipe for the stops.
+  query: Jamaica food jerk
+  slides:
+  - - Jerk in Portland
+    - Smoke, spice and a view.
+  - - Fried fish by the sea
+    - Festival on the side.
+  - - Patties on the road
+    - The best snack stop.
+  - - Rent a car
+    - Make every stop yours at arahrides.com.
 this_or_that:
 - - Beach
   - River
@@ -1150,6 +1384,161 @@ experience:
   also:
   - hellshire
   - fish
+- k: EAT · JERK
+  place: jerk
+  query: jerk chicken Jamaica
+  h1: Jerk,
+  h2: straight off the pit.
+  sub: Smoke, spice and pimento wood. Rent a car and follow your nose.
+  also:
+  - jerk
+- k: EAT · BREAKFAST
+  place: ackee
+  query: ackee and saltfish Jamaica
+  h1: Ackee and saltfish.
+  h2: The national dish.
+  sub: Start the day the Jamaican way.
+  also:
+  - ackee
+  - saltfish
+- k: EAT · PATTIES
+  place: patty
+  query: Jamaican patty
+  h1: Patty and coco bread.
+  h2: Road trip fuel.
+  sub: Rent a car and make the stops.
+  also:
+  - patty
+  - patties
+- k: EAT · SEAFOOD
+  place: fish
+  query: fried fish festival Jamaica beach
+  h1: Fish, festival,
+  h2: and the sea.
+  sub: Beachside food stops are better with your own ride.
+  also:
+  - fish
+  - festival
+- k: DRINK · COFFEE
+  place: Blue Mountain coffee
+  query: Blue Mountain coffee Jamaica
+  h1: Blue Mountain coffee.
+  h2: From the source.
+  sub: Drive up into the hills for the world-famous cup.
+  also:
+  - coffee
+  - blue mountain
+- k: CULTURE · MUSIC
+  place: reggae
+  query: reggae Jamaica music
+  h1: Reggae roots.
+  h2: Feel the rhythm.
+  sub: Kingston is where the music lives. Rent a car and listen.
+  also:
+  - reggae
+  - marley
+  - music
+- k: CULTURE · KINGSTON
+  place: Bob Marley Museum
+  query: Bob Marley Museum Kingston Jamaica
+  h1: Bob Marley Museum.
+  h2: Kingston history.
+  sub: Visit the home of the reggae legend.
+  also:
+  - marley
+- k: CULTURE · STREET ART
+  place: Kingston
+  query: Kingston Jamaica street art mural
+  h1: Kingston colour.
+  h2: Murals and music.
+  sub: Cruise the city and find the art.
+  also:
+  - mural
+  - street art
+  - kingston
+- k: ENTERTAINMENT · NIGHT
+  place: Montego Bay
+  query: Montego Bay Jamaica nightlife
+  h1: Montego Bay nights.
+  h2: Music and lights.
+  sub: Rent a car and make your own plan.
+  also:
+  - montego bay
+- k: NATURE · RIVERS
+  place: river
+  query: river Jamaica nature
+  h1: Jamaica's rivers.
+  h2: Cool, clear, calm.
+  sub: Drive out and take a dip.
+  also:
+  - river
+- k: NATURE · WATERFALLS
+  place: waterfall
+  query: waterfall Jamaica
+  h1: Chase waterfalls.
+  h2: Jamaica has plenty.
+  sub: Rent a car and find your favourite.
+  also:
+  - waterfall
+  - falls
+- k: BEACH DAY
+  place: beach
+  query: beach Jamaica
+  h1: Beach day.
+  h2: Every day.
+  sub: Rent a car and pick your sand.
+  also:
+  - beach
+- k: THE PEOPLE
+  place: Jamaica
+  query: Jamaica people culture
+  h1: Meet Jamaica.
+  h2: Warm people. Big spirit.
+  sub: The best part of the trip is the welcome.
+  also:
+  - jamaica
+- k: SUNSET
+  place: Negril
+  query: Negril sunset Jamaica
+  h1: Negril sunsets.
+  h2: Worth the drive.
+  sub: Plan the drive. Catch the sky.
+  also:
+  - negril
+  - sunset
+- k: CULTURE · CHRISTMAS
+  place: Grand Market
+  query: Jamaica Christmas Grand Market
+  h1: Grand Market.
+  h2: A Jamaican Christmas tradition.
+  sub: Night markets, street food and music on Dec 24. Rent a car and join in.
+  also:
+  - market
+  - christmas
+- k: CULTURE · FOOD AND RUM
+  place: Treasure Beach
+  query: Treasure Beach Jamaica
+  h1: Food, rum and reggae.
+  h2: South coast style.
+  sub: Treasure Beach has the vibe. Drive down and see.
+  also:
+  - treasure beach
+- k: ACTIVE · RUN
+  place: Kingston
+  query: Kingston Jamaica morning
+  h1: Reggae and running.
+  h2: Kingston in December.
+  sub: The city comes alive this season. Rent a car and see it.
+  also:
+  - kingston
+- k: CULTURE · FASHION
+  place: Ocho Rios
+  query: Ocho Rios Jamaica
+  h1: Style on the coast.
+  h2: Ocho Rios, St. Ann.
+  sub: Fashion, falls and sea. Rent a car and make a weekend of it.
+  also:
+  - ocho rios
 neutral_exp:
 - h1: Jamaica goes
   h2: far beyond the beach.
@@ -1175,3 +1564,60 @@ neutral_exp:
 - h1: Jamaica
   h2: is a road trip.
   sub: Pick up your car and start exploring.
+offer:
+- k: LOUNGE PASS OFFER
+  h: Rent 7+ days. Fly out with a free lounge pass.
+  b: Book a rental for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Cannot be combined with other promos. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: Relax before your flight.
+  b: Rent for 7 days or more? Your rental includes a departure lounge pass for 1 guest at Club Mobay or Club Kingston. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: Book 7 days. Get the lounge.
+  b: A Club Mobay or Club Kingston departure pass for 1 guest comes with every rental of 7 days or more. Conditions apply.
+- k: LOUNGE PASS
+  h: Want the lounge without renting?
+  b: Buy a departure lounge pass on its own, or rent for 7 days or more and get one free. Details at arahrides.com.
+  buy: true
+- k: TRAVEL IN COMFORT
+  h: A better goodbye to Jamaica.
+  b: Rent 7+ days and your departure lounge pass for 1 guest is on us. Conditions apply.
+- k: FREE LOUNGE PASS
+  h: 7 days or more. One free pass.
+  b: Club Mobay or Club Kingston, for 1 guest, with your 7-day-plus rental. Not combinable with other promo codes or discounts.
+- k: LOUNGE PASS
+  h: Skip the airport rush.
+  b: Buy a lounge pass without a rental, or book 7 days or more and get one free. Conditions apply.
+  buy: true
+- k: LOUNGE PASS OFFER
+  h: The longer you stay, the more you get.
+  b: Book 7 days or more for a free departure lounge pass for 1 guest. Conditions apply.
+trust:
+- k: AS SEEN ON SMILE JAMAICA
+  h: Meet the team behind Arah Rides.
+  b: Watch our Smile Jamaica interview and see why people rent Jamaican.
+- k: OUR STORY
+  h: Rent Jamaican. Meet Arah Rides.
+  b: Watch the Smile Jamaica interview and get to know who you are booking with.
+- k: WHO WE ARE
+  h: See us on Smile Jamaica.
+  b: A local company, real cars and real service. Watch the interview.
+- k: TRUST
+  h: Know who you rent from.
+  b: Watch our Smile Jamaica interview. Link in bio.
+hero_big:
+- kicker: BIG GROUPS
+  h1: The whole crew,
+  h2: one vehicle.
+  sub: 7, 12 and 15 seaters. Limited supply, so book early.
+- kicker: 12 AND 15 SEATERS
+  h1: Room for everybody.
+  h2: Book the one you see.
+  sub: Family trips, church groups and teams. Reserve at arahrides.com.
+- kicker: GROUP TRAVEL
+  h1: Bring everyone.
+  h2: Book early.
+  sub: Big vehicles go first in December. Secure yours today.
+- kicker: BIG VEHICLES
+  h1: Family reunion?
+  h2: We have the ride.
+  sub: 7, 12 and 15 seaters on arahrides.com. Limited supply.
