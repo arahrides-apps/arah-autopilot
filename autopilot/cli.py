@@ -6,7 +6,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
     r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true")
-    p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true")
+    p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--catch-up", action="store_true", help="post every approved due post now, ignoring the 20-minute spacing")
     sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -24,7 +24,7 @@ def main(argv=None):
         ig = None if a.dry_run else get_poster(cfg)
         if not a.dry_run and ig is None:
             print("Manual mode: no posting connection set (IG_USER_ID + IG_ACCESS_TOKEN, or POST_WEBHOOK_URL). Nothing posted."); return 0
-        out = publish_due(cfg, ig, a.dry_run); print("\n".join(out) or "nothing due")
+        out = publish_due(cfg, ig, a.dry_run, max_posts=5 if a.catch_up else None, spacing=not a.catch_up); print("\n".join(out) or "nothing due")
     elif a.cmd == "test-webhook":
         import os as _os
         from .instagram import WebhookPoster
