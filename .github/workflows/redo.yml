@@ -25,6 +25,7 @@ jobs:
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           python -m autopilot prune
           python -m autopilot regenerate
