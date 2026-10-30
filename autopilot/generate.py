@@ -4,7 +4,7 @@ from pathlib import Path
 from . import templates as T, queue as Q
 from .config import ROOT, load_yaml, now as now_fn, tz
 from .ledger import Ledger
-from .photos import Picker, Photo
+from .photos import Picker, Photo, rule_for
 from .render import render_all
 
 log = logging.getLogger("generate")
@@ -66,10 +66,16 @@ class DayBuilder:
             if ph:
                 e = self.pick("hero_big")
         if not ph:
-            ph = self.pk.car()
+            for _ in range(8):                      # the picture must fit the words: "drive" copy never gets a beach photo
+                e = self.pick("hero")
+                ph = self.pk.car(ok=rule_for(" ".join([e["kicker"], e["h1"], e["h2"], e["sub"]])))
+                if ph:
+                    break
             if not ph:
-                return None
-            e = self.pick("hero")
+                ph = self.pk.car()
+                if not ph:
+                    return None
+                e = {"kicker": "SEE BEFORE YOU BOOK", "h1": "Real car.", "h2": "Real photos.", "sub": "Book the exact car you see at arahrides.com."}
         self.photo_flags(post, ph)
         pos = "50% 50%"
         if ph.portrait:
@@ -83,7 +89,7 @@ class DayBuilder:
 
     def place(self, post, kind="place"):
         e = self.pick(kind)
-        ph = self.pk.scene(e["query"], e["place"])
+        ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])))
         if not ph:
             return None
         self.photo_flags(post, ph)
@@ -144,7 +150,11 @@ class DayBuilder:
 
     def carousel(self, post):
         e = self.pick("carousel"); n = len(e["slides"]) + 1
-        ph = self.pk.scene(e["query"]) if e.get("query") else None
+        q = (e.get("query") or "")
+        place = re.sub(r"\bjamaica\b", "", q, flags=re.I).strip().lower()
+        if place in ("", "road", "beach", "countryside road", "sunset", "airport", "family beach", "food jerk", "road trip", "airport sunset"):
+            place = None
+        ph = self.pk.scene(q, place, ok=rule_for(q + " " + e["title"] + " " + e["k"]), strict=True) if q else None
         if ph:
             self.photo_flags(post, ph)
             cover = T.ccover(ph.path, e["k"], e["title"], e["sub"])

@@ -9,6 +9,39 @@ from .config import ROOT, load_yaml
 log = logging.getLogger("photos")
 IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
 
+# ---- what a photo shows, so the picture can match the words ("drive" copy never gets a beach photo)
+SETTING_WORDS = {
+    "beach": r"beach|sand|shore|\bsea\b|ocean|\bbay\b|loungers|thatch|coast|lagoon|palm frond",
+    "road": r"\broad|highway|route|\bdrive|windshield|dash",
+    "mountain": r"mountain|hills|hillside|green hills|valley",
+    "water": r"river|waterfall|falls|raft|pool|boat",
+    "city": r"kingston|downtown|buildings|villa|carport|pavers|harbour",
+    "palms": r"palm|coconut",
+}
+
+def settings_of(text):
+    t = (text or "").lower()
+    return {k for k, rx in SETTING_WORDS.items() if re.search(rx, t)}
+
+def rule_for(text):
+    """Turn the words of a post into a rule about which photos fit. Returns a function(settings)->bool, or None for no rule."""
+    t = (text or "").lower()
+    if re.search(r"beyond the beach|past the resort|skip the beach|beyond the resort", t):
+        return lambda s: "beach" not in s or "road" in s
+    need = set()
+    if re.search(r"blue mountain|mountain", t): need |= {"mountain", "road"}
+    if re.search(r"waterfall|\bfalls\b|river", t): need |= {"water", "mountain"}
+    if re.search(r"\bbeach|\bsand\b|coastline|\bsea\b|ocean|treasure beach|negril|seven mile", t): need |= {"beach"}
+    if re.search(r"kingston", t) and not need: need |= {"city", "mountain", "road"}
+    drive = re.search(r"drive|driving|road trip|\broad\b|\broads\b|highway|route|windows down|long way|back road|countryside|point it at", t)
+    if need and drive and "beach" in need and len(need) == 1:
+        return lambda s: bool(s & need)              # a beach drive is fine on a beach
+    if need and len(need) <= 2 and not (drive and "beach" in need):
+        return lambda s, n=need: bool(s & n)
+    if drive:
+        return lambda s: "beach" not in s or "road" in s    # a drive never gets a beach-only photo
+    return None
+
 @dataclass
 class Photo:
     id: str                 # e.g. drive:<fileId>, local:<stem>, pexels:123
@@ -23,6 +56,7 @@ class Photo:
     series: str = ""        # photos from the same shoot share a series; a series is spaced out (photos.series_days)
     w: int = 0
     h: int = 0
+    setting: set = field(default_factory=set)
 
     @property
     def portrait(self):
@@ -322,7 +356,7 @@ class Picker:
         return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                      e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
 
-    def _own(self, want, tag=None):
+    def _own(self, want, tag=None, ok=None):
         cands = []
         for src in self.pool:
             try:
@@ -338,9 +372,11 @@ class Picker:
                 if m:
                     if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"]) or m["quality"] < 3:
                         continue
+                    if ok and not ok(self._settings(m, it["name"])):
+                        continue
                     q = m["quality"]; flags = [] 
                 else:
-                    if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"]:
+                    if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"] or (ok and not ok(set())):
                         continue
                     flags = ["New Drive photo I have not looked at: check the picture"]
                 cands.append([-q, self.rng.random(), src, it, flags])
@@ -363,10 +399,16 @@ class Picker:
                 return p
         return None
 
-    def car(self, tag=None):
-        return self._own("car", tag)
+    def _settings(self, m, name):
+        if m.get("setting"):
+            v = m["setting"]
+            return set(v if isinstance(v, list) else str(v).split())
+        return settings_of((m.get("about") or "") + " " + name)
 
-    def scene(self, query, place=None):
+    def car(self, tag=None, ok=None):
+        return self._own("car", tag, ok)
+
+    def scene(self, query, place=None, ok=None, strict=False):
         """Scenery photo for a place: free web photos first, then own scenery photos."""
         for web in self.web:
             try:
@@ -378,6 +420,9 @@ class Picker:
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             if place:   # prefer pictures whose own description names the place
                 good.sort(key=lambda i: 0 if place.lower() in i.get("text", "").lower() else 1)
+            if strict:  # only photos whose description confirms the place and fits the words
+                good = [i for i in good if (not place or place.lower() in i.get("text", "").lower())
+                        and (not ok or ok(settings_of(i.get("text", ""))))]
             for it in good[:8]:
                 self.tried.add(it["id"])
                 p = self._load(web, it, "scenery", ["Web photo: check it shows Jamaica and has no recognisable people or brands"],
@@ -386,4 +431,4 @@ class Picker:
                     p.flags.append("Place confirmed by photo description" if place and place.lower() in p.text.lower()
                                    else "Place NOT confirmed by the photo description")
                     return p
-        return self._own("scenery")
+        return self._own("scenery", None, ok)
