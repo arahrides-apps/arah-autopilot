@@ -885,3 +885,554 @@ dji_fly_20250510_102502_228_1746890770004_photo_optimized:
   people: false
   plate_visible: false
   quality: 2
+waterfall_cave_turquoise:
+  about: turquoise pool inside a waterfall cave (low-res 920px, use small or in carousel)
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: waterfall-cave
+bamboo_rafting_river:
+  about: bamboo raft on green river, rafter in green shirt
+  kind: scenery
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 5
+  series: rafting-river
+blue_corolla_coconut_palms:
+  about: blue Toyota Corolla with ARAH plate under coconut palms, sun flare
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: corolla-palms
+ys_falls_pool_reflection:
+  about: YS Falls pools and waterfall with reflection
+  kind: scenery
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 5
+  series: ys-falls
+gray_corolla_cross_parked:
+  about: gray Corolla Cross parked under tree, dirt lot, plate 0366KZ
+  kind: car
+  orientation: square
+  people: false
+  plate_visible: true
+  quality: 2
+  series: gray-corolla-cross
+beach_loungers_thatch_huts:
+  about: hotel beach with thatched huts and loungers
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: resort-beach
+river_boat_rasta_colors:
+  about: green, yellow and red boat on teal river
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: river-boat
+kingston_view_from_hills:
+  about: view over Kingston and harbour from the hills, palm and bougainvillea
+  kind: scenery
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 5
+  series: kingston-view
+open_road_to_mountains:
+  about: empty road heading toward the mountains
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: open-road
+beach_palm_frond_frame:
+  about: empty beach framed by palm frond
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: palm-beach
+dark_yaris_cross_beach_wide:
+  about: dark green Toyota Yaris Cross on sand by the sea, plate 9836KW
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 5
+  series: yaris-cross-beach
+dark_yaris_cross_beach_portrait:
+  about: dark green Yaris Cross on beach, portrait, boat behind, plate 9836KW
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: yaris-cross-beach
+aerial_highway_hills:
+  about: drone view of highway through green hills
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: aerial-highway
+white_yaris_cross_arah_road:
+  about: white Yaris Cross with ARAH plate on roadside, low angle
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: white-yaris-cross
+white_corolla_cross_highway:
+  about: white Corolla Cross on highway shoulder with mountains, plate 2331KN
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: white-corolla-cross
+aerial_rafts_blue_lagoon:
+  about: aerial of two bamboo rafts on turquoise lagoon, graded look, guests and rafters visible
+  kind: scenery
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 5
+  series: lagoon-rafts
+woman_red_boat_jamaican_flag:
+  about: woman in orange dress in red boat, Jamaican flag, back to camera
+  kind: scenery
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 5
+  series: flag-boat
+fishing_boats_clear_water:
+  about: wooden fishing canoes in clear turquoise water, graded look
+  kind: scenery
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 5
+  series: fishing-boats
+red_mg_hs_front_left:
+  about: red MG SUV front 3/4, gravel lot, Aubyn Car Rental office visible
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 3
+  series: red-mg
+red_mg_hs_front_right:
+  about: red MG SUV front 3/4 right, gravel lot, Aubyn sign edge visible
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 3
+  series: red-mg
+black_suburbans_lake_palm:
+  about: two black Chevrolet Suburbans by lake and palm, hills behind
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 5
+  series: suburban-lake
+  tag: big
+black_suburbans_lake_pair:
+  about: two black Suburbans by lake, hills behind
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 5
+  series: suburban-lake
+  tag: big
+black_suburbans_villa:
+  about: two black Suburbans at villa entrance, blue sky
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 5
+  series: suburban-villa
+  tag: big
+black_suburbans_resort_palms:
+  about: two black Suburbans at resort driveway under palms
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 5
+  series: suburban-resort
+  tag: big
+mountain_road_white_car_a:
+  about: narrow green mountain road, white car ahead, dash edge visible
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 2
+  series: mountain-road
+mountain_road_white_car_b:
+  about: narrow green mountain road, white car ahead, dash edge visible
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 2
+  series: mountain-road
+white_corolla_cross_rear_cutting:
+  about: white Corolla Cross rear on highway shoulder, plate 2331KN, dramatic clouds
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: white-corolla-cross
+white_corolla_cross_front_highway_a:
+  about: white Corolla Cross front on highway shoulder with mountains, plate 2331KN
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: white-corolla-cross
+white_corolla_cross_front_highway_b:
+  about: white Corolla Cross front, highway and mountains, plate 2331KN
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: white-corolla-cross
+highway_dashboard_view:
+  about: view of highway and mountains through windshield, dashboard in frame
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 2
+  series: dash-highway
+silver_minibus_rear:
+  about: silver Foton View CS2 minibus rear 3/4, plate 0343LP, white gravel lot
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 3
+  series: minibus
+  tag: big
+silver_minibus_side:
+  about: silver Foton View CS2 minibus side profile, plate not visible
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: minibus
+  tag: big
+silver_minibus_front:
+  about: silver Foton View CS2 minibus front 3/4, plate 0343LP, wet gravel lot
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: minibus
+  tag: big
+red_corolla_cross_front_mountains:
+  about: red Toyota Corolla Cross front, plate 2727KY, green mountains and blue sky
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: red-corolla-cross
+haval_interior_cockpit:
+  about: Haval interior, right-hand drive, big screen, black leather seats
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: haval-interior
+black_haval_front_right:
+  about: black Haval H6 GT front 3/4, Aubyn plate frame and office visible
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: black-haval
+black_haval_front_left_a:
+  about: black Haval H6 GT front 3/4 with red calipers, Aubyn plate frame visible
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: black-haval
+black_haval_front_left_b:
+  about: black Haval H6 GT front 3/4, Aubyn plate frame and office visible
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: black-haval
+white_yaris_cross_arah_red_barn:
+  about: white Toyota Yaris Cross, ARAH plate, roadside red bar and hills
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: yaris-cross-white2
+white_yaris_cross_arah_low:
+  about: white Yaris Cross low angle, ARAH plate, hills behind
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: yaris-cross-white2
+blue_corolla_two_women_palms:
+  about: two women posing on blue Corolla among coconut palms, ARAH plate
+  kind: scenery
+  orientation: square
+  people: true
+  plate_visible: false
+  quality: 4
+  series: corolla-guests
+brown_suzuki_xl7:
+  about: brown Suzuki XL7 7-seater-style SUV front 3/4 on paved lot, plate 6116KQ
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: suzuki-xl7
+black_kia_carens_front:
+  about: black Kia Carens front, under carport, plate 4056KX
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 3
+  series: kia-carens
+white_toyota_axio_front:
+  about: white Toyota Corolla Axio front on pavers, plate 8652KU
+  kind: car
+  orientation: square
+  people: false
+  plate_visible: true
+  quality: 3
+  series: white-axio
+gray_honda_city_front_left:
+  about: gray Honda City front 3/4 on pavers, plate 6877KP
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 3
+  series: honda-city
+white_subaru_impreza_park:
+  about: white Subaru Impreza front, tree-lined golf-course road, plate 2047KU
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 5
+  series: subaru-impreza
+black_honda_hrv_arah:
+  about: black Honda HR-V, ARAH plate, mountains and rocks behind
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: honda-hrv
+red_rav4_arah_low:
+  about: red Toyota RAV4 low front 3/4, ARAH plate, clouds and mountains
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: red-rav4-arah
+rav4_interior_carplay:
+  about: RAV4 interior from back seat, CarPlay screen, right-hand drive
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: rav4-interior
+highway_sea_view_blue_sky:
+  about: open highway curving toward the sea under blue sky and clouds, dash edge
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: highway-sea
+hills_sea_view_soft:
+  about: view over green hills to the coast, slightly soft
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 2
+  series: hills-sea
+highway_sea_view_cars:
+  about: highway descending to the sea, green hillside, clouds
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: highway-sea2
+highway_truck_mountains_dash:
+  about: highway with truck and green mountains, dash in frame
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 2
+  series: highway-mtn
+highway_truck_mountains_sign:
+  about: highway with truck and green mountains, windshield
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 2
+  series: highway-mtn
+red_mg_studio_dealer:
+  about: red MG SUV on studio background, plate 7252LU, dealer-style photo
+  kind: car
+  orientation: square
+  people: false
+  plate_visible: true
+  quality: 3
+  series: red-mg
+luggage_packed_suv_trunk:
+  about: packed SUV trunk full of suitcases at airport-style lot, no plate
+  kind: car
+  orientation: square
+  people: false
+  plate_visible: false
+  quality: 4
+  series: luggage-trunk
+gray_kia_seltos_arah_rear:
+  about: gray Kia Seltos rear 3/4, ARAH plate, downtown Kingston buildings
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 5
+  series: kia-seltos
+reggae_falls_big_waterfall:
+  about: tall waterfall into turquoise pool with two bathers, creator watermark at top
+  kind: scenery
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  series: reggae-falls
+aerial_highway_to_sea:
+  about: drone view of highway through green hills to the blue sea
+  kind: scenery
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 5
+  series: aerial-highway3
+silver_foton_street_front:
+  about: silver Foton View CS2 15-seater minibus, front 3/4 on a residential street, blue sky
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: foton-street
+  tag: big
+silver_foton_street_side:
+  about: silver Foton View CS2 15-seater minibus, side/front 3/4 on street, View CS2 badge visible, wide-angle distortion
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: foton-street
+  tag: big
+silver_foton_interior_seats:
+  about: silver Foton View CS2 15-seater minibus, interior rows of seats, roof vent and skylight
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: foton-street
+  tag: big
+hiace_white_side_front:
+  about: white Toyota Hiace 12-seater minibus, side view near front wheel
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: hiace-white
+  tag: big
+hiace_white_rear_side:
+  about: white Toyota Hiace 12-seater minibus, rear 3/4 side view
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: hiace-white
+  tag: big
+hiace_white_cockpit:
+  about: white Toyota Hiace 12-seater minibus, right-hand-drive cockpit and front seats
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: hiace-white
+  tag: big
+hiace_white_seats:
+  about: white Toyota Hiace 12-seater minibus, grey leather passenger seats
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: hiace-white
+  tag: big
+hiace_white_rear_open:
+  about: white Toyota Hiace 12-seater minibus, rear open showing rows of seats and cargo floor
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: hiace-white
+  tag: big

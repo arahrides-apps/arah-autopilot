@@ -1621,3 +1621,44 @@ hero_big:
   h1: Family reunion?
   h2: We have the ride.
   sub: 7, 12 and 15 seaters on arahrides.com. Limited supply.
+versus:
+- k: BOOK THE CAR YOU SEE
+  h: Category or the actual car?
+  them:
+  - You book a category
+  - '"Or similar" on the booking'
+  - Find out at the counter
+  us:
+  - You book the exact car
+  - Real photos on our site
+  - Know before you land
+- k: NO COUNTER SURPRISES
+  h: Same price tag, different promise.
+  them:
+  - Midsize SUV, any SUV
+  - Car assigned at pickup
+  - Hope for the best
+  us:
+  - This SUV, this car
+  - Chosen by you online
+  - Ready when you arrive
+- k: WHY ARAH RIDES
+  h: What you see is what you drive.
+  them:
+  - Stock photo of a car
+  - Different car on the day
+  - Surprise at the counter
+  us:
+  - Our own photos
+  - The same car you booked
+  - No surprises
+- k: GROUP TRAVEL
+  h: Big group? Choose the big ride.
+  them:
+  - Book "large van" and wait
+  - Size not guaranteed
+  - Last-minute scramble
+  us:
+  - 7, 12 and 15 seaters listed
+  - Pick the one you see
+  - Limited, so book early

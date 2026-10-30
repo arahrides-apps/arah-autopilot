@@ -13,11 +13,13 @@
   k: TREASURE BEACH FOOD, RUM AND REGGAE
   h: Food, rum and reggae in Treasure Beach.
   b: Nov 6 to 8 on the south coast. Jamaica has plenty going on, so book your exact car early.
+  badge: NOV 6–8
 - date: '2026-11-19'
   lead_days: 5
   k: JAMAICA INTERNATIONAL FASHION WEEK
   h: Fashion week in Ocho Rios.
   b: Nov 19 to 22. Rent a car and see the north coast. Book before December sells out.
+  badge: NOV 19–22
 - date: '2026-11-26'
   lead_days: 2
   k: THANKSGIVING WEEK
@@ -45,16 +47,19 @@
   k: DECEMBER IN JAMAICA
   h: December is packed.
   b: Racing at Caymanas Park Dec 5, Reggae Marathon Dec 6, Kingston International Festival Dec 6 to 13. Cars are limited. Book now.
+  badge: DEC 5–13
 - date: '2026-12-20'
   lead_days: 3
   k: PARTY SEASON
   h: Boxing Day fetes are coming.
   b: Kingston gets loud from Dec 24 to 31. No same-day bookings, so lock in your car now.
+  badge: DEC 24–31
 - date: '2026-12-24'
   lead_days: 3
   k: CHRISTMAS IN JAMAICA
   h: Coming home for Christmas?
   b: Book your ride before you land. arahrides.com
+  badge: DEC 24
 - date: '2026-12-25'
   lead_days: 0
   k: MERRY CHRISTMAS
@@ -75,6 +80,7 @@
   k: FIREWORKS ON THE WATERFRONT
   h: See the new year in, Kingston.
   b: Dec 31 on the Kingston Waterfront. Plan your ride early.
+  badge: DEC 31
 - date: '2027-01-01'
   lead_days: 0
   k: HAPPY NEW YEAR
