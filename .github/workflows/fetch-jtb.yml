@@ -1,0 +1,28 @@
+name: Fetch JTB images
+on:
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          pip install playwright pillow
+          playwright install --with-deps chromium
+      - name: Download all JTB images
+        run: python scripts/fetch_jtb.py
+      - name: Zip the result
+        if: always()
+        run: |
+          cd jtb_out && zip -qr ../JTB_images.zip . || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: JTB_images
+          path: JTB_images.zip
+          retention-days: 14
