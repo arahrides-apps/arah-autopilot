@@ -8,9 +8,9 @@ from .photos import Picker, Photo
 from .render import render_all
 
 log = logging.getLogger("generate")
-EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥"}
+EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
-            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica"}
+            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica"}
 FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip"}
 BGS = ["green", "dark", "gold", "cream"]
 
@@ -125,6 +125,9 @@ class DayBuilder:
         elif kind == "list":
             html = T.lst(e["k"], e["h"], e["items"], e.get("cta")); txt = f"{e['h']} {EMOJI['list']}\n\n" + "\n".join(f"{i + 1}) {x}" for i, x in enumerate(e["items"]))
             alt = f"List graphic: {e['h']}"
+        elif kind == "versus":
+            html = T.versus(e["k"], e["h"], e["them"], e["us"]); txt = f"{e['h']} {EMOJI['brand']}\n\nOthers: " + "; ".join(e["them"]) + "\nArah Rides: " + "; ".join(e["us"])
+            alt = f"Comparison graphic: {e['h']}"
         elif kind == "trust":
             link = self.cfg["offers"]["smile_jamaica"]["url"]
             html = T.big(e["k"], e["h"], e["b"], "dark", cta="Watch: Smile Jamaica interview"); txt = f"{e['h']} {EMOJI['trust']}\n\n{e['b']}"
@@ -159,7 +162,7 @@ class DayBuilder:
     def moment(self, post, m, days_left):
         b = m["b"]
         kicker = m["k"] + (f" · {days_left} DAYS TO GO" if days_left > 0 else "")
-        html = T.big(kicker, m["h"], b, "gold" if days_left == 0 else "green")
+        html = T.event(kicker, m["h"], b, m.get("badge", "")) if m.get("badge") else T.big(kicker, m["h"], b, "gold" if days_left == 0 else "green")
         post["copy_text"] = f"{m['h']} {EMOJI['moment']}\n\n{b}"
         post["alt"] = f"Seasonal graphic: {m['h']}"
         post["caption"] = caption(self.cfg, "moment", post["copy_text"])
@@ -167,7 +170,7 @@ class DayBuilder:
 
     def offer(self, post, name, o):
         e = self.pick("offer")
-        html = T.big(e["k"], e["h"], e["b"], "gold")
+        html = T.ticket(e["k"], e["h"], e["b"], buy=bool(e.get("buy")))
         link = o.get("buy_url", "")
         post["copy_text"] = f"{e['h']} {EMOJI['offer']}\n\n{e['b']}"
         post["alt"] = "Offer graphic: " + e["h"]
@@ -216,7 +219,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         typ = typ0
         if mom and typ0 == "engage" and not used_mom:
             typ, used_mom = "moment", True
-        elif offer and typ0 == "brand" and not used_offer:
+        elif offer and typ0 in ("brand", "versus") and not used_offer:
             typ, used_offer = "offer", True
         post = {"id": f"{date}_{hhmm.replace(':', '')}_{typ}", "date": str(date), "slot": at.isoformat(), "type": typ, "flags": [], "images": []}
         pages = None; t = typ
