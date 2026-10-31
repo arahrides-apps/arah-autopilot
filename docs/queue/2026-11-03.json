@@ -1,0 +1,270 @@
+{
+ "date": "2026-11-03",
+ "posts": [
+  {
+   "id": "2026-11-03_0630_car_hero",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T06:30:00-05:00",
+   "type": "car_hero",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_0630_car_hero_1.jpg"
+   ],
+   "photo": {
+    "id": "drive:1BOE4VF-ydMtmHArHGf9c4RcePKN38-l2",
+    "name": "black_honda_hrv_arah",
+    "source": "drive",
+    "credit": "Arah Rides"
+   },
+   "copy_text": "Your ride your route. 🚗\n\nChoose the car, dates and pickup spot at arahrides.com.",
+   "alt": "A rental car in Jamaica. Your ride your route.",
+   "caption": "Your ride your route. 🚗\n\nChoose the car, dates and pickup spot at arahrides.com.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #RoadTrip",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_0730_qa",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T07:30:00-05:00",
+   "type": "qa",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_0730_qa_1.jpg"
+   ],
+   "copy_text": "What is a 1 Day Rental? 🤔\n\nAvailable in Kingston (Windward Road) and at Norman Manley only. Book with 24 hours' notice. No same-day.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: What is a 1 Day Rental?",
+   "caption": "What is a 1 Day Rental? 🤔\n\nAvailable in Kingston (Windward Road) and at Norman Manley only. Book with 24 hours' notice. No same-day.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #QandA",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_0830_experience",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T08:30:00-05:00",
+   "type": "experience",
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description"
+   ],
+   "images": [
+    "media/2026-11-03/2026-11-03_0830_experience_1.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia:192591055",
+    "name": "wikimedia-192591055",
+    "source": "wikimedia",
+    "credit": "Wikimedia Commons (Public domain)"
+   },
+   "copy_text": "Step into Jamaican history. ✨\n\nRose Hall is a Montego Bay landmark. Pick up at MBJ and go.\n\nRent a car and go see it for yourself.",
+   "alt": "Jamaica: Explore · St James",
+   "caption": "Step into Jamaican history. ✨\n\nRose Hall is a Montego Bay landmark. Pick up at MBJ and go.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica #RoseHall",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_0930_tip",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T09:30:00-05:00",
+   "type": "tip",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_0930_tip_1.jpg"
+   ],
+   "copy_text": "Group Tip: Travelling with a crowd? 💡\n\nWe have 7, 12 and 15 seaters. They are limited, so book early.",
+   "alt": "Tip graphic: Travelling with a crowd?",
+   "caption": "Group Tip: Travelling with a crowd? 💡\n\nWe have 7, 12 and 15 seaters. They are limited, so book early.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1030_chat",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T10:30:00-05:00",
+   "type": "chat",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1030_chat_1.jpg"
+   ],
+   "copy_text": "How long can I rent? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
+   "alt": "WhatsApp chat with Winston: What is the minimum rental? / 1 Day Rentals in Kingston and at Norman Manley. Other rentals are 3 days minimum.",
+   "caption": "How long can I rent? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Winston",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1130_carousel",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T11:30:00-05:00",
+   "type": "carousel",
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place NOT confirmed by the photo description"
+   ],
+   "images": [
+    "media/2026-11-03/2026-11-03_1130_carousel_1.jpg",
+    "media/2026-11-03/2026-11-03_1130_carousel_2.jpg",
+    "media/2026-11-03/2026-11-03_1130_carousel_3.jpg",
+    "media/2026-11-03/2026-11-03_1130_carousel_4.jpg",
+    "media/2026-11-03/2026-11-03_1130_carousel_5.jpg"
+   ],
+   "photo": {
+    "id": "unsplash:fj4PK8TJk6I",
+    "name": "unsplash-fj4PK8TJk6I",
+    "source": "unsplash",
+    "credit": "Photo by Sander S on Unsplash"
+   },
+   "copy_text": "Vehicles for the whole crew. 👉\n\nSwipe for the options.\n\n• 7 seaters: Family trips and airport runs.\n• 12 seaters: Church groups, teams and reunions.\n• 15 seaters: The biggest group, one vehicle.\n• Limited supply: Book early at arahrides.com.",
+   "alt": "Carousel: Vehicles for the whole crew.",
+   "caption": "Vehicles for the whole crew. 👉\n\nSwipe for the options.\n\n• 7 seaters: Family trips and airport runs.\n• 12 seaters: Church groups, teams and reunions.\n• 15 seaters: The biggest group, one vehicle.\n• Limited supply: Book early at arahrides.com.\n\n📷 Photo by Sander S on Unsplash\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1230_moment",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T12:30:00-05:00",
+   "type": "moment",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1230_moment_1.jpg"
+   ],
+   "copy_text": "Food, rum and reggae in Treasure Beach. 🇯🇲\n\nNov 6 to 8 on the south coast. Jamaica has plenty going on, so book your exact car early.",
+   "alt": "Seasonal graphic: Food, rum and reggae in Treasure Beach.",
+   "caption": "Food, rum and reggae in Treasure Beach. 🇯🇲\n\nNov 6 to 8 on the south coast. Jamaica has plenty going on, so book your exact car early.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1330_experience",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T13:30:00-05:00",
+   "type": "experience",
+   "flags": [
+    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
+   ],
+   "images": [
+    "media/2026-11-03/2026-11-03_1330_experience_1.jpg"
+   ],
+   "photo": {
+    "id": "drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD",
+    "name": "fishing_boats_clear_water",
+    "source": "drive",
+    "credit": "Arah Rides"
+   },
+   "copy_text": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.",
+   "alt": "Scenery in Jamaica",
+   "caption": "Your Jamaica, your timetable. ✨\n\nRent a car and stay as long as you like.\n\nRent a car and go see it for yourself.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1430_tip",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T14:30:00-05:00",
+   "type": "tip",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1430_tip_1.jpg"
+   ],
+   "copy_text": "Booking Tip: Book early for December. 💡\n\nCars are limited around the holidays. Reserve the exact car you want today.",
+   "alt": "Tip graphic: Book early for December.",
+   "caption": "Booking Tip: Book early for December. 💡\n\nCars are limited around the holidays. Reserve the exact car you want today.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #TravelTips",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1530_engage",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T15:30:00-05:00",
+   "type": "engage",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1530_engage_1.jpg"
+   ],
+   "copy_text": "Where is the first place you visit when you land? 💬\n\nTell us below.",
+   "alt": "Question for followers: Where is the first place you visit when you land?",
+   "caption": "Where is the first place you visit when you land? 💬\n\nTell us below.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1630_trust",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T16:30:00-05:00",
+   "type": "trust",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1630_trust_1.jpg"
+   ],
+   "copy_text": "See us on Smile Jamaica. 🎥\n\nA local company, real cars and real service. Watch the interview.",
+   "alt": "Arah Rides on Smile Jamaica: See us on Smile Jamaica.",
+   "caption": "See us on Smile Jamaica. 🎥\n\nA local company, real cars and real service. Watch the interview.\n\nWatch the interview: https://youtu.be/vMKRKG8bN-8\nBook: arahrides.com\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1730_place",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T17:30:00-05:00",
+   "type": "place",
+   "flags": [
+    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
+   ],
+   "images": [
+    "media/2026-11-03/2026-11-03_1730_place_1.jpg"
+   ],
+   "photo": {
+    "id": "drive:11hnJ_g8i4VEsnK_a8GRq0SKF5DoQ3Z0B",
+    "name": "highway_sea_view_cars",
+    "source": "drive",
+    "credit": "Arah Rides"
+   },
+   "copy_text": "Island time. Your road, your pace. 🌴\n\nRent Jamaican at arahrides.com.",
+   "alt": "Scenery in Jamaica",
+   "caption": "Island time. Your road, your pace. 🌴\n\nRent Jamaican at arahrides.com.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1830_offer",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T18:30:00-05:00",
+   "type": "offer",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1830_offer_1.jpg"
+   ],
+   "copy_text": "Want the lounge without renting? 🎟️\n\nBuy a departure lounge pass on its own, or rent for 7 days or more and get one free. Details at arahrides.com.",
+   "alt": "Offer graphic: Want the lounge without renting?",
+   "caption": "Want the lounge without renting? 🎟️\n\nBuy a departure lounge pass on its own, or rent for 7 days or more and get one free. Details at arahrides.com.\n\nBuy a lounge pass without renting: https://booking.vipattractions.com/affiliate/8285\nOr book 7+ days: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #Jamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_1930_engage",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T19:30:00-05:00",
+   "type": "engage",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_1930_engage_1.jpg"
+   ],
+   "copy_text": "Sunset or Sunrise? 💬\n\nComment your pick.",
+   "alt": "Question for followers: Sunset or Sunrise?",
+   "caption": "Sunset or Sunrise? 💬\n\nComment your pick.\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #JamaicaVibes",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-03_2030_carousel",
+   "date": "2026-11-03",
+   "slot": "2026-11-03T20:30:00-05:00",
+   "type": "carousel",
+   "flags": [],
+   "images": [
+    "media/2026-11-03/2026-11-03_2030_carousel_1.jpg",
+    "media/2026-11-03/2026-11-03_2030_carousel_2.jpg",
+    "media/2026-11-03/2026-11-03_2030_carousel_3.jpg",
+    "media/2026-11-03/2026-11-03_2030_carousel_4.jpg",
+    "media/2026-11-03/2026-11-03_2030_carousel_5.jpg",
+    "media/2026-11-03/2026-11-03_2030_carousel_6.jpg"
+   ],
+   "photo": {
+    "id": "drive:1bwMtN_ftKJa8n8iIhFK66YKAdagM_PHV",
+    "name": "highway_sea_view_blue_sky",
+    "source": "drive",
+    "credit": "Arah Rides"
+   },
+   "copy_text": "Montego Bay to Negril. 👉\n\nSwipe for the stops.\n\n• Doctor's Cave Beach: Start with a Montego Bay swim.\n• Mayfield Falls: A river and waterfall walk.\n• Seven Mile Beach: Long sand and calm water.\n• Negril sunset: Finish with the west coast sky.\n• Book your car: arahrides.com or WhatsApp Winston: wa.me/12013713152",
+   "alt": "Carousel: Montego Bay to Negril.",
+   "caption": "Montego Bay to Negril. 👉\n\nSwipe for the stops.\n\n• Doctor's Cave Beach: Start with a Montego Bay swim.\n• Mayfield Falls: A river and waterfall walk.\n• Seven Mile Beach: Long sand and calm water.\n• Negril sunset: Finish with the west coast sky.\n• Book your car: arahrides.com or WhatsApp Winston: wa.me/12013713152\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#ArahRides #RentJamaican #JamaicaCarRental #VisitJamaica",
+   "status": "pending"
+  }
+ ]
+}
