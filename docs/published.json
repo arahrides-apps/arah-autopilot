@@ -243,5 +243,11 @@
   "status": "rejected",
   "at": "2026-10-31T17:30:37.074423-05:00",
   "note": "not approved in time"
+ },
+ "2026-10-31_1830_tip": {
+  "status": "published",
+  "at": "2026-10-31T18:30:42.839786-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
