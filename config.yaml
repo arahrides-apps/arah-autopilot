@@ -27,8 +27,33 @@ brand:
   dark: "#1A1F1C"
 
 hashtags:
-  always: ["#ArahRides", "#RentJamaican", "#JamaicaCarRental"]
-  max_total: 5                     # your account only allows 5
+  max_total: 5                     # Instagram only allows 5 per post
+  # Each post gets 5: 2 people-who-want-to-rent tags + 1 trip-planning tag + 1 place tag + 1 tag for the kind of post.
+  # Tags rotate so the account does not look repetitive. Brand tags (#ArahRides) are left out on purpose: only followers search them.
+  rent: ["#CarRentalJamaica", "#JamaicaCarRental", "#CarsJamaica", "#RentACarJamaica", "#SUVRentalJamaica", "#AirportPickupJamaica"]
+  discover: ["#VisitJamaica", "#TravelJamaica", "#JamaicaTravel", "#ExploreJamaica", "#RoadTripJamaica", "#JamaicaVacation"]
+  by_type:
+    experience: ["#JamaicaTravel", "#ExploreJamaica", "#JamaicaVacation"]
+    place: ["#ExploreJamaica", "#JamaicaTravel", "#VisitJamaica"]
+    carousel: ["#JamaicaTravelTips", "#RoadTripJamaica", "#TravelJamaica"]
+    tip: ["#JamaicaTravelTips", "#DrivingInJamaica", "#TravelTips"]
+    list: ["#JamaicaTravelTips", "#TravelJamaica", "#JamaicaVacation"]
+    car_hero: ["#RoadTripJamaica", "#SUVRentalJamaica", "#CarRentalJamaica"]
+    offer: ["#JamaicaVacation", "#JamaicaTravel", "#AirportPickupJamaica"]
+    moment: ["#VisitJamaica", "#ExploreJamaica", "#JamaicaEvents"]
+    chat: ["#CarRentalJamaica", "#JamaicaTravelTips", "#TravelJamaica"]
+    qa: ["#JamaicaTravelTips", "#CarRentalJamaica", "#TravelJamaica"]
+
+# Locations tagged on posts. Each post is tagged with a real place so it can show up in that place's page and in search.
+# id = the Facebook/Instagram place ID for the tag (optional: leave "" until you have it; the post still goes out, just without the pin).
+# kw = the line added to the caption so Instagram search finds the post.
+locations:
+  default_rotation: [kingston, montego_bay, norman_manley, sangster, ocho_rios]
+  kingston:       {name: "Kingston, Jamaica",                        id: "", tag: "#KingstonJamaica",      kw: "Car rental in Kingston, Jamaica | Pickup at Norman Manley Airport"}
+  montego_bay:    {name: "Montego Bay, Jamaica",                     id: "", tag: "#MontegoBayJamaica",    kw: "Car rental in Montego Bay, Jamaica | Airport pickup"}
+  norman_manley:  {name: "Norman Manley International Airport",     id: "", tag: "#NormanManleyAirport",  kw: "Car rental at Norman Manley Airport, Kingston | Airport pickup"}
+  sangster:       {name: "Sangster International Airport",          id: "", tag: "#SangsterAirport",      kw: "Car rental at Sangster Airport, Montego Bay | Airport pickup"}
+  ocho_rios:      {name: "Ocho Rios, Jamaica",                       id: "", tag: "#OchoRios",             kw: "Car rental for Ocho Rios and the north coast"}
 
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
