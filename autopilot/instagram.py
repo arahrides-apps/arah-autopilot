@@ -117,6 +117,9 @@ def due_posts(cfg, now, posts, decisions, pub):
 
 def publish_due(cfg, ig=None, dry_run=False, max_posts=None, spacing=True):
     now = now_fn(cfg); posts = Q.all_posts(); dec = Q.decisions(); pub = Q.published()
+    if not spacing and not dry_run:        # catch-up: posts that failed while Make was down get a fresh start
+        for pid in [k for k, v in pub.items() if v.get("status") in ("failed", "retrying")]:
+            pub.pop(pid)
     due, skipped = due_posts(cfg, now, posts, dec, pub)
     log_ = []
     for pid, st, why in skipped:
