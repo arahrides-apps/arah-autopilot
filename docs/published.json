@@ -266,5 +266,11 @@
   "status": "rejected",
   "at": "2026-10-31T21:31:15.936923-05:00",
   "note": "not approved in time"
+ },
+ "2026-11-01_0630_car_hero": {
+  "status": "published",
+  "at": "2026-11-01T06:32:17.033881-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
