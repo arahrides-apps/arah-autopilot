@@ -14,19 +14,35 @@ TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#V
 FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip"}
 BGS = ["green", "dark", "gold", "cream"]
 
-def hashtags(cfg, typ, extra=None):
-    h = cfg["hashtags"]; tags = list(h["always"]); tags.append(TYPE_TAG.get(typ, "#Jamaica"))
-    if extra:
-        tags.append(extra)
+def _pick(rng, lst, n=1, avoid=()):
+    pool = [t for t in lst if t.lower() not in [x.lower() for x in avoid]]
+    rng.shuffle(pool)
+    return pool[:n]
+
+def hashtags(cfg, typ, extra=None, loc=None, rng=None):
+    """5 tags: 2 'I want to rent' + 1 trip-planning + 1 place + 1 for the kind of post. Never the brand tag (only followers search it)."""
+    h = cfg["hashtags"]; rng = rng or random.Random()
+    tags = []
+    tags += _pick(rng, h["rent"], 2)
+    tags += _pick(rng, h["discover"], 1, tags)
+    place = extra or (loc or {}).get("tag")
+    if place:
+        tags.append(place)
+    tags += _pick(rng, h["by_type"].get(typ, h["discover"]), 1, tags)
     seen = []; [seen.append(t) for t in tags if t.lower() not in [s.lower() for s in seen]]
+    for t in _pick(rng, h["rent"] + h["discover"], 5, seen):        # top up if a tag repeated
+        if len(seen) >= min(h["max_total"], 5):
+            break
+        seen.append(t)
     return " ".join(seen[: min(h["max_total"], 5)])
 
-def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None):
+def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng=None):
     b = cfg["brand"]
     if credit:
         text = f"{text}\n\n📷 {credit}"
     cta = cta or f"Book: {b['site']}\nWhatsApp Winston: https://{b['wa_link']}"
-    return f"{text}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag)}"
+    kw = f"\n\n{loc['kw']}" if loc and loc.get("kw") else ""        # plain-words line: Instagram search reads the caption
+    return f"{text}{kw}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag, loc, rng)}"
 
 def credit_for(ph):
     """Photo credit line for the caption: stock sites and named photographers; our own Arah Rides photos need none."""
@@ -41,7 +57,7 @@ class DayBuilder:
     def __init__(self, cfg, led, picker, date, rng, moments):
         self.cfg, self.led, self.pk, self.date, self.rng = cfg, led, picker, date, rng
         self.bank = expand_bank(load_yaml("bank.yaml")); self.moments = moments; self.notes = []
-        self.today = date
+        self.today = date; self.led_loc = []
 
     def pick(self, kind):
         lst = self.bank[kind]
@@ -52,6 +68,28 @@ class DayBuilder:
                 self.notes.append(n)
         self.led.copy_record(kind, i, self.today)
         return lst[i]
+
+    def where(self, place=None):
+        """The place tagged on a post: the place it shows (Negril, YS Falls...) if it is a known one, else rotate through the pickup spots."""
+        L = self.cfg["locations"]
+        key = None
+        if place:
+            pl = place.lower()
+            for k, v in L.items():
+                if isinstance(v, dict) and (pl in v["name"].lower() or k.replace("_", " ") in pl):
+                    key = k; break
+            if not key:
+                return {"name": place + ", Jamaica", "id": "", "tag": "#" + re.sub(r"\W", "", place), "kw": f"Car rental for {place}, Jamaica"}
+        if not key:
+            rot = L["default_rotation"]
+            key = rot[(self.date.toordinal() + len(self.led_loc)) % len(rot)]
+            self.led_loc.append(key)
+        return {**L[key], "key": key}
+
+    def cap(self, post, typ, text, extra_tag=None, cta=None, credit=None, place=None):
+        loc = self.where(place)
+        post["location"] = {"name": loc["name"], "id": loc.get("id", "")}
+        return caption(self.cfg, typ, text, extra_tag, cta, credit, loc, self.rng)
 
     def photo_flags(self, post, ph):
         post["photo"] = {"id": ph.id, "name": ph.name, "source": ph.source, "credit": ph.credit}
@@ -84,7 +122,7 @@ class DayBuilder:
             html = T.split(ph.path, e["kicker"], tidy(e["h1"], e["h2"]), e["sub"], pos, self.rng.choice(["green", "cream"]))
         post["copy_text"] = tidy(e["h1"], e["h2"]) + " " + EMOJI["car_hero"] + "\n\n" + e["sub"]
         post["alt"] = "A rental car in Jamaica. " + tidy(e["h1"], e["h2"])
-        post["caption"] = caption(self.cfg, "car_hero", post["copy_text"], credit=credit_for(ph))
+        post["caption"] = self.cap(post, "car_hero", post["copy_text"], credit=credit_for(ph))
         return [(html, 1350)]
 
     def place(self, post, kind="place"):
@@ -111,7 +149,7 @@ class DayBuilder:
         hook = "" if kind == "place" else "\n\nRent a car and go see it for yourself."
         post["copy_text"] = tidy(use["h1"], use["h2"]) + " " + EMOJI[kind] + "\n\n" + use["sub"] + hook
         post["alt"] = (("Scenery in " + e["place"] + ", Jamaica") if kind == "place" else "Jamaica: " + e["k"].title()) if ok else "Scenery in Jamaica"
-        post["caption"] = caption(self.cfg, kind, post["copy_text"], "#" + re.sub(r"\W", "", e["place"]) if ok else None, credit=credit_for(ph))
+        post["caption"] = self.cap(post, kind, post["copy_text"], None, credit=credit_for(ph), place=e["place"] if ok else None)
         return [(html, 1350)]
 
     def simple(self, post, kind):
@@ -139,13 +177,13 @@ class DayBuilder:
             html = T.big(e["k"], e["h"], e["b"], "dark", cta="Watch: Smile Jamaica interview"); txt = f"{e['h']} {EMOJI['trust']}\n\n{e['b']}"
             alt = f"Arah Rides on Smile Jamaica: {e['h']}"
             post["copy_text"] = txt; post["alt"] = alt
-            post["caption"] = caption(self.cfg, kind, txt, cta=f"Watch the interview: {link}\nBook: {self.cfg['brand']['site']}")
+            post["caption"] = self.cap(post, kind, txt, cta=f"Watch the interview: {link}\nBook: {self.cfg['brand']['site']}")
             return [(html, 1350)]
         elif kind == "chat":
             html = T.chat(e["h"], e["u"], e["b"]); txt = f"{e['h']} {EMOJI['chat']}\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app."
             alt = f"WhatsApp chat with Winston: {e['u']} / {e['b']}"
         post["copy_text"] = txt; post["alt"] = alt
-        post["caption"] = caption(self.cfg, kind, txt, cta=None)
+        post["caption"] = self.cap(post, kind, txt, cta=None)
         return [(html, 1350)]
 
     def carousel(self, post):
@@ -166,7 +204,7 @@ class DayBuilder:
         body = "\n".join(f"• {h}: {b}" for h, b in e["slides"])
         post["copy_text"] = f"{e['title']} {EMOJI['carousel']}\n\n{e['sub']}\n\n{body}"
         post["alt"] = f"Carousel: {e['title']}"
-        post["caption"] = caption(self.cfg, "carousel", post["copy_text"], credit=credit_for(ph))
+        post["caption"] = self.cap(post, "carousel", post["copy_text"], credit=credit_for(ph))
         return pages
 
     def moment(self, post, m, days_left):
@@ -175,7 +213,7 @@ class DayBuilder:
         html = T.event(kicker, m["h"], b, m.get("badge", "")) if m.get("badge") else T.big(kicker, m["h"], b, "gold" if days_left == 0 else "green")
         post["copy_text"] = f"{m['h']} {EMOJI['moment']}\n\n{b}"
         post["alt"] = f"Seasonal graphic: {m['h']}"
-        post["caption"] = caption(self.cfg, "moment", post["copy_text"])
+        post["caption"] = self.cap(post, "moment", post["copy_text"])
         return [(html, 1350)]
 
     def offer(self, post, name, o):
@@ -187,7 +225,7 @@ class DayBuilder:
         cta = None
         if e.get("buy") and link:
             cta = f"Buy a lounge pass without renting: {link}\nOr book 7+ days: {self.cfg['brand']['site']}\nWhatsApp Winston: https://{self.cfg['brand']['wa_link']}"
-        post["caption"] = caption(self.cfg, "offer", post["copy_text"], cta=cta)
+        post["caption"] = self.cap(post, "offer", post["copy_text"], cta=cta)
         return [(html, 1350)]
 
 def expand_bank(b):

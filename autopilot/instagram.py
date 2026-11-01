@@ -74,7 +74,8 @@ class WebhookPoster:
         self.url = os.environ.get("POST_WEBHOOK_URL", ""); self.s = session or requests.Session()
     def post(self, urls, caption, alt=None, meta=None):
         body = {"id": (meta or {}).get("id", ""), "slot": (meta or {}).get("slot", ""), "caption": caption, "alt": alt or "",
-                "image_count": len(urls), "image_urls": urls}
+                "image_count": len(urls), "image_urls": urls,
+                "location_name": (meta or {}).get("location", {}).get("name", ""), "location_id": (meta or {}).get("location", {}).get("id", "")}
         for i, u in enumerate(urls, 1):
             body[f"image_url_{i}"] = u
         r = self.s.post(self.url, json=body, timeout=60)
