@@ -1591,6 +1591,77 @@ offer:
 - k: LOUNGE PASS OFFER
   h: The longer you stay, the more you get.
   b: Book 7 days or more for a free departure lounge pass for 1 guest. Conditions apply.
+- k: FREE LOUNGE PASS
+  h: A week on the road. A free lounge on the way out.
+  b: Rent for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: Seven days. One free lounge pass.
+  b: Your 7-day-plus rental comes with a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: LOUNGE PASS OFFER
+  h: End your trip in the lounge.
+  b: Book 7 days or more and your departure lounge pass for 1 guest is free. Club Mobay or Club Kingston. Conditions apply.
+- k: TRAVEL IN COMFORT
+  h: Fly out relaxed.
+  b: Rent for 7 days or more and relax in the lounge before your flight. One free departure pass for 1 guest. Conditions apply.
+- k: LOUNGE PASS
+  h: Lounge pass, no rental needed.
+  b: You can buy a Club Mobay or Club Kingston departure pass on its own, or rent for 7 days or more and get one free. Conditions apply.
+  buy: true
+- k: FREE DEPARTURE PASS
+  h: Long trip? Longer perks.
+  b: Book a rental for 7 days or more and get a departure lounge pass for 1 guest at Club Mobay or Club Kingston. Conditions apply.
+- k: LOUNGE PASS OFFER
+  h: Pick the car you see. Get the lounge too.
+  b: Book the exact car you see on arahrides.com for 7 days or more and your departure pass for 1 guest is on us. Conditions apply.
+- k: FREE LOUNGE PASS
+  h: Your flight home just got better.
+  b: Club Mobay or Club Kingston departure pass for 1 guest, free with a rental of 7 days or more. Not combinable with other promo codes or discounts.
+- k: LOUNGE PASS
+  h: Need a lounge pass for your flight?
+  b: Buy a departure lounge pass without renting a car, or book 7 days or more and get one free. Conditions apply.
+  buy: true
+- k: TRAVEL IN COMFORT
+  h: Rent. Explore. Relax.
+  b: See Jamaica your way for 7 days or more, then relax in the lounge. One free departure pass for 1 guest. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: A week or more? We have a gift.
+  b: Rent for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: LOUNGE PASS OFFER
+  h: Make the last hour the best hour.
+  b: Your free departure lounge pass for 1 guest comes with any rental of 7 days or more. Conditions apply.
+- k: LOUNGE PASS
+  h: Skip the queue. Take the lounge.
+  b: Buy a Club Mobay or Club Kingston pass on its own, or get one free when you rent for 7 days or more. Conditions apply.
+  buy: true
+- k: FREE LOUNGE PASS
+  h: Book 7 days. Skip the crowd.
+  b: Rent for 7 days or more and get a departure lounge pass for 1 guest. Club Mobay or Club Kingston. Conditions apply.
+- k: LOUNGE PASS OFFER
+  h: Travelling for the holidays?
+  b: Rent for 7 days or more and your departure lounge pass for 1 guest is free. Cars and dates are limited, so book early. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: Your week in Jamaica ends in style.
+  b: Book 7 days or more and enjoy a Club Mobay or Club Kingston departure pass for 1 guest, free. Conditions apply.
+- k: LOUNGE PASS
+  h: Lounge first. Flight second.
+  b: No rental? You can still buy a departure lounge pass. Renting 7 days or more? It is free for 1 guest. Conditions apply.
+  buy: true
+- k: TRAVEL IN COMFORT
+  h: The perfect last stop.
+  b: Rent 7 days or more and finish your trip at Club Mobay or Club Kingston with a free departure pass for 1 guest. Conditions apply.
+- k: FREE LOUNGE PASS
+  h: Stay longer. Save the stress.
+  b: A free departure lounge pass for 1 guest with every rental of 7 days or more. Not combinable with other promo codes or discounts.
+- k: LOUNGE PASS OFFER
+  h: 7 days gets you in.
+  b: Rent for 7 days or more and get into Club Mobay or Club Kingston with 1 free departure pass. Conditions apply.
+- k: LOUNGE PASS
+  h: Treat someone to the lounge.
+  b: Buy a departure lounge pass on its own, or book 7 days or more and get one free for 1 guest. Conditions apply.
+  buy: true
+- k: FREE DEPARTURE PASS
+  h: More days. More perks.
+  b: Book your car for 7 days or more and your Club Mobay or Club Kingston pass for 1 guest is on us. Conditions apply.
 trust:
 - k: AS SEEN ON SMILE JAMAICA
   h: Meet the team behind Arah Rides.
