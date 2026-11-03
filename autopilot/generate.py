@@ -6,6 +6,9 @@ from .config import ROOT, load_yaml, now as now_fn, tz
 from .ledger import Ledger
 from .photos import Picker, Photo, rule_for
 from .render import render_all
+from .ledger import dhash
+import types
+from PIL import Image
 
 log = logging.getLogger("generate")
 EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
@@ -36,8 +39,15 @@ def hashtags(cfg, typ, extra=None, loc=None, rng=None):
         seen.append(t)
     return " ".join(seen[: min(h["max_total"], 5)])
 
+ENGAGE_LINES = ["Save this for your trip 🔖 and send it to who you're travelling with.",
+                "Planning Jamaica? Save this post 🔖 and share it with your travel partner.",
+                "Tap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you.",
+                "Send this to someone who needs a car in Jamaica 🚗 and save it for later 🔖."]
+
 def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng=None):
     b = cfg["brand"]
+    if cfg.get("all_carousels", True) and rng is not None:
+        text = f"{text}\n\n{rng.choice(ENGAGE_LINES)}"
     if credit:
         text = f"{text}\n\n📷 {credit}"
     cta = cta or f"Book: {b['site']}\nWhatsApp Winston: https://{b['wa_link']}"
@@ -57,7 +67,7 @@ class DayBuilder:
     def __init__(self, cfg, led, picker, date, rng, moments):
         self.cfg, self.led, self.pk, self.date, self.rng = cfg, led, picker, date, rng
         self.bank = expand_bank(load_yaml("bank.yaml")); self.moments = moments; self.notes = []
-        self.today = date; self.led_loc = []
+        self.today = date; self.led_loc = []; self.used_follow = set()
 
     def pick(self, kind):
         lst = self.bank[kind]
@@ -217,16 +227,90 @@ class DayBuilder:
         return [(html, 1350)]
 
     def offer(self, post, name, o):
-        e = self.pick("offer")
-        html = T.ticket(e["k"], e["h"], e["b"], buy=bool(e.get("buy")))
+        e = self.pick("offer"); self.last_offer = e
+        self.vip_used = []
+        vp = self.vip_photo()
+        html = T.ticket(e["k"], e["h"], e["b"], buy=bool(e.get("buy")), photo=vp.path if vp else None)
+        if vp:
+            self.vip_used.append(vp)
+            post["flags"].append("Lounge photos are from VIP Attractions (our lounge partner). Make sure they are happy for us to use them.")
         link = o.get("buy_url", "")
         post["copy_text"] = f"{e['h']} {EMOJI['offer']}\n\n{e['b']}"
         post["alt"] = "Offer graphic: " + e["h"]
         cta = None
         if e.get("buy") and link:
             cta = f"Buy a lounge pass without renting: {link}\nOr book 7+ days: {self.cfg['brand']['site']}\nWhatsApp Winston: https://{self.cfg['brand']['wa_link']}"
-        post["caption"] = self.cap(post, "offer", post["copy_text"], cta=cta)
+        post["caption"] = self.cap(post, "offer", post["copy_text"], cta=cta, credit="Lounge photos: VIP Attractions (Club Mobay and Club Kingston)" if vp else None)
         return [(html, 1350)]
+
+    def vip_photo(self):
+        """A photo of the partner lounges from content/vip/ (you add them). Same 3-month no-reuse rule as every other photo."""
+        d = ROOT / "content" / "vip"
+        files = sorted(p for p in d.glob("*") if p.suffix.lower() in (".jpg", ".jpeg", ".png")) if d.exists() else []
+        self.rng.shuffle(files)
+        for f in files:
+            keys = ["vip:" + f.name, "name:vip-" + f.stem]
+            if f.name in getattr(self, "_vip_today", set()):
+                continue
+            try:
+                im = Image.open(f)
+                if min(im.size) < 560:
+                    continue
+                hv = dhash(f)
+            except Exception:
+                continue
+            if self.led.blocked(keys, hv, self.today, self.cfg):
+                continue
+            self.led.record(keys, hv, self.today, "vip", "")
+            self._vip_today = getattr(self, "_vip_today", set()) | {f.name}
+            return types.SimpleNamespace(path=str(f), name=f.name)
+        return None
+
+    # ---- every feed post is a carousel (Instagram shows carousels to non-followers far more than single images)
+    CLOSERS = [("Save this for your trip.", "Tap the bookmark so you can find it when you plan. Questions? Ask Winston on WhatsApp."),
+               ("Send this to your travel partner.", "Planning together? Share it, then pick your car at arahrides.com."),
+               ("Planning Jamaica?", "Tell Winston your dates and pickup spot on WhatsApp and get a quote."),
+               ("Tag who you are travelling with.", "Then book the exact car you see at arahrides.com.")]
+    BOOK = ("Book in 3 steps.", "Say Hi to Winston on WhatsApp. Get your quote. Book and pay by Stripe.")
+
+    def _follow(self, n, typ, own):
+        """n content slides (heading, body) that go with this post."""
+        pool = []
+        for e in self.bank.get("tip", []):
+            pool.append((e["h"], e["b"]))
+        for e in self.bank.get("qa", []):
+            pool.append((e["q"], e["a"]))
+        own = (own or "").lower()
+        pool = [x for x in pool if x[0].lower() not in own and x[0] not in self.used_follow]
+        self.rng.shuffle(pool)
+        out = pool[:n]
+        self.used_follow.update(x[0] for x in out)
+        return out
+
+    def expand(self, post, typ, pages, offer=None):
+        """Turn a one-picture post into a 5-slide carousel: cover, 2 useful slides, how to book, save/share + book."""
+        total = 5
+        if typ == "offer" and offer:
+            e, link = offer
+            mid = [("How to get it.", "Book a rental for 7 days or more on arahrides.com."),
+                   ("Who gets it.", "1 guest receives a Club Mobay or Club Kingston departure lounge pass. Cannot be combined with other promo codes or discounts. Conditions apply.")]
+            mid.insert(1, ("Inside the lounge.", "Free Wi-Fi. Comfortable seating. Food and drink. Private restrooms. Fast track."))
+            if e.get("buy"):
+                mid[0] = ("Not renting?", "You can buy a departure lounge pass on its own. Details at arahrides.com.")
+        else:
+            mid = self._follow(2, typ, post.get("copy_text", "")) + [self.BOOK]
+        close = self.rng.choice(self.CLOSERS)
+        slides = mid + [close]
+        out = list(pages)
+        for i, (h, b) in enumerate(slides):
+            ph = self.vip_photo() if (typ == "offer" and i in (0, 2)) else None       # lounge photo behind slides 2 and 4 when we have them
+            if ph:
+                out.append((T.photoslide(ph.path, len(pages) + i + 1, total, h, b), 1350))
+            else:
+                out.append((T.slide(len(pages) + i + 1, total, h, b, alt=bool(i % 2), cta=(i == len(slides) - 1)), 1350))
+        out[0] = (T.swipe(out[0][0]), out[0][1])
+        post["alt"] = (post.get("alt") or "") + " (carousel: swipe for more)"
+        return out
 
 def expand_bank(b):
     for a, c in b.get("this_or_that", []):
@@ -283,6 +367,11 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 nt = FALLBACK.get(t)
                 b.notes.append(f"No fresh photo for a {t} post on {date}: made a {nt} post instead.")
                 t = nt; post["type"] = nt; post["id"] = f"{date}_{hhmm.replace(':', '')}_{nt}"
+        if cfg.get("all_carousels", True) and typ != "carousel" and post["type"] != "carousel" and len(pages) == 1:
+            ol = None
+            if post["type"] == "offer":
+                ol = (b.last_offer, "")
+            pages = b.expand(post, post["type"], pages, ol)
         for i, (html_, h) in enumerate(pages):
             rel = f"media/{date}/{post['id']}_{i + 1}.jpg"
             post["images"].append(rel)

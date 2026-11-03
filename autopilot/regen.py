@@ -1,5 +1,5 @@
 """Redo every post that is not approved yet (and not already published), from now on.
-Approved posts are never touched. Photos from the thrown-away drafts go back in the pool."""
+Approved carousels are never touched; approved single-picture posts are rebuilt as carousels. Photos from the thrown-away drafts go back in the pool."""
 import datetime as dt, random, logging
 from . import queue as Q
 from .config import now as now_fn
@@ -22,7 +22,8 @@ def run(cfg, start=None, picker=None, led=None, render=True):
         keep = []
         for p in day["posts"]:
             approved = (dec.get(p["id"]) or {}).get("decision") == "approve"
-            if approved or p["id"] in pub or dt.datetime.fromisoformat(p["slot"]) <= now:
+            single = cfg.get("all_carousels", True) and len(p.get("images", [])) == 1     # approved single pictures are rebuilt as carousels and need a new OK
+            if (approved and not single) or p["id"] in pub or dt.datetime.fromisoformat(p["slot"]) <= now:
                 keep.append(p); kept += 1; continue
             dropped += 1
             for im in p["images"]:
