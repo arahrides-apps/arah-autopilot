@@ -70,6 +70,7 @@
   "experience:1": "2026-10-30",
   "experience:10": "2026-10-29",
   "experience:11": "2026-10-30",
+  "experience:12": "2026-11-06",
   "experience:13": "2026-10-31",
   "experience:14": "2026-11-01",
   "experience:15": "2026-11-05",
@@ -136,6 +137,7 @@
   "place:12": "2026-11-02",
   "place:13": "2026-11-04",
   "place:14": "2026-10-31",
+  "place:2": "2026-11-05",
   "place:20": "2026-11-02",
   "place:21": "2026-10-29",
   "place:22": "2026-10-31",
@@ -672,11 +674,6 @@
   },
   {
    "date": "2026-11-05",
-   "h": "0f071b73d4983648",
-   "id": "unsplash:Mq6lOYzwHUA"
-  },
-  {
-   "date": "2026-11-05",
    "h": "bcb3e2ec370f27f7",
    "id": "drive:1bwMtN_ftKJa8n8iIhFK66YKAdagM_PHV"
   },
@@ -692,13 +689,18 @@
   },
   {
    "date": "2026-11-06",
-   "h": "3e3b038c9b32328c",
-   "id": "wikimedia:20096038"
+   "h": "39c1a94dc69694d4",
+   "id": "wikimedia:24716071"
+  },
+  {
+   "date": "2026-11-05",
+   "h": "65bc1b0f07010402",
+   "id": "drive:1l2rnO9C6ezQkmlFafLzLlWNlT3aEBEVX"
   },
   {
    "date": "2026-11-06",
-   "h": "39c1a94dc69694d4",
-   "id": "wikimedia:24716071"
+   "h": "1f071fd310040682",
+   "id": "drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD"
   }
  ],
  "photos": {
@@ -762,6 +764,11 @@
    "last_used": "2026-11-03",
    "source": "drive"
   },
+  "drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD": {
+   "first_used": "2026-11-06",
+   "last_used": "2026-11-06",
+   "source": "drive"
+  },
   "drive:1Pp214YBcLuAaB02NdKqUsPk-lWIJzL9W": {
    "first_used": "2026-11-02",
    "last_used": "2026-11-02",
@@ -805,6 +812,11 @@
   "drive:1kYvPJ0CIAYL087Ikkfdx8__Zgw2h41v3": {
    "first_used": "2026-11-06",
    "last_used": "2026-11-06",
+   "source": "drive"
+  },
+  "drive:1l2rnO9C6ezQkmlFafLzLlWNlT3aEBEVX": {
+   "first_used": "2026-11-05",
+   "last_used": "2026-11-05",
    "source": "drive"
   },
   "drive:1n6AM5saGkNGzv3CkGeiigGQ5uD7QP9rP": {
@@ -1037,6 +1049,11 @@
    "last_used": "2026-10-10",
    "source": "Drive"
   },
+  "name:NegrilBeach0653": {
+   "first_used": "2026-11-05",
+   "last_used": "2026-11-05",
+   "source": "drive"
+  },
   "name:PHOTO-2024-03-10-22-13-21_2": {
    "first_used": "2026-10-13",
    "last_used": "2026-10-13",
@@ -1127,6 +1144,11 @@
    "last_used": "2026-10-07",
    "source": "Pexels (user supplied)"
   },
+  "name:fishing_boats_clear_water": {
+   "first_used": "2026-11-06",
+   "last_used": "2026-11-06",
+   "source": "drive"
+  },
   "name:highway_sea_view_blue_sky": {
    "first_used": "2026-11-05",
    "last_used": "2026-11-05",
@@ -1202,11 +1224,6 @@
    "last_used": "2026-11-01",
    "source": "unsplash"
   },
-  "name:unsplash-Mq6lOYzwHUA": {
-   "first_used": "2026-11-05",
-   "last_used": "2026-11-05",
-   "source": "unsplash"
-  },
   "name:unsplash-OL4j0kejZPk": {
    "first_used": "2026-11-04",
    "last_used": "2026-11-04",
@@ -1250,11 +1267,6 @@
   "name:wikimedia-1968535": {
    "first_used": "2026-11-03",
    "last_used": "2026-11-03",
-   "source": "wikimedia"
-  },
-  "name:wikimedia-20096038": {
-   "first_used": "2026-11-06",
-   "last_used": "2026-11-06",
    "source": "wikimedia"
   },
   "name:wikimedia-24716071": {
@@ -1302,11 +1314,6 @@
    "last_used": "2026-11-01",
    "source": "unsplash"
   },
-  "unsplash:Mq6lOYzwHUA": {
-   "first_used": "2026-11-05",
-   "last_used": "2026-11-05",
-   "source": "unsplash"
-  },
   "unsplash:OL4j0kejZPk": {
    "first_used": "2026-11-04",
    "last_used": "2026-11-04",
@@ -1340,11 +1347,6 @@
   "wikimedia:1968535": {
    "first_used": "2026-11-03",
    "last_used": "2026-11-03",
-   "source": "wikimedia"
-  },
-  "wikimedia:20096038": {
-   "first_used": "2026-11-06",
-   "last_used": "2026-11-06",
    "source": "wikimedia"
   },
   "wikimedia:24716071": {
@@ -1518,6 +1520,16 @@
    "date": "2026-11-06",
    "id": "drive:1kYvPJ0CIAYL087Ikkfdx8__Zgw2h41v3",
    "s": "jtb-dunnsriverfalls"
+  },
+  {
+   "date": "2026-11-05",
+   "id": "drive:1l2rnO9C6ezQkmlFafLzLlWNlT3aEBEVX",
+   "s": "jtb-negril"
+  },
+  {
+   "date": "2026-11-06",
+   "id": "drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD",
+   "s": "fishing-boats"
   }
  ]
 }
