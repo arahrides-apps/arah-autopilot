@@ -127,7 +127,7 @@ class DayBuilder:
 
     def place(self, post, kind="place"):
         e = self.pick(kind)
-        ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])))
+        ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])), words=e.get("also"))
         if not ph:
             return None
         self.photo_flags(post, ph)

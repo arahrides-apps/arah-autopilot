@@ -356,7 +356,7 @@ class Picker:
         return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                      e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
 
-    def _own(self, want, tag=None, ok=None):
+    def _own(self, want, tag=None, ok=None, about=None):
         cands = []
         for src in self.pool:
             try:
@@ -373,6 +373,8 @@ class Picker:
                     if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"]) or m["quality"] < 3:
                         continue
                     if ok and not ok(self._settings(m, it["name"])):
+                        continue
+                    if about and not any(w in ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ") for w in about):
                         continue
                     q = m["quality"]; flags = [] 
                 else:
@@ -392,7 +394,8 @@ class Picker:
         fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
         for q, _, src, it, flags, _age in fresh[:25]:
             self.tried.add(it["id"])
-            p = self._load(src, it, want, flags, {"credit": (self._meta(it["name"]) or {}).get("credit")} if (self._meta(it["name"]) or {}).get("credit") else None)
+            _m = self._meta(it["name"]) or {}
+            p = self._load(src, it, want, flags, {"credit": _m.get("credit"), "text": _m.get("about") or ""} if _m.get("credit") else {"text": _m.get("about") or ""})
             if p:
                 if self._meta(it["name"]) and self._meta(it["name"]).get("plate_visible"):
                     p.flags.append("Number plate visible (kept sharp on purpose)")
@@ -408,8 +411,20 @@ class Picker:
     def car(self, tag=None, ok=None):
         return self._own("car", tag, ok)
 
-    def scene(self, query, place=None, ok=None, strict=False):
-        """Scenery photo for a place: free web photos first, then own scenery photos."""
+    BAD_WEB = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|3d|poster|logo|icon|graphic|"
+                         r"spider|insect|bug|beetle|butterfl|snake|lizard|frog|animal|dog|cat\b|bird|food|plate|dish|drink|cocktail|"
+                         r"portrait|selfie|model|woman|man\b|girl|boy|people|person|crowd|hand|finger|macro|close[- ]?up|texture|pattern|map|text|sign", re.I)
+    SCENIC = re.compile(r"fall|waterfall|cascade|river|beach|sea|ocean|bay|mountain|hill|cliff|cave|pool|lagoon|valley|forest|road|coast|sunset|view|landscape|palm|island|town|city|harbou?r", re.I)
+
+    def scene(self, query, place=None, ok=None, strict=False, words=None):
+        """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
+        names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
+        if place:
+            key = [place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()]
+            p = self._own("scenery", None, ok, about=key)
+            if p:
+                p.flags.append("Place confirmed by photo description")
+                return p
         for web in self.web:
             try:
                 items = web.search(query, self.rng)
@@ -418,17 +433,17 @@ class Picker:
             self.rng.shuffle(items)
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
-            if place:   # prefer pictures whose own description names the place
-                good.sort(key=lambda i: 0 if place.lower() in i.get("text", "").lower() else 1)
-            if strict:  # only photos whose description confirms the place and fits the words
-                good = [i for i in good if (not place or place.lower() in i.get("text", "").lower())
-                        and (not ok or ok(settings_of(i.get("text", ""))))]
+            # never use drawings, animals, close-ups or people; the description must show a real landscape
+            good = [i for i in good if not self.BAD_WEB.search(i.get("text", "")) and self.SCENIC.search(i.get("text", ""))]
+            if place:   # the description must name the place (or a word that belongs to it)
+                good = [i for i in good if any(n in i.get("text", "").lower() for n in names)]
+            if ok:
+                good = [i for i in good if ok(settings_of(i.get("text", "")))]
             for it in good[:8]:
                 self.tried.add(it["id"])
                 p = self._load(web, it, "scenery", ["Web photo: check it shows Jamaica and has no recognisable people or brands"],
                                {"credit": it.get("credit", ""), "text": it.get("text", "")})
                 if p:
-                    p.flags.append("Place confirmed by photo description" if place and place.lower() in p.text.lower()
-                                   else "Place NOT confirmed by the photo description")
+                    p.flags.append("Place confirmed by photo description" if place else "Web photo checked against its description")
                     return p
         return self._own("scenery", None, ok)
