@@ -130,6 +130,10 @@ class DayBuilder:
             ph = self.pk.car(tag="big")
             if ph:
                 e = self.pick("hero_big")
+        if not ph and self.pk.web and self.rng.random() < self.cfg["photos"].get("stock_car_share", 0.25):
+            ph = self.pk.car_stock(self.cfg["photos"].get("fleet_models", []))      # a clean stock photo of one of our models
+            if ph:
+                e = self.pick("hero")
         if not ph:
             for _ in range(8):                      # the picture must fit the words: "drive" copy never gets a beach photo
                 e = self.pick("hero")

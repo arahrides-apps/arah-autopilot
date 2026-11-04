@@ -433,6 +433,35 @@ class Picker:
                          r"portrait|selfie|model|woman|man\b|girl|boy|people|person|crowd|hand|finger|macro|close[- ]?up|texture|pattern|map|text|sign", re.I)
     SCENIC = re.compile(r"fall|waterfall|cascade|river|beach|sea|ocean|bay|mountain|hill|cliff|cave|pool|lagoon|valley|forest|road|coast|sunset|view|landscape|palm|island|town|city|harbou?r", re.I)
 
+    BAD_CAR = re.compile(r"illustrat|drawing|vector|cartoon|sketch|clip ?art|render|3d|toy|miniature|diecast|logo|icon|poster|"
+                         r"crash|accident|wreck|damage|junk|scrap|rust|burn|flood|police|taxi|"
+                         r"portrait|selfie|woman|man\b|girl|boy|people|person|crowd|driver|passenger|family|couple", re.I)
+
+    def car_stock(self, models, ok_models=None):
+        """A clean web photo of one of our fleet models (e.g. 'Toyota Corolla'), for when our own photos of it are thin or used lately.
+        The photo's description must name both the make and the model, and show a plain car photo: no people, drawings or damage."""
+        order = list(models); self.rng.shuffle(order)
+        for model in order[:6]:
+            make, _, name = model.partition(" ")
+            need = [make.lower(), name.lower().split()[0]]
+            for web in self.web:
+                try:
+                    items = web.search(model + " car", self.rng)
+                except Exception as e:
+                    self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
+                self.rng.shuffle(items)
+                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
+                        and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
+                        and all(n in i.get("text", "").lower() for n in need) and not self.BAD_CAR.search(i.get("text", ""))]
+                for it in good[:6]:
+                    self.tried.add(it["id"])
+                    p = self._load(web, it, "car", ["Stock photo of a %s. It shows the model, not one of our own cars: check it looks clean and has no people" % model],
+                                   {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                    if p:
+                        p.flags.append("Stock photo of this model")
+                        return p
+        return None
+
     def scene(self, query, place=None, ok=None, strict=False, words=None):
         """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
         names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
