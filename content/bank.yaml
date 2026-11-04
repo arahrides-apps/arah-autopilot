@@ -12,9 +12,9 @@ hero:
   h2: Pick up. Go.
   sub: Pickup at MBJ, OCJ, Norman Manley and more.
 - kicker: SEE IT FIRST
-  h1: Know the car
-  h2: before you book.
-  sub: Browse the exact car on arahrides.com.
+  h1: Choose the car
+  h2: you want to drive.
+  sub: Browse real cars on arahrides.com.
 - kicker: THE REAL JAMAICA
   h1: Skip the highway.
   h2: Find the back road.
@@ -127,18 +127,18 @@ hero:
   h1: Rent Jamaican.
   h2: Go where locals go.
   sub: Find the Jamaica beyond the resort.
-- kicker: THE EXACT CAR
+- kicker: YOUR CHOICE
   h1: This is the car
-  h2: you will drive.
-  sub: No category guessing. Pick it on arahrides.com.
+  h2: you want to drive.
+  sub: Choose your make and model on arahrides.com.
 - kicker: SEE BEFORE YOU BOOK
   h1: Real car.
   h2: Real photos.
-  sub: Book the one you see at arahrides.com.
-- kicker: NO COUNTER SURPRISES
-  h1: Book the car,
-  h2: not the category.
-  sub: Your exact ride, ready when you land.
+  sub: Choose the car you want to drive at arahrides.com.
+- kicker: CHOOSE YOUR RIDE
+  h1: Pick the car,
+  h2: not a category.
+  sub: Your choice of car, ready when you land.
 - kicker: LIMITED SUPPLY
   h1: Your December
   h2: ride is waiting.
@@ -146,15 +146,15 @@ hero:
 - kicker: ROAD TRIP READY
   h1: Pick it.
   h2: Book it. Go.
-  sub: Choose your exact car and see Jamaica your way.
+  sub: Choose the car you want to drive and see Jamaica your way.
 - kicker: THE REAL JAMAICA
   h1: Waterfalls,
   h2: beaches and a great ride.
-  sub: Book the car you see, then go see Jamaica.
+  sub: Choose the car you want to drive, then go see Jamaica.
 - kicker: HOLIDAY SEASON
   h1: Coming home?
   h2: Your car is ready.
-  sub: Book your exact car before you land.
+  sub: Choose your car before you land.
 - kicker: KINGSTON PICKUP
   h1: Kingston to
   h2: everywhere.
@@ -410,8 +410,8 @@ qa:
   a: In the Blue Mountains above Kingston. A morning drive up is worth it.
 - q: How high is Blue Mountain Peak?
   a: 2,256 metres. It is Jamaica's highest point.
-- q: Do I choose my exact car?
-  a: Yes. You book the exact car you see on arahrides.com, not a category.
+- q: Do I choose my car?
+  a: Yes. You choose the car you want to drive on arahrides.com, not just a category.
 - q: Can I book a car for today?
   a: No. We do not do same-day bookings. Book at least a day ahead and your car will be ready.
 - q: Do you have vans for big groups?
@@ -423,9 +423,9 @@ qa:
 - q: Can I combine the lounge pass with other promos?
   a: No. It cannot be combined with other promo codes or discounts. Conditions apply.
 - q: Why book with Arah Rides?
-  a: You see the exact car, check its photos and book it. No category guessing at the counter.
+  a: You choose the car you want to drive, check its photos and book it. No category guessing.
 - q: Will cars sell out for December?
-  a: Supply is limited and the holidays are busy. Book early to secure your exact car.
+  a: Supply is limited and the holidays are busy. Book early to secure the car you want.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -492,13 +492,13 @@ tip:
   b: Dates, pickup spots or how booking works. WhatsApp +1 201-371-3152.
 - k: BOOKING TIP
   h: Book early for December.
-  b: Cars are limited around the holidays. Reserve the exact car you want today.
+  b: Cars are limited around the holidays. Reserve the car you want to drive today.
 - k: BOOKING TIP
   h: No same-day bookings.
-  b: Book at least a day ahead so your exact car is prepared and waiting.
+  b: Book at least a day ahead so your car is prepared and waiting.
 - k: BOOKING TIP
   h: Check the photos.
-  b: Every Arah Rides car is listed with real photos. What you see is what you book.
+  b: Every Arah Rides car is listed with real photos. Choose the one you want to drive.
 - k: GROUP TIP
   h: Travelling with a crowd?
   b: We have 7, 12 and 15 seaters. They are limited, so book early.
@@ -560,45 +560,45 @@ brand:
 - k: RENT JAMAICAN
   h: Experience Jamaica.
   b: Rent a car, pick a parish and say yes to the next turn.
-- k: BOOK THE CAR YOU SEE
-  h: The car you see is the car you get.
-  b: Big rental companies sell a category and you find out at the counter. At Arah Rides you pick the exact car on our site.
+- k: CHOOSE YOUR CAR
+  h: Choose the car you want to drive.
+  b: Big rental companies sell a category and you find out at the counter. At Arah Rides you choose the make and model on our site.
 - k: NO COUNTER SURPRISES
-  h: No "or similar."
-  b: Choose the exact car from the listing, check the photos, then book. That is the Arah Rides way.
+  h: You pick the ride.
+  b: Choose the car you want from the listing, check the photos, then book. That is the Arah Rides way.
 - k: CATEGORY VS CAR
-  h: Category or the actual car?
-  b: 'Other companies: book "midsize SUV" and hope. Arah Rides: book the SUV in the photo.'
+  h: Category or the car you want?
+  b: 'Other companies: book "midsize SUV" and hope. Arah Rides: choose the SUV you want to drive.'
 - k: LIMITED SUPPLY
   h: December is filling up.
-  b: Our cars are limited and the holidays are close. Secure your exact car today at arahrides.com.
+  b: Our cars are limited and the holidays are close. Secure the car you want today at arahrides.com.
 - k: PLAN AHEAD
   h: No same-day bookings.
-  b: We prepare your exact car in advance. Book at least a day ahead and walk straight to it.
+  b: We prepare your car in advance. Book at least a day ahead and walk straight to it.
 - k: ONE-DAY RENTALS
   h: Need a car for just one day?
   b: One-day rentals are available with pickup and drop-off in the Kingston area. Book a day ahead.
 - k: BIG GROUPS
   h: 7, 12 and 15 seaters.
-  b: Family reunion, church trip or team outing? Pick the big vehicle you see on our site. Supply is limited, so book early.
+  b: Family reunion, church trip or team outing? Choose the big vehicle you want on our site. Supply is limited, so book early.
 - k: FAMILY TRIP
   h: One big ride. Everybody in.
   b: Our 7, 12 and 15 seaters keep the whole group together. Reserve yours before December sells out.
 - k: HOLIDAY SEASON
   h: Coming home for the holidays?
-  b: Lock in your exact car before you land. Cars are limited in December.
+  b: Lock in your car before you land. Cars are limited in December.
 - k: SEE IT. BOOK IT.
   h: See it. Book it. Drive it.
   b: Real cars, real photos, real prices on arahrides.com.
 - k: BOOK EARLY
   h: Jamaica is busy this season.
-  b: Festivals, holidays and visitors coming home. Our cars are limited, so book your exact car now, not last minute.
+  b: Festivals, holidays and visitors coming home. Our cars are limited, so book the car you want now, not last minute.
 - k: DON'T WAIT
   h: Last-minute means no car.
-  b: We do not do same-day bookings and December sells out. Reserve the car you see today.
+  b: We do not do same-day bookings and December sells out. Reserve the car you want today.
 - k: HOLIDAY SEASON
   h: Plan your Jamaica December.
-  b: Markets, music, beaches and family. Secure your exact car early at arahrides.com.
+  b: Markets, music, beaches and family. Secure the car you want early at arahrides.com.
 - k: LIMITED SUPPLY
   h: Cars are going.
   b: Every booking takes a car off the site. Choose yours before someone else does.
@@ -791,9 +791,9 @@ list:
   - Ice cream stop in Kingston
   cta: 'Book: arahrides.com'
 - k: WHY ARAH RIDES
-  h: Book the car you see
+  h: Choose the car you want
   items:
-  - Pick the exact car on our site
+  - Choose the car you want to drive
   - Check the real photos
   - Book and pay by Stripe
   - Walk straight to your car
@@ -1003,14 +1003,14 @@ carousel:
   - - Book your car
     - 'arahrides.com or WhatsApp Winston: wa.me/12013713152'
 - k: WHY ARAH RIDES
-  title: Book the car you see.
+  title: Choose the car you want to drive.
   sub: Swipe to see how it works.
   query: Jamaica road trip
   slides:
-  - - Pick your exact car
+  - - Choose your car
     - Browse real cars with real photos on arahrides.com.
   - - No category guessing
-    - What you see is the car you get. No "or similar."
+    - Pick the make and model you want to drive.
   - - Book at least a day ahead
     - No same-day bookings, so your car is ready when you arrive.
   - - Secure it today
@@ -1611,8 +1611,8 @@ offer:
   h: Long trip? Longer perks.
   b: Book a rental for 7 days or more and get a departure lounge pass for 1 guest at Club Mobay or Club Kingston. Conditions apply.
 - k: LOUNGE PASS OFFER
-  h: Pick the car you see. Get the lounge too.
-  b: Book the exact car you see on arahrides.com for 7 days or more and your departure pass for 1 guest is on us. Conditions apply.
+  h: Pick your car. Get the lounge too.
+  b: Choose the car you want to drive on arahrides.com and book it for 7 days or more and your departure pass for 1 guest is on us. Conditions apply.
 - k: FREE LOUNGE PASS
   h: Your flight home just got better.
   b: Club Mobay or Club Kingston departure pass for 1 guest, free with a rental of 7 days or more. Not combinable with other promo codes or discounts.
@@ -1682,7 +1682,7 @@ hero_big:
   sub: 7, 12 and 15 seaters. Limited supply, so book early.
 - kicker: 12 AND 15 SEATERS
   h1: Room for everybody.
-  h2: Book the one you see.
+  h2: Choose the one you want.
   sub: Family trips, church groups and teams. Reserve at arahrides.com.
 - kicker: GROUP TRAVEL
   h1: Bring everyone.
@@ -1693,16 +1693,16 @@ hero_big:
   h2: We have the ride.
   sub: 7, 12 and 15 seaters on arahrides.com. Limited supply.
 versus:
-- k: BOOK THE CAR YOU SEE
-  h: Category or the actual car?
+- k: CHOOSE YOUR CAR
+  h: Category or the car you want?
   them:
   - You book a category
-  - '"Or similar" on the booking'
+  - Any car in that class
   - Find out at the counter
   us:
-  - You book the exact car
+  - You choose the car you want
   - Real photos on our site
-  - Know before you land
+  - Know the make and model before you land
 - k: NO COUNTER SURPRISES
   h: Same price tag, different promise.
   them:
@@ -1710,19 +1710,19 @@ versus:
   - Car assigned at pickup
   - Hope for the best
   us:
-  - This SUV, this car
+  - This SUV, your choice
   - Chosen by you online
   - Ready when you arrive
 - k: WHY ARAH RIDES
-  h: What you see is what you drive.
+  h: Choose the car you want to drive.
   them:
   - Stock photo of a car
-  - Different car on the day
+  - Whatever is available on the day
   - Surprise at the counter
   us:
   - Our own photos
-  - The same car you booked
-  - No surprises
+  - Your choice of make and model
+  - No category guessing
 - k: GROUP TRAVEL
   h: Big group? Choose the big ride.
   them:
@@ -1731,5 +1731,5 @@ versus:
   - Last-minute scramble
   us:
   - 7, 12 and 15 seaters listed
-  - Pick the one you see
+  - Choose the one you want
   - Limited, so book early
