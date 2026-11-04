@@ -56,6 +56,8 @@ class IG:
         except IGError:
             return ""
     def post(self, urls, caption, alt=None, meta=None):
+        if getattr(self, "check_live", True):
+            wait_live(urls)
         if len(urls) == 1:
             cid = self.container(urls[0], caption, alt)
         else:
@@ -67,12 +69,33 @@ class IG:
         mid = self.publish(cid)
         return mid, self.permalink(mid)
 
+def wait_live(urls, session=None, tries=24, pause=10):
+    """Instagram fetches each picture from its web address. Right after a post is approved the site (GitHub Pages) can still be
+    publishing the pictures, and Instagram then says 'Only photo or video can be accepted as media type'. So check every picture
+    is really there (HTTP 200 and an image) before handing the post over; if not yet, wait, and in the end let the post retry later."""
+    s = session or requests.Session()
+    for u in urls:
+        for n in range(tries):
+            try:
+                r = s.get(u, timeout=20, stream=True)
+                ok = r.status_code == 200 and r.headers.get("content-type", "").lower().startswith("image/")
+                r.close()
+            except requests.RequestException:
+                ok = False
+            if ok:
+                break
+            if n == tries - 1:
+                raise IGError("picture not online yet, will retry: " + u)
+            time.sleep(pause)
+
 class WebhookPoster:
     """No Meta developer account needed: hands each due post to a no-code tool (Make.com, n8n, Zapier...) that already
     holds an approved Instagram connection. Set the secret POST_WEBHOOK_URL to switch this on."""
     def __init__(self, cfg, session=None):
         self.url = os.environ.get("POST_WEBHOOK_URL", ""); self.s = session or requests.Session()
     def post(self, urls, caption, alt=None, meta=None):
+        if getattr(self, "check_live", True):
+            wait_live(urls, self.s)
         body = {"id": (meta or {}).get("id", ""), "slot": (meta or {}).get("slot", ""), "caption": caption, "alt": alt or "",
                 "image_count": len(urls), "image_urls": urls,
                 "location_name": (meta or {}).get("location", {}).get("name", ""), "location_id": (meta or {}).get("location", {}).get("id", "")}
