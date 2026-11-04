@@ -57,7 +57,7 @@ def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng
 
 def credit_for(ph):
     """Photo credit line for the caption: stock sites and named photographers; our own Arah Rides photos need none."""
-    if not ph or not ph.credit or ph.credit == "Arah Rides" or ph.source == "wikimedia":
+    if not ph or not ph.credit or ph.credit == "Arah Rides" or (ph.source == "wikimedia" and "by" not in ph.credit.lower().split("(")[-1].split()[:2]):
         return None
     return ph.credit
 

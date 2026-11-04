@@ -189,7 +189,7 @@ class PexelsSource:
         if not self.key:
             return []
         d = http_json("https://api.pexels.com/v1/search", headers={"Authorization": self.key},
-                      params={"query": query, "per_page": 40, "page": rng.randint(1, 3), "orientation": "portrait"})
+                      params={"query": query, "per_page": 40, "page": rng.randint(1, 4)})
         return [{"id": "pexels:%s" % p["id"], "name": "pexels-%s" % p["id"], "url": p["src"].get("large2x") or p["src"]["original"],
                  "w": p["width"], "h": p["height"], "text": " ".join([p.get("alt") or "", p.get("url") or ""]),
                  "credit": "Photo by %s on Pexels" % p.get("photographer", "?")} for p in d.get("photos", [])]
@@ -209,7 +209,7 @@ class UnsplashSource:
         if "jamaica" not in query.lower():
             query += " Jamaica"
         d = http_json("https://api.unsplash.com/search/photos", headers=self.h,
-                      params={"query": query, "per_page": 30, "page": rng.randint(1, 2), "orientation": "portrait", "content_filter": "high"})
+                      params={"query": query, "per_page": 30, "page": rng.randint(1, 2), "content_filter": "high"})
         out = []
         for p in d.get("results", []):
             loc = (p.get("location") or {}).get("name") or ""
@@ -230,6 +230,22 @@ class UnsplashSource:
             except Exception:
                 pass
         return _finish(dest)
+
+class PixabaySource:
+    """Pixabay: free key (pixabay.com/api/docs). Free for commercial use, no credit needed; we still name the photographer."""
+    name = "pixabay"
+    def __init__(self, cfg):
+        self.key = os.environ.get(cfg["sources"].get("pixabay", {}).get("api_key_env", "PIXABAY_API_KEY"), "")
+    def search(self, query, rng):
+        if not self.key:
+            return []
+        d = http_json("https://pixabay.com/api/", params={"key": self.key, "q": query[:100], "image_type": "photo", "per_page": 50,
+                                                          "page": rng.randint(1, 3), "safesearch": "true", "min_width": 1000})
+        return [{"id": "pixabay:%s" % p["id"], "name": "pixabay-%s" % p["id"], "url": p.get("largeImageURL") or p["webformatURL"],
+                 "w": p.get("imageWidth", 0), "h": p.get("imageHeight", 0), "text": p.get("tags", "") + " " + (p.get("pageURL") or ""),
+                 "credit": "Photo by %s on Pixabay" % p.get("user", "?")} for p in d.get("hits", [])]
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
 
 class OpenverseSource:
     """Only CC0 and public-domain images. Openverse now needs free API credentials (OPENVERSE_CLIENT_ID / OPENVERSE_CLIENT_SECRET);
@@ -264,7 +280,7 @@ class OpenverseSource:
         http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
 
 class WikimediaSource:
-    """Wikimedia Commons: free, no key. Only files marked public domain or CC0 are used, so no credit is required."""
+    """Wikimedia Commons: free, no key. Public domain, CC0 and CC BY files only (CC BY needs the photographer credited, which the caption does)."""
     name = "wikimedia"
     UA = {"User-Agent": "ArahAutopilot/1.0 (https://arahrides.com; marketing bot)"}
     def __init__(self, cfg):
@@ -272,7 +288,8 @@ class WikimediaSource:
     @staticmethod
     def free(meta):
         lic = ((meta.get("LicenseShortName") or {}).get("value") or "").lower()
-        return lic.startswith("cc0") or "public domain" in lic or lic.startswith("pd")
+        return lic.startswith("cc0") or "public domain" in lic or lic.startswith("pd") or \
+            (lic.startswith("cc by") and "sa" not in lic.split() and "-sa" not in lic and "nc" not in lic and "nd" not in lic)
     def search(self, query, rng):
         d = http_json("https://commons.wikimedia.org/w/api.php", headers=self.UA, params={
             "action": "query", "format": "json", "generator": "search", "gsrsearch": query + " filetype:bitmap",
@@ -287,7 +304,7 @@ class WikimediaSource:
             out.append({"id": "wikimedia:%s" % p["pageid"], "name": "wikimedia-%s" % p["pageid"], "url": ii["thumburl"],
                         "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0,
                         "text": (p.get("title") or "") + " " + desc,
-                        "credit": "Wikimedia Commons (%s)" % ((md.get("LicenseShortName") or {}).get("value") or "public domain")})
+                        "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
         return out
     def fetch(self, item, dest):
         import requests
@@ -324,8 +341,8 @@ class Picker:
                 self.pool.append(DriveSource(cfg))
             if s["local"]["enabled"]:
                 self.pool.append(LocalSource(cfg))
-        order = (("unsplash", UnsplashSource), ("wikimedia", WikimediaSource), ("pexels", PexelsSource), ("openverse", OpenverseSource))
-        self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": True})["enabled"]]
+        order = (("unsplash", UnsplashSource), ("pexels", PexelsSource), ("pixabay", PixabaySource), ("wikimedia", WikimediaSource), ("openverse", OpenverseSource))
+        self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": k != "pixabay"})["enabled"]]
         self.notes = []
         self.tried = set()
 
@@ -419,7 +436,8 @@ class Picker:
     def scene(self, query, place=None, ok=None, strict=False, words=None):
         """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
         names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
-        if place:
+        web_first = bool(self.web) and self.rng.random() < self.cfg["photos"].get("web_share", 0.5)
+        if place and not web_first:
             key = [place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()]
             p = self._own("scenery", None, ok, about=key)
             if p:
@@ -428,6 +446,8 @@ class Picker:
         for web in self.web:
             try:
                 items = web.search(query, self.rng)
+                if len(items) < 6 and place and place.lower() not in query.lower():
+                    items += web.search(place + " Jamaica", self.rng)
             except Exception as e:
                 self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
             self.rng.shuffle(items)
@@ -446,4 +466,9 @@ class Picker:
                 if p:
                     p.flags.append("Place confirmed by photo description" if place else "Web photo checked against its description")
                     return p
+        if place and web_first:          # nothing suitable on the web: fall back to our own photos of the place
+            p = self._own("scenery", None, ok, about=[place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()])
+            if p:
+                p.flags.append("Place confirmed by photo description")
+                return p
         return self._own("scenery", None, ok)
