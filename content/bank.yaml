@@ -344,6 +344,136 @@ place:
   h1: Rio Grande.
   h2: Float through Portland.
   sub: Bamboo rafts and green hills. Drive to Port Antonio.
+- place: Pelican Bar
+  query: Pelican Bar Treasure Beach Jamaica
+  h1: Pelican Bar.
+  h2: A bar in the sea.
+  sub: A little shack on stilts off the south coast. Take a boat out.
+- place: Fern Gully
+  query: Fern Gully Ocho Rios Jamaica
+  h1: Fern Gully.
+  h2: A tunnel of ferns.
+  sub: A cool, shady road near Ocho Rios.
+- place: Green Grotto Caves
+  query: Green Grotto Caves Jamaica
+  h1: Green Grotto Caves.
+  h2: Go underground.
+  sub: Caves on the north coast, a good stop in any weather.
+- place: Glistening Waters
+  query: Glistening Waters Falmouth Jamaica
+  h1: Glistening Waters.
+  h2: The lagoon that glows.
+  sub: An evening boat tour near Falmouth.
+- place: Rick's Cafe
+  query: Rick's Cafe Negril Jamaica
+  h1: Rick's Cafe.
+  h2: Cliffs and sunsets.
+  sub: Negril's famous cliff-side spot. Come for the sunset.
+- place: Cornwall Beach
+  query: Cornwall Beach Montego Bay Jamaica
+  h1: Cornwall Beach.
+  h2: A Montego Bay beach day.
+  sub: Lively, close to town and an easy drive from MBJ.
+- place: Nine Mile
+  query: Nine Mile St Ann Jamaica
+  h1: Nine Mile.
+  h2: Where Bob Marley was born.
+  sub: Drive into the hills of St Ann.
+- place: Trench Town
+  query: Trench Town Kingston Jamaica
+  h1: Trench Town.
+  h2: Reggae history.
+  sub: The Culture Yard in Kingston, where the story lives.
+- place: Somerset Falls
+  query: Somerset Falls Portland Jamaica
+  h1: Somerset Falls.
+  h2: A green gorge in Portland.
+  sub: Cool pools and shade near Hope Bay.
+- place: Blue Lagoon
+  query: Blue Lagoon Portland Jamaica
+  h1: Blue Lagoon.
+  h2: Deep, clear and blue.
+  sub: Near Port Antonio. Bring your swimsuit.
+- place: Roaring River
+  query: Roaring River Westmoreland Jamaica
+  h1: Roaring River.
+  h2: Caves and cool water.
+  sub: A green park in Westmoreland.
+- place: Holywell
+  query: Holywell Blue Mountains Jamaica
+  h1: Holywell.
+  h2: Forest trails in the clouds.
+  sub: Fresh air in the Blue Mountains above Kingston.
+- place: Emancipation Park
+  query: Emancipation Park Kingston Jamaica
+  h1: Emancipation Park.
+  h2: A green pause in the city.
+  sub: A peaceful stroll in New Kingston.
+- place: National Gallery
+  query: National Gallery of Jamaica Kingston
+  h1: National Gallery.
+  h2: Jamaican art by the water.
+  sub: Downtown Kingston, on the waterfront.
+- place: Burwood Beach
+  query: Burwood Beach Trelawny Jamaica
+  h1: Burwood Beach.
+  h2: A quiet stretch of sand.
+  sub: East of Falmouth in Trelawny.
+- place: Mandeville
+  query: Mandeville Manchester Jamaica
+  h1: Mandeville.
+  h2: Cool hills, slow mornings.
+  sub: A relaxed market town in Manchester.
+- place: Bob Marley Museum
+  query: Bob Marley Museum Kingston
+  h1: Bob Marley Museum.
+  h2: Tuff Gong, Hope Road.
+  sub: His Kingston home, now a museum.
+- place: Blue Mountain Peak
+  query: Blue Mountain Peak Jamaica
+  h1: Blue Mountain Peak.
+  h2: Sunrise above the clouds.
+  sub: Jamaica's highest point. Start before dawn.
+- place: Blue Mountain Coffee
+  query: Blue Mountain coffee farm Jamaica
+  h1: Blue Mountain coffee.
+  h2: Straight from the hills.
+  sub: Visit a coffee farm above Kingston.
+- place: Negril
+  query: Negril West End cliffs Jamaica
+  h1: Negril West End.
+  h2: Cliffs and clear water.
+  sub: A swim off the rocks and a sunset to follow.
+- place: Port Antonio
+  query: Port Antonio harbour Jamaica
+  h1: Port Antonio.
+  h2: Green, quiet, beautiful.
+  sub: Portland's harbour town, a world away from the crowds.
+- place: Treasure Beach
+  query: Treasure Beach fishing boats Jamaica
+  h1: Treasure Beach.
+  h2: Fishing boats and calm.
+  sub: South coast days move slowly. Stay for sunset.
+- place: Kingston
+  query: Kingston Jamaica waterfront
+  h1: Kingston.
+  h2: Music, food and art.
+  sub: Jamaica's capital rewards a slow day.
+- place: Ocho Rios
+  query: Ocho Rios Jamaica coast
+  h1: Ocho Rios.
+  h2: The north coast base.
+  sub: Falls, caves and beaches within an easy drive.
+- place: Hope Gardens
+  query: Hope Gardens Kingston
+  h1: Hope Gardens.
+  h2: A green escape.
+  sub: Shady paths in Kingston, an easy morning out.
+- place: Seven Mile Beach
+  query: Seven Mile Beach Negril
+  h1: Seven Mile Beach.
+  h2: White sand, long walks.
+  sub: Negril's famous beach, best at golden hour.
 neutral:
 - h1: Discover
   h2: the real Jamaica.
@@ -426,6 +556,38 @@ qa:
   a: You choose the car you want to drive, check its photos and book it. No category guessing.
 - q: Will cars sell out for December?
   a: Supply is limited and the holidays are busy. Book early to secure the car you want.
+- q: Can I pick up in Kingston?
+  a: Yes. Choose our Kingston ArahPro offices or Norman Manley International.
+- q: How far is Negril from MBJ?
+  a: About 1 to 1.5 hours by road.
+- q: Which airport is closest to Ocho Rios?
+  a: OCJ, Ian Fleming International Airport.
+- q: Which airport is closest to Kingston?
+  a: Norman Manley International Airport.
+- q: How far is Port Antonio from Kingston?
+  a: About 2 to 2.5 hours by road.
+- q: How big is Jamaica?
+  a: About 235 km long and 80 km at its widest.
+- q: What is the national dish?
+  a: Ackee and saltfish.
+- q: What is bammy?
+  a: A flatbread made from cassava. It goes well with fried fish.
+- q: What is festival?
+  a: A sweet fried dumpling that goes with jerk and fish.
+- q: What is escovitch fish?
+  a: Fried fish topped with tangy pickled onions and peppers.
+- q: What is jerk?
+  a: Meat seasoned with pimento and pepper and cooked slowly, often over pimento wood.
+- q: What language do people speak?
+  a: English is the official language. Many people also speak Patois.
+- q: Where is Dunn's River Falls?
+  a: Just outside Ocho Rios in St Ann.
+- q: Can I rent a 7 seater?
+  a: Yes. We have 7, 12 and 15 seaters. Supply is limited, so book early.
+- q: What is the best way to see Jamaica?
+  a: By road, on your own timetable.
+- q: Is Jamaica good for road trips?
+  a: Yes. Hills, coast and villages are all a drive apart. Take it slowly and enjoy it.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -508,6 +670,105 @@ tip:
 - k: TRAVEL TIP
   h: Staying a week or more?
   b: Book a rental of 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: TRAVEL TIP
+  h: Stay hydrated.
+  b: Keep water in the car, especially on hot beach days.
+- k: DRIVING TIP
+  h: Watch for potholes.
+  b: Country roads can be uneven. Slow down and keep your eyes up.
+- k: DRIVING TIP
+  h: Share the road.
+  b: Expect pedestrians, bikes and animals in towns and villages.
+- k: DRIVING TIP
+  h: Take it slow in the rain.
+  b: Wet roads need more space and more time.
+- k: TRAVEL TIP
+  h: Pack a power bank.
+  b: Maps and photos drain your phone fast.
+- k: TRAVEL TIP
+  h: Bring water shoes.
+  b: Waterfalls and rivers are better with grip.
+- k: TRAVEL TIP
+  h: Check entrance fees.
+  b: Some falls and parks charge an entrance fee. Ask before you go.
+- k: TRAVEL TIP
+  h: Start waterfall days early.
+  b: Mornings are quieter and cooler.
+- k: TRAVEL TIP
+  h: Ask for directions.
+  b: Locals know the best road and the best stop.
+- k: PICKUP TIP
+  h: Check the fuel at pickup.
+  b: Note the fuel level when you collect your car.
+- k: TRAVEL TIP
+  h: Plan your drop-off.
+  b: Allow extra time to return your car before a flight.
+- k: TRAVEL TIP
+  h: Mix it up.
+  b: Pair a beach with a river, a hill or a food stop.
+- k: DRIVING TIP
+  h: Keep your licence handy.
+  b: Carry your driver's licence every time you drive.
+- k: TRAVEL TIP
+  h: Watch the sunset time.
+  b: It gets dark earlier in winter.
+- k: BEACH DAY TIP
+  h: Sunscreen after every swim.
+  b: Reapply after swimming.
+- k: TRAVEL TIP
+  h: Pick a playlist.
+  b: Make a road trip playlist before you go.
+- k: DRIVING TIP
+  h: Mind the speed limits.
+  b: Limits are posted in km/h. Watch for changes near towns.
+- k: DRIVING TIP
+  h: Use your horn lightly.
+  b: A short tap on blind corners tells others you are coming.
+- k: DRIVING TIP
+  h: Dip your lights.
+  b: Dip high beams for oncoming drivers on dark hill roads.
+- k: DRIVING TIP
+  h: Park with care.
+  b: Choose a spot in view of the road, and take your valuables with you.
+- k: TRAVEL TIP
+  h: Bring a light jacket.
+  b: Blue Mountain mornings are cool, even in summer.
+- k: TRAVEL TIP
+  h: Charge before you go.
+  b: Hills and valleys can mean patchy signal.
+- k: TRAVEL TIP
+  h: Carry a reusable bottle.
+  b: You will refill it all day.
+- k: TRAVEL TIP
+  h: Try the local snack.
+  b: Roadside stalls sell fruit, peppered shrimp, roasted corn and more.
+- k: TRAVEL TIP
+  h: Stay flexible.
+  b: The best stop is often unplanned.
+- k: TRAVEL TIP
+  h: Check opening times.
+  b: Some attractions close early or have set days.
+- k: TRAVEL TIP
+  h: Share the driving.
+  b: Long days are easier with two drivers.
+- k: TRAVEL TIP
+  h: Tell someone your plan.
+  b: Share your route and arrival time with a friend or family member.
+- k: PICKUP TIP
+  h: Land, then relax.
+  b: Message Winston your flight details before you travel.
+- k: PICKUP TIP
+  h: Bring your documents.
+  b: Have your driver's licence and booking details ready at pickup.
+- k: BOOKING TIP
+  h: Compare before you book.
+  b: Look at real photos, seats and pickup spots on arahrides.com.
+- k: BOOKING TIP
+  h: Book for the whole trip.
+  b: If your plans change, tell Winston early.
+- k: BOOKING TIP
+  h: Plan the return.
+  b: Think about where you will drop off your car before your flight.
 brand:
 - k: RENT JAMAICAN
   h: Discover the real Jamaica.
@@ -847,6 +1108,30 @@ chat:
 - h: How long can I rent?
   u: What is the minimum rental?
   b: 1 Day Rentals in Kingston and at Norman Manley. Other rentals are 3 days minimum.
+- h: Landing late?
+  u: I land late at night.
+  b: I am here 24/7. Tell me your dates and pickup spot and I will help you plan.
+- h: Big group?
+  u: We are 12 people.
+  b: We have 7, 12 and 15 seaters. Supply is limited, so book early.
+- h: Lounge pass?
+  u: Is there a lounge pass offer?
+  b: Book 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- h: Pick your car.
+  u: Can I choose my car?
+  b: Yes. Browse arahrides.com and pick the car you want to drive.
+- h: Pay in chat.
+  u: How do I pay?
+  b: You pay by Stripe to confirm your booking.
+- h: One day in Kingston?
+  u: I need a car for one day in Kingston.
+  b: 1 Day Rentals need 24 hours' notice. Tell me your date and I will help.
+- h: Near Ocho Rios?
+  u: Can I pick up near Ocho Rios?
+  b: Yes. OCJ (Ian Fleming) is a pickup spot.
+- h: Booking for December?
+  u: Should I book for December?
+  b: Yes. Cars are limited around the holidays, so book early.
 carousel:
 - k: 3 ROAD TRIPS FROM KINGSTON
   title: Where to this weekend?
@@ -1054,6 +1339,190 @@ carousel:
     - The best snack stop.
   - - Rent a car
     - Make every stop yours at arahrides.com.
+- k: 3 WATERFALLS TO CHASE
+  title: Three waterfalls. One road trip.
+  sub: Swipe for the plan.
+  query: Dunn's River Falls Jamaica
+  slides:
+  - - Dunn's River Falls
+    - Climb the terraced falls near Ocho Rios.
+  - - YS Falls
+    - Swim and play on the rope swings in St Elizabeth.
+  - - Reach Falls
+    - Find cool pools in Portland's green hills.
+  - - Drive there yourself
+    - Choose the car you want to drive at arahrides.com.
+- k: YOUR FIRST HOUR
+  title: Your first hour in Jamaica.
+  sub: Swipe for a calm start.
+  query: Jamaica road
+  slides:
+  - - Pick up your car
+    - Collect it at the airport or one of our offices.
+  - - Keep left
+    - Take the first drive slowly and look right at junctions.
+  - - Save your route
+    - Download offline maps before you head into the hills.
+  - - Book before you land
+    - Choose your car at arahrides.com.
+- k: BEACH DAY
+  title: Pack the car for a beach day.
+  sub: Swipe for the checklist.
+  query: Jamaica beach
+  slides:
+  - - Water and snacks
+    - Keep plenty in the car.
+  - - Sunscreen and a hat
+    - Reapply after every swim.
+  - - Towel and cash
+    - Small bills for stalls and parking.
+  - - Go early
+    - Popular beaches fill up on weekends.
+  - - Choose your ride
+    - Pick the car you want to drive at arahrides.com.
+- k: LANDING AT MBJ
+  title: Landing at MBJ? Three first drives.
+  sub: Swipe for ideas.
+  query: Negril Jamaica
+  slides:
+  - - Negril
+    - About 1 to 1.5 hours west for sand and sunset.
+  - - Martha Brae
+    - Drift on a bamboo raft near Falmouth, about 30 to 45 minutes east.
+  - - Doctor's Cave Beach
+    - A swim close to the airport.
+  - - Pick up at MBJ
+    - Choose the car you want to drive at arahrides.com.
+- k: LANDING AT OCJ
+  title: Landing at OCJ? Start on the north coast.
+  sub: Swipe for ideas.
+  query: Ocho Rios Jamaica
+  slides:
+  - - Dunn's River Falls
+    - Climb the falls just outside Ocho Rios.
+  - - Blue Hole
+    - Cool, clear water close to town.
+  - - Fern Gully
+    - A shady drive under a canopy of ferns.
+  - - Pick up at OCJ
+    - Choose the car you want to drive at arahrides.com.
+- k: LANDING IN KINGSTON
+  title: Landing in Kingston? Three easy days out.
+  sub: Swipe for ideas.
+  query: Kingston Jamaica
+  slides:
+  - - Blue Mountains
+    - Allow an hour or more up for cool air and coffee.
+  - - Port Royal
+    - Out along the Palisadoes for pirate history.
+  - - Devon House
+    - Heritage grounds and famous ice cream.
+  - - Pick up in Kingston
+    - Choose the car you want to drive at arahrides.com.
+- k: GROUP TRIP PLANNER
+  title: Planning a group trip?
+  sub: Swipe for four steps.
+  query: Jamaica road
+  slides:
+  - - Count your crew
+    - We have 7, 12 and 15 seaters.
+  - - Choose your stops
+    - Two or three places keep the day relaxed.
+  - - Book early
+    - Big vehicles are limited, especially in December.
+  - - Choose your vehicle
+    - Pick the one you want on arahrides.com.
+- k: HOME FOR CHRISTMAS
+  title: Home for Christmas? Plan it now.
+  sub: Swipe for the plan.
+  query: Jamaica beach
+  slides:
+  - - Grand Market
+    - Night markets, street food and music on Dec 24.
+  - - A beach day
+    - Take the family to a calm beach.
+  - - Family visits
+    - Your own car means you see everyone on your timetable.
+  - - Book early
+    - Cars are limited in December. Choose yours at arahrides.com.
+- k: ONE-DAY RENTAL
+  title: One day. Three Kingston stops.
+  sub: Swipe for the plan.
+  query: Kingston Jamaica
+  slides:
+  - - Devon House
+    - Start with the grounds and the ice cream.
+  - - Hellshire
+    - Fried fish and a beach near the city.
+  - - Port Royal
+    - Finish with history at the end of the Palisadoes.
+  - - Book a day ahead
+    - 1 Day Rentals need 24 hours' notice. Pickup is in the Kingston area.
+- k: A WEEK BY CAR
+  title: A week in Jamaica by car.
+  sub: Swipe for the route.
+  query: Jamaica road trip
+  slides:
+  - - Days 1 to 2
+    - Kingston and the Blue Mountains.
+  - - Days 3 to 4
+    - 'Portland: Port Antonio, Boston Bay and Reach Falls.'
+  - - Days 5 to 6
+    - Ocho Rios and the north coast.
+  - - Day 7
+    - Rent 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: PATOIS FOR THE ROAD
+  title: Patois for the road.
+  sub: Swipe to learn.
+  query: Jamaica road
+  slides:
+  - - Wah gwaan
+    - What is going on?
+  - - Irie
+    - All good.
+  - - Likkle more
+    - See you later.
+  - - Use them on your trip
+    - Choose the car you want to drive at arahrides.com.
+- k: PICKUP SPOTS
+  title: Five ways to start your trip.
+  sub: Swipe for the spots.
+  query: Jamaica airport
+  slides:
+  - - Kingston and Norman Manley
+    - Start in the city or on the east side.
+  - - Montego Bay and MBJ
+    - Start on the west side.
+  - - OCJ (Ian Fleming)
+    - Start on the north coast.
+  - - Choose your pickup
+    - Pick your spot and your car at arahrides.com.
+- k: EAT JAMAICA
+  title: Eat your way around Jamaica.
+  sub: Swipe for the stops.
+  query: Jamaica food jerk
+  slides:
+  - - Jerk in Boston Bay
+    - Portland is famous for it.
+  - - Fish and bammy at Hellshire
+    - A classic beach lunch near Kingston.
+  - - Ice cream at Devon House
+    - Treat yourself in Kingston.
+  - - Make the stops yours
+    - Choose the car you want to drive at arahrides.com.
+- k: SUNSET DRIVES
+  title: Three sunset spots.
+  sub: Swipe for the plan.
+  query: Jamaica sunset
+  slides:
+  - - Negril
+    - Seven Mile Beach is a classic sunset spot.
+  - - Rick's Cafe
+    - Watch the sky and the cliff jumpers.
+  - - Treasure Beach
+    - A slow south coast sunset.
+  - - Plan the drive
+    - Arrive early and choose your car at arahrides.com.
 this_or_that:
 - - Beach
   - River
@@ -1539,6 +2008,204 @@ experience:
   sub: Fashion, falls and sea. Rent a car and make a weekend of it.
   also:
   - ocho rios
+- k: CHASE · SUNSET
+  place: sunset
+  query: Jamaica sunset
+  h1: Plan the drive.
+  h2: Catch the sunset.
+  sub: Arrive early and pick your spot on the west coast.
+  also:
+  - sunset
+- k: EAT · BAMMY
+  place: bammy
+  query: Jamaica bammy fish
+  h1: Bammy and
+  h2: fried fish.
+  sub: A cassava flatbread by the sea. Rent a car and find your spot.
+  also:
+  - bammy
+  - fish
+- k: EAT · FESTIVAL
+  place: festival
+  query: Jamaica festival jerk
+  h1: Festival.
+  h2: Sweet, fried, perfect.
+  sub: A fried dumpling made for jerk and fish. Follow the smoke.
+  also:
+  - festival
+  - jerk
+- k: EAT · ESCOVITCH
+  place: escovitch
+  query: Jamaica fried fish
+  h1: Escovitch fish.
+  h2: Tangy and crisp.
+  sub: Fried fish with pickled onions and peppers. A south coast classic.
+  also:
+  - escovitch
+  - fish
+- k: DRINK · ROADSIDE
+  place: coconut water
+  query: Jamaica coconut
+  h1: Coconut water,
+  h2: cold from the stall.
+  sub: The best drink for a long drive. Keep small bills handy.
+  also:
+  - coconut
+- k: TASTE · ROADSIDE
+  place: roadside fruit
+  query: Jamaica fruit stall
+  h1: Fruit stalls,
+  h2: every few miles.
+  sub: Mangoes, pineapples and more when in season. Stop whenever you like.
+  also:
+  - fruit
+  - mango
+  - market
+- k: DRIVE · HILLS
+  place: hills
+  query: Jamaica hills road
+  h1: Winding roads,
+  h2: misty hills.
+  sub: The best views come with a slow drive.
+  also:
+  - hills
+  - mountain
+  - road
+- k: RAINY DAY
+  place: rainy day
+  query: Jamaica caves
+  h1: Rain on the way?
+  h2: Go underground.
+  sub: Caves, museums and markets make a good rainy day plan.
+  also:
+  - cave
+  - museum
+- k: FAMILY DAY
+  place: family day
+  query: Jamaica family beach
+  h1: A family day out.
+  h2: Your own pace.
+  sub: Calm beaches, river rafts and ice cream stops. Rent a car and go.
+  also:
+  - family
+  - beach
+  - river
+- k: PHOTO STOPS
+  place: photos
+  query: Jamaica waterfall view
+  h1: Photo stops
+  h2: on every road.
+  sub: Waterfalls, bamboo tunnels and mountain views.
+  also:
+  - waterfall
+  - bamboo
+  - mountain
+  - view
+- k: SOLO TRIP
+  place: solo trip
+  query: Jamaica road
+  h1: Travelling solo?
+  h2: Freedom helps.
+  sub: Your own car means your own plan, one stop at a time.
+  also:
+  - road
+  - coast
+- k: COUPLES
+  place: couples trip
+  query: Jamaica sunset beach
+  h1: Slow beach days.
+  h2: Sunset drives.
+  sub: A rental car makes it easy to find the quiet spots.
+  also:
+  - beach
+  - sunset
+- k: WEEKEND AWAY
+  place: weekend away
+  query: Port Antonio Jamaica
+  h1: One weekend.
+  h2: Two coasts.
+  sub: Go from the city to the green hills and the sea.
+  also:
+  - portland
+  - port antonio
+  - coast
+- k: COMING HOME
+  place: family visit
+  query: Jamaica countryside
+  h1: Visiting family?
+  h2: Do it your way.
+  sub: Your own car means you see everyone on your timetable.
+  also:
+  - countryside
+  - family
+- k: MORNING DRIVE
+  place: Blue Mountains
+  query: Blue Mountains Jamaica morning
+  h1: Mornings in the hills.
+  h2: Coffee and clouds.
+  sub: Leave early and the views are yours.
+  also:
+  - coffee
+  - mountain
+- k: COAST TO COAST
+  place: Jamaica
+  query: Jamaica coast road
+  h1: Coast to coast.
+  h2: One small island.
+  sub: Beaches, hills and cities are all within a day's drive.
+  also:
+  - coast
+  - road
+- k: SPLASH DAY
+  place: waterfall
+  query: Jamaica waterfall swim
+  h1: Splash day.
+  h2: Waterfalls await.
+  sub: Bring water shoes and a dry towel for the car.
+  also:
+  - waterfall
+- k: JERK RUN
+  place: jerk
+  query: Jamaica jerk
+  h1: Follow the smoke.
+  h2: Jerk stop.
+  sub: Roadside jerk tastes best when you chose the stop yourself.
+  also:
+  - jerk
+- k: SLOW DAY
+  place: beach
+  query: Jamaica quiet beach
+  h1: A slow beach day.
+  h2: No rush.
+  sub: Find a quiet cove and stay until sunset.
+  also:
+  - beach
+- k: TOWN TO TOWN
+  place: Kingston
+  query: Jamaica town market
+  h1: Town to town.
+  h2: Market to market.
+  sub: Stop wherever it looks good.
+  also:
+  - market
+  - town
+- k: RIVER DAY
+  place: river
+  query: Jamaica river
+  h1: River day.
+  h2: Float and swim.
+  sub: Rafts, pools and shady banks, all a short drive from the coast.
+  also:
+  - river
+- k: EAT LOCAL
+  place: fish
+  query: Jamaica fish festival
+  h1: Eat local.
+  h2: Fish and festival.
+  sub: Beach shacks and roadside stalls serve the best lunch.
+  also:
+  - fish
+  - festival
 neutral_exp:
 - h1: Jamaica goes
   h2: far beyond the beach.
@@ -1675,6 +2342,48 @@ trust:
 - k: TRUST
   h: Know who you rent from.
   b: Watch our Smile Jamaica interview. Link in bio.
+- k: SMILE JAMAICA
+  h: Our Smile Jamaica interview.
+  b: Watch the team talk about Arah Rides.
+- k: MEET THE TEAM
+  h: Put a face to the name.
+  b: Watch our Smile Jamaica interview and meet who you are renting from.
+- k: RENT JAMAICAN
+  h: Rent from people you can see.
+  b: Our Smile Jamaica interview is online. Take a look.
+- k: WATCH
+  h: See us on Smile Jamaica.
+  b: An interview about Arah Rides and renting Jamaican.
+- k: TRUST
+  h: Real people. Real cars.
+  b: Watch our Smile Jamaica interview and browse real cars on arahrides.com.
+- k: WHO WE ARE
+  h: Local team. Local roads.
+  b: Watch the Smile Jamaica interview to see who is behind Arah Rides.
+- k: NEW HERE?
+  h: New to Arah Rides?
+  b: Start with our Smile Jamaica interview, then browse the cars.
+- k: BEHIND THE BRAND
+  h: Meet Arah Rides.
+  b: The Smile Jamaica interview is the best place to start.
+- k: LOCAL TEAM
+  h: Jamaican owned. Jamaican roads.
+  b: Watch the Smile Jamaica interview and meet the team.
+- k: REAL PEOPLE
+  h: Rent from real people.
+  b: See our Smile Jamaica interview, then message Winston.
+- k: SEEN ON TV
+  h: As seen on Smile Jamaica.
+  b: Watch the interview and see what Arah Rides is about.
+- k: OUR STORY
+  h: Why we started Arah Rides.
+  b: Our Smile Jamaica interview tells the story.
+- k: NO SURPRISES
+  h: Know who you rent from.
+  b: Meet the team in our Smile Jamaica interview.
+- k: RENT JAMAICAN
+  h: Support Jamaican business.
+  b: See us on Smile Jamaica and choose your car at arahrides.com.
 hero_big:
 - kicker: BIG GROUPS
   h1: The whole crew,

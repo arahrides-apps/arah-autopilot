@@ -14,33 +14,76 @@ regions:
     hook: A Kingston day in 3 stops
     sub: Swipe for the plan, then grab the keys.
     pickup: Pick up at Norman Manley or our Kingston offices.
-    stops: [devon house, bob marley museum, blue mountains, port royal, hellshire, hope gardens]
+    stops:
+    - devon house
+    - bob marley museum
+    - blue mountains
+    - port royal
+    - hellshire
+    - hope gardens
+    - trench town
+    - emancipation park
+    - national gallery
+    - holywell
   portland:
     hook: A Portland day in 3 stops
     sub: Green hills, jerk and cool water. Swipe for the plan.
     pickup: Pick up at Norman Manley or our Kingston offices and head east. Allow about 2 to 2.5 hours.
-    stops: [boston bay, reach falls, winnifred beach, rio grande, frenchman's cove, port antonio]
+    stops:
+    - boston bay
+    - reach falls
+    - winnifred beach
+    - rio grande
+    - frenchman's cove
+    - port antonio
+    - somerset falls
+    - blue lagoon
   north coast:
     hook: A north coast day in 3 stops
     sub: Falls, sea and good food. Swipe for the plan.
     pickup: Pick up at OCJ (Ian Fleming) and the north coast is on your doorstep.
-    stops: [dunn's river falls, blue hole, ocho rios]
+    stops:
+    - dunn's river falls
+    - blue hole
+    - ocho rios
+    - fern gully
+    - green grotto caves
+    - nine mile
   west:
     hook: A Negril day in 3 stops
     sub: Sand, falls and a big sunset. Swipe for the plan.
     pickup: Pick up at MBJ or our Montego Bay offices and drive west. Allow about 1 to 1.5 hours.
-    stops: [seven mile beach, mayfield falls, bluefields beach, negril]
+    stops:
+    - seven mile beach
+    - mayfield falls
+    - bluefields beach
+    - negril
+    - rick's cafe
+    - roaring river
   montego bay:
     hook: A Montego Bay day in 3 stops
     sub: Beach, history and a river drift. Swipe for the plan.
     pickup: Pick up at MBJ (Sangster) or our Montego Bay offices.
-    stops: [doctor's cave beach, rose hall, martha brae, falmouth]
+    stops:
+    - doctor's cave beach
+    - rose hall
+    - martha brae
+    - falmouth
+    - cornwall beach
+    - glistening waters
+    - burwood beach
   south coast:
     hook: A south coast day in 3 stops
     sub: Falls, bamboo and fresh fish. Swipe for the plan.
     pickup: Pick up at MBJ and head south. Allow about 2 hours.
-    stops: [ys falls, bamboo avenue, black river, treasure beach, lover's leap]
-
+    stops:
+    - ys falls
+    - bamboo avenue
+    - black river
+    - treasure beach
+    - lover's leap
+    - pelican bar
+    - mandeville
 places:
   blue mountains:
     region: kingston
@@ -278,63 +321,273 @@ places:
     do: Hills, villages and views you cannot see from a resort.
     drive: Pick up at any of our five spots and choose a road.
     near: Leave time for roadside stops. They are half the trip.
-
-# One "so what" line for each Q&A and tip, so the third slide of the story ties it back to the trip.
+  pelican bar:
+    region: south coast
+    do: Sit in a little bar built on stilts in the sea.
+    drive: Drive to Treasure Beach, about 2.5 hours from MBJ, then take a boat out.
+    near: Add Lover's Leap for a view over the coast.
+  fern gully:
+    region: north coast
+    do: Drive under a canopy of ferns and tall trees on a cool, shady road.
+    drive: It starts near Ocho Rios. Pick up at OCJ (Ian Fleming).
+    near: Pair it with Dunn's River Falls or the Blue Hole.
+  green grotto caves:
+    region: north coast
+    do: Explore underground caves on the north coast.
+    drive: They are on the north coast, between Ocho Rios and Montego Bay. Pick up at OCJ or MBJ.
+    near: Add a beach stop or Dunn's River Falls.
+  glistening waters:
+    region: montego bay
+    do: Take an evening boat tour and watch the water glow around you.
+    drive: It is near Falmouth in Trelawny. Pick up at MBJ and allow about 45 minutes.
+    near: Stop in Falmouth's Georgian streets first.
+  rick's cafe:
+    region: west
+    do: Grab a spot on the cliffs, catch the sunset and watch the cliff jumpers.
+    drive: It is on the West End in Negril. Pick up at MBJ and allow about 1 to 1.5 hours.
+    near: Spend the afternoon on Seven Mile Beach first.
+  cornwall beach:
+    region: montego bay
+    do: Swim and relax on a lively Montego Bay beach.
+    drive: It is a short drive from MBJ. Pick up at the airport or our Montego Bay offices.
+    near: Doctor's Cave Beach and Rose Hall are close by.
+  nine mile:
+    region: north coast
+    do: Visit the village in St Ann where Bob Marley was born.
+    drive: It is in the hills of St Ann. Pick up at OCJ and allow extra time for winding country roads.
+    near: Pair it with Fern Gully or time in Ocho Rios.
+  trench town:
+    region: kingston
+    do: Visit the Culture Yard and hear the story of reggae.
+    drive: It is in Kingston. Pick up at Norman Manley or our Kingston offices.
+    near: The Bob Marley Museum is close by.
+  somerset falls:
+    region: portland
+    do: Wade and swim in the pools of a shady green gorge.
+    drive: It is near Hope Bay in Portland. Allow about 2 hours from Kingston.
+    near: Add Blue Lagoon or jerk in Boston Bay.
+  blue lagoon:
+    region: portland
+    do: Swim in deep, clear blue water near Port Antonio.
+    drive: It is near Port Antonio. Allow about 2.5 hours from Kingston.
+    near: Add Frenchman's Cove or Boston Bay.
+  roaring river:
+    region: west
+    do: Explore caves and cool blue water in a green park.
+    drive: It is in Westmoreland. Pick up at MBJ and allow about 1.5 hours.
+    near: Add Bluefields Beach or Mayfield Falls.
+  holywell:
+    region: kingston
+    do: Walk forest trails in the cool air of the Blue Mountains.
+    drive: It is in the hills above Kingston. Allow an hour or more from the city.
+    near: Stop for Blue Mountain coffee on the way back.
+  emancipation park:
+    region: kingston
+    do: Stroll a green park in the middle of New Kingston.
+    drive: It is in Kingston. Pick up at Norman Manley or our Kingston offices.
+    near: Add Devon House for ice cream.
+  national gallery:
+    region: kingston
+    do: See Jamaican art, from classic to contemporary, on the Kingston waterfront.
+    drive: It is in downtown Kingston. Pick up at Norman Manley or our Kingston offices.
+    near: Add Devon House or the Bob Marley Museum.
+  burwood beach:
+    region: montego bay
+    do: Find a quiet stretch of sand on the north coast.
+    drive: It is east of Falmouth in Trelawny. Pick up at MBJ and allow about 45 minutes.
+    near: Add the Martha Brae or Falmouth.
+  mandeville:
+    region: south coast
+    do: Cool hills, a market town and a relaxed pace in Manchester.
+    drive: Allow about 1.5 hours from Kingston.
+    near: Carry on south to Treasure Beach.
+  sunset:
+    region: west
+    do: Plan the drive so you arrive for golden hour on the west coast.
+    drive: Pick up at MBJ and head to Negril. Allow about 1 to 1.5 hours.
+    near: Eat nearby and stay for the colours.
+    theme: true
+  bammy:
+    region: south coast
+    do: Bammy is a cassava flatbread. Try it with fried fish by the sea.
+    drive: Hellshire near Kingston and Treasure Beach on the south coast are classic spots.
+    near: Add a swim before or after lunch.
+    theme: true
+  festival:
+    region: south coast
+    do: Festival is a sweet fried dumpling. It goes with jerk and fish.
+    drive: Look for it at jerk stops and beach restaurants. Your own car means you can stop at every one.
+    near: Add a beach stop and make it a day.
+    theme: true
+  escovitch:
+    region: south coast
+    do: Escovitch fish is fried fish topped with tangy pickled onions and peppers.
+    drive: Hellshire near Kingston and the south coast are classic spots.
+    near: Add a swim and stay for the sunset.
+    theme: true
+  coconut water:
+    region: kingston
+    do: Fresh coconut water from a roadside stall is the best drink for the drive.
+    drive: Look for stalls along the main roads. Keep small bills handy.
+    near: Pair it with a beach stop.
+    theme: true
+  roadside fruit:
+    region: kingston
+    do: Mangoes, pineapples and more at roadside stalls when in season.
+    drive: Your own car means you can stop at any stall you like.
+    near: Add a river or beach stop.
+    theme: true
+  hills:
+    region: kingston
+    do: Winding roads, cool air and big views over the island.
+    drive: Pick up at Norman Manley or our Kingston offices and head into the Blue Mountains.
+    near: Take it slowly and stop for coffee.
+    theme: true
+  rainy day:
+    region: north coast
+    do: Caves, museums and markets make a good rainy day plan.
+    drive: Try Green Grotto Caves on the north coast or the Bob Marley Museum in Kingston.
+    near: Wait out the shower, then head to the coast.
+    theme: true
+  family day:
+    region: montego bay
+    do: Calm beaches, river rafts and ice cream stops make an easy family day.
+    drive: Try Doctor's Cave Beach near MBJ or the Martha Brae near Falmouth.
+    near: Pack water, snacks and towels.
+    theme: true
+  photos:
+    region: portland
+    do: Waterfalls, bamboo tunnels and mountain views make the best photos.
+    drive: Try Portland, Bamboo Avenue in St Elizabeth or the Blue Mountains.
+    near: Go early for the best light.
+    theme: true
+  solo trip:
+    region: kingston
+    do: A rental car gives solo travellers freedom to explore at their own pace.
+    drive: Pick up at any of our five spots and choose a road.
+    near: Leave time for roadside stops.
+    theme: true
+  couples trip:
+    region: west
+    do: Slow beach days and sunset drives, at your own pace.
+    drive: Pick up at MBJ and head to Negril or the south coast.
+    near: Find a quiet beach and stay for sunset.
+    theme: true
+  weekend away:
+    region: portland
+    do: Go from the city to the green hills and the sea in one weekend.
+    drive: Pick up at Norman Manley or our Kingston offices and head east. Allow about 2 to 2.5 hours.
+    near: Add Boston Bay and Reach Falls.
+    theme: true
+  family visit:
+    region: kingston
+    do: Coming home? Your own car means you see everyone on your timetable.
+    drive: Pick up at the airport you land at and head out.
+    near: Plan a beach day for the whole family.
+    theme: true
 qa_so:
-  "Where can I pick up my car?": Pick the spot closest to where you land and go straight to your car.
-  "What is a 1 Day Rental?": Need Kingston for a day? Book 24 hours ahead and pick up at Windward Road or Norman Manley.
-  "Do I need to download an app?": Open WhatsApp, say Hi to Winston and you are on your way.
-  "How do I book?": Two ways in, one car you choose. Pick yours today.
-  "How do I pay?": Pay by Stripe in the chat and your car is booked.
-  "Is Winston available at night?": Landing late or planning at 2am? Message Winston any time.
-  "What is Arah Rides?": Browse real cars, pick the one you like and book it.
-  "How long can I rent for?": Plan your days, then check the minimum before you book.
-  "Can I pick up at the airport?": Land, collect your car and go.
-  "Which side of the road do we drive on?": Take the first drive slowly. By day two it feels natural.
-  "What do the speed limit signs show?": Check which units your speedometer shows before you set off.
-  "Can I book a car for tomorrow?": Plan ahead and message Winston for dates.
-  "What is Winston's number?": Save it now so Winston is one tap away.
-  "Can I choose my own car?": Choose the car you want to drive and book it.
-  "What currency does Jamaica use?": Keep small bills in the car for fruit, coconut water and jerk.
-  "What time zone is Jamaica in?": No clock changes, so your plans stay the same all year.
-  "Can I pick up in Montego Bay?": Land at MBJ or head to our local offices and start exploring.
-  "Can I pick up near Ocho Rios?": Land at OCJ and the north coast is minutes away.
-  "What is there to do besides the beach?": Waterfalls, rivers, coffee and jerk are all a drive away.
-  "Why rent a car in Jamaica?": Your timetable, your stops, your Jamaica.
-  "Where is jerk famous?": Follow the smoke to Boston Bay.
-  "Where does Blue Mountain coffee grow?": Go up for the morning and taste it at the source.
-  "How high is Blue Mountain Peak?": Start before sunrise and hike it on your own schedule.
-  "Do I choose my car?": That is the Arah Rides promise. Choose it, check it, book it.
-  "Can I book a car for today?": Book at least a day before you need the car.
-  "Do you have vans for big groups?": Bring the whole crew in one vehicle and book early.
-  "Can I rent for just one day?": Book a day ahead and pick up in the Kingston area.
-  "Is there a lounge pass offer?": Rent 7 days or more and fly out relaxed.
-  "Can I combine the lounge pass with other promos?": Check the conditions, then book the car you want.
-  "Why book with Arah Rides?": No category guessing. Choose the car you want to drive.
-  "Will cars sell out for December?": Secure your car now, before December fills up.
-
+  Where can I pick up my car?: Pick the spot closest to where you land and go straight to your car.
+  What is a 1 Day Rental?: Need Kingston for a day? Book 24 hours ahead and pick up at Windward Road or Norman Manley.
+  Do I need to download an app?: Open WhatsApp, say Hi to Winston and you are on your way.
+  How do I book?: Two ways in, one car you choose. Pick yours today.
+  How do I pay?: Pay by Stripe in the chat and your car is booked.
+  Is Winston available at night?: Landing late or planning at 2am? Message Winston any time.
+  What is Arah Rides?: Browse real cars, pick the one you like and book it.
+  How long can I rent for?: Plan your days, then check the minimum before you book.
+  Can I pick up at the airport?: Land, collect your car and go.
+  Which side of the road do we drive on?: Take the first drive slowly. By day two it feels natural.
+  What do the speed limit signs show?: Check which units your speedometer shows before you set off.
+  Can I book a car for tomorrow?: Plan ahead and message Winston for dates.
+  What is Winston's number?: Save it now so Winston is one tap away.
+  Can I choose my own car?: Choose the car you want to drive and book it.
+  What currency does Jamaica use?: Keep small bills in the car for fruit, coconut water and jerk.
+  What time zone is Jamaica in?: No clock changes, so your plans stay the same all year.
+  Can I pick up in Montego Bay?: Land at MBJ or head to our local offices and start exploring.
+  Can I pick up near Ocho Rios?: Land at OCJ and the north coast is minutes away.
+  What is there to do besides the beach?: Waterfalls, rivers, coffee and jerk are all a drive away.
+  Why rent a car in Jamaica?: Your timetable, your stops, your Jamaica.
+  Where is jerk famous?: Follow the smoke to Boston Bay.
+  Where does Blue Mountain coffee grow?: Go up for the morning and taste it at the source.
+  How high is Blue Mountain Peak?: Start before sunrise and hike it on your own schedule.
+  Do I choose my car?: That is the Arah Rides promise. Choose it, check it, book it.
+  Can I book a car for today?: Book at least a day before you need the car.
+  Do you have vans for big groups?: Bring the whole crew in one vehicle and book early.
+  Can I rent for just one day?: Book a day ahead and pick up in the Kingston area.
+  Is there a lounge pass offer?: Rent 7 days or more and fly out relaxed.
+  Can I combine the lounge pass with other promos?: Check the conditions, then book the car you want.
+  Why book with Arah Rides?: No category guessing. Choose the car you want to drive.
+  Will cars sell out for December?: Secure your car now, before December fills up.
+  Can I pick up in Kingston?: Pick the spot closest to where you are staying.
+  How far is Negril from MBJ?: Pick up at MBJ and be on the beach for the afternoon.
+  Which airport is closest to Ocho Rios?: Pick up there and the north coast is on your doorstep.
+  Which airport is closest to Kingston?: Pick up there and you are minutes from the city.
+  How far is Port Antonio from Kingston?: Leave early and make a full day of Portland.
+  How big is Jamaica?: Small enough to see a lot in one trip.
+  What is the national dish?: Start a road trip day with it.
+  What is bammy?: Look for it at roadside spots by the sea.
+  What is festival?: Order it at your next jerk stop.
+  What is escovitch fish?: Add it to your south coast lunch plan.
+  What is jerk?: Follow the smoke to Boston Bay.
+  What language do people speak?: Learn a few phrases for the road.
+  Where is Dunn's River Falls?: Land at OCJ and it is a short drive.
+  Can I rent a 7 seater?: Bring the whole crew in one vehicle.
+  What is the best way to see Jamaica?: Choose your car and go.
+  Is Jamaica good for road trips?: Plan a few stops and leave room for detours.
 tip_so:
-  "Keep left.": Take your first drive slowly. By day two it feels natural.
-  "Roundabout rule.": Slow down, look right, then go when it is clear.
-  "Check the units.": Check which units your speedometer shows before you set off.
-  "Download offline maps.": Save your route the night before and drive with confidence.
-  "Leave early.": Leave early for empty roads and the best parking.
-  "Carry a little cash.": Keep small bills in the car for the best roadside stops.
-  "Hills take time.": Add an hour to any mountain route and enjoy the stops.
-  "Pack for the sun.": Keep a bag in the car so a beach stop is always possible.
-  "Confirm your pickup.": Winston can confirm your pickup spot and time on WhatsApp.
-  "Lock up, hide your things.": A quick check before you walk away keeps the trip stress free.
-  "Fuel up early.": Top up before you leave town so the road is all about the view.
-  "Daylight for new roads.": Aim to arrive before dark, then settle in.
-  "Buckle up.": Everyone buckles up before the car moves.
-  "Take photos at pickup.": Two minutes at pickup keeps drop-off easy.
-  "Beat the crowds.": Be there early and the best spots are yours.
-  "Bring a phone mount.": Mount it before you set off and keep both hands on the wheel.
-  "Ask Winston.": "Dates, pickup spots, how it works: he answers on WhatsApp, 24/7."
-  "Book early for December.": Reserve now and land with your car waiting.
-  "No same-day bookings.": Book a day ahead and walk straight to your car.
-  "Check the photos.": Browse the photos, pick your car and book it.
-  "Travelling with a crowd?": Book the big one early so the whole crew rides together.
-  "Just need one day?": Pick up and drop off in the Kingston area.
-  "Staying a week or more?": Stay 7 days or more and get a lounge pass for 1 guest.
+  Keep left.: Take your first drive slowly. By day two it feels natural.
+  Roundabout rule.: Slow down, look right, then go when it is clear.
+  Check the units.: Check which units your speedometer shows before you set off.
+  Download offline maps.: Save your route the night before and drive with confidence.
+  Leave early.: Leave early for empty roads and the best parking.
+  Carry a little cash.: Keep small bills in the car for the best roadside stops.
+  Hills take time.: Add an hour to any mountain route and enjoy the stops.
+  Pack for the sun.: Keep a bag in the car so a beach stop is always possible.
+  Confirm your pickup.: Winston can confirm your pickup spot and time on WhatsApp.
+  Lock up, hide your things.: A quick check before you walk away keeps the trip stress free.
+  Fuel up early.: Top up before you leave town so the road is all about the view.
+  Daylight for new roads.: Aim to arrive before dark, then settle in.
+  Buckle up.: Everyone buckles up before the car moves.
+  Take photos at pickup.: Two minutes at pickup keeps drop-off easy.
+  Beat the crowds.: Be there early and the best spots are yours.
+  Bring a phone mount.: Mount it before you set off and keep both hands on the wheel.
+  Ask Winston.: 'Dates, pickup spots, how it works: he answers on WhatsApp, 24/7.'
+  Book early for December.: Reserve now and land with your car waiting.
+  No same-day bookings.: Book a day ahead and walk straight to your car.
+  Check the photos.: Browse the photos, pick your car and book it.
+  Travelling with a crowd?: Book the big one early so the whole crew rides together.
+  Just need one day?: Pick up and drop off in the Kingston area.
+  Staying a week or more?: Stay 7 days or more and get a lounge pass for 1 guest.
+  Stay hydrated.: Stop often and drink up.
+  Watch for potholes.: A steady pace beats a rushed one.
+  Share the road.: Slow down through villages.
+  Take it slow in the rain.: Wait out a heavy shower, then carry on.
+  Pack a power bank.: Charge up before you leave town.
+  Bring water shoes.: Keep them in the car.
+  Check entrance fees.: Keep cash for the gate.
+  Start waterfall days early.: Be there early and have the pools to yourself.
+  Ask for directions.: Smile, ask and enjoy the detour.
+  Check the fuel at pickup.: Take a photo of the gauge.
+  Plan your drop-off.: Build in a buffer.
+  Mix it up.: Jamaica is small, so you can do a lot.
+  Keep your licence handy.: Check it before you set off.
+  Watch the sunset time.: Plan new roads for daylight.
+  Sunscreen after every swim.: Keep a bottle in the car.
+  Pick a playlist.: Reggae, dancehall, anything that fits the view.
   default_patois: Try it at your first roadside stop.
+  Mind the speed limits.: Check the sign, then check your speed.
+  Use your horn lightly.: Short and friendly works best.
+  Dip your lights.: Visibility matters most at night.
+  Park with care.: Lock up and keep the car tidy.
+  Bring a light jacket.: Keep one in the boot.
+  Charge before you go.: Download maps while you have Wi-Fi.
+  Carry a reusable bottle.: One less thing to buy at every stop.
+  Try the local snack.: Ask what is fresh.
+  Stay flexible.: Leave an hour free in every day.
+  Check opening times.: Look it up the night before.
+  Share the driving.: Ask Winston about adding a driver.
+  Tell someone your plan.: Safe trips are happy trips.
+  Land, then relax.: Your pickup is easier when we know your landing time.
+  Bring your documents.: Keep them together in your bag.
+  Compare before you book.: Pick the car that suits your trip.
+  Book for the whole trip.: Ask about your dates before you land.
+  Plan the return.: Choose a pickup and drop-off that suit your route.
