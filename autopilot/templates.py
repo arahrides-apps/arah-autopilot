@@ -171,6 +171,38 @@ def photoslide(path, n, t, h, b, cta=False, pos="50% 50%"):
                 f'<div style="width:110px;height:9px;border-radius:6px;background:{Y}"></div>'
                 f'<div style="font-size:38px;line-height:1.3;color:{C}">{E(b)}</div>{ctab}</div>', 1350, K, C)
 
+def versus(k, h, them, us):
+    G, Y, C, K = c()
+    no = f'<svg viewBox="0 0 24 24" width="48" height="48" style="flex:none"><circle cx="12" cy="12" r="12" fill="#B33A3A"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>'
+    yes = f'<svg viewBox="0 0 24 24" width="48" height="48" style="flex:none"><circle cx="12" cy="12" r="12" fill="{G}"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.8" stroke-linecap="round" fill="none"/></svg>'
+    def rows(items, ic, col_):
+        return "".join(f'<div style="display:flex;gap:16px;align-items:flex-start;font-size:40px;line-height:1.2;font-weight:700;color:{col_}">{ic}<div>{E(x)}</div></div>' for x in items)
+    left = (f'<div style="flex:1;background:#2A302C;border-radius:36px;padding:38px 34px;display:flex;flex-direction:column;gap:40px"><div style="font-size:22px;font-weight:800;letter-spacing:3.5px;color:#9AA39D">BIG RENTAL COMPANIES</div>{rows(them, no, "#C9D0CB")}</div>')
+    right = (f'<div style="flex:1;background:{Y};color:{K};border-radius:36px;padding:38px 34px;display:flex;flex-direction:column;gap:40px;box-shadow:0 20px 44px rgba(232,169,58,.35)"><div style="font-size:22px;font-weight:800;letter-spacing:3.5px;color:{G}">ARAH RIDES</div>{rows(us, yes, K)}</div>')
+    return col(mark(Y, "BOOK THE CAR YOU SEE") + chip(k, Y, K) + f'<h1 style="margin:0;{HD};font-size:{fs(h, 104)}px;line-height:1;color:{C}">{hl(h, Y)}</h1>'
+               f'<div style="flex-grow:1;display:flex;gap:20px">{left}{right}</div>' + foot(Y, K, Y), K, C, 28, rings(Y, .08))
+
+def event(k, h, b, badge="", cta=None):
+    G, Y, C, K = c()
+    parts = badge.split(" ", 1) if badge else ["", ""]
+    mon, day = (parts + [""])[:2]
+    date = (f'<div style="width:300px;background:{C};color:{K};border-radius:34px;overflow:hidden;text-align:center;box-shadow:0 24px 48px rgba(0,0,0,.4);transform:rotate(-4deg)">'
+            f'<div style="background:{Y};{HD};font-size:46px;padding:14px;letter-spacing:4px">{E(mon)}</div>'
+            f'<div style="{HD};font-size:{86 if len(day) < 6 else 62}px;padding:26px 10px 30px;line-height:1">{E(day)}</div></div>') if badge else ""
+    return col(mark(Y, "HAPPENING IN JAMAICA") + '<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:center;gap:34px">'
+               f'<div style="display:flex;justify-content:space-between;align-items:center;gap:30px"><div style="display:flex;flex-direction:column;gap:26px;flex:1">{chip(k, Y, K)}</div>{date}</div>'
+               f'<h1 style="margin:0;{HD};font-size:{fs(h, 128)}px;line-height:.98;color:{C}">{hl(h, Y)}</h1>'
+               f'<div style="width:120px;height:10px;border-radius:6px;background:{Y}"></div>'
+               f'<div style="font-size:42px;line-height:1.35;font-weight:500">{E(b)}</div></div>' + foot(Y, K, Y, cta), G, C, 28, rings(Y, .16))
+
+# ---------------------------------------------------------------- photo posts
+def sticker(a, b, left=False, y="top:150px", rot=-9, s=250):
+    G, Y, C, K = c()
+    x = "left:56px" if left else "right:56px"
+    return (f'<div style="position:absolute;{x};{y};width:{s}px;height:{s}px;border-radius:50%;background:{Y};color:{K};display:flex;flex-direction:column;align-items:center;justify-content:center;'
+            f'transform:rotate({rot}deg);box-shadow:0 10px 30px rgba(0,0,0,.35);border:6px solid {C}"><div style="{HD};font-size:{int(s * .42)}px;line-height:1">{E(a)}</div>'
+            f'<div style="font-size:{int(s * .1)}px;font-weight:800;letter-spacing:3px">{E(b)}</div></div>')
+
 def hero(path, k, h1, h2, sub, pos="50% 50%", at="b", cta=None, st=None):
     G, Y, C, K = c()
     g = ("linear-gradient(180deg,rgba(15,20,17,.6) 0%,rgba(15,20,17,0) 24%,rgba(15,20,17,.30) 40%,rgba(15,20,17,.80) 62%,rgba(15,20,17,.95) 100%)" if at == "b" else
