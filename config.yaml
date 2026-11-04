@@ -66,6 +66,8 @@ photos:
   near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
   near_duplicate_distance: 10
   web_share: 0.5                   # share of scenery posts that look for a licence-free web photo first (0 = own photos first, 1 = web first)
+  stock_car_share: 0.35            # share of car posts that use a clean stock photo of one of our models (needs the Pexels / Unsplash / Pixabay keys)
+  fleet_models: [BMW 2 Series, BMW 3 Series, BMW 5 Series GT, Foton View CS2, GWM Haval GT, GWM Haval H6, Honda CR-V, Honda Fit, Honda Grace, Honda HR-V, Hyundai Creta, Hyundai Tucson, Jetour T2, Kia Cerato, Kia Seltos, Kia Soluto, Kia Sportage, Mazda Demio, MG ZS, Nissan Sylphy, Nissan Teana, Nissan X-Trail, Subaru G4, Subaru Impreza, Subaru Legacy, Subaru XV, Suzuki Baleno, Suzuki Swift, Suzuki Vitara, Suzuki XL7, Toyota Aqua, Toyota Axio, Toyota Corolla, Toyota Corolla Cross, Toyota Corolla Touring, Toyota Hiace, Toyota Noah, Toyota RAV4, Toyota Rush, Toyota Vitz, Toyota Voxy, Toyota Yaris, Toyota Yaris Cross]     # the models on arahrides.com
   series_days: 14                  # photos from the same shoot (same car, same spot) are spaced at least this many days apart
   min_short_side: 1000
   allow_unreviewed_drive: false    # true = also use Drive photos I have not looked at. Only switch on after checking the Drive folder holds nothing private
