@@ -70,9 +70,20 @@ class DayBuilder:
         self.bank = expand_bank(load_yaml("bank.yaml")); self.moments = moments; self.notes = []
         self.today = date; self.led_loc = []; self.used_follow = set()
 
+    def cooldown(self, kind, n):
+        """Days before wording repeats: the configured days, but never more than the pool can supply at today's posting rate."""
+        want = {"hero": "car_hero", "hero_big": "car_hero"}.get(kind, kind)
+        per_day = 0.0
+        for slot in self.cfg["pattern"]:
+            opts = str(slot).split("|")
+            per_day += sum(1 for o in opts if o == want) / len(opts)
+        if per_day <= 0:
+            return self.cfg["copy_cooldown_days"]
+        return max(1, min(self.cfg["copy_cooldown_days"], int(n / per_day)))
+
     def pick(self, kind):
         lst = self.bank[kind]
-        i, cycled = self.led.copy_pick(kind, len(lst), self.today, self.rng, self.cfg["copy_cooldown_days"])
+        i, cycled = self.led.copy_pick(kind, len(lst), self.today, self.rng, self.cooldown(kind, len(lst)))
         if cycled:
             n = f"Wording for '{kind}' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml."
             if n not in self.notes:
@@ -99,7 +110,12 @@ class DayBuilder:
 
     def cap(self, post, typ, text, extra_tag=None, cta=None, credit=None, place=None):
         loc = self.where(place)
-        post["location"] = {"name": loc["name"], "id": loc.get("id", "")}
+        tag_loc = loc
+        if not loc.get("id"):                 # Instagram only accepts a location with a real ID: use the nearest default spot that has one
+            L = self.cfg["locations"]; have = [k for k in L["default_rotation"] if L[k].get("id")]
+            if have:
+                tag_loc = L[have[(self.date.toordinal() + len(self.led_loc)) % len(have)]]
+        post["location"] = {"name": tag_loc["name"], "id": tag_loc.get("id", "")}
         return caption(self.cfg, typ, text, extra_tag, cta, credit, loc, self.rng)
 
     def photo_flags(self, post, ph):
