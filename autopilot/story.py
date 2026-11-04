@@ -1,0 +1,185 @@
+"""Story carousels. Every carousel tells ONE story about ONE topic and ends with a reason to book:
+
+    place / experience : hook > what you'll love > getting there by car > make a day of it > book
+    trip (day plan)    : hook > stop 1 > stop 2 > stop 3 > how to get there and book
+    car                : hook > choose your car > pick your route > pick it up > book
+    qa / tip           : hook > the answer / the detail > what it means for your trip > how to book > book
+    brand, chat, trust, moment, versus, list : each has its own short arc (see below)
+
+The words come from content/stories.yaml and the bank, never from unrelated posts."""
+import re
+from string import capwords
+from . import templates as T
+from .config import load_yaml
+
+NAMES = {"ys falls": "YS Falls", "blue mountains": "Blue Mountains"}
+GENERIC_TOKENS = {"falls", "beach", "river", "house", "port", "blue", "gardens", "cove", "mountain", "mountains", "avenue", "bay", "cave", "hole"}
+
+PICKUPS = "Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ."
+BOOK3 = "Say Hi to Winston on WhatsApp. Get your quote. Book and pay by Stripe."
+CLOSE_PLACE = [("Your {p} day starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
+               ("Ready to go to {p}?", "Choose your car at arahrides.com. No same-day bookings, so book at least a day ahead."),
+               ("Do not just save it. Go.", "Choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7.")]
+CLOSE_THEME = [("Your road trip starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
+               ("Ready to hit the road?", "Choose your car at arahrides.com. No same-day bookings, so book at least a day ahead."),
+               ("Do not just save it. Go.", "Choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7.")]
+CLOSE_GENERAL = [("Save this for your trip.", "Tap the bookmark so you can find it when you plan. Questions? Ask Winston on WhatsApp."),
+                 ("Send this to your travel partner.", "Planning together? Share it, then choose your car at arahrides.com."),
+                 ("Planning Jamaica?", "Tell Winston your dates and pickup spot on WhatsApp and get a quote."),
+                 ("Tag who you are travelling with.", "Then choose the car you want to drive at arahrides.com.")]
+
+_S = None
+def stories():
+    global _S
+    if _S is None:
+        _S = load_yaml("stories.yaml")
+    return _S
+
+def nice(key):
+    return NAMES.get(key) or capwords(key)
+
+def find_place(name):
+    """The story entry for a place name: exact match, else the longest key inside the name, else the shortest key containing it."""
+    P = stories()["places"]; n = (name or "").lower().strip()
+    if n in P:
+        return n, P[n]
+    inside = sorted((k for k in P if k in n), key=len, reverse=True)
+    if inside:
+        return inside[0], P[inside[0]]
+    around = sorted((k for k in P if n and n in k), key=len)
+    if around:
+        return around[0], P[around[0]]
+    return None, None
+
+def about_words(key):
+    """Words that must appear in a photo's label for it to be a photo of this place."""
+    toks = [t for t in re.findall(r"[a-z]+", key.replace("'s", "")) if len(t) > 3 and t not in GENERIC_TOKENS]
+    if toks:
+        w = toks[0]
+        return [w[:-1] if w.endswith("s") and len(w) > 5 else w]
+    return [key]
+
+def _slides(b, post, cover, items, closer, own_photos=None):
+    """items: [(heading, body)] ; closer: (heading, body). Returns the finished pages, 5 slides at most 6."""
+    total = len(items) + 2
+    out = [(cover, 1350)]
+    for i, (h, body) in enumerate(items):
+        ph = (own_photos or {}).get(i)
+        if ph:
+            out.append((T.photoslide(ph.path, i + 2, total, h, body), 1350))
+        else:
+            out.append((T.slide(i + 2, total, h, body, alt=bool(i % 2)), 1350))
+    out.append((T.slide(total, total, closer[0], closer[1], alt=bool(len(items) % 2), cta=True), 1350))
+    return out
+
+def _photo_for(b, post, key):
+    return b.extra_photo(post, about_words(key)) if key else None
+
+def place_story(b, post, pages, kind, e, confirmed, credit):
+    key, st = find_place(e["place"]) if confirmed else (None, None)
+    pl = e["place"] if confirmed else None
+    if not st:
+        st = {"do": "Hills, villages and views you cannot see from a resort. Your own car means your own timetable.",
+              "drive": "Pick up at Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ and choose a road.",
+              "near": "Leave room for roadside stops. Waterfalls, beaches, jerk and coffee are all a drive away."}
+        closers = CLOSE_THEME
+        theme = True
+    else:
+        theme = bool(st.get("theme"))
+        closers = CLOSE_THEME if theme else CLOSE_PLACE
+    c = b.rng.choice(closers)
+    closer = (c[0].format(p=(e["place"] if pl else "Jamaica")), c[1])
+    items = [("What you will love.", st["do"]), ("Getting there.", st["drive"]), ("Make a day of it.", st["near"])]
+    photos = {0: _photo_for(b, post, key)} if key and not theme else {}
+    out = _slides(b, post, pages[0][0], items, closer, photos)
+    text = post["copy_text"] + f"\n\n{st['do']}\n\nGetting there: {st['drive']}\n\n{st['near']}"
+    post["copy_text"] = text
+    post["caption"] = b.cap(post, kind, text, None, credit=credit, place=pl)
+    return out
+
+def car_story(b, post, pages, big):
+    ROUTES = ["blue mountains", "port antonio", "negril", "ocho rios", "treasure beach", "dunn's river falls", "ys falls", "reach falls",
+              "mayfield falls", "seven mile beach", "martha brae", "port royal", "boston bay", "black river"]
+    P = [(k, stories()["places"][k]) for k in ROUTES if k in stories()["places"]]
+    k, v = P[b.rng.randrange(len(P))]
+    if big:
+        items = [("Room for everyone.", "7, 12 and 15 seaters. Family trips, church groups and teams stay together."),
+                 ("Plan the route.", f"{nice(k)}: {v['do']}"),
+                 ("Book early.", "Big vehicles are limited and December is busy. Reserve yours today.")]
+    else:
+        items = [("Choose your ride.", "Browse real cars with real photos on arahrides.com and pick the one you want to drive."),
+                 ("Pick your route.", f"{nice(k)}: {v['do']}"),
+                 ("Pick it up.", f"{PICKUPS} Collect your car and go.")]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def qa_story(b, post, pages, e):
+    so = stories()["qa_so"].get(e["q"]) or "Ready when you are. Choose your car at arahrides.com."
+    items = [("The answer.", e["a"]), ("What that means.", so), ("Book in 3 steps.", BOOK3)]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def tip_story(b, post, pages, e):
+    S = stories()["tip_so"]
+    so = S.get(e["h"]) or (S["default_patois"] if e.get("k") == "PATOIS 101" else "Put it to use on your next drive.")
+    items = [("The detail.", e["b"]), ("On your trip.", so), ("Book in 3 steps.", BOOK3)]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def brand_story(b, post, pages, e):
+    items = [("Choose your car.", "Browse real cars with real photos on arahrides.com and pick the one you want to drive."),
+             ("Pick up where you land.", PICKUPS),
+             ("Ask Winston.", "Quote, booking and questions on WhatsApp, 24/7. Pay by Stripe.")]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def chat_story(b, post, pages, e):
+    items = [("Step 1: Say Hi.", "Message Winston on WhatsApp. No app to download."),
+             ("Step 2: Get a quote.", "Tell Winston your dates and pickup spot."),
+             ("Step 3: Book and pay.", "Pay by Stripe to confirm. Then go see Jamaica.")]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def trust_story(b, post, pages, e):
+    items = [("The team.", e["b"]), ("Real cars.", "Browse real cars with real photos on arahrides.com."),
+             ("Say Hi to Winston.", "Questions? Winston answers on WhatsApp, 24/7.")]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def moment_story(b, post, pages, m):
+    items = [("Plan your wheels.", "Cars are limited around busy dates. Reserve yours at arahrides.com."),
+             ("Pick up where you land.", PICKUPS), ("Book in 3 steps.", BOOK3)]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
+
+def versus_story(b, post, pages, e):
+    cover = T.ccover_plain(e["k"], e["h"], "Swipe to compare.")
+    items = [("Other companies.", ". ".join(e["them"]) + "."), ("Arah Rides.", ". ".join(e["us"]) + "."),
+             ("Choose your car.", "Browse real cars with real photos on arahrides.com.")]
+    return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL))
+
+def list_story(b, post, pages, e):
+    items = [(x, "") for x in e["items"]][:4]
+    cover = T.ccover_plain(e["k"], e["h"], "Swipe through.")
+    if len(e["items"]) >= 5:                                 # six slides is the limit: the last item carries the button
+        out = [(cover, 1350)]
+        its = e["items"][:5]
+        for i, x in enumerate(its):
+            out.append((T.slide(i + 2, 6, x, "", alt=bool(i % 2), cta=(i == len(its) - 1)), 1350))
+        return out
+    return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL))
+
+def build(b, post, typ, pages):
+    kind, e = b.last["kind"], b.last["e"]
+    if typ in ("place", "experience"):
+        return place_story(b, post, pages, typ, e, b.last["ok"], b.last["credit"])
+    if typ == "car_hero":
+        return car_story(b, post, pages, b.last.get("big", False))
+    if typ == "qa":
+        return qa_story(b, post, pages, e)
+    if typ == "tip":
+        return tip_story(b, post, pages, e)
+    if typ == "chat":
+        return chat_story(b, post, pages, e)
+    if typ == "trust":
+        return trust_story(b, post, pages, e)
+    if typ == "moment":
+        return moment_story(b, post, pages, e)
+    if typ == "versus":
+        return versus_story(b, post, pages, e)
+    if typ == "list":
+        return list_story(b, post, pages, e)
+    return brand_story(b, post, pages, e)          # brand and anything else

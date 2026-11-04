@@ -6,15 +6,16 @@ from .config import ROOT, load_yaml, now as now_fn, tz
 from .ledger import Ledger
 from .photos import Picker, Photo, rule_for
 from .render import render_all
+from . import story
 from .ledger import dhash
 import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
+EMOJI = {"trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
             "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica"}
-FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip"}
+FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -123,8 +124,9 @@ class DayBuilder:
                 ph = self.pk.car()
                 if not ph:
                     return None
-                e = {"kicker": "SEE BEFORE YOU BOOK", "h1": "Real car.", "h2": "Real photos.", "sub": "Book the exact car you see at arahrides.com."}
+                e = {"kicker": "SEE BEFORE YOU BOOK", "h1": "Real car.", "h2": "Real photos.", "sub": "Choose the car you want to drive at arahrides.com."}
         self.photo_flags(post, ph)
+        self.last = {"kind": "car_hero", "e": e, "big": "BIG" in e["kicker"] or "SEATER" in e["kicker"] or "GROUP" in e["kicker"], "credit": credit_for(ph)}
         pos = "50% 50%"
         if ph.portrait:
             html = T.hero(ph.path, e["kicker"], e["h1"], e["h2"], e["sub"], pos, at=self.rng.choice("bt"))
@@ -136,10 +138,14 @@ class DayBuilder:
         return [(html, 1350)]
 
     def place(self, post, kind="place"):
-        e = self.pick(kind)
-        ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])), words=e.get("also"))
-        if not ph:
-            return None
+        for attempt in range(6):                      # a story needs a photo that really shows the place, so try other places first
+            e = self.pick(kind)
+            ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])), words=e.get("also"))
+            if not ph:
+                return None
+            t_ = ph.text.lower()
+            if e["place"].lower() in t_ or any(w.lower() in t_ for w in e.get("also", [])) or attempt == 5:
+                break
         self.photo_flags(post, ph)
         txt = ph.text.lower()
         ok = e["place"].lower() in txt or any(w.lower() in txt for w in e.get("also", []))
@@ -160,15 +166,17 @@ class DayBuilder:
         post["copy_text"] = tidy(use["h1"], use["h2"]) + " " + EMOJI[kind] + "\n\n" + use["sub"] + hook
         post["alt"] = (("Scenery in " + e["place"] + ", Jamaica") if kind == "place" else "Jamaica: " + e["k"].title()) if ok else "Scenery in Jamaica"
         post["caption"] = self.cap(post, kind, post["copy_text"], None, credit=credit_for(ph), place=e["place"] if ok else None)
+        self.last = {"kind": kind, "e": e, "ok": ok, "credit": credit_for(ph)}
         return [(html, 1350)]
 
     def simple(self, post, kind):
         e = self.pick(kind)
+        self.last = {"kind": kind, "e": e}
         if kind == "qa":
-            html = T.qa(e["q"], e["a"]); txt = f"{e['q']} {EMOJI['qa']}\n\n{e['a']}\n\nQuestions? Ask Winston on WhatsApp, any time."
+            html = T.big("ASK ARAH", e["q"], "Swipe for the answer.", self.rng.choice(["cream", "green", "dark"])); txt = f"{e['q']} {EMOJI['qa']}\n\n{e['a']}\n\nQuestions? Ask Winston on WhatsApp, any time."
             alt = f"Question and answer graphic: {e['q']}"
         elif kind == "tip":
-            html = T.big(e["k"], e["h"], e["b"], self.rng.choice(["cream", "green", "dark"])); txt = f"{e['k'].title()}: {e['h']} {EMOJI['tip']}\n\n{e['b']}"
+            html = T.big(e["k"], e["h"], "Swipe for the full tip.", self.rng.choice(["cream", "green", "dark"])); txt = f"{e['k'].title()}: {e['h']} {EMOJI['tip']}\n\n{e['b']}"
             alt = f"Tip graphic: {e['h']}"
         elif kind == "brand":
             html = T.big(e["k"], e["h"], e["b"], self.rng.choice(["green", "dark"])); txt = f"{e['h']} {EMOJI['brand']}\n\n{e['b']}"
@@ -218,7 +226,7 @@ class DayBuilder:
         return pages
 
     def moment(self, post, m, days_left):
-        b = m["b"]
+        b = m["b"]; self.last = {"kind": "moment", "e": m}
         kicker = m["k"] + (f" · {days_left} DAYS TO GO" if days_left > 0 else "")
         html = T.event(kicker, m["h"], b, m.get("badge", "")) if m.get("badge") else T.big(kicker, m["h"], b, "gold" if days_left == 0 else "green")
         post["copy_text"] = f"{m['h']} {EMOJI['moment']}\n\n{b}"
@@ -266,48 +274,69 @@ class DayBuilder:
             return types.SimpleNamespace(path=str(f), name=f.name)
         return None
 
-    # ---- every feed post is a carousel (Instagram shows carousels to non-followers far more than single images)
-    CLOSERS = [("Save this for your trip.", "Tap the bookmark so you can find it when you plan. Questions? Ask Winston on WhatsApp."),
-               ("Send this to your travel partner.", "Planning together? Share it, then pick your car at arahrides.com."),
-               ("Planning Jamaica?", "Tell Winston your dates and pickup spot on WhatsApp and get a quote."),
-               ("Tag who you are travelling with.", "Then book the exact car you see at arahrides.com.")]
-    BOOK = ("Book in 3 steps.", "Say Hi to Winston on WhatsApp. Get your quote. Book and pay by Stripe.")
+    # ---- every feed post is a story carousel (see story.py): one topic, then a reason to book
+    def extra_photo(self, post, words, ok=None):
+        """A second photo of the same place from our labelled library (never a web photo), recorded so it is not reused for 3 months."""
+        ph = self.pk._own("scenery", None, ok, about=words)
+        if ph:
+            self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
+            post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
+        return ph
 
-    def _follow(self, n, typ, own):
-        """n content slides (heading, body) that go with this post."""
-        pool = []
-        for e in self.bank.get("tip", []):
-            pool.append((e["h"], e["b"]))
-        for e in self.bank.get("qa", []):
-            pool.append((e["q"], e["a"]))
-        own = (own or "").lower()
-        pool = [x for x in pool if x[0].lower() not in own and x[0] not in self.used_follow]
-        self.rng.shuffle(pool)
-        out = pool[:n]
-        self.used_follow.update(x[0] for x in out)
-        return out
+    def trip(self, post):
+        """A day plan: three real stops in one area, then how to get there and book."""
+        R = story.stories()["regions"]; names = list(R)
+        i, _c = self.led.copy_pick("trip", len(names), self.today, self.rng, 3)
+        self.led.copy_record("trip", i, self.today)
+        reg = R[names[i]]; P = story.stories()["places"]
+        stops = [k for k in reg["stops"] if k in P]
+        self.rng.shuffle(stops); stops = stops[:3]
+        ph = None
+        for k in stops:                                   # cover photo: one of the stops, from our own labelled photos, else a checked web photo
+            ph = self.pk.scene(story.nice(k) + " Jamaica", story.nice(k), strict=True)
+            if ph:
+                stops.remove(k); stops.insert(0, k); break
+        if ph:
+            self.photo_flags(post, ph)
+            cover = T.ccover(ph.path, "A DAY PLAN", reg["hook"], reg["sub"])
+        else:
+            cover = T.ccover_plain("A DAY PLAN", reg["hook"], reg["sub"])
+        items = [(f"Stop {n + 1}: {story.nice(k)}", P[k]["do"]) for n, k in enumerate(stops)]
+        photos = {}
+        for n, k in enumerate(stops[1:], start=1):
+            x = self.extra_photo(post, story.about_words(k))
+            if x:
+                photos[n] = x
+        c = ("Getting there.", reg["pickup"] + " Choose the car you want to drive at arahrides.com.")
+        pages = story._slides(self, post, cover, items, c, photos)
+        post["copy_text"] = f"{reg['hook']} {EMOJI['trip']}\n\n" + "\n".join(f"{n + 1}. {story.nice(k)}: {P[k]['do']}" for n, k in enumerate(stops)) + f"\n\n{reg['pickup']}"
+        post["alt"] = f"Day plan: {reg['hook']}"
+        post["caption"] = self.cap(post, "trip", post["copy_text"], credit=credit_for(ph), place=story.nice(stops[0]))
+        post["story_done"] = True
+        return pages
 
     def expand(self, post, typ, pages, offer=None):
-        """Turn a one-picture post into a 5-slide carousel: cover, 2 useful slides, how to book, save/share + book."""
+        """Turn a one-picture post into a 5-slide story carousel."""
         total = 5
-        if typ == "offer" and offer:
+        if post.get("story_done"):
+            out = pages
+        elif typ == "offer" and offer:
             e, link = offer
             mid = [("How to get it.", "Book a rental for 7 days or more on arahrides.com."),
                    ("Who gets it.", "1 guest receives a Club Mobay or Club Kingston departure lounge pass. Cannot be combined with other promo codes or discounts. Conditions apply.")]
             mid.insert(1, ("Inside the lounge.", "Free Wi-Fi. Comfortable seating. Food and drink. Private restrooms. Fast track."))
             if e.get("buy"):
                 mid[0] = ("Not renting?", "You can buy a departure lounge pass on its own. Details at arahrides.com.")
+            slides = mid + [self.rng.choice(story.CLOSE_GENERAL)]
+            out = list(pages)
+            for i, (h, b) in enumerate(slides):
+                ph = self.vip_photo() if i in (0, 2) else None       # lounge photo behind slides 2 and 4 when we have them
+                if ph:
+                    out.append((T.photoslide(ph.path, len(pages) + i + 1, total, h, b), 1350))
+                else:
+                    out.append((T.slide(len(pages) + i + 1, total, h, b, alt=bool(i % 2), cta=(i == len(slides) - 1)), 1350))
         else:
-            mid = self._follow(2, typ, post.get("copy_text", "")) + [self.BOOK]
-        close = self.rng.choice(self.CLOSERS)
-        slides = mid + [close]
-        out = list(pages)
-        for i, (h, b) in enumerate(slides):
-            ph = self.vip_photo() if (typ == "offer" and i in (0, 2)) else None       # lounge photo behind slides 2 and 4 when we have them
-            if ph:
-                out.append((T.photoslide(ph.path, len(pages) + i + 1, total, h, b), 1350))
-            else:
-                out.append((T.slide(len(pages) + i + 1, total, h, b, alt=bool(i % 2), cta=(i == len(slides) - 1)), 1350))
+            out = story.build(self, post, typ, pages)
         out[0] = (T.swipe(out[0][0]), out[0][1])
         post["alt"] = (post.get("alt") or "") + " (carousel: swipe for more)"
         return out
@@ -349,7 +378,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         if at <= now or hhmm in skip:
             continue
         typ = typ0
-        if mom and typ0 == "engage" and not used_mom:
+        if mom and typ0 == "tip" and not used_mom:
             typ, used_mom = "moment", True
         elif offer and typ0 in ("brand", "versus") and not used_offer:
             typ, used_offer = "offer", True
@@ -360,6 +389,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "place": pages = b.place(post)
             elif t == "experience": pages = b.place(post, "experience")
             elif t == "carousel": pages = b.carousel(post)
+            elif t == "trip": pages = b.trip(post)
             elif t == "moment": pages = b.moment(post, mom, left)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
@@ -367,7 +397,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 nt = FALLBACK.get(t)
                 b.notes.append(f"No fresh photo for a {t} post on {date}: made a {nt} post instead.")
                 t = nt; post["type"] = nt; post["id"] = f"{date}_{hhmm.replace(':', '')}_{nt}"
-        if cfg.get("all_carousels", True) and typ != "carousel" and post["type"] != "carousel" and len(pages) == 1:
+        if cfg.get("all_carousels", True) and post["type"] != "carousel" and (len(pages) == 1 or post.get("story_done")):
             ol = None
             if post["type"] == "offer":
                 ol = (b.last_offer, "")
@@ -378,6 +408,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             jobs.append((html_, h, Q.DOCS / rel))
         if len(post["caption"]) > 2200 or post["caption"].count("#") > 5:
             raise ValueError("caption rules broken for " + post["id"])
+        post.pop("story_done", None)
         post["status"] = "pending"
         posts.append(post)
     if render and jobs:

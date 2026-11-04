@@ -31,6 +31,8 @@ def run(cfg, start=None, picker=None, led=None, render=True):
             (Q.DOCS / "decisions" / f"{p['id']}.json").unlink(missing_ok=True)
             if p.get("photo"):
                 led.release(p["photo"]["id"], p["photo"]["name"], p["date"])
+            for x in p.get("photos_extra", []):
+                led.release(x["id"], x["name"], p["date"])
         Q.save_day(str(d), keep)
     picker = picker or Picker(cfg, led, now.date(), random.Random())
     for off in range(-30, cfg["days_ahead"] + 1):       # posts kept from before series spacing existed still count toward it

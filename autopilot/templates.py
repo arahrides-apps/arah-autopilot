@@ -179,7 +179,7 @@ def versus(k, h, them, us):
         return "".join(f'<div style="display:flex;gap:16px;align-items:flex-start;font-size:40px;line-height:1.2;font-weight:700;color:{col_}">{ic}<div>{E(x)}</div></div>' for x in items)
     left = (f'<div style="flex:1;background:#2A302C;border-radius:36px;padding:38px 34px;display:flex;flex-direction:column;gap:40px"><div style="font-size:22px;font-weight:800;letter-spacing:3.5px;color:#9AA39D">BIG RENTAL COMPANIES</div>{rows(them, no, "#C9D0CB")}</div>')
     right = (f'<div style="flex:1;background:{Y};color:{K};border-radius:36px;padding:38px 34px;display:flex;flex-direction:column;gap:40px;box-shadow:0 20px 44px rgba(232,169,58,.35)"><div style="font-size:22px;font-weight:800;letter-spacing:3.5px;color:{G}">ARAH RIDES</div>{rows(us, yes, K)}</div>')
-    return col(mark(Y, "BOOK THE CAR YOU SEE") + chip(k, Y, K) + f'<h1 style="margin:0;{HD};font-size:{fs(h, 104)}px;line-height:1;color:{C}">{hl(h, Y)}</h1>'
+    return col(mark(Y, "CHOOSE YOUR CAR") + chip(k, Y, K) + f'<h1 style="margin:0;{HD};font-size:{fs(h, 104)}px;line-height:1;color:{C}">{hl(h, Y)}</h1>'
                f'<div style="flex-grow:1;display:flex;gap:20px">{left}{right}</div>' + foot(Y, K, Y), K, C, 28, rings(Y, .08))
 
 def event(k, h, b, badge="", cta=None):
