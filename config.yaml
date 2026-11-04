@@ -51,11 +51,15 @@ hashtags:
 # kw = the line added to the caption so Instagram search finds the post.
 locations:
   default_rotation: [kingston, montego_bay, norman_manley, sangster, ocho_rios]
-  kingston:       {name: "Kingston, Jamaica",                        id: "", tag: "#KingstonJamaica",      kw: "Car rental in Kingston, Jamaica | Pickup at Norman Manley Airport"}
-  montego_bay:    {name: "Montego Bay, Jamaica",                     id: "", tag: "#MontegoBayJamaica",    kw: "Car rental in Montego Bay, Jamaica | Airport pickup"}
-  norman_manley:  {name: "Norman Manley International Airport",     id: "", tag: "#NormanManleyAirport",  kw: "Car rental at Norman Manley Airport, Kingston | Airport pickup"}
-  sangster:       {name: "Sangster International Airport",          id: "", tag: "#SangsterAirport",      kw: "Car rental at Sangster Airport, Montego Bay | Airport pickup"}
-  ocho_rios:      {name: "Ocho Rios, Jamaica",                       id: "", tag: "#OchoRios",             kw: "Car rental for Ocho Rios and the north coast"}
+  kingston:       {name: "Kingston, Jamaica",                        id: "109489972411518", tag: "#KingstonJamaica",      kw: "Car rental in Kingston, Jamaica | Pickup at Norman Manley Airport"}
+  montego_bay:    {name: "Montego Bay, Jamaica",                     id: "115773858436055", tag: "#MontegoBayJamaica",    kw: "Car rental in Montego Bay, Jamaica | Airport pickup"}
+  norman_manley:  {name: "Norman Manley International Airport",     id: "583154638527853", tag: "#NormanManleyAirport",  kw: "Car rental at Norman Manley Airport, Kingston | Airport pickup"}
+  sangster:       {name: "Sangster International Airport",          id: "106111078512570", tag: "#SangsterAirport",      kw: "Car rental at Sangster Airport, Montego Bay | Airport pickup"}
+  ocho_rios:      {name: "Ocho Rios, Jamaica",                       id: "111964835488149", tag: "#OchoRios",             kw: "Car rental for Ocho Rios and the north coast"}
+  # Extra places (optional). A post about one of these tags it only when its id is filled in; otherwise it uses one of the five above that has an id.
+  negril:         {name: "Negril, Jamaica",                          id: "", tag: "#NegrilJamaica",        kw: "Car rental for Negril, Jamaica | Pickup at MBJ"}
+  port_antonio:   {name: "Port Antonio, Jamaica",                    id: "", tag: "#PortAntonio",          kw: "Car rental for Port Antonio and Portland, Jamaica"}
+  treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
