@@ -1,15 +1,6 @@
 {
- "generated": "2026-11-04T01:57:45.666586-05:00",
- "notes": [
-  "Photo library is running thin: similar photos from the same shoot are coming back sooner than 14 days. Add new photos to the Drive folder.",
-  "Wording for 'carousel' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'chat' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'experience' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'place' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'qa' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'tip' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'trust' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml."
- ],
+ "generated": "2026-11-04T04:51:28.117256-05:00",
+ "notes": [],
  "posts": [
   {
    "id": "2026-10-29_0630_car_hero",
