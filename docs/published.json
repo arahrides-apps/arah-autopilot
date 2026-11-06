@@ -731,5 +731,10 @@
   "status": "skipped",
   "at": "2026-11-06T12:30:33.362376-05:00",
   "note": "missed its window"
+ },
+ "2026-11-06_0930_moment": {
+  "status": "skipped",
+  "at": "2026-11-06T13:30:39.665107-05:00",
+  "note": "missed its window"
  }
 }
