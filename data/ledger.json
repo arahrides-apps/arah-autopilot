@@ -26,6 +26,7 @@
   "carousel:15": "2026-11-01",
   "carousel:2": "2026-10-30",
   "carousel:22": "2026-11-07",
+  "carousel:27": "2026-11-07",
   "carousel:28": "2026-11-07",
   "carousel:3": "2026-10-30",
   "carousel:4": "2026-10-30",
@@ -131,6 +132,7 @@
   "experience:9": "2026-11-06",
   "hero:0": "2026-11-08",
   "hero:1": "2026-11-03",
+  "hero:11": "2026-11-08",
   "hero:14": "2026-11-05",
   "hero:16": "2026-10-30",
   "hero:17": "2026-11-07",
@@ -960,11 +962,6 @@
   },
   {
    "date": "2026-11-07",
-   "h": "67a7e3c3a35b0100",
-   "id": "wikimedia:1104976"
-  },
-  {
-   "date": "2026-11-07",
    "h": "030b0f0f0f133bf8",
    "id": "drive:1_2-FQLx2Eno5CicdQjt-YxidNL8Na3WU"
   },
@@ -1015,11 +1012,6 @@
   },
   {
    "date": "2026-11-08",
-   "h": "44681d1ecf8ca870",
-   "id": "wikimedia:37165002"
-  },
-  {
-   "date": "2026-11-08",
    "h": "de1f369e0b830f9f",
    "id": "unsplash:AxeNlLIq9jA"
   },
@@ -1052,6 +1044,16 @@
    "date": "2026-11-08",
    "h": "ff3f1f9f8f60611f",
    "id": "drive:1mAok5iugKlD8DFga82rAwjbeDDZaoFjF"
+  },
+  {
+   "date": "2026-11-07",
+   "h": "eccd961e5726040b",
+   "id": "wikimedia:81487401"
+  },
+  {
+   "date": "2026-11-08",
+   "h": "46269e9d7ce0e30d",
+   "id": "wikimedia:38913343"
   }
  ],
  "photos": {
@@ -2020,11 +2022,6 @@
    "last_used": "2026-11-05",
    "source": "drive"
   },
-  "name:wikimedia-1104976": {
-   "first_used": "2026-11-07",
-   "last_used": "2026-11-07",
-   "source": "wikimedia"
-  },
   "name:wikimedia-111544538": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
@@ -2060,7 +2057,7 @@
    "last_used": "2026-10-30",
    "source": "wikimedia"
   },
-  "name:wikimedia-37165002": {
+  "name:wikimedia-38913343": {
    "first_used": "2026-11-08",
    "last_used": "2026-11-08",
    "source": "wikimedia"
@@ -2073,6 +2070,11 @@
   "name:wikimedia-81487237": {
    "first_used": "2026-11-05",
    "last_used": "2026-11-05",
+   "source": "wikimedia"
+  },
+  "name:wikimedia-81487401": {
+   "first_used": "2026-11-07",
+   "last_used": "2026-11-07",
    "source": "wikimedia"
   },
   "name:wikimedia-83493559": {
@@ -2135,11 +2137,6 @@
    "last_used": "2026-11-04",
    "source": "vip"
   },
-  "wikimedia:1104976": {
-   "first_used": "2026-11-07",
-   "last_used": "2026-11-07",
-   "source": "wikimedia"
-  },
   "wikimedia:111544538": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
@@ -2175,7 +2172,7 @@
    "last_used": "2026-10-30",
    "source": "wikimedia"
   },
-  "wikimedia:37165002": {
+  "wikimedia:38913343": {
    "first_used": "2026-11-08",
    "last_used": "2026-11-08",
    "source": "wikimedia"
@@ -2188,6 +2185,11 @@
   "wikimedia:81487237": {
    "first_used": "2026-11-05",
    "last_used": "2026-11-05",
+   "source": "wikimedia"
+  },
+  "wikimedia:81487401": {
+   "first_used": "2026-11-07",
+   "last_used": "2026-11-07",
    "source": "wikimedia"
   },
   "wikimedia:83493559": {
