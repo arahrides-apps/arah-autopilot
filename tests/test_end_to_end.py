@@ -16,6 +16,10 @@ from autopilot import config, queue as Q, generate, instagram, ledger as L
 from autopilot.photos import Picker
 
 cfg = config.load()
+# these tests exercise every post type, so they use the busy 15-a-day layout; the live default is 1 a day (see tests/test_daily.py)
+cfg["posts_per_day"] = 15
+cfg["slots"] = ["06:30", "07:30", "08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30"]
+cfg["pattern"] = ["car_hero", "qa", "experience", "tip", "brand|chat", "carousel|list", "trip", "experience", "tip", "place", "qa|trust", "trip", "brand|versus", "place", "list|carousel"]
 photos = sys.argv[1] if len(sys.argv) > 1 else "/mnt/user-data/outputs/photos/drive"
 cfg["sources"]["local"]["dir"] = photos
 cfg["sources"]["drive"]["enabled"] = False
@@ -77,7 +81,7 @@ class FakeSession:
         return Resp({"permalink": "https://instagram.com/p/x"})
 day = sorted({p["date"] for p in Q.all_posts()})[0]
 ps = [p for p in Q.all_posts() if p["date"] == day]
-fs = FakeSession(); ig = instagram.IG(cfg, fs)
+fs = FakeSession(); ig = instagram.IG(cfg, fs); ig.check_live = False
 instagram.publish_due(cfg, ig)
 assert not any(c[1].endswith("media_publish") for c in fs.calls), "published without approval!"
 (Q.DOCS / "decisions").mkdir(exist_ok=True)
@@ -109,7 +113,7 @@ class HookSession:
     def __init__(s): s.sent = []
     def post(s, url, json=None, timeout=0):
         s.sent.append(json); return type("R", (), {"status_code": 200, "text": "Accepted"})()
-hs = HookSession(); wp = instagram.WebhookPoster(cfg, hs)
+hs = HookSession(); wp = instagram.WebhookPoster(cfg, hs); wp.check_live = False
 for p in ps[6:8]:
     json_ = {"id": p["id"], "decision": "approve"}
     json.dump(json_, open(Q.DOCS / "decisions" / (p["id"] + ".json"), "w"))
