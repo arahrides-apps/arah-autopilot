@@ -746,5 +746,10 @@
   "status": "skipped",
   "at": "2026-11-06T15:01:07.973762-05:00",
   "note": "missed its window"
+ },
+ "2026-11-06_1130_list": {
+  "status": "skipped",
+  "at": "2026-11-06T15:31:12.737172-05:00",
+  "note": "missed its window"
  }
 }
