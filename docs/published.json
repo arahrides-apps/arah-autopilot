@@ -721,5 +721,10 @@
   "at": "2026-11-06T06:34:40.220984-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-06_0730_qa": {
+  "status": "skipped",
+  "at": "2026-11-06T11:30:26.821597-05:00",
+  "note": "missed its window"
  }
 }
