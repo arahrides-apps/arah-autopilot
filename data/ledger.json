@@ -160,6 +160,7 @@
   "hero:39": "2026-11-05",
   "hero:6": "2026-10-30",
   "hero:7": "2026-11-06",
+  "hero:9": "2026-11-10",
   "hero_big:1": "2026-11-09",
   "hero_big:2": "2026-10-31",
   "list:0": "2026-11-04",
@@ -1189,8 +1190,8 @@
   },
   {
    "date": "2026-11-10",
-   "h": "3d0f4130b68d5851",
-   "id": "wikimedia:50975758"
+   "h": "8d6b2784c8e13529",
+   "id": "local:arah_b3_3_subaru-silver"
   }
  ],
  "photos": {
@@ -1607,6 +1608,11 @@
   "local:arah_b2_2_toyota-voxy-black": {
    "first_used": "2026-11-09",
    "last_used": "2026-11-09",
+   "source": "local"
+  },
+  "local:arah_b3_3_subaru-silver": {
+   "first_used": "2026-11-10",
+   "last_used": "2026-11-10",
    "source": "local"
   },
   "local:arah_b5_4_toyota-yaris-white": {
@@ -2109,6 +2115,11 @@
    "last_used": "2026-11-09",
    "source": "local"
   },
+  "name:arah_b3_3_subaru-silver": {
+   "first_used": "2026-11-10",
+   "last_used": "2026-11-10",
+   "source": "local"
+  },
   "name:arah_b5_4_toyota-yaris-white": {
    "first_used": "2026-11-08",
    "last_used": "2026-11-08",
@@ -2394,11 +2405,6 @@
    "last_used": "2026-10-30",
    "source": "wikimedia"
   },
-  "name:wikimedia-50975758": {
-   "first_used": "2026-11-10",
-   "last_used": "2026-11-10",
-   "source": "wikimedia"
-  },
   "name:wikimedia-64319690": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
@@ -2537,11 +2543,6 @@
   "wikimedia:30908340": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
-   "source": "wikimedia"
-  },
-  "wikimedia:50975758": {
-   "first_used": "2026-11-10",
-   "last_used": "2026-11-10",
    "source": "wikimedia"
   },
   "wikimedia:64319690": {
@@ -2990,6 +2991,11 @@
    "date": "2026-11-09",
    "id": "drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD",
    "s": "fishing-boats"
+  },
+  {
+   "date": "2026-11-10",
+   "id": "local:arah_b3_3_subaru-silver",
+   "s": "subaru-silver"
   }
  ]
 }

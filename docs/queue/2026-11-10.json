@@ -7,8 +7,7 @@
    "slot": "2026-11-10T11:00:00-05:00",
    "type": "car_hero",
    "flags": [
-    "Stock photo of a MG ZS. It shows the model, not one of our own cars: check it looks clean and has no people",
-    "Stock photo of this model"
+    "Number plate visible (kept sharp on purpose)"
    ],
    "images": [
     "media/2026-11-10/2026-11-10_1100_car_hero_1.jpg",
@@ -19,18 +18,18 @@
     "media/2026-11-10/2026-11-10_1100_car_hero_6.jpg"
    ],
    "photo": {
-    "id": "wikimedia:50975758",
-    "name": "wikimedia-50975758",
-    "source": "wikimedia",
-    "credit": "Photo by Jeremy  from Sydney, Australia, Wikimedia Commons (CC BY 2.0)"
+    "id": "local:arah_b3_3_subaru-silver",
+    "name": "arah_b3_3_subaru-silver",
+    "source": "local",
+    "credit": "Arah Rides"
    },
-   "copy_text": "Early start. Longer day. 🚗\n\nPick up early. Explore more.",
-   "alt": "A rental car in Jamaica. Early start. Longer day. (carousel: swipe for more)",
+   "copy_text": "Local cars. Local roads. 🚗\n\nRent Jamaican and discover the real Jamaica.",
+   "alt": "A rental car in Jamaica. Local cars. Local roads. (carousel: swipe for more)",
    "location": {
-    "name": "Montego Bay, Jamaica",
-    "id": "115773858436055"
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
    },
-   "caption": "Early start. Longer day. 🚗\n\nPick up early. Explore more.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\n📷 Photo by Jeremy  from Sydney, Australia, Wikimedia Commons (CC BY 2.0)\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #DiscoverTheRealJamaica #RoadTripJamaica #AirportPickupJamaica",
+   "caption": "Local cars. Local roads. 🚗\n\nRent Jamaican and discover the real Jamaica.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #RentACarJamaica #ArahRides #RoadTripJamaica #JamaicaItinerary",
    "status": "pending"
   }
  ]
