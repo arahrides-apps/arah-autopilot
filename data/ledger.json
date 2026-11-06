@@ -134,6 +134,7 @@
   "hero:1": "2026-11-03",
   "hero:11": "2026-11-08",
   "hero:14": "2026-11-05",
+  "hero:15": "2026-11-08",
   "hero:16": "2026-10-30",
   "hero:17": "2026-11-07",
   "hero:18": "2026-10-29",
@@ -1052,8 +1053,8 @@
   },
   {
    "date": "2026-11-08",
-   "h": "46269e9d7ce0e30d",
-   "id": "wikimedia:38913343"
+   "h": "27c80667b30401e1",
+   "id": "local:arah_b5_4_toyota-yaris-white"
   }
  ],
  "photos": {
@@ -1391,6 +1392,11 @@
    "first_used": "2026-11-06",
    "last_used": "2026-11-06",
    "source": "drive"
+  },
+  "local:arah_b5_4_toyota-yaris-white": {
+   "first_used": "2026-11-08",
+   "last_used": "2026-11-08",
+   "source": "local"
   },
   "name:055_JTB_Spring_2025_Kingston_Palisodoes_Strip_Sunset": {
    "first_used": "2026-11-07",
@@ -1817,6 +1823,11 @@
    "last_used": "2026-11-02",
    "source": "drive"
   },
+  "name:arah_b5_4_toyota-yaris-white": {
+   "first_used": "2026-11-08",
+   "last_used": "2026-11-08",
+   "source": "local"
+  },
   "name:beach_palm_frond_frame": {
    "first_used": "2026-11-03",
    "last_used": "2026-11-03",
@@ -2057,11 +2068,6 @@
    "last_used": "2026-10-30",
    "source": "wikimedia"
   },
-  "name:wikimedia-38913343": {
-   "first_used": "2026-11-08",
-   "last_used": "2026-11-08",
-   "source": "wikimedia"
-  },
   "name:wikimedia-64319690": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
@@ -2170,11 +2176,6 @@
   "wikimedia:30908340": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
-   "source": "wikimedia"
-  },
-  "wikimedia:38913343": {
-   "first_used": "2026-11-08",
-   "last_used": "2026-11-08",
    "source": "wikimedia"
   },
   "wikimedia:64319690": {
@@ -2538,6 +2539,11 @@
    "date": "2026-11-08",
    "id": "drive:1mAok5iugKlD8DFga82rAwjbeDDZaoFjF",
    "s": "jtb-kingston"
+  },
+  {
+   "date": "2026-11-08",
+   "id": "local:arah_b5_4_toyota-yaris-white",
+   "s": "toyota-yaris-white"
   }
  ]
 }
