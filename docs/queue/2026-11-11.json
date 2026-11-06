@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-11",
+ "posts": [
+  {
+   "id": "2026-11-11_1100_offer",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T11:00:00-05:00",
+   "type": "offer",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_1100_offer_1.jpg",
+    "media/2026-11-11/2026-11-11_1100_offer_2.jpg",
+    "media/2026-11-11/2026-11-11_1100_offer_3.jpg",
+    "media/2026-11-11/2026-11-11_1100_offer_4.jpg",
+    "media/2026-11-11/2026-11-11_1100_offer_5.jpg"
+   ],
+   "copy_text": "Travelling for the holidays? 🎟️\n\nRent for 7 days or more and your departure lounge pass for 1 guest is free. Cars and dates are limited, so book early. Conditions apply.",
+   "alt": "Offer graphic: Travelling for the holidays? (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "Travelling for the holidays? 🎟️\n\nRent for 7 days or more and your departure lounge pass for 1 guest is free. Cars and dates are limited, so book early. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #CarRentalJamaica #DiscoverTheRealJamaica #JamaicaTravel #JamaicaCarRental",
+   "status": "pending"
+  }
+ ]
+}

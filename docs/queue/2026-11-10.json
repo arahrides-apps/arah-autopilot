@@ -1,0 +1,37 @@
+{
+ "date": "2026-11-10",
+ "posts": [
+  {
+   "id": "2026-11-10_1100_car_hero",
+   "date": "2026-11-10",
+   "slot": "2026-11-10T11:00:00-05:00",
+   "type": "car_hero",
+   "flags": [
+    "Stock photo of a MG ZS. It shows the model, not one of our own cars: check it looks clean and has no people",
+    "Stock photo of this model"
+   ],
+   "images": [
+    "media/2026-11-10/2026-11-10_1100_car_hero_1.jpg",
+    "media/2026-11-10/2026-11-10_1100_car_hero_2.jpg",
+    "media/2026-11-10/2026-11-10_1100_car_hero_3.jpg",
+    "media/2026-11-10/2026-11-10_1100_car_hero_4.jpg",
+    "media/2026-11-10/2026-11-10_1100_car_hero_5.jpg",
+    "media/2026-11-10/2026-11-10_1100_car_hero_6.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia:50975758",
+    "name": "wikimedia-50975758",
+    "source": "wikimedia",
+    "credit": "Photo by Jeremy  from Sydney, Australia, Wikimedia Commons (CC BY 2.0)"
+   },
+   "copy_text": "Early start. Longer day. 🚗\n\nPick up early. Explore more.",
+   "alt": "A rental car in Jamaica. Early start. Longer day. (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "Early start. Longer day. 🚗\n\nPick up early. Explore more.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\n📷 Photo by Jeremy  from Sydney, Australia, Wikimedia Commons (CC BY 2.0)\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #DiscoverTheRealJamaica #RoadTripJamaica #AirportPickupJamaica",
+   "status": "pending"
+  }
+ ]
+}
