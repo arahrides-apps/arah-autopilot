@@ -24,26 +24,32 @@ def _pick(rng, lst, n=1, avoid=()):
     return pool[:n]
 
 def hashtags(cfg, typ, extra=None, loc=None, rng=None):
-    """5 tags: 2 'I want to rent' + 1 trip-planning + 1 place + 1 for the kind of post. Never the brand tag (only followers search it)."""
-    h = cfg["hashtags"]; rng = rng or random.Random()
+    """5 tags (the most Instagram allows): the place's own tag, a tag for its region, 1 'I want to rent' tag, 1 brand/core tag,
+    and 1 for the kind of post. Tags rotate within each group so the account never repeats the same set."""
+    h = cfg["hashtags"]; rng = rng or random.Random(); loc = loc or {}
     tags = []
-    tags += _pick(rng, h["rent"], 2)
-    tags += _pick(rng, h["discover"], 1, tags)
-    place = extra or (loc or {}).get("tag")
-    if place:
-        tags.append(place)
+    pk = loc.get("pkey"); reg = loc.get("region")
+    if pk and h.get("place_tags", {}).get(pk):
+        tags.append(h["place_tags"][pk])
+    tags += _pick(rng, h.get("region", {}).get(reg, []), 2 if len(tags) == 0 else 1, tags)
+    if extra:
+        tags.append(extra)
+    elif loc.get("tag") and loc["tag"].lower() not in [x.lower() for x in tags]:
+        tags.append(loc["tag"])
+    tags += _pick(rng, h["rent"], 1, tags)
+    tags += _pick(rng, h.get("core", []), 1, tags)
     tags += _pick(rng, h["by_type"].get(typ, h["discover"]), 1, tags)
-    seen = []; [seen.append(t) for t in tags if t.lower() not in [s.lower() for s in seen]]
-    for t in _pick(rng, h["rent"] + h["discover"], 5, seen):        # top up if a tag repeated
+    seen = []; [seen.append(x) for x in tags if x.lower() not in [s.lower() for s in seen]]
+    for x in _pick(rng, h["discover"] + h["rent"], 5, seen):        # top up if a group was empty or a tag repeated
         if len(seen) >= min(h["max_total"], 5):
             break
-        seen.append(t)
+        seen.append(x)
     return " ".join(seen[: min(h["max_total"], 5)])
 
-ENGAGE_LINES = ["Save this for your trip 🔖 and send it to who you're travelling with.",
-                "Planning Jamaica? Save this post 🔖 and share it with your travel partner.",
-                "Tap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you.",
-                "Send this to someone who needs a car in Jamaica 🚗 and save it for later 🔖."]
+ENGAGE_LINES = ["Which stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.",
+                "Planning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇",
+                "Tap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇",
+                "Send this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇"]
 
 def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng=None):
     b = cfg["brand"]
@@ -109,7 +115,10 @@ class DayBuilder:
         return {**L[key], "key": key}
 
     def cap(self, post, typ, text, extra_tag=None, cta=None, credit=None, place=None):
-        loc = self.where(place)
+        loc = dict(self.where(place))
+        pkey, pst = story.find_place(place) if place else (None, None)
+        if pkey:
+            loc["pkey"], loc["region"] = pkey, pst.get("region")
         tag_loc = loc
         if not loc.get("id"):                 # Instagram only accepts a location with a real ID: use the nearest default spot that has one
             L = self.cfg["locations"]; have = [k for k in L["default_rotation"] if L[k].get("id")]
@@ -186,7 +195,7 @@ class DayBuilder:
         post["copy_text"] = tidy(use["h1"], use["h2"]) + " " + EMOJI[kind] + "\n\n" + use["sub"] + hook
         post["alt"] = (("Scenery in " + e["place"] + ", Jamaica") if kind == "place" else "Jamaica: " + e["k"].title()) if ok else "Scenery in Jamaica"
         post["caption"] = self.cap(post, kind, post["copy_text"], None, credit=credit_for(ph), place=e["place"] if ok else None)
-        self.last = {"kind": kind, "e": e, "ok": ok, "credit": credit_for(ph)}
+        self.last = {"kind": kind, "e": e, "ok": ok, "credit": credit_for(ph), "ph": ph}
         return [(html, 1350)]
 
     def simple(self, post, kind):
@@ -303,6 +312,17 @@ class DayBuilder:
             post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
         return ph
 
+    def story_photo(self, post, key):
+        """Another real photo of the same place for a slide: our own labelled photos first, then a strictly checked web photo."""
+        ph = self.extra_photo(post, story.about_words(key))
+        if ph or not self.pk.web:
+            return ph
+        ph = self.pk.scene(story.nice(key) + " Jamaica", story.nice(key), strict=True)
+        if ph:
+            self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
+            post.setdefault("flags", []).append("Slide photo from %s (licence-free): %s" % (ph.source, ph.credit or "no credit needed"))
+        return ph
+
     def trip(self, post):
         """A day plan: three real stops in one area, then how to get there and book."""
         R = story.stories()["regions"]; names = list(R)
@@ -324,10 +344,11 @@ class DayBuilder:
         items = [(f"Stop {n + 1}: {story.nice(k)}", P[k]["do"]) for n, k in enumerate(stops)]
         photos = {}
         for n, k in enumerate(stops[1:], start=1):
-            x = self.extra_photo(post, story.about_words(k))
+            x = self.story_photo(post, k)
             if x:
                 photos[n] = x
-        c = ("Getting there.", reg["pickup"] + " Choose the car you want to drive at arahrides.com.")
+        items.append(story.price_slide(self))
+        c = ("Send this to who is coming with you.", reg["pickup"] + " Save it, then choose the car you want to drive at arahrides.com.")
         pages = story._slides(self, post, cover, items, c, photos)
         post["copy_text"] = f"{reg['hook']} {EMOJI['trip']}\n\n" + "\n".join(f"{n + 1}. {story.nice(k)}: {P[k]['do']}" for n, k in enumerate(stops)) + f"\n\n{reg['pickup']}"
         post["alt"] = f"Day plan: {reg['hook']}"

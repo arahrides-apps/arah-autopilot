@@ -17,16 +17,25 @@ GENERIC_TOKENS = {"falls", "beach", "river", "house", "port", "blue", "gardens",
 
 PICKUPS = "Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ."
 BOOK3 = "Say Hi to Winston on WhatsApp. Get your quote. Book and pay by Stripe."
-CLOSE_PLACE = [("Your {p} day starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
+CLOSE_PLACE = [("Send this to who is coming with you.", "Save it for your trip, then choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7."),
+               ("Your {p} day starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
                ("Ready to go to {p}?", "Choose your car at arahrides.com. No same-day bookings, so book at least a day ahead."),
                ("Do not just save it. Go.", "Choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7.")]
-CLOSE_THEME = [("Your road trip starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
+CLOSE_THEME = [("Send this to who is coming with you.", "Save it for your trip, then choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7."),
+               ("Your road trip starts with the keys.", "Choose the car you want to drive at arahrides.com or say Hi to Winston on WhatsApp. Save this post for your trip."),
                ("Ready to hit the road?", "Choose your car at arahrides.com. No same-day bookings, so book at least a day ahead."),
                ("Do not just save it. Go.", "Choose the car you want to drive at arahrides.com. Winston can help on WhatsApp, 24/7.")]
 CLOSE_GENERAL = [("Save this for your trip.", "Tap the bookmark so you can find it when you plan. Questions? Ask Winston on WhatsApp."),
                  ("Send this to your travel partner.", "Planning together? Share it, then choose your car at arahrides.com."),
                  ("Planning Jamaica?", "Tell Winston your dates and pickup spot on WhatsApp and get a quote."),
                  ("Tag who you are travelling with.", "Then choose the car you want to drive at arahrides.com.")]
+
+def price_slide(b):
+    """The 'what will it cost' slide. Rates are only quoted if you set brand.price_from in config.yaml; nothing is invented."""
+    pf = (b.cfg["brand"].get("price_from") or "").strip()
+    if pf:
+        return ("Know the price before you land.", f"Rentals from {pf}. Say Hi to Winston on WhatsApp for your quote, then pay by Stripe.")
+    return ("Know the price before you land.", "Every car on arahrides.com shows its daily rate. Say Hi to Winston on WhatsApp for your quote in minutes, then pay by Stripe.")
 
 _S = None
 def stories():
@@ -89,10 +98,22 @@ def place_story(b, post, pages, kind, e, confirmed, credit):
         closers = CLOSE_THEME if theme else CLOSE_PLACE
     c = b.rng.choice(closers)
     closer = (c[0].format(p=(e["place"] if pl else "Jamaica")), c[1])
-    items = [("What you will love.", st["do"]), ("Getting there.", st["drive"]), ("Make a day of it.", st["near"])]
-    photos = {0: _photo_for(b, post, key)} if key and not theme else {}
-    out = _slides(b, post, pages[0][0], items, closer, photos)
-    text = post["copy_text"] + f"\n\n{st['do']}\n\nGetting there: {st['drive']}\n\n{st['near']}"
+    items = [("What you will love.", st["do"]), ("Getting there.", st["drive"]), ("Make a day of it.", st["near"]), price_slide(b)]
+    photos = {}
+    if key and not theme:                                   # a real photo behind each stop slide, a different shot each time
+        for i in range(3):
+            x = b.story_photo(post, key)
+            if x:
+                photos[i] = x
+    cover = pages[0][0]
+    ph = b.last.get("ph")
+    if ph is not None and pl and not theme:                 # slide 1 promises a saveable plan, with numbers
+        nm = e["place"]
+        cover = (T.hero(ph.path, "DISCOVER " + nm.upper(), nm + " in 1 day.", "3 stops. 1 rental car.", "Swipe for the drive, the stops and the price.", at="b") if ph.portrait
+                 else T.split(ph.path, "DISCOVER " + nm.upper(), nm + " in 1 day. 3 stops. 1 rental car.", "Swipe for the drive, the stops and the price.", palette="green"))
+    out = _slides(b, post, cover, items, closer, photos)
+    seo = f"{pl} Jamaica by rental car: how to get there, what to do nearby and how to book." if pl else "Jamaica road trip idea by rental car: where to go, how to get there and how to book."
+    text = seo + "\n\n" + post["copy_text"] + f"\n\n{st['do']}\n\nGetting there: {st['drive']}\n\n{st['near']}"
     post["copy_text"] = text
     post["caption"] = b.cap(post, kind, text, None, credit=credit, place=pl)
     return out
@@ -110,6 +131,7 @@ def car_story(b, post, pages, big):
         items = [("Choose your ride.", "Browse real cars with real photos on arahrides.com and pick the one you want to drive."),
                  ("Pick your route.", f"{nice(k)}: {v['do']}"),
                  ("Pick it up.", f"{PICKUPS} Collect your car and go.")]
+    items.append(price_slide(b))
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL))
 
 def qa_story(b, post, pages, e):

@@ -82,6 +82,8 @@ def has_face(path):
         import cv2
         if _cascade is None:
             _cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        if _cascade.empty():          # a build of OpenCV without its face file: skip the check rather than crash
+            return None
     except Exception:
         return None
     g = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
