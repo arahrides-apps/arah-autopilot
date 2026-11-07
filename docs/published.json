@@ -786,5 +786,10 @@
   "status": "skipped",
   "at": "2026-11-06T22:32:13.881591-05:00",
   "note": "missed its window"
+ },
+ "2026-11-06_1930_tip": {
+  "status": "skipped",
+  "at": "2026-11-06T23:32:20.418255-05:00",
+  "note": "missed its window"
  }
 }
