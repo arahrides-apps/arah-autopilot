@@ -832,5 +832,10 @@
   "status": "skipped",
   "at": "2026-11-07T15:34:52.408114-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1230_trip": {
+  "status": "skipped",
+  "at": "2026-11-07T16:34:57.717243-05:00",
+  "note": "missed its window"
  }
 }
