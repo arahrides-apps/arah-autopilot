@@ -797,5 +797,10 @@
   "at": "2026-11-07T00:02:24.424417-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-07_0630_car_hero": {
+  "status": "skipped",
+  "at": "2026-11-07T10:34:04.854498-05:00",
+  "note": "missed its window"
  }
 }
