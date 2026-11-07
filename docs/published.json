@@ -837,5 +837,10 @@
   "status": "skipped",
   "at": "2026-11-07T16:34:57.717243-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1330_experience": {
+  "status": "skipped",
+  "at": "2026-11-07T17:30:02.783169-05:00",
+  "note": "missed its window"
  }
 }
