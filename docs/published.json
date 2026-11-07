@@ -771,5 +771,10 @@
   "status": "skipped",
   "at": "2026-11-06T19:31:50.799041-05:00",
   "note": "missed its window"
+ },
+ "2026-11-06_1630_qa": {
+  "status": "skipped",
+  "at": "2026-11-06T20:31:57.560254-05:00",
+  "note": "missed its window"
  }
 }
