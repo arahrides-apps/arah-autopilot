@@ -827,5 +827,10 @@
   "status": "skipped",
   "at": "2026-11-07T15:04:49.095409-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1130_carousel": {
+  "status": "skipped",
+  "at": "2026-11-07T15:34:52.408114-05:00",
+  "note": "missed its window"
  }
 }
