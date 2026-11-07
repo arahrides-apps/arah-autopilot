@@ -781,5 +781,10 @@
   "status": "skipped",
   "at": "2026-11-06T21:32:04.234508-05:00",
   "note": "missed its window"
+ },
+ "2026-11-06_1830_brand": {
+  "status": "skipped",
+  "at": "2026-11-06T22:32:13.881591-05:00",
+  "note": "missed its window"
  }
 }
