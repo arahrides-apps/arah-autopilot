@@ -847,5 +847,10 @@
   "status": "skipped",
   "at": "2026-11-07T18:30:26.980923-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1530_place": {
+  "status": "skipped",
+  "at": "2026-11-07T19:30:34.105430-05:00",
+  "note": "missed its window"
  }
 }
