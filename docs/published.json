@@ -852,5 +852,10 @@
   "status": "skipped",
   "at": "2026-11-07T19:30:34.105430-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1630_trust": {
+  "status": "skipped",
+  "at": "2026-11-07T20:30:41.297920-05:00",
+  "note": "missed its window"
  }
 }
