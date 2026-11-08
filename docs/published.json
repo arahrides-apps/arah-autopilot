@@ -862,5 +862,10 @@
   "status": "skipped",
   "at": "2026-11-07T21:30:49.899649-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_1830_offer": {
+  "status": "skipped",
+  "at": "2026-11-07T22:30:58.488743-05:00",
+  "note": "missed its window"
  }
 }
