@@ -872,5 +872,11 @@
   "status": "skipped",
   "at": "2026-11-07T23:31:24.088872-05:00",
   "note": "missed its window"
+ },
+ "2026-11-07_2030_carousel": {
+  "status": "published",
+  "at": "2026-11-08T00:01:27.371019-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
