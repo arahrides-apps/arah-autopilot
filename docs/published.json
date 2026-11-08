@@ -883,5 +883,10 @@
   "status": "skipped",
   "at": "2026-11-08T10:32:52.229750-05:00",
   "note": "missed its window"
+ },
+ "2026-11-08_0730_qa": {
+  "status": "skipped",
+  "at": "2026-11-08T11:32:59.496281-05:00",
+  "note": "missed its window"
  }
 }
