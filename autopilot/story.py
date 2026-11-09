@@ -31,11 +31,12 @@ CLOSE_GENERAL = [("Save this for your trip.", "Tap the bookmark so you can find 
                  ("Tag who you are travelling with.", "Then choose the car you want to drive at arahrides.com.")]
 
 def price_slide(b):
-    """The 'what will it cost' slide. Rates are only quoted if you set brand.price_from in config.yaml; nothing is invented."""
+    """The 'what will it cost' slide. The figure comes from brand.price_from in config.yaml (taken from Winston's knowledge base);
+    leave it blank to show no price. Nothing is invented."""
     pf = (b.cfg["brand"].get("price_from") or "").strip()
     if pf:
-        return ("Know the price before you land.", f"Rentals from {pf}. Say Hi to Winston on WhatsApp for your quote, then pay by Stripe.")
-    return ("Know the price before you land.", "Every car on arahrides.com shows its daily rate. Say Hi to Winston on WhatsApp for your quote in minutes, then pay by Stripe.")
+        return ("Know the price before you land.", f"{pf[0].upper() + pf[1:]}. Unlimited mileage included. Say Hi to Winston on WhatsApp for your quote, then book and pay online.")
+    return ("Know the price before you land.", "Every car on arahrides.com shows its daily rate. Say Hi to Winston on WhatsApp for your quote in minutes, then pay online.")
 
 _S = None
 def stories():

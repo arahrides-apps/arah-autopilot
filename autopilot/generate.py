@@ -12,10 +12,10 @@ import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
+EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
             "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica"}
-FALLBACK = {"car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
+FALLBACK = {"review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -323,6 +323,33 @@ class DayBuilder:
             post.setdefault("flags", []).append("Slide photo from %s (licence-free): %s" % (ph.source, ph.credit or "no credit needed"))
         return ph
 
+    def review(self, post):
+        """Real renter reviews from arahrides.com, one per slide, on a cover with a real photo of the car; then how to book."""
+        sets = story.load_yaml("reviews.yaml")["sets"]
+        i, _c = self.led.copy_pick("review", len(sets), self.today, self.rng, 3)
+        self.led.copy_record("review", i, self.today)
+        s = sets[i]; Q_ = s["quotes"]
+        ph = None
+        if s.get("photo"):
+            ph = self.pk._own("car", None, None, about=s["photo"].split("|"))
+        if ph:
+            self.photo_flags(post, ph)
+        stars = min(q["stars"] for q in Q_)
+        sub = "5-star reviews from real bookings on Arah Rides." if stars == 5 else "Real reviews from real bookings on Arah Rides."
+        h2 = s["title"] if "Toyota" in s["title"] else "Renters tell it best."
+        cover = (T.hero(ph.path, "WHAT RENTERS SAY", "Real reviews.", h2, sub, at="b") if ph else T.ccover_plain("WHAT RENTERS SAY", "Real reviews. " + h2, sub))
+        items = [("★" * q["stars"] + " " + q["vehicle"], "“%s”  — %s" % (q["q"], q["name"])) for q in Q_]
+        c = self.rng.choice(story.CLOSE_GENERAL)
+        pages = story._slides(self, post, cover, items, ("Your turn.", "Choose the car you want to drive at arahrides.com. Say Hi to Winston on WhatsApp for your quote, then pay by Stripe."))
+        text = (f"{s['seo']} {EMOJI['review']}\n\n" +
+                "\n".join("“%s” — %s, %s" % (q["q"], q["name"], q["vehicle"]) for q in Q_) +
+                "\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇")
+        post["copy_text"] = text
+        post["alt"] = f"Renter reviews of the {s['title']} on Arah Rides"
+        post["caption"] = self.cap(post, "review", text, credit=None, place=None)
+        post["story_done"] = True
+        return pages
+
     def trip(self, post):
         """A day plan: three real stops in one area, then how to get there and book."""
         R = story.stories()["regions"]; names = list(R)
@@ -431,6 +458,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "experience": pages = b.place(post, "experience")
             elif t == "carousel": pages = b.carousel(post)
             elif t == "trip": pages = b.trip(post)
+            elif t == "review": pages = b.review(post)
             elif t == "moment": pages = b.moment(post, mom, left)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
