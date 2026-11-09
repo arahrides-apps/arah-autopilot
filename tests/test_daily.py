@@ -54,6 +54,6 @@ for d, n in made:
         assert p["caption"].count("#") <= 5, p["caption"]
 print("days", len(made), "posts", sum(types.values())); print(dict(types), "six-slide story posts:", six)
 assert not bad, bad
-assert {"place", "trip", "experience", "car_hero"} <= set(types), types
+assert {"place", "trip", "experience", "car_hero", "review"} <= set(types), types
 assert six >= 10, six
 print("DAILY OK")
