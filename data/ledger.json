@@ -175,6 +175,7 @@
   "hero:28": "2026-11-02",
   "hero:29": "2026-10-31",
   "hero:3": "2026-11-10",
+  "hero:30": "2026-11-10",
   "hero:31": "2026-11-10",
   "hero:32": "2026-11-11",
   "hero:33": "2026-11-11",
@@ -231,6 +232,7 @@
   "offer:24": "2026-11-09",
   "offer:26": "2026-11-04",
   "offer:27": "2026-11-05",
+  "offer:28": "2026-11-11",
   "offer:3": "2026-11-03",
   "offer:32": "2026-11-10",
   "offer:33": "2026-11-11",
@@ -1829,11 +1831,16 @@
   },
   {
    "date": "2026-11-10",
-   "h": "19e71dfc7edcfcff",
-   "id": "local:arah_b6_8_suzuki-vitara-grey"
+   "h": "f01fff2f1d71638d",
+   "id": "local:arah_b3_7_toyota-rav4-silver"
+  },
+  {
+   "date": "2026-11-11",
+   "h": "d1a1cbf2e2f7c4ed",
+   "id": "wikimedia:36929414"
   }
  ],
- "lounge_design": "pass",
+ "lounge_design": "math",
  "photos": {
   "drive:1-Qm1J2qrZ-cjv8NWWEcJAii4N2B5utPD": {
    "first_used": "2026-10-29",
@@ -2630,6 +2637,11 @@
    "last_used": "2026-11-12",
    "source": "local"
   },
+  "local:arah_b3_7_toyota-rav4-silver": {
+   "first_used": "2026-11-10",
+   "last_used": "2026-11-10",
+   "source": "local"
+  },
   "local:arah_b4_1_toyota-hiace-white": {
    "first_used": "2026-11-09",
    "last_used": "2026-11-09",
@@ -2648,11 +2660,6 @@
   "local:arah_b6_5_toyota-corolla-blue": {
    "first_used": "2026-11-12",
    "last_used": "2026-11-12",
-   "source": "local"
-  },
-  "local:arah_b6_8_suzuki-vitara-grey": {
-   "first_used": "2026-11-10",
-   "last_used": "2026-11-10",
    "source": "local"
   },
   "name:004_JTB_Spring_2025_Kingston_Palisadoes_Coconut": {
@@ -3510,6 +3517,11 @@
    "last_used": "2026-11-12",
    "source": "local"
   },
+  "name:arah_b3_7_toyota-rav4-silver": {
+   "first_used": "2026-11-10",
+   "last_used": "2026-11-10",
+   "source": "local"
+  },
   "name:arah_b4_1_toyota-hiace-white": {
    "first_used": "2026-11-09",
    "last_used": "2026-11-09",
@@ -3528,11 +3540,6 @@
   "name:arah_b6_5_toyota-corolla-blue": {
    "first_used": "2026-11-12",
    "last_used": "2026-11-12",
-   "source": "local"
-  },
-  "name:arah_b6_8_suzuki-vitara-grey": {
-   "first_used": "2026-11-10",
-   "last_used": "2026-11-10",
    "source": "local"
   },
   "name:bamboo_rafting_river": {
@@ -3935,6 +3942,11 @@
    "last_used": "2026-10-30",
    "source": "wikimedia"
   },
+  "name:wikimedia-36929414": {
+   "first_used": "2026-11-11",
+   "last_used": "2026-11-11",
+   "source": "wikimedia"
+  },
   "name:wikimedia-4058987": {
    "first_used": "2026-11-10",
    "last_used": "2026-11-10",
@@ -4233,6 +4245,11 @@
   "wikimedia:30908340": {
    "first_used": "2026-10-30",
    "last_used": "2026-10-30",
+   "source": "wikimedia"
+  },
+  "wikimedia:36929414": {
+   "first_used": "2026-11-11",
+   "last_used": "2026-11-11",
    "source": "wikimedia"
   },
   "wikimedia:4058987": {
@@ -5129,8 +5146,8 @@
   },
   {
    "date": "2026-11-10",
-   "id": "local:arah_b6_8_suzuki-vitara-grey",
-   "s": "suzuki-vitara-grey"
+   "id": "local:arah_b3_7_toyota-rav4-silver",
+   "s": "toyota-rav4-silver"
   }
  ]
 }
