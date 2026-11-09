@@ -938,5 +938,11 @@
   "status": "skipped",
   "at": "2026-11-08T20:34:20.440393-05:00",
   "note": "missed its window"
+ },
+ "2026-11-08_1730_trip": {
+  "status": "published",
+  "at": "2026-11-08T20:44:22.693475-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
