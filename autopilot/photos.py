@@ -23,6 +23,24 @@ def settings_of(text):
     t = (text or "").lower()
     return {k for k, rx in SETTING_WORDS.items() if re.search(rx, t)}
 
+# ---- geography: a post about an inland town never gets a beach/sea photo, and no photo may name a different place than the post
+INLAND = re.compile(r"mandeville|christiana|cockpit|maggotty|accompong|spanish town|may pen|mavis bank|newcastle|holywell|blue mountain|bog walk|flat bridge|"
+                    r"bamboo avenue|moneague|linstead|williamsfield|porus|balaclava|santa cruz(?! beach)|junction|manchester|clarendon|st\.? catherine|st\.? thomas", re.I)
+COASTAL_PHOTO = re.compile(r"beach|sand\b|shore|\bsea\b|ocean|\bbay\b|coast|lagoon|lime cay|cay\b|snorkel|cruise|pier|harbou?r|boat|sailing|resort|loungers|palm fringed|seven mile|treasure beach", re.I)
+KNOWN_PLACES = ["negril", "montego bay", "ocho rios", "port antonio", "portland", "treasure beach", "kingston", "mandeville", "blue mountain", "dunn", "blue hole",
+                "falmouth", "black river", "runaway bay", "boston bay", "frenchman", "lime cay", "bob marley", "nine mile", "rio grande", "reach falls", "cockpit", "devon house",
+                "milk river", "bluefields", "whitehouse", "rose hall", "st. ann", "st ann", "hellshire", "port royal", "holywell", "mystic mountain", "appleton", "y.s."]
+OLD_PHOTO = re.compile(r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|\bretro\b|\bold\b|1[6-9]\d\d|colonial|engraving|postcard|circa|\bca\.|"
+                       r"museum collection|library of congress|nypl|wikimedia commons archive|film grain|scan(ned)?\b", re.I)
+
+def is_inland(*texts):
+    return bool(INLAND.search(" ".join(t for t in texts if t)))
+
+def names_other_place(text, place_words):
+    """True when the photo's own description names a known place that is not the one the post is about."""
+    t = (text or "").lower(); mine = " ".join(w.lower() for w in place_words if w)
+    return any(k in t and k.split()[0] not in mine for k in KNOWN_PLACES)
+
 def rule_for(text):
     """Turn the words of a post into a rule about which photos fit. Returns a function(settings)->bool, or None for no rule."""
     t = (text or "").lower()
@@ -395,6 +413,10 @@ class Picker:
                         continue
                     if about and not any(w in ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ") for w in about):
                         continue
+                    if want == "scenery" and getattr(self, "_inland", False) and COASTAL_PHOTO.search((m.get("about") or "") + " " + it["name"].replace("_", " ")):
+                        continue
+                    if want == "scenery" and getattr(self, "_place_words", None) and names_other_place((m.get("about") or "") + " " + it["name"].replace("_", " "), self._place_words):
+                        continue
                     q = m["quality"]; flags = [] 
                 else:
                     if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"] or (ok and not ok(set())):
@@ -435,7 +457,7 @@ class Picker:
                          r"portrait|selfie|model|woman|man\b|girl|boy|people|person|crowd|hand|finger|macro|close[- ]?up|texture|pattern|map|text|sign", re.I)
     SCENIC = re.compile(r"fall|waterfall|cascade|river|beach|sea|ocean|bay|mountain|hill|cliff|cave|pool|lagoon|valley|forest|road|coast|sunset|view|landscape|palm|island|town|city|harbou?r", re.I)
 
-    BAD_CAR = re.compile(r"illustrat|drawing|vector|cartoon|sketch|clip ?art|render|3d|toy|miniature|diecast|logo|icon|poster|"
+    BAD_CAR = re.compile(r"vintage|classic|antique|old\b|histor|retro|illustrat|drawing|vector|cartoon|sketch|clip ?art|render|3d|toy|miniature|diecast|logo|icon|poster|"
                          r"crash|accident|wreck|damage|junk|scrap|rust|burn|flood|police|taxi|"
                          r"portrait|selfie|woman|man\b|girl|boy|people|person|crowd|driver|passenger|family|couple", re.I)
 
@@ -465,8 +487,19 @@ class Picker:
         return None
 
     def scene(self, query, place=None, ok=None, strict=False, words=None):
+        try:
+            return self._scene(query, place, ok, strict, words)
+        finally:
+            self._inland = False; self._place_words = None
+
+    def _scene(self, query, place=None, ok=None, strict=False, words=None):
         """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
         names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
+        inland = is_inland(place, query) and not re.search(r"beach|coast|\bbay\b|\bsea\b", (place or "").lower())
+        if inland:
+            _ok = ok
+            ok = lambda st, _o=_ok: "beach" not in st and (_o is None or _o(st))
+        self._inland = inland; self._place_words = names if place else None
         web_first = bool(self.web) and self.rng.random() < self.cfg["photos"].get("web_share", 0.5)
         if place and not web_first:
             key = [place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()]
@@ -485,9 +518,11 @@ class Picker:
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             # never use drawings, animals, close-ups or people; the description must show a real landscape
-            good = [i for i in good if not self.BAD_WEB.search(i.get("text", "")) and self.SCENIC.search(i.get("text", ""))]
+            good = [i for i in good if not self.BAD_WEB.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("name", ""))]
+            if inland:      # no beach, sea or boat photo for a town that is not on the coast
+                good = [i for i in good if not COASTAL_PHOTO.search(i.get("text", ""))]
             if place:   # the description must name the place (or a word that belongs to it)
-                good = [i for i in good if any(n in i.get("text", "").lower() for n in names)]
+                good = [i for i in good if any(n in i.get("text", "").lower() for n in names) and not names_other_place(i.get("text", ""), names)]
             if ok:
                 good = [i for i in good if ok(settings_of(i.get("text", "")))]
             for it in good[:8]:
@@ -502,4 +537,6 @@ class Picker:
             if p:
                 p.flags.append("Place confirmed by photo description")
                 return p
+        if place:        # a named place never gets a random photo of somewhere else: the story falls back to a plain cover instead
+            return None
         return self._own("scenery", None, ok)

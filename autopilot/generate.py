@@ -104,7 +104,7 @@ class DayBuilder:
         if place:
             pl = place.lower()
             for k, v in L.items():
-                if isinstance(v, dict) and (pl in v["name"].lower() or k.replace("_", " ") in pl):
+                if isinstance(v, dict) and k != "default_rotation" and (pl in v["name"].lower() or k.replace("_", " ") in pl or any(m in pl for m in v.get("match", []))):
                     key = k; break
             if not key:
                 return {"name": place + ", Jamaica", "id": "", "tag": "#" + re.sub(r"\W", "", place), "kw": f"Car rental for {place}, Jamaica"}
@@ -267,7 +267,11 @@ class DayBuilder:
         e = self.pick("offer"); self.last_offer = e
         self.vip_used = []
         vp = self.vip_photo()
-        html = T.ticket(e["k"], e["h"], e["b"], buy=bool(e.get("buy")), photo=vp.path if vp else None)
+        names = list(T.LOUNGE_DESIGNS)                       # five different looks; never the same one twice in a row
+        last = self.led.data.get("lounge_design")
+        names = [n for n in names if n != last] or names
+        design = self.rng.choice(names); self.led.data["lounge_design"] = design; self.last_design = design
+        html = T.LOUNGE_DESIGNS[design](e["k"], e["h"], e["b"], buy=bool(e.get("buy")), photo=vp.path if vp else None)
         if vp:
             self.vip_used.append(vp)
             post["flags"].append("Lounge photos are from VIP Attractions (our lounge partner). Make sure they are happy for us to use them.")
@@ -390,9 +394,15 @@ class DayBuilder:
             out = pages
         elif typ == "offer" and offer:
             e, link = offer
-            mid = [("How to get it.", "Book a rental for 7 days or more on arahrides.com."),
-                   ("Who gets it.", "1 guest receives a Club Mobay or Club Kingston departure lounge pass. Cannot be combined with other promo codes or discounts. Conditions apply.")]
-            mid.insert(1, ("Inside the lounge.", "Free Wi-Fi. Comfortable seating. Food and drink. Private restrooms. Fast track."))
+            sets = [[("How to get it.", "Book a rental for 7 days or more on arahrides.com."), ("Inside the lounge.", "Free Wi-Fi. Comfortable seating. Food and drink. Private restrooms. Fast track."),
+                     ("Who gets it.", "1 guest receives a Club Mobay or Club Kingston departure lounge pass. Cannot be combined with other promo codes or discounts. Conditions apply.")],
+                    [("Step 1: pick your car.", "Choose the car you want to drive on arahrides.com."), ("Step 2: keep it 7 days.", "Rent for 7 days or more and the pass is added for 1 guest."),
+                     ("Step 3: fly out relaxed.", "Club Mobay at Montego Bay or Club Kingston. Wi-Fi, seating, food and drink. Conditions apply.")],
+                    [("A week of Jamaica.", "Beaches, waterfalls, jerk stops and mountain roads, on your schedule."), ("Then the lounge.", "Your last hour is calm: Wi-Fi, comfy seats, food and drink, fast track."),
+                     ("The fine print.", "1 guest. Not combinable with other promo codes or discounts. Conditions apply.")],
+                    [("Why rent 7+ days?", "You see more of the island and the lounge pass for 1 guest comes with it."), ("What you get.", "Club Mobay or Club Kingston. Free Wi-Fi, private restrooms, food and drink."),
+                     ("Good to know.", "Not combinable with other promo codes or discounts. Conditions apply.")]]
+            mid = list(sets[(self.today.toordinal() + self.rng.randrange(len(sets))) % len(sets)]) if hasattr(self, "today") else list(sets[0])
             if e.get("buy"):
                 mid[0] = ("Not renting?", "You can buy a departure lounge pass on its own. Details at arahrides.com.")
             slides = mid + [self.rng.choice(story.CLOSE_GENERAL)]

@@ -250,3 +250,62 @@ def swipe(html):
     tab = (f'<div style="position:absolute;right:0;top:0;z-index:8;background:{Y};color:{K};font-family:sans-serif;font-size:20px;font-weight:800;'
            f'letter-spacing:3px;padding:9px 24px 9px 28px;border-radius:0 0 0 30px;box-shadow:0 6px 16px rgba(0,0,0,.3)">SWIPE →</div>')
     return html.replace(STRIPE, tab + STRIPE, 1)
+
+# ---------------------------------------------------------------- lounge pass: extra designs (rotated so the promo never looks the same twice)
+def _veil(photo, a=.55, b=.92):
+    return img(photo) + f'<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,17,{a}) 0%,rgba(15,20,17,.3) 35%,rgba(15,20,17,{b}) 100%)"></div>' if photo else ""
+
+def lounge_board(k, h, b, buy=False, photo=None):
+    """Airport departures board: rows light up with the offer."""
+    G, Y, C, K = c()
+    rows = [("DEPARTS", "WHEN YOU WANT", True), ("RENTAL", "7+ DAYS" if not buy else "ANY LENGTH", False), ("LOUNGE", "CLUB MOBAY / KINGSTON", True),
+            ("GUESTS", "1 GUEST", False), ("PASS", "FREE" if not buy else "BUY ON ITS OWN", True), ("STATUS", "NOW BOOKING", False)]
+    r = "".join(f'<div style="display:flex;justify-content:space-between;gap:20px;padding:20px 30px;background:{"rgba(232,169,58,.16)" if hi else "rgba(255,255,255,.05)"};border-radius:16px;'
+                f'font-family:Menlo,Consolas,monospace;font-size:34px;font-weight:700;letter-spacing:2px;color:{Y if hi else C}"><span style="opacity:.7">{a}</span><span>{E(v)}</span></div>' for a, v, hi in rows)
+    inner = (_veil(photo, .8, .95) if photo else "") + (f'<div style="position:absolute;inset:0;padding:56px 60px 40px;display:flex;flex-direction:column;gap:22px">'
+             f'{mark(Y, "DEPARTURES")}<h1 style="margin:0;{HD};font-size:{fs(h, 100)}px;line-height:1;color:{C}">{hl(h, Y)}</h1>'
+             f'<div style="display:flex;flex-direction:column;gap:12px;background:rgba(0,0,0,.45);border:3px solid {Y};border-radius:28px;padding:22px">{r}</div>'
+             f'<div style="flex-grow:1"></div><div style="font-size:26px;line-height:1.3;color:{C};opacity:.85">{E(b)}</div>{foot(Y, K, Y, "Book 7+ days: " + B["site"])}</div>')
+    return wrap(inner, 1350, K, C)
+
+def lounge_free(k, h, b, buy=False, photo=None):
+    """One giant word. Stops the scroll."""
+    G, Y, C, K = c()
+    word, sub = ("FREE", "LOUNGE PASS") if not buy else ("LOUNGE", "PASS, NO RENTAL NEEDED")
+    inner = (_veil(photo, .5, .94) if photo else f'<div style="position:absolute;inset:0;background:{G}"></div>') + (
+        f'<div style="position:absolute;inset:0;padding:56px 64px 40px;display:flex;flex-direction:column;gap:18px">{mark(C, "7+ DAY RENTALS" if not buy else "LOUNGE PASS", "rgba(241,236,224,.6)")}'
+        f'<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:center"><div style="{HD};font-size:{300 if not buy else 210}px;line-height:.82;color:{Y};letter-spacing:-12px;text-shadow:0 10px 40px rgba(0,0,0,.35)">{word}</div>'
+        f'<div style="{HD};font-size:96px;line-height:1;color:{C};margin-top:14px">{sub}</div></div>'
+        f'<h2 style="margin:0;{HD};font-size:{fs(h, 62)}px;line-height:1.08;color:{C}">{E(h)}</h2><div style="font-size:30px;line-height:1.3;color:{C};opacity:.9">{E(b)}</div>'
+        f'{foot(Y, K, Y, "Book now: " + B["site"])}</div>')
+    return wrap(inner, 1350, G, C)
+
+def lounge_math(k, h, b, buy=False, photo=None):
+    """Equation: 7 days + 1 car = 1 free lounge pass."""
+    G, Y, C, K = c()
+    term = lambda big_, small, bg, fg: (f'<div style="flex:1;background:{bg};color:{fg};border-radius:32px;padding:34px 20px;text-align:center;box-shadow:0 14px 30px rgba(0,0,0,.25)">'
+                                        f'<div style="{HD};font-size:104px;line-height:1">{big_}</div><div style="font-size:24px;font-weight:800;letter-spacing:3px;margin-top:8px">{small}</div></div>')
+    op = lambda t: f'<div style="{HD};font-size:84px;color:{Y};align-self:center">{t}</div>'
+    eq = (term("7+", "DAYS", C, K) + op("+") + term("1", "CAR", C, K) + op("=") + term("1", "FREE PASS", Y, K)) if not buy else (term("1", "PASS", Y, K) + op("or") + term("7+", "DAYS = FREE", C, K))
+    inner = (_veil(photo, .72, .93) if photo else f'<div style="position:absolute;inset:0;background:{K}"></div>') + (
+        f'<div style="position:absolute;inset:0;padding:56px 64px 40px;display:flex;flex-direction:column;gap:30px">{mark(Y, "DO THE MATH")}'
+        f'<h1 style="margin:0;{HD};font-size:{fs(h, 100)}px;line-height:1;color:{C}">{hl(h, Y)}</h1>'
+        f'<div style="display:flex;gap:14px;margin-top:18px">{eq}</div><div style="flex-grow:1"></div>'
+        f'<div style="font-size:34px;line-height:1.32;color:{C}">{E(b)}</div>{foot(Y, K, Y, "Book now: " + B["site"])}</div>')
+    return wrap(inner, 1350, K, C)
+
+def lounge_split(k, h, b, buy=False, photo=None):
+    """Photo on top, cream card below with the three-step journey."""
+    G, Y, C, K = c()
+    steps = [("1", "Pick your car"), ("2", "Rent 7+ days" if not buy else "Or rent 7+ days"), ("3", "Relax in the lounge")]
+    st = "".join(f'<div style="display:flex;align-items:center;gap:22px"><div style="min-width:64px;height:64px;border-radius:50%;background:{G};color:{Y};{HD};font-size:38px;display:flex;align-items:center;justify-content:center;letter-spacing:0">{n}</div>'
+                 f'<div style="font-size:42px;font-weight:700;color:{K}">{t}</div></div>' for n, t in steps)
+    top = (f'<div style="position:absolute;left:0;right:0;top:0;height:640px">{img(photo)}<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,17,.55),rgba(15,20,17,0) 40%)"></div></div>'
+           if photo else f'<div style="position:absolute;left:0;right:0;top:0;height:640px;background:{G}"></div>')
+    inner = (top + f'<div style="position:absolute;left:64px;right:64px;top:50px">{mark(C, "LOUNGE PASS", "rgba(241,236,224,.6)")}</div>'
+             f'<div style="position:absolute;left:0;right:0;top:560px;bottom:0;background:{C};border-radius:60px 60px 0 0;padding:52px 64px 44px;display:flex;flex-direction:column;gap:22px">'
+             f'<h1 style="margin:0;{HD};font-size:{fs(h, 84)}px;line-height:1;color:{K}">{hl(h, G)}</h1><div style="display:flex;flex-direction:column;gap:16px">{st}</div>'
+             f'<div style="flex-grow:1"></div><div style="font-size:24px;line-height:1.3;color:{K};opacity:.7">1 guest. Club Mobay or Club Kingston. Not combinable with other promos. Conditions apply.</div>{foot(G, C, Y, "Book now: " + B["site"])}</div>')
+    return wrap(inner, 1350, C, K)
+
+LOUNGE_DESIGNS = {"pass": ticket, "board": lounge_board, "free": lounge_free, "math": lounge_math, "split": lounge_split}
