@@ -17,7 +17,7 @@ from autopilot.photos import Picker
 
 cfg = config.load()
 # these tests exercise every post type, so they use the busy 15-a-day layout; the live default is 1 a day (see tests/test_daily.py)
-cfg["posts_per_day"] = 15
+cfg["posts_per_day"] = 15; cfg["single_slots"] = []
 cfg["slots"] = ["06:30", "07:30", "08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30"]
 cfg["pattern"] = ["car_hero", "qa", "experience", "tip", "brand|chat", "carousel|list", "trip", "experience", "tip", "place", "qa|trust|review", "trip", "brand|versus", "place", "list|carousel"]
 photos = sys.argv[1] if len(sys.argv) > 1 else "/mnt/user-data/outputs/photos/drive"

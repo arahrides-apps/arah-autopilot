@@ -1,4 +1,4 @@
-"""The live default (1 carousel a day at 11:00 Jamaica time) over 45 days, no rendering. Offline end-to-end test: fake web photos + a folder of real photos + a fake Instagram API.
+"""The live default (12 posts a day, one every 2 hours from midnight Jamaica time, 10 carousels and 2 single pictures) over 45 days, no rendering. Offline end-to-end test: fake web photos + a folder of real photos + a fake Instagram API.
 Run:  python tests/test_end_to_end.py [path-to-photo-folder]
 Nothing here touches the internet, Google Drive or Instagram."""
 import os, sys, shutil, tempfile, json, random, datetime as dt
@@ -40,20 +40,25 @@ pk = Picker(cfg, led, now.date(), random.Random(1), cache=TMP / "cache", web=[Fa
 import collections
 cfg["days_ahead"] = 45
 made, notes = generate.run(cfg, picker=pk, led=led, days=45, render=False)
-types = collections.Counter(); bad = []; six = 0
+types = collections.Counter(); bad = []; six = 0; multi = total = 0
 for d, n in made:
     posts = Q.load_day(d)["posts"]
-    assert len(posts) <= 1, (d, len(posts))
+    assert len(posts) <= 12, (d, len(posts))
     for p in posts:
         types[p["type"]] += 1
-        assert p["slot"].endswith("T11:00:00-05:00"), p["slot"]
-        if not 4 <= len(p["images"]) <= 6:
+        assert int(p["slot"][11:13]) % 2 == 0 and p["slot"][14:16] == "00", p["slot"]
+        multi += len(p["images"]) > 1; total += 1
+        if p.get("single"):
+            assert len(p["images"]) == 1
+        elif not 4 <= len(p["images"]) <= 6:
             bad.append((p["id"], len(p["images"])))
         if p["type"] in ("place", "experience", "trip"):
             six += len(p["images"]) == 6
         assert p["caption"].count("#") <= 5, p["caption"]
 print("days", len(made), "posts", sum(types.values())); print(dict(types), "six-slide story posts:", six)
+print("carousel share: %.0f%%" % (100 * multi / total))
+assert 0.75 <= multi / total <= 0.9, multi / total
 assert not bad, bad
 assert {"place", "trip", "experience", "car_hero", "review"} <= set(types), types
-assert six >= 10, six
+assert six >= 100, six
 print("DAILY OK")
