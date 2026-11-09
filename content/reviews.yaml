@@ -1,0 +1,30 @@
+# Real reviews left on arahrides.com. Quotes are word-for-word (only whole sentences kept, nothing changed).
+# Each set becomes one carousel: cover > one review per slide > book. "photo" is a word the cover photo's label must contain.
+sets:
+  - title: "Toyota Corolla"
+    seo: "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides"
+    photo: corolla
+    quotes:
+      - {q: "Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.", name: "Aston", vehicle: "Toyota Corolla", stars: 5}
+      - {q: "Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !", name: "Xavier", vehicle: "Toyota Corolla", stars: 5}
+      - {q: "Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.", name: "Dean", vehicle: "Toyota Corolla", stars: 5}
+  - title: "Toyota Corolla Cross"
+    seo: "Toyota Corolla Cross rental in Jamaica: what real renters say about booking with Arah Rides"
+    photo: corolla cross
+    quotes:
+      - {q: "William provided excellent customer service. The car was cleaned and delivered to me in a timely manner. I would recommend this company", name: "Mark", vehicle: "Toyota Corolla Cross", stars: 5}
+      - {q: "Highly recommended service. Communication was clear from the minute the reservation was made. Definitely would recommend this service to anyone.", name: "Steven", vehicle: "Toyota Corolla Cross", stars: 5}
+  - title: "SUVs and small cars"
+    seo: "Car rental in Jamaica: what real renters say about the Suzuki Vitara, MG ZS and Mazda Demio on Arah Rides"
+    photo: ""
+    quotes:
+      - {q: "Very nice and affordable prices. Easy customer service. The transaction was very nice. Car was well dependable. Looking forward to booking again.", name: "Jerryin", vehicle: "Suzuki Vitara", stars: 5}
+      - {q: "Vehicle was well maintained a lot of features on the SUV easy to maneuver through traffic with auto breaking blind spot reminder front and back park assist overall excellent Vehicle.", name: "Mark", vehicle: "MG ZS", stars: 5}
+      - {q: "My experience with the check-in and check-out process was awesome. There were no issues, hidden fees, or any surprises.", name: "Sophia", vehicle: "Mazda Demio", stars: 4}
+  - title: "Easy from start to finish"
+    seo: "Car rental in Jamaica: what real renters say about booking, pickup and customer service on Arah Rides"
+    photo: ""
+    quotes:
+      - {q: "I've had such a great experience renting with Arah! The whole process was quick and easy, which made it even better. It’s nice knowing they’re always there for you, ready to help when you need it.", name: "Sophia", vehicle: "Mazda Demio", stars: 4}
+      - {q: "Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.", name: "Aston", vehicle: "Toyota Corolla", stars: 5}
+      - {q: "Highly recommended service. Communication was clear from the minute the reservation was made. Definitely would recommend this service to anyone.", name: "Steven", vehicle: "Toyota Corolla Cross", stars: 5}

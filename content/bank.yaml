@@ -588,6 +588,30 @@ qa:
   a: By road, on your own timetable.
 - q: Is Jamaica good for road trips?
   a: Yes. Hills, coast and villages are all a drive apart. Take it slowly and enjoy it.
+- q: Is mileage limited?
+  a: No. Unlimited mileage is included.
+- q: Is insurance included?
+  a: Liability insurance is included, as Jamaican law requires. The rental company provides it.
+- q: Is airport pickup free?
+  a: On most car listings, yes. Some hosts charge a small delivery fee, and it is always shown upfront on the listing.
+- q: Can I get the car delivered to my hotel?
+  a: Yes. Islandwide delivery covers airports, hotels, resorts, Airbnbs and private homes.
+- q: Can I pay in installments?
+  a: Yes. Klarna lets you pay in 4 interest-free installments. Visa, Mastercard, Apple Pay and Google Pay also work.
+- q: How old must I be to rent?
+  a: The minimum age is 21, and it can vary by rental company. You need a valid licence in your name held for at least 2 years.
+- q: Do I need an app?
+  a: No. There is no app. Book on arahrides.com or say Hi to Winston on WhatsApp.
+- q: Can I rent a car seat?
+  a: Yes. Many rental companies offer car seats from about $5 a day. Arrange it with your host after booking.
+- q: Can I pick up in one city and drop off in another?
+  a: Yes, one-way rentals are available, for example Montego Bay to Kingston. A one-way fee applies and shows in your quote.
+- q: What else can I book on Arah Rides?
+  a: Boats and yachts, 15-seater buses and airport transfers, as well as cars and SUVs.
+- q: How much is the security deposit?
+  a: It depends on the vehicle and the rental company, from about $65 for an economy car. It is collected at pickup and released after you return the car refueled, on time and undamaged.
+- q: What does a rental day mean?
+  a: A rental day is 24 hours from your pickup time.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -1523,6 +1547,21 @@ carousel:
     - A slow south coast sunset.
   - - Plan the drive
     - Arrive early and choose your car at arahrides.com.
+- k: INCLUDED
+  title: What you get with every rental.
+  sub: Swipe for the list.
+  query: Jamaica road trip
+  slides:
+  - - Unlimited mileage
+    - Drive as far as the road goes.
+  - - Liability insurance
+    - Included, as Jamaican law requires.
+  - - Free airport pickup
+    - On most listings. Any fee shows upfront.
+  - - Pay your way
+    - Visa, Mastercard, Apple Pay, Google Pay or Klarna in 4 installments.
+  - - Book it
+    - Choose the car you want to drive at arahrides.com.
 this_or_that:
 - - Beach
   - River
