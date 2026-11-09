@@ -86,9 +86,15 @@ locations:
   sangster:       {name: "Sangster International Airport",          id: "106111078512570", tag: "#SangsterAirport",      kw: "Car rental at Sangster Airport, Montego Bay | Airport pickup"}
   ocho_rios:      {name: "Ocho Rios, Jamaica",                       id: "111964835488149", tag: "#OchoRios",             kw: "Car rental for Ocho Rios and the north coast"}
   # Extra places (optional). A post about one of these tags it only when its id is filled in; otherwise it uses one of the five above that has an id.
-  negril:         {name: "Negril, Jamaica",                          id: "", tag: "#NegrilJamaica",        kw: "Car rental for Negril, Jamaica | Pickup at MBJ"}
-  port_antonio:   {name: "Port Antonio, Jamaica",                    id: "", tag: "#PortAntonio",          kw: "Car rental for Port Antonio and Portland, Jamaica"}
-  treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
+  negril:         {name: "Negril, Jamaica",                          id: "110074689016001", tag: "#NegrilJamaica",        kw: "Car rental for Negril, Jamaica | Pickup at MBJ"}
+  # Verified Meta place IDs. "match" = words in a post's place name that pick this tag.
+  ian_fleming:    {name: "Ian Fleming International Airport",         id: "166559740056858", tag: "#IanFlemingAirport",   kw: "Car rental near Ian Fleming Airport, Ocho Rios | Airport pickup", match: ["ian fleming", "boscobel"]}
+  dunns_river:    {name: "Dunns River Falls and Beach",              id: "115498645267334", tag: "#DunnsRiverFalls",     kw: "Car rental for Dunn's River Falls, Ocho Rios", match: ["dunn"]}
+  seven_mile:     {name: "Negril Seven Mile Beach",                  id: "481929168524298", tag: "#SevenMileBeach",      kw: "Car rental for Seven Mile Beach, Negril", match: ["seven mile", "7 mile"]}
+  ricks_cafe:     {name: "Rick's Cafe",                              id: "180299872028723", tag: "#RicksCafe",           kw: "Car rental for Negril and Rick's Cafe sunsets", match: ["rick"]}
+  doctors_cave:   {name: "Doctor's Cave Beach",                      id: "108275249199808", tag: "#DoctorsCaveBeach",    kw: "Car rental for Doctor's Cave Beach, Montego Bay", match: ["doctor"]}
+  port_antonio:   {name: "Port Antonio, Jamaica",                    id: "110674215620951", tag: "#PortAntonio",          kw: "Car rental for Port Antonio and Portland, Jamaica"}
+  treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
