@@ -352,78 +352,25 @@
    "status": "pending"
   },
   {
-   "id": "2026-11-08_1830_brand",
+   "id": "2026-11-08_2200_trust",
    "date": "2026-11-08",
-   "slot": "2026-11-08T18:30:00-05:00",
-   "type": "brand",
+   "slot": "2026-11-08T22:00:00-05:00",
+   "type": "trust",
    "flags": [],
    "images": [
-    "media/2026-11-08/2026-11-08_1830_brand_1.jpg",
-    "media/2026-11-08/2026-11-08_1830_brand_2.jpg",
-    "media/2026-11-08/2026-11-08_1830_brand_3.jpg",
-    "media/2026-11-08/2026-11-08_1830_brand_4.jpg",
-    "media/2026-11-08/2026-11-08_1830_brand_5.jpg"
+    "media/2026-11-08/2026-11-08_2200_trust_1.jpg",
+    "media/2026-11-08/2026-11-08_2200_trust_2.jpg",
+    "media/2026-11-08/2026-11-08_2200_trust_3.jpg",
+    "media/2026-11-08/2026-11-08_2200_trust_4.jpg",
+    "media/2026-11-08/2026-11-08_2200_trust_5.jpg"
    ],
-   "copy_text": "Your 24/7 assistant. 🇯🇲\n\nSay Hi on WhatsApp: +1 201-371-3152. Quote, book and pay by Stripe.",
-   "alt": "Arah Rides graphic: Your 24/7 assistant. (carousel: swipe for more)",
-   "location": {
-    "name": "Montego Bay, Jamaica",
-    "id": "115773858436055"
-   },
-   "caption": "Your 24/7 assistant. 🇯🇲\n\nSay Hi on WhatsApp: +1 201-371-3152. Quote, book and pay by Stripe.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #DiscoverTheRealJamaica #JamaicaTravel #AirportPickupJamaica",
-   "status": "pending"
-  },
-  {
-   "id": "2026-11-08_1930_place",
-   "date": "2026-11-08",
-   "slot": "2026-11-08T19:30:00-05:00",
-   "type": "place",
-   "flags": [
-    "Place/experience name left out because the photo does not confirm it. Add it only if you know it is right."
-   ],
-   "images": [
-    "media/2026-11-08/2026-11-08_1930_place_1.jpg",
-    "media/2026-11-08/2026-11-08_1930_place_2.jpg",
-    "media/2026-11-08/2026-11-08_1930_place_3.jpg",
-    "media/2026-11-08/2026-11-08_1930_place_4.jpg",
-    "media/2026-11-08/2026-11-08_1930_place_5.jpg"
-   ],
-   "photo": {
-    "id": "drive:1mAok5iugKlD8DFga82rAwjbeDDZaoFjF",
-    "name": "056_JTB_Spring_2025_Kingston_Lime_Cay_Boat",
-    "source": "drive",
-    "credit": "Photo: Jamaica Tourist Board"
-   },
-   "copy_text": "This is why we drive. 🌴\n\nPick your car and your route.\n\nHills, villages and views you cannot see from a resort. Your own car means your own timetable.\n\nGetting there: Pick up at Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ and choose a road.\n\nLeave room for roadside stops. Waterfalls, beaches, jerk and coffee are all a drive away.",
-   "alt": "Scenery in Jamaica (carousel: swipe for more)",
-   "location": {
-    "name": "Montego Bay, Jamaica",
-    "id": "115773858436055"
-   },
-   "caption": "This is why we drive. 🌴\n\nPick your car and your route.\n\nHills, villages and views you cannot see from a resort. Your own car means your own timetable.\n\nGetting there: Pick up at Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ and choose a road.\n\nLeave room for roadside stops. Waterfalls, beaches, jerk and coffee are all a drive away.\n\nSave this for your trip 🔖 and send it to who you're travelling with.\n\n📷 Photo: Jamaica Tourist Board\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #ArahRides #JamaicaTravel #RentACarJamaica",
-   "status": "pending"
-  },
-  {
-   "id": "2026-11-08_2030_list",
-   "date": "2026-11-08",
-   "slot": "2026-11-08T20:30:00-05:00",
-   "type": "list",
-   "flags": [],
-   "images": [
-    "media/2026-11-08/2026-11-08_2030_list_1.jpg",
-    "media/2026-11-08/2026-11-08_2030_list_2.jpg",
-    "media/2026-11-08/2026-11-08_2030_list_3.jpg",
-    "media/2026-11-08/2026-11-08_2030_list_4.jpg",
-    "media/2026-11-08/2026-11-08_2030_list_5.jpg",
-    "media/2026-11-08/2026-11-08_2030_list_6.jpg"
-   ],
-   "copy_text": "5 experiences to drive to ✅\n\n1) Waterfall day at YS Falls\n2) Jerk in Boston Bay\n3) Blue Mountain coffee\n4) Bamboo rafting in Portland\n5) Sunset in Negril",
-   "alt": "List graphic: 5 experiences to drive to (carousel: swipe for more)",
+   "copy_text": "Rent from real people. 🎥\n\nSee our Smile Jamaica interview, then message Winston.",
+   "alt": "Arah Rides on Smile Jamaica: Rent from real people. (carousel: swipe for more)",
    "location": {
     "name": "Kingston, Jamaica",
     "id": "109489972411518"
    },
-   "caption": "5 experiences to drive to ✅\n\n1) Waterfall day at YS Falls\n2) Jerk in Boston Bay\n3) Blue Mountain coffee\n4) Bamboo rafting in Portland\n5) Sunset in Negril\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #CarRentalJamaica #RentJamaican #JamaicaVacation #JamaicaItinerary",
+   "caption": "Rent from real people. 🎥\n\nSee our Smile Jamaica interview, then message Winston.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nWatch the interview: https://youtu.be/vMKRKG8bN-8\nBook: arahrides.com\n\n#KingstonJamaica #SelfDriveJamaica #RentJamaican #JamaicaVacation #JamaicaTravel",
    "status": "pending"
   }
  ]

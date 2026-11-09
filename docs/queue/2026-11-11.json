@@ -2,25 +2,302 @@
  "date": "2026-11-11",
  "posts": [
   {
-   "id": "2026-11-11_1100_offer",
+   "id": "2026-11-11_0000_car_hero",
    "date": "2026-11-11",
-   "slot": "2026-11-11T11:00:00-05:00",
+   "slot": "2026-11-11T00:00:00-05:00",
+   "type": "car_hero",
+   "flags": [
+    "Stock photo of a Suzuki Vitara. It shows the model, not one of our own cars: check it looks clean and has no people",
+    "Stock photo of this model"
+   ],
+   "images": [
+    "media/2026-11-11/2026-11-11_0000_car_hero_1.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia:167818413",
+    "name": "wikimedia-167818413",
+    "source": "wikimedia",
+    "credit": "Photo by OWS Photography, Wikimedia Commons (CC BY 4.0)"
+   },
+   "copy_text": "This is the car you want to drive. 🚗\n\nChoose your make and model on arahrides.com.",
+   "alt": "A rental car in Jamaica. This is the car you want to drive.",
+   "location": {
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
+   },
+   "caption": "This is the car you want to drive. 🚗\n\nChoose your make and model on arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\n📷 Photo by OWS Photography, Wikimedia Commons (CC BY 4.0)\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #RentACarJamaica #ArahRides #CarRentalJamaica #JamaicaTravel",
+   "single": true,
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_0200_offer",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T02:00:00-05:00",
    "type": "offer",
    "flags": [],
    "images": [
-    "media/2026-11-11/2026-11-11_1100_offer_1.jpg",
-    "media/2026-11-11/2026-11-11_1100_offer_2.jpg",
-    "media/2026-11-11/2026-11-11_1100_offer_3.jpg",
-    "media/2026-11-11/2026-11-11_1100_offer_4.jpg",
-    "media/2026-11-11/2026-11-11_1100_offer_5.jpg"
+    "media/2026-11-11/2026-11-11_0200_offer_1.jpg",
+    "media/2026-11-11/2026-11-11_0200_offer_2.jpg",
+    "media/2026-11-11/2026-11-11_0200_offer_3.jpg",
+    "media/2026-11-11/2026-11-11_0200_offer_4.jpg",
+    "media/2026-11-11/2026-11-11_0200_offer_5.jpg"
    ],
-   "copy_text": "Your week in Jamaica ends in style. 🎟️\n\nBook 7 days or more and enjoy a Club Mobay or Club Kingston departure pass for 1 guest, free. Conditions apply.",
-   "alt": "Offer graphic: Your week in Jamaica ends in style. (carousel: swipe for more)",
+   "copy_text": "Skip the queue. Take the lounge. 🎟️\n\nBuy a Club Mobay or Club Kingston pass on its own, or get one free when you rent for 7 days or more. Conditions apply.",
+   "alt": "Offer graphic: Skip the queue. Take the lounge. (carousel: swipe for more)",
    "location": {
     "name": "Kingston, Jamaica",
     "id": "109489972411518"
    },
-   "caption": "Your week in Jamaica ends in style. 🎟️\n\nBook 7 days or more and enjoy a Club Mobay or Club Kingston departure pass for 1 guest, free. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #CarRentalJamaica #RentJamaican #JamaicaTravel #RentACarJamaica",
+   "caption": "Skip the queue. Take the lounge. 🎟️\n\nBuy a Club Mobay or Club Kingston pass on its own, or get one free when you rent for 7 days or more. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBuy a lounge pass without renting: https://booking.vipattractions.com/affiliate/8285\nOr book 7+ days: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\n#KingstonJamaica #JamaicaCarRental #ArahRides #AirportPickupJamaica #JamaicaTravel",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_0400_qa",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T04:00:00-05:00",
+   "type": "qa",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_0400_qa_1.jpg",
+    "media/2026-11-11/2026-11-11_0400_qa_2.jpg",
+    "media/2026-11-11/2026-11-11_0400_qa_3.jpg",
+    "media/2026-11-11/2026-11-11_0400_qa_4.jpg",
+    "media/2026-11-11/2026-11-11_0400_qa_5.jpg"
+   ],
+   "copy_text": "What is jerk? 🤔\n\nMeat seasoned with pimento and pepper and cooked slowly, often over pimento wood.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: What is jerk? (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "What is jerk? 🤔\n\nMeat seasoned with pimento and pepper and cooked slowly, often over pimento wood.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #RentACarJamaica #ArahRides #JamaicaTravelTips #JamaicaItinerary",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_0600_tip",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T06:00:00-05:00",
+   "type": "tip",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_0600_tip_1.jpg",
+    "media/2026-11-11/2026-11-11_0600_tip_2.jpg",
+    "media/2026-11-11/2026-11-11_0600_tip_3.jpg",
+    "media/2026-11-11/2026-11-11_0600_tip_4.jpg",
+    "media/2026-11-11/2026-11-11_0600_tip_5.jpg"
+   ],
+   "copy_text": "Patois 101: Big up. 💡\n\nIt means: A shout-out or praise.",
+   "alt": "Tip graphic: Big up. (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Patois 101: Big up. 💡\n\nIt means: A shout-out or praise.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #RentACarJamaica #DiscoverTheRealJamaica #TravelTips #JamaicaItinerary",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_0800_trip",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T08:00:00-05:00",
+   "type": "trip",
+   "flags": [
+    "Slide photo from drive (licence-free): Photo: Jamaica Tourist Board",
+    "Slide photo from drive (licence-free): Photo: Jamaica Tourist Board"
+   ],
+   "images": [
+    "media/2026-11-11/2026-11-11_0800_trip_1.jpg",
+    "media/2026-11-11/2026-11-11_0800_trip_2.jpg",
+    "media/2026-11-11/2026-11-11_0800_trip_3.jpg",
+    "media/2026-11-11/2026-11-11_0800_trip_4.jpg",
+    "media/2026-11-11/2026-11-11_0800_trip_5.jpg",
+    "media/2026-11-11/2026-11-11_0800_trip_6.jpg"
+   ],
+   "photo": {
+    "id": "drive:1XK0S8UybbAKJ4hyrtHBRs2jn-vTpysI7",
+    "name": "BonnieViewofPortie0146",
+    "source": "drive",
+    "credit": "Photo: Jamaica Tourist Board"
+   },
+   "copy_text": "A Portland day in 3 stops 🗺️\n\n1. Frenchman's Cove: Where a river meets the sea in a small, pretty cove.\n2. Boston Bay: Jerk pits, smoke and pimento wood. This is where jerk is a way of life.\n3. Blue Lagoon: Swim in deep, clear blue water near Port Antonio.\n\nPick up at Norman Manley or our Kingston offices and head east. Allow about 2 to 2.5 hours.",
+   "alt": "Day plan: A Portland day in 3 stops (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "A Portland day in 3 stops 🗺️\n\n1. Frenchman's Cove: Where a river meets the sea in a small, pretty cove.\n2. Boston Bay: Jerk pits, smoke and pimento wood. This is where jerk is a way of life.\n3. Blue Lagoon: Swim in deep, clear blue water near Port Antonio.\n\nPick up at Norman Manley or our Kingston offices and head east. Allow about 2 to 2.5 hours.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\n📷 Photo: Jamaica Tourist Board\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #AirportPickupJamaica #RentJamaican #RoadTripJamaica #JamaicaItinerary",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_1000_experience",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T10:00:00-05:00",
+   "type": "experience",
+   "flags": [
+    "Place confirmed by photo description"
+   ],
+   "images": [
+    "media/2026-11-11/2026-11-11_1000_experience_1.jpg",
+    "media/2026-11-11/2026-11-11_1000_experience_2.jpg",
+    "media/2026-11-11/2026-11-11_1000_experience_3.jpg",
+    "media/2026-11-11/2026-11-11_1000_experience_4.jpg",
+    "media/2026-11-11/2026-11-11_1000_experience_5.jpg",
+    "media/2026-11-11/2026-11-11_1000_experience_6.jpg"
+   ],
+   "photo": {
+    "id": "drive:1tvASypyHpSh535wh35CaO0ZmuM25MYFl",
+    "name": "NegrilBeach0646",
+    "source": "drive",
+    "credit": "Photo: Jamaica Tourist Board"
+   },
+   "copy_text": "beach Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nA slow beach day. No rush. ✨\n\nFind a quiet cove and stay until sunset.\n\nRent a car and go see it for yourself.\n\nCalm bays, long sand and clear water. Pick your favourite.\n\nGetting there: Negril, Montego Bay, Portland and the south coast all have a beach worth the drive.\n\nPack water, sunscreen and a towel, and go early to beat the crowds.",
+   "alt": "Jamaica: Slow Day (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "beach Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nA slow beach day. No rush. ✨\n\nFind a quiet cove and stay until sunset.\n\nRent a car and go see it for yourself.\n\nCalm bays, long sand and clear water. Pick your favourite.\n\nGetting there: Negril, Montego Bay, Portland and the south coast all have a beach worth the drive.\n\nPack water, sunscreen and a towel, and go early to beat the crowds.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\n📷 Photo: Jamaica Tourist Board\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #AirportPickupJamaica #DiscoverTheRealJamaica #JamaicaTravel #TravelJamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_1200_tip",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T12:00:00-05:00",
+   "type": "tip",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_1200_tip_1.jpg",
+    "media/2026-11-11/2026-11-11_1200_tip_2.jpg",
+    "media/2026-11-11/2026-11-11_1200_tip_3.jpg",
+    "media/2026-11-11/2026-11-11_1200_tip_4.jpg",
+    "media/2026-11-11/2026-11-11_1200_tip_5.jpg"
+   ],
+   "copy_text": "Travel Tip: Share the driving. 💡\n\nLong days are easier with two drivers.",
+   "alt": "Tip graphic: Share the driving. (carousel: swipe for more)",
+   "location": {
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
+   },
+   "caption": "Travel Tip: Share the driving. 💡\n\nLong days are easier with two drivers.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #SelfDriveJamaica #ArahRides #JamaicaTravelTips #JamaicaTravel",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_1400_tip",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T14:00:00-05:00",
+   "type": "tip",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_1400_tip_1.jpg",
+    "media/2026-11-11/2026-11-11_1400_tip_2.jpg",
+    "media/2026-11-11/2026-11-11_1400_tip_3.jpg",
+    "media/2026-11-11/2026-11-11_1400_tip_4.jpg",
+    "media/2026-11-11/2026-11-11_1400_tip_5.jpg"
+   ],
+   "copy_text": "Travel Tip: Charge before you go. 💡\n\nHills and valleys can mean patchy signal.",
+   "alt": "Tip graphic: Charge before you go. (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Travel Tip: Charge before you go. 💡\n\nHills and valleys can mean patchy signal.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #JamaicaCarRental #RentJamaican #TravelTips #JamaicaRoadTrip",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_1600_list",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T16:00:00-05:00",
+   "type": "list",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_1600_list_1.jpg",
+    "media/2026-11-11/2026-11-11_1600_list_2.jpg",
+    "media/2026-11-11/2026-11-11_1600_list_3.jpg",
+    "media/2026-11-11/2026-11-11_1600_list_4.jpg",
+    "media/2026-11-11/2026-11-11_1600_list_5.jpg",
+    "media/2026-11-11/2026-11-11_1600_list_6.jpg"
+   ],
+   "copy_text": "Choose the car you want ✅\n\n1) Choose the car you want to drive\n2) Check the real photos\n3) Book and pay by Stripe\n4) Walk straight to your car",
+   "alt": "List graphic: Choose the car you want (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "Choose the car you want ✅\n\n1) Choose the car you want to drive\n2) Check the real photos\n3) Book and pay by Stripe\n4) Walk straight to your car\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #ArahRides #JamaicaTravelTips #VisitJamaica",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_1800_trip",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T18:00:00-05:00",
+   "type": "trip",
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description",
+    "Slide photo from drive (licence-free): Photo: Jamaica Tourist Board",
+    "Slide photo from drive (licence-free): Photo: Jamaica Tourist Board"
+   ],
+   "images": [
+    "media/2026-11-11/2026-11-11_1800_trip_1.jpg",
+    "media/2026-11-11/2026-11-11_1800_trip_2.jpg",
+    "media/2026-11-11/2026-11-11_1800_trip_3.jpg",
+    "media/2026-11-11/2026-11-11_1800_trip_4.jpg",
+    "media/2026-11-11/2026-11-11_1800_trip_5.jpg",
+    "media/2026-11-11/2026-11-11_1800_trip_6.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia:131971780",
+    "name": "wikimedia-131971780",
+    "source": "wikimedia",
+    "credit": "Photo by Thank You (23 Millions+) views, Wikimedia Commons (CC BY 2.0)"
+   },
+   "copy_text": "A Montego Bay day in 3 stops 🗺️\n\n1. Falmouth: Wander old Georgian streets and soak up the history.\n2. Burwood Beach: Find a quiet stretch of sand on the north coast.\n3. Cornwall Beach: Swim and relax on a lively Montego Bay beach.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.",
+   "alt": "Day plan: A Montego Bay day in 3 stops (carousel: swipe for more)",
+   "location": {
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
+   },
+   "caption": "A Montego Bay day in 3 stops 🗺️\n\n1. Falmouth: Wander old Georgian streets and soak up the history.\n2. Burwood Beach: Find a quiet stretch of sand on the north coast.\n3. Cornwall Beach: Swim and relax on a lively Montego Bay beach.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\n📷 Photo by Thank You (23 Millions+) views, Wikimedia Commons (CC BY 2.0)\n\nCar rental for Ocho Rios and the north coast\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#OchoRios #SelfDriveJamaica #DiscoverTheRealJamaica #RoadTripJamaica #JamaicaTravel",
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_2000_qa",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T20:00:00-05:00",
+   "type": "qa",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_2000_qa_1.jpg"
+   ],
+   "copy_text": "How far is Port Antonio from Kingston? 🤔\n\nAbout 2 to 2.5 hours by road.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: How far is Port Antonio from Kingston?",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "How far is Port Antonio from Kingston? 🤔\n\nAbout 2 to 2.5 hours by road.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #AirportPickupJamaica #ArahRides #TravelJamaica #RentACarJamaica",
+   "single": true,
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-11_2200_chat",
+   "date": "2026-11-11",
+   "slot": "2026-11-11T22:00:00-05:00",
+   "type": "chat",
+   "flags": [],
+   "images": [
+    "media/2026-11-11/2026-11-11_2200_chat_1.jpg",
+    "media/2026-11-11/2026-11-11_2200_chat_2.jpg",
+    "media/2026-11-11/2026-11-11_2200_chat_3.jpg",
+    "media/2026-11-11/2026-11-11_2200_chat_4.jpg",
+    "media/2026-11-11/2026-11-11_2200_chat_5.jpg"
+   ],
+   "copy_text": "Pick your car. 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
+   "alt": "WhatsApp chat with Winston: Can I choose my car? / Yes. Browse arahrides.com and pick the car you want to drive. (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Pick your car. 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #SelfDriveJamaica #DiscoverTheRealJamaica #CarRentalJamaica #RentACarJamaica",
    "status": "pending"
   }
  ]
