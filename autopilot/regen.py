@@ -10,7 +10,7 @@ from .render import render_all
 
 log = logging.getLogger("regen")
 
-def run(cfg, start=None, picker=None, led=None, render=True):
+def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
     now = now_fn(cfg); led = led or Ledger(); notes = []
     dec = Q.decisions(); pub = Q.published()
     start = dt.date.fromisoformat(start) if start else now.date()
@@ -22,8 +22,11 @@ def run(cfg, start=None, picker=None, led=None, render=True):
         keep = []
         for p in day["posts"]:
             approved = (dec.get(p["id"]) or {}).get("decision") == "approve"
-            single = cfg.get("all_carousels", True) and len(p.get("images", [])) == 1     # approved single pictures are rebuilt as carousels and need a new OK
-            if (approved and not single) or p["id"] in pub or dt.datetime.fromisoformat(p["slot"]) <= now:
+            single = cfg.get("all_carousels", True) and len(p.get("images", [])) == 1 and not p.get("single")     # approved single pictures are rebuilt as carousels and need a new OK
+            if wipe:                                             # reset: only posts already on Instagram survive, approved or not
+                if p["id"] in pub:
+                    keep.append(p); kept += 1; continue
+            elif (approved and not single) or p["id"] in pub or dt.datetime.fromisoformat(p["slot"]) <= now:
                 keep.append(p); kept += 1; continue
             dropped += 1
             for im in p["images"]:

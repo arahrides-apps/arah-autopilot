@@ -466,7 +466,9 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 nt = FALLBACK.get(t)
                 b.notes.append(f"No fresh photo for a {t} post on {date}: made a {nt} post instead.")
                 t = nt; post["type"] = nt; post["id"] = f"{date}_{hhmm.replace(':', '')}_{nt}"
-        if cfg.get("all_carousels", True) and post["type"] != "carousel" and (len(pages) == 1 or post.get("story_done")):
+        if idx in cfg.get("single_slots", []) and len(pages) == 1:
+            post["single"] = True                       # a deliberate single-picture post (about 20% of the day), not turned into a carousel
+        elif cfg.get("all_carousels", True) and post["type"] != "carousel" and (len(pages) == 1 or post.get("story_done")):
             ol = None
             if post["type"] == "offer":
                 ol = (b.last_offer, "")

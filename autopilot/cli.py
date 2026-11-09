@@ -5,9 +5,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser(prog="autopilot")
     sub = ap.add_subparsers(dest="cmd", required=True)
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
-    r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true")
+    r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true"); r.add_argument("--wipe", action="store_true", help="throw away every post not yet published, approved ones too, and start fresh")
     p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--catch-up", action="store_true", help="post every approved due post now, ignoring the 20-minute spacing")
-    sub.add_parser("recaption"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
+    sub.add_parser("recaption"); rs = sub.add_parser("resend"); rs.add_argument("--since", required=True, help="e.g. 2026-11-01T08:00 (Jamaica time)"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     cfg = config.load()
@@ -17,7 +17,7 @@ def main(argv=None):
         print("generated:", made or "nothing new"); [print("note:", n) for n in notes]
     elif a.cmd == "regenerate":
         from .regen import run as regen
-        made, kept, dropped, notes = regen(cfg, a.start, render=not a.no_render)
+        made, kept, dropped, notes = regen(cfg, a.start, render=not a.no_render, wipe=a.wipe)
         print(f"kept {kept} approved/published posts, redid {dropped}, new drafts:", made or "none"); [print("note:", n) for n in notes]
     elif a.cmd == "publish":
         from .instagram import get_poster, publish_due
@@ -25,6 +25,13 @@ def main(argv=None):
         if not a.dry_run and ig is None:
             print("Manual mode: no posting connection set (IG_USER_ID + IG_ACCESS_TOKEN, or POST_WEBHOOK_URL). Nothing posted."); return 0
         out = publish_due(cfg, ig, a.dry_run, max_posts=5 if a.catch_up else None, spacing=not a.catch_up); print("\n".join(out) or "nothing due")
+    elif a.cmd == "resend":
+        since = dt.datetime.fromisoformat(a.since).replace(tzinfo=config.now(cfg).tzinfo)
+        pub = Q.published(); posts = {p["id"]: p for p in Q.all_posts()}; n = 0
+        for pid, v in list(pub.items()):
+            if v.get("status") == "published" and v.get("media_id") == "webhook" and pid in posts and dt.datetime.fromisoformat(posts[pid]["slot"]) >= since:
+                pub.pop(pid); n += 1
+        Q.save_published(pub); print(f"{n} post(s) marked as not sent, ready to be sent again")
     elif a.cmd == "recaption":
         from .recaption import run as recap
         n = recap(cfg); print(f"rewrote the caption of {n} post(s): new hashtags, search line and location")
