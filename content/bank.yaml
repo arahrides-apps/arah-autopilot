@@ -2271,6 +2271,29 @@ neutral_exp:
   h2: is a road trip.
   sub: Pick up your car and start exploring.
 offer:
+- k: BOARDING NOW
+  h: Last stop of your trip is the lounge.
+  b: Rent for 7 days or more and your Club Mobay or Club Kingston departure pass for 1 guest is free. Conditions apply.
+- k: FREE DEPARTURE PASS
+  h: 7 days on the road. 1 free pass at the gate.
+  b: Every rental of 7 days or more comes with a departure lounge pass for 1 guest. Conditions apply.
+- k: LOUNGE PASS
+  h: Flying out of Jamaica soon?
+  b: Buy a Club Mobay or Club Kingston lounge pass on its own, or rent 7 days or more and get one free. Conditions apply.
+  buy: true
+- k: TRAVEL IN COMFORT
+  h: Beach days. Then lounge time.
+  b: Stay on the road 7 days or more and relax before your flight with a free lounge pass for 1 guest. Conditions apply.
+- k: FREE LOUNGE PASS
+  h: Your car comes with a bonus.
+  b: Book 7 days or more and get a free Club Mobay or Club Kingston departure pass for 1 guest. Conditions apply.
+- k: LOUNGE PASS
+  h: Wi-Fi. Food. Calm. Before your flight.
+  b: Buy a departure lounge pass without renting, or book 7 days or more and get one free. Conditions apply.
+  buy: true
+- k: FREE DEPARTURE PASS
+  h: Make it a full week. We cover the lounge.
+  b: Rent for 7 days or more and the departure lounge pass for 1 guest is on us. Club Mobay or Club Kingston. Conditions apply.
 - k: LOUNGE PASS OFFER
   h: Rent 7+ days. Fly out with a free lounge pass.
   b: Book a rental for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Cannot be combined with other promos. Conditions apply.
