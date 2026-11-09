@@ -1,19 +1,20 @@
 # Arah Rides Instagram Autopilot - settings you may want to change.
 timezone: America/Jamaica          # UTC-5 all year, no daylight saving
-posts_per_day: 1                   # one strong carousel a day (Meta AI audit: 15 a day buried each post before it earned saves/shares). Raise slots+pattern to post more
-days_ahead: 6                      # keep this many future days drafted for your review
+posts_per_day: 12                  # one post every 2 hours, starting at midnight Jamaica time (most reservations are made late at night)
+days_ahead: 3                      # keep this many future days drafted for your review
 publish_grace_hours: 4             # if a post is still unapproved/undelivered this long after its slot, it is skipped (never posted late)
 max_posts_per_day_hard_cap: 15
 min_gap_minutes: 20               # posts approved late are spaced at least this far apart
 max_posts_per_run: 1              # the publisher runs every 10 minutes
 
 # Times in Jamaica time. Must contain at least posts_per_day entries.
-slots: ["11:00"]                    # 11:00 Jamaica time = noon in New York. Posts-per-day slots; add more times here when you raise posts_per_day
-# Previous 15-a-day times: 06:30 ... 20:30 every hour on the half hour
+slots: ["00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]   # Jamaica time
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["place|trip|experience|review|car_hero|brand|trip|place|tip|trip|experience|review|qa"]     # one slot a day; the type rotates daily (destination plans first, they get saved and shared most)
-# Previous 15-a-day pattern, to go back to: [car_hero, qa, experience, tip, brand|chat, carousel|list, trip, experience, tip, place, qa|trust, trip, brand|versus, place, list|carousel]
+pattern: ["car_hero", "brand", "chat|qa", "place", "trip", "experience", "review|tip", "place|trip", "carousel|list", "trip|experience", "qa", "chat|trust"]
+single_slots: [0, 10]               # positions in the pattern posted as a single picture (car_hero at midnight, qa at 20:00); the other 10 of 12 are swipeable carousels
+# Night slots (00:00 to 04:00) carry the booking posts: car photo, lounge offer or brand, Winston chat. Day slots carry destination plans, reviews and tips.
+# The old 15-a-day pattern, to go back to: ["car_hero", "qa", "experience", "tip", "brand|chat", "carousel|list", "trip", "experience", "tip", "place", "qa|trust|review", "trip", "brand|versus", "place", "list|carousel"]
 all_carousels: true               # every feed post is a swipeable carousel (cover + 4 slides); Instagram favours carousels for non-followers
 copy_cooldown_days: 30             # same wording is not reused sooner than this (photos follow the stricter rule below)
 
