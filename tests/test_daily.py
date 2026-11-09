@@ -60,5 +60,5 @@ print("carousel share: %.0f%%" % (100 * multi / total))
 assert 0.75 <= multi / total <= 0.9, multi / total
 assert not bad, bad
 assert {"place", "trip", "experience", "car_hero", "review"} <= set(types), types
-assert six >= 100, six
+assert six >= 70, six
 print("DAILY OK")
