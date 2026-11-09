@@ -1,0 +1,32 @@
+name: Fetch fleet
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Read listings, prices and photos from arahrides.com
+        run: python scripts/fetch_fleet.py
+      - name: Save the result
+        if: always()
+        run: |
+          git config user.name "arah-autopilot"
+          git config user.email "autopilot@users.noreply.github.com"
+          git add content/fleet.yaml content/photo_meta.yaml photos/listings data/fleet_report.txt || true
+          git commit -m "Fetch fleet: listings, prices and photos" || echo "nothing new"
+          git pull --rebase || true
+          git push || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fleet_report
+          path: data/fleet_report.txt
+          retention-days: 14
