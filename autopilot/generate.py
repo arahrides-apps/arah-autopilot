@@ -140,9 +140,15 @@ class DayBuilder:
             if ph:
                 e = self.pick("hero_big")
         if not ph and self.pk.web and self.rng.random() < self.cfg["photos"].get("stock_car_share", 0.25):
-            ph = self.pk.car_stock(self.cfg["photos"].get("fleet_models", []))      # a clean stock photo of one of our models
+            ph = self.pk.car_stock(self.cfg["photos"].get("fleet_models", []))      # a clean stock photo of one of our models...
             if ph:
-                e = self.pick("hero")
+                comp, bg = self.pk.composite_car(ph)                                 # ...placed on a real Jamaica background
+                if comp:
+                    self.led.record(bg.keys(), bg.hash, self.today, bg.source, bg.series)
+                    post.setdefault("photos_extra", []).append({"id": bg.id, "name": bg.name})
+                    ph = comp; e = self.pick("hero")
+                else:
+                    ph = None
         if not ph:
             for _ in range(8):                      # the picture must fit the words: "drive" copy never gets a beach photo
                 e = self.pick("hero")
@@ -167,14 +173,17 @@ class DayBuilder:
         return [(html, 1350)]
 
     def place(self, post, kind="place"):
-        for attempt in range(6):                      # a story needs a photo that really shows the place, so try other places first
+        ph = None
+        for attempt in range(8):                      # a story needs a photo that really shows the place, so try other places first
             e = self.pick(kind)
             ph = self.pk.scene(e["query"], e["place"], ok=rule_for(" ".join([e.get("place", ""), e.get("h1", ""), e.get("h2", ""), e.get("sub", "")])), words=e.get("also"))
             if not ph:
-                return None
+                continue
             t_ = ph.text.lower()
-            if e["place"].lower() in t_ or any(w.lower() in t_ for w in e.get("also", [])) or attempt == 5:
+            if e["place"].lower() in t_ or any(w.lower() in t_ for w in e.get("also", [])) or attempt == 7:
                 break
+        if ph is None:
+            return None
         self.photo_flags(post, ph)
         txt = ph.text.lower()
         ok = e["place"].lower() in txt or any(w.lower() in txt for w in e.get("also", []))
@@ -256,11 +265,15 @@ class DayBuilder:
 
     def moment(self, post, m, days_left):
         b = m["b"]; self.last = {"kind": "moment", "e": m}
-        kicker = m["k"] + (f" · {days_left} DAYS TO GO" if days_left > 0 else "")
+        when = "HAPPENING NOW" if days_left < 0 else ("TODAY" if days_left == 0 else f"{days_left} DAYS TO GO" if days_left > 1 else "TOMORROW")
+        kicker = m["k"] + (f" · {when}" if (days_left > 0 or m.get("event")) else "")
         html = T.event(kicker, m["h"], b, m.get("badge", "")) if m.get("badge") else T.big(kicker, m["h"], b, "gold" if days_left == 0 else "green")
         post["copy_text"] = f"{m['h']} {EMOJI['moment']}\n\n{b}"
-        post["alt"] = f"Seasonal graphic: {m['h']}"
-        post["caption"] = self.cap(post, "moment", post["copy_text"])
+        if m.get("event"):
+            post["copy_text"] += f"\n\n📅 {m['badge'].title().replace('–', ' to ')}\n📍 {m['where']}\n\nRent a car and get there your way. Choose the car you want to drive at {self.cfg['brand']['site']}."
+            post["event_id"] = m["k"]
+        post["alt"] = f"Event graphic: {m['h']}" if m.get("event") else f"Seasonal graphic: {m['h']}"
+        post["caption"] = self.cap(post, "moment", post["copy_text"], place=m.get("loc"))
         return [(html, 1350)]
 
     def offer(self, post, name, o):
@@ -430,6 +443,8 @@ def expand_bank(b):
 
 def active_moment(cfg, moments, date):
     for m in moments:
+        if m.get("event"):
+            continue                                      # events have their own slots (upcoming_events)
         d = dt.date.fromisoformat(str(m["date"])); left = (d - date).days
         if 0 <= left <= m.get("lead_days", 0):
             if m.get("needs_offer"):
@@ -440,6 +455,17 @@ def active_moment(cfg, moments, date):
             return m, left
     return None, 0
 
+def upcoming_events(moments, date):
+    """Events starting soon or happening now: [(event, days_until_start)], soonest first. Ongoing events show days_until_start < 0."""
+    out = []
+    for m in moments:
+        if not m.get("event"):
+            continue
+        start = dt.date.fromisoformat(str(m["date"])); end = dt.date.fromisoformat(str(m.get("end", m["date"]))); left = (start - date).days
+        if date <= end and left <= m.get("lead_days", 21):
+            out.append((m, left))
+    return sorted(out, key=lambda x: (max(x[1], 0), x[0]["date"]))
+
 def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     rng = random.Random(f"{date}-{now.timestamp() // 60}")
     b = DayBuilder(cfg, led, picker, date, rng, load_yaml("moments.yaml"))
@@ -448,6 +474,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     zone = tz(cfg); posts = []; jobs = []
     pattern = cfg["pattern"][: cfg["posts_per_day"]]
     used_mom = used_offer = False
+    events = upcoming_events(b.moments, date); ev_slots = cfg.get("event_slots", [8, 11]); cur = (mom, left)
     for idx, typ0 in enumerate(pattern):
         if "|" in typ0:
             opts = typ0.split("|"); typ0 = opts[(date.toordinal() + idx) % len(opts)]
@@ -455,8 +482,10 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         at = dt.datetime.combine(date, dt.time.fromisoformat(hhmm), zone)
         if at <= now or hhmm in skip:
             continue
-        typ = typ0
-        if mom and typ0 == "tip" and not used_mom:
+        typ = typ0; cur = (mom, left)
+        if events and idx in ev_slots and (ev_slots.index(idx) == 0 or len(events) > 1):
+            k = ev_slots.index(idx); cur = events[(date.toordinal() + k) % len(events)]; typ = "moment"
+        elif mom and typ0 == "tip" and not used_mom:
             typ, used_mom = "moment", True
         elif offer and typ0 in ("brand", "versus") and not used_offer:
             typ, used_offer = "offer", True
@@ -469,7 +498,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "carousel": pages = b.carousel(post)
             elif t == "trip": pages = b.trip(post)
             elif t == "review": pages = b.review(post)
-            elif t == "moment": pages = b.moment(post, mom, left)
+            elif t == "moment": pages = b.moment(post, *cur)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
             if pages is None:

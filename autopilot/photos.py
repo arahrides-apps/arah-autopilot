@@ -9,6 +9,8 @@ from .config import ROOT, load_yaml
 log = logging.getLogger("photos")
 IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
 
+from . import themes as TH
+
 # ---- what a photo shows, so the picture can match the words ("drive" copy never gets a beach photo)
 SETTING_WORDS = {
     "beach": r"beach|sand|shore|\bsea\b|ocean|\bbay\b|loungers|thatch|coast|lagoon|palm frond",
@@ -365,6 +367,21 @@ class Picker:
         self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": k != "pixabay"})["enabled"]]
         self.notes = []
         self.tried = set()
+        self._sc = {}; self._dead = set()          # search results are reused within a run; a source that errors (rate limit) is skipped for the run
+
+    def _search(self, web, query):
+        """One web search, cached for the run. Returns [] when the source is unavailable."""
+        if web.name in self._dead:
+            return []
+        k = (web.name, query)
+        if k not in self._sc:
+            try:
+                self._sc[k] = web.search(query, self.rng)
+            except Exception as e:
+                self.notes.append("%s search failed: %s" % (web.name, str(e)[:80]))
+                if any(c in str(e) for c in ("429", "403", "401")): self._dead.add(web.name)
+                self._sc[k] = []
+        return list(self._sc[k])
 
     def _meta(self, name):
         return self.meta.get(name) or self.meta.get(name.split(".")[0])
@@ -387,7 +404,7 @@ class Picker:
         why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
         if why:
             log.info("skip %s: %s", item["id"], why); return None
-        if not self.cfg["photos"]["allow_people_photos"] and has_face(dest):
+        if not self.cfg["photos"]["allow_people_photos"] and not (kind == "scenery" and self.cfg["photos"].get("allow_people_scenery")) and has_face(dest):
             log.info("skip %s: face detected", item["id"]); return None
         e = extra or {}
         return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
@@ -407,7 +424,7 @@ class Picker:
                 if tag and (not m or m.get("tag") != tag):
                     continue
                 if m:
-                    if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"]) or m["quality"] < 3:
+                    if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"] and not (want == "scenery" and self.cfg["photos"].get("allow_people_scenery"))) or m["quality"] < 3:
                         continue
                     if ok and not ok(self._settings(m, it["name"])):
                         continue
@@ -455,6 +472,8 @@ class Picker:
     BAD_WEB = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|3d|poster|logo|icon|graphic|"
                          r"spider|insect|bug|beetle|butterfl|snake|lizard|frog|animal|dog|cat\b|bird|food|plate|dish|drink|cocktail|"
                          r"portrait|selfie|model|woman|man\b|girl|boy|people|person|crowd|hand|finger|macro|close[- ]?up|texture|pattern|map|text|sign", re.I)
+    BAD_WEB_PEOPLE_OK = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|3d|poster|logo|icon|graphic|spider|insect|bug|beetle|butterfl|snake|lizard|frog|"
+                                   r"selfie|nude|naked|bikini|topless|macro|texture|pattern|\bmap\b|\btext\b|sign\b", re.I)
     SCENIC = re.compile(r"fall|waterfall|cascade|river|beach|sea|ocean|bay|mountain|hill|cliff|cave|pool|lagoon|valley|forest|road|coast|sunset|view|landscape|palm|island|town|city|harbou?r", re.I)
 
     BAD_CAR = re.compile(r"vintage|classic|antique|old\b|histor|retro|illustrat|drawing|vector|cartoon|sketch|clip ?art|render|3d|toy|miniature|diecast|logo|icon|poster|"
@@ -486,6 +505,63 @@ class Picker:
                         return p
         return None
 
+    def composite_car(self, car):
+        """A stock photo of a fleet model (car) placed on a real Jamaica background photo. Returns (Photo, background Photo) or (None, None)
+        when the cut-out is not clean or no Jamaica background is free. The caller then uses one of our own car photos instead."""
+        from . import compose as CP
+        bg = None
+        bg = self.theme_photo("road")                    # Holland Bamboo, highways, roadside scenes: the car sits on a Jamaican road
+        if bg is None:
+            bg = self._own("scenery", None, lambda st: "beach" not in st or "road" in st)
+        if bg is None:
+            return None, None
+        out = self.cache / "composite" / (hashlib.md5((car.id + bg.id).encode()).hexdigest()[:16] + ".jpg")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            ok = CP.compose(car.path, bg.path, str(out))
+        except Exception as e:
+            log.warning("composite failed: %s", e); ok = None
+        if not ok:
+            return None, None
+        c = Photo(car.id, car.name, car.source, str(out), "car", "Car: " + (car.credit or "stock") + "; background: " + (bg.credit or "Arah Rides"), car.text, list(car.flags), car.hash, "", 1080, 1350)
+        c.flags.append("Composite: a stock photo of this model placed on a Jamaica background. It is not one of our own cars: check it looks natural")
+        return c, bg
+
+    def theme_photo(self, theme, ok_extra=None):
+        """A Jamaica photo for a topic (road trip, food, river, culture, couple, family, group, solo): our own labelled photos first, then web photos
+        whose description says Jamaica AND matches the topic. People are welcome here."""
+        queries, rx, _people = TH.THEMES[theme]
+        need = re.compile(rx, re.I)
+        own_first = self.rng.random() >= self.cfg["photos"].get("web_share", 0.5)
+        def own():
+            return self._own("scenery", None, None, about=[w for w in re.findall(r"[a-z]+", rx) if len(w) > 3] or None)
+        if own_first:
+            p = own()
+            if p:
+                p.flags.append("Own photo matched to topic: " + theme); return p
+        qs = list(queries); self.rng.shuffle(qs)
+        for web in self.web:
+            if web.name in self._dead:
+                continue
+            items = []
+            for q in qs[:3]:
+                items += self._search(web, q)
+            self.rng.shuffle(items)
+            good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
+                    and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
+            good = [i for i in good if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) and need.search(i.get("text", "") + " " + i.get("name", ""))
+                    and not self.BAD_WEB_PEOPLE_OK.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", ""))]
+            for it in good[:8]:
+                self.tried.add(it["id"])
+                p = self._load(web, it, "scenery", ["Web photo (%s): check it is Jamaica and suits the post; people are fine, no obvious brands" % theme], {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                if p:
+                    return p
+        if not own_first:
+            p = own()
+            if p:
+                p.flags.append("Own photo matched to topic: " + theme); return p
+        return None
+
     def scene(self, query, place=None, ok=None, strict=False, words=None):
         try:
             return self._scene(query, place, ok, strict, words)
@@ -507,18 +583,25 @@ class Picker:
             if p:
                 p.flags.append("Place confirmed by photo description")
                 return p
+        city, atts = TH.attractions_for(place)
+        if city:                                           # Kingston => Art Walk, Devon House, Emancipation Park...; Ocho Rios => Dunn's River, Fern Gully...
+            names = sorted(set(names) | set(TH.attraction_words(city)))
+        qs = [query] + (self.rng.sample(atts, min(3, len(atts))) if atts else [])
         for web in self.web:
-            try:
-                items = web.search(query, self.rng)
-                if len(items) < 6 and place and place.lower() not in query.lower():
-                    items += web.search(place + " Jamaica", self.rng)
-            except Exception as e:
-                self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
+            if web.name in self._dead:
+                continue
+            items = []
+            for q in qs:
+                items += self._search(web, q)
+            if len(items) < 6 and place and place.lower() not in query.lower():
+                items += self._search(web, place + " Jamaica")
             self.rng.shuffle(items)
+            items = [i for i in items if TH.JA.search(i.get("text", "") + " " + i.get("name", ""))]       # Jamaica only: the photo itself must say so
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             # never use drawings, animals, close-ups or people; the description must show a real landscape
-            good = [i for i in good if not self.BAD_WEB.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("name", ""))]
+            bad = self.BAD_WEB_PEOPLE_OK if self.cfg["photos"].get("allow_people_scenery") else self.BAD_WEB
+            good = [i for i in good if not bad.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("name", ""))]
             if inland:      # no beach, sea or boat photo for a town that is not on the coast
                 good = [i for i in good if not COASTAL_PHOTO.search(i.get("text", ""))]
             if place:   # the description must name the place (or a word that belongs to it)
