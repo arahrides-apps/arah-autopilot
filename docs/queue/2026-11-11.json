@@ -303,51 +303,6 @@
    "status": "pending"
   },
   {
-   "id": "2026-11-11_1600_moment",
-   "date": "2026-11-11",
-   "slot": "2026-11-11T16:00:00-05:00",
-   "type": "moment",
-   "flags": [
-    "Slide photo (group): Photo: Jamaica Tourist Board",
-    "Slide photo (culture): Photo: Jamaica Tourist Board"
-   ],
-   "images": [
-    "media/2026-11-11/2026-11-11_1600_moment_1.jpg",
-    "media/2026-11-11/2026-11-11_1600_moment_2.jpg",
-    "media/2026-11-11/2026-11-11_1600_moment_3.jpg",
-    "media/2026-11-11/2026-11-11_1600_moment_4.jpg",
-    "media/2026-11-11/2026-11-11_1600_moment_5.jpg",
-    "media/2026-11-11/2026-11-11_1600_moment_6.jpg"
-   ],
-   "copy_text": "Fashion week in Ocho Rios. 🇯🇲\n\nRunway shows and style on the north coast. Rent a car and see the rest of Ocho Rios too.\n\n📅 Nov 19 to 22\n📍 Ocho Rios, St. Ann\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.",
-   "event_id": "JAMAICA INTERNATIONAL FASHION WEEK",
-   "alt": "Event graphic: Fashion week in Ocho Rios. (carousel: swipe for more)",
-   "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
-   },
-   "caption": "Fashion week in Ocho Rios. 🇯🇲\n\nRunway shows and style on the north coast. Rent a car and see the rest of Ocho Rios too.\n\n📅 Nov 19 to 22\n📍 Ocho Rios, St. Ann\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #JamaicaCarRental #DiscoverTheRealJamaica #ExploreJamaica #JamaicaVacation",
-   "photos_extra": [
-    {
-     "id": "drive:1-nG6hYW573cZ4TYn4ZZUUEUt13lYyYz5",
-     "name": "JTB_Music_OchoRios_Father_Cradling_Daughter"
-    },
-    {
-     "id": "drive:1m5ba4IR_IhzAEZqkuC0HxX3RuQMmhHSl",
-     "name": "JTB_Romance_OchoRios_Mom__Dad_dancing"
-    },
-    {
-     "id": "drive:1x9_MTs8p_5j3du5ER78viciZhMP6JIIA",
-     "name": "075_JTB_Spring_2025_Kingston_Friends_Airport"
-    },
-    {
-     "id": "drive:1xwWK-kEcdy1oxKEyPS5MD5fDrZi3FKYr",
-     "name": "JTB_Music_PortAntonio_DJ_Tony"
-    }
-   ],
-   "status": "pending"
-  },
-  {
    "id": "2026-11-11_1800_trip",
    "date": "2026-11-11",
    "slot": "2026-11-11T18:00:00-05:00",
@@ -361,13 +316,13 @@
     "media/2026-11-11/2026-11-11_1800_trip_5.jpg",
     "media/2026-11-11/2026-11-11_1800_trip_6.jpg"
    ],
-   "copy_text": "A Montego Bay day in 3 stops 🗺️\n\n1. Cornwall Beach: Swim and relax on a lively Montego Bay beach.\n2. Martha Brae: Drift down the river on a bamboo raft. Slow down and look around.\n3. Burwood Beach: Find a quiet stretch of sand on the north coast.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.",
+   "copy_text": "A Montego Bay day in 3 stops 🗺️\n\n1. Glistening Waters: Take an evening boat tour and watch the water glow around you.\n2. Falmouth: Wander old Georgian streets and soak up the history.\n3. Burwood Beach: Find a quiet stretch of sand on the north coast.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.",
    "alt": "Day plan: A Montego Bay day in 3 stops (carousel: swipe for more)",
    "location": {
     "name": "Sangster International Airport",
     "id": "106111078512570"
    },
-   "caption": "A Montego Bay day in 3 stops 🗺️\n\n1. Cornwall Beach: Swim and relax on a lively Montego Bay beach.\n2. Martha Brae: Drift down the river on a bamboo raft. Slow down and look around.\n3. Burwood Beach: Find a quiet stretch of sand on the north coast.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #JamaicaCarRental #RentJamaican #TravelJamaica #JamaicaTravel",
+   "caption": "A Montego Bay day in 3 stops 🗺️\n\n1. Glistening Waters: Take an evening boat tour and watch the water glow around you.\n2. Falmouth: Wander old Georgian streets and soak up the history.\n3. Burwood Beach: Find a quiet stretch of sand on the north coast.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #AirportPickupJamaica #RentJamaican #RoadTripJamaica #JamaicaItinerary",
    "status": "pending"
   },
   {
@@ -379,13 +334,13 @@
    "images": [
     "media/2026-11-11/2026-11-11_2000_qa_1.jpg"
    ],
-   "copy_text": "Can I pick up in one city and drop off in another? 🤔\n\nYes, one-way rentals are available, for example Montego Bay to Kingston. A one-way fee applies and shows in your quote.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: Can I pick up in one city and drop off in another?",
+   "copy_text": "Is insurance included? 🤔\n\nLiability insurance is included, as Jamaican law requires. The rental company provides it.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: Is insurance included?",
    "location": {
     "name": "Norman Manley International Airport",
     "id": "583154638527853"
    },
-   "caption": "Can I pick up in one city and drop off in another? 🤔\n\nYes, one-way rentals are available, for example Montego Bay to Kingston. A one-way fee applies and shows in your quote.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #JamaicaRentalCar #RentJamaican #JamaicaTravelTips #AirportPickupJamaica",
+   "caption": "Is insurance included? 🤔\n\nLiability insurance is included, as Jamaican law requires. The rental company provides it.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #CarRentalJamaica #RentJamaican #JamaicaTravelTips #RentACarJamaica",
    "single": true,
    "status": "pending"
   },
@@ -395,7 +350,7 @@
    "slot": "2026-11-11T22:00:00-05:00",
    "type": "moment",
    "flags": [
-    "Slide photo (culture): Photo: Jamaica Tourist Board",
+    "Slide photo (culture): Photo by Ymnes, Wikimedia Commons (CC0)",
     "Slide photo (family): Photo: Jamaica Tourist Board"
    ],
    "images": [
@@ -410,22 +365,22 @@
    "event_id": "JAMAICA CUP TENNIS",
    "alt": "Event graphic: Jamaica Cup tennis at Half Moon. (carousel: swipe for more)",
    "location": {
-    "name": "Kingston, Jamaica",
-    "id": "109489972411518"
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
    },
-   "caption": "Jamaica Cup tennis at Half Moon. 🇯🇲\n\nSix days of tennis in Montego Bay. Pick up at MBJ and drive there your way.\n\n📅 Nov 11 to 16\n📍 Half Moon, Montego Bay\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #JamaicaRentalCar #ArahRides #ExploreJamaica #TravelJamaica",
+   "caption": "Jamaica Cup tennis at Half Moon. 🇯🇲\n\nSix days of tennis in Montego Bay. Pick up at MBJ and drive there your way.\n\n📅 Nov 11 to 16\n📍 Half Moon, Montego Bay\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #CarRentalJamaica #DiscoverTheRealJamaica #JamaicaEvents #JamaicaItinerary",
    "photos_extra": [
-    {
-     "id": "drive:1xcB75p1wb-afzp8ofDavJWFjkiOd8qUQ",
-     "name": "DoctorsCaveBeach0185"
-    },
     {
      "id": "drive:1kFoIGvIleuIdlctZrzLkKG8bWL7v69Vv",
      "name": "DoctorsCaveBeach0172"
     },
     {
-     "id": "drive:16yXugN8k8p3gOnrps-YxPVc1K6hTVyqW",
-     "name": "043_JTB_Spring_2025_Kingston_Carnival_Photo"
+     "id": "drive:122_oyfdY1W_VNVXhUD6fajPUlQGkwu5o",
+     "name": "DoctorsCaveBeach0140"
+    },
+    {
+     "id": "wikimedia:72737023",
+     "name": "wikimedia-72737023"
     },
     {
      "id": "drive:1P9y5pb0JBmlAsrC-bUNKcv5VDkyCcQVT",
