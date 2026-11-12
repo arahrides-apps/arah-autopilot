@@ -1141,5 +1141,10 @@
   "at": "2026-11-11T14:01:12.179495-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-11_1800_trip": {
+  "status": "skipped",
+  "at": "2026-11-11T22:01:22.269593-05:00",
+  "note": "not approved in time"
  }
 }
