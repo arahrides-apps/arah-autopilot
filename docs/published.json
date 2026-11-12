@@ -1185,5 +1185,16 @@
   "at": "2026-11-12T10:03:25.632445-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-12_0800_trip": {
+  "status": "skipped",
+  "at": "2026-11-12T12:03:42.054119-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-12_1200_review": {
+  "status": "published",
+  "at": "2026-11-12T12:03:42.054119-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
