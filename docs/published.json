@@ -1196,5 +1196,16 @@
   "at": "2026-11-12T12:03:42.054119-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-12_1400_trip": {
+  "status": "skipped",
+  "at": "2026-11-12T18:04:42.443060-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-12_1800_experience": {
+  "status": "published",
+  "at": "2026-11-12T18:04:42.443060-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
