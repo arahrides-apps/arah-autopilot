@@ -1,6 +1,6 @@
-# Autopilot
+# Arah Rides Instagram Autopilot
 
-Makes regular feed posts (single images and swipe carousels), puts them in a review page, and posts the ones you approve to  at the time slot. Free: GitHub, Instagram's official API, Pexels and Openverse (free photos), Google Drive (your own photos) and open-source tools (Python, Pillow, Playwright/Chromium, OpenCV).
+Makes regular feed posts (single images and swipe carousels), puts them in a review page, and posts the ones you approve to @arahrides at the time slot. Free: GitHub, Instagram's official API, Pexels and Openverse (free photos), Google Drive (your own photos) and open-source tools (Python, Pillow, Playwright/Chromium, OpenCV).
 
 ## What happens each day
 1. **6:00 pm Jamaica time**: the bot drafts the next 3 days, 15 posts per day (6:30 am to 8:30 pm, hourly). Each post gets a fresh photo (or a typographic design), a caption and 5 hashtags at most.
