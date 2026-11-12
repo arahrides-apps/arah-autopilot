@@ -5,7 +5,7 @@ import os, sys, shutil, tempfile, json, random, datetime as dt
 from pathlib import Path
 SRC = Path(__file__).resolve().parent.parent
 TMP = Path(tempfile.mkdtemp())
-shutil.copytree(SRC, TMP / "repo", ignore=shutil.ignore_patterns("cache", "__pycache__", "media", ".git"))
+shutil.copytree(SRC, TMP / "repo", ignore=shutil.ignore_patterns("cache", "__pycache__", "media", ".git", "reels"))
 os.environ["AUTOPILOT_ROOT"] = str(TMP / "repo")
 os.environ["AUTOPILOT_NOW"] = "2026-11-03T05:00:00"
 os.environ["MEDIA_BASE_URL"] = "https://example.test/docs"
