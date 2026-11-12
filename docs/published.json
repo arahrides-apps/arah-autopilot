@@ -1146,5 +1146,16 @@
   "status": "skipped",
   "at": "2026-11-11T22:01:22.269593-05:00",
   "note": "not approved in time"
+ },
+ "2026-11-11_2000_qa": {
+  "status": "skipped",
+  "at": "2026-11-12T00:01:37.131652-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-12_0000_car_hero": {
+  "status": "published",
+  "at": "2026-11-12T00:01:37.131652-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
