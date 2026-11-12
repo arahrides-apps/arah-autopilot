@@ -1174,5 +1174,16 @@
   "at": "2026-11-12T04:02:20.624634-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-12_0600_place": {
+  "status": "skipped",
+  "at": "2026-11-12T10:03:25.632445-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-12_1000_experience": {
+  "status": "published",
+  "at": "2026-11-12T10:03:25.632445-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
