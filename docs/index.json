@@ -1,11 +1,6 @@
 {
- "generated": "2026-11-12T02:42:27.677153-05:00",
- "notes": [
-  "Photo library is running thin: similar photos from the same shoot are coming back sooner than 14 days. Add new photos to the Drive folder.",
-  "Wording for 'experience' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'place' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "unsplash search failed: 403 Client Error: Forbidden for url: https://api.unsplash.com/search/photos?quer"
- ],
+ "generated": "2026-11-12T05:17:20.914919-05:00",
+ "notes": [],
  "posts": [
   {
    "id": "2026-10-29_0630_car_hero",
