@@ -97,6 +97,11 @@ locations:
   port_antonio:   {name: "Port Antonio, Jamaica",                    id: "110674215620951", tag: "#PortAntonio",          kw: "Car rental for Port Antonio and Portland, Jamaica"}
   treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
+reels:
+  per_day: 4                       # this many of each day's carousels go out as Reels (video). 0 = none
+  library: true                   # one a day uses an animated ad from content/reels/
+  publish_as_reel: false          # true = post the video. Turn on only after the Make scenario has a Reel branch (see SETUP); false = still post the carousels
+
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
   near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
