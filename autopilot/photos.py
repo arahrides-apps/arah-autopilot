@@ -35,6 +35,24 @@ KNOWN_PLACES = ["negril", "montego bay", "ocho rios", "port antonio", "portland"
 OLD_PHOTO = re.compile(r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|\bretro\b|\bold\b|1[6-9]\d\d|colonial|engraving|postcard|circa|\bca\.|"
                        r"museum collection|library of congress|nypl|wikimedia commons archive|film grain|scan(ned)?\b", re.I)
 
+def too_old_looking(path):
+    """Black-and-white, sepia or faded scans are rejected by the picture itself, whatever the description says."""
+    try:
+        im = Image.open(path).convert("RGB"); im.thumbnail((200, 200))
+        hsv = im.convert("HSV"); S = hsv.getchannel("S"); H = hsv.getchannel("H")
+        n = S.size[0] * S.size[1]; hist = S.histogram()
+        mean_s = sum(i * c for i, c in enumerate(hist)) / n / 255
+        if mean_s < 0.13:                     # (almost) no colour: black and white
+            return True
+        hh = H.histogram(); top = max(hh[i] for i in range(256)) / n
+        return mean_s < 0.28 and top > 0.55  # one brownish tone over the whole picture: sepia
+    except Exception:
+        return False
+
+def text_ok(text, month):
+    """True when a photo's own words (name, description, tags) are fine to use now: nothing historical, no drawings, no event from another time of year."""
+    return not TH.JUNK.search(text or "") and not TH.out_of_season(text, month)
+
 def is_inland(*texts):
     return bool(INLAND.search(" ".join(t for t in texts if t)))
 
@@ -322,8 +340,9 @@ class WikimediaSource:
             ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata") or {}
             if not ii.get("thumburl") or ii.get("mime") not in ("image/jpeg", "image/png") or not self.free(md):
                 continue
-            desc = re_tags((md.get("ImageDescription") or {}).get("value") or "")
-            out.append({"id": "wikimedia:%s" % p["pageid"], "name": "wikimedia-%s" % p["pageid"], "url": ii["thumburl"],
+            desc = re_tags((md.get("ImageDescription") or {}).get("value") or "") + " " + re_tags((md.get("Categories") or {}).get("value") or "").replace("|", " ")
+            ym = re.search(r"(1[5-9]\d\d|20\d\d)", (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or "")
+            out.append({"year": int(ym.group(1)) if ym else 0, "id": "wikimedia:%s" % p["pageid"], "name": "wikimedia-%s" % p["pageid"], "url": ii["thumburl"],
                         "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0,
                         "text": (p.get("title") or "") + " " + desc,
                         "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
@@ -383,6 +402,19 @@ class Picker:
                 self._sc[k] = []
         return list(self._sc[k])
 
+    MIN_YEAR = 2014
+
+    def _web_ok(self, web, i):
+        """Rules for any web photo: modern (dated 2014 or later when the source gives a date), nothing historical or drawn, nothing from another season,
+        and Wikimedia files (the usual source of odd archive pictures) need a known recent date."""
+        txt = i.get("text", "") + " " + i.get("name", "")
+        if not text_ok(txt, self.today.month) or OLD_PHOTO.search(txt):
+            return False
+        y = i.get("year")
+        if web.name == "wikimedia" and not y:
+            return False
+        return not (y and y < self.MIN_YEAR)
+
     def _meta(self, name):
         return self.meta.get(name) or self.meta.get(name.split(".")[0])
 
@@ -400,6 +432,8 @@ class Picker:
             log.warning("fetch failed %s: %s", item["id"], e); return None
         if min(w, h) < self.cfg["photos"]["min_short_side"]:
             return None
+        if kind != "car" and too_old_looking(dest):
+            log.info("skip %s: black-and-white or sepia look", item["id"]); return None
         hv = L.dhash(dest)
         why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
         if why:
@@ -429,6 +463,8 @@ class Picker:
                     if ok and not ok(self._settings(m, it["name"])):
                         continue
                     if about and not any(w in ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ") for w in about):
+                        continue
+                    if want == "scenery" and not text_ok((m.get("about") or "") + " " + it["name"].replace("_", " "), self.today.month):
                         continue
                     if want == "scenery" and getattr(self, "_inland", False) and COASTAL_PHOTO.search((m.get("about") or "") + " " + it["name"].replace("_", " ")):
                         continue
@@ -541,8 +577,8 @@ class Picker:
                 p.flags.append("Own photo matched to topic: " + theme); return p
         qs = list(queries); self.rng.shuffle(qs)
         for web in self.web:
-            if web.name in self._dead:
-                continue
+            if web.name in self._dead or (web.name == "wikimedia" and theme in TH.PEOPLE):
+                continue                 # Wikimedia people pictures were the source of random strangers: people come from our own photos, Unsplash, Pexels, Pixabay
             items = []
             for q in qs[:3]:
                 items += self._search(web, q)
@@ -550,7 +586,7 @@ class Picker:
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             good = [i for i in good if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) and need.search(i.get("text", "") + " " + i.get("name", ""))
-                    and not self.BAD_WEB_PEOPLE_OK.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", ""))]
+                    and not self.BAD_WEB_PEOPLE_OK.search(i.get("text", "")) and self._web_ok(web, i)]
             for it in good[:8]:
                 self.tried.add(it["id"])
                 p = self._load(web, it, "scenery", ["Web photo (%s): check it is Jamaica and suits the post; people are fine, no obvious brands" % theme], {"credit": it.get("credit", ""), "text": it.get("text", "")})
@@ -561,6 +597,14 @@ class Picker:
             if p:
                 p.flags.append("Own photo matched to topic: " + theme); return p
         return None
+
+    def drawn(self, text, why=""):
+        """No suitable free photo: an accurate illustration of the place or topic instead of a photo of somewhere else. Flagged for review."""
+        from . import illustrate as IL
+        dest = self.cache / "drawn" / (hashlib.md5((text + str(self.today)).encode()).hexdigest()[:14] + ".jpg")
+        kind = IL.make(text, dest)
+        return Photo("drawn:" + dest.stem, "drawn-" + dest.stem, "drawn", str(dest), "scenery", "Arah Rides illustration", text,
+                     ["Illustration (%s scene): no free photo of %s could be confirmed, so this is a drawing, not a photo. Swap in a real photo if you have one" % (kind, text or "this place")], 0, "", 1080, 1350)
 
     def scene(self, query, place=None, ok=None, strict=False, words=None):
         try:
@@ -600,8 +644,8 @@ class Picker:
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             # never use drawings, animals, close-ups or people; the description must show a real landscape
-            bad = self.BAD_WEB_PEOPLE_OK if self.cfg["photos"].get("allow_people_scenery") else self.BAD_WEB
-            good = [i for i in good if not bad.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("text", "")) and not OLD_PHOTO.search(i.get("name", ""))]
+            bad = self.BAD_WEB_PEOPLE_OK if (self.cfg["photos"].get("allow_people_scenery") and web.name != "wikimedia") else self.BAD_WEB
+            good = [i for i in good if not bad.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and self._web_ok(web, i)]
             if inland:      # no beach, sea or boat photo for a town that is not on the coast
                 good = [i for i in good if not COASTAL_PHOTO.search(i.get("text", ""))]
             if place:   # the description must name the place (or a word that belongs to it)

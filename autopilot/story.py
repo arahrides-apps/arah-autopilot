@@ -83,6 +83,10 @@ def _themed(b, post, typ, n):
         if len(out) >= n:
             break
         ph = b.pk.theme_photo(th)
+        if ph is None and th in ("road", "river"):          # nothing free and matching: draw the place instead of showing something unrelated
+            ph = b.pk.drawn({"road": "Holland Bamboo Avenue road trip", "river": "Jamaica waterfall river"}[th])
+            post.setdefault("flags", []).append(ph.flags[0])
+            out.append(ph); continue
         if ph:
             b.led.record(ph.keys(), ph.hash, b.today, ph.source, ph.series)
             post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})

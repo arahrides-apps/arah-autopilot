@@ -63,3 +63,24 @@ def attraction_words(city):
         if len(w) > 3:
             out.add(w)
     return sorted(out)
+
+
+# ---- time of year: a photo of an event is only used when that event is near (Carnival is in April, so no Carnival photos in November)
+SEASONAL = [   # (words in the photo's name/description, months it may be used)
+    (re.compile(r"carnival|j'?ouvert|bacchanal|\bmas\b|masquerade|soca", re.I), {3, 4}),
+    (re.compile(r"christmas|santa|xmas|grand market|jonkanoo|john canoe", re.I), {11, 12}),
+    (re.compile(r"easter|bun and cheese festival", re.I), {3, 4}),
+    (re.compile(r"independence|emancipation day|heroes day", re.I), {7, 8, 10}),
+    (re.compile(r"reggae sumfest|sumfest", re.I), {7, 8}),
+    (re.compile(r"reggae marathon", re.I), {11, 12}),
+    (re.compile(r"spring break|summer", re.I), {3, 4, 5, 6, 7, 8}),
+]
+def out_of_season(text, month):
+    t = text or ""
+    return any(rx.search(t) and month not in months for rx, months in SEASONAL)
+
+# ---- things that make a photo wrong for a car-rental brand even when the place matches
+JUNK = re.compile(r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
+                  r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
+                  r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
+                  r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)

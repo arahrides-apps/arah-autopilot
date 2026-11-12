@@ -37,6 +37,11 @@ class IG:
         if alt:
             p["alt_text"] = alt[:1000]
         return self._call("POST", f"{self.user}/media", **p)["id"]
+    def post_reel(self, video_url, caption, meta=None):
+        cid = self._call("POST", f"{self.user}/media", media_type="REELS", video_url=video_url, caption=caption, share_to_feed="true")["id"]
+        self.wait(cid, tries=60, pause=5)
+        mid = self.publish(cid)
+        return mid, self.permalink(mid)
     def carousel(self, children, caption):
         return self._call("POST", f"{self.user}/media", media_type="CAROUSEL", children=",".join(children), caption=caption)["id"]
     def wait(self, cid, tries=30, pause=4):
@@ -105,6 +110,14 @@ class WebhookPoster:
         if r.status_code >= 300:
             raise IGError(f"webhook {r.status_code} {r.text[:150]}")
         return "webhook", ""
+    def post_reel(self, video_url, caption, meta=None):
+        """Same webhook, with media_type REELS and a video_url. The Make scenario needs a Router: media_type = REELS goes to 'Create a Reel'."""
+        body = {"id": (meta or {}).get("id", ""), "slot": (meta or {}).get("slot", ""), "caption": caption, "media_type": "REELS", "video_url": video_url,
+                "location_name": (meta or {}).get("location", {}).get("name", ""), "location_id": (meta or {}).get("location", {}).get("id", "")}
+        r = self.s.post(self.url, json=body, timeout=60)
+        if r.status_code >= 300:
+            raise IGError(f"webhook {r.status_code} {r.text[:150]}")
+        return "webhook", ""
 
 def get_poster(cfg):
     if os.environ.get("POST_WEBHOOK_URL"):
@@ -169,7 +182,10 @@ def publish_due(cfg, ig=None, dry_run=False, max_posts=None, spacing=True):
         try:
             if dry_run:
                 log_.append(f"DRY RUN would post {p['id']} ({len(urls)} image(s))"); n += 1; continue
-            mid, link = ig.post(urls, cap_txt, p.get("alt"), meta=p)
+            if p.get("reel") and cfg.get("reels", {}).get("publish_as_reel", False) and hasattr(ig, "post_reel"):
+                mid, link = ig.post_reel(base + p["reel"], cap_txt, meta=p)
+            else:
+                mid, link = ig.post(urls, cap_txt, p.get("alt"), meta=p)
             pub[p["id"]] = {"status": "published", "at": now.isoformat(), "media_id": mid, "permalink": link}
             log_.append(f"published {p['id']} {link}"); count += 1; n += 1; last = now
         except IGError as e:

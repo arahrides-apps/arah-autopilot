@@ -338,6 +338,9 @@ class DayBuilder:
         if ph:
             self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
             post.setdefault("flags", []).append("Slide photo from %s (licence-free): %s" % (ph.source, ph.credit or "no credit needed"))
+            return ph
+        ph = self.pk.drawn(story.nice(key))
+        post.setdefault("flags", []).append(ph.flags[0])
         return ph
 
     def review(self, post):
@@ -523,6 +526,9 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         posts.append(post)
     if render and jobs:
         render_all(jobs)
+        from . import reel
+        rn = reel.add_reels(cfg, posts, date)
+        b.notes += rn
     if notes is not None:
         notes += b.notes
     return posts
