@@ -1,6 +1,11 @@
 name: Index new photos
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      deep:
+        description: "Deep search: look at EVERY photo again (JTB, Drive, hand-labelled), compare with free web photos, and have Claude review them"
+        type: boolean
+        default: true
 concurrency:
   group: autopilot
   cancel-in-progress: false
@@ -9,7 +14,7 @@ permissions:
 jobs:
   index:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,9 +24,11 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Picture recognition (CPU)
         run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install transformers
-      - name: Index photos by GPS location
+      - name: Index photos (GPS, picture recognition, web comparison, Claude review)
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INDEX_FORCE: ${{ inputs.deep && '1' || '' }}
         run: python -m autopilot index-photos
       - name: Save
         run: |
@@ -29,6 +36,6 @@ jobs:
           git config user.email "autopilot@users.noreply.github.com"
           git add -A
           git diff --cached --quiet && echo "nothing new" && exit 0
-          git commit -m "Index new photos"
+          git commit -m "Index photos (deep)"
           git pull --rebase
           git push
