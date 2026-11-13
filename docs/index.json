@@ -1,14 +1,6 @@
 {
- "generated": "2026-11-13T02:14:51.904227-05:00",
- "notes": [
-  "No fresh photo for a place post on 2026-11-16: made a tip post instead.",
-  "Photo library is running thin: similar photos from the same shoot are coming back sooner than 14 days. Add new photos to the Drive folder.",
-  "Reels skipped: ffmpeg not found",
-  "Wording for 'chat' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'experience' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "Wording for 'place' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
-  "unsplash search failed: 403 Client Error: Forbidden for url: https://api.unsplash.com/search/photos?quer"
- ],
+ "generated": "2026-11-13T04:58:24.926311-05:00",
+ "notes": [],
  "posts": [
   {
    "id": "2026-10-30_0630_car_hero",
