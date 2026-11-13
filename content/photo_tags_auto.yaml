@@ -1,0 +1,8362 @@
+# Made by index-photos: what each photo looks like (picture recognition). Used to widen matching; hand labels are never changed.
+drive:1-1H97CTzaT1n8BrmGEyzCDfdmuMwocuZ:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.95
+  label: road trip
+  name: c5c2ef6b-3516-4453-b451-8edf6ec7ee57
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1-3saOOMouUVu6q0-_Yfgh8vSHOMWuHTT:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.96
+  label: road trip
+  name: white_corolla_cross_rear_cutting
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1-5-DTJb3g-6xzEaBUV2mUsRdSw7m8198:
+  also: market
+  cats:
+  - culture
+  - food
+  confidence: 0.75
+  label: fruit
+  name: IMG_9760
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:1-AsLVjD5_x4Ws8jv9BlHK6JmBR087zru:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.59
+  label: attraction
+  name: img0008
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1-DG81zBqApdsIXpA1V1QxoZPnL-cFgao:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC03609
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1-JykCIenKO40_2Q57Lb2kBGWm-68fFQK:
+  also: drinks
+  cats: []
+  confidence: 0.36
+  label: null
+  name: img0004
+  web: ''
+  words: ''
+drive:1-UXYSh0zKr-OU33bK27_fAAlSYKqLFRo:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
+  name: DSC_1423
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1-gW1_x0CFdvCT9wyroTKH3DPq9I92s5l:
+  also: road trip
+  cats:
+  - airport
+  confidence: 0.9
+  label: airport
+  name: IMG_9104
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1-gshgpf8zdOI6zNeHFtQRB091PEXE0BN:
+  also: dunn's river falls
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: dunn's river falls
+  name: DunnsRiverFalls0253
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:1-nG6hYW573cZ4TYn4ZZUUEUt13lYyYz5:
+  also: jamaican patty
+  cats:
+  - music
+  - nightlife
+  - people
+  confidence: 0.79
+  label: nightlife
+  name: JTB_Music_OchoRios_Father_Cradling_Daughter
+  web: ''
+  words: Jamaica nightlife night party dancehall
+drive:1-rNryW0hhhxY2K1MrhRP0sFRieaSt8wa:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.69
+  label: rental car
+  name: DSC_1421
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1-tNFN49al1e-x55NNTGvWHsWLJ9dQGWi:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: d23db0e0-2a67-451b-a5b6-06b8bdff5c13
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1-tZgZSxPrhQsBWhP6CoHMncuIEJooBNT:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 006_JTB_Spring_2025_Kingston_Carnival
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1-wJJp8zb4-sSQ4IPkGg6vxblfWlH5nHE:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.75
+  label: attraction
+  name: DJI_0632
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1-wVok_EK2mgcEpCT6KkGIB0H3hQ2mi2K:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: silver_foton_street_front
+  web: ''
+  words: Arah Rides rental vehicle
+drive:10-0yRO2bkVwETd1eYDq_KoxY0cWcxpLY:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.55
+  label: attraction
+  name: img0014
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:10Dy8JwjSdS-IN63c_RJ2x39LSOxx1Ypv:
+  also: food
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 021_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:10ES5s1p6fJp8KoyTYXwKLj6LUa4gQ3Eu:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.64
+  label: road trip
+  name: DSC03734
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:10EX43P8aIs1lvaMpoFRVruascdgy5_XU:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.98
+  label: river rafting
+  name: img0005
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:10f0mRhAfKdtKPwejEOUAJBCY9-GhQ3CA:
+  also: people
+  cats:
+  - airport
+  confidence: 0.83
+  label: airport
+  name: 017_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport_Greeting
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:10k22Ww-ZY0roXO34WoG6fKmYmfkabXIs:
+  also: market
+  cats:
+  - culture
+  - food
+  confidence: 0.99
+  label: fruit
+  name: 015_JTB_Spring_2025_Kingston_Fruits_Market
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:10khkJGhMSLjXPt51bqtgRv67ZU6kFFaC:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.83
+  label: waterfall
+  name: ReachFalls0029
+  web: ''
+  words: Jamaica waterfall river nature
+drive:10qdZfeCzeXaS0XUtbXKsi0BFa2lR4alG:
+  also: people
+  cats:
+  - attractions
+  confidence: 0.95
+  label: attraction
+  name: OchoRiosBeach0404
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:10tuURe512mA7FxL1QpHP5g4vblWwpnzD:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.68
+  label: road trip
+  name: mountain_road_white_car_b
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:10u7jbZ-sDoST_4LGamATpExojMU8A0D6:
+  also: resort
+  cats:
+  - drinks
+  - food
+  confidence: 0.55
+  label: drinks
+  name: beach_loungers_thatch_huts
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:111bH0yS2YPdHtewkCaKbQ3j4I9T_n7WS:
+  also: drinks
+  cats: []
+  confidence: 0.38
+  label: null
+  name: IMG_9741
+  web: ''
+  words: ''
+drive:119BYSd4ieHWJTkXKcHnItfVcRnIb3dsR:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: 3dcf4499-bd54-4e4f-b576-52aeeb5368ad
+  web: ''
+  words: Arah Rides rental vehicle
+drive:119Xk4XDLVy9DAifzAEgeldmahPgNsOsF:
+  also: drinks
+  cats: []
+  confidence: 0.41
+  label: null
+  name: IMG_9767
+  web: ''
+  words: ''
+drive:11IWRJ-4IrGhEHqelgAu5Lfhwwi2rGhF7:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: waterfall
+  name: img0013
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:11K17M4yDAH9cq77Yp9sHP9trFoV6xFug:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.83
+  label: road trip
+  name: white_corolla_cross_front_highway_b
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:11OscxVTDXe8kD5oS-s6dPiq6ueSGGy8F:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: DSC_1501
+  web: ''
+  words: Arah Rides rental vehicle
+drive:11PflAVFnymA0pEtVslgnChAHHUGgoN7R:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.99
+  label: attraction
+  name: BlueLagoon0722
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:11PoQJwEwmGq0ucCf9itPrdZgqeq4oJzA:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0242
+  web: ''
+  words: Arah Rides rental vehicle
+drive:11QteJX2iNh9ycPR6knaV_TOWWkG7eW_m:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: 003430cc-6d51-4d57-badd-3ba3bae2973a
+  web: ''
+  words: Arah Rides rental vehicle
+drive:11foKinmMXGDrpN9Q0XGSn6gEIMWx3MwX:
+  also: drinks
+  cats:
+  - culture
+  - food
+  confidence: 0.49
+  label: fruit
+  name: IMG_9759
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:11hnJ_g8i4VEsnK_a8GRq0SKF5DoQ3Z0B:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: highway_sea_view_cars
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:11ofJJHwa2JSXdW2LTZUhJwq3YIPKuQV9:
+  also: road trip
+  cats:
+  - airport
+  confidence: 0.85
+  label: airport
+  name: IMG_9101
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:11sPEEMG4M8nCfy86crJrWEXQLXfagbAC:
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.95
+  label: dunn's river falls
+  name: 093_JTB_Adventure_OchoRios_BlueHole_IslandGullyFalls_SeasonedTraveller_man_on_platform
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:122_oyfdY1W_VNVXhUD6fajPUlQGkwu5o:
+  also: resort
+  cats: []
+  confidence: 0.33
+  label: null
+  name: DoctorsCaveBeach0140
+  web: ''
+  words: ''
+drive:126Km03Kk6OYxrI_FzRTwGnM7aIYNKhVi:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC03640
+  web: ''
+  words: Arah Rides rental vehicle
+drive:126yq9tixVIGKspu9g5Ezidy5FAEQutJf:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.59
+  label: river rafting
+  name: DIM_9544
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:12712UrM59HQXRwCP8UZnwXGm9tCIaECO:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: Hover_20240323_1711289458988.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:12EFRwb-qc-WWrrxj4am4bbNHU5P8FCwA:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.9
+  label: people
+  name: 039_JTB_Spring_2025_Kingston_Lime_Cay_Beach_Friends
+  web: ''
+  words: Jamaica people friends family travellers
+drive:12LPr_0MwFwAWlT8HYWd39be48M896GCN:
+  also: rental car
+  cats:
+  - food
+  confidence: 0.54
+  label: jamaican patty
+  name: DSC_1466
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:12O19RhYhWp32ugkVyJnkNBjFibbyafU3:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: IMG_9869
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:12cZstmDMn77Di0qwBm1pqJsR22oa8M1d:
+  also: reggae
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 1.0
+  label: bob marley
+  name: img0006
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:12kQPq5HGn2O4JASr-mzGAj0W9Ce26Hw4:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.84
+  label: rental car
+  name: IMG_8957
+  web: ''
+  words: Arah Rides rental vehicle
+drive:12t5xwFeQp9LhhUwgF1uJaSErgCmPbv05:
+  also: not usable
+  cats:
+  - cars
+  confidence: 0.79
+  label: rental car
+  name: DSC_1463
+  web: ''
+  words: Arah Rides rental vehicle
+drive:12zXcWEeAhpDqpT5cfa1tnpYycru_myJy:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.93
+  label: waterfall
+  name: 228_JTB_Narure_PortAntonio_FrenchmansCove_River
+  web: ''
+  words: Jamaica waterfall river nature
+drive:138Vhenx6UcCrUsM6cGNNoPVs46-RvVtb:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: DSC_1460
+  web: ''
+  words: Arah Rides rental vehicle
+drive:13AS8a8-W27DiMBFAMv1qZgUlygvSzRbh:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.54
+  label: people
+  name: img0007
+  web: ''
+  words: Jamaica people friends family travellers
+drive:13EkvNYUSF3l07BzSrfmHRZkZpegy9FPv:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.53
+  label: river rafting
+  name: img0008
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:13LpQSddCMZ7ElQKtrW60Ny_6j03Es6P1:
+  also: river rafting
+  cats: []
+  confidence: 0.32
+  label: null
+  name: img0010
+  web: ''
+  words: ''
+drive:13MXB5nhdDbEoz8kl2vTa2MOARLJbJrqm:
+  also: beach
+  cats: []
+  confidence: 0.21
+  label: null
+  name: img0003
+  web: ''
+  words: ''
+drive:13PwAXIR1PEGgdQ0CPqjYzjON7lEJhKNP:
+  also: attraction
+  cats: []
+  confidence: 0.41
+  label: null
+  name: img0008
+  web: ''
+  words: ''
+drive:13YwJUE7J4ddcBYaCg_4fISr5eT3HlTs9:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: 73d5b66d-e11e-4d29-880e-dcf2baedede3
+  web: ''
+  words: Arah Rides rental vehicle
+drive:13iyse6RyMxKPmU51l6wdwAJWTH9zjbu0:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
+  name: red_mg_hs_front_right
+  web: ''
+  words: Arah Rides rental vehicle
+drive:13pNllusvPTeEn8xLCWiiQRcTs9HyHsxp:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.58
+  label: river rafting
+  name: DIM_0427
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:13tZIAXcok57KdmYZzLNKXo5UP_hXlpIB:
+  also: food
+  cats:
+  - food
+  confidence: 1.0
+  label: jerk chicken
+  name: 117_JTB_Brand_PortAntonio_Chicken_on_grill
+  web: jerk chicken
+  words: Jamaica jerk chicken food jerk
+drive:13vQBkm_tLtnFQF_2AssMq1TChrzM5uGO:
+  also: sunrise
+  cats: []
+  confidence: 0.34
+  label: null
+  name: img0056
+  web: ''
+  words: ''
+drive:13ye6bToPNq5n32pblgGpTmx24pUDRyjM:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.55
+  label: people
+  name: 061_JTB_Spring_2025_Kingston_Lime_Cay_Romance_Beach
+  web: ''
+  words: Jamaica people friends family travellers
+drive:147OtOAWwSXQ-D4n-jsDlEr2WkmcYy4sF:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.74
+  label: road trip
+  name: dark_yaris_cross_beach_wide
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:14EONV5ORszs3icDpXP0goU3xC7fMWcXA:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.91
+  label: attraction
+  name: img0009
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:14Guf7E5tDB36eaBz1AMxNft_FKkYvDiI:
+  also: waterfall
+  cats:
+  - attractions
+  - nature
+  confidence: 0.63
+  label: river rafting
+  name: DSC03613SELECT_V11
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:14I7qs9WnnYJnbeIfrLYmI0wIQdqrjTff:
+  also: drinks
+  cats: []
+  confidence: 0.35
+  label: null
+  name: IMG_9126
+  web: ''
+  words: ''
+drive:14KdEzZnUZGSH3kD7Yt9SZ7gI_OZlwfx1:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.62
+  label: attraction
+  name: IMG_9135
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:14QNlKsMxBmqExhQxmFX3ng0YJh17tTDi:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.45
+  label: drinks
+  name: img0027
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:14ZLdZWxN_S1LCqSsz2z-YkriVFRhrbwZ:
+  also: attraction
+  cats:
+  - beach
+  confidence: 0.49
+  label: beach
+  name: img0007
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:14ePe-6vTs2H1lQ_Q7kdbbdMBks7-VG8u:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: silver_minibus_front
+  web: ''
+  words: Arah Rides rental vehicle
+drive:14kSalz4I2nYjGRPF6l8we9Fr_eZE2FF8:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC_1458
+  web: ''
+  words: Arah Rides rental vehicle
+drive:14neEL1PZZfLDmagli3L61ktNEeRQZSUE:
+  also: jerk chicken
+  cats:
+  - food
+  confidence: 0.56
+  label: food
+  name: 028_JTB_Spring_2025_Kingston_GrandHotelExcelsiorPortRoyal_Cuisine_Esco_Fish
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:14weYAwInNkda21NoUxx6bZzM1y2UqZ-U:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.95
+  label: beach
+  name: DJI_0011
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:14yxn8VZ2hkeH-Kfn9L8tTvlR3uBRJZrj:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1490
+  web: ''
+  words: Arah Rides rental vehicle
+drive:151B5nzXpbb-bJN95DBGq5lLGpjEU-7sJ:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.63
+  label: rental car
+  name: IMG_9076
+  web: ''
+  words: Arah Rides rental vehicle
+drive:152qhZN7spipdFYbkh-s3h-kZpDiG5ilx:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.82
+  label: rental car
+  name: DSC03547
+  web: ''
+  words: Arah Rides rental vehicle
+drive:157_WJ1AkHey8L31Ve-Au8m__wg4Pa1ax:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.93
+  label: attraction
+  name: img0003
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:15A2bB3XqVg8bWg66LyHHbg9SqPN1ckmo:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.7
+  label: attraction
+  name: Falmouth0694
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:15JfK4xKOR_bKBtqon1kzGVdIpaxHBpBH:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.83
+  label: road trip
+  name: IMG_9098
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:15KGvGQNlvE3z0h9vJHcI9EoX5llTiJgY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: a252067f-6368-423b-bb47-cfb667ff183d
+  web: ''
+  words: Arah Rides rental vehicle
+drive:15Pl9VwrTzF44sfgk_9Xl1QGgiN5PFyh4:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
+  name: 0d54c3a9-7b04-4c4e-ab7f-299e7ef7cc42
+  web: ''
+  words: Arah Rides rental vehicle
+drive:15RXfaRzMz8GpRmUMCHwfLr7x9pZRe0EJ:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: Hover_20240323_1711289453526.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:15Zr8coBuuZgfi2Qr6exAL3_dsDTXqSMK:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.84
+  label: beach
+  name: img0015
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:15ciyJeSpAH6UyJQIcAy_RhtigbB63nXJ:
+  also: people
+  cats:
+  - airport
+  confidence: 0.99
+  label: airport
+  name: 020_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport_Suitcases
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:15dcSHT6C0O-_gVCodd7j98JJabSFfA4T:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.77
+  label: rental car
+  name: DSC_1476
+  web: ''
+  words: Arah Rides rental vehicle
+drive:15eXgnBMGtwytV5yZtXPurVJMxTppUdQU:
+  also: jerk chicken
+  cats: []
+  confidence: 0.4
+  label: null
+  name: DIM_9300
+  web: ''
+  words: ''
+drive:15fvwi-_k4VRM1wng6t90qz7b0y7JIJrA:
+  also: market
+  cats: []
+  confidence: 0.42
+  label: null
+  name: IMG_9738
+  web: ''
+  words: ''
+drive:15hBUr0IaWrDWxvsyQvbI24bCMIb5LgMk:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.68
+  label: blue mountains
+  name: IMG_8966
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:15n_Uj6hQfAjVRSisQ8Pgeu8pP4-jRXzE:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.88
+  label: attraction
+  name: DoctorsCaveBeach0167
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:15si7lBHTuxLaz8Qe-RnUm3wJM3B2BgFE:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: hills_sea_view_soft
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:15w_fFExSHPiDQJi_oCZZLplCqoh1GU2R:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 1.0
+  label: bob marley
+  name: IMG_9060
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1657q-MH4WrLfqFMJHzfDGH2wJ7n1D3gR:
+  also: attraction
+  cats:
+  - drinks
+  - food
+  confidence: 0.53
+  label: drinks
+  name: img0128
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:167lRexMsFn7_2h_m8S25uWsX7jxVBRWf:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.73
+  label: attraction
+  name: DJI_0864
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:16AC_UJQ7HtYlzcgNcsTJK5PnxN06Kz2m:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.48
+  label: rental car
+  name: DSC_1420
+  web: ''
+  words: Arah Rides rental vehicle
+drive:16LdvX72ZCoLiWhoxBGx3DPO0zGZ_5iU7:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: IMG_0254
+  web: ''
+  words: Arah Rides rental vehicle
+drive:16MHzjOIqu_2Boz7QbWI219sCuuqMIuAY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1471
+  web: ''
+  words: Arah Rides rental vehicle
+drive:16MVnZEF6iRjLuMuxHtxHfnxMFUjJVkyC:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.62
+  label: rental car
+  name: DSC_1478
+  web: ''
+  words: Arah Rides rental vehicle
+drive:16MugTiDXptVpBEUjNdj75YK1H3aFUNpl:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.45
+  label: drinks
+  name: img0019
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:16ZdDhmve_mukOVDqtAts8N-gYN7yFWzp:
+  also: dunn's river falls
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: dunn's river falls
+  name: DunnsRiverFalls0242
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:16kHsOzYJgj2pco_VRfrZ4iKHOYeYUVHd:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.45
+  label: drinks
+  name: Picture1
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:16qksEscm9vprGlqAUzPZOZGvZ79GJ90N:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.99
+  label: attraction
+  name: IMG_9139
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:16rCc_1sMa19XDDtBuKZLPuUC8DkvuT6v:
+  also: attraction
+  cats: []
+  confidence: 0.42
+  label: null
+  name: 095_JTB_Adventure_OchoRios_ColumbusCove_Kids_chatting_with_boat_captain
+  web: ''
+  words: ''
+drive:16sffREBaD-eiQgmoiKGN6jz9R8nnQIwX:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: IMG_8952
+  web: ''
+  words: Arah Rides rental vehicle
+drive:16soOD9JzJZssS-csKa-H9o1KYI1JXS0y:
+  also: attraction
+  cats:
+  - drinks
+  - food
+  confidence: 0.87
+  label: drinks
+  name: img0009
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:16yTCxqaJIR9uvkN3TKPHtd2fEwn1TPhV:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.63
+  label: beach
+  name: img0013
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:16yXugN8k8p3gOnrps-YxPVc1K6hTVyqW:
+  also: drinks
+  cats: []
+  confidence: 0.87
+  label: not usable
+  name: 043_JTB_Spring_2025_Kingston_Carnival_Photo
+  web: ''
+  words: not usable
+drive:171ZSdJHcQ6Ws8PAC9S_nDW56p4xAIfne:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.96
+  label: road trip
+  name: 0b5c7c04-517b-4839-95fa-b1c3924e2219
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:17AaMMTcI4D70F9waEUGGpL-CvJOA1Cli:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.96
+  label: attraction
+  name: DJI_0578
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:17BzcMhWO6iGcgKXSRF-ANOlM-E4d1yPJ:
+  also: beach
+  cats: []
+  confidence: 0.36
+  label: null
+  name: img0003
+  web: ''
+  words: ''
+drive:17DoxePzl70WnbLvzZ2XcuqpL3G2hHUMf:
+  also: jamaican patty
+  cats: []
+  confidence: 0.37
+  label: null
+  name: IMG_9749
+  web: ''
+  words: ''
+drive:17GaAas9M9AjDy2mr29kKTcgzxP1nAUwX:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.78
+  label: beach
+  name: img0004
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:17Mf0DqdcxbyG67jTDNym70BSgsl_i6DG:
+  also: drinks
+  cats:
+  - culture
+  - food
+  confidence: 0.99
+  label: fruit
+  name: img0186
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:17MofgQK8i09u1VgiX-ukC4hNQn2fLe8u:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: IMG_0259
+  web: ''
+  words: Arah Rides rental vehicle
+drive:17PbmT1IZ0kVgKBTADlxkHlYnVE8o8dES:
+  also: resort
+  cats:
+  - drinks
+  - food
+  confidence: 0.69
+  label: drinks
+  name: DIM_0422
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:17Tm4L-s52Nbw5TmDvacgwmXh_8IhAbqg:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.72
+  label: road trip
+  name: dark_yaris_cross_beach_portrait
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:17WNAXeKjfS12iHKu656pvtKid2eSmtie:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.8
+  label: beach
+  name: DoctorsCaveBeach6342
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:17XHsGp6bly4OdSlSC2Yg6a_GRErWpDJd:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.81
+  label: rental car
+  name: DSC_1413
+  web: ''
+  words: Arah Rides rental vehicle
+drive:17mLmmMTbglDDeP-teBpNlBP_n97OCMjU:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.7
+  label: people
+  name: IMG_9774
+  web: ''
+  words: Jamaica people friends family travellers
+drive:17tki2obwYtQLCOxZQRh4AfZoaZOu0MFt:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.59
+  label: drinks
+  name: 012_JTB_Spring_2025_Kingston_Lime_Cay_Boat
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1821BqSUf23zyLDj3q8Zenb2UCqug_zRa:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: DSC03599
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1879x4mRdW3OaMwOMh9H1BKQRsxzCb_6y:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.62
+  label: attraction
+  name: DJI_0993
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:18hOCEiGWbnY2Sf6Dl3zWIkNejEofdTqZ:
+  also: jerk chicken
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.67
+  label: market
+  name: RioGrande5501
+  web: ''
+  words: Jamaica market craft culture
+drive:18jaXyUpie3EiwPjmpFIhr4uKsmL9EavT:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
+  name: DSC_1488
+  web: ''
+  words: Arah Rides rental vehicle
+drive:18oF5NtZqW6FNhbM9_kDklvaV3D3zCs6z:
+  also: food
+  cats:
+  - food
+  confidence: 0.95
+  label: jerk chicken
+  name: img0019
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:18qqaM-7J2Q-K3cHMidaze3arWqgZjaxP:
+  also: drinks
+  cats: []
+  confidence: 0.22
+  label: null
+  name: img0025
+  web: ''
+  words: ''
+drive:18xKgxRJxsSJ0A7i3affqvZUjoFhH6J37:
+  also: market
+  cats:
+  - food
+  confidence: 0.96
+  label: jerk chicken
+  name: DIM_9356
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:18yAggPp0B1dCLDjOhHcxZlmCeJTE7N2W:
+  also: fruit
+  cats:
+  - drinks
+  - food
+  confidence: 0.55
+  label: drinks
+  name: IMG_9777
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:19-Bm7y-eps_jyO1qO200A6YgbYd2FPkB:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: DSC03626
+  web: ''
+  words: Arah Rides rental vehicle
+drive:19-u6ARbxNwdLb4z61ofReoLn4XULXivH:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.75
+  label: attraction
+  name: IMG_9140
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:19EYWARPnpSbJ7_51rlgGsHQ9zJUE39yF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1411
+  web: ''
+  words: Arah Rides rental vehicle
+drive:19J_BovQKqa6-iqR9rRZtPA6-TqslVt-e:
+  also: road trip
+  cats:
+  - food
+  confidence: 0.66
+  label: jamaican patty
+  name: IMG_9745
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:19MIAU9_5zPLN7TQrqCATF7eORVqJnZ7m:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.9
+  label: road trip
+  name: '2'
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:19NoGn31Bb0LubJaBrFcWKnTSlAnS9p1q:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.57
+  label: road trip
+  name: IMG_8947
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:19OGMdNfLDQ0JL7n3AnLr-fnoFX6xkYsN:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.47
+  label: attraction
+  name: IMG_9124
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:19T_XL_BA8Jqgrip_3RBv9h5tzoFFIimw:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.55
+  label: attraction
+  name: 141_JTB_Brand_PortAntonio_Woman_on_swing_Frenchmans_cove
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:19UPkDtqJ2n2u5tKTBxh8Ng6nJs7-xRV9:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.94
+  label: drinks
+  name: 038_JTB_Spring_2025_Kingston_Lime_Cay_Beach_Lady_Hat
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:19UT0ywRKxKgBdcJlMMrBzeuebZsXwKwD:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: 1e074787-9136-4a3a-a91a-ca005f097bb4
+  web: ''
+  words: Arah Rides rental vehicle
+drive:19Y0GlFi9SNUJZMe4lYKY7hz42PBOGDab:
+  also: dunn's river falls
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.99
+  label: dunn's river falls
+  name: DunnsRiverFalls0240e
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:19YWr5ppXhbFb_tjqzbBjclkChg4mmlxc:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.63
+  label: rental car
+  name: DSC_1399
+  web: ''
+  words: Arah Rides rental vehicle
+drive:19eQyudCMUcALATOtSCMVI6AUz-Kmkmnj:
+  also: not usable
+  cats:
+  - drinks
+  - food
+  confidence: 0.81
+  label: drinks
+  name: 069_JTB_Spring_2025_Kingston_Lime_Cay_Run_Beach_Lady
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:19fjAMbHX0iSmcWVP_QQB8YOQHjoTaQck:
+  also: drinks
+  cats: []
+  confidence: 0.41
+  label: null
+  name: 129_JTB_Brand_PortAntonio_FrenchmansCoveBeach1
+  web: ''
+  words: ''
+drive:19hQKgErskVdzGqlD47MQpFg5a521VlpT:
+  also: rental car
+  cats:
+  - airport
+  confidence: 0.93
+  label: airport
+  name: IMG_9105
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:19kvfbDu_QS8QPBtv4pu9weUl1n7UQ0eh:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: RioGrande0233
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:19yHcHqLgKPuxo4E3-hmOpgVxI0AygxrK:
+  also: road trip
+  cats:
+  - people
+  confidence: 0.94
+  label: people
+  name: IMG_9783
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1A1hVBezMbq0q3ZjzdD8bpnew1K03I7AS:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.99
+  label: attraction
+  name: img0003
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1A4GAeNekFHSI8_9csjAvbvuFg2GGeCLZ:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.78
+  label: rental car
+  name: IMG_8960
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1A5j7p-VvqOTfvJo7f6RX9Pg7lvvSOwzw:
+  also: sunrise
+  cats:
+  - beach
+  - sunset
+  confidence: 0.87
+  label: sunset
+  name: img0180
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1A7NF64jERXEbXYwPqDg3rKSCiMfrZ_SS:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.74
+  label: river rafting
+  name: river_boat_rasta_colors
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1A8jayIKa_JrkCqnfXdfplu7GVfV4exXu:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: Hover_20240323_1711289456372.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1AA8I2TaqEbAkbrRDtIG7ZMRKqWLjN9CY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: gray_kia_seltos_arah_rear
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1AHm6bCDhb6XPoO41650quJBi3HhKEpgo:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: Hover_20240323_1711289457984.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1AJiG2jMHbIU8hpnLz8HDlpySPBrZDpQE:
+  also: trident castle
+  cats:
+  - accommodation
+  confidence: 0.96
+  label: resort
+  name: img0032
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1AJpgCjuWMLalcUHg_ptNfMT9v8EfHkai:
+  also: blue mountains
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
+  name: aerial_highway_to_sea
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1AQC-izhMK77eik1o_7CwTXj7iQU33GX6:
+  also: airport
+  cats:
+  - road
+  confidence: 0.97
+  label: road trip
+  name: IMG_9313
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1AUADUjQwAbFMhEHWflIF0sqAXwxwqaXI:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.82
+  label: attraction
+  name: kingston_view_from_hills
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1AYKq7Qlr9Y3cCFpODH3OZsLIxaBUD5Kj:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: 58f5f47b-cb75-4eff-8f41-87c46463466d
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Ae-SYquZs3WUjz-i0wT2Oq8sUDUoqRXc:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.9
+  label: blue mountains
+  name: IMG_8899
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1Ae7u0iFbNVT3Qgk7A_DkQlB_CMgsEXzv:
+  also: attraction
+  cats: []
+  confidence: 0.47
+  label: null
+  name: 097_JTB_Adventure_OchoRios_Kids_running_up_stairs
+  web: ''
+  words: ''
+drive:1Ai2YutOgi-Wp4twbyuwdsJ9fRTOJCgPH:
+  also: people
+  cats:
+  - road
+  confidence: 0.71
+  label: road trip
+  name: DSC03513
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1AivcZChw9sfxIETDLtOtZZuQXV4Mc1QA:
+  also: drinks
+  cats: []
+  confidence: 0.54
+  label: null
+  name: 121_JTB_Brand_MontegoBay_DoctorsCaveBeach1
+  web: ''
+  words: ''
+drive:1AnRFYKbubgMvSB5tIrbdUq9bPPe7h5Wc:
+  also: negril cliffs
+  cats:
+  - attractions
+  - nature
+  confidence: 0.84
+  label: river rafting
+  name: SGT08906_RETOUCHED1
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1AvcmNJmuxBdlz27inNzAR_EbipRuhjqo:
+  also: market
+  cats: []
+  confidence: 0.33
+  label: null
+  name: DSC02981
+  web: ''
+  words: ''
+drive:1AwTNj9wFJ2blLv9Vyhpx7cIpUPRmbdOD:
+  also: road trip
+  cats:
+  - nature
+  - road
+  confidence: 0.66
+  label: blue mountains
+  name: img0008
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1B5EWjC20nq6uBXTOJvJ67pdcR3qsLrUO:
+  also: attraction
+  cats: []
+  confidence: 0.36
+  label: null
+  name: IMG_9083
+  web: ''
+  words: ''
+drive:1BNXr445GNbfvA-0AVYXmSOgdoz5zY2kX:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.71
+  label: beach
+  name: 002_JTB_Spring_2025_Kingston_Lime_Cay
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1BOE4VF-ydMtmHArHGf9c4RcePKN38-l2:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: black_honda_hrv_arah
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1BPgpZ2S3BNNyhceSs5RZyW6vsPHjQWPB:
+  also: fruit
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.65
+  label: market
+  name: IMG_9764
+  web: ''
+  words: Jamaica market craft culture
+drive:1BSjQkArPbUj5Ps0WiZq5h-cJW78P1uz7:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.81
+  label: attraction
+  name: Falmouth0691
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1BUqCrHsVoIdeLSCi5vfqQS69I9YtgpcJ:
+  also: attraction
+  cats: []
+  confidence: 0.38
+  label: null
+  name: 094_JTB_Adventure_PortAnonio_Girl_Jumping_off_raft
+  web: ''
+  words: ''
+drive:1BVDOQb0LdzbzrG0gdAocniva9dUbXo1W:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.69
+  label: drinks
+  name: img0256
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1BWm4lgY-wvO_asjlciJDvplBfwYeou33:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.69
+  label: beach
+  name: img0024
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1BXemNagbGfjnUo1oN-xZpjgoHL3sHCht:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.57
+  label: drinks
+  name: IMG_9739
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1BbPgwjebPqkWCQzREg6huI3A9IFJuVw_:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.95
+  label: drinks
+  name: img0052
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1BdL-tu2zUYUYKROhyEpr3Hc2Vz44fDUF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0239
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1BnNY1eLwuE35ceZ7GOku9aX1FzvIsi03:
+  also: attraction
+  cats: []
+  confidence: 0.49
+  label: null
+  name: BlueLagoon0089
+  web: ''
+  words: ''
+drive:1BsP91hezbPQ12sOSJgcbFbfuiYPVDZ2g:
+  also: people
+  cats:
+  - road
+  confidence: 0.92
+  label: road trip
+  name: DSC03522
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1C171ufJw5tw1O94EFJ5BAePFhftHb-vu:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.52
+  label: attraction
+  name: IMG_9128
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1C9xUx8yBbe7nHZhg3E2Nh_inXolpuOT1:
+  also: market
+  cats:
+  - road
+  confidence: 0.49
+  label: road trip
+  name: IMG_9736
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1CAFgcNgZjlNvlbRyU3glf6NS8NtAufDv:
+  also: nightlife
+  cats:
+  - culture
+  - music
+  - nightlife
+  confidence: 0.55
+  label: reggae
+  name: JTB_Music_PortAntonio_Dancing_at_Party
+  web: ''
+  words: Jamaica reggae music culture
+drive:1CEbNxHrdovS7exoqZeQpxAeJyk7Ji_Mp:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.69
+  label: rental car
+  name: 33e26017-9faa-481d-885d-d1bc7309b268
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1CIUkYbVAIQ32YxfhYpr9gtznen216JJB:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: DSC_1473
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1CYg3ACFt7kct3GTKL7xu7ixCXUU8v4xF:
+  also: people
+  cats:
+  - attractions
+  confidence: 0.66
+  label: attraction
+  name: 213_JTB_Adventure_OchoRios_pointing_at_SpBridge
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1CuUbmD9-4qNymsfIRAE3p4WscKey7Z0h:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.84
+  label: attraction
+  name: GreenwoodGreatHouse0750
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1D3Jan_oEAHOX3IfIvuCeL7BNvujOFJNY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: a8546fb0-ce3f-41b3-92d4-acd6de5d6e3d
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1D5qCBnJo-cvN3n67gt4KmdQc0YcPUjkt:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.97
+  label: people
+  name: 060_JTB_Spring_2025_Kingston_Lime_Cay_Friends_Beach
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1D8sHxyYawFUOcfKAI8zqWB3XQJ3X7uiY:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.62
+  label: food
+  name: IMG_9043
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1DG6CKbu9Wc7E1oLJOIJGK11MUcE40Ytg:
+  also: sunrise
+  cats:
+  - drinks
+  - food
+  confidence: 0.66
+  label: drinks
+  name: img0247
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1DGKvUHx01rvMaU0mP6plHV0EP0KJ5NN8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: 4479cf13-204e-4f9f-a13d-35cce8f11355
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1DKr5WrUQn88EOpzBU4clkL8OxAVpoHO5:
+  also: drinks
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.66
+  label: bob marley
+  name: img0099
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1DVS5Szy9Q5QU7olVx3yCQmNkSHSozX5e:
+  also: attraction
+  cats: []
+  confidence: 0.36
+  label: null
+  name: IMG_9082
+  web: ''
+  words: ''
+drive:1DYO7cw1fFGbK96IxgR4nkv4nYKZoERbE:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.85
+  label: people
+  name: IMG_9786
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1DiLQWs32G_VM4tbtSQHmU5YyaLG35FLM:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.95
+  label: attraction
+  name: IMG_9123
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1DnXowCk6lU1Z4V2exYJmbfJQMItJ15q5:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.63
+  label: beach
+  name: img0008
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1DoBCro3B6ou2mWtoiRC-wKuFWDU8EWzx:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.99
+  label: river rafting
+  name: RioGrande5018
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1E--KmaaMNKVUvMvcrmOML3lsmGaJ3KQO:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: silver_minibus_rear
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1EHcUOl2cIGuQKzryScvUoHqHTu5Z8o2t:
+  also: holland bamboo
+  cats:
+  - people
+  confidence: 0.92
+  label: people
+  name: IMG_9782
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1EJ5Pd1XmyxXty-_zv9ImygcSGIgOzu8P:
+  also: market
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.57
+  label: holland bamboo
+  name: IMG_9733
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1EJtBs_zl4ti2givKu3HDrZsBljf6Dejm:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: d6d86110-5fd3-4dfa-b0ab-1e64e9e18714
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1EK-cz45bNbaQM4-QrwbyJk-dVnpr_FT1:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.69
+  label: attraction
+  name: IMG_9121
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1EOeI0APLzUxAUEIOYDrSprOwBwPPMtEL:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.77
+  label: attraction
+  name: DJI_0856
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1EXA7v4eARXDXkQW9wqLSW1QqiKRE-tKo:
+  also: airport
+  cats:
+  - road
+  confidence: 0.6
+  label: road trip
+  name: IMG_9113
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1EvOe5M_xyN5ZF2yYAFkVWxO91sZozzqz:
+  also: not usable
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 059_JTB_Spring_2025_Kingston_Carnival_Lady
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1EyjgQ-tANQkWEbjfeCxRGYS8-p-OyHPz:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
+  name: DSC_1459
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1F-Ltoux3eQAerj85xGNgNHJ903lNQikZ:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.95
+  label: holland bamboo
+  name: DSC_1507
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1F7cCQ5I6KKImNErhOmmH-BSm9NzW9EaH:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.61
+  label: road trip
+  name: DSC03576
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1FEZOhiIhtssDoWxHgeBCl6-rn6KtO9rW:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.67
+  label: road trip
+  name: white_yaris_cross_arah_low
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1FIE-kOHzYoCjAVw9VfVo5CG0jeuIrumX:
+  also: attraction
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
+  name: DJI_0353
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1FIpnLQ3939MiOJL68VjO_LCbbKvZAUo6:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.84
+  label: beach
+  name: img0021
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1FcFSuQz8AETKLgRjbFxwfcbFJrCugb-a:
+  also: market
+  cats:
+  - culture
+  - food
+  confidence: 0.62
+  label: fruit
+  name: IMG_9758
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:1FjlyL9UPgl-WR1h1tL2UNaLQIuF_MzU7:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1462
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1FqlZGfxLqWg2mUmDtsX1zP6NZJEW0gw8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.66
+  label: rental car
+  name: DSC03473
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Fw_WA98pG19PuHXF0RUzhWqPmkSoiPPh:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.51
+  label: waterfall
+  name: reggae_falls_big_waterfall
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1FxodqDD32cGDpmEgpwxXbZROsud05xPu:
+  also: river rafting
+  cats: []
+  confidence: 0.72
+  label: not usable
+  name: img0162
+  web: ''
+  words: not usable
+drive:1G-3upnUyQceD-9oaW6j1vJiMMXDjIG4L:
+  also: reggae
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.79
+  label: bob marley
+  name: img0129
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1G61QwMaJCH5rEooXApG_TOOaS08UDvx0:
+  also: kingston
+  cats:
+  - road
+  confidence: 0.76
+  label: road trip
+  name: DSC_1505
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1G6jBQEq0O8GOqL0Ju3g8-CwG5-Ram4DN:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.7
+  label: beach
+  name: DoctorsCaveBeach6262
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1G7eUWXFYDVeCulVnsdGQrsPajKBvY47v:
+  also: river rafting
+  cats: []
+  confidence: 0.43
+  label: null
+  name: img0172
+  web: ''
+  words: ''
+drive:1Gx_n408mT80MiuHzpoX5fSg2y5-e73p7:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.74
+  label: beach
+  name: img0230
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1H5VphYlLZFdPEj83O3v5EsGly2-rJFYs:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.69
+  label: road trip
+  name: IMG_8942
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1H5cs_y7t0uTHmmGc8pXRFVF9MV6L7LOC:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.92
+  label: attraction
+  name: DJI_0541
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1H95_q2KhGYQb11phKnMDcEfTL_e0-_BS:
+  also: beach
+  cats: []
+  confidence: 0.42
+  label: null
+  name: img0023
+  web: ''
+  words: ''
+drive:1HMlbVZGDzSBHNY8J7_jQWrnkyNFn5qNc:
+  also: road trip
+  cats:
+  - nature
+  - road
+  confidence: 0.67
+  label: blue mountains
+  name: aerial_highway_hills
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1HN2mtfBv0zY1WJc5opagF_vnJgdj8SjL:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: IMG_0241
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1HZ5nx8pAyiFCUt2PZOpMWND2s7jYCHtU:
+  also: negril cliffs
+  cats: []
+  confidence: 0.4
+  label: null
+  name: img0046
+  web: ''
+  words: ''
+drive:1HbxeuH2I1Rj7dwNnAqx2hn5oHZyHUyCP:
+  also: jamaican patty
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.5
+  label: bob marley
+  name: img0282
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1HkJev0vITZ72SWAAB_md4tGu_yv1c_Ya:
+  also: resort
+  cats: []
+  confidence: 0.45
+  label: null
+  name: 120_JTB_Brand_Kingston_DevonHouse
+  web: ''
+  words: ''
+drive:1HtHAyB2e4Yc_OhZ0_yhGvaFF_zsfDCG8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: IMG_0253
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1HuzONahgfbzCde-DwVtg52PxlUxn7t7i:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.46
+  label: drinks
+  name: 026_JTB_Spring_2025_Kingston_Lime_Cay_Romance_Hands_Beach
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1HxEMCh06dZYNLpOt4LmnlT8qwB-J_eNy:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.95
+  label: drinks
+  name: IMG_9744
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1I1oo4TmvbS3YFK8hvhG_C0D_tDT_Mlkm:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.88
+  label: road trip
+  name: 803e561a-333e-4a09-ade6-d4a16a0c5a2f
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1I1rY1ztY7EBMuBqwtHtrcyg0WtQBvHBL:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.8
+  label: road trip
+  name: mountain_road_white_car_a
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1I2LjOX4uJgNFoImec2C7Uzrwgsp6r_jl:
+  also: people
+  cats:
+  - attractions
+  confidence: 0.47
+  label: attraction
+  name: OchieBeach0383
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1I8O2kmKghv6PoIPnmwVDewhvOtTijF5I:
+  also: attraction
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.46
+  label: sunrise
+  name: img0006
+  web: ''
+  words: Jamaica sunrise morning dawn
+drive:1ICMxrx6Fv9uWGdCT-Gh-ZbzGHmqN9lNK:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: 828136c0-21f3-4036-8216-7c47d03b67a6
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1IFejtywtdGQn3Iu17YFmFbveSSrmD4fq:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  label: waterfall
+  name: img0018
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1IFv1W_O30OkKaqMNb9iPWTyzthxNR8K2:
+  also: fruit
+  cats:
+  - drinks
+  - food
+  confidence: 0.59
+  label: drinks
+  name: 114_JTB_Brand_OchoRios_Knife_into_coconut
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1IJqEdcjGmfe5kxrtL22ZaxF3nwoL94Ll:
+  also: people
+  cats: []
+  confidence: 0.45
+  label: null
+  name: 052_JTB_Spring_2025_Kingston_GrandHotelExcelsiorPortRoyal_Dinner
+  web: ''
+  words: ''
+drive:1IK3ep7TTlgzUliIBaIijsCcJKJCnIdjx:
+  also: blue mountains
+  cats:
+  - attractions
+  confidence: 0.75
+  label: attraction
+  name: StrawberryHill0215
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1ILODeKMEo-2NxjzJ7fK1eBrV8itxyO3c:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: DSC03490
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1IPJeigHAMJDEzPCA7TPbvKC_ZB9f_Com:
+  also: not usable
+  cats:
+  - drinks
+  - food
+  confidence: 0.69
+  label: drinks
+  name: 068_JTB_Spring_2025_Kingston_Lady_on_Hammock
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1IV-bM1wa9iyPr1grplOgeqDnN6UHjJgf:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: 126_JTB_Brand_PortAntonio_RioGrande_Rafting1
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1IZIzTRSaqLbPSztvSSTJnnwJUcZIhZSr:
+  also: blue mountains
+  cats: []
+  confidence: 0.39
+  label: null
+  name: img0156
+  web: ''
+  words: ''
+drive:1IcwipLjub0cjI0ArV0P6EsLiSXWKo4dT:
+  also: market
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.59
+  label: bob marley
+  name: DIM_1029
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1IlQEkyDzC2HKAX6c8Eyu9CoDtM5KJJvJ:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.67
+  label: attraction
+  name: MonkeyIsland0822
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1IntsLXIIyQ8EXSOkbb86Hgk8VRYYQFCY:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.94
+  label: beach
+  name: img0169
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1IoepQ3SfPHQleSpSRIy2CQzFKO1wcMqU:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  confidence: 0.65
+  label: river rafting
+  name: 214_JTB_Wellness_PortAntonio_Young_woman_floating_in_river
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1IppWKlFEI_V6yAlK4JnpOuWhggPPoLMb:
+  also: market
+  cats:
+  - road
+  confidence: 0.64
+  label: road trip
+  name: IMG_9734
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1Iry18lOYlGNkv2l1ZETRTapiT06ONHE0:
+  also: market
+  cats:
+  - food
+  confidence: 0.9
+  label: jerk chicken
+  name: img0015
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1ItvwQCTkYcTTkI6I_fCIPqGd5GjInMoz:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: Hover_20240323_1711289456502.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1IuQPAQ_8WDXbll81JjDuODI9uKlIY0Cv:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: Hover_20240323_1711289457518.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1J10XYqhQ5U5RYV-as0uyIO9JTWfDh97e:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: DSC03504
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1J1rHn0uspJzXPliG3RQPHHdr3wZxAiAV:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: hiace_white_rear_side
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1J6UIxLCC3qp9puWOk56ABpIaOVycgflO:
+  also: drinks
+  cats: []
+  confidence: 0.34
+  label: null
+  name: OchieBeach0420
+  web: ''
+  words: ''
+drive:1JCz1ifTqB1KYBV6L8KSMOb1EbyyzaWRf:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.96
+  label: carnival
+  name: 035_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1JG86l9jypMraweFl5Dbgv1MhzoV03NE1:
+  also: drinks
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.98
+  label: carnival
+  name: 022_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1JKvLL1K_rqdmHPR8B7BSluHHnKRNmJR5:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.85
+  label: rental car
+  name: 325ea4e8-2178-43bb-ba33-ad4b8a5e93e6
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1JMqB9zk9YuPH9uePFKxnLb471o65U8GQ:
+  also: drinks
+  cats: []
+  confidence: 0.26
+  label: null
+  name: IMG_9740
+  web: ''
+  words: ''
+drive:1JNUSW_alRwOqraD8UYkEMGwrFS3q8lp6:
+  also: drinks
+  cats: []
+  confidence: 0.33
+  label: null
+  name: 062_JTB_Spring_2025_Kingston_Lime_Cay_Romance_Beach
+  web: ''
+  words: ''
+drive:1JO0gVpBQz-fbTcdXXIyENw15SG01R-1V:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.8
+  label: road trip
+  name: DSC_1519
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1JXY7wLRNzVNV4KxNfogfWsIzeYjxDYLf:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.72
+  label: rental car
+  name: PHOTO-2024-03-10-22-13-18 2
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1JZWgmRXi-fM6j45z1GLaOL4aDudqNdyA:
+  also: people
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.99
+  label: carnival
+  name: 018_JTB_Spring_2025_Kingston_Carnival_Dancing
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1JcuFaPa7rYTc5hXSF9KupNg6zVGxAj_f:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: brown_suzuki_xl7
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1JgP2ZKrk5UB2wguFMwXs8ukuGRpTCz2K:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.74
+  label: road trip
+  name: Copy of PHOTO-2024-03-10-22-13-17
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1Jn_c-BOlKCWHjBzr9Zes_aO41USOea32:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.78
+  label: rental car
+  name: luggage_packed_suv_trunk
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1JqkA6eZkdr2K0kAmuPyE8LI0WzIebXt3:
+  also: not usable
+  cats:
+  - drinks
+  - food
+  confidence: 0.82
+  label: drinks
+  name: img0035
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1Js4uCr_5RWoHABeDIHfpt0btv71FaxmM:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.58
+  label: rental car
+  name: IMG_8944
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Jt885iJi66Ly68o-6bcyb6QuLmzIhatg:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.54
+  label: drinks
+  name: 042_JTB_Spring_2025_Kingston_Palisadoes_Coconut_Drink
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1Jva7a1WyTnWywGsGw8DR9t04j0HMjqsd:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.48
+  label: river rafting
+  name: img0001
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1K2k83lm_SgatFE8t3L7L_S2r9lIKPEx4:
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.93
+  label: negril cliffs
+  name: DJI_0593
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1K7XUI_g3EPtVXilC66u3nol9p7WUHFUU:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.68
+  label: drinks
+  name: IMG_9747
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1KCjdXLBuGo_2949djFu_5Uyr3qTBZ4-a:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.68
+  label: rental car
+  name: IMG_8959
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Kdp1fHpuXj5xi0mWMkrX-2Nj_PIFA40b:
+  also: resort
+  cats:
+  - drinks
+  - food
+  confidence: 1.0
+  label: drinks
+  name: img0197
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1KeeEZtKpuiDW5P11Tm9N382c2er7wlAb:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.85
+  label: rental car
+  name: black_haval_front_left_a
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1KlsVAX4xuWAaMqj5xeOlvVKQrtUTCwzA:
+  also: people
+  cats:
+  - airport
+  confidence: 0.92
+  label: airport
+  name: 003_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1KyaZUyS201EuBAfEWd9I6Pizv4WoyPRB:
+  also: bob marley
+  cats: []
+  confidence: 0.37
+  label: null
+  name: img0006
+  web: ''
+  words: ''
+drive:1KzUkf-50G2oitAYo8l-NiEGA2kop5cBg:
+  also: nightlife
+  cats:
+  - drinks
+  - food
+  confidence: 0.99
+  label: drinks
+  name: 046_JTB_Spring_2025_Kingston_GrandHotelExcelsiorPortRoyal_RedStripe
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1L3sTLIG_-OV1EtwuntmWORw7AS5adlT8:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.68
+  label: attraction
+  name: img0022
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1L4fJ0IsqojiH6m10J6tG4esvSoCAyIJU:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0252
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1LHbzP8yR67YU8GRfS_2ockVM2CV4gnmA:
+  also: not usable
+  cats:
+  - road
+  confidence: 0.88
+  label: road trip
+  name: 045_JTB_Spring_2025_Kingston_Palisadoes_Coconut_Friends
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1LNuVEGcyhgm37hjrhf4nHXmPC6p-dg16:
+  also: kingston
+  cats:
+  - road
+  confidence: 0.6
+  label: road trip
+  name: dji_fly_20250510_102502_228_1746890770004_photo_optimized
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1LVTRGH5zdjjM42ZEs9DNZaf-xrXevice:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1487
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1L_ZuLN-QT71Pv4UhC1kqXGb7FqsRfchq:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.66
+  label: rental car
+  name: DSC_1414
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1LhtXSTZihyrNtKP-tx1pJN30dhpBafMt:
+  also: market
+  cats:
+  - culture
+  - food
+  confidence: 0.97
+  label: fruit
+  name: 120_JTB_Brand_OchoRios_Ackee_fruit
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:1LjhstcRKw_ghd7xFF_Dlg9lZ1aFrOf-1:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.74
+  label: river rafting
+  name: WinifredBeachPortland0628
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1LvjvQyMzKj3sXuLpMxQ8Wu3RRe3TYxhC:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: 79c32053-33c1-4cde-98ed-db77795d3d2c
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1LzP9t9qR406mMoypc52CWwXgmvR91Yf-:
+  also: drinks
+  cats:
+  - food
+  confidence: 1.0
+  label: jamaican patty
+  name: img0295
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:1LzvKXzlHsb1hKbCwWFWZ295Sc-JwMmTe:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 1.0
+  label: bob marley
+  name: IMG_9063
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1M-sBo51ouNEl-F96rIsxV5ItSe0XqFuX:
+  also: people
+  cats:
+  - culture
+  - music
+  - nightlife
+  confidence: 0.69
+  label: reggae
+  name: 212_JTB_RomanceOlder_couple_dance_twirl
+  web: ''
+  words: Jamaica reggae music culture
+drive:1MAjOdHQpbTLZhK7wkbRQ_NiPxbHa9RtI:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: waterfall
+  name: img0010
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1MBocLjzvch4Tv-byEs6evMcED5ZfkPE_:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.74
+  label: road trip
+  name: PHOTO-2024-03-10-22-13-17
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1MCm4gx_hgjyY9t6thAqIPZq1oClsm2qE:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.99
+  label: bob marley
+  name: IMG_9057
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1MGZJUQZPiGmGSKg8Dc27etWCGMUAdheZ:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.76
+  label: attraction
+  name: DJI_0018
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1MGa-jAcm2e9Gqk9KOKRioyBaJd4UHWoA:
+  also: road trip
+  cats: []
+  confidence: 0.35
+  label: null
+  name: 071_JTB_Spring_2025_Kingston_Lime_Cay_Drone_Beach
+  web: ''
+  words: ''
+drive:1MIoNEVpxtE0DHrKU-P0leW35MBB3SkBw:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
+  name: IMG_9306
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1ML0mH4Y7O2_BYMpdGxjoRtlmUCyoj3vc:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: silver_foton_interior_seats
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1MbupUYh0J90kn96dhTosaAaCWV67aoOE:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: Hover_20240323_1711289456902.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1MuYiojGIjU5KzQui3PvG7wF4PLu40Ovz:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: IMG_8950
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1N1ROdSPqN0a4S66WslL-KnbU3EAiPIXY:
+  also: market
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.9
+  label: holland bamboo
+  name: IMG_9728
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1N2rGC4EHLgfLSRtSIwB1ufUfta-oZz6t:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.77
+  label: beach
+  name: NegrilBeach0690
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1N3m06yzEmhnzX3YraVVfhzQY146ntJdN:
+  also: road trip
+  cats: []
+  confidence: 0.31
+  label: null
+  name: IMG_9129
+  web: ''
+  words: ''
+drive:1N6oSZMguxnQKXm-KXi1anVknybEIA3fC:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1467
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1NGLHYHP_n-X5sDZartSaqScU3NRgxAKc:
+  also: not usable
+  cats: []
+  confidence: 0.35
+  label: null
+  name: 077_JTB_Spring_2025_Kingston_Beach_Smile
+  web: ''
+  words: ''
+drive:1NRMCS_Y8T_ofN6aiprvLXn9b3adHCogn:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.88
+  label: beach
+  name: img0015
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1NXDZu7hkj9KBi395n8vOK5EouYWKfqzN:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.83
+  label: attraction
+  name: img0017
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1NY_wnZc5Ka1NfHfWqNDau14s9_f_iXOb:
+  also: bob marley
+  cats:
+  - attractions
+  confidence: 0.87
+  label: attraction
+  name: DSC_1425
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1NYblD016bZte_GtQnnkw0HFPVtl7Ywb9:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.95
+  label: attraction
+  name: MonkeyIsland0011
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Ngf-2kol-SCemhwLck9yVX98NfMIv4m7:
+  also: people
+  cats:
+  - attractions
+  - nature
+  confidence: 0.82
+  label: river rafting
+  name: 092_JTB_Adventure_PortAntonio_Family_on_rafts
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1Ni2WG_Gv8E5qZnB0HwsZAxrn1bGiBmDF:
+  also: holland bamboo
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: bamboo_rafting_river
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1NqlllZtLg5GexE8-5eYUw0l00bbIhiTU:
+  also: people
+  cats: []
+  confidence: 0.39
+  label: null
+  name: 216_JTB_Romance_OchoRios_Couples_Dancing
+  web: ''
+  words: ''
+drive:1NrKbA5cN_h1YZbznY4LgEyPISbCSJkrn:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.77
+  label: road trip
+  name: DSC_1518
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1NrV7mzrGh968YgJqKRPir8SBraFEcD-_:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.8
+  label: road trip
+  name: '5'
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1Nv4PHX5crKpwGIULVztA6-wxsn34iwMh:
+  also: road trip
+  cats:
+  - people
+  confidence: 0.94
+  label: people
+  name: IMG_9784
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1O1X0R3BF4phUtOPRC5IIusmZkQW4OXTt:
+  also: waterfall
+  cats:
+  - attractions
+  confidence: 0.69
+  label: attraction
+  name: SGT03962_RETOUCHED1
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1OEY1va9BHvoES4Vmv9RReAhHwDgrTXkA:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.85
+  label: bob marley
+  name: IMG_9067
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1OJtM39JNeYEeRlmC2rswhbYOj6j0Di5c:
+  also: food
+  cats:
+  - food
+  confidence: 1.0
+  label: jerk chicken
+  name: img0020
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1OLMtUMKf1BYZv8lr-7ne1_oWppPeYL2n:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.73
+  label: rental car
+  name: IMG_0257
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1OYAIqramd1XccDfZGiNI4ex85Va0bDeZ:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.71
+  label: attraction
+  name: DevonHouse0141
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1OckmBMtEJuA-BLtHOtTsVJzA6TqKEeHO:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.95
+  label: road trip
+  name: highway_dashboard_view
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1Oe6CaQsxjvjvXGvyVReHRdV5_1qRGaYc:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.54
+  label: attraction
+  name: PortieLighthouse0909
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Oekwq-RzkaRbo-R_-yk9AE0qKjFJwwEx:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.85
+  label: rental car
+  name: IMG_8962
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1OjOcuA_ZtNJ8ahN7cDg6Y-RstTRiDiC4:
+  also: road trip
+  cats: []
+  confidence: 0.38
+  label: null
+  name: IMG_9746
+  web: ''
+  words: ''
+drive:1Ok5QEoRM6MmYpSlzJZTRAUsWFaNZ8n2J:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.67
+  label: rental car
+  name: IMG_8943
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1OmWsYmq6BlTvl78BnZwjzYEOz09_L7rE:
+  also: river rafting
+  cats: []
+  confidence: 0.42
+  label: null
+  name: DIM_0421
+  web: ''
+  words: ''
+drive:1P2ZQOpagRn61Ipg6V1uoshDqjjz8lzZB:
+  also: people
+  cats:
+  - culture
+  - music
+  - nightlife
+  confidence: 0.99
+  label: reggae
+  name: 149_JTB_Music_OchoRios_Mento_Band
+  web: ''
+  words: Jamaica reggae music culture
+drive:1P9y5pb0JBmlAsrC-bUNKcv5VDkyCcQVT:
+  also: beach
+  cats:
+  - people
+  confidence: 0.63
+  label: people
+  name: 226_JTB_Nature_OchoRios_ColumbusCove_Kids_running_into_sea
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1PBEbfJ8QSeDecwDvdinfUOVt3R9Wpx36:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1469
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1PBQCnPHWX44_hYzeD0jrqMlFCwJMgFy3:
+  also: drinks
+  cats:
+  - culture
+  - food
+  confidence: 0.94
+  label: fruit
+  name: 115_JTB_Cuisine_Fruit_Stand_smile
+  web: ''
+  words: Jamaica fruit market mango pineapple ackee food
+drive:1PDq0LQktRzJzgpQjVoOxCYwZ9ghpvd3w:
+  also: attraction
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.46
+  label: sunrise
+  name: img0011
+  web: ''
+  words: Jamaica sunrise morning dawn
+drive:1POT7Fq4GCYt4m5cOBehhau5KcHzuZah3:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.96
+  label: attraction
+  name: DJI_0415
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1PUby-_ixJRam7bhlHMQDVzTHEaksiFaC:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: 7be974c7-d185-478d-b6c1-40e9fa26e4d6
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1PX3dIH3scKDUvSFoJPuqM8dksmf4ZQTh:
+  also: sunrise
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: 055_JTB_Spring_2025_Kingston_Palisodoes_Strip_Sunset
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1PY6S4_V6uPq4CWab-6Kx87ofbwpGSCic:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: Hover_20240323_1711289458092.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1PZrgu74-8foL-qCD2ijaQolag8EZ5AzP:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: d6d86110-5fd3-4dfa-b0ab-1e64e9e18714
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1PjjyiFFc8Zddbj7MiuaUTQqBR8MpCrgD:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  confidence: 0.76
+  label: river rafting
+  name: fishing_boats_clear_water
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1PlVPsz16_G_jtlaPpdJrgaxqjjoE_pV9:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
+  name: 004_JTB_Spring_2025_Kingston_Palisadoes_Coconut
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1Pp214YBcLuAaB02NdKqUsPk-lWIJzL9W:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.58
+  label: road trip
+  name: red_corolla_cross_front_mountains
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1PscM9vCxCxfy88NLyvC-ksHUAICorp9T:
+  also: waterfall
+  cats:
+  - attractions
+  - nature
+  confidence: 0.89
+  label: river rafting
+  name: RioGrande0255
+  web: dunn's river falls
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1Q2ymA-kf-Vr7Ju6zOhS0TZbQVbTaoP7j:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.45
+  label: drinks
+  name: IMG_9748
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1Q3gH_7YWAclB7gSvdpsBeY8pHXA54sDB:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.84
+  label: food
+  name: IMG_9042
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1QA6yvDqrpD7qeV7ZJM_q-GI8baT41jrl:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.8
+  label: rental car
+  name: IMG_8961
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1QHuhEm50a41xRN-YjMMLSJvZok6IFRUM:
+  also: people
+  cats:
+  - road
+  confidence: 0.69
+  label: road trip
+  name: IMG_9775
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1QWiHNNR8xpay4EfvpO7gBaK6wpijbJiK:
+  also: attraction
+  cats:
+  - accommodation
+  confidence: 0.61
+  label: resort
+  name: DevonHouse8316
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1QY1q6HUDhwdo4eMDapl-UdbDsBT1Ot76:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  confidence: 0.75
+  label: river rafting
+  name: img0018
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1QZyMybasjO3ysIVZek8RuNnRGcxUdVTE:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.52
+  label: drinks
+  name: 013_JTB_Spring_2025_Kingston_Lime_Cay_Woman_Beach_Hat
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1Q_FgwsJEpIfN4MALPRuw4iUf99a7Mx2r:
+  also: waterfall
+  cats:
+  - nature
+  - road
+  confidence: 0.96
+  label: blue mountains
+  name: img0002
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1Qt8N6p7njLRkq1sS7ypc_lmzNFFzG_zS:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.88
+  label: attraction
+  name: BonnieViewofPortie0168
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Qx1bcHoYGvjCknkykxjcvRtIyqsuzetr:
+  also: jerk chicken
+  cats:
+  - food
+  confidence: 0.91
+  label: food
+  name: IMG_9039
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1QxRo148OAzHL5QpMdrjbenKg4PUaZ90S:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: rav4_interior_carplay
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1R2e445YJNZKVSTb0Sg1hvvrWIxvuGrn8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: silver_foton_street_side
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1R5NnxcsbkNUOwBWRq1fRQbtNtiKahrVS:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.48
+  label: river rafting
+  name: img0020
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1R5mS48mhczjwcnuXT6Tw-xLr7PfKVXDG:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.79
+  label: road trip
+  name: white_yaris_cross_arah_red_barn
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1R87xznr6ufsXDv4iSTomkQDfoMo91BLz:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.75
+  label: road trip
+  name: 39151bf7-5d74-4798-b45f-05d1a5975f6a
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1R9Mqv3UiwB4d3rPCnODYmxxlGuCX0XJ9:
+  also: people
+  cats: []
+  confidence: 0.4
+  label: null
+  name: 064_JTB_Spring_2025_Kingston_Lime_Cay_Beach
+  web: ''
+  words: ''
+drive:1RGGsvV6RSZAOmRnE0No1KTXj67rf2tTJ:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0240
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1R_nRAI3832bqcho0XFKFFzCpIHy9MPP2:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: 6c6d2280-35a8-430b-b292-4776f546522e
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Rc3F8-jl2znG3gwqzTl1U22WueQJxbsn:
+  also: attraction
+  cats: []
+  confidence: 0.35
+  label: null
+  name: DSC01626_V11
+  web: ''
+  words: ''
+drive:1RhKoBeunyaOnegKECPSiGqlEj-_cZqnR:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.76
+  label: rental car
+  name: DSC_1521
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1RroScv8oeZLF2Gn0dbZK3vA8DPXR6CGz:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: red_mg_hs_front_left
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1RwimOIAYDH-G8bXC76y8RgoTKfSzJkeJ:
+  also: blue mountains
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: IMG_8974
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1SE8LK9ntj43Q8JOKrjwJNHfp-fWR8aqG:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.76
+  label: rental car
+  name: 1f37a48e-12c1-46c5-9a8c-8e4a6724c6d8
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1SI_cq4aMwvTk0GjeaT8WCzX-XsZ1yAxx:
+  also: blue mountains
+  cats: []
+  confidence: 0.44
+  label: null
+  name: img0004
+  web: ''
+  words: ''
+drive:1SSZmNhqwm_paDFk4A3D-QXfp5WO53atv:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.55
+  label: attraction
+  name: img0011
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1SUZoB3m0uwgO-PSIC7fDQ8h2DeBnPIKo:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.48
+  label: attraction
+  name: DevonHouse8393
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1SZE0SoYrGeuh6Eob0BQ0TxnFwYWiK_yJ:
+  also: sunrise
+  cats:
+  - attractions
+  confidence: 0.68
+  label: attraction
+  name: DSC_1440
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Sfe-T6Ni7_WsTWq46WZsiLd6xbSQVsXK:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.6
+  label: rental car
+  name: DSC_1403
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1SmhZif-h5dwzC2CtkejD65OX33s5hbLq:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: DSC03606
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Sw417rYR-iA5cjU_A6rmnEGyI6CJA8se:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.97
+  label: river rafting
+  name: DJI_0575
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1T2oCh3sq4P42nbn8yrvShz29kvk8l456:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.67
+  label: attraction
+  name: IMG_9132
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1T2yq3qFNrsKv7tjmGVql6VfadwBefhxP:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.84
+  label: rental car
+  name: DSC03635
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1T3xtI94NKCMwY4Wl9kmAbveOV4CpPDzI:
+  also: jamaican patty
+  cats: []
+  confidence: 0.35
+  label: null
+  name: IMG_9751
+  web: ''
+  words: ''
+drive:1T8HYrYO1VPgSofONITy9PA9HVwACWF41:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.56
+  label: attraction
+  name: DJI_0633
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1TCUbiM1mn0nme9HhK-tbaAi7_SnudwEQ:
+  also: attraction
+  cats: []
+  confidence: 0.23
+  label: null
+  name: 217_JTB_Romance_PortAntonio_couple_close_near_swing
+  web: ''
+  words: ''
+drive:1TE827tuJt62fSeTp3dhR8oeW13qX5ZPc:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.91
+  label: bob marley
+  name: img0006
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1TI3fGW-0oQzomdqaGXAKF7BHWParM6vc:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1468
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1TPUOAqAbNeIy5dbo4qmFNeSYT_FESI5M:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.72
+  label: rental car
+  name: IMG_8956
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1TRTqn79uftogwpv1hUGZUWI1Dk_cud2H:
+  also: waterfall
+  cats:
+  - attractions
+  confidence: 0.69
+  label: attraction
+  name: 225_JTB_Nature_OchoRios_Spanish_Bridge
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1TvkdQyT0hjrdLRIa8qyDoYHo8vOd74wh:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: 655ae6b2-746f-4c68-a532-c939c90d1209
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1TzyoCvptPy_7zl6paEfvsPr6cnAZXfI0:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.92
+  label: road trip
+  name: white_corolla_cross_front_highway_a
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1U-2F2PbxnYNbVQO2VdVuKlvOOS9y9WMh:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.94
+  label: bob marley
+  name: IMG_9065
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1U0o5Wat8r1XBtz7GChQex4VO8rg9MDNE:
+  also: sunset
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.8
+  label: sunrise
+  name: DIM_0168
+  web: ''
+  words: Jamaica sunrise morning dawn
+drive:1U1WI8cxgZoWQUgB1YUbiwnCVRkHKkgRJ:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.85
+  label: attraction
+  name: IMG_9133
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1U3k1PpgHrTu1MypZqpugim5223o-uEAC:
+  also: reggae
+  cats:
+  - attractions
+  - nature
+  confidence: 0.77
+  label: river rafting
+  name: img0008
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1U5Dw9I4owAEcdfYn7cldjNAKRbkGYq1Q:
+  also: market
+  cats:
+  - road
+  confidence: 0.47
+  label: road trip
+  name: IMG_9735
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1U5fx4pxletXrAu1OPXQBfN8XOvrKP2yL:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: 01ec0611-6ed7-46d0-9475-aec05534b458
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1UEOhJ1XKDBzDrAXKxz0AYYZDpb7QEALU:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1461
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1UFmITolDp9PxRF2dP5gt-POl7mnwfgaR:
+  also: river rafting
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.77
+  label: negril cliffs
+  name: img0200
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1UJ-OOerj-waVwvoNTP3Pg8DdxigK7Oxh:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.68
+  label: attraction
+  name: img0016
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1UPb19vC0i77z2lRG5O17uxeFSC54tHTX:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.56
+  label: beach
+  name: beach_palm_frond_frame
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1USkXtinpbomUTo2wmj2MnzDGLOxnWosl:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.57
+  label: road trip
+  name: DSC03582
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1UUTm54QP3WO9aGcxnAYjrlujHoRlD0e_:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1448
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1UVX1jZi_uEDiEeawhTIXlN63WxlB5e9h:
+  also: not usable
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: 6bfa1124-38fe-4e05-813d-8fd540f647e1
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1UYq6GxP0-G6KCpZnuKYADDZo_0D51v_b:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.63
+  label: beach
+  name: DoctorsCaveBeach6418
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1UcVx0dfN_7e1oTKDTz-GY3qsS7OxIRdh:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.99
+  label: food
+  name: IMG_9455
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1UgJc0GOugItrefDx3xvi_Ez8ZP9mY4cy:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1472
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1UgibeJzpaHpfTLo89fATcYM6DbA_oh2c:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: 54d021e6-fb07-4d06-b0e3-52067272bfca
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Uh2OcPbv5hXWamcqtYwz_SRbk7z4C3_A:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.82
+  label: attraction
+  name: img0028
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1UmaX6hS8_f8a08Heqjod569vrjvOEWoi:
+  also: fruit
+  cats:
+  - people
+  confidence: 0.96
+  label: people
+  name: 118_JTB_Cuisine_Mom_Holding_Girl_Fruitstand
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1Upm-tsECGdBEqluiLjhq0plxJN7vPacZ:
+  also: sunrise
+  cats:
+  - beach
+  - sunset
+  confidence: 0.92
+  label: sunset
+  name: img0168
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1UrFQ9u-0LqjrOknRDGsbh4iGaTnD9AvN:
+  also: beach
+  cats: []
+  confidence: 0.24
+  label: null
+  name: IMG_9125
+  web: ''
+  words: ''
+drive:1V4mUoNp25beLR7-iyZfAKO24deYG-JpE:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.6
+  label: drinks
+  name: 050_JTB_Spring_2025_Kingston_Lime_Cay_Boat
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1V5QsHUiL4LwCyqa7LdkHaZLb6PvSpGji:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.98
+  label: attraction
+  name: DJI_0301
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1VB9Z6k44ym71UFjIQSdfXkivD_gjRLdE:
+  also: people
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.48
+  label: negril cliffs
+  name: img0015
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1VIZopF7D8LnwA9MZDLSdTWfpPHa_o5yT:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC03461
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1VO4Ek7H-QbPtRdsULYTxSVYpJLAp7EMK:
+  also: bob marley
+  cats:
+  - culture
+  - music
+  - nightlife
+  confidence: 0.89
+  label: reggae
+  name: 152_JTB_Music_OchoRios_Mento_player_guitar
+  web: ''
+  words: Jamaica reggae music culture
+drive:1VTN8BNDzNxs3Fx1y5L60vLKlebeWZ5zK:
+  also: jamaican patty
+  cats: []
+  confidence: 0.3
+  label: null
+  name: IMG_9750
+  web: ''
+  words: ''
+drive:1V_fcaUuyqmadZG5LLRvTgkDBZ1YAh5YR:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 1.0
+  label: bob marley
+  name: IMG_9061
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1VfmhpT-07utkczxs4ZUh-V95byr8U6hN:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.88
+  label: attraction
+  name: DSC_1445
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Vgj3dS4ak1tn1D-pZDoVRdPxL2jdOKAj:
+  also: drinks
+  cats: []
+  confidence: 0.52
+  label: null
+  name: 037_JTB_Spring_2025_Kingston_Lime_Cay_Beach_Ladies_Friends
+  web: ''
+  words: ''
+drive:1Vj-DIdRjVcT_pDj3S_vq-mSr1aGl0POM:
+  also: jerk chicken
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.74
+  label: market
+  name: IMG_9762
+  web: ''
+  words: Jamaica market craft culture
+drive:1VkLvEWEBt-2r-ipjD-Dj6aIS5vhE3zJ3:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.95
+  label: holland bamboo
+  name: DSC_1507
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1VuNjCVrI7OmamiN5j41ytKkElZPA9v3x:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: gray_corolla_cross_parked
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1W7VykCRrBqLg4GgTtREJunGMCrPnjqPO:
+  also: dunn's river falls
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.99
+  label: dunn's river falls
+  name: img0001
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:1WCNAuQvZr82HK2vn8wUGuRjg4MT5nTTD:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: IMG_8951
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1WHHNbUltHg2RG-WRkLP_Fiq3Xc2aTm4A:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.52
+  label: attraction
+  name: DJI_0829
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1WN-01UxwMe8rTpl8ABQCJr70F0jqOZLy:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.79
+  label: road trip
+  name: black_suburbans_resort_palms
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1WQ7A777FCkdiwBVSL3ACxlN-cQ128fQ0:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.64
+  label: attraction
+  name: GreenwoodGreatHouse0730
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1WZnp8jf6jsp9mO9US4Jw15bdJKcb5yaR:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.97
+  label: waterfall
+  name: waterfall_cave_turquoise
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1Wajzo_Hv7xAxmxpy_eLdegfwPX8gkR2N:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: DSC03469
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1WcMcpKuMD4yg-48BT6WIioX0V-cxLYYA:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.47
+  label: attraction
+  name: IMG_9138
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1WccR-lSWCoPWRF1yZOWUkC7IWBP8KMTY:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.99
+  label: waterfall
+  name: img0017
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1WfIYxYNA83pFjVTBRfTKgK53DpbSYWyz:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.84
+  label: beach
+  name: img0148
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1Wp6d8pxjBoiw9Ca5kcCRCoxCl70rjeDG:
+  also: beach
+  cats: []
+  confidence: 0.38
+  label: null
+  name: 048_JTB_Spring_2025_Kingston_Lime_Cay_Float_Lady
+  web: ''
+  words: ''
+drive:1WpbQMlaH4GEHQ_LDk1nujutp_f1xumsL:
+  also: resort
+  cats:
+  - people
+  confidence: 0.94
+  label: people
+  name: 096_JTB_Adventure_PortAntonio_Mom_getting_splashed_rafting
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1X-2cgEMVoXlhDpptGcSNxaClOc6RNcpH:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.61
+  label: road trip
+  name: DSC03592
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1X5HTnU-yd0FsV0OeCz7gJ4ikb2gb6vG2:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.93
+  label: people
+  name: SGT01682SELECT_V11
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1XDN-06xlqk05ntH4NlhQBw9FmEh1Ns3b:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.88
+  label: attraction
+  name: IMG_9134
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1XK0S8UybbAKJ4hyrtHBRs2jn-vTpysI7:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.97
+  label: attraction
+  name: BonnieViewofPortie0146
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1XQn39-ow5cn9DmoxNxvSTNg3DjsqdCtX:
+  also: blue mountains
+  cats:
+  - road
+  confidence: 0.82
+  label: road trip
+  name: highway_truck_mountains_sign
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1X_vptM_gOxSmpibiTDxQsIGzdnQHynLU:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.9
+  label: beach
+  name: img0004
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1XbCMhsD4fBu3D1CgOT-VvJqbOhu0I1sP:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
+  name: DSC_1415
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1XgkvBu_6UUHHMyS-QJzyLfm5ESvnwWfU:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC_1481
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1XuAAvpgbKVImpjWXbiAMP2ILjqC2phWw:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.97
+  label: food
+  name: IMG_9454
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1Xws2m0yLlFNRjgJtCUfYqNcij15rvcAr:
+  also: bob marley
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 070_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1Y1o7OLwLr4QFz3K_Hdid2a4LKhIndyEa:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.59
+  label: blue mountains
+  name: IMG_8901
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1Y4sU6Hd1FDwQVOksbynDg0NqWBERJrOF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0255
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Y7MgLXUizHkZeNunZOBy4pC6DtvLT6_Z:
+  also: attraction
+  cats: []
+  confidence: 0.19
+  label: null
+  name: img0009
+  web: ''
+  words: ''
+drive:1YDLtxTm5hwBTUQf0MB7XOqkCYo3rRxKk:
+  also: people
+  cats:
+  - road
+  confidence: 0.93
+  label: road trip
+  name: blue_corolla_two_women_palms
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1YN8KPJCWElixIiv_Qv-LHh2ldRZ5Uw26:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.89
+  label: bob marley
+  name: IMG_9055
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1YRjoXiahexdRXXGCJjDPMTyXnVcfMAxV:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.49
+  label: attraction
+  name: DeMontevinLodgeHotel4760
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1YY8Vl412DLtm8waraJ0XIOucS5Ccqris:
+  also: waterfall
+  cats: []
+  confidence: 0.35
+  label: null
+  name: 139_JTB_Brand_Woman_upside_down_on_swing
+  web: ''
+  words: ''
+drive:1YYph_hQmGY8XxQtLGwk8EbHsKvEQnEl-:
+  also: negril cliffs
+  cats:
+  - drinks
+  - food
+  confidence: 1.0
+  label: drinks
+  name: img0079
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1YdLGbcAxiHPUQ4n4uKhIH8ferAzyHbvH:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.79
+  label: rental car
+  name: 3b0958d9-0600-4c01-9376-fd2e8e0d46d2
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1YdqXzv_nlZBVv540QBh7pO43cJsW75IB:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: 465944ab-0199-4d64-97b3-49a647bebb69
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1YvSHPg7m0HTJLZ2tigcW3WjKPybhiSyT:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.54
+  label: drinks
+  name: 014_JTB_Spring_2025_Kingston_Grand_Excelsior_PortRoyal_Dinner_Sunset
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1YwQwkivNSI2Isbgnxh3hxaNnDuvpVCXO:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.48
+  label: attraction
+  name: WinifredBeachPortland3838
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Z3UKogEgLrKSXDQbpnZvZ9rhSYEptlTh:
+  also: food
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 049_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1Z4IVZjMZEO5oHqAxHwGswv5i4Kxx8TD3:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC_1449
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1Z4YIwBjlSPt5dei829Q4OL6LnUZ9MQNt:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.96
+  label: waterfall
+  name: img0012
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1Z5N1s-If4McqQglRcuT1iC0F3hI5EVgs:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.69
+  label: attraction
+  name: DevonHouse0147
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1Z_2xzIIzHMZVwtO33pPWvuMllFin075Z:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.98
+  label: river rafting
+  name: RioGrande0419
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1ZbLAnhO_wP1aMx9lzyH6EmOr8AXDAYo2:
+  also: jamaican patty
+  cats:
+  - food
+  confidence: 0.98
+  label: food
+  name: img0175
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1ZioNsoqVtdNILKG-KYqDdFaBodjB1B4Y:
+  also: beach
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.58
+  label: negril cliffs
+  name: img0026
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1ZlBX2B9M0P53tsO0w56VOa7nUlViyA3R:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.83
+  label: road trip
+  name: white_yaris_cross_arah_road
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1ZswIK0Pfj8NH6d06exKCNqhQNmY_a3-C:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.89
+  label: carnival
+  name: 058_JTB_Spring_2025_Kingston_Carnival_Jamaica_Flag_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1_2-FQLx2Eno5CicdQjt-YxidNL8Na3WU:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.96
+  label: road trip
+  name: open_road_to_mountains
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1_7k1dZd6u_a6fyopD7WQPIu3Gpb-vFAT:
+  also: attraction
+  cats:
+  - drinks
+  - food
+  confidence: 0.49
+  label: drinks
+  name: img0013
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1_EcfEauGVUlAKIt5sJX1_eArUFnc6MGj:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: blue_corolla_coconut_palms
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1_JxoHZ3rhH9JLG5hNQMcobQbxWuARigu:
+  also: holland bamboo
+  cats:
+  - people
+  confidence: 0.45
+  label: people
+  name: IMG_9776
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1_b9Csfz4tYR9U8zd6BDywDtDiWP8LHCS:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.77
+  label: rental car
+  name: IMG_8945
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1_dz6wjdhFZsBlsZfL3A_mab06Uibknzd:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.76
+  label: rental car
+  name: d01e2c19-4304-4ae2-b9fb-bf6230db2da2
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1_zFE9NwQx3cGAeuETaRpqmhivzgZaNCy:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.81
+  label: rental car
+  name: red_mg_studio_dealer
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1a-solaOOYyuG3kDz8AcO-YIf3ahCwhvH:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.59
+  label: drinks
+  name: 213_JTB_Wellness_OchoRios_woman_in_Hammock
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1aBAk0G7jdoNDgjjCWk8dbn0ACuKIpHj_:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: black_suburbans_lake_pair
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1aJg1fWjsv7IC_9gzShxznuVUaMag2fKD:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: IMG_8963
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1aK9bBIv7prNE7TiT0Dxjkol33pIWSgIb:
+  also: beach
+  cats:
+  - beach
+  - sunset
+  confidence: 0.89
+  label: sunset
+  name: img0005
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1aLlSs7bIA25p-KBD8OQoDnenMBGiTtg2:
+  also: sunrise
+  cats:
+  - beach
+  - sunset
+  confidence: 0.84
+  label: sunset
+  name: img0002
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1aSwm7VmKlsU2qwsh6nmKw9ou3H9TViHJ:
+  also: not usable
+  cats: []
+  confidence: 0.19
+  label: null
+  name: IMG_9765
+  web: ''
+  words: ''
+drive:1a_KHj9jMS-2EjhZy6rf-237elworT95K:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.47
+  label: drinks
+  name: img0102
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1ap1V1lVMf5jktOBOC369N_JLFgz5ffYn:
+  also: people
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 025_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1apLxhODEEqCRmSiXWYvvVY5OxH4AGrsk:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.93
+  label: food
+  name: IMG_9041
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1ar0qYNHB08TtOvY6BVdY2Wod1fFqkRTO:
+  also: negril cliffs
+  cats:
+  - accommodation
+  confidence: 0.5
+  label: resort
+  name: img0011
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1auV95tTQ95y-ZI9BXxSLTy_6xofZkZOr:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.97
+  label: waterfall
+  name: ReachFalls4472
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1bAf3EXVazgCsTNdw6LA6LZhelpIO-bKG:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: IMG_9079
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1bLEJ6J2DT65sAPH3pfcLwU5Ld2qbBbDj:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.93
+  label: bob marley
+  name: IMG_9066
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1balTnSJ24KVIomfbEGbjM2wLJtf2KwD9:
+  also: not usable
+  cats:
+  - food
+  confidence: 0.97
+  label: jamaican patty
+  name: img0224
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:1bhL4uNugpOHZuz_ofgV37UC4K2DocmmI:
+  also: waterfall
+  cats:
+  - attractions
+  - nature
+  confidence: 0.77
+  label: river rafting
+  name: 148_JTB_Brand_PortAntonio_Girl_on_raft_with_flower
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1biOcwtfqBQe-G2zL5ucBWXAWw-ZeibLR:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.81
+  label: beach
+  name: 065_JTB_Spring_2025_Kingston_Lime_Cay_Drone
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1bpOT_wr2nk0ylLW6ot9wIpwRQqI_umCt:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.5
+  label: drinks
+  name: img0013
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1btFBk1rS-qlPuqgUpAltWtojEolnZMZK:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: IMG_0243
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1buETxVKULyRv1ds605lkbHsXhhIp-GBz:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.72
+  label: beach
+  name: img0016
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1bwMtN_ftKJa8n8iIhFK66YKAdagM_PHV:
+  also: attraction
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: highway_sea_view_blue_sky
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1c30zOj85UbyFaMNOCE3EIbKuIiYry4M8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_0256
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1c5dDLLYgKGfiMwuHo3pwbxq-lQUYGEmf:
+  also: rental car
+  cats:
+  - airport
+  confidence: 1.0
+  label: airport
+  name: 016_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1c8Le1DuG46L8fXVShEmq2EOHMt6iNLq1:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.49
+  label: attraction
+  name: img0007
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1cBzjKmhutv2YMdGVrHCbZv2GKfcBEOfC:
+  also: drinks
+  cats: []
+  confidence: 0.42
+  label: null
+  name: img0014
+  web: ''
+  words: ''
+drive:1cDAe4fN41oOFC-MlUOz_viYFz8lUQocx:
+  also: attraction
+  cats: []
+  confidence: 0.45
+  label: null
+  name: 098_JTB_Adventure_OchoRios_SpanishBridge_swing_on_ropeCopy
+  web: ''
+  words: ''
+drive:1cFy0B4ecoWScuE6Bqq_04t2mT17cXztP:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.64
+  label: beach
+  name: 063_JTB_Spring_2025_Kingston_Lime_Cay_Boat
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1cIrvE4yUXvt38jDRCwJFUQHv-LuKWZud:
+  also: food
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 005_JTB_Spring_2025_Kingston_Carnival
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1cJPvCbTG0q9qLatStCqUh66Tm7xW0xKV:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.92
+  label: road trip
+  name: IMG_9867
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1cX6vntKbVpEUmqv_0kLci8pFBIcBCdnV:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.9
+  label: road trip
+  name: highway_truck_mountains_dash
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1cdJhAlm0PX4t2kODXx3UOCAdePRN8unv:
+  also: road trip
+  cats:
+  - nature
+  - road
+  confidence: 0.81
+  label: blue mountains
+  name: img0182
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1cgof0_6jb4R2q-xWuRqg63A7VlIkXX6d:
+  also: blue mountains
+  cats:
+  - attractions
+  confidence: 0.58
+  label: attraction
+  name: DSC_1439
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1chjWnmWnIzQ8IatrCZ095-kAHs_uNU1Z:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1419
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1cizDYbizMNqimgAk1JSOTvk_CpRMAMlF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: black_kia_carens_front
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1coZCYaKaizhoiMTCB__swvDrR4LQJOwG:
+  also: reggae
+  cats:
+  - attractions
+  - nature
+  confidence: 0.75
+  label: river rafting
+  name: woman_red_boat_jamaican_flag
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1crkSulk6Mh8qJLJ1v5Qfk61ff5sup6L4:
+  also: resort
+  cats:
+  - drinks
+  - food
+  confidence: 0.72
+  label: drinks
+  name: img0097
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1cwA3FgiQTEyTIfaNd-QRBxDsoLZFgvdH:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1452
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1d-eOr7k_ssENIAnNggbbYCXrlepVMPuh:
+  also: jamaican patty
+  cats:
+  - food
+  confidence: 1.0
+  label: jerk chicken
+  name: img0094
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1d8TYJ-d_XwL9mTYfynTlzUyJ4id3zWtT:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.72
+  label: drinks
+  name: img0049
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1dCUH12y3_vHsQHBjWDtYfOq4DFENz7iB:
+  also: drinks
+  cats: []
+  confidence: 0.19
+  label: null
+  name: 010_JTB_Spring_2025_Kingston_Lime_Cay_Woman_Floating_Beach
+  web: ''
+  words: ''
+drive:1dCechKG_SAaNdwgH7shpfx-KmDQYYpkm:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1456
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1dIvmyNFctsnK0wWoeyfRCrnHRxFZjlDV:
+  also: beach
+  cats: []
+  confidence: 0.4
+  label: null
+  name: img0258
+  web: ''
+  words: ''
+drive:1dJd-DCLY11FbtnaVmDlFj6v5A7NGKea1:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.99
+  label: bob marley
+  name: IMG_9059
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1dLxQoJ2OwjKKVwiAxP97-Eq-O7naDVDa:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.65
+  label: attraction
+  name: DJI_0534
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1dNFp94QYzjT6h7i6_l57-qzQtFmW5Vqk:
+  also: not usable
+  cats:
+  - food
+  confidence: 0.77
+  label: jamaican patty
+  name: 024_JTB_Spring_2025_Kingston_Lime_Cay_Woman_on_Beach
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:1dNuu4QQllKVMmm5EfP4aSV4eKLqYYJzL:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.89
+  label: beach
+  name: img0006
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1dkPik73aV8Pq94FT_RSofEeLN-qcfd9c:
+  also: fruit
+  cats:
+  - food
+  confidence: 1.0
+  label: food
+  name: img0026
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1dlYQSRvv-ZlI7mhccb5-ch8CgfTL8q2c:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.85
+  label: road trip
+  name: DSC_1520
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1doV8t9WvvcGaaVGzYSfJfAxbq97s--Ls:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.82
+  label: road trip
+  name: bd82b4f5-8de5-4d03-a0c0-675e529ecb72
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1dxe1fpSGfE7I530a_kdVNBt6zEXxs7xf:
+  also: attraction
+  cats:
+  - accommodation
+  confidence: 0.6
+  label: resort
+  name: 230_JTB_Wellness_Mom_Entering_Outdoor_Shower
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1e2PR20I3YoA83x40apnFXPf0nh-djHk1:
+  also: waterfall
+  cats:
+  - attractions
+  confidence: 0.53
+  label: attraction
+  name: img0001
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1eDLiQSzyr6_HkocmkjHtziL9QAzK-Go1:
+  also: drinks
+  cats: []
+  confidence: 0.38
+  label: null
+  name: DSC02946
+  web: ''
+  words: ''
+drive:1eNkEI7LFcQU9hLfY498zoStj1yAwCRvK:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.53
+  label: people
+  name: 051_JTB_Spring_2025_Kingston_Lime_Cay_Couple
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1eVZUnpvlbTq4lX7uVe--gpkemgFKk0fo:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: IMG_8948
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1eiLSN4uGjJOBo7p6tkxuddCW9oEGZKwW:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.99
+  label: drinks
+  name: img0084
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1ejXWSYbk8Npssl6-SmLfWAFX_mFa4d9o:
+  also: sunset
+  cats:
+  - drinks
+  - food
+  confidence: 0.58
+  label: drinks
+  name: img0028
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1emSxxzuhBwvE0_5d9fniZ9Ro1SadOB2W:
+  also: sunrise
+  cats:
+  - beach
+  - sunset
+  confidence: 0.63
+  label: sunset
+  name: img0167
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1eoEv-9D1UtLs-dfcU5exMSH0nYIyMx6O:
+  also: not usable
+  cats:
+  - food
+  confidence: 0.7
+  label: jamaican patty
+  name: img0027
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:1ewMYSPR3HLyJydMaMD1CU8m6iF4QL4Ha:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.53
+  label: drinks
+  name: img0021
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1ezRmpFiBASrxWX6rvbYPrR4wYTdHkJ-c:
+  also: people
+  cats: []
+  confidence: 0.39
+  label: null
+  name: img0232
+  web: ''
+  words: ''
+drive:1f7pU4mF0D2a0PI_0yaLBu0WpQlgtS87V:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: hiace_white_side_front
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1f8tGwOdRiWSfTPulENA1pK6yCN4gFd16:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.56
+  label: rental car
+  name: DSC_1401
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1fAKDOl_1Vom07IjYUzINcJlIhEaP0Urs:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.99
+  label: attraction
+  name: img0010
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1fAnAjsodicVi4i6J7VooLiUnj5-9-Iul:
+  also: drinks
+  cats: []
+  confidence: 0.31
+  label: null
+  name: img0267
+  web: ''
+  words: ''
+drive:1fC5Ihg52yRiq0aZrdXCBvqCQv7zM4jos:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.76
+  label: attraction
+  name: DJI_0792
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1fCNrng-slYDohquwQMO-fFA8H3xth7NN:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1405
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1fG-_wcAUhAmg12resIt4MthvgJ9Gef1Y:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.86
+  label: road trip
+  name: '3'
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1fObg-_-zCRK1GqRkzqrM-fLuqv96DswG:
+  also: drinks
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.97
+  label: carnival
+  name: 019_JTB_Spring_2025_Kingston_Carnival
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1fQovucoETQyFx_Vre6PNSTrQ7gzIR7um:
+  also: reggae
+  cats:
+  - drinks
+  - food
+  confidence: 0.9
+  label: drinks
+  name: 023_JTB_Spring_2025_Kingston_Ludo_Lime_Cay_Friends
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1f_WLZyi9i1AWrH2zjdPKuOaXhBOsZivd:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.52
+  label: beach
+  name: img0007
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1fbGUSXekMoZbbOJ5kG1kfdGg4w12t97N:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.99
+  label: bob marley
+  name: IMG_9062
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1fbnvxE3u1iq98C7rVvdGRk8TE--B5oCC:
+  also: negril cliffs
+  cats:
+  - people
+  confidence: 0.62
+  label: people
+  name: 146_JTB_Brand_OchoRios_Mom__Dad_hugging_in_ocean1
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1fcbrvyiXlg7YGHK53bPRU_b0N3XTU5t-:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.82
+  label: road trip
+  name: Photoroom_20250531_033805
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1fn_9FpwMcF27RZw97ctVlKhh-r5QstuC:
+  also: resort
+  cats: []
+  confidence: 0.37
+  label: null
+  name: img0007
+  web: ''
+  words: ''
+drive:1fuKCePPVEXZToSn0LjuUEKx9vSaXlKQL:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: hiace_white_seats
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1fzmWmv40LONAf37w11nTi5bgSv_YugRE:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.8
+  label: jamaican patty
+  name: 116_JTB_Cuisine_Girl_Sipping_Coconut_Hammock
+  web: ''
+  words: Jamaica patty food beef patty coco bread
+drive:1g-BXkHH-oTr96--1tEVchvKVsM5MHrGn:
+  also: nightlife
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 053_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1g2xhAPmcuR29EwI-rcxW4OJf1IDj8RXA:
+  also: road trip
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 1.0
+  label: holland bamboo
+  name: DJI_0535
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1g4vjPceE9NSMe81h9bm_JtnRxueoDLDk:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1451
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1gDSIOQbGDl1OqXXR1SBncYWA1cqPmfFZ:
+  also: drinks
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.53
+  label: market
+  name: IMG_9766
+  web: ''
+  words: Jamaica market craft culture
+drive:1gF_o0dVOmti5SbS3g-hQXjDwZGgkewtZ:
+  also: blue mountains
+  cats:
+  - attractions
+  confidence: 0.56
+  label: attraction
+  name: DSC_1430
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1gI0QpnJ-v8awYSudRvz4lg2U3IQTWftU:
+  also: bob marley
+  cats: []
+  confidence: 0.38
+  label: null
+  name: img0075
+  web: ''
+  words: ''
+drive:1gOiQOiDHBAIp3nGdmmB8fjLZDFTO3VfZ:
+  also: rental car
+  cats:
+  - airport
+  confidence: 0.88
+  label: airport
+  name: IMG_9106
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1gU0v_SqtPJfIu7B3kPDw20NMaT59afjf:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: e3d6a741-5828-4fc8-9ca6-a9ca57f0e9a0
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1gdzD1Kmhhvo-Eb3ANKfNv0IRfriWnkFB:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.96
+  label: road trip
+  name: DSC03533
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1giXtlLOndGeBujP_GauN-MuClx0plQo7:
+  also: sunrise
+  cats:
+  - drinks
+  - food
+  confidence: 0.67
+  label: drinks
+  name: img0204
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1gvzqWUR84uPLm_vh-r5h_PWLmbz-QIiB:
+  also: sunset
+  cats:
+  - drinks
+  - food
+  confidence: 0.97
+  label: drinks
+  name: img0249
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1h1jxjYmHOK-Q_-8GW6Pek9I7YHw4UoNA:
+  also: market
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.86
+  label: holland bamboo
+  name: IMG_9732
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1h5YmRecCbav4c6YcaymnM8YA_RGVHuQX:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.82
+  label: road trip
+  name: 92482b82-bf5b-47c1-8aaa-80b85a8ef601
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1h9wBSx3VwaP5tnLYNYN8zXz-VH5lKLex:
+  also: market
+  cats:
+  - food
+  confidence: 0.71
+  label: jerk chicken
+  name: IMG_9761
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1hCXCePJ7GbpWmPGsIK2AmKKGfgMamW22:
+  also: drinks
+  cats: []
+  confidence: 0.56
+  label: not usable
+  name: JTB_Romance_OchoRios_SeasonedTraveller_dance_laugh
+  web: ''
+  words: not usable
+drive:1hE60KOnQNm-P3tR_Miz__PNJzzIx0XMv:
+  also: drinks
+  cats:
+  - accommodation
+  confidence: 0.7
+  label: resort
+  name: img0078
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1hGSFA9_uhU4rS9yDdZVP143HMz92S4Ga:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1482
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1hHR833OIiKu1-0Kkfb_onSZAEZ00cMYZ:
+  also: food
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 055_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1hJ158ERoxpJOu031c4MMQ6lzlINdEUIF:
+  also: bob marley
+  cats: []
+  confidence: 0.54
+  label: not usable
+  name: 218_JTB_Romance_PortAntonio_hands_on_sand
+  web: ''
+  words: not usable
+drive:1hJtUc7D38EEStKKwoBEJgCv-7GQmvYBD:
+  also: beach
+  cats:
+  - accommodation
+  confidence: 0.96
+  label: resort
+  name: DJI_0057
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1hVXlcsrCkzSS_F3aqXWQLCibgICxli5O:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.64
+  label: rental car
+  name: DSC_1422
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1hXVypeQBYTb6wauCf5byBq-OikLTLIpW:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.96
+  label: road trip
+  name: IMG_9305
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1hmpf9pqHmyQCGxrCIpSXsLig3N3fCb7L:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.99
+  label: waterfall
+  name: ReachFalls4578
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1hqWMHjnJDZILmC-hnA9A01Wkbq5gkuBB:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 001_JTB_Spring_2025_Kingston_Carnival
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1hvECVQ6HgLcMfgf0DM8aXJJESb6bsegG:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.68
+  label: attraction
+  name: IMG_9142
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1i3acz6JPqNLwX1x8-Ox3CDLVv6XWXfRZ:
+  also: reggae
+  cats:
+  - music
+  - nightlife
+  - people
+  confidence: 0.98
+  label: nightlife
+  name: 220_JTB_Romance_PortAntonio_Bar_Club_couple
+  web: ''
+  words: Jamaica nightlife night party dancehall
+drive:1iAUBEkR4K1vKa7su73PfnZ0UriBZi2i6:
+  also: drinks
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.47
+  label: holland bamboo
+  name: IMG_9753
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1iMeKTNH_oVvfP2YWasa_qlN08CwGjwAU:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.55
+  label: rental car
+  name: DSC03581
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1iPGF4FCPR-l9-8UrBqULgUi5KncXDxPA:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC_1479
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1iWeVCgEaA1TdvYwSW4VnpCwHjDhtebWv:
+  also: attraction
+  cats:
+  - drinks
+  - food
+  confidence: 0.58
+  label: drinks
+  name: img0002
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1ie5skcvaarm59x9LuPoH4v1WbzwFk0EF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: DSC03456
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1j0UgOL8xc150S_Mj2ZVArq4aWuTnbKUm:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.73
+  label: drinks
+  name: img0147
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1jCiMjzzTotOF2IzjufX_t51pfoSUyz_v:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.61
+  label: road trip
+  name: DSC03592
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1jLJTYSqtswEcU1FB3oOhRl2EN24-zw_3:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 072_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1jN_-GE_HxdjDLJBSFIF2ysocN20yTrx-:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.55
+  label: road trip
+  name: DSC03565
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1jR5YUK991tm8nIArY4dthxn5G_nXHUj7:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: IMG_8975
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1jdAW8uGDMG5TuVfvt7L57C3JMtbttv7z:
+  also: waterfall
+  cats:
+  - attractions
+  confidence: 0.53
+  label: attraction
+  name: img0009
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1jeSN6Yd1IvRzT7M7XX1f0TjC5n0b5Wgx:
+  also: waterfall
+  cats:
+  - attractions
+  - nature
+  confidence: 0.82
+  label: river rafting
+  name: 227_JTB_Nature_PortAntonio_One_raft_in_river
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1jn38NWiAVug6Lem-O4YEbObt1uYw5tQd:
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.57
+  label: negril cliffs
+  name: DIM_9011
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1k1nB-wEa7pmjhsZep9uNC9DVOS1kkCDV:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1470
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1k2-UV5uvcwPd3b_nY99dpYa74YCig9kD:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.77
+  label: rental car
+  name: b41dbce0-f672-4934-a90a-71d50918f2dc
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1k5Wk78yqKE1cmvF0UCncTbvBm4J4277-:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: DSC03466
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1k9minrQvJ0n6cG20Hluxi0iSR2iB8D9P:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: e3e37d37-6dd8-41f5-89a6-8a702fd1ef66
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1kFoIGvIleuIdlctZrzLkKG8bWL7v69Vv:
+  also: attraction
+  cats:
+  - beach
+  confidence: 0.47
+  label: beach
+  name: DoctorsCaveBeach0172
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1kJh8u7MzCxay7Mo9HRKHb1OBhW3hNm0y:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.6
+  label: road trip
+  name: e12de4bc-1a8a-4b1d-a65a-7104d4f22de3
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1kOsRfqhUaZSAu0h4Jd63l1Zd-J3vneb8:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.94
+  label: people
+  name: IMG_9785
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1kRO6s2Mnknjyv9GGeqiIvujh8VH4fjMH:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 0.83
+  label: carnival
+  name: 027_JTB_Spring_2025_Kingston_Carnival_Jamaica_Flag
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1kYTUaIsBgt8HuO0IAQFfQPBiuHsRLa5J:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.77
+  label: drinks
+  name: 036_JTB_Spring_2025_Kingston_Lime_Cay_Beach_Romance_Couple
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1kYvPJ0CIAYL087Ikkfdx8__Zgw2h41v3:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: waterfall
+  name: DunnsRiverFalls0233e
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1kiEwfnPY_wyLHTp5asKjoW7tjcJgtS8r:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1489
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1km5koKPnQZD79gRbr-A6UKqoGX902sop:
+  also: attraction
+  cats:
+  - road
+  confidence: 0.73
+  label: road trip
+  name: DJI_0904
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1kmZdC9rX8MzacTuXsi7lmcNf_ZX0FqxX:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: white_toyota_axio_front
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1knZpkH8-jvChGcsFq4bGSGydAZVziqIm:
+  also: resort
+  cats:
+  - beach
+  - sunset
+  confidence: 0.97
+  label: sunset
+  name: img0008
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1kpRtNXBiaB1D5jJ0Y0GnqfANPCd9OZFN:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.64
+  label: road trip
+  name: DSC03574
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1kqkUwcGZbNwVBCteyrwpaqQX70_vcWNn:
+  also: holland bamboo
+  cats:
+  - nature
+  - road
+  confidence: 0.79
+  label: blue mountains
+  name: img0218
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1kssOi6IDGqRycqW3PJturcaXYWN6aViX:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.92
+  label: river rafting
+  name: DJI_0607
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1kuuP-O5yrRVzU9dPi_MaX6BdkbMeUbLU:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: DSC03486
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1l1ruzkXvnNsZ4C1tCU4tT_9C5EtH5nLL:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC_1485
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1l2rnO9C6ezQkmlFafLzLlWNlT3aEBEVX:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.58
+  label: beach
+  name: NegrilBeach0653
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1l4B2jFM60YW0ZXz9HbQQiteO92n82wFx:
+  also: not usable
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.62
+  label: sunrise
+  name: img0111
+  web: ''
+  words: Jamaica sunrise morning dawn
+drive:1l9p9RYoYZOK2KlWpy8TfPlDN0sqG2nfp:
+  also: road trip
+  cats: []
+  confidence: 0.48
+  label: null
+  name: DSC_1517
+  web: ''
+  words: ''
+drive:1lAs7JbbWKrS9rAg9j5tyUGok7hGZsILX:
+  also: resort
+  cats:
+  - drinks
+  - food
+  confidence: 0.86
+  label: drinks
+  name: img0263
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1lGJ0evfEiJjMz25gtWOAZywA6Dx8js1P:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.87
+  label: beach
+  name: FrenchmansCove4132
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1lWo56nSfI-bu03rUKy5d8Fwq147aUW2Y:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: 583b43f9-3fc5-4d36-afcf-3b73902779da
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1lZ8gSSavrYSKo8aX9TRhnGBjh_o9G4JK:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: RioGrande0320
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1lZmNGiYPtBjiZcN2-tJjriAXCHkQcKj0:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.9
+  label: drinks
+  name: img0058
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1lfp5BFS0yPTQRqKiVbO5mgCD4V392Y6o:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.66
+  label: drinks
+  name: 041_JTB_Spring_2025_Kingston_Lime_Cay_Beach_Boat_Friends
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1lgi2WZGnKWo5zbAF-lK_j72FiDT7Nn82:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.84
+  label: rental car
+  name: 7811a4a2-67ef-44b6-b5f0-baa4bbb92bb0
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1lhUHW6wHOBDbxcIu4WFBXmrEi_ju895R:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.85
+  label: attraction
+  name: DJI_0621
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1liKbfhIzDWARnaJTwU8ET95ZOZ5AQ2TE:
+  also: people
+  cats: []
+  confidence: 0.22
+  label: null
+  name: 030_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport_Greeting
+  web: ''
+  words: ''
+drive:1lllOCCsixt7-gqz0HIKQGKwPeGjYQPNr:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1480
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1lwE5PZfS5DKlQNVrblROKUwMS1vzlXmI:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.49
+  label: drinks
+  name: IMG_9742
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1m1tSguA9NQ-ADGmbc3ezg0yIHBi-LVuB:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.67
+  label: drinks
+  name: img0266
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1m5ba4IR_IhzAEZqkuC0HxX3RuQMmhHSl:
+  also: attraction
+  cats: []
+  confidence: 0.39
+  label: null
+  name: JTB_Romance_OchoRios_Mom__Dad_dancing
+  web: ''
+  words: ''
+drive:1m6fSIqFfVe4FaI25z3TXQpIR6ZFiIine:
+  also: drinks
+  cats: []
+  confidence: 0.5
+  label: null
+  name: DoctorsCaveBeach6403
+  web: ''
+  words: ''
+drive:1m71G5b3pjsT62XmFZqW63q2ozHbIBzuo:
+  also: blue mountains
+  cats:
+  - attractions
+  confidence: 0.7
+  label: attraction
+  name: DSC_1431
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1m98-EkPUOhk-ysmd6pTUOwHonnYtlijN:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.63
+  label: attraction
+  name: DJI_0551
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1mAok5iugKlD8DFga82rAwjbeDDZaoFjF:
+  also: beach
+  cats:
+  - attractions
+  - nature
+  confidence: 0.62
+  label: river rafting
+  name: 056_JTB_Spring_2025_Kingston_Lime_Cay_Boat
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1mEopAt15qwjM_aduPvCLmBePHTWz12K6:
+  also: kingston
+  cats:
+  - airport
+  confidence: 0.72
+  label: airport
+  name: 066_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1mTGUKLtkSAhsq0hAAHm_il_kGx7r5fdI:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1404
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1mTnpwyAhcSgJOW65QEZNLxz6FbgG0LBl:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC03462
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1mZnoc0yyQ5v8JOxC2fZ1-qCtGZ3g1YYU:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: Hover_20240323_1711289457318.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1miEq8TwhMy_RpIlnilbkB2--I5Tsx5KE:
+  also: market
+  cats:
+  - road
+  confidence: 0.73
+  label: road trip
+  name: IMG_9737
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1mvgu_xabs5RYrhC02r7OHcx8YWLKBJbS:
+  also: bob marley
+  cats: []
+  confidence: 0.38
+  label: null
+  name: IMG_8981
+  web: ''
+  words: ''
+drive:1mwjFjK1Z9WNmrvTQz2ziDQQujXVyXDOp:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1483
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1mzociwsL5MYLIHrim7W8HwzyHlBW5dgc:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: haval_interior_cockpit
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1n6AM5saGkNGzv3CkGeiigGQ5uD7QP9rP:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.53
+  label: beach
+  name: 229_JTB_Brand_PortAntonio_FrenchmansCove_River
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1nACNTbILBwVt7sv0RPDCj9GtZMxSgBpl:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 1.0
+  label: bob marley
+  name: IMG_9064
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1nB9h199EuKWqsP7_EqzUHqaawts6YmuZ:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.52
+  label: drinks
+  name: img0004
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1nB9q8gF5fBXZTuSADfcuV3ADGxhvOvz4:
+  also: jamaican patty
+  cats: []
+  confidence: 0.44
+  label: null
+  name: IMG_9754
+  web: ''
+  words: ''
+drive:1nDXa1WLdjhQ6KiiRXMso5F0GxgM63uPt:
+  also: sunset
+  cats: []
+  confidence: 0.35
+  label: null
+  name: img0010
+  web: ''
+  words: ''
+drive:1nMuf8IJga9W559dmKaCM_mxVrKQ5lpOj:
+  also: fruit
+  cats: []
+  confidence: 0.41
+  label: null
+  name: IMG_9757
+  web: ''
+  words: ''
+drive:1nNGD7nCCVblb51Wxu_08kTtw2U0AojSl:
+  also: sunset
+  cats: []
+  confidence: 0.4
+  label: null
+  name: img0144
+  web: ''
+  words: ''
+drive:1nSsuvp57qVEqBsRPhB6M8vffcRHDHuzm:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.51
+  label: road trip
+  name: IMG_9100
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1nTp5rSxXQHq1Cfez0U4p22-ChSJCmbEG:
+  also: road trip
+  cats: []
+  confidence: 0.53
+  label: null
+  name: DSC03500
+  web: ''
+  words: ''
+drive:1nWTwuGZMAGk8wck3-36CiRjfSHM3nuUp:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.6
+  label: beach
+  name: img0149
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1nXLQG8lmgFclKRYKan-F4RbOqgv1OMEg:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.8
+  label: road trip
+  name: DSC03519
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1njblnIsjD6LE7enhXgvuhNAjNL_vc7r9:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.99
+  label: bob marley
+  name: IMG_9058
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1nlKT8alR-xOrwb5ZBvlgm0Tsgz5z89Ea:
+  also: rental car
+  cats: []
+  confidence: 0.52
+  label: null
+  name: IMG_8946
+  web: ''
+  words: ''
+drive:1nnLu8tuP0icR8XA8fUbEX4qv85ikKRMz:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: c3a08aef-b07c-45df-a9b4-1ebf5322c1e5
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1nvVMR5i2E71aTQR_J1uKIw9apxMyTPF_:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.59
+  label: attraction
+  name: DJI_0150
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1ny2Hlgod_QVLXe6RrZaaF_kNb5ZetWnN:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.84
+  label: people
+  name: 067_JTB_Spring_2025_Kingston_Lime_Cay_Friends_on_Beach
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1nyflsu8iRu6QRmUsb_TWdHN-uoE-LWhi:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1465
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1o-GipIzjVJL45RLKMo-CRERJUsQvcGFZ:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.81
+  label: attraction
+  name: DSC_1446
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1o2fTuKY6QL4YsF4QroLMiWpV2xB83crv:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.95
+  label: road trip
+  name: DSC03531
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1o7DVk1tN9mMvHp4p-MLlLZcAfcUcblYq:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: DSC03603
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1o84mtMpAPVCNStn5vhU5J4afzpeyEjHd:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.72
+  label: attraction
+  name: DSC_1432
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1oBumXXG2-O7J--OZ2XKB5kF7WbapsTC1:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: f485e071-fddd-4e4b-88dd-e444f6e0075f
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1oCI--VV8kyWxB0_74ruoSPgbI7y9HYqs:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.61
+  label: blue mountains
+  name: IMG_8965
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1oDBnpMfabCnzuNcvxyytHHT51ZEL7zOO:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.92
+  label: road trip
+  name: Photoroom_20250531_033744
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1oN7pSc1uxAhGBE6qcuqYH76QbWO8DeC1:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1484
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1oOE-20KGBDD68YBgk7U6wa984Q50EuPB:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: DSC_1455
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1oWZmIjDQzvGsLv2XgqYvpedc9oszRjU0:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.89
+  label: attraction
+  name: PortRoyal3330
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1oY7L7lgjxA58uaYYRLQ1pOHpZRyw74R6:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.82
+  label: attraction
+  name: img0020
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1oed06aibxWRLtDHEo-TxLIAsAacLtgMe:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.68
+  label: people
+  name: 073_JTB_Spring_2025_Kingston_Lime_Cay_Friends_Beach
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1ohvhGra7orwufByp0OejZWq8FqY3dp-l:
+  also: not usable
+  cats: []
+  confidence: 0.37
+  label: null
+  name: img0037
+  web: ''
+  words: ''
+drive:1oitYoVw5-EAQHolsgER83ReyqiQhsgrK:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: d4577f02-9451-40b9-acb9-97e433610218
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1okhvLzclFAQrX9rq1QBkdUTgzjRf6QyT:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC03609
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1ooxE11mKkBhpA7Z-qlMHtuCqCqG3MNKr:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.78
+  label: attraction
+  name: DJI_0165
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1oq5VslnKo1OfIStcr44QktZ1b1cnprOc:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.67
+  label: people
+  name: IMG_9780
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1ore6-n4yO6ABm4oylb_Vrt8xh53jBcdg:
+  also: drinks
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 033_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1otNopBEMfXRPeWZkiN4n_ytTl69lfFsz:
+  also: market
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.91
+  label: holland bamboo
+  name: IMG_9730
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1otZQ0E-MqkTIUjJTQc4600q5_3raIhlF:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1503
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1p15TuFH4G76uAqxc_JnzEA3UeF7cH4ST:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: IMG_9078
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1p9BrtwK80rou7Gf6_sLRFIFmHlEAHpX3:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: DSC03501
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1pALCMEqHmDmdf_NXNom6enF8dAB56Ozl:
+  also: trident castle
+  cats: []
+  confidence: 0.5
+  label: null
+  name: 127_JTB_Brand_MontegoBay_RoseHallGreathouse
+  web: ''
+  words: ''
+drive:1pAZ-vv3oevb2SPRUsHF_eWM5KJKmOmsp:
+  also: drinks
+  cats: []
+  confidence: 0.39
+  label: null
+  name: DoctorsCaveBeach0177
+  web: ''
+  words: ''
+drive:1pLHvFTHSB0lI7turZAwQunglDyPQZzJ5:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: DSC_1475
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1pQ6Sxzq7Cqxt3_Q1v6lCgivzDDfxgKXV:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.77
+  label: drinks
+  name: img0016
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1pQuQ0knBZmX0i8sF01I8oBKafD7k6Ov8:
+  also: negril cliffs
+  cats:
+  - road
+  confidence: 0.55
+  label: road trip
+  name: img0014
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1pcvKG_za7ipQYUb_0bf9ls77f2fD1_Um:
+  also: holland bamboo
+  cats: []
+  confidence: 0.43
+  label: null
+  name: IMG_9752
+  web: ''
+  words: ''
+drive:1pdlbfCf1aDybdjCRnhwDEPMWY7jH_dK4:
+  also: river rafting
+  cats: []
+  confidence: 0.41
+  label: null
+  name: 040_JTB_Spring_2025_Kingston_Lime_Cay_Couple_Boat_Beach
+  web: ''
+  words: ''
+drive:1ps9KHZmxSf2g-Rg_M4wdpIh1tHqwnTy1:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.53
+  label: beach
+  name: img0181
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1pxfyaMV-6iEzw6AQTLNFoGgyFNt_TfkO:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.54
+  label: attraction
+  name: DJI_0930
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1q5X458qS1bkgK5mzZrQu3EWZno0f0jvv:
+  also: rental car
+  cats: []
+  confidence: 0.51
+  label: null
+  name: 6a497364-fff4-432e-b65c-09adbfbfcd93
+  web: ''
+  words: ''
+drive:1qHGD5MCtg4xcTg4_0x15bPop80JEHADq:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.99
+  label: waterfall
+  name: img0018
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1qHOWQZTm6Z58JIChAOLrC_4tRNXNfJEV:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.92
+  label: attraction
+  name: IMG_9122
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1qI0fotf2OktM8QUOxRo03UevWRmOkQ9E:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.9
+  label: road trip
+  name: DSC_1514
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1qLG4iYeSASREf_j7AgODgGOjTCMKtpIz:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.79
+  label: attraction
+  name: DJI_0371
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1qNjEfXjd12KbGhfRzaCXRXMH3YDteuwE:
+  also: food
+  cats:
+  - food
+  confidence: 0.99
+  label: jerk chicken
+  name: DIM_9336
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1qQoswq-k26JoWKqttjbKqifHuLCK6abW:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.95
+  label: people
+  name: 034_JTB_Spring_2025_Kingston_Friends_Boat_Lime_Cay
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1qc76ZhlIi1BN_snEf723e115gHLu8bNu:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.58
+  label: rental car
+  name: Photoroom_20250527_162910
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1qgFasp_mLqLD_lM8h4ZfzJsA1_FmcYs5:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC03549
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1qiOVV7CU523EkyEsgLlTbXoH1mw8FFPh:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_8958
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1qjZwZwC7KdbUgIcicbMRj8lcMmNBgjGX:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.86
+  label: attraction
+  name: WinifredBeachPortland05771
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1qo5LBEH9jC8e1tzGyLnMnRUpfdkoPn89:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.54
+  label: attraction
+  name: FrenchmansCove0729
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1qo8-rZ7DWS5ubA2Pom1rpIWR5119nxSv:
+  also: beach
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.6
+  label: negril cliffs
+  name: img0019
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1qrtQgP13AO05CEhGX2hW6MDiF2Bc145u:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: black_haval_front_left_b
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1qsQgjpTtgIxnCH-KM6uBHZo7LGkHgAP0:
+  also: rental car
+  cats:
+  - airport
+  confidence: 1.0
+  label: airport
+  name: 074_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1qw-e1whJCG1BiEozBf0GGETJEnRRl1_5:
+  also: food
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.76
+  label: bob marley
+  name: img0119
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1qynRGbzVkX-KR-rsYiOmfISKGJQecYq_:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.64
+  label: attraction
+  name: BlueLagoon0118
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1r8qGvpTmMEfuyPAZFTO4BSQMn2LCaMLZ:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.75
+  label: rental car
+  name: DSC03478
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1rEpa1Fvq-HsVrNtKWPxf_OpuDlKUKqdU:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.82
+  label: drinks
+  name: 054_JTB_Spring_2025_Kingston_Lime_Caye_Lookout
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1rPXZJhZtLCio5rpEGm0Jf1af1sbt3py5:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1408
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1rVRAIoBfFnQEWUMlmsN7orB2PNIQnusc:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: black_suburbans_villa
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1rYibt7ub5u1zuXf-c9fXtQj8FmXo3h1K:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.73
+  label: beach
+  name: DoctorsCaveBeach0224
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1rfAPiSwH56OtyQIGVggWo_sgSUj_75DN:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: DSC_1407
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1roghMLbs5i_buzdMMBV_cPz4g4iwBldW:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: IMG_0244
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1rqV-Yp3JA5JMPoPrTCr5hgQ0ko9NVJ4o:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: DSC03626
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1rx807YWBXzJ1spp3spuDpJC9Ei8dgrcJ:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.48
+  label: rental car
+  name: DSC_1477
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1s3fUwd7CNmuYgs35nBKPsMEWXcZxdqKQ:
+  also: beach
+  cats: []
+  confidence: 0.36
+  label: null
+  name: img0002
+  web: ''
+  words: ''
+drive:1sB6D_9mQMxY-DQjmR7CoOVf4MZHxzkgH:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: IMG_8949
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1sB7-zWfC8g8eCOG0znyWaIbTPTzkvCGx:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1495
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1sDj4HGDJxQghuxB1yX394QoyU8wFT9sa:
+  also: fruit
+  cats:
+  - people
+  confidence: 0.73
+  label: people
+  name: IMG_9768
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1sE7yp9n8YFbJOKtnYBWEm6PTbdFMpdFy:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1457
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1sEL3jt-SBB54TAER0D3C1Q3l7rQATurM:
+  also: dunn's river falls
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  label: waterfall
+  name: KonokoFalls0543
+  web: dunn's river falls
+  words: Jamaica waterfall river nature
+drive:1sFlf1lNQCYrZYGWyoZ4Sq4OevaF9KDlg:
+  also: resort
+  cats:
+  - beach
+  - sunset
+  confidence: 0.89
+  label: sunset
+  name: 219_JTB_Romance_OchoRios_Sunset_in_pool_at_villa
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1sFvLLHBnCVW5-jlN_akutChwb4EMPGkL:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: IMG_9077
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1sN7VJZxVimAvfOqwqgYAHvmn9uld4-s6:
+  also: blue mountains
+  cats:
+  - attractions
+  confidence: 0.88
+  label: attraction
+  name: 215_JTB_Wellness_OchoRios_resting_near_SpBridge
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1sRSox2Q400xoanYIWYBCru5YvLw_zQ9b:
+  also: drinks
+  cats: []
+  confidence: 0.36
+  label: null
+  name: img0089
+  web: ''
+  words: ''
+drive:1sS4YlPfoeY8qzN-vWgDxHSKPKAEgOQj6:
+  also: drinks
+  cats:
+  - beach
+  - sunset
+  confidence: 0.88
+  label: sunset
+  name: img0077
+  web: ''
+  words: Jamaica sunset sea evening beach
+drive:1sdhfa9Fgah0m18_06iPoTXRi_3X9Sn6E:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: hiace_white_rear_open
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1sgamrXIolC7I0Aow0wHwKUvtByUEIK3O:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.83
+  label: drinks
+  name: IMG_9743
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1shbnOH754UlJc2e5HRfbjoK6x4_it-mC:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.83
+  label: drinks
+  name: img0110
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1soUA2JWhvzeVXWSP038CmJR-butbK78R:
+  also: jamaican patty
+  cats:
+  - food
+  confidence: 1.0
+  label: food
+  name: img0131
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1t0Vkp2_7A2NAeJKRIdaW4YHTNOi0IDsi:
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.73
+  label: negril cliffs
+  name: DJI_0079
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1t0bv-w1QYJNvsONlQyDrnujt6s7Wccx5:
+  also: drinks
+  cats: []
+  confidence: 0.45
+  label: null
+  name: 047_JTB_Spring_2025_Kingston_Lime_Cay_Float_Lady
+  web: ''
+  words: ''
+drive:1t1tcRxksbMrp5IceJSCpW2i-parECD3H:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.96
+  label: river rafting
+  name: RioGrande5309
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1t2GP8KP3l3vvlc3Ikn_FhyZiW5Hy6SRp:
+  also: market
+  cats:
+  - attractions
+  - nature
+  confidence: 0.98
+  label: river rafting
+  name: img0154
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1t3ybpETt_81kp2-D7Fe8yrrZ9LF9jsar:
+  also: market
+  cats:
+  - attractions
+  - nature
+  - road
+  confidence: 0.76
+  label: holland bamboo
+  name: IMG_9729
+  web: ''
+  words: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel
+drive:1t6NMc9a-3751YzLDAXT92lNR41V0R-HM:
+  also: nightlife
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 044_JTB_Spring_2025_Kingston_Carnival_Ladies
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1t7xVWK7XTvlSUVcwKduoVt6SPuuyzL2o:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.88
+  label: road trip
+  name: DSC_1515
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1tBPV4t94B6WQ9SUaQEtv9lf5zTL_tI1_:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.78
+  label: river rafting
+  name: BlueLagoon0087
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1tDUiUbqWhCgOZNm4oWhhX-C1SCrkgADb:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.98
+  label: people
+  name: 143_JTB_Brand_OchoRios_ColumbusCove_kids_running_on_beach1
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1tIjV6iIYsUC3ER5OHUcru2j_-luzrk7p:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.72
+  label: rental car
+  name: DSC03465
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1tN15Vrtmn2yxZDpUNsHq8kvoPdAsXbUb:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.57
+  label: attraction
+  name: IMG_9136
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1tPBtN9z2wd9BgPuWEKwp4NCwiSmJ_Cnc:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: PHOTO-2024-03-10-22-13-18
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1tPLcmrnvYUG3FH3o22f9C0uN92YcWNEJ:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.96
+  label: attraction
+  name: DIM_0003
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1tQUMRwHI-J5cLeJ_5OisbvS6Aj6cvdE7:
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.69
+  label: negril cliffs
+  name: DIM_8954
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1tYAqNJf4tWc5weFLD3Fs8spW1kIw8iH-:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.9
+  label: road trip
+  name: white_subaru_impreza_park
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1tbFLpf5uFvz0_qvE9Cq-Cj9q4Ri6Dj8K:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: DSC03617
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1tfy0ZaJ6BoDk5R00petyLrSCHgYjJpqV:
+  also: food
+  cats:
+  - drinks
+  - food
+  confidence: 0.94
+  label: drinks
+  name: img0103
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1tpfVGZkFAnERkUsALoDQ-4A2mTHmkPIw:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: DSC03606
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1tvASypyHpSh535wh35CaO0ZmuM25MYFl:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.57
+  label: river rafting
+  name: NegrilBeach0646
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1tyi44kbxZFS2eBF063WFkSlIxo7SQkQH:
+  also: dunn's river falls
+  cats:
+  - attractions
+  - beach
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: dunn's river falls
+  name: 123_JTB_Brand_OchoRios_DunnsRiverFalls
+  web: dunn's river falls
+  words: Dunn's River Falls, Ocho Rios, St Ann - waterfall
+drive:1u-yQUiohrxj7EzIGQpmFhLvCj-RWkR1B:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.8
+  label: river rafting
+  name: DIM_9839
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1u1H4WODECN5ht0rLKcIif4_w0hLqvgb8:
+  also: blue mountains
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
+  name: IMG_9857
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1u3O4vUhUB7D1ygw3wPZvXnDLVrlpow0Z:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.6
+  label: food
+  name: IMG_9044
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1u4dG4tjr2WPaITmXNNwVtTuPA5yzakV6:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.81
+  label: drinks
+  name: img0269
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1u4tWPTstr-IB6vl_c2uIFO2waGZ1PWdS:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.96
+  label: waterfall
+  name: ys_falls_pool_reflection
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1u71uP0ktsAoj9Bn6YFTA81ICmBcy47LT:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.55
+  label: rental car
+  name: black_suburbans_lake_palm
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1u9t9nhd6cPE0JH21jSLBWZVU-YnngxNE:
+  also: bob marley
+  cats:
+  - drinks
+  - food
+  confidence: 0.68
+  label: drinks
+  name: img0022
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1uAmAaSn7IuP8s5ZaM2rZwXzy6ipdzdvV:
+  also: road trip
+  cats:
+  - airport
+  confidence: 0.99
+  label: airport
+  name: IMG_9102
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1uBn_4UOUofWoWmoPlkERIKzmRUNcfqIG:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.65
+  label: road trip
+  name: DSC_1516
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1uJsGZiSUq5Squdau-vQZEtpcMmDr7fXS:
+  also: attraction
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  confidence: 0.99
+  label: bob marley
+  name: IMG_9056
+  web: ''
+  words: Bob Marley Museum, Kingston - reggae culture
+drive:1uK5Kn-upsKeHdUCmC-A1rYIWZHRAIQBK:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 0.81
+  label: river rafting
+  name: NegrilTown7831
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1uKK_1pj4o4pj4vAmaaRN9S6Qh5-vWvTh:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.84
+  label: rental car
+  name: cd60ccfb-9b19-48b0-a8c5-2eb5fb508037
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1uLco_L3nf3OiJhw4ZiHqgB7ZxtVwsfBD:
+  also: not usable
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.5
+  label: negril cliffs
+  name: 009_JTB_Spring_2025_Kingston_Lime_Cay_Woman_Beach
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1uQ3eIiZcV6gXlLnN3eBGgeHQb2i7bYoU:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.62
+  label: beach
+  name: img0003
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1uT6F2sAHP04qSDB22ckkbdoKNYmINdB8:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: red_rav4_arah_low
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1uT6iAj6NqKIQzdW5RNQFgpkNdJ4Uo__T:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: aerial_rafts_blue_lagoon
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1ucPD89c_pkcjS2coj2TjbmssdW9waGDY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
+  name: DSC03494
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1ue9dj3TxP52BflkLaCl_7VPLT7fFPdxA:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: d3d84232-df63-4916-a047-c19b5c546a18
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1uePe225NaQRrZ4MJHKDdQ5zaWN-eRz0c:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.94
+  label: attraction
+  name: IMG_9141
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1uhCtPK354Ru4SXjiMxtHKLtoPisHzp2U:
+  also: holland bamboo
+  cats:
+  - road
+  confidence: 0.89
+  label: road trip
+  name: white_corolla_cross_highway
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1ui5iZAlxuzOYygEgQYUGwMhjbhrCpCcQ:
+  also: jerk chicken
+  cats: []
+  confidence: 0.3
+  label: null
+  name: IMG_9756
+  web: ''
+  words: ''
+drive:1uqI1PV-umSvGxAmTrAxG_whyjECTgC-v:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: 6f534d1f-8ba0-4a41-a180-d0d2245b365e
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1uxAA5lgdqtgxig9d8xzeBUuOc48w1DU5:
+  also: people
+  cats: []
+  confidence: 0.38
+  label: null
+  name: img0115
+  web: ''
+  words: ''
+drive:1uz__9ItBhiQDB6JCxRUbxjsPbUo79uPK:
+  also: resort
+  cats:
+  - accommodation
+  - attractions
+  confidence: 0.47
+  label: trident castle
+  name: img0002
+  web: ''
+  words: Trident Castle, Port Antonio, Portland - castle
+drive:1v0P0Bi4NNpOOKBWU4Wm22CnSvTaHGfhO:
+  also: drinks
+  cats: []
+  confidence: 0.32
+  label: null
+  name: DSC00379_V1
+  web: ''
+  words: ''
+drive:1v7vod47C6Kor73caqM-ERzswCOu6_EfG:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.53
+  label: attraction
+  name: IMG_9080
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1v9EKnzEJ-vm9LldObc2Yk6WiyCGSCQXo:
+  also: people
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 031_JTB_Spring_2025_Kingston_Carnival_Women_Photo
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1vLWUx08BTRPggZ6rYr3V3u734qJAFOyw:
+  also: people
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: silver_minibus_side
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1vLxptR2gPUKg6k4d2HH5xPNLAXl_tMk-:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.85
+  label: food
+  name: IMG_9040
+  web: ''
+  words: Jamaica food rice and peas oxtail ackee saltfish
+drive:1vRc3Si5eMOGWP9eCSoaS88S-d1A9qzTI:
+  also: beach
+  cats:
+  - attractions
+  confidence: 0.5
+  label: attraction
+  name: img0190
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1vaKG7ievTD-i7FPTj6jkR9xDpLEKMOAX:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: 36f20665-be89-43be-bcde-eca8111c949b
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1vhTZpff2Ztmy4W7Dwx41eKuHhYAQf4ik:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
+  name: 811acf63-e41c-45e5-aac1-54bce58f95e6
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1vqgV-_AxLEqhkg76HNDR0AfpQESEXTA9:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
+  name: IMG_9311
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1vsfk-m4t7BJ0i3o35FIOaEBdLOn_DdQS:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.86
+  label: attraction
+  name: img0096
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1w4qrbUsWbQjd815T9CqQx9-_R3r14gMD:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.87
+  label: attraction
+  name: BlueLagoon0092
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1w8fQ18qvvNULLvIhvDt070BYmCdcfGFH:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.59
+  label: attraction
+  name: DevonHouse0473
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1wBURO2r5HYLOAFDsUQEQAJWBt_BCbvwx:
+  also: road trip
+  cats: []
+  confidence: 0.4
+  label: null
+  name: IMG_8900
+  web: ''
+  words: ''
+drive:1wByVvxzrruHjUDY6z8pS278O6Z3twuHk:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.72
+  label: blue mountains
+  name: StrawberryHill0314
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1wWkBp8XAJ6cxC8JrLMEZk6K4lovBLI0M:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.79
+  label: rental car
+  name: IMG_0389
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1wbrTKslvvQrkexzI3ck-PZGXipRiOlqZ:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: hiace_white_cockpit
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1we-4VRIdq6NmU1KpX47yk0A9NzIxKCdA:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.69
+  label: beach
+  name: img0017
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1wfXlvQVDkssDuhA1EljEQEoF248gbmkr:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.63
+  label: beach
+  name: NegrilBeach0680e
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1wjmiZeYZTf8P9ufeU0NV6aDvTK-2Sbd8:
+  also: jerk chicken
+  cats:
+  - drinks
+  - food
+  confidence: 0.74
+  label: drinks
+  name: IMG_9755
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1wk4cG054hh4cPaG4fCTcpR0vF_UBQ2oe:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 1.0
+  label: blue mountains
+  name: img0005
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+drive:1wls4zAMtfVDwoPyB3b0lBpCb5TzXVwHK:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: DSC_1464
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1wqAJiMgJ_1Jja0_nicEDKSUIrFbjwGE3:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.81
+  label: attraction
+  name: DJI_0121
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1wrox8Zghmy9iMLrB5QCKJX37kyP2mClm:
+  also: attraction
+  cats: []
+  confidence: 0.31
+  label: null
+  name: 145_JTB_Brand_OchoRios_ColumbusCove_Dad_with_daughter
+  web: ''
+  words: ''
+drive:1wwihPHyV8r25mWpi-bdKBT46sMf-jTS9:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.46
+  label: drinks
+  name: IMG_9781
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1wy53SmYMgmq6qJfw1VU5D8yr2xHq43FH:
+  also: resort
+  cats:
+  - accommodation
+  - attractions
+  confidence: 0.47
+  label: trident castle
+  name: DevonHouse0168
+  web: ''
+  words: Trident Castle, Port Antonio, Portland - castle
+drive:1x0G_O0DKS-KGT45e6-5-2kwqRCQrBySN:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.85
+  label: drinks
+  name: img0157
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1x4Ss8-zZL3bgsVnGj8ZV25JNa-EugeQ1:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  label: waterfall
+  name: img0012
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1x6SLg3wHXGftuspYS_XPuVlU4INV_xyh:
+  also: beach
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.6
+  label: negril cliffs
+  name: img0001
+  web: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
+drive:1x7-Z83V_IIpBmXZ0r-SBwGCFhDYkyAY3:
+  also: jamaican patty
+  cats: []
+  confidence: 0.33
+  label: null
+  name: 140_JTB_Brand_FrenchmansCovebeach_Fabulous_woman
+  web: ''
+  words: ''
+drive:1x9_MTs8p_5j3du5ER78viciZhMP6JIIA:
+  also: people
+  cats:
+  - airport
+  confidence: 0.91
+  label: airport
+  name: 075_JTB_Spring_2025_Kingston_Friends_Airport
+  web: ''
+  words: Jamaica airport arrival Montego Bay Kingston
+drive:1xCemBUp8X5aR9etbnACJ-1i2KOEW77EY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: black_haval_front_right
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1xGwqA1LUvyOJOr64QDIpa-nhbsulgLTk:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.72
+  label: rental car
+  name: DSC03465
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1xIFII5reLgACH5xRFq8A_B5tJ75lXOeE:
+  also: fruit
+  cats: []
+  confidence: 0.39
+  label: null
+  name: IMG_9763
+  web: ''
+  words: ''
+drive:1xSoXRwSILe5rvVoW-4hi6oyCT1HMLbRY:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.59
+  label: drinks
+  name: img0023
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1xcB75p1wb-afzp8ofDavJWFjkiOd8qUQ:
+  also: drinks
+  cats:
+  - beach
+  confidence: 0.71
+  label: beach
+  name: DoctorsCaveBeach0185
+  web: ''
+  words: Jamaica beach sea sand coast
+drive:1xfdFm_2LqHoq-FIKbM2oCBkYa8Rm08TN:
+  also: people
+  cats:
+  - drinks
+  - food
+  confidence: 0.67
+  label: drinks
+  name: 076_JTB_Spring_2025_Kingston_Lime_Cay_Man_Beach
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1xja44S0-Qr6_WFdo3DDHOvDdkMgkqZxo:
+  also: drinks
+  cats: []
+  confidence: 0.66
+  label: not usable
+  name: img0185
+  web: ''
+  words: not usable
+drive:1xlAMt6Ex3auPcKy8yVCTaywTtWkh5APk:
+  also: drinks
+  cats:
+  - food
+  confidence: 0.91
+  label: jerk chicken
+  name: 029_JTB_Spring_2025_Kingston_GrandHotelExcelsiorPortRoyal_Cuisine_Lobster
+  web: ''
+  words: Jamaica jerk chicken food jerk
+drive:1xmsaQ1QNoW7QlCMJLRuP9OfwixCjIXKy:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 007_JTB_Spring_2025_Kingston_Carnival
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1xpJ0eM9rVePNWMVLTNoJfgwAAeldv1Wo:
+  also: river rafting
+  cats:
+  - attractions
+  confidence: 0.54
+  label: attraction
+  name: BlueLagoon0096
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1xriYAAP2Iydpd4YVX3qmi7wMR50ahpRX:
+  also: negril cliffs
+  cats:
+  - drinks
+  - food
+  confidence: 0.57
+  label: drinks
+  name: img0006
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1xshGrgVkxx1EBjowbJthqo26giT4rVkB:
+  also: airport
+  cats:
+  - road
+  confidence: 0.88
+  label: road trip
+  name: IMG_9099
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1xwWK-kEcdy1oxKEyPS5MD5fDrZi3FKYr:
+  also: bob marley
+  cats:
+  - culture
+  - music
+  - nightlife
+  confidence: 0.98
+  label: reggae
+  name: JTB_Music_PortAntonio_DJ_Tony
+  web: ''
+  words: Jamaica reggae music culture
+drive:1xyQfaNDA_znA6mwO8FxVvqL_S59yjE55:
+  also: reggae
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 032_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1y22Uz1Sz7DNlqOv9UbX7Xc2TUHdyYdub:
+  also: negril cliffs
+  cats:
+  - attractions
+  confidence: 0.91
+  label: attraction
+  name: DJI_0668
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1y2sxSrFS6xvot_olakW08MYRK8RszcS4:
+  also: beach
+  cats: []
+  confidence: 0.44
+  label: null
+  name: 008_JTB_Spring_2025_Kingston_Romance_Lime_Cay
+  web: ''
+  words: ''
+drive:1y31fC0L7UlyJ_TMnj9CrqESm4CnOh6Fb:
+  also: bob marley
+  cats:
+  - carnival
+  - culture
+  - music
+  - people
+  confidence: 1.0
+  label: carnival
+  name: 057_JTB_Spring_2025_Kingston_Carnival_Dance
+  web: ''
+  words: Jamaica carnival costume parade
+drive:1y51w8XGuokFhTrZ4WY1yXoxfcstl3Sqd:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.86
+  label: road trip
+  name: d5efeb67-1d65-4988-9551-ae0eb0263866
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1y6MYB5YWcVGLcWYmuymN0DTgXfXBhRAl:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.78
+  label: drinks
+  name: img0081
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1y8_ZmXMXM_snPeBZNF2WgsDBbtRuVvY7:
+  also: road trip
+  cats:
+  - attractions
+  confidence: 0.6
+  label: attraction
+  name: IMG_9137
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1yN_a31xCGbKlgg_rpU94dmeYIDEqTtMo:
+  also: blue mountains
+  cats: []
+  confidence: 0.44
+  label: null
+  name: img0005
+  web: ''
+  words: ''
+drive:1yP5NEz9WwwNTzbgqEfPh7-evBLLRuOp4:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
+  name: DSC_1400
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1ym7Yr1oAbpIS50-Q1W-I0mddFqHfd3af:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1502
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1yoPFI10BBjKTad4Cn1Rezt9LJjHb4yZH:
+  also: jerk chicken
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.92
+  label: market
+  name: DIM_9901
+  web: ''
+  words: Jamaica market craft culture
+drive:1yoZaq_z-_Ke_BW__wdPoMTslpYN7fVjw:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: DSC_1494
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1youtexSx9numNeEDY2sLu9d0ouel0M0X:
+  also: drinks
+  cats:
+  - accommodation
+  confidence: 0.53
+  label: resort
+  name: img0189
+  web: ''
+  words: Jamaica resort villa hotel pool stay
+drive:1ysQiRGl-UBHRhQuD8QXv9Hc5L-BmQKMU:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC_1447
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1ytkc8TjQwEKJiF-1GQ8lMKtk9plA9eKX:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: gray_honda_city_front_left
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1yueb-BSImldAkh8dwJaoIBqn9eO52Kgy:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.87
+  label: people
+  name: 011_JTB_Spring_2025_Kingston_Lime_Cay_Women_Beach
+  web: ''
+  words: Jamaica people friends family travellers
+drive:1z01QNt4mb0W2G5OaUHXcZg6k0v8vsVub:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: DSC03630
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1z0WCVyKUYMxSQbJBCE8HgOsZHcxf-jYE:
+  also: beach
+  cats:
+  - drinks
+  - food
+  confidence: 0.86
+  label: drinks
+  name: img0003
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+drive:1z1g3FZMQbpWq8SWcY9fAJHKXIixfrvvP:
+  also: drinks
+  cats: []
+  confidence: 0.28
+  label: null
+  name: img0087
+  web: ''
+  words: ''
+drive:1z6VUQrHrcaJkzg6WpUjPX4CH4uLZSNN7:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: DSC03471
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1zETHtjnv4iYpDzMfWNeGPLfpxzkdJmm_:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: Hover_20240323_1711289458559.0
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1zFnO7Mmc0UY16Eh577-rM7gSRNZ9uNUp:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.81
+  label: attraction
+  name: img0026
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1zJBgNYP_tGzmOAUTayP0ZpiQLtPoXTsv:
+  also: attraction
+  cats:
+  - road
+  confidence: 0.92
+  label: road trip
+  name: IMG_9862
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1zJKI93HcwBtpH_aQFwkTIcFH9ThNEgsD:
+  also: rental car
+  cats:
+  - road
+  confidence: 1.0
+  label: road trip
+  name: IMG_9870
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1zTPWXUNcHw8f4DuberbarWc7I7mb4A6e:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  label: waterfall
+  name: img0007
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1zTcNxbF5ExeU1DGmibixd1DJhsBxSiCX:
+  also: drinks
+  cats: []
+  confidence: 0.35
+  label: null
+  name: IMG_9081
+  web: ''
+  words: ''
+drive:1zVJ-HxsM6O7rzNJ6H5RP_Mqn-Xwbzdfd:
+  also: drinks
+  cats: []
+  confidence: 0.29
+  label: null
+  name: 119_JTB_Brand_OchoRios_Lobster_Plate_On_Grill
+  web: ''
+  words: ''
+drive:1zaF4gTPIFUZGdeOsnpBgWWGY4P4_zFnY:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: IMG_0258
+  web: ''
+  words: Arah Rides rental vehicle
+drive:1zbIAdhoEWKrrd1wt-8yPq5xsu95-io5M:
+  also: attraction
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.98
+  label: waterfall
+  name: 212_JTB_Wellness_OchoRios_woman_on_platform_waterfall
+  web: ''
+  words: Jamaica waterfall river nature
+drive:1zhtPzS5C4IwixiXaAr9j1sIxLOEowvjQ:
+  also: airport
+  cats:
+  - road
+  confidence: 0.62
+  label: road trip
+  name: IMG_9103
+  web: ''
+  words: Jamaica road trip drive scenic road
+drive:1zmW59Mw5zHLYNjtCDc1Q32v6lC47f2ts:
+  also: attraction
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  label: river rafting
+  name: RioGrande0316
+  web: ''
+  words: Jamaica river rafting Martha Brae Rio Grande river
+drive:1zn5dk-7HYiv33h2eX9ylzvpuEPX1UkWc:
+  also: trident castle
+  cats:
+  - attractions
+  confidence: 0.91
+  label: attraction
+  name: DJI_0442
+  web: ''
+  words: Jamaica attraction tour great house zipline
+drive:1zpiirX3hzWMdEhGtG0pNvCN6xzhD7JVt:
+  also: attraction
+  cats:
+  - nature
+  - road
+  confidence: 0.67
+  label: blue mountains
+  name: DSC_1438
+  web: ''
+  words: Jamaica Blue Mountains hills coffee mountain
+local:arah_b1_10_mazda2-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: arah_b1_10_mazda2-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_11_toyota-prius:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b1_11_toyota-prius
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_12_bmw-3-red:
+  also: rental car
+  cats: []
+  confidence: 0.5
+  label: null
+  name: arah_b1_12_bmw-3-red
+  web: ''
+  words: ''
+local:arah_b1_13_bmw-2-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: arah_b1_13_bmw-2-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_14_honda-hrv-maroon:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b1_14_honda-hrv-maroon
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_15_kia-soluto-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.56
+  label: rental car
+  name: arah_b1_15_kia-soluto-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_5_mazda2-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: arah_b1_5_mazda2-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_6_mazda2-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b1_6_mazda2-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_7_kia-soluto-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b1_7_kia-soluto-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_8_honda-fit-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: arah_b1_8_honda-fit-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b1_9_honda-fit-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b1_9_honda-fit-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b2_1_honda-fit-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: arah_b2_1_honda-fit-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b2_2_toyota-voxy-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: arah_b2_2_toyota-voxy-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b2_3_hyundai-tucson-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.8
+  label: rental car
+  name: arah_b2_3_hyundai-tucson-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_10_toyota-rush-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b3_10_toyota-rush-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_11_toyota-rav4-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b3_11_toyota-rav4-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_12_suzuki-vitara-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b3_12_suzuki-vitara-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_14_toyota-hiace-seats:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
+  name: arah_b3_14_toyota-hiace-seats
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_15_toyota-corolla-cross-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.68
+  label: rental car
+  name: arah_b3_15_toyota-corolla-cross-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_16_toyota-voxy-white:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b3_16_toyota-voxy-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_1_kia-seltos-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
+  name: arah_b3_1_kia-seltos-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_2_hyundai-tucson-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.81
+  label: rental car
+  name: arah_b3_2_hyundai-tucson-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_3_subaru-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
+  name: arah_b3_3_subaru-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_4_subaru-impreza-grey:
+  also: road trip
+  cats: []
+  confidence: 0.53
+  label: null
+  name: arah_b3_4_subaru-impreza-grey
+  web: ''
+  words: ''
+local:arah_b3_5_toyota-voxy-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b3_5_toyota-voxy-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_6_toyota-rav4-green:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b3_6_toyota-rav4-green
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_7_toyota-rav4-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b3_7_toyota-rav4-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_8_toyota-rav4-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b3_8_toyota-rav4-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b3_9_toyota-corolla-cross-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: arah_b3_9_toyota-corolla-cross-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_10_toyota-hiace-white:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b4_10_toyota-hiace-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_12_toyota-hiace-white:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: arah_b4_12_toyota-hiace-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_13_toyota-hiace-seats:
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b4_13_toyota-hiace-seats
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_1_toyota-hiace-white:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b4_1_toyota-hiace-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_2_honda-stepwgn-cream:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b4_2_honda-stepwgn-cream
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_3_toyota-hiace-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
+  name: arah_b4_3_toyota-hiace-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_4_kia-seltos-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b4_4_kia-seltos-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_5_toyota-hiace-white:
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
+  name: arah_b4_5_toyota-hiace-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_6_toyota-yaris-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.81
+  label: rental car
+  name: arah_b4_6_toyota-yaris-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_7_kia-seltos-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
+  name: arah_b4_7_kia-seltos-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b4_8_toyota-corolla-white:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.64
+  label: road trip
+  name: arah_b4_8_toyota-corolla-white
+  web: ''
+  words: Jamaica road trip drive scenic road
+local:arah_b4_9_toyota-corolla-white:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.7
+  label: road trip
+  name: arah_b4_9_toyota-corolla-white
+  web: ''
+  words: Jamaica road trip drive scenic road
+local:arah_b5_10_jetour-tan:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: arah_b5_10_jetour-tan
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_11_mg-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
+  name: arah_b5_11_mg-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_12_jetour-tan:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
+  name: arah_b5_12_jetour-tan
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_14_haval-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
+  name: arah_b5_14_haval-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_15_haval-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b5_15_haval-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_16_mg-red:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.87
+  label: road trip
+  name: arah_b5_16_mg-red
+  web: ''
+  words: Jamaica road trip drive scenic road
+local:arah_b5_1_haval-black:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.59
+  label: rental car
+  name: arah_b5_1_haval-black
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_2_kia-seltos-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b5_2_kia-seltos-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_3_jetour-tan:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: arah_b5_3_jetour-tan
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_4_toyota-yaris-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: arah_b5_4_toyota-yaris-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_5_honda-hrv-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
+  name: arah_b5_5_honda-hrv-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_6_kia-sportage-green:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
+  name: arah_b5_6_kia-sportage-green
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_7_jetour-tan:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: arah_b5_7_jetour-tan
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_8_nissan-altima-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
+  name: arah_b5_8_nissan-altima-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b5_9_honda-hrv-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b5_9_honda-hrv-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_10_toyota-corolla-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.8
+  label: rental car
+  name: arah_b6_10_toyota-corolla-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_11_toyota-corolla-cross-white:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
+  name: arah_b6_11_toyota-corolla-cross-white
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_2_suzuki-vitara-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b6_2_suzuki-vitara-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_3_mg-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
+  name: arah_b6_3_mg-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_4_mg-red:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.55
+  label: rental car
+  name: arah_b6_4_mg-red
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_5_toyota-corolla-blue:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.82
+  label: road trip
+  name: arah_b6_5_toyota-corolla-blue
+  web: ''
+  words: Jamaica road trip drive scenic road
+local:arah_b6_6_toyota-corolla-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b6_6_toyota-corolla-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_7_toyota-corolla-lightblue:
+  also: rental car
+  cats:
+  - road
+  confidence: 0.86
+  label: road trip
+  name: arah_b6_7_toyota-corolla-lightblue
+  web: ''
+  words: Jamaica road trip drive scenic road
+local:arah_b6_8_suzuki-vitara-grey:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
+  name: arah_b6_8_suzuki-vitara-grey
+  web: ''
+  words: Arah Rides rental vehicle
+local:arah_b6_9_toyota-corolla-silver:
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
+  name: arah_b6_9_toyota-corolla-silver
+  web: ''
+  words: Arah Rides rental vehicle
+local:tennis_court_blue_bougainvillea:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.53
+  label: attraction
+  name: tennis_court_blue_bougainvillea
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:tennis_court_blue_palms:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.51
+  label: attraction
+  name: tennis_court_blue_palms
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:tennis_courts_aerial_players:
+  also: resort
+  cats:
+  - attractions
+  confidence: 0.81
+  label: attraction
+  name: tennis_courts_aerial_players
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:tennis_courts_pickleball_trees:
+  also: resort
+  cats: []
+  confidence: 0.52
+  label: null
+  name: tennis_courts_pickleball_trees
+  web: ''
+  words: ''
