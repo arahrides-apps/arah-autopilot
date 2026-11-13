@@ -66,21 +66,26 @@ def _model():
         _M.update(m=CLIPModel.from_pretrained(n).eval(), p=CLIPProcessor.from_pretrained(n), t=torch)
     return _M
 
+def _norm(f):
+    return f / f.norm(dim=-1, keepdim=True)
+
 def embed_images(paths):
     from PIL import Image
-    M = _model(); t = M["t"]; out = []
+    M = _model(); t = M["t"]; m = M["m"]; out = []
     for i in range(0, len(paths), 16):
         ims = [Image.open(p).convert("RGB") for p in paths[i:i + 16]]
         with t.no_grad():
-            f = M["m"].get_image_features(**M["p"](images=ims, return_tensors="pt"))
-        out.append(f / f.norm(dim=-1, keepdim=True))
+            px = M["p"](images=ims, return_tensors="pt")["pixel_values"]
+            f = m.visual_projection(m.vision_model(pixel_values=px).pooler_output)   # works on every transformers version
+        out.append(_norm(f))
     return t.cat(out) if out else None
 
 def embed_labels():
-    M = _model(); t = M["t"]
+    M = _model(); t = M["t"]; m = M["m"]
     with t.no_grad():
-        f = M["m"].get_text_features(**M["p"](text=["a photo of " + L[n][0] for n in NAMES], return_tensors="pt", padding=True))
-    return f / f.norm(dim=-1, keepdim=True)
+        tk = M["p"](text=["a photo of " + L[n][0] for n in NAMES], return_tensors="pt", padding=True)
+        f = m.text_projection(m.text_model(input_ids=tk["input_ids"], attention_mask=tk["attention_mask"]).pooler_output)
+    return _norm(f)
 
 def classify(paths, min_prob=0.45, refs=None):
     """-> list of (label or None, confidence, runner_up, ref_name or None) for each path. refs = (embeddings, [entry dicts]) of labelled photos."""
@@ -124,7 +129,11 @@ def web_refs(cache, per=4):
                 f = cache / (lab.replace(" ", "_").replace("'", "") + "_" + str(abs(hash(u)) % 10**8) + ".jpg")
                 if not f.exists():
                     f.write_bytes(requests.get(u, timeout=30, headers={"User-Agent": "ArahAutopilot/1.0"}).content)
-                Image.open(f).verify(); paths.append(f); labs.append(lab)
+                try:
+                    Image.open(f).verify()
+                except Exception:
+                    f.unlink(missing_ok=True); continue                    # not a real image (rate-limited reply): skip, retry next run
+                paths.append(f); labs.append(lab)
         except Exception as e:
             log.warning("web refs for %s skipped: %s", lab, e)
     if not paths or not available():
@@ -157,7 +166,9 @@ def claude_review(paths, model=None, batch=6):
     import os, io, json, base64, requests
     from PIL import Image
     key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key or not paths: return None
+    if not key:
+        log.warning("ANTHROPIC_API_KEY is not set: Claude review skipped (add it under Settings > Secrets and variables > Actions)"); return None
+    if not paths: return None
     model = model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5"
     out = []
     for i in range(0, len(paths), batch):

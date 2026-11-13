@@ -100,9 +100,9 @@ def _retag(pk, manual, done, cap=1500):
     """Look at EVERY own photo (JTB, Drive, hand-labelled or not) and record what it shows. The picker adds these words to the photo's label when it
     searches, so a photo labelled only 'Kingston Carnival Dance' also matches 'dance', 'people' or 'street'. Hand labels are never changed.
     Returns the list of photos whose picture seems to disagree with their label."""
-    if not V.available():
-        return []
     import os
+    if not (V.available() or os.environ.get("ANTHROPIC_API_KEY")):
+        return []
     tags = {} if os.environ.get("INDEX_FORCE") else (dict(yaml.safe_load(open(TAGS)) or {}) if TAGS.exists() else {})
     todo = []
     for src in pk.pool:
@@ -120,13 +120,17 @@ def _retag(pk, manual, done, cap=1500):
                 log.warning("could not fetch %s: %s", it["id"], e)
     web = None
     try:
-        web = V.web_refs(ROOT / "cache" / "web_refs")
+        web = V.web_refs(ROOT / "cache" / "web_refs") if V.available() else None
     except Exception as e:
         log.warning("web references skipped: %s", e)
     for i in range(0, len(todo), 64):
         chunk = todo[i:i + 64]
-        cls = V.classify([d for _, d in chunk]) or []
-        embs = V.embed_images([d for _, d in chunk]) if web else None
+        try:
+            cls = V.classify([d for _, d in chunk]) or []
+            embs = V.embed_images([d for _, d in chunk]) if web else None
+        except Exception as e:
+            log.warning("picture recognition failed for a batch (Claude review still runs): %s", e); cls = []; embs = None
+        cls = cls or [(None, 0.0, "", None)] * len(chunk)
         cl_changed, notes = _claude_apply(done, manual, [(it["id"], d, it["name"]) for it, d in chunk])
         for k, ((it, d), (lab, conf, alt, ref)) in enumerate(zip(chunk, cls)):
             wm = V.web_match(embs[k], web) if web is not None else None
