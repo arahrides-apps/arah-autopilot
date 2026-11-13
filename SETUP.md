@@ -92,3 +92,12 @@ GitHub > your profile > Settings > Developer settings > **Fine-grained tokens > 
 - "GitHub says no": re-create Token A with Contents read/write on this repo.
 - Posts stay approved but do not publish: open Actions > Post approved > latest run. Common causes: expired or wrong token, or user ID mismatch. The failing reason is also shown on the card.
 - Instagram error mentioning the image URL: the repo is not public, or the draft was not pushed yet.
+
+## Reels (video posts)
+Each day `reels.per_day` (config.yaml, default 4) carousels also get an MP4 in `docs/media/<date>/`: a slideshow with a slow push-in and soft fades, 1080x1920. One a day uses an animated Arah Rides ad from `content/reels/` (add your own `*_9x16.mp4` there).
+They are built with ffmpeg (already on GitHub's runners). The review page still shows the slides; approving the post approves its reel.
+Posting a reel and tagging locations in Make: see MAKE_REELS_AND_LOCATIONS.md.
+
+## Photo rules (why a picture may be a drawing)
+Photos are used only when they are modern (no black-and-white, sepia, archive or painting images), not from another season (Carnival photos only in March-April), from Jamaica, and match the place or topic in the words. People pictures come from our own library, Unsplash, Pexels or Pixabay, never Wikimedia.
+When no free photo can be confirmed, the slide gets a drawn scene of the place (flagged "Illustration" on the review page) instead of a photo of somewhere else.
