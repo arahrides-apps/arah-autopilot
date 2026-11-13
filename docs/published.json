@@ -1015,5 +1015,16 @@
   "status": "skipped",
   "at": "2026-11-13T12:03:44.818353-05:00",
   "note": "not approved in time"
+ },
+ "2026-11-13_1000_tip": {
+  "status": "skipped",
+  "at": "2026-11-13T14:04:01.686513-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-13_1400_place": {
+  "status": "published",
+  "at": "2026-11-13T14:04:01.686513-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
