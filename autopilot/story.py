@@ -10,6 +10,7 @@ The words come from content/stories.yaml and the bank, never from unrelated post
 import re
 from string import capwords
 from . import templates as T
+from . import themes as TH
 from .config import load_yaml
 
 NAMES = {"ys falls": "YS Falls", "blue mountains": "Blue Mountains"}
@@ -85,8 +86,9 @@ def _themed(b, post, typ, n):
         ph = b.pk.theme_photo(th)
         if ph is None and th in ("road", "river"):          # nothing free and matching: draw the place instead of showing something unrelated
             ph = b.pk.drawn({"road": "Holland Bamboo Avenue road trip", "river": "Jamaica waterfall river"}[th])
-            post.setdefault("flags", []).append(ph.flags[0])
-            out.append(ph); continue
+            if ph:
+                post.setdefault("flags", []).append(ph.flags[0])
+                out.append(ph); continue
         if ph:
             b.led.record(ph.keys(), ph.hash, b.today, ph.source, ph.series)
             post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
@@ -214,8 +216,15 @@ def moment_story(b, post, pages, m):
         items = [("What is on.", m["b"]), ("When and where.", f"{m['badge'].title().replace('–', ' to ')}. {m['where']}."),
                  ("Drive there.", (stp or {}).get("drive") or PICKUPS), price_slide(b)]
         photos = {}
+        et = TH.event_theme(m.get("k", ""), m.get("h", ""))
+        if et:                                               # a sport or activity: its own photos (e.g. tennis courts), then the place
+            for i in (0, 1):
+                x = b.pk.theme_photo(et)
+                if x:
+                    photos[i] = x; post.setdefault("flags", []).append(x.flags[0])
         if key:
             for i in (0, 1):
+                if i in photos: continue
                 x = b.story_photo(post, key)
                 if x: photos[i] = x
         return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), photos, typ="moment")

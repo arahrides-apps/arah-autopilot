@@ -44,8 +44,8 @@ def add_reels(cfg, posts, date):
         return []                                  # the test suite checks reels on their own (tests/test_reel.py); other tests stay fast
     if not n or not _have_ffmpeg():
         return ["Reels skipped: ffmpeg not found"] if n else []
-    notes = []; lib = sorted((Q.ROOT / "content" / "reels").glob("*_9x16.mp4")) if rc.get("library", True) else []
-    cand = [p for p in posts if len(p.get("images", [])) >= 4 and p["type"] in REEL_TYPES and not p.get("single")]
+    notes = []; lib = sorted(f for d in ("content/reels", "reels") for f in (Q.ROOT / d).glob("*_9x16.mp4")) if rc.get("library", True) else []
+    cand = [p for p in posts if len(p.get("images", [])) >= 4 and p["type"] in REEL_TYPES and not p.get("single") and not any("Illustration" in f for f in p.get("flags", []))]
     step = max(1, len(cand) // max(1, n)); pick = cand[::step][:n]
     used_lib = False
     for p in pick:

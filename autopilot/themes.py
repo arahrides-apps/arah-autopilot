@@ -25,6 +25,8 @@ ATTRACTIONS = {
 
 # theme -> (queries, regex the photo description must match, people allowed)
 THEMES = {
+    "tennis": (["tennis court Jamaica", "tennis Montego Bay", "Half Moon Jamaica tennis", "tennis court tropical Jamaica"],
+               r"tennis|court|racquet|net", False),
     "road": (["Holland Bamboo Jamaica", "Reach Falls Jamaica", "Jamaica highway road", "Jamaica road trip", "Jamaica roadside fruit stand", "Jamaica coconut water vendor",
               "Bamboo Avenue Jamaica", "Jamaica countryside road", "Jamaica mountain road", "Jamaica roadside jerk stand"],
              r"road|highway|bamboo|route|drive|fruit|coconut|vendor|stand|roadside|falls|countryside|mountain|hill|village|market", True),
@@ -84,3 +86,10 @@ JUNK = re.compile(r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|
                   r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
                   r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
                   r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)
+
+EVENT_THEMES = [(re.compile(r"tennis", re.I), "tennis")]
+def event_theme(*texts):
+    t = " ".join(texts)
+    for rx, th in EVENT_THEMES:
+        if rx.search(t):
+            return th

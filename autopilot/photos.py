@@ -104,8 +104,34 @@ class Photo:
         return [self.id, "name:" + self.name]
 
 # ---------------------------------------------------------------- helpers
+def exif_info(path):
+    """GPS point and date a phone stored in the photo: {'lat','lon','date'} (empty when none). The converted copies lose this, so it is read first."""
+    out = {}
+    try:
+        ex = Image.open(path).getexif()
+        g = ex.get_ifd(0x8825) if hasattr(ex, "get_ifd") else {}
+        def deg(v):
+            return float(v[0]) + float(v[1]) / 60 + float(v[2]) / 3600
+        if g and 2 in g and 4 in g:
+            lat, lon = deg(g[2]), deg(g[4])
+            if str(g.get(1, "N")).upper().startswith("S"): lat = -lat
+            if str(g.get(3, "E")).upper().startswith("W"): lon = -lon
+            if lat or lon:
+                out.update(lat=round(lat, 5), lon=round(lon, 5))
+        d = ex.get_ifd(0x8769).get(36867) if hasattr(ex, "get_ifd") else None
+        d = d or ex.get(306)
+        if d:
+            out["date"] = str(d)[:10].replace(":", "-")
+    except Exception:
+        pass
+    return out
+
 def prep(src, dest, max_side=1800):
     """Auto-rotate, shrink and save as JPEG. Never alters the picture itself (no blur, no overlays)."""
+    info = exif_info(src)
+    if info:
+        Path(dest).parent.mkdir(parents=True, exist_ok=True)
+        Path(str(dest) + ".exif.json").write_text(json.dumps(info))
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     im.thumbnail((max_side, max_side), Image.LANCZOS)
     Path(dest).parent.mkdir(parents=True, exist_ok=True)
@@ -372,7 +398,12 @@ class Picker:
     def __init__(self, cfg, ledger, today, rng, cache=None, drive=None, web=None):
         self.cfg, self.led, self.today, self.rng = cfg, ledger, today, rng
         self.cache = Path(cache or ROOT / "cache")
-        self.meta = load_yaml("photo_meta.yaml")
+        self.meta = dict(load_yaml("photo_meta.yaml"))
+        try:
+            for k, v in (load_yaml("photo_meta_auto.yaml") or {}).items():      # labels made from each photo's GPS point (index-photos); hand labels win
+                self.meta.setdefault(k, v)
+        except Exception:
+            pass
         s = cfg["sources"]
         self.pool = []          # own photos (Drive / local)
         if drive is not None:
@@ -415,8 +446,8 @@ class Picker:
             return False
         return not (y and y < self.MIN_YEAR)
 
-    def _meta(self, name):
-        return self.meta.get(name) or self.meta.get(name.split(".")[0])
+    def _meta(self, name, item=None):
+        return (item and self.meta.get(item["id"])) or self.meta.get(name) or self.meta.get(name.split(".")[0])
 
     def _series(self, name):
         m = self._meta(name)
@@ -454,7 +485,7 @@ class Picker:
             for it in items:
                 if it["id"] in self.tried or self.led.blocked(["name:" + it["name"], it["id"]], None, self.today, self.cfg):
                     continue
-                m = self._meta(it["name"]); q = 3
+                m = self._meta(it["name"], it); q = 3
                 if tag and (not m or m.get("tag") != tag):
                     continue
                 if m:
@@ -488,10 +519,10 @@ class Picker:
         fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
         for q, _, src, it, flags, _age in fresh[:25]:
             self.tried.add(it["id"])
-            _m = self._meta(it["name"]) or {}
+            _m = self._meta(it["name"], it) or {}
             p = self._load(src, it, want, flags, {"credit": _m.get("credit"), "text": _m.get("about") or ""} if _m.get("credit") else {"text": _m.get("about") or ""})
             if p:
-                if self._meta(it["name"]) and self._meta(it["name"]).get("plate_visible"):
+                if self._meta(it["name"], it) and self._meta(it["name"], it).get("plate_visible"):
                     p.flags.append("Number plate visible (kept sharp on purpose)")
                 return p
         return None
@@ -600,6 +631,8 @@ class Picker:
 
     def drawn(self, text, why=""):
         """No suitable free photo: an accurate illustration of the place or topic instead of a photo of somewhere else. Flagged for review."""
+        if not self.cfg["photos"].get("illustrations", False):
+            return None                  # real photos only (set photos.illustrations: true to allow drawn placeholders)
         from . import illustrate as IL
         dest = self.cache / "drawn" / (hashlib.md5((text + str(self.today)).encode()).hexdigest()[:14] + ".jpg")
         kind = IL.make(text, dest)

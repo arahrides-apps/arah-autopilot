@@ -357,7 +357,8 @@ class DayBuilder:
             post.setdefault("flags", []).append("Slide photo from %s (licence-free): %s" % (ph.source, ph.credit or "no credit needed"))
             return ph
         ph = self.pk.drawn(story.nice(key))
-        post.setdefault("flags", []).append(ph.flags[0])
+        if ph:
+            post.setdefault("flags", []).append(ph.flags[0])
         return ph
 
     def review(self, post):

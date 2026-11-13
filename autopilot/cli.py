@@ -7,7 +7,7 @@ def main(argv=None):
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
     r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true"); r.add_argument("--wipe", action="store_true", help="throw away every post not yet published, approved ones too, and start fresh")
     p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--catch-up", action="store_true", help="post every approved due post now, ignoring the 20-minute spacing")
-    sub.add_parser("recaption"); rs = sub.add_parser("resend"); rs.add_argument("--since", required=True, help="e.g. 2026-11-01T08:00 (Jamaica time)"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("status"); sub.add_parser("test-webhook")
+    sub.add_parser("recaption"); rs = sub.add_parser("resend"); rs.add_argument("--since", required=True, help="e.g. 2026-11-01T08:00 (Jamaica time)"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("index-photos"); sub.add_parser("status"); sub.add_parser("test-webhook")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     cfg = config.load()
@@ -32,6 +32,12 @@ def main(argv=None):
             if v.get("status") == "published" and v.get("media_id") == "webhook" and pid in posts and dt.datetime.fromisoformat(posts[pid]["slot"]) >= since:
                 pub.pop(pid); n += 1
         Q.save_published(pub); print(f"{n} post(s) marked as not sent, ready to be sent again")
+    elif a.cmd == "index-photos":
+        from .indexer import run as idx
+        n, done = idx(cfg)
+        import collections
+        c = collections.Counter(m.get("place") or m["kind"] for m in done.values())
+        print("indexed %d new photo(s). By place:" % n, dict(c.most_common(25)))
     elif a.cmd == "recaption":
         from .recaption import run as recap
         n = recap(cfg); print(f"rewrote the caption of {n} post(s): new hashtags, search line and location")
