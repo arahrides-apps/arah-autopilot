@@ -36,7 +36,7 @@ def main(argv=None):
         from .indexer import run as idx
         n, done = idx(cfg)
         import collections
-        c = collections.Counter(m.get("place") or m["kind"] for m in done.values())
+        c = collections.Counter(m.get("place") or m.get("kind", "?") for m in done.values())
         print("indexed %d new photo(s). By place:" % n, dict(c.most_common(25)))
     elif a.cmd == "recaption":
         from .recaption import run as recap

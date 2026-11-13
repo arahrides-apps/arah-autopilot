@@ -141,6 +141,8 @@ def _retag(pk, manual, done, cap=1500):
                 if float(c.get("confidence", 0)) >= 0.6 and c.get("label") in V.L:
                     t["label"] = c["label"]; t["confidence"] = max(float(c["confidence"]), t["confidence"] if t["label"] == lab else 0)
             tags[it["id"]] = t
+        TAGS.write_text("# Made by index-photos: what each photo looks like. Used to widen matching; hand labels are never changed.\n" + yaml.safe_dump(tags, sort_keys=True, allow_unicode=True))
+        AUTO.write_text("# Made by index-photos. Edit freely.\n" + yaml.safe_dump(done, sort_keys=True, allow_unicode=True))
     TAGS.write_text("# Made by index-photos: what each photo looks like (picture recognition). Used to widen matching; hand labels are never changed.\n" + yaml.safe_dump(tags, sort_keys=True, allow_unicode=True))
     bad = []
     for pid, t in tags.items():
@@ -196,7 +198,10 @@ def run(cfg, picker=None, limit=400):
     except Exception as e:
         log.warning("retag failed: %s", e); bad = []
     AUTO.write_text("# Made by `python -m autopilot index-photos` from each photo's GPS point, picture recognition and Claude's review. Edit freely: change kind/about/people, or delete a line to re-index it.\n" + yaml.safe_dump(done, sort_keys=True, allow_unicode=True))
-    _report(done, pk, bad)
+    try:
+        _report(done, pk, bad)
+    except Exception as e:
+        import traceback; traceback.print_exc(); log.warning("review page failed (results still saved): %s", e)
     return new, done
 
 def _report(done, pk, bad=()):
