@@ -1,4 +1,4 @@
-# Made by `python -m autopilot index-photos` from each photo's GPS point. Edit freely: change kind/about/people, or delete a line to re-index it.
+# Made by `python -m autopilot index-photos` from each photo's GPS point, picture recognition and Claude's review. Edit freely: change kind/about/people, or delete a line to re-index it.
 drive:1-1H97CTzaT1n8BrmGEyzCDfdmuMwocuZ:
   about: No GPS point in this photo
   credit: ''
