@@ -10,6 +10,7 @@ from .config import ROOT, load_yaml
 
 log = logging.getLogger("index")
 AUTO = ROOT / "content" / "photo_meta_auto.yaml"
+TAGS = ROOT / "content" / "photo_tags_auto.yaml"
 THUMBS = ROOT / "docs" / "media" / "index"
 
 def _entry(item, dest, info):
@@ -72,6 +73,38 @@ def _recognise(done, pending, pk, manual):
             done[pid] = dict(base, label=None, guess=alt, confidence=conf)
     return n
 
+def _retag(pk, manual, done, cap=600):
+    """Look at EVERY own photo (JTB, Drive, hand-labelled or not) and record what it shows. The picker adds these words to the photo's label when it
+    searches, so a photo labelled only 'Kingston Carnival Dance' also matches 'dance', 'people' or 'street'. Hand labels are never changed.
+    Returns the list of photos whose picture seems to disagree with their label."""
+    if not V.available():
+        return []
+    tags = dict(yaml.safe_load(open(TAGS)) or {}) if TAGS.exists() else {}
+    todo = []
+    for src in pk.pool:
+        for it in src.list():
+            if it["id"] in tags or len(todo) >= cap:
+                continue
+            d = pk.cache / src.name / (__import__("hashlib").md5(it["id"].encode()).hexdigest()[:16] + ".jpg")
+            try:
+                if not d.exists(): src.fetch(it, d)
+                todo.append((it, d))
+            except Exception as e:
+                log.warning("could not fetch %s: %s", it["id"], e)
+    for i in range(0, len(todo), 64):
+        chunk = todo[i:i + 64]
+        for (it, d), (lab, conf, alt, ref) in zip(chunk, V.classify([d for _, d in chunk]) or []):
+            tags[it["id"]] = {"name": it["name"], "label": lab, "confidence": conf, "also": alt, "words": V.L[lab][1].get("about", lab) if lab else ""}
+    TAGS.write_text("# Made by index-photos: what each photo looks like (picture recognition). Used to widen matching; hand labels are never changed.\n" + yaml.safe_dump(tags, sort_keys=True, allow_unicode=True))
+    bad = []
+    for pid, t in tags.items():
+        m = manual.get(pid) or manual.get(t["name"]) or manual.get(t["name"].split(".")[0])
+        if m and t["label"] and t["confidence"] >= 0.7 and t["label"] not in ("people", "road trip", "not usable"):
+            words = [w for w in __import__("re").findall(r"[a-z]{4,}", (V.L[t["label"]][1].get("about", t["label"])).lower())][:4]
+            if not any(w in (m.get("about", "") + " " + str(m.get("place", ""))).lower() for w in words):
+                bad.append((pid, m, t))
+    return bad
+
 def run(cfg, picker=None, limit=400):
     pk = picker or P.Picker(cfg, None, dt.date.today(), __import__("random").Random(1))
     done = dict(yaml.safe_load(open(AUTO)) or {}) if AUTO.exists() else {}
@@ -111,10 +144,14 @@ def run(cfg, picker=None, limit=400):
     except Exception as e:
         log.warning("recognition failed: %s", e)
     AUTO.write_text("# Made by `python -m autopilot index-photos` from each photo's GPS point. Edit freely: change kind/about/people, or delete a line to re-index it.\n" + yaml.safe_dump(done, sort_keys=True, allow_unicode=True))
-    _report(done, pk)
+    try:
+        bad = _retag(pk, manual, done)
+    except Exception as e:
+        log.warning("retag failed: %s", e); bad = []
+    _report(done, pk, bad)
     return new, done
 
-def _report(done, pk):
+def _report(done, pk, bad=()):
     groups = {}
     for pid, m in done.items():
         g = m.get("place") or (("Recognised: " + m["label"]) if m.get("ai") and m.get("label") else None) or {"unplaced": "UNPLACED (no GPS: tell me where these are)", "not-jamaica": "NOT JAMAICA (never used)"}.get(m["kind"], m["kind"])
@@ -127,5 +164,11 @@ def _report(done, pk):
         for pid, m in groups[g]:
             stem = __import__("hashlib").md5(pid.encode()).hexdigest()[:16]
             out.append("<div class=c><img loading=lazy src='media/index/%s.jpg'><br>%s</div>" % (stem, html.escape(pid.split(":")[-1][:14] + (" 👤" if m.get("people") else "") + (" %d%%" % round(m["confidence"] * 100) if m.get("ai") else "") + ((" ?" + m["guess"]) if m.get("guess") else ""))))
+        out.append("</div>")
+    if bad:
+        out.append("<h2>CHECK THESE: the picture may not match its label (%d)</h2><p>Label on the left of the arrow, what the picture looks like on the right. Not changed: fix the label in content/photo_meta.yaml if the picture is right.</p><div class=g>" % len(bad))
+        for pid, m, t in bad[:120]:
+            stem = __import__("hashlib").md5(pid.encode()).hexdigest()[:16]
+            out.append("<div class=c><img loading=lazy src='media/index/%s.jpg'><br>%s<br>&rarr; %s %d%%</div>" % (stem, html.escape(m.get("about", "")[:50]), html.escape(t["label"]), round(t["confidence"] * 100)))
         out.append("</div>")
     (ROOT / "docs" / "photo_index.html").write_text("\n".join(out))

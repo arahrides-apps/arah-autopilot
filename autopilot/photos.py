@@ -404,6 +404,11 @@ class Picker:
                 self.meta.setdefault(k, v)
         except Exception:
             pass
+        try:
+            self.tags = load_yaml("photo_tags_auto.yaml") or {}         # what each photo looks like (index-photos picture recognition)
+        except Exception:
+            self.tags = {}
+        self.tag_names = {v.get("name"): v for v in self.tags.values() if isinstance(v, dict)}
         s = cfg["sources"]
         self.pool = []          # own photos (Drive / local)
         if drive is not None:
@@ -447,7 +452,11 @@ class Picker:
         return not (y and y < self.MIN_YEAR)
 
     def _meta(self, name, item=None):
-        return (item and self.meta.get(item["id"])) or self.meta.get(name) or self.meta.get(name.split(".")[0])
+        m = (item and self.meta.get(item["id"])) or self.meta.get(name) or self.meta.get(name.split(".")[0])
+        tg = (item and self.tags.get(item["id"])) or self.tag_names.get(name) if getattr(self, "tags", None) else None
+        if m and tg and tg.get("words") and tg.get("confidence", 0) >= 0.6 and tg["words"].split()[0].lower() not in (m.get("about", "")).lower():
+            m = dict(m, about=m.get("about", "") + " | looks like: " + tg["words"])
+        return m
 
     def _series(self, name):
         m = self._meta(name)
