@@ -224,14 +224,16 @@ def moment_story(b, post, pages, m):
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)
 
 def versus_story(b, post, pages, e):
-    cover = T.ccover_plain(e["k"], e["h"], "Swipe to compare.")
+    ph = b.cover_photo(post, "", "road")
+    cover = T.ccover(ph.path, e["k"], e["h"], "Swipe to compare.") if ph else T.ccover_plain(e["k"], e["h"], "Swipe to compare.")
     items = [("Other companies.", ". ".join(e["them"]) + "."), ("Arah Rides.", ". ".join(e["us"]) + "."),
              ("Choose your car.", "Browse real cars with real photos on arahrides.com.")]
     return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), typ="versus")
 
 def list_story(b, post, pages, e):
     items = [(x, "") for x in e["items"]][:4]
-    cover = T.ccover_plain(e["k"], e["h"], "Swipe through.")
+    ph = b.cover_photo(post, " ".join(e["items"][:2]), "road")
+    cover = T.ccover(ph.path, e["k"], e["h"], "Swipe through.") if ph else T.ccover_plain(e["k"], e["h"], "Swipe through.")
     if len(e["items"]) >= 5:                                 # six slides is the limit: the last item carries the button
         out = [(cover, 1350)]
         its = e["items"][:5]

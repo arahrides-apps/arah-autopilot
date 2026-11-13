@@ -112,7 +112,9 @@ class WebhookPoster:
         return "webhook", ""
     def post_reel(self, video_url, caption, meta=None):
         """Same webhook, with media_type REELS and a video_url. The Make scenario needs a Router: media_type = REELS goes to 'Create a Reel'."""
-        body = {"id": (meta or {}).get("id", ""), "slot": (meta or {}).get("slot", ""), "caption": caption, "media_type": "REELS", "video_url": video_url,
+        if getattr(self, "check_live", True):
+            wait_live([video_url], self.s)
+        body = {"id": (meta or {}).get("id", ""), "slot": (meta or {}).get("slot", ""), "caption": caption, "media_type": "REELS", "video_url": video_url, "image_count": 0,
                 "location_name": (meta or {}).get("location", {}).get("name", ""), "location_id": (meta or {}).get("location", {}).get("id", "")}
         r = self.s.post(self.url, json=body, timeout=60)
         if r.status_code >= 300:

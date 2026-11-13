@@ -8,7 +8,6 @@ W, H, SS = 1080, 1350, 2
 
 KINDS = {   # what to draw for a place / topic
     "court": r"tennis|court|sport|marathon|run",
-    "cliff": r"lover|leap|cliff|lighthouse|rick",
     "waterfall": r"fall|waterfall|dunn|reach|ys |y\.s|mayfield|somerset|konoko|river|rafting|martha brae|rio grande",
     "bamboo": r"bamboo|holland|tunnel|road trip|highway|road\b|drive|countryside|route",
     "beach": r"beach|negril|seven mile|doctor|treasure|bay\b|cay\b|sea\b|lagoon|pelican|frenchman|winnifred|boston",
@@ -89,14 +88,6 @@ def draw(kind, seed=0):
             for wy in range(1000 - h + 24, 980, 46):
                 for wx in range(x + 14, x + 90, 30): d.rectangle([wx * SS, wy * SS, (wx + 14) * SS, (wy + 22) * SS], fill=(40, 70, 90))
         d.rectangle([0, 1000 * SS, W * SS, H * SS], fill=(84, 84, 90)); _palm(d, 90, 1010, 380, .15); _palm(d, 990, 1010, 340, -.15)
-    elif kind == "cliff":
-        d.rectangle([0, 900 * SS, W * SS, H * SS], fill=(20, 150, 190))
-        for i in range(8):
-            y = 930 + i * 38; d.line([(0, y * SS), (W * SS, (y + 8) * SS)], fill=(120, 220, 230), width=4 * SS)
-        d.polygon([(0, 420 * SS), (520 * SS, 380 * SS), (640 * SS, 700 * SS), (560 * SS, 1000 * SS), (0, 1040 * SS)], fill=(150, 120, 96))
-        d.polygon([(0, 420 * SS), (520 * SS, 380 * SS), (560 * SS, 460 * SS), (0, 520 * SS)], fill=(52, 130, 70))
-        d.rectangle([380 * SS, 300 * SS, 396 * SS, 390 * SS], fill=(240, 240, 240)); d.polygon([(370 * SS, 300 * SS), (406 * SS, 300 * SS), (388 * SS, 270 * SS)], fill=(210, 60, 50))
-        _palm(d, 140, 430, 300, .15)
     elif kind == "court":
         _ridge(d, 560, 100, (50, 120, 80), rnd, .5)
         d.polygon([(120 * SS, 1000 * SS), (960 * SS, 1000 * SS), (1100 * SS, H * SS), (-20 * SS, H * SS)], fill=(46, 140, 96))

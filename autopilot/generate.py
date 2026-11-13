@@ -127,6 +127,22 @@ class DayBuilder:
         post["location"] = {"name": tag_loc["name"], "id": tag_loc.get("id", "")}
         return caption(self.cfg, typ, text, extra_tag, cta, credit, loc, self.rng)
 
+    def cover_photo(self, post, text="", theme="road", place=None):
+        """Every cover must be a real Jamaica photo that fits the post. Own labelled photos and checked web photos, from the most specific
+        match to a general Jamaica topic; None only if the library and web are both empty."""
+        ph = None
+        if place or text:
+            ph = self.pk.scene((text or place) + " Jamaica", place, strict=True)
+        for th in (theme, "road", "food", "family", "couple", "group"):
+            if ph: break
+            try: ph = self.pk.theme_photo(th)
+            except KeyError: ph = None
+        if ph:
+            self.photo_flags(post, ph)
+        else:
+            post["flags"].append("NO COVER PHOTO FOUND: add photos to the library, this cover is text only")
+        return ph
+
     def photo_flags(self, post, ph):
         post["photo"] = {"id": ph.id, "name": ph.name, "source": ph.source, "credit": ph.credit}
         post["flags"] += ph.flags
@@ -253,7 +269,8 @@ class DayBuilder:
             self.photo_flags(post, ph)
             cover = T.ccover(ph.path, e["k"], e["title"], e["sub"])
         else:
-            cover = T.ccover_plain(e["k"], e["title"], e["sub"])
+            ph = self.cover_photo(post, e["title"], "road")
+            cover = T.ccover(ph.path, e["k"], e["title"], e["sub"]) if ph else T.ccover_plain(e["k"], e["title"], e["sub"])
         pages = [(cover, 1350)]
         for i, (h, b) in enumerate(e["slides"]):
             pages.append((T.slide(i + 2, n, h, b, alt=bool(i % 2), cta=(i == len(e["slides"]) - 1)), 1350))
@@ -354,6 +371,8 @@ class DayBuilder:
             ph = self.pk._own("car", None, None, about=s["photo"].split("|"))
         if ph:
             self.photo_flags(post, ph)
+        else:
+            ph = self.cover_photo(post, "car rental road trip", "road")
         stars = min(q["stars"] for q in Q_)
         sub = "5-star reviews from real bookings on Arah Rides." if stars == 5 else "Real reviews from real bookings on Arah Rides."
         h2 = s["title"] if "Toyota" in s["title"] else "Renters tell it best."
@@ -387,7 +406,8 @@ class DayBuilder:
             self.photo_flags(post, ph)
             cover = T.ccover(ph.path, "A DAY PLAN", reg["hook"], reg["sub"])
         else:
-            cover = T.ccover_plain("A DAY PLAN", reg["hook"], reg["sub"])
+            ph = self.cover_photo(post, reg["hook"], "road")
+            cover = T.ccover(ph.path, "A DAY PLAN", reg["hook"], reg["sub"]) if ph else T.ccover_plain("A DAY PLAN", reg["hook"], reg["sub"])
         items = [(f"Stop {n + 1}: {story.nice(k)}", P[k]["do"]) for n, k in enumerate(stops)]
         photos = {}
         for n, k in enumerate(stops[1:], start=1):
