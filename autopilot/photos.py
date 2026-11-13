@@ -454,8 +454,10 @@ class Picker:
     def _meta(self, name, item=None):
         m = (item and self.meta.get(item["id"])) or self.meta.get(name) or self.meta.get(name.split(".")[0])
         tg = (item and self.tags.get(item["id"])) or self.tag_names.get(name) if getattr(self, "tags", None) else None
-        if m and tg and tg.get("words") and tg.get("confidence", 0) >= 0.6 and tg["words"].split()[0].lower() not in (m.get("about", "")).lower():
-            m = dict(m, about=m.get("about", "") + " | looks like: " + tg["words"])
+        if m and tg and tg.get("words") and (tg.get("confidence", 0) >= 0.6 or tg.get("claude")) and tg["words"].split()[0].lower() not in (m.get("about", "")).lower():
+            m = dict(m, about=m.get("about", "") + " | looks like: " + tg["words"] + " | categories: " + " ".join(tg.get("cats") or []))
+            if "people" in (tg.get("cats") or []) and not m.get("people") and tg.get("claude"):
+                m["people"] = True
         return m
 
     def _series(self, name):

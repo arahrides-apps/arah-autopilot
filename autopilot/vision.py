@@ -30,9 +30,25 @@ L = {
  "people": ("a group of happy tourists, friends or a family smiling on holiday in the tropics", dict(kind="scenery", people=True, about="Jamaica people friends family travellers")),
  "market": ("a busy outdoor market with vendors, craft stalls and colourful goods", dict(kind="scenery", about="Jamaica market craft culture")),
  "reggae": ("a live reggae band, drums, rasta colours red gold and green", dict(kind="scenery", about="Jamaica reggae music culture")),
+ "sunrise": ("a soft pink and golden sunrise over mountains or the sea early in the morning", dict(kind="scenery", about="Jamaica sunrise morning dawn")),
+ "carnival": ("colourful carnival costumes with feathers, beads and a parade of dancers", dict(kind="scenery", people=True, about="Jamaica carnival costume parade")),
+ "nightlife": ("a lively night scene: street party, bar, club, dancehall or fireworks with lights after dark", dict(kind="scenery", about="Jamaica nightlife night party dancehall")),
+ "attraction": ("a famous tourist attraction: a plantation great house, a zip line, a cave, a blue hole or a historic fort", dict(kind="scenery", about="Jamaica attraction tour great house zipline")),
+ "resort": ("a tropical hotel, villa or resort with a pool and palm trees", dict(kind="scenery", about="Jamaica resort villa hotel pool stay")),
  "not usable": ("a screenshot, a document, a logo, text on a plain background or a selfie", dict(kind="skip")),
 }
 NAMES = list(L)
+# the categories used to pick photos for posts
+CATS = ["people", "food", "culture", "beach", "nightlife", "carnival", "sunset", "sunrise", "airport", "attractions", "nature", "waterfall", "road", "cars", "city", "music", "accommodation", "drinks"]
+LABEL_CATS = {"holland bamboo": ["attractions", "nature", "road"], "bob marley": ["culture", "music", "attractions", "city"], "trident castle": ["attractions", "accommodation"], "dunn's river falls": ["attractions", "waterfall", "nature", "beach"],
+              "waterfall": ["waterfall", "nature"], "river rafting": ["attractions", "nature"], "blue mountains": ["nature", "road"], "sunset": ["sunset", "beach"], "sunrise": ["sunrise", "nature"],
+              "beach": ["beach"], "negril cliffs": ["attractions", "beach", "nature"], "kingston": ["city", "culture"], "jerk chicken": ["food"], "jamaican patty": ["food"], "fruit": ["food", "culture"],
+              "food": ["food"], "drinks": ["drinks", "food"], "road trip": ["road"], "rental car": ["cars"], "airport": ["airport"], "people": ["people"], "market": ["culture", "food", "city"],
+              "reggae": ["music", "culture", "nightlife"], "carnival": ["carnival", "culture", "people", "music"], "nightlife": ["nightlife", "music", "people"], "attraction": ["attractions"], "resort": ["accommodation"]}
+def cats_for(label, claude_cats=None, people=False):
+    c = list(LABEL_CATS.get(label, [])) + [x for x in (claude_cats or []) if x in CATS]
+    if people and "people" not in c: c.append("people")
+    return sorted(set(c))
 _M = {}
 
 def available():
@@ -86,3 +102,78 @@ def classify(paths, min_prob=0.45, refs=None):
         lab = NAMES[a] if pa >= min_prob and pa - pb >= 0.10 else None
         res.append((lab, round(pa, 2), NAMES[b], ref))
     return res
+
+
+# ---------------------------------------------------------------- web references: real photos of the same places, from Wikimedia Commons
+WEB = {"holland bamboo": "Holland Bamboo Avenue Jamaica", "trident castle": "Trident Castle Port Antonio", "dunn's river falls": "Dunn's River Falls",
+       "bob marley": "Bob Marley Museum Kingston", "negril cliffs": "Negril cliffs Rick's Cafe", "blue mountains": "Blue Mountains Jamaica coffee",
+       "river rafting": "Martha Brae river rafting", "jamaican patty": "Jamaican patty", "jerk chicken": "jerk chicken Jamaica", "fruit": "Jamaican fruit market ackee mango"}
+
+def web_refs(cache, per=4):
+    """Download a few free Commons photos for each place/dish (once) and embed them. -> (embeddings, [label per row]) or None."""
+    import requests
+    from PIL import Image
+    cache = Path(cache); cache.mkdir(parents=True, exist_ok=True); paths, labs = [], []
+    for lab, q in WEB.items():
+        try:
+            r = requests.get("https://commons.wikimedia.org/w/api.php", params={"action": "query", "generator": "search", "gsrsearch": q + " filetype:bitmap", "gsrnamespace": 6, "gsrlimit": per,
+                             "prop": "imageinfo", "iiprop": "url", "iiurlwidth": 400, "format": "json"}, timeout=30, headers={"User-Agent": "ArahAutopilot/1.0"}).json()
+            for pg in (r.get("query", {}).get("pages", {}) or {}).values():
+                u = (pg.get("imageinfo") or [{}])[0].get("thumburl")
+                if not u: continue
+                f = cache / (lab.replace(" ", "_").replace("'", "") + "_" + str(abs(hash(u)) % 10**8) + ".jpg")
+                if not f.exists():
+                    f.write_bytes(requests.get(u, timeout=30, headers={"User-Agent": "ArahAutopilot/1.0"}).content)
+                Image.open(f).verify(); paths.append(f); labs.append(lab)
+        except Exception as e:
+            log.warning("web refs for %s skipped: %s", lab, e)
+    if not paths or not available():
+        return None
+    ok = []
+    for p, l in zip(paths, labs):
+        try: Image.open(p).convert("RGB"); ok.append((p, l))
+        except Exception: pass
+    return embed_images([p for p, _ in ok]), [l for _, l in ok]
+
+def web_match(img_emb, refs, min_sim=0.86):
+    """Best label whose web reference photo looks (nearly) like this one, with its similarity."""
+    if refs is None: return None
+    sims = img_emb @ refs[0].T
+    v, j = sims.max(0)
+    return (refs[1][int(j)], round(float(v), 2)) if float(v) >= min_sim else None
+
+
+# ---------------------------------------------------------------- Claude reviews the picture (needs ANTHROPIC_API_KEY; skipped without it)
+PLACES = "Kingston, Port Antonio, Ocho Rios, Montego Bay, Negril, Treasure Beach, Mandeville, Blue Mountains, Falmouth, Black River, Holland Bamboo, Trident Castle, Bob Marley Museum, Devon House, Dunn's River Falls, Blue Hole, Reach Falls, Lover's Leap, Rose Hall, Lime Cay"
+PROMPT = ("You are indexing photos for a Jamaican car rental company's Instagram. For each numbered photo answer one JSON object. Reply with ONLY a JSON array, one object per photo, in order: "
+          '{"n":1,"kind":"scenery|car|food|people|not-usable","label":"one of %s or other","place":"specific Jamaican place or empty","parish":"","what":"max 14 words saying what the photo shows",'
+          '"categories":["any of: %s"],"people":true|false,"season":"any|christmas|carnival|summer","jamaica":"yes|likely|no|unsure","confidence":0.0-1.0}. '
+          "Name a specific place only if the picture shows it clearly (a sign, a landmark you recognise, a distinctive view such as the bamboo tunnel at Holland Bamboo or the castle at Trident); otherwise leave place empty and say confidence honestly. "
+          "Do not identify real people from their faces; statues, murals and signs are fine. Mark screenshots, documents, logos and stock photos of other countries not-usable or jamaica:no. "
+          "Likely places in this library: " + PLACES + ".")
+
+def claude_review(paths, model=None, batch=6):
+    """-> list of dicts (or None per photo) from Claude, or None when no API key / error."""
+    import os, io, json, base64, requests
+    from PIL import Image
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key or not paths: return None
+    model = model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5"
+    out = []
+    for i in range(0, len(paths), batch):
+        ch = paths[i:i + batch]; content = []
+        for k, p in enumerate(ch, 1):
+            im = Image.open(p).convert("RGB"); im.thumbnail((768, 768)); b = io.BytesIO(); im.save(b, "JPEG", quality=80)
+            content += [{"type": "text", "text": "Photo %d:" % k}, {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}}]
+        content.append({"type": "text", "text": PROMPT % (", ".join(NAMES), ", ".join(CATS))})
+        try:
+            r = requests.post("https://api.anthropic.com/v1/messages", timeout=120, headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                              json={"model": model, "max_tokens": 1500, "messages": [{"role": "user", "content": content}]})
+            r.raise_for_status()
+            txt = "".join(b.get("text", "") for b in r.json()["content"])
+            arr = json.loads(txt[txt.index("["): txt.rindex("]") + 1])
+            by = {int(a.get("n", 0)): a for a in arr if isinstance(a, dict)}
+            out += [by.get(k) for k in range(1, len(ch) + 1)]
+        except Exception as e:
+            log.warning("Claude review failed for a batch: %s", e); out += [None] * len(ch)
+    return out
