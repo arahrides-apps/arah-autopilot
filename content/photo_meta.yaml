@@ -3352,3 +3352,39 @@ ys_falls_pool_reflection:
   plate_visible: false
   quality: 5
   series: ys-falls
+tennis_courts_pickleball_trees:
+  about: Tennis courts, Jamaica (blue and green hard courts under trees)
+  credit: ''
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: arah-tennis
+tennis_court_blue_palms:
+  about: Tennis court, Jamaica (blue court with palms and tropical garden)
+  credit: ''
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: arah-tennis
+tennis_court_blue_bougainvillea:
+  about: Tennis court, Jamaica (blue court, bougainvillea and fence)
+  credit: ''
+  kind: scenery
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: arah-tennis
+tennis_courts_aerial_players:
+  about: Tennis courts from above, Jamaica (players on two courts)
+  credit: ''
+  kind: scenery
+  orientation: landscape
+  people: true
+  plate_visible: false
+  quality: 4
+  series: arah-tennis
