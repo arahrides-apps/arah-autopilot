@@ -17,6 +17,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Picture recognition (CPU)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install transformers
       - name: Index photos by GPS location
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
