@@ -203,36 +203,6 @@
    "status": "pending"
   },
   {
-   "id": "2026-11-13_1200_tip",
-   "date": "2026-11-13",
-   "slot": "2026-11-13T12:00:00-05:00",
-   "type": "tip",
-   "flags": [
-    "Slide photo (culture): Photo: Jamaica Tourist Board"
-   ],
-   "images": [
-    "media/2026-11-13/2026-11-13_1200_tip_1.jpg",
-    "media/2026-11-13/2026-11-13_1200_tip_2.jpg",
-    "media/2026-11-13/2026-11-13_1200_tip_3.jpg",
-    "media/2026-11-13/2026-11-13_1200_tip_4.jpg",
-    "media/2026-11-13/2026-11-13_1200_tip_5.jpg"
-   ],
-   "copy_text": "Patois 101: Respect. 💡\n\nIt means: A friendly greeting or thanks.",
-   "alt": "Tip graphic: Respect. (carousel: swipe for more)",
-   "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
-   },
-   "caption": "Patois 101: Respect. 💡\n\nIt means: A friendly greeting or thanks.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#OchoRios #RentACarJamaica #ArahRides #DrivingInJamaica #TravelJamaica",
-   "photos_extra": [
-    {
-     "id": "drive:1-tZgZSxPrhQsBWhP6CoHMncuIEJooBNT",
-     "name": "006_JTB_Spring_2025_Kingston_Carnival"
-    }
-   ],
-   "status": "pending"
-  },
-  {
    "id": "2026-11-13_1400_place",
    "date": "2026-11-13",
    "slot": "2026-11-13T14:00:00-05:00",
@@ -280,8 +250,9 @@
    "slot": "2026-11-13T16:00:00-05:00",
    "type": "moment",
    "flags": [
-    "Slide photo (culture): Photo: Jamaica Tourist Board",
-    "Slide photo (food): Photo by Benoît Prieur, Wikimedia Commons (CC0)"
+    "Slide photo from drive (licence-free): Photo: Jamaica Tourist Board",
+    "Slide photo (culture): Arah Rides",
+    "Slide photo (group): Photo by David Anderson on Unsplash"
    ],
    "images": [
     "media/2026-11-13/2026-11-13_1600_moment_1.jpg",
@@ -298,19 +269,19 @@
     "name": "Montego Bay, Jamaica",
     "id": "115773858436055"
    },
-   "caption": "Fashion week in Ocho Rios. 🇯🇲\n\nRunway shows and style on the north coast. Rent a car and see the rest of Ocho Rios too.\n\n📅 Nov 19 to 22\n📍 Ocho Rios, St. Ann\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #SelfDriveJamaica #ArahRides #ExploreJamaica #CarRentalJamaica",
+   "caption": "Fashion week in Ocho Rios. 🇯🇲\n\nRunway shows and style on the north coast. Rent a car and see the rest of Ocho Rios too.\n\n📅 Nov 19 to 22\n📍 Ocho Rios, St. Ann\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #JamaicaCarRental #ArahRides #VisitJamaica #JamaicaItinerary",
    "photos_extra": [
     {
-     "id": "drive:1wrox8Zghmy9iMLrB5QCKJX37kyP2mClm",
-     "name": "145_JTB_Brand_OchoRios_ColumbusCove_Dad_with_daughter"
+     "id": "drive:1kYvPJ0CIAYL087Ikkfdx8__Zgw2h41v3",
+     "name": "DunnsRiverFalls0233e"
     },
     {
-     "id": "drive:1y31fC0L7UlyJ_TMnj9CrqESm4CnOh6Fb",
-     "name": "057_JTB_Spring_2025_Kingston_Carnival_Dance"
+     "id": "drive:1YN8KPJCWElixIiv_Qv-LHh2ldRZ5Uw26",
+     "name": "IMG_9055"
     },
     {
-     "id": "wikimedia:131918375",
-     "name": "wikimedia-131918375"
+     "id": "unsplash:q2zdJME8xKo",
+     "name": "unsplash-q2zdJME8xKo"
     }
    ],
    "status": "pending"
@@ -321,7 +292,6 @@
    "slot": "2026-11-13T18:00:00-05:00",
    "type": "trip",
    "flags": [
-    "Web photo: check it shows Jamaica and has no recognisable people or brands",
     "Place confirmed by photo description"
    ],
    "images": [
@@ -333,18 +303,24 @@
     "media/2026-11-13/2026-11-13_1800_trip_6.jpg"
    ],
    "photo": {
-    "id": "wikimedia:114330288",
-    "name": "wikimedia-114330288",
-    "source": "wikimedia",
-    "credit": "Photo by NPS, Wikimedia Commons (Public domain)"
+    "id": "drive:1BSjQkArPbUj5Ps0WiZq5h-cJW78P1uz7",
+    "name": "Falmouth0691",
+    "source": "drive",
+    "credit": "Photo: Jamaica Tourist Board"
    },
-   "copy_text": "A south coast day in 3 stops 🗺️\n\n1. Treasure Beach: Fishing villages, fresh fish and calm. The south coast at its slowest.\n2. Pelican Bar: Sit in a little bar built on stilts in the sea.\n3. Lover's Leap: Stand on the cliff and look out over the south coast.\n\nPick up at MBJ and head south. Allow about 2 hours.",
-   "alt": "Day plan: A south coast day in 3 stops (carousel: swipe for more)",
+   "photos_extra": [
+    {
+     "id": "drive:1pALCMEqHmDmdf_NXNom6enF8dAB56Ozl",
+     "name": "127_JTB_Brand_MontegoBay_RoseHallGreathouse"
+    }
+   ],
+   "copy_text": "A Montego Bay day in 3 stops 🗺️\n\n1. Falmouth: Wander old Georgian streets and soak up the history.\n2. Burwood Beach: Find a quiet stretch of sand on the north coast.\n3. Rose Hall: Walk through the historic great house and its grounds.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.",
+   "alt": "Day plan: A Montego Bay day in 3 stops (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
    },
-   "caption": "A south coast day in 3 stops 🗺️\n\n1. Treasure Beach: Fishing villages, fresh fish and calm. The south coast at its slowest.\n2. Pelican Bar: Sit in a little bar built on stilts in the sea.\n3. Lover's Leap: Stand on the cliff and look out over the south coast.\n\nPick up at MBJ and head south. Allow about 2 hours.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #SelfDriveJamaica #DiscoverTheRealJamaica #JamaicaTravelTips #JamaicaCarRental",
+   "caption": "A Montego Bay day in 3 stops 🗺️\n\n1. Falmouth: Wander old Georgian streets and soak up the history.\n2. Burwood Beach: Find a quiet stretch of sand on the north coast.\n3. Rose Hall: Walk through the historic great house and its grounds.\n\nPick up at MBJ (Sangster) or our Montego Bay offices.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\n📷 Photo: Jamaica Tourist Board\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #SelfDriveJamaica #ArahRides #RoadTripJamaica #RentACarJamaica",
    "status": "pending"
   },
   {
@@ -356,13 +332,13 @@
    "images": [
     "media/2026-11-13/2026-11-13_2000_qa_1.jpg"
    ],
-   "copy_text": "Do I need an app? 🤔\n\nNo. There is no app. Book on arahrides.com or say Hi to Winston on WhatsApp.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: Do I need an app?",
+   "copy_text": "Can I pick up near Ocho Rios? 🤔\n\nYes. OCJ (Ian Fleming International Airport) is a pickup option.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: Can I pick up near Ocho Rios?",
    "location": {
-    "name": "Kingston, Jamaica",
-    "id": "109489972411518"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Do I need an app? 🤔\n\nNo. There is no app. Book on arahrides.com or say Hi to Winston on WhatsApp.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#KingstonJamaica #JamaicaCarRental #ArahRides #CarRentalJamaica #SelfDriveJamaica",
+   "caption": "Can I pick up near Ocho Rios? 🤔\n\nYes. OCJ (Ian Fleming International Airport) is a pickup option.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #CarRentalJamaica #DiscoverTheRealJamaica #JamaicaTravelTips #JamaicaVacation",
    "single": true,
    "status": "pending"
   },
@@ -372,10 +348,8 @@
    "slot": "2026-11-13T22:00:00-05:00",
    "type": "moment",
    "flags": [
-    "Slide photo from wikimedia (licence-free): Photo by no rights reserved, Wikimedia Commons (CC0)",
-    "Slide photo from wikimedia (licence-free): Photo by no rights reserved, Wikimedia Commons (CC0)",
-    "Slide photo (culture): Photo: Jamaica Tourist Board",
-    "Slide photo (food): Photo by USDAgov, Wikimedia Commons (Public domain)"
+    "Slide photo (culture): Photo by Jeremy Brady on Unsplash",
+    "Slide photo (family): Arah Rides"
    ],
    "images": [
     "media/2026-11-13/2026-11-13_2200_moment_1.jpg",
@@ -389,18 +363,26 @@
    "event_id": "JAMAICA CUP TENNIS",
    "alt": "Event graphic: Jamaica Cup tennis at Half Moon. (carousel: swipe for more)",
    "location": {
-    "name": "Norman Manley International Airport",
-    "id": "583154638527853"
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
    },
-   "caption": "Jamaica Cup tennis at Half Moon. 🇯🇲\n\nSix days of tennis in Montego Bay. Pick up at MBJ and drive there your way.\n\n📅 Nov 11 to 16\n📍 Half Moon, Montego Bay\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #RentACarJamaica #ArahRides #ExploreJamaica #SelfDriveJamaica",
+   "caption": "Jamaica Cup tennis at Half Moon. 🇯🇲\n\nSix days of tennis in Montego Bay. Pick up at MBJ and drive there your way.\n\n📅 Nov 11 to 16\n📍 Half Moon, Montego Bay\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#OchoRios #JamaicaRentalCar #ArahRides #ExploreJamaica #CarRentalJamaica",
    "photos_extra": [
     {
-     "id": "drive:1kRO6s2Mnknjyv9GGeqiIvujh8VH4fjMH",
-     "name": "027_JTB_Spring_2025_Kingston_Carnival_Jamaica_Flag"
+     "id": "drive:15ciyJeSpAH6UyJQIcAy_RhtigbB63nXJ",
+     "name": "020_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport_Suitcases"
     },
     {
-     "id": "wikimedia:184647422",
-     "name": "wikimedia-184647422"
+     "id": "drive:14weYAwInNkda21NoUxx6bZzM1y2UqZ-U",
+     "name": "DJI_0011"
+    },
+    {
+     "id": "unsplash:UX0D8W5JSyg",
+     "name": "unsplash-UX0D8W5JSyg"
+    },
+    {
+     "id": "drive:1X5HTnU-yd0FsV0OeCz7gJ4ikb2gb6vG2",
+     "name": "SGT01682SELECT_V11"
     }
    ],
    "status": "pending"
