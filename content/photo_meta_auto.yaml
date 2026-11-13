@@ -1,5 +1,32 @@
 # Made by `python -m autopilot index-photos` from each photo's GPS point. Edit freely: change kind/about/people, or delete a line to re-index it.
+drive:1-1H97CTzaT1n8BrmGEyzCDfdmuMwocuZ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1-5-DTJb3g-6xzEaBUV2mUsRdSw7m8198:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1-AsLVjD5_x4Ws8jv9BlHK6JmBR087zru:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1-DG81zBqApdsIXpA1V1QxoZPnL-cFgao:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -22,6 +49,15 @@ drive:1-rNryW0hhhxY2K1MrhRP0sFRieaSt8wa:
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1-tNFN49al1e-x55NNTGvWHsWLJ9dQGWi:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 4
@@ -53,6 +89,15 @@ drive:10Dy8JwjSdS-IN63c_RJ2x39LSOxx1Ypv:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:10ES5s1p6fJp8KoyTYXwKLj6LUa4gQ3Eu:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:10EX43P8aIs1lvaMpoFRVruascdgy5_XU:
   about: No GPS point in this photo
   credit: ''
@@ -79,6 +124,33 @@ drive:10k22Ww-ZY0roXO34WoG6fKmYmfkabXIs:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:111bH0yS2YPdHtewkCaKbQ3j4I9T_n7WS:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:119BYSd4ieHWJTkXKcHnItfVcRnIb3dsR:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:119Xk4XDLVy9DAifzAEgeldmahPgNsOsF:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:11IWRJ-4IrGhEHqelgAu5Lfhwwi2rGhF7:
   about: No GPS point in this photo
@@ -114,6 +186,49 @@ drive:11PoQJwEwmGq0ucCf9itPrdZgqeq4oJzA:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:11QteJX2iNh9ycPR6knaV_TOWWkG7eW_m:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:11foKinmMXGDrpN9Q0XGSn6gEIMWx3MwX:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:11ofJJHwa2JSXdW2LTZUhJwq3YIPKuQV9:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49816
+  - -77.91824
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:126Km03Kk6OYxrI_FzRTwGnM7aIYNKhVi:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:126yq9tixVIGKspu9g5Ezidy5FAEQutJf:
   about: No GPS point in this photo
   credit: ''
@@ -175,6 +290,22 @@ drive:12cZstmDMn77Di0qwBm1pqJsR22oa8M1d:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:12kQPq5HGn2O4JASr-mzGAj0W9Ce26Hw4:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82583
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:12t5xwFeQp9LhhUwgF1uJaSErgCmPbv05:
   about: No GPS point in this photo
   credit: ''
@@ -238,6 +369,15 @@ drive:13PwAXIR1PEGgdQ0CPqjYzjON7lEJhKNP:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:13YwJUE7J4ddcBYaCg_4fISr5eT3HlTs9:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:13pNllusvPTeEn8xLCWiiQRcTs9HyHsxp:
   about: No GPS point in this photo
   credit: ''
@@ -274,6 +414,22 @@ drive:14Guf7E5tDB36eaBz1AMxNft_FKkYvDiI:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:14I7qs9WnnYJnbeIfrLYmI0wIQdqrjTff:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48995
+  - -77.92409
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:14KdEzZnUZGSH3kD7Yt9SZ7gI_OZlwfx1:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
   auto: true
@@ -344,6 +500,15 @@ drive:14yxn8VZ2hkeH-Kfn9L8tTvlR3uBRJZrj:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:152qhZN7spipdFYbkh-s3h-kZpDiG5ilx:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:157_WJ1AkHey8L31Ve-Au8m__wg4Pa1ax:
   about: No GPS point in this photo
   credit: ''
@@ -352,6 +517,40 @@ drive:157_WJ1AkHey8L31Ve-Au8m__wg4Pa1ax:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:15JfK4xKOR_bKBtqon1kzGVdIpaxHBpBH:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49813
+  - -77.91831
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:15KGvGQNlvE3z0h9vJHcI9EoX5llTiJgY:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:15Pl9VwrTzF44sfgk_9Xl1QGgiN5PFyh4:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:15RXfaRzMz8GpRmUMCHwfLr7x9pZRe0EJ:
   about: No GPS point in this photo
@@ -398,6 +597,31 @@ drive:15eXgnBMGtwytV5yZtXPurVJMxTppUdQU:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:15fvwi-_k4VRM1wng6t90qz7b0y7JIJrA:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:15hBUr0IaWrDWxvsyQvbI24bCMIb5LgMk:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05457
+  - -76.82577
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:15w_fFExSHPiDQJi_oCZZLplCqoh1GU2R:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -493,6 +717,22 @@ drive:16kHsOzYJgj2pco_VRfrZ4iKHOYeYUVHd:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:16qksEscm9vprGlqAUzPZOZGvZ79GJ90N:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49012
+  - -77.92396
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:16sffREBaD-eiQgmoiKGN6jz9R8nnQIwX:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -527,6 +767,15 @@ drive:16yTCxqaJIR9uvkN3TKPHtd2fEwn1TPhV:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:171ZSdJHcQ6Ws8PAC9S_nDW56p4xAIfne:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:17AaMMTcI4D70F9waEUGGpL-CvJOA1Cli:
   about: No GPS point in this photo
   credit: ''
@@ -544,6 +793,15 @@ drive:17BzcMhWO6iGcgKXSRF-ANOlM-E4d1yPJ:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:17DoxePzl70WnbLvzZ2XcuqpL3G2hHUMf:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:17GaAas9M9AjDy2mr29kKTcgzxP1nAUwX:
   about: No GPS point in this photo
@@ -597,6 +855,15 @@ drive:17XHsGp6bly4OdSlSC2Yg6a_GRErWpDJd:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:17mLmmMTbglDDeP-teBpNlBP_n97OCMjU:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:17tki2obwYtQLCOxZQRh4AfZoaZOu0MFt:
   about: No GPS point in this photo
   credit: ''
@@ -605,6 +872,15 @@ drive:17tki2obwYtQLCOxZQRh4AfZoaZOu0MFt:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1821BqSUf23zyLDj3q8Zenb2UCqug_zRa:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1879x4mRdW3OaMwOMh9H1BKQRsxzCb_6y:
   about: No GPS point in this photo
@@ -651,6 +927,58 @@ drive:18xKgxRJxsSJ0A7i3affqvZUjoFhH6J37:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:18yAggPp0B1dCLDjOhHcxZlmCeJTE7N2W:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:19-Bm7y-eps_jyO1qO200A6YgbYd2FPkB:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:19-u6ARbxNwdLb4z61ofReoLn4XULXivH:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49006
+  - -77.92393
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:19J_BovQKqa6-iqR9rRZtPA6-TqslVt-e:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:19MIAU9_5zPLN7TQrqCATF7eORVqJnZ7m:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:19NoGn31Bb0LubJaBrFcWKnTSlAnS9p1q:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -667,11 +995,36 @@ drive:19NoGn31Bb0LubJaBrFcWKnTSlAnS9p1q:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:19OGMdNfLDQ0JL7n3AnLr-fnoFX6xkYsN:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48994
+  - -77.92409
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:19UPkDtqJ2n2u5tKTBxh8Ng6nJs7-xRV9:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:19UT0ywRKxKgBdcJlMMrBzeuebZsXwKwD:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 4
@@ -694,6 +1047,22 @@ drive:19eQyudCMUcALATOtSCMVI6AUz-Kmkmnj:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:19hQKgErskVdzGqlD47MQpFg5a521VlpT:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49819
+  - -77.91772
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:19yHcHqLgKPuxo4E3-hmOpgVxI0AygxrK:
   about: No GPS point in this photo
   credit: ''
@@ -712,6 +1081,22 @@ drive:1A1hVBezMbq0q3ZjzdD8bpnew1K03I7AS:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1A4GAeNekFHSI8_9csjAvbvuFg2GGeCLZ:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82583
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1A5j7p-VvqOTfvJo7f6RX9Pg7lvvSOwzw:
   about: No GPS point in this photo
   credit: ''
@@ -748,6 +1133,31 @@ drive:1AJiG2jMHbIU8hpnLz8HDlpySPBrZDpQE:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1AQC-izhMK77eik1o_7CwTXj7iQU33GX6:
+  about: May Pen, Clarendon (placed by GPS, 8.7 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 17.963
+  - -77.2699
+  kind: scenery
+  orientation: portrait
+  parish: Clarendon
+  people: false
+  place: May Pen
+  plate_visible: false
+  quality: 4
+  series: own-may-pen-202403
+drive:1AYKq7Qlr9Y3cCFpODH3OZsLIxaBUD5Kj:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1Ae-SYquZs3WUjz-i0wT2Oq8sUDUoqRXc:
   about: Blue Mountains foothills, St Andrew (placed by GPS, 2.6 km away) - own photo
   auto: true
@@ -764,6 +1174,15 @@ drive:1Ae-SYquZs3WUjz-i0wT2Oq8sUDUoqRXc:
   plate_visible: false
   quality: 4
   series: own-blue-mountains-foothills-202403
+drive:1Ai2YutOgi-Wp4twbyuwdsJ9fRTOJCgPH:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1AnRFYKbubgMvSB5tIrbdUq9bPPe7h5Wc:
   about: No GPS point in this photo
   credit: ''
@@ -791,6 +1210,15 @@ drive:1AwTNj9wFJ2blLv9Vyhpx7cIpUPRmbdOD:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1B5EWjC20nq6uBXTOJvJ67pdcR3qsLrUO:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1BNXr445GNbfvA-0AVYXmSOgdoz5zY2kX:
   about: No GPS point in this photo
   credit: ''
@@ -799,6 +1227,15 @@ drive:1BNXr445GNbfvA-0AVYXmSOgdoz5zY2kX:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1BPgpZ2S3BNNyhceSs5RZyW6vsPHjQWPB:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1BVDOQb0LdzbzrG0gdAocniva9dUbXo1W:
   about: No GPS point in this photo
@@ -810,6 +1247,15 @@ drive:1BVDOQb0LdzbzrG0gdAocniva9dUbXo1W:
   quality: 3
   series: unplaced
 drive:1BWm4lgY-wvO_asjlciJDvplBfwYeou33:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1BXemNagbGfjnUo1oN-xZpjgoHL3sHCht:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -843,6 +1289,15 @@ drive:1BdL-tu2zUYUYKROhyEpr3Hc2Vz44fDUF:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1BsP91hezbPQ12sOSJgcbFbfuiYPVDZ2g:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1C171ufJw5tw1O94EFJ5BAePFhftHb-vu:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
   auto: true
@@ -859,6 +1314,15 @@ drive:1C171ufJw5tw1O94EFJ5BAePFhftHb-vu:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1C9xUx8yBbe7nHZhg3E2Nh_inXolpuOT1:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1CEbNxHrdovS7exoqZeQpxAeJyk7Ji_Mp:
   about: No GPS point in this photo
   credit: ''
@@ -877,6 +1341,15 @@ drive:1CIUkYbVAIQ32YxfhYpr9gtznen216JJB:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1D3Jan_oEAHOX3IfIvuCeL7BNvujOFJNY:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1D5qCBnJo-cvN3n67gt4KmdQc0YcPUjkt:
   about: No GPS point in this photo
   credit: ''
@@ -886,6 +1359,22 @@ drive:1D5qCBnJo-cvN3n67gt4KmdQc0YcPUjkt:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1D8sHxyYawFUOcfKAI8zqWB3XQJ3X7uiY:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46856
+  - -77.29933
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
 drive:1DG6CKbu9Wc7E1oLJOIJGK11MUcE40Ytg:
   about: No GPS point in this photo
   credit: ''
@@ -895,11 +1384,29 @@ drive:1DG6CKbu9Wc7E1oLJOIJGK11MUcE40Ytg:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1DGKvUHx01rvMaU0mP6plHV0EP0KJ5NN8:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1DKr5WrUQn88EOpzBU4clkL8OxAVpoHO5:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1DVS5Szy9Q5QU7olVx3yCQmNkSHSozX5e:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -913,6 +1420,22 @@ drive:1DYO7cw1fFGbK96IxgR4nkv4nYKZoERbE:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1DiLQWs32G_VM4tbtSQHmU5YyaLG35FLM:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48998
+  - -77.92406
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:1DnXowCk6lU1Z4V2exYJmbfJQMItJ15q5:
   about: No GPS point in this photo
   credit: ''
@@ -939,6 +1462,15 @@ drive:1EJ5Pd1XmyxXty-_zv9ImygcSGIgOzu8P:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:1EJtBs_zl4ti2givKu3HDrZsBljf6Dejm:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:1EK-cz45bNbaQM4-QrwbyJk-dVnpr_FT1:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
@@ -999,6 +1531,15 @@ drive:1F-Ltoux3eQAerj85xGNgNHJ903lNQikZ:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1F7cCQ5I6KKImNErhOmmH-BSm9NzW9EaH:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1FIE-kOHzYoCjAVw9VfVo5CG0jeuIrumX:
   about: No GPS point in this photo
   credit: ''
@@ -1017,6 +1558,15 @@ drive:1FIpnLQ3939MiOJL68VjO_LCbbKvZAUo6:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1FcFSuQz8AETKLgRjbFxwfcbFJrCugb-a:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1FjlyL9UPgl-WR1h1tL2UNaLQIuF_MzU7:
   about: No GPS point in this photo
   credit: ''
@@ -1025,6 +1575,15 @@ drive:1FjlyL9UPgl-WR1h1tL2UNaLQIuF_MzU7:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1FqlZGfxLqWg2mUmDtsX1zP6NZJEW0gw8:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1FxodqDD32cGDpmEgpwxXbZROsud05xPu:
   about: No GPS point in this photo
@@ -1155,6 +1714,24 @@ drive:1HtHAyB2e4Yc_OhZ0_yhGvaFF_zsfDCG8:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1HxEMCh06dZYNLpOt4LmnlT8qwB-J_eNy:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1I1oo4TmvbS3YFK8hvhG_C0D_tDT_Mlkm:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1I8O2kmKghv6PoIPnmwVDewhvOtTijF5I:
   about: No GPS point in this photo
   credit: ''
@@ -1164,7 +1741,25 @@ drive:1I8O2kmKghv6PoIPnmwVDewhvOtTijF5I:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1ICMxrx6Fv9uWGdCT-Gh-ZbzGHmqN9lNK:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1IFejtywtdGQn3Iu17YFmFbveSSrmD4fq:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1ILODeKMEo-2NxjzJ7fK1eBrV8itxyO3c:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -1200,6 +1795,15 @@ drive:1IntsLXIIyQ8EXSOkbb86Hgk8VRYYQFCY:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1IppWKlFEI_V6yAlK4JnpOuWhggPPoLMb:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1Iry18lOYlGNkv2l1ZETRTapiT06ONHE0:
   about: No GPS point in this photo
   credit: ''
@@ -1227,6 +1831,33 @@ drive:1IuQPAQ_8WDXbll81JjDuODI9uKlIY0Cv:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1J10XYqhQ5U5RYV-as0uyIO9JTWfDh97e:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1JKvLL1K_rqdmHPR8B7BSluHHnKRNmJR5:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1JMqB9zk9YuPH9uePFKxnLb471o65U8GQ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1JNUSW_alRwOqraD8UYkEMGwrFS3q8lp6:
   about: No GPS point in this photo
   credit: ''
@@ -1244,6 +1875,15 @@ drive:1JO0gVpBQz-fbTcdXXIyENw15SG01R-1V:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1JXY7wLRNzVNV4KxNfogfWsIzeYjxDYLf:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1JZWgmRXi-fM6j45z1GLaOL4aDudqNdyA:
   about: No GPS point in this photo
@@ -1272,6 +1912,22 @@ drive:1JqkA6eZkdr2K0kAmuPyE8LI0WzIebXt3:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1Js4uCr_5RWoHABeDIHfpt0btv71FaxmM:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82589
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1Jt885iJi66Ly68o-6bcyb6QuLmzIhatg:
   about: No GPS point in this photo
   credit: ''
@@ -1299,6 +1955,31 @@ drive:1K2k83lm_SgatFE8t3L7L_S2r9lIKPEx4:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1K7XUI_g3EPtVXilC66u3nol9p7WUHFUU:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1KCjdXLBuGo_2949djFu_5Uyr3qTBZ4-a:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82583
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1Kdp1fHpuXj5xi0mWMkrX-2Nj_PIFA40b:
   about: No GPS point in this photo
   credit: ''
@@ -1369,6 +2050,15 @@ drive:1L_ZuLN-QT71Pv4UhC1kqXGb7FqsRfchq:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1LvjvQyMzKj3sXuLpMxQ8Wu3RRe3TYxhC:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1LzP9t9qR406mMoypc52CWwXgmvR91Yf-:
   about: No GPS point in this photo
   credit: ''
@@ -1403,6 +2093,15 @@ drive:1MAjOdHQpbTLZhK7wkbRQ_NiPxbHa9RtI:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1MBocLjzvch4Tv-byEs6evMcED5ZfkPE_:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1MCm4gx_hgjyY9t6thAqIPZq1oClsm2qE:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -1428,6 +2127,22 @@ drive:1MGZJUQZPiGmGSKg8Dc27etWCGMUAdheZ:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1MIoNEVpxtE0DHrKU-P0leW35MBB3SkBw:
+  about: Mandeville, Manchester (placed by GPS, 5.6 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.06378
+  - -77.45326
+  kind: scenery
+  orientation: landscape
+  parish: Manchester
+  people: false
+  place: Mandeville
+  plate_visible: false
+  quality: 4
+  series: own-mandeville-202403
 drive:1MbupUYh0J90kn96dhTosaAaCWV67aoOE:
   about: No GPS point in this photo
   credit: ''
@@ -1453,6 +2168,15 @@ drive:1MuYiojGIjU5KzQui3PvG7wF4PLu40Ovz:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1N1ROdSPqN0a4S66WslL-KnbU3EAiPIXY:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1N3m06yzEmhnzX3YraVVfhzQY146ntJdN:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.7 km away) - own photo
   auto: true
@@ -1514,6 +2238,15 @@ drive:1NrKbA5cN_h1YZbznY4LgEyPISbCSJkrn:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1NrV7mzrGh968YgJqKRPir8SBraFEcD-_:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1Nv4PHX5crKpwGIULVztA6-wxsn34iwMh:
   about: No GPS point in this photo
   credit: ''
@@ -1573,6 +2306,47 @@ drive:1OLMtUMKf1BYZv8lr-7ne1_oWppPeYL2n:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1Oekwq-RzkaRbo-R_-yk9AE0qKjFJwwEx:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05453
+  - -76.82583
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
+drive:1OjOcuA_ZtNJ8ahN7cDg6Y-RstTRiDiC4:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1Ok5QEoRM6MmYpSlzJZTRAUsWFaNZ8n2J:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82589
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1OmWsYmq6BlTvl78BnZwjzYEOz09_L7rE:
   about: No GPS point in this photo
   credit: ''
@@ -1609,6 +2383,15 @@ drive:1POT7Fq4GCYt4m5cOBehhau5KcHzuZah3:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1PUby-_ixJRam7bhlHMQDVzTHEaksiFaC:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1PY6S4_V6uPq4CWab-6Kx87ofbwpGSCic:
   about: No GPS point in this photo
   credit: ''
@@ -1617,6 +2400,65 @@ drive:1PY6S4_V6uPq4CWab-6Kx87ofbwpGSCic:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1PZrgu74-8foL-qCD2ijaQolag8EZ5AzP:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1Q2ymA-kf-Vr7Ju6zOhS0TZbQVbTaoP7j:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1Q3gH_7YWAclB7gSvdpsBeY8pHXA54sDB:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46856
+  - -77.29931
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
+drive:1QA6yvDqrpD7qeV7ZJM_q-GI8baT41jrl:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05454
+  - -76.82584
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
+drive:1QHuhEm50a41xRN-YjMMLSJvZok6IFRUM:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1QY1q6HUDhwdo4eMDapl-UdbDsBT1Ot76:
   about: No GPS point in this photo
@@ -1645,6 +2487,22 @@ drive:1Q_FgwsJEpIfN4MALPRuw4iUf99a7Mx2r:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1Qx1bcHoYGvjCknkykxjcvRtIyqsuzetr:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46854
+  - -77.29939
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
 drive:1R5NnxcsbkNUOwBWRq1fRQbtNtiKahrVS:
   about: No GPS point in this photo
   credit: ''
@@ -1653,6 +2511,15 @@ drive:1R5NnxcsbkNUOwBWRq1fRQbtNtiKahrVS:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:1R87xznr6ufsXDv4iSTomkQDfoMo91BLz:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:1R9Mqv3UiwB4d3rPCnODYmxxlGuCX0XJ9:
   about: No GPS point in this photo
@@ -1679,6 +2546,15 @@ drive:1RGGsvV6RSZAOmRnE0No1KTXj67rf2tTJ:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1R_nRAI3832bqcho0XFKFFzCpIHy9MPP2:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1Rc3F8-jl2znG3gwqzTl1U22WueQJxbsn:
   about: No GPS point in this photo
   credit: ''
@@ -1697,6 +2573,27 @@ drive:1RhKoBeunyaOnegKECPSiGqlEj-_cZqnR:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1RwimOIAYDH-G8bXC76y8RgoTKfSzJkeJ:
+  about: In Jamaica but not near a known place (18.185, -77.040)
+  credit: ''
+  gps:
+  - 18.18457
+  - -77.03998
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1SE8LK9ntj43Q8JOKrjwJNHfp-fWR8aqG:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1SI_cq4aMwvTk0GjeaT8WCzX-XsZ1yAxx:
   about: No GPS point in this photo
   credit: ''
@@ -1707,6 +2604,15 @@ drive:1SI_cq4aMwvTk0GjeaT8WCzX-XsZ1yAxx:
   quality: 4
   series: unplaced
 drive:1SSZmNhqwm_paDFk4A3D-QXfp5WO53atv:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1SmhZif-h5dwzC2CtkejD65OX33s5hbLq:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -1740,6 +2646,24 @@ drive:1T2oCh3sq4P42nbn8yrvShz29kvk8l456:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1T2yq3qFNrsKv7tjmGVql6VfadwBefhxP:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1T3xtI94NKCMwY4Wl9kmAbveOV4CpPDzI:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1T8HYrYO1VPgSofONITy9PA9HVwACWF41:
   about: No GPS point in this photo
   credit: ''
@@ -1783,6 +2707,15 @@ drive:1TPUOAqAbNeIy5dbo4qmFNeSYT_FESI5M:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1TvkdQyT0hjrdLRIa8qyDoYHo8vOd74wh:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1U-2F2PbxnYNbVQO2VdVuKlvOOS9y9WMh:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -1833,6 +2766,24 @@ drive:1U3k1PpgHrTu1MypZqpugim5223o-uEAC:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1U5Dw9I4owAEcdfYn7cldjNAKRbkGYq1Q:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1U5fx4pxletXrAu1OPXQBfN8XOvrKP2yL:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1UEOhJ1XKDBzDrAXKxz0AYYZDpb7QEALU:
   about: No GPS point in this photo
   credit: ''
@@ -1860,6 +2811,15 @@ drive:1UJ-OOerj-waVwvoNTP3Pg8DdxigK7Oxh:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1USkXtinpbomUTo2wmj2MnzDGLOxnWosl:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1UUTm54QP3WO9aGcxnAYjrlujHoRlD0e_:
   about: No GPS point in this photo
   credit: ''
@@ -1869,11 +2829,45 @@ drive:1UUTm54QP3WO9aGcxnAYjrlujHoRlD0e_:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1UVX1jZi_uEDiEeawhTIXlN63WxlB5e9h:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1UcVx0dfN_7e1oTKDTz-GY3qsS7OxIRdh:
+  about: New Kingston, St Andrew (placed by GPS, 0.8 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.0061
+  - -76.79303
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1UgJc0GOugItrefDx3xvi_Ez8ZP9mY4cy:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1UgibeJzpaHpfTLo89fATcYM6DbA_oh2c:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 4
@@ -1896,6 +2890,22 @@ drive:1Upm-tsECGdBEqluiLjhq0plxJN7vPacZ:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1UrFQ9u-0LqjrOknRDGsbh4iGaTnD9AvN:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48994
+  - -77.92408
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:1V4mUoNp25beLR7-iyZfAKO24deYG-JpE:
   about: No GPS point in this photo
   credit: ''
@@ -1923,6 +2933,24 @@ drive:1VB9Z6k44ym71UFjIQSdfXkivD_gjRLdE:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1VIZopF7D8LnwA9MZDLSdTWfpPHa_o5yT:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1VTN8BNDzNxs3Fx1y5L60vLKlebeWZ5zK:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1V_fcaUuyqmadZG5LLRvTgkDBZ1YAh5YR:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -1939,6 +2967,15 @@ drive:1V_fcaUuyqmadZG5LLRvTgkDBZ1YAh5YR:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1Vj-DIdRjVcT_pDj3S_vq-mSr1aGl0POM:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1VkLvEWEBt-2r-ipjD-Dj6aIS5vhE3zJ3:
   about: No GPS point in this photo
   credit: ''
@@ -1957,6 +2994,22 @@ drive:1W7VykCRrBqLg4GgTtREJunGMCrPnjqPO:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1WCNAuQvZr82HK2vn8wUGuRjg4MT5nTTD:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05453
+  - -76.82583
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1WHHNbUltHg2RG-WRkLP_Fiq3Xc2aTm4A:
   about: No GPS point in this photo
   credit: ''
@@ -1965,6 +3018,15 @@ drive:1WHHNbUltHg2RG-WRkLP_Fiq3Xc2aTm4A:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1Wajzo_Hv7xAxmxpy_eLdegfwPX8gkR2N:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1WcMcpKuMD4yg-48BT6WIioX0V-cxLYYA:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
@@ -2009,6 +3071,15 @@ drive:1Wp6d8pxjBoiw9Ca5kcCRCoxCl70rjeDG:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1X-2cgEMVoXlhDpptGcSNxaClOc6RNcpH:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1X5HTnU-yd0FsV0OeCz7gJ4ikb2gb6vG2:
   about: No GPS point in this photo
   credit: ''
@@ -2052,6 +3123,22 @@ drive:1XgkvBu_6UUHHMyS-QJzyLfm5ESvnwWfU:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1XuAAvpgbKVImpjWXbiAMP2ILjqC2phWw:
+  about: New Kingston, St Andrew (placed by GPS, 0.8 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.0061
+  - -76.79303
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1Xws2m0yLlFNRjgJtCUfYqNcij15rvcAr:
   about: No GPS point in this photo
   credit: ''
@@ -2136,6 +3223,15 @@ drive:1YdLGbcAxiHPUQ4n4uKhIH8ferAzyHbvH:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1YdqXzv_nlZBVv540QBh7pO43cJsW75IB:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1YvSHPg7m0HTJLZ2tigcW3WjKPybhiSyT:
   about: No GPS point in this photo
   credit: ''
@@ -2208,6 +3304,15 @@ drive:1_7k1dZd6u_a6fyopD7WQPIu3Gpb-vFAT:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1_JxoHZ3rhH9JLG5hNQMcobQbxWuARigu:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1_b9Csfz4tYR9U8zd6BDywDtDiWP8LHCS:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -2233,6 +3338,22 @@ drive:1_dz6wjdhFZsBlsZfL3A_mab06Uibknzd:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1aJg1fWjsv7IC_9gzShxznuVUaMag2fKD:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05455
+  - -76.82584
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1aK9bBIv7prNE7TiT0Dxjkol33pIWSgIb:
   about: No GPS point in this photo
   credit: ''
@@ -2251,6 +3372,15 @@ drive:1aLlSs7bIA25p-KBD8OQoDnenMBGiTtg2:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1aSwm7VmKlsU2qwsh6nmKw9ou3H9TViHJ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1a_KHj9jMS-2EjhZy6rf-237elworT95K:
   about: No GPS point in this photo
   credit: ''
@@ -2260,6 +3390,22 @@ drive:1a_KHj9jMS-2EjhZy6rf-237elworT95K:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1apLxhODEEqCRmSiXWYvvVY5OxH4AGrsk:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46856
+  - -77.29931
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
 drive:1ar0qYNHB08TtOvY6BVdY2Wod1fFqkRTO:
   about: No GPS point in this photo
   credit: ''
@@ -2522,6 +3668,15 @@ drive:1dlYQSRvv-ZlI7mhccb5-ch8CgfTL8q2c:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1doV8t9WvvcGaaVGzYSfJfAxbq97s--Ls:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1e2PR20I3YoA83x40apnFXPf0nh-djHk1:
   about: No GPS point in this photo
   credit: ''
@@ -2716,11 +3871,54 @@ drive:1g4vjPceE9NSMe81h9bm_JtnRxueoDLDk:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1gDSIOQbGDl1OqXXR1SBncYWA1cqPmfFZ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1gI0QpnJ-v8awYSudRvz4lg2U3IQTWftU:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1gOiQOiDHBAIp3nGdmmB8fjLZDFTO3VfZ:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49817
+  - -77.91769
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:1gU0v_SqtPJfIu7B3kPDw20NMaT59afjf:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1gdzD1Kmhhvo-Eb3ANKfNv0IRfriWnkFB:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -2744,6 +3942,24 @@ drive:1gvzqWUR84uPLm_vh-r5h_PWLmbz-QIiB:
   quality: 3
   series: unplaced
 drive:1h1jxjYmHOK-Q_-8GW6Pek9I7YHw4UoNA:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1h5YmRecCbav4c6YcaymnM8YA_RGVHuQX:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1h9wBSx3VwaP5tnLYNYN8zXz-VH5lKLex:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -2788,6 +4004,22 @@ drive:1hVXlcsrCkzSS_F3aqXWQLCibgICxli5O:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1hXVypeQBYTb6wauCf5byBq-OikLTLIpW:
+  about: Mandeville, Manchester (placed by GPS, 5.6 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.06378
+  - -77.45326
+  kind: scenery
+  orientation: landscape
+  parish: Manchester
+  people: false
+  place: Mandeville
+  plate_visible: false
+  quality: 4
+  series: own-mandeville-202403
 drive:1hqWMHjnJDZILmC-hnA9A01Wkbq5gkuBB:
   about: No GPS point in this photo
   credit: ''
@@ -2796,6 +4028,40 @@ drive:1hqWMHjnJDZILmC-hnA9A01Wkbq5gkuBB:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1hvECVQ6HgLcMfgf0DM8aXJJESb6bsegG:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49005
+  - -77.92392
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:1iAUBEkR4K1vKa7su73PfnZ0UriBZi2i6:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1iMeKTNH_oVvfP2YWasa_qlN08CwGjwAU:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1iPGF4FCPR-l9-8UrBqULgUi5KncXDxPA:
   about: No GPS point in this photo
@@ -2815,6 +4081,15 @@ drive:1iWeVCgEaA1TdvYwSW4VnpCwHjDhtebWv:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1ie5skcvaarm59x9LuPoH4v1WbzwFk0EF:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1j0UgOL8xc150S_Mj2ZVArq4aWuTnbKUm:
   about: No GPS point in this photo
   credit: ''
@@ -2823,6 +4098,36 @@ drive:1j0UgOL8xc150S_Mj2ZVArq4aWuTnbKUm:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:1jCiMjzzTotOF2IzjufX_t51pfoSUyz_v:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1jN_-GE_HxdjDLJBSFIF2ysocN20yTrx-:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1jR5YUK991tm8nIArY4dthxn5G_nXHUj7:
+  about: In Jamaica but not near a known place (18.185, -77.040)
+  credit: ''
+  gps:
+  - 18.18509
+  - -77.03975
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:1jdAW8uGDMG5TuVfvt7L57C3JMtbttv7z:
   about: No GPS point in this photo
@@ -2847,6 +4152,42 @@ drive:1k1nB-wEa7pmjhsZep9uNC9DVOS1kkCDV:
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1k2-UV5uvcwPd3b_nY99dpYa74YCig9kD:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1k5Wk78yqKE1cmvF0UCncTbvBm4J4277-:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1k9minrQvJ0n6cG20Hluxi0iSR2iB8D9P:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1kJh8u7MzCxay7Mo9HRKHb1OBhW3hNm0y:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 4
@@ -2896,6 +4237,15 @@ drive:1knZpkH8-jvChGcsFq4bGSGydAZVziqIm:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1kpRtNXBiaB1D5jJ0Y0GnqfANPCd9OZFN:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1kqkUwcGZbNwVBCteyrwpaqQX70_vcWNn:
   about: No GPS point in this photo
   credit: ''
@@ -2913,6 +4263,15 @@ drive:1kssOi6IDGqRycqW3PJturcaXYWN6aViX:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1kuuP-O5yrRVzU9dPi_MaX6BdkbMeUbLU:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1l1ruzkXvnNsZ4C1tCU4tT_9C5EtH5nLL:
   about: No GPS point in this photo
@@ -2950,6 +4309,15 @@ drive:1lAs7JbbWKrS9rAg9j5tyUGok7hGZsILX:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1lWo56nSfI-bu03rUKy5d8Fwq147aUW2Y:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1lZmNGiYPtBjiZcN2-tJjriAXCHkQcKj0:
   about: No GPS point in this photo
   credit: ''
@@ -2958,6 +4326,15 @@ drive:1lZmNGiYPtBjiZcN2-tJjriAXCHkQcKj0:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:1lgi2WZGnKWo5zbAF-lK_j72FiDT7Nn82:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:1lhUHW6wHOBDbxcIu4WFBXmrEi_ju895R:
   about: No GPS point in this photo
@@ -2977,6 +4354,15 @@ drive:1lllOCCsixt7-gqz0HIKQGKwPeGjYQPNr:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1lwE5PZfS5DKlQNVrblROKUwMS1vzlXmI:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1m1tSguA9NQ-ADGmbc3ezg0yIHBi-LVuB:
   about: No GPS point in this photo
   credit: ''
@@ -2995,6 +4381,15 @@ drive:1m98-EkPUOhk-ysmd6pTUOwHonnYtlijN:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1mTnpwyAhcSgJOW65QEZNLxz6FbgG0LBl:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1mZnoc0yyQ5v8JOxC2fZ1-qCtGZ3g1YYU:
   about: No GPS point in this photo
   credit: ''
@@ -3003,6 +4398,15 @@ drive:1mZnoc0yyQ5v8JOxC2fZ1-qCtGZ3g1YYU:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1miEq8TwhMy_RpIlnilbkB2--I5Tsx5KE:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1mvgu_xabs5RYrhC02r7OHcx8YWLKBJbS:
   about: Runaway Bay, St Ann (placed by GPS, 3.4 km away) - own photo
@@ -3054,11 +4458,29 @@ drive:1nB9h199EuKWqsP7_EqzUHqaawts6YmuZ:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1nB9q8gF5fBXZTuSADfcuV3ADGxhvOvz4:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1nDXa1WLdjhQ6KiiRXMso5F0GxgM63uPt:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1nMuf8IJga9W559dmKaCM_mxVrKQ5lpOj:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 3
@@ -3072,11 +4494,45 @@ drive:1nNGD7nCCVblb51Wxu_08kTtw2U0AojSl:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1nSsuvp57qVEqBsRPhB6M8vffcRHDHuzm:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49815
+  - -77.9183
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:1nTp5rSxXQHq1Cfez0U4p22-ChSJCmbEG:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1nWTwuGZMAGk8wck3-36CiRjfSHM3nuUp:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1nXLQG8lmgFclKRYKan-F4RbOqgv1OMEg:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -3113,6 +4569,15 @@ drive:1nlKT8alR-xOrwb5ZBvlgm0Tsgz5z89Ea:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1nnLu8tuP0icR8XA8fUbEX4qv85ikKRMz:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1nvVMR5i2E71aTQR_J1uKIw9apxMyTPF_:
   about: No GPS point in this photo
   credit: ''
@@ -3140,6 +4605,49 @@ drive:1o-GipIzjVJL45RLKMo-CRERJUsQvcGFZ:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1o2fTuKY6QL4YsF4QroLMiWpV2xB83crv:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1o7DVk1tN9mMvHp4p-MLlLZcAfcUcblYq:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1oBumXXG2-O7J--OZ2XKB5kF7WbapsTC1:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1oCI--VV8kyWxB0_74ruoSPgbI7y9HYqs:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05441
+  - -76.82585
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1oN7pSc1uxAhGBE6qcuqYH76QbWO8DeC1:
   about: No GPS point in this photo
   credit: ''
@@ -3185,6 +4693,24 @@ drive:1ohvhGra7orwufByp0OejZWq8FqY3dp-l:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1oitYoVw5-EAQHolsgER83ReyqiQhsgrK:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1okhvLzclFAQrX9rq1QBkdUTgzjRf6QyT:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1ooxE11mKkBhpA7Z-qlMHtuCqCqG3MNKr:
   about: No GPS point in this photo
   credit: ''
@@ -3203,6 +4729,15 @@ drive:1oq5VslnKo1OfIStcr44QktZ1b1cnprOc:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1otNopBEMfXRPeWZkiN4n_ytTl69lfFsz:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1otZQ0E-MqkTIUjJTQc4600q5_3raIhlF:
   about: No GPS point in this photo
   credit: ''
@@ -3211,6 +4746,15 @@ drive:1otZQ0E-MqkTIUjJTQc4600q5_3raIhlF:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1p9BrtwK80rou7Gf6_sLRFIFmHlEAHpX3:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1pLHvFTHSB0lI7turZAwQunglDyPQZzJ5:
   about: No GPS point in this photo
@@ -3293,6 +4837,22 @@ drive:1qHGD5MCtg4xcTg4_0x15bPop80JEHADq:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1qHOWQZTm6Z58JIChAOLrC_4tRNXNfJEV:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48997
+  - -77.92406
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:1qI0fotf2OktM8QUOxRo03UevWRmOkQ9E:
   about: No GPS point in this photo
   credit: ''
@@ -3329,6 +4889,31 @@ drive:1qQoswq-k26JoWKqttjbKqifHuLCK6abW:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1qgFasp_mLqLD_lM8h4ZfzJsA1_FmcYs5:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1qiOVV7CU523EkyEsgLlTbXoH1mw8FFPh:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05454
+  - -76.82584
+  kind: scenery
+  orientation: landscape
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1qo8-rZ7DWS5ubA2Pom1rpIWR5119nxSv:
   about: No GPS point in this photo
   credit: ''
@@ -3343,6 +4928,15 @@ drive:1qw-e1whJCG1BiEozBf0GGETJEnRRl1_5:
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1r8qGvpTmMEfuyPAZFTO4BSQMn2LCaMLZ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -3390,6 +4984,15 @@ drive:1roghMLbs5i_buzdMMBV_cPz4g4iwBldW:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1rqV-Yp3JA5JMPoPrTCr5hgQ0ko9NVJ4o:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1rx807YWBXzJ1spp3spuDpJC9Ei8dgrcJ:
   about: No GPS point in this photo
   credit: ''
@@ -3408,6 +5011,22 @@ drive:1s3fUwd7CNmuYgs35nBKPsMEWXcZxdqKQ:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1sB6D_9mQMxY-DQjmR7CoOVf4MZHxzkgH:
+  about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.05453
+  - -76.82583
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: New Kingston
+  plate_visible: false
+  quality: 4
+  series: own-new-kingston-202403
 drive:1sB7-zWfC8g8eCOG0znyWaIbTPTzkvCGx:
   about: No GPS point in this photo
   credit: ''
@@ -3416,6 +5035,15 @@ drive:1sB7-zWfC8g8eCOG0znyWaIbTPTzkvCGx:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1sDj4HGDJxQghuxB1yX394QoyU8wFT9sa:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1sE7yp9n8YFbJOKtnYBWEm6PTbdFMpdFy:
   about: No GPS point in this photo
@@ -3436,6 +5064,15 @@ drive:1sRSox2Q400xoanYIWYBCru5YvLw_zQ9b:
   quality: 3
   series: unplaced
 drive:1sS4YlPfoeY8qzN-vWgDxHSKPKAEgOQj6:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1sgamrXIolC7I0Aow0wHwKUvtByUEIK3O:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -3480,6 +5117,15 @@ drive:1t2GP8KP3l3vvlc3Ikn_FhyZiW5Hy6SRp:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1t3ybpETt_81kp2-D7Fe8yrrZ9LF9jsar:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1t7xVWK7XTvlSUVcwKduoVt6SPuuyzL2o:
   about: No GPS point in this photo
   credit: ''
@@ -3488,6 +5134,15 @@ drive:1t7xVWK7XTvlSUVcwKduoVt6SPuuyzL2o:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1tIjV6iIYsUC3ER5OHUcru2j_-luzrk7p:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1tN15Vrtmn2yxZDpUNsHq8kvoPdAsXbUb:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
@@ -3505,6 +5160,15 @@ drive:1tN15Vrtmn2yxZDpUNsHq8kvoPdAsXbUb:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1tPBtN9z2wd9BgPuWEKwp4NCwiSmJ_Cnc:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1tPLcmrnvYUG3FH3o22f9C0uN92YcWNEJ:
   about: No GPS point in this photo
   credit: ''
@@ -3523,11 +5187,29 @@ drive:1tQUMRwHI-J5cLeJ_5OisbvS6Aj6cvdE7:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1tbFLpf5uFvz0_qvE9Cq-Cj9q4Ri6Dj8K:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1tfy0ZaJ6BoDk5R00petyLrSCHgYjJpqV:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1tpfVGZkFAnERkUsALoDQ-4A2mTHmkPIw:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -3541,6 +5223,22 @@ drive:1u-yQUiohrxj7EzIGQpmFhLvCj-RWkR1B:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1u3O4vUhUB7D1ygw3wPZvXnDLVrlpow0Z:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46856
+  - -77.29933
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
 drive:1u4dG4tjr2WPaITmXNNwVtTuPA5yzakV6:
   about: No GPS point in this photo
   credit: ''
@@ -3584,6 +5282,15 @@ drive:1uJsGZiSUq5Squdau-vQZEtpcMmDr7fXS:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1uKK_1pj4o4pj4vAmaaRN9S6Qh5-vWvTh:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
 drive:1uLco_L3nf3OiJhw4ZiHqgB7ZxtVwsfBD:
   about: No GPS point in this photo
   credit: ''
@@ -3601,6 +5308,58 @@ drive:1uQ3eIiZcV6gXlLnN3eBGgeHQb2i7bYoU:
   people: false
   plate_visible: false
   quality: 3
+  series: unplaced
+drive:1ucPD89c_pkcjS2coj2TjbmssdW9waGDY:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1ue9dj3TxP52BflkLaCl_7VPLT7fFPdxA:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1uePe225NaQRrZ4MJHKDdQ5zaWN-eRz0c:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.49005
+  - -77.92392
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
+drive:1ui5iZAlxuzOYygEgQYUGwMhjbhrCpCcQ:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1uqI1PV-umSvGxAmTrAxG_whyjECTgC-v:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
   series: unplaced
 drive:1uxAA5lgdqtgxig9d8xzeBUuOc48w1DU5:
   about: No GPS point in this photo
@@ -3629,6 +5388,22 @@ drive:1v0P0Bi4NNpOOKBWU4Wm22CnSvTaHGfhO:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1vLxptR2gPUKg6k4d2HH5xPNLAXl_tMk-:
+  about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.46857
+  - -77.29929
+  kind: scenery
+  orientation: portrait
+  parish: St Ann
+  people: false
+  place: Salem, St Ann
+  plate_visible: false
+  quality: 4
+  series: own-salem-st-ann-202403
 drive:1vRc3Si5eMOGWP9eCSoaS88S-d1A9qzTI:
   about: No GPS point in this photo
   credit: ''
@@ -3638,6 +5413,40 @@ drive:1vRc3Si5eMOGWP9eCSoaS88S-d1A9qzTI:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1vaKG7ievTD-i7FPTj6jkR9xDpLEKMOAX:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1vhTZpff2Ztmy4W7Dwx41eKuHhYAQf4ik:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1vqgV-_AxLEqhkg76HNDR0AfpQESEXTA9:
+  about: Mandeville, Manchester (placed by GPS, 13.1 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 17.98637
+  - -77.38957
+  kind: scenery
+  orientation: portrait
+  parish: Manchester
+  people: false
+  place: Mandeville
+  plate_visible: false
+  quality: 4
+  series: own-mandeville-202403
 drive:1vsfk-m4t7BJ0i3o35FIOaEBdLOn_DdQS:
   about: No GPS point in this photo
   credit: ''
@@ -3647,6 +5456,22 @@ drive:1vsfk-m4t7BJ0i3o35FIOaEBdLOn_DdQS:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1wBURO2r5HYLOAFDsUQEQAJWBt_BCbvwx:
+  about: Blue Mountains foothills, St Andrew (placed by GPS, 2.6 km away) - own photo
+  auto: true
+  coastal: false
+  credit: ''
+  gps:
+  - 18.03277
+  - -76.74399
+  kind: scenery
+  orientation: portrait
+  parish: St Andrew
+  people: false
+  place: Blue Mountains foothills
+  plate_visible: false
+  quality: 4
+  series: own-blue-mountains-foothills-202403
 drive:1wWkBp8XAJ6cxC8JrLMEZk6K4lovBLI0M:
   about: No GPS point in this photo
   credit: ''
@@ -3661,6 +5486,15 @@ drive:1we-4VRIdq6NmU1KpX47yk0A9NzIxKCdA:
   credit: ''
   kind: unplaced
   orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1wjmiZeYZTf8P9ufeU0NV6aDvTK-2Sbd8:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
   people: false
   plate_visible: false
   quality: 3
@@ -3692,6 +5526,15 @@ drive:1wqAJiMgJ_1Jja0_nicEDKSUIrFbjwGE3:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1wwihPHyV8r25mWpi-bdKBT46sMf-jTS9:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1x0G_O0DKS-KGT45e6-5-2kwqRCQrBySN:
   about: No GPS point in this photo
   credit: ''
@@ -3718,6 +5561,24 @@ drive:1x6SLg3wHXGftuspYS_XPuVlU4INV_xyh:
   people: false
   plate_visible: false
   quality: 4
+  series: unplaced
+drive:1xGwqA1LUvyOJOr64QDIpa-nhbsulgLTk:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1xIFII5reLgACH5xRFq8A_B5tJ75lXOeE:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
   series: unplaced
 drive:1xSoXRwSILe5rvVoW-4hi6oyCT1HMLbRY:
   about: No GPS point in this photo
@@ -3764,6 +5625,22 @@ drive:1xriYAAP2Iydpd4YVX3qmi7wMR50ahpRX:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1xshGrgVkxx1EBjowbJthqo26giT4rVkB:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.4981
+  - -77.9184
+  kind: scenery
+  orientation: portrait
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:1xyQfaNDA_znA6mwO8FxVvqL_S59yjE55:
   about: No GPS point in this photo
   credit: ''
@@ -3774,6 +5651,15 @@ drive:1xyQfaNDA_znA6mwO8FxVvqL_S59yjE55:
   quality: 4
   series: unplaced
 drive:1y22Uz1Sz7DNlqOv9UbX7Xc2TUHdyYdub:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1y51w8XGuokFhTrZ4WY1yXoxfcstl3Sqd:
   about: No GPS point in this photo
   credit: ''
   kind: unplaced
@@ -3879,6 +5765,15 @@ drive:1yueb-BSImldAkh8dwJaoIBqn9eO52Kgy:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1z01QNt4mb0W2G5OaUHXcZg6k0v8vsVub:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1z0WCVyKUYMxSQbJBCE8HgOsZHcxf-jYE:
   about: No GPS point in this photo
   credit: ''
@@ -3893,6 +5788,15 @@ drive:1z1g3FZMQbpWq8SWcY9fAJHKXIixfrvvP:
   credit: ''
   kind: unplaced
   orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1z6VUQrHrcaJkzg6WpUjPX4CH4uLZSNN7:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
   people: false
   plate_visible: false
   quality: 3
@@ -3924,6 +5828,31 @@ drive:1zTPWXUNcHw8f4DuberbarWc7I7mb4A6e:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1zTcNxbF5ExeU1DGmibixd1DJhsBxSiCX:
+  about: No GPS point in this photo
+  credit: ''
+  kind: unplaced
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1zaF4gTPIFUZGdeOsnpBgWWGY4P4_zFnY:
+  about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
+  auto: true
+  coastal: true
+  credit: ''
+  gps:
+  - 18.48809
+  - -77.92806
+  kind: scenery
+  orientation: landscape
+  parish: St James
+  people: false
+  place: Montego Bay Hip Strip
+  plate_visible: false
+  quality: 4
+  series: own-montego-bay-hip-strip-202403
 drive:1zn5dk-7HYiv33h2eX9ylzvpuEPX1UkWc:
   about: No GPS point in this photo
   credit: ''
