@@ -93,8 +93,8 @@ function fmtDay(d,l){const x=new Date(d+"T12:00:00");return x.toLocaleDateString
 function fmtTime(s){const m=s.match(/T(\d\d):(\d\d)/);let h=+m[1];return `${h%12||12}:${m[2]} ${h<12?"AM":"PM"}`}
 function card(p){
   const s=status(p),d=DEC[p.id],cap=(d&&d.caption)||p.caption,locked=["published","skipped"].includes(s),u=PUB[p.id]||{};
-  return `<div class="card ${s}" id="c-${p.id}"><div class="imgs">${p.images.map(i=>`<img loading="lazy" src="${i}" alt="${esc(p.alt)}">`).join("")}</div>
-  <div class="meta"><span class="chip">${p.type.replace("_"," ")}</span><span>${fmtTime(p.slot)}</span>${p.images.length>1?`<span>${p.images.length} slides</span>`:""}<span class="st ${s}">${s}</span></div>
+  return `<div class="card ${s}" id="c-${p.id}">${p.reel?`<div style="padding:8px 12px 0"><div class="chip" style="background:#c1272d;color:#fff;display:inline-block;margin-bottom:6px">🎬 REEL · ${esc(p.reel_kind||"")}</div><video src="${p.reel}" controls playsinline preload="metadata" style="width:100%;max-height:70vh;border-radius:10px;background:#000"></video><div style="font-size:12px;opacity:.7;padding:4px 0">This posts to Instagram as a Reel. The slides below are the same story.</div></div>`:""}<div class="imgs">${p.images.map(i=>`<img loading="lazy" src="${i}" alt="${esc(p.alt)}">`).join("")}</div>
+  <div class="meta"><span class="chip">${p.type.replace("_"," ")}</span>${p.reel?`<span class="chip" style="background:#c1272d;color:#fff">REEL</span>`:""}<span>${fmtTime(p.slot)}</span>${p.images.length>1?`<span>${p.images.length} slides</span>`:""}<span class="st ${s}">${s}</span></div>
   ${p.location&&p.location.name?`<div class="flags" style="color:#9fd6b0"><div style="list-style:none">📍 Location tag: ${esc(p.location.name)}${p.location.id?" (ID "+esc(p.location.id)+")":" (no ID: will post without a tag)"}</div></div>`:""}
   ${(p.flags||[]).length?`<div class="flags">${p.flags.map(f=>`<div>${esc(f)}</div>`).join("")}</div>`:""}
   <textarea id="t-${p.id}" ${locked?"disabled":""}>${esc(cap)}</textarea><div class="cnt" id="n-${p.id}"></div>
