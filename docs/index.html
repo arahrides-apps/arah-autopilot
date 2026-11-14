@@ -23,7 +23,7 @@ main{max-width:1100px;margin:0 auto;padding:16px}
 .meta{padding:10px 12px 0;display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mut)}
 .chip{background:var(--y);color:#1A1F1C;border-radius:6px;padding:2px 8px;font-weight:700;font-size:12px}
 .st{margin-left:auto;font-weight:700}.st.approved,.st.published{color:var(--g)}.st.rejected,.st.skipped,.st.failed{color:var(--bad)}
-.flags{padding:6px 12px 0;font-size:13px;color:#7a4b00}.flags div:before{content:"⚠ "}
+.flags{padding:6px 12px 0;font-size:13px;color:#7a4b00}.flags div:before{content:"⚠ "}.flags div[style*="list-style"]:before{content:""}
 textarea{margin:8px 12px 0;width:calc(100% - 24px);min-height:130px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:14px;background:transparent;color:inherit;resize:vertical}
 .cnt{padding:2px 12px;font-size:12px;color:var(--mut)}.cnt.bad{color:var(--bad);font-weight:700}
 .act{display:flex;gap:8px;padding:10px 12px 12px;margin-top:auto}.act .btn{flex:1}
@@ -95,6 +95,7 @@ function card(p){
   const s=status(p),d=DEC[p.id],cap=(d&&d.caption)||p.caption,locked=["published","skipped"].includes(s),u=PUB[p.id]||{};
   return `<div class="card ${s}" id="c-${p.id}"><div class="imgs">${p.images.map(i=>`<img loading="lazy" src="${i}" alt="${esc(p.alt)}">`).join("")}</div>
   <div class="meta"><span class="chip">${p.type.replace("_"," ")}</span><span>${fmtTime(p.slot)}</span>${p.images.length>1?`<span>${p.images.length} slides</span>`:""}<span class="st ${s}">${s}</span></div>
+  ${p.location&&p.location.name?`<div class="flags" style="color:#9fd6b0"><div style="list-style:none">📍 Location tag: ${esc(p.location.name)}${p.location.id?" (ID "+esc(p.location.id)+")":" (no ID: will post without a tag)"}</div></div>`:""}
   ${(p.flags||[]).length?`<div class="flags">${p.flags.map(f=>`<div>${esc(f)}</div>`).join("")}</div>`:""}
   <textarea id="t-${p.id}" ${locked?"disabled":""}>${esc(cap)}</textarea><div class="cnt" id="n-${p.id}"></div>
   ${u.permalink?`<div class="cnt"><a href="${u.permalink}" target="_blank">View on Instagram</a></div>`:""}${u.note&&!locked?`<div class="cnt bad">${esc(u.note)}</div>`:""}
