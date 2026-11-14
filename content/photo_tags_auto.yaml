@@ -10493,6 +10493,105 @@ local:arah_b6_9_toyota-corolla-silver:
   name: arah_b6_9_toyota-corolla-silver
   web: ''
   words: Arah Rides rental vehicle
+local:jamaica_cup_01_team_group_on_court:
+  also: drinks
+  cats:
+  - people
+  confidence: 0.95
+  label: people
+  name: jamaica_cup_01_team_group_on_court
+  web: ''
+  words: Jamaica people friends family travellers
+local:jamaica_cup_02_kids_clinic_ball_balance:
+  also: attraction
+  cats: []
+  confidence: 0.41
+  label: null
+  name: jamaica_cup_02_kids_clinic_ball_balance
+  web: ''
+  words: ''
+local:jamaica_cup_03_doubles_handshake_net:
+  also: attraction
+  cats: []
+  confidence: 0.32
+  label: null
+  name: jamaica_cup_03_doubles_handshake_net
+  web: ''
+  words: ''
+local:jamaica_cup_04_player_smiling_walk:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.73
+  label: drinks
+  name: jamaica_cup_04_player_smiling_walk
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+local:jamaica_cup_05_serve_ready_toss:
+  also: jamaican patty
+  cats:
+  - drinks
+  - food
+  confidence: 0.56
+  label: drinks
+  name: jamaica_cup_05_serve_ready_toss
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+local:jamaica_cup_06_doubles_serve_and_ready:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.61
+  label: attraction
+  name: jamaica_cup_06_doubles_serve_and_ready
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:jamaica_cup_07_ready_position_visor:
+  also: not usable
+  cats:
+  - drinks
+  - food
+  confidence: 0.52
+  label: drinks
+  name: jamaica_cup_07_ready_position_visor
+  web: ''
+  words: Jamaica drinks rum punch coconut Red Stripe
+local:jamaica_cup_08_two_players_walking_courts:
+  also: not usable
+  cats:
+  - attractions
+  confidence: 0.59
+  label: attraction
+  name: jamaica_cup_08_two_players_walking_courts
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:jamaica_cup_09_serve_toss_overhead:
+  also: bob marley
+  cats: []
+  confidence: 0.56
+  label: not usable
+  name: jamaica_cup_09_serve_toss_overhead
+  web: ''
+  words: not usable
+local:jamaica_cup_10_forehand_lunge_clubhouse:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.51
+  label: attraction
+  name: jamaica_cup_10_forehand_lunge_clubhouse
+  web: ''
+  words: Jamaica attraction tour great house zipline
+local:jamaica_cup_11_doubles_at_net_action:
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.66
+  label: attraction
+  name: jamaica_cup_11_doubles_at_net_action
+  web: ''
+  words: Jamaica attraction tour great house zipline
 local:tennis_court_blue_bougainvillea:
   also: resort
   cats:

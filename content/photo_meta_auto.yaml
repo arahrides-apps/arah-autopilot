@@ -13688,3 +13688,178 @@ drive:1zpiirX3hzWMdEhGtG0pNvCN6xzhD7JVt:
   quality: 4
   runner_up: attraction
   series: own-ai-blue-mountains
+local:jamaica_cup_01_team_group_on_court:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    95% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-people
+local:jamaica_cup_02_kids_clinic_ball_balance:
+  about: No GPS point in this photo
+  confidence: 0.41
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+local:jamaica_cup_03_doubles_handshake_net:
+  about: No GPS point in this photo
+  confidence: 0.32
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+local:jamaica_cup_04_player_smiling_walk:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-drinks
+local:jamaica_cup_05_serve_ready_toss:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-drinks
+local:jamaica_cup_06_doubles_serve_and_ready:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 61% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
+local:jamaica_cup_07_ready_position_visor:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 52% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.52
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-drinks
+local:jamaica_cup_08_two_players_walking_courts:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 59% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.59
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-attraction
+local:jamaica_cup_09_serve_toss_overhead:
+  about: 'Looks like a screenshot, document or selfie: not used'
+  ai: true
+  confidence: 0.56
+  credit: ''
+  kind: unplaced
+  label: not usable
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+local:jamaica_cup_10_forehand_lunge_clubhouse:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 51% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.51
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
+local:jamaica_cup_11_doubles_at_net_action:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 66% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.66
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
