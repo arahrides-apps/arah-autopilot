@@ -16,6 +16,28 @@ drive:1-1H97CTzaT1n8BrmGEyzCDfdmuMwocuZ:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1-2pv5qCwg-36bOslN2cFZyrmjGwa-8-u:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 86% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.86
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
 drive:1-5-DTJb3g-6xzEaBUV2mUsRdSw7m8198:
   about: Jamaica fruit market mango pineapple ackee food culture food (recognised
     from the picture, 75% sure) - own photo
@@ -114,6 +136,23 @@ drive:1-tNFN49al1e-x55NNTGvWHsWLJ9dQGWi:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1-u8b_1If8ynbdAaSaTt6nR0HHQtCuAry:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    51% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.51
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-people
 drive:1-wJJp8zb4-sSQ4IPkGg6vxblfWlH5nHE:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 75% sure) - own photo
@@ -231,6 +270,36 @@ drive:10k22Ww-ZY0roXO34WoG6fKmYmfkabXIs:
   quality: 4
   runner_up: market
   series: own-ai-fruit
+drive:10nn2d9h04T5lXk54glmXVMnqeFzMhKQL:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 67% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.67
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-blue-mountains
+drive:11-wNG2uGp0IfyL4iLXLoUlLyaWbhurQQ:
+  about: No GPS point in this photo
+  confidence: 0.32
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:111bH0yS2YPdHtewkCaKbQ3j4I9T_n7WS:
   about: No GPS point in this photo
   confidence: 0.38
@@ -287,6 +356,40 @@ drive:11IWRJ-4IrGhEHqelgAu5Lfhwwi2rGhF7:
   plate_visible: false
   quality: 3
   series: jtb-dunnsriverfalls
+drive:11JOSLCKBRcHXG9uYat59NKLEH0ccinTa:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 61% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jerk-chicken
+drive:11NEH88TWQw9wPrr_jKdIcKzXjePGRuc6:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    52% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.52
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-people
 drive:11OscxVTDXe8kD5oS-s6dPiq6ueSGGy8F:
   about: Arah Rides rental vehicle cars (recognised from the picture, 87% sure) -
     own photo
@@ -337,6 +440,23 @@ drive:11QteJX2iNh9ycPR6knaV_TOWWkG7eW_m:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:11cnLZIYyI_ZA0cfLxo2s2keD1EREEnQ8:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: holland bamboo
+  series: own-ai-attraction
 drive:11foKinmMXGDrpN9Q0XGSn6gEIMWx3MwX:
   about: Jamaica fruit market mango pineapple ackee food culture food (recognised
     from the picture, 49% sure) - own photo
@@ -371,6 +491,24 @@ drive:11ofJJHwa2JSXdW2LTZUhJwq3YIPKuQV9:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:11ucDBT07S14KBOhTaS8iy55scL1Jf6Co:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 84% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.84
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-drinks
 drive:126Km03Kk6OYxrI_FzRTwGnM7aIYNKhVi:
   about: Arah Rides rental vehicle cars (recognised from the picture, 86% sure) -
     own photo
@@ -438,6 +576,24 @@ drive:12EFRwb-qc-WWrrxj4am4bbNHU5P8FCwA:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:12GV2nqsiGZfP8e-dc4QY892J1ozqoe3k:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-drinks
 drive:12LPr_0MwFwAWlT8HYWd39be48M896GCN:
   about: Jamaica patty food beef patty coco bread food (recognised from the picture,
     54% sure) - own photo
@@ -455,6 +611,23 @@ drive:12LPr_0MwFwAWlT8HYWd39be48M896GCN:
   quality: 4
   runner_up: rental car
   series: own-ai-jamaican-patty
+drive:12MsitH-Y4yebl8_AneByIcuDYsZHP4oX:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: dunn's river falls
+  series: own-ai-attraction
 drive:12O19RhYhWp32ugkVyJnkNBjFibbyafU3:
   about: Runaway Bay, St Ann (placed by GPS, 7.7 km away) - own photo
   auto: true
@@ -471,6 +644,23 @@ drive:12O19RhYhWp32ugkVyJnkNBjFibbyafU3:
   plate_visible: false
   quality: 4
   series: own-runaway-bay-202505
+drive:12Ry94t-xMHaoClX1q9fEIEd0Kjz88xTC:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    78% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.78
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:12cZstmDMn77Di0qwBm1pqJsR22oa8M1d:
   about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
     (recognised from the picture, 100% sure) - own photo
@@ -494,6 +684,18 @@ drive:12cZstmDMn77Di0qwBm1pqJsR22oa8M1d:
   quality: 3
   runner_up: reggae
   series: own-ai-bob-marley
+drive:12f1bqw1JlUKpqRxrCg-KwkqPpbWVoMCh:
+  about: No GPS point in this photo
+  confidence: 0.45
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:12kQPq5HGn2O4JASr-mzGAj0W9Ce26Hw4:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -510,6 +712,18 @@ drive:12kQPq5HGn2O4JASr-mzGAj0W9Ce26Hw4:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:12mmPh3Csnk30D5h9F8a9JOojKkJzXDsj:
+  about: No GPS point in this photo
+  confidence: 0.4
+  credit: ''
+  guess: people
+  kind: unplaced
+  label: null
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:12t5xwFeQp9LhhUwgF1uJaSErgCmPbv05:
   about: Arah Rides rental vehicle cars (recognised from the picture, 79% sure) -
     own photo
@@ -561,6 +775,24 @@ drive:13AS8a8-W27DiMBFAMv1qZgUlygvSzRbh:
   quality: 4
   runner_up: drinks
   series: own-ai-people
+drive:13CmdImc3Xn7AQMUkME6E9eKxaq09-E77:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 61% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  runner_up: drinks
+  series: own-ai-beach
 drive:13EkvNYUSF3l07BzSrfmHRZkZpegy9FPv:
   about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
     from the picture, 53% sure) - own photo
@@ -603,6 +835,23 @@ drive:13MXB5nhdDbEoz8kl2vTa2MOARLJbJrqm:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:13Ps6ef-PoE0A8_cI2C-2tk_yokNpvFxg:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 74% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.74
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: blue mountains
+  series: own-ai-attraction
 drive:13PwAXIR1PEGgdQ0CPqjYzjON7lEJhKNP:
   about: No GPS point in this photo
   confidence: 0.41
@@ -615,6 +864,23 @@ drive:13PwAXIR1PEGgdQ0CPqjYzjON7lEJhKNP:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:13W2ZIsoMM3OcNToFP1Pn5gNx8w4EFfHR:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 96% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.96
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:13YwJUE7J4ddcBYaCg_4fISr5eT3HlTs9:
   about: Arah Rides rental vehicle cars (recognised from the picture, 89% sure) -
     own photo
@@ -655,6 +921,18 @@ drive:13vQBkm_tLtnFQF_2AssMq1TChrzM5uGO:
   confidence: 0.34
   credit: ''
   guess: sunrise
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:14CUhHfUOOQVKCspXthFR2ALSmh5zC_ZN:
+  about: No GPS point in this photo
+  confidence: 0.39
+  credit: ''
+  guess: drinks
   kind: unplaced
   label: null
   orientation: portrait
@@ -762,6 +1040,76 @@ drive:14ZLdZWxN_S1LCqSsz2z-YkriVFRhrbwZ:
   quality: 3
   runner_up: attraction
   series: own-ai-beach
+drive:14bf1GYLIm8DYfkimnd2lXxk0LEYLSXOp:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
+drive:14biM6fFU7p9hzYJ0R3G2ALcPjaM2jcg-:
+  about: Jamaica fruit market mango pineapple ackee food culture food (recognised
+    from the picture, 86% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - culture
+  - food
+  confidence: 0.86
+  credit: ''
+  kind: scenery
+  label: fruit
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: market
+  series: own-ai-fruit
+drive:14bmPY6Mz57D9KcHi-YTCWUKDCZMWPcZd:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 95% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
+drive:14jMZTi1zjrErpsuk64hkdV8ER2u3wE6a:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 61% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:14kSalz4I2nYjGRPF6l8we9Fr_eZE2FF8:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -912,6 +1260,25 @@ drive:15Pl9VwrTzF44sfgk_9Xl1QGgiN5PFyh4:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:15RN4Cijrder54dWA7Tx2MaZ97RXGYaBt:
+  about: Jamaica market craft culture city culture food (recognised from the picture,
+    85% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: market
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-market
 drive:15RXfaRzMz8GpRmUMCHwfLr7x9pZRe0EJ:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 99%
     sure) - own photo
@@ -929,6 +1296,23 @@ drive:15RXfaRzMz8GpRmUMCHwfLr7x9pZRe0EJ:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:15X60nIgjF7fUoDQzgmQXxNhJ5tetzY4K:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 95% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jerk-chicken
 drive:15Zr8coBuuZgfi2Qr6exAL3_dsDTXqSMK:
   about: Brand MontegoBay DoctorsCaveBeach (Montego Bay) - Jamaica Tourist Board photo
     (matches your labelled photo, 91% alike)
@@ -1002,6 +1386,23 @@ drive:15fvwi-_k4VRM1wng6t90qz7b0y7JIJrA:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:15gLFUCU2F2YzR8EdAEhSaahZc8jWXSva:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 47% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.47
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-attraction
 drive:15hBUr0IaWrDWxvsyQvbI24bCMIb5LgMk:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -1018,6 +1419,23 @@ drive:15hBUr0IaWrDWxvsyQvbI24bCMIb5LgMk:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:15oCcYBDCTvR9_9k3k4qqpw195RGll0J5:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 90% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.9
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:15w_fFExSHPiDQJi_oCZZLplCqoh1GU2R:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -1034,6 +1452,40 @@ drive:15w_fFExSHPiDQJi_oCZZLplCqoh1GU2R:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1613heBxMbdBByYEEs-oJCzofQv1n27a7:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 82% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.82
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-attraction
+drive:1625CBitZ5J10YxPVBl2zamIM0199bnB0:
+  about: Jamaica patty food beef patty coco bread food (recognised from the picture,
+    89% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.89
+  credit: ''
+  kind: scenery
+  label: jamaican patty
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jamaican-patty
 drive:1657q-MH4WrLfqFMJHzfDGH2wJ7n1D3gR:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 53% sure) - own photo
@@ -1152,6 +1604,41 @@ drive:16MugTiDXptVpBEUjNdj75YK1H3aFUNpl:
   quality: 3
   runner_up: beach
   series: own-ai-drinks
+drive:16NyE8-W9dBgjFr3DSs3ZEG3QHXmvrcvh:
+  about: No GPS point in this photo
+  confidence: 0.38
+  credit: ''
+  guess: negril cliffs
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:16Ojkwdc6sCulbtIjcboQVyX9NdUkzxhc:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 76% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.76
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-bob-marley
 drive:16kHsOzYJgj2pco_VRfrZ4iKHOYeYUVHd:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 45% sure) - own photo
@@ -1252,6 +1739,36 @@ drive:171ZSdJHcQ6Ws8PAC9S_nDW56p4xAIfne:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:175o0TgMjlKLrZwErjGcGkUBe_9Gc37kX:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
+drive:178YIrP03c2-UEAlVKTbpVtA58ixNDC2X:
+  about: No GPS point in this photo
+  confidence: 0.4
+  credit: ''
+  guess: beach
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:17AaMMTcI4D70F9waEUGGpL-CvJOA1Cli:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 96% sure) - own photo
@@ -1281,6 +1798,23 @@ drive:17BzcMhWO6iGcgKXSRF-ANOlM-E4d1yPJ:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:17CqrdGEqr1vKYlmWOIHJXl3wwgl1CJXM:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 68% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.68
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-attraction
 drive:17DoxePzl70WnbLvzZ2XcuqpL3G2hHUMf:
   about: No GPS point in this photo
   confidence: 0.37
@@ -1345,6 +1879,23 @@ drive:17MofgQK8i09u1VgiX-ukC4hNQn2fLe8u:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:17NUhQDSvwWrR7v7Nr8yk4b7Uz-U7gAPX:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 51% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.51
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunset
+  series: own-ai-attraction
 drive:17PbmT1IZ0kVgKBTADlxkHlYnVE8o8dES:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 69% sure) - own photo
@@ -1380,6 +1931,23 @@ drive:17XHsGp6bly4OdSlSC2Yg6a_GRErWpDJd:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:17_ayF9_-fUYldWNKc8LIMVHWAsA63OPv:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 84% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.84
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
 drive:17mLmmMTbglDDeP-teBpNlBP_n97OCMjU:
   about: Jamaica people friends family travellers people (recognised from the picture,
     70% sure) - own photo
@@ -1397,6 +1965,40 @@ drive:17mLmmMTbglDDeP-teBpNlBP_n97OCMjU:
   quality: 3
   runner_up: drinks
   series: own-ai-people
+drive:17n2BcQCaiHVX1373c5h-vprvD3SW4l1Y:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    85% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
+drive:17s16IIA7mWIT5dagvom2wS5_bozZJBeb:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 72% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.72
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
 drive:17tki2obwYtQLCOxZQRh4AfZoaZOu0MFt:
   about: Kingston Lime Cay Man Beach (Kingston) - Jamaica Tourist Board photo (matches
     your labelled photo, 91% alike)
@@ -1446,6 +2048,70 @@ drive:1879x4mRdW3OaMwOMh9H1BKQRsxzCb_6y:
   quality: 4
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:189HDd7RK4wPVPdwxgzAAXhce-kS9mNTK:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-attraction
+drive:18NZS50ermMDZfVOhege-MZktIxhH6Jhz:
+  about: No GPS point in this photo
+  confidence: 0.53
+  credit: ''
+  guess: jamaican patty
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:18ZeozVEmU4kBvTwWZ9782OSaXdmOrVo9:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 62% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 0.62
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-river-rafting
+drive:18dojhz_6f5UJ81gq8eeKua9EPY9UFVx5:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    60% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.6
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-resort
 drive:18jaXyUpie3EiwPjmpFIhr4uKsmL9EavT:
   about: Arah Rides rental vehicle cars (recognised from the picture, 91% sure) -
     own photo
@@ -1463,6 +2129,18 @@ drive:18jaXyUpie3EiwPjmpFIhr4uKsmL9EavT:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:18m_iZm37OJloTvoih3b5psWysGC4Dkyw:
+  about: No GPS point in this photo
+  confidence: 0.39
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:18oF5NtZqW6FNhbM9_kDklvaV3D3zCs6z:
   about: Jamaica jerk chicken food jerk food (recognised from the picture, 95% sure)
     - own photo
@@ -1560,6 +2238,23 @@ drive:19-u6ARbxNwdLb4z61ofReoLn4XULXivH:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:191QSLcr7pwwT7MQg9RxwHeHmdHapa09O:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 97% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jerk-chicken
 drive:19J_BovQKqa6-iqR9rRZtPA6-TqslVt-e:
   about: Jamaica patty food beef patty coco bread food (recognised from the picture,
     66% sure) - own photo
@@ -1661,6 +2356,24 @@ drive:19UT0ywRKxKgBdcJlMMrBzeuebZsXwKwD:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:19XcTf8tPbjQcvlKxr22lQNz5qhEMN_cl:
+  about: Jamaica sunset sea evening beach beach sunset (recognised from the picture,
+    67% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  - sunset
+  confidence: 0.67
+  credit: ''
+  kind: scenery
+  label: sunset
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunrise
+  series: own-ai-sunset
 drive:19YWr5ppXhbFb_tjqzbBjclkChg4mmlxc:
   about: Arah Rides rental vehicle cars (recognised from the picture, 63% sure) -
     own photo
@@ -1712,6 +2425,58 @@ drive:19hQKgErskVdzGqlD47MQpFg5a521VlpT:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:19mMcAcvVwhbY_cBpCItqkn4u_LoBNTg_:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    92% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
+drive:19sNxBg8QtQFdo7_QW3zpS4qBZNusd921:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 83% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.83
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
+drive:19uddLGJO-2AqxfH2v1Gx3iDP2GhoLJSM:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-waterfall
 drive:19yHcHqLgKPuxo4E3-hmOpgVxI0AygxrK:
   about: Jamaica people friends family travellers people (recognised from the picture,
     94% sure) - own photo
@@ -1797,6 +2562,18 @@ drive:1A8jayIKa_JrkCqnfXdfplu7GVfV4exXu:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1A95e5J1Oz7s2vcvjehukDuYCaoyHXeJS:
+  about: No GPS point in this photo
+  confidence: 0.38
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1AHm6bCDhb6XPoO41650quJBi3HhKEpgo:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 100%
     sure) - own photo
@@ -1880,6 +2657,18 @@ drive:1Ae-SYquZs3WUjz-i0wT2Oq8sUDUoqRXc:
   plate_visible: false
   quality: 4
   series: own-blue-mountains-foothills-202403
+drive:1AeGYXRMiaEL_zpv8oNtZaCxebCN9_sRA:
+  about: No GPS point in this photo
+  confidence: 0.36
+  credit: ''
+  guess: beach
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1Ai2YutOgi-Wp4twbyuwdsJ9fRTOJCgPH:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 71%
     sure) - own photo
@@ -1897,6 +2686,24 @@ drive:1Ai2YutOgi-Wp4twbyuwdsJ9fRTOJCgPH:
   quality: 3
   runner_up: people
   series: own-ai-road-trip
+drive:1AjQdEY0bxZegeAeTis6lkFZNSYiVwM6I:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 65% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 0.65
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-river-rafting
 drive:1AnRFYKbubgMvSB5tIrbdUq9bPPe7h5Wc:
   about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
     from the picture, 84% sure) - own photo
@@ -1957,6 +2764,33 @@ drive:1B5EWjC20nq6uBXTOJvJ67pdcR3qsLrUO:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1B8oE-lf06YbF1FY642Dle9LNi_d3MnEg:
+  about: No GPS point in this photo
+  confidence: 0.31
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1B9w2rNvbZ450Fn4z1jufRnHopBjEUvis:
+  about: FrenchmansCove (Frenchman's Cove, Port Antonio) - Jamaica Tourist Board photo
+    (matches your labelled photo, 92% alike)
+  ai: true
+  auto: true
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: matched
+  orientation: portrait
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 3
+  series: jtb-frenchmanscove
 drive:1BNXr445GNbfvA-0AVYXmSOgdoz5zY2kX:
   about: Kingston Lime Cay Boat (Kingston) - Jamaica Tourist Board photo (matches
     your labelled photo, 90% alike)
@@ -1991,6 +2825,24 @@ drive:1BPgpZ2S3BNNyhceSs5RZyW6vsPHjQWPB:
   quality: 3
   runner_up: fruit
   series: own-ai-market
+drive:1BUBu_URAnmZN7KkxeR3-gkGng1ffi2RG:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-waterfall
 drive:1BVDOQb0LdzbzrG0gdAocniva9dUbXo1W:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 69% sure) - own photo
@@ -2076,6 +2928,24 @@ drive:1BdL-tu2zUYUYKROhyEpr3Hc2Vz44fDUF:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1BgvqFwnkYiIIp2JLEO2zWORVGeiEOke3:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 79% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.79
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: holland bamboo
+  series: own-ai-blue-mountains
 drive:1BsP91hezbPQ12sOSJgcbFbfuiYPVDZ2g:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 92%
     sure) - own photo
@@ -2160,6 +3030,35 @@ drive:1CIUkYbVAIQ32YxfhYpr9gtznen216JJB:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1CsHiRxLw5YKosGuafsvId_zM_yL6apZh:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
+drive:1D02oZsCU8uRfAssILla1EhJaw2TZc9f_:
+  about: No GPS point in this photo
+  confidence: 0.52
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1D3Jan_oEAHOX3IfIvuCeL7BNvujOFJNY:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -2208,6 +3107,23 @@ drive:1D8sHxyYawFUOcfKAI8zqWB3XQJ3X7uiY:
   plate_visible: false
   quality: 4
   series: own-salem-st-ann-202403
+drive:1D9wFsiFnVFnKh222Kybhq8qb91gPvRFf:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1DG6CKbu9Wc7E1oLJOIJGK11MUcE40Ytg:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 66% sure) - own photo
@@ -2266,6 +3182,24 @@ drive:1DKr5WrUQn88EOpzBU4clkL8OxAVpoHO5:
   quality: 3
   runner_up: drinks
   series: own-ai-bob-marley
+drive:1DO5B0LIxmwMwK-qhHP_NHmVsNUo93FyD:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 77% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.77
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-blue-mountains
 drive:1DVS5Szy9Q5QU7olVx3yCQmNkSHSozX5e:
   about: No GPS point in this photo
   confidence: 0.36
@@ -2295,6 +3229,47 @@ drive:1DYO7cw1fFGbK96IxgR4nkv4nYKZoERbE:
   quality: 3
   runner_up: drinks
   series: own-ai-people
+drive:1D_rAuesCPdCVPBbyi4__4ru1bKvcqjdP:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: reggae
+  series: own-ai-bob-marley
+drive:1Dg94jCCkIxsSYxQ3xQgQXxwkRWu2kY2_:
+  about: Jamaica sunset sea evening beach beach sunset (recognised from the picture,
+    72% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  - sunset
+  confidence: 0.72
+  credit: ''
+  kind: scenery
+  label: sunset
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-sunset
 drive:1DiLQWs32G_VM4tbtSQHmU5YyaLG35FLM:
   about: Montego Bay Hip Strip, St James (placed by GPS, 1.8 km away) - own photo
   auto: true
@@ -2326,6 +3301,24 @@ drive:1DnXowCk6lU1Z4V2exYJmbfJQMItJ15q5:
   plate_visible: false
   quality: 3
   series: jtb-frenchmanscove
+drive:1E4b-MFuhyqWOZxjrZ4IxYXuQ8VvTB2St:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 59% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.59
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-drinks
 drive:1EHcUOl2cIGuQKzryScvUoHqHTu5Z8o2t:
   about: Jamaica people friends family travellers people (recognised from the picture,
     92% sure) - own photo
@@ -2431,6 +3424,52 @@ drive:1EXA7v4eARXDXkQW9wqLSW1QqiKRE-tKo:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1EY66BJgS4ck4uXfe-BcHFVRSZ-khou9n:
+  about: No GPS point in this photo
+  confidence: 0.35
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1EjOntmB2fTGPtjYGziUaj0ualHSEszcE:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    77% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.77
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: landscape
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-people
+drive:1EvcEmC7TYBlipcrrnTSG99ZqBcFYIzSR:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 59% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.59
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-attraction
 drive:1EyjgQ-tANQkWEbjfeCxRGYS8-p-OyHPz:
   about: Arah Rides rental vehicle cars (recognised from the picture, 88% sure) -
     own photo
@@ -2487,6 +3526,23 @@ drive:1F7cCQ5I6KKImNErhOmmH-BSm9NzW9EaH:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1FBd5FNb2FKMI2o-8MyNX3cl2rca1t-RP:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1FIE-kOHzYoCjAVw9VfVo5CG0jeuIrumX:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 98%
     sure) - own photo
@@ -2537,6 +3593,24 @@ drive:1FcFSuQz8AETKLgRjbFxwfcbFJrCugb-a:
   quality: 3
   runner_up: market
   series: own-ai-fruit
+drive:1Fj_SOsq-G-moYpYxjPcZWm8t6SJ5mxDT:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-waterfall
 drive:1FjlyL9UPgl-WR1h1tL2UNaLQIuF_MzU7:
   about: Arah Rides rental vehicle cars (recognised from the picture, 97% sure) -
     own photo
@@ -2635,6 +3709,75 @@ drive:1G7eUWXFYDVeCulVnsdGQrsPajKBvY47v:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1GEku2oHEfeKtUGUEe4NEyzKPuF39-B5V:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    64% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.64
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
+drive:1GUYpGvRqaTuX8Iis2qxpLR-RjywvCDJ5:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
+drive:1GieY2sPTBSndUoXUOxk1ZWvGFdNEvOrV:
+  about: Jamaica sunset sea evening beach beach sunset (recognised from the picture,
+    99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  - sunset
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: sunset
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-sunset
+drive:1GlttTgNezflZCbgw0tgRUVRUTJ5iE5So:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 100% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-jerk-chicken
 drive:1Gx_n408mT80MiuHzpoX5fSg2y5-e73p7:
   about: Jamaica beach sea sand coast beach (recognised from the picture, 74% sure)
     - own photo
@@ -2685,6 +3828,23 @@ drive:1H5cs_y7t0uTHmmGc8pXRFVF9MV6L7LOC:
   plate_visible: false
   quality: 4
   runner_up: trident castle
+  series: own-ai-attraction
+drive:1H8m7EJhqavSOwCSwXzhyAs7Qkie9Zakk:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 94% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.94
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: holland bamboo
   series: own-ai-attraction
 drive:1H95_q2KhGYQb11phKnMDcEfTL_e0-_BS:
   about: No GPS point in this photo
@@ -2783,6 +3943,23 @@ drive:1HxEMCh06dZYNLpOt4LmnlT8qwB-J_eNy:
   quality: 3
   runner_up: jamaican patty
   series: own-ai-drinks
+drive:1I0Z1NoFEq1M-l8YnaU1w0wCDtfxaqGA_:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    55% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.55
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-resort
 drive:1I1oo4TmvbS3YFK8hvhG_C0D_tDT_Mlkm:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 88%
     sure) - own photo
@@ -2818,6 +3995,23 @@ drive:1I8O2kmKghv6PoIPnmwVDewhvOtTijF5I:
   quality: 3
   runner_up: attraction
   series: own-ai-sunrise
+drive:1IBR--KFmPdjMJoQEMEmpMhgCd5b7YP4f:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 74% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.74
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-attraction
 drive:1ICMxrx6Fv9uWGdCT-Gh-ZbzGHmqN9lNK:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -2835,6 +4029,24 @@ drive:1ICMxrx6Fv9uWGdCT-Gh-ZbzGHmqN9lNK:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1IEOBUBvwUaB1J5PXFTm12LHM6MfjTQvk:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 77% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.77
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1IFejtywtdGQn3Iu17YFmFbveSSrmD4fq:
   about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
     100% sure) - own photo
@@ -2870,6 +4082,23 @@ drive:1ILODeKMEo-2NxjzJ7fK1eBrV8itxyO3c:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1IU04qROjb4xJ5zpWTIL19HbQDkEAA6ue:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 45% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.45
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: river rafting
+  series: own-ai-attraction
 drive:1IZIzTRSaqLbPSztvSSTJnnwJUcZIhZSr:
   about: No GPS point in this photo
   confidence: 0.39
@@ -2882,6 +4111,23 @@ drive:1IZIzTRSaqLbPSztvSSTJnnwJUcZIhZSr:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1IarZycopBxETaZTMEq-dqUTAQuavThXe:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1IcwipLjub0cjI0ArV0P6EsLiSXWKo4dT:
   about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
     (recognised from the picture, 59% sure) - own photo
@@ -2905,6 +4151,18 @@ drive:1IcwipLjub0cjI0ArV0P6EsLiSXWKo4dT:
   quality: 4
   runner_up: market
   series: own-ai-bob-marley
+drive:1If2xtRtI7GO_U2FOmL7mPUP4y9WPOZEg:
+  about: No GPS point in this photo
+  confidence: 0.49
+  credit: ''
+  guess: waterfall
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1IntsLXIIyQ8EXSOkbb86Hgk8VRYYQFCY:
   about: Jamaica beach sea sand coast beach (recognised from the picture, 94% sure)
     - own photo
@@ -2974,6 +4232,23 @@ drive:1ItvwQCTkYcTTkI6I_fCIPqGd5GjInMoz:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1Iu10TaFAgmqfG0pGPksbD7loYfPib3Ue:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 82% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.82
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1IuQPAQ_8WDXbll81JjDuODI9uKlIY0Cv:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 99%
     sure) - own photo
@@ -3008,6 +4283,24 @@ drive:1J10XYqhQ5U5RYV-as0uyIO9JTWfDh97e:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1JISziH1Kk_F9_osk8ae_uElXGT3WnLpy:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunset
+  series: own-ai-drinks
 drive:1JKvLL1K_rqdmHPR8B7BSluHHnKRNmJR5:
   about: Arah Rides rental vehicle cars (recognised from the picture, 85% sure) -
     own photo
@@ -3118,6 +4411,36 @@ drive:1JgP2ZKrk5UB2wguFMwXs8ukuGRpTCz2K:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1JkiTyRDDRObPxDJ7pnfNwnMBfqmabFaj:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-drinks
+drive:1JkvdqTjXio7neDDrbCA2RpbMTkOSUL8C:
+  about: No GPS point in this photo
+  confidence: 0.38
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1JqkA6eZkdr2K0kAmuPyE8LI0WzIebXt3:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 82% sure) - own photo
@@ -3136,6 +4459,24 @@ drive:1JqkA6eZkdr2K0kAmuPyE8LI0WzIebXt3:
   quality: 3
   runner_up: not usable
   series: own-ai-drinks
+drive:1Jr1OsiueDNsp3X5KJLw-WEeDe_UjnPpz:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 95% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-blue-mountains
 drive:1Js4uCr_5RWoHABeDIHfpt0btv71FaxmM:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -3210,6 +4551,24 @@ drive:1K2k83lm_SgatFE8t3L7L_S2r9lIKPEx4:
   quality: 4
   runner_up: attraction
   series: own-ai-negril-cliffs
+drive:1K34HrFkg7Dn_FShSHy4kMjLOiHKXy_sL:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 88% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.88
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1K7XUI_g3EPtVXilC66u3nol9p7WUHFUU:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 68% sure) - own photo
@@ -3228,6 +4587,18 @@ drive:1K7XUI_g3EPtVXilC66u3nol9p7WUHFUU:
   quality: 3
   runner_up: jamaican patty
   series: own-ai-drinks
+drive:1KC-2rfvUdevd1V1XbRdeCPeb9kcUnj7d:
+  about: No GPS point in this photo
+  confidence: 0.34
+  credit: ''
+  guess: river rafting
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1KCjdXLBuGo_2949djFu_5Uyr3qTBZ4-a:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -3244,6 +4615,42 @@ drive:1KCjdXLBuGo_2949djFu_5Uyr3qTBZ4-a:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1KPkQih9ZtJJXs6bhAH-fHRqLuY-EKkWG:
+  about: Jamaica fruit market mango pineapple ackee food culture food (recognised
+    from the picture, 95% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - culture
+  - food
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: fruit
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: market
+  series: own-ai-fruit
+drive:1KVeXv4bWXpEAc0wvs4jxQsQcIfVsPLWX:
+  about: Jamaica sunrise morning dawn nature sunrise (recognised from the picture,
+    48% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.48
+  credit: ''
+  kind: scenery
+  label: sunrise
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-sunrise
 drive:1Kdp1fHpuXj5xi0mWMkrX-2Nj_PIFA40b:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 100% sure) - own photo
@@ -3356,6 +4763,59 @@ drive:1L_ZuLN-QT71Pv4UhC1kqXGb7FqsRfchq:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1LiIgVpuflaVCXCNMSIHmyELGgZJF4mZI:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 91% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.91
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
+drive:1Lkwok7goWsKzHi62N8gOK9pd4c0Bko-G:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 70% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.7
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-beach
+drive:1LrTsZ4kENYZOLncPe3uhvoMob7nEDm1-:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 87% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.87
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1LvjvQyMzKj3sXuLpMxQ8Wu3RRe3TYxhC:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -3406,6 +4866,23 @@ drive:1LzvKXzlHsb1hKbCwWFWZ295Sc-JwMmTe:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1M8OxCxjKyxnTtGdJvbmFiSdYRBCM8zG4:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 93% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.93
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1MAjOdHQpbTLZhK7wkbRQ_NiPxbHa9RtI:
   about: DunnsRiverFalls (Dunn's River Falls, Ocho Rios) - Jamaica Tourist Board photo
     (matches your labelled photo, 93% alike)
@@ -3587,6 +5064,24 @@ drive:1NGLHYHP_n-X5sDZartSaqScU3NRgxAKc:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1NMq-o-nnTdlerQb9Gw93BOeTjh8VH9yA:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 56% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-beach
 drive:1NRMCS_Y8T_ofN6aiprvLXn9b3adHCogn:
   about: DoctorsCaveBeach (Doctor's Cave Beach, Montego Bay) - Jamaica Tourist Board
     photo (matches your labelled photo, 92% alike)
@@ -3619,6 +5114,52 @@ drive:1NXDZu7hkj9KBi395n8vOK5EouYWKfqzN:
   quality: 4
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:1N_FYv7saUep5mCsJ4NCLJA6UsnynYpJC:
+  about: No GPS point in this photo
+  confidence: 0.31
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1N_k7bUvhblldNqZxBnEqoEg18cVzgW2-:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    86% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.86
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
+drive:1NogzCms0shmY7hsJ82tEyUBraIMDvwz6:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 79% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.79
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: market
+  series: own-ai-jerk-chicken
 drive:1NrKbA5cN_h1YZbznY4LgEyPISbCSJkrn:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 77%
     sure) - own photo
@@ -3653,6 +5194,23 @@ drive:1NrV7mzrGh968YgJqKRPir8SBraFEcD-_:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1NsqVs_Xd7L_3LdBbIBlGX3fz_DSfi0BL:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1Nv4PHX5crKpwGIULVztA6-wxsn34iwMh:
   about: Jamaica people friends family travellers people (recognised from the picture,
     94% sure) - own photo
@@ -3670,6 +5228,23 @@ drive:1Nv4PHX5crKpwGIULVztA6-wxsn34iwMh:
   quality: 3
   runner_up: road trip
   series: own-ai-people
+drive:1NxPV-7QAh8BOrC763Ua2-XoFTpTanJks:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1O1X0R3BF4phUtOPRC5IIusmZkQW4OXTt:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 69% sure) - own photo
@@ -3687,6 +5262,23 @@ drive:1O1X0R3BF4phUtOPRC5IIusmZkQW4OXTt:
   quality: 4
   runner_up: waterfall
   series: own-ai-attraction
+drive:1O6XZyaNY0GXj7B1BzHEJFVKsK4tXhlfX:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    68% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.68
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1OEY1va9BHvoES4Vmv9RReAhHwDgrTXkA:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -3720,6 +5312,24 @@ drive:1OJtM39JNeYEeRlmC2rswhbYOj6j0Di5c:
   quality: 3
   runner_up: food
   series: own-ai-jerk-chicken
+drive:1OKUJOlbu_K24bSVwZBL6OZO4l2KpiD5G:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    93% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.93
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-waterfall
 drive:1OLMtUMKf1BYZv8lr-7ne1_oWppPeYL2n:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -3736,6 +5346,35 @@ drive:1OLMtUMKf1BYZv8lr-7ne1_oWppPeYL2n:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1OQxj7Cm42QutgXOERGueHmHhi3Qzs3jC:
+  about: No GPS point in this photo
+  confidence: 0.36
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1ObHRiPvSZijNfRYd_8ao4D3Y5dp2CJ1E:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    58% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.58
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-people
 drive:1Oekwq-RzkaRbo-R_-yk9AE0qKjFJwwEx:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -3764,6 +5403,28 @@ drive:1OjOcuA_ZtNJ8ahN7cDg6Y-RstTRiDiC4:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1Ojau6DVowbDHh32lsDR1Y1wqfsgUZpZS:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 89% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.89
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
 drive:1Ok5QEoRM6MmYpSlzJZTRAUsWFaNZ8n2J:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -3780,6 +5441,23 @@ drive:1Ok5QEoRM6MmYpSlzJZTRAUsWFaNZ8n2J:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1OlFlWHqFG8fFeq0uK16DOa9gC8jGn9jN:
+  about: Jamaica road trip drive scenic road road (recognised from the picture, 69%
+    sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - road
+  confidence: 0.69
+  credit: ''
+  kind: scenery
+  label: road trip
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  runner_up: holland bamboo
+  series: own-ai-road-trip
 drive:1OmWsYmq6BlTvl78BnZwjzYEOz09_L7rE:
   about: No GPS point in this photo
   confidence: 0.42
@@ -3895,6 +5573,23 @@ drive:1PZrgu74-8foL-qCD2ijaQolag8EZ5AzP:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1PaSkatxE2cCw07kJvLJN0Q528tuD9ZTY:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 85% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-attraction
 drive:1Q2ymA-kf-Vr7Ju6zOhS0TZbQVbTaoP7j:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 45% sure) - own photo
@@ -3929,6 +5624,23 @@ drive:1Q3gH_7YWAclB7gSvdpsBeY8pHXA54sDB:
   plate_visible: false
   quality: 4
   series: own-salem-st-ann-202403
+drive:1Q4Lm6E_VXcz5m0Z97f7_6vs_l9bimJi6:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 57% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.57
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1QA6yvDqrpD7qeV7ZJM_q-GI8baT41jrl:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -4098,6 +5810,35 @@ drive:1RGGsvV6RSZAOmRnE0No1KTXj67rf2tTJ:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1RVGnLYH-aolueB0khCl7Bp_kukZ0hh6B:
+  about: No GPS point in this photo
+  confidence: 0.4
+  credit: ''
+  guess: beach
+  kind: unplaced
+  label: null
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: unplaced
+drive:1RXq0EvnLZZCzuGFvH98R2tt15tJzixIg:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 93% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.93
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1R_nRAI3832bqcho0XFKFFzCpIHy9MPP2:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -4196,6 +5937,23 @@ drive:1SI_cq4aMwvTk0GjeaT8WCzX-XsZ1yAxx:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1SOqUNnBEFNqIBO0ejacw0h4HqCSlDFBL:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1SSZmNhqwm_paDFk4A3D-QXfp5WO53atv:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 55% sure) - own photo
@@ -4213,6 +5971,23 @@ drive:1SSZmNhqwm_paDFk4A3D-QXfp5WO53atv:
   quality: 3
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:1SkNhC6YPr7HSRww8pqN3GB3ovc1xh_jY:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-resort
 drive:1SmhZif-h5dwzC2CtkejD65OX33s5hbLq:
   about: Arah Rides rental vehicle cars (recognised from the picture, 87% sure) -
     own photo
@@ -4230,6 +6005,18 @@ drive:1SmhZif-h5dwzC2CtkejD65OX33s5hbLq:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1Sux4dgplgQPod81V2cfj9dWBDhbdnZwA:
+  about: No GPS point in this photo
+  confidence: 0.3
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1Sw417rYR-iA5cjU_A6rmnEGyI6CJA8se:
   about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
     from the picture, 97% sure) - own photo
@@ -4310,6 +6097,23 @@ drive:1T8HYrYO1VPgSofONITy9PA9HVwACWF41:
   quality: 4
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:1TAbzvg66l74QlSz2qD23XE_cAalwNfQw:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 83% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.83
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jerk-chicken
 drive:1TE827tuJt62fSeTp3dhR8oeW13qX5ZPc:
   about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
     (recognised from the picture, 91% sure) - own photo
@@ -4350,6 +6154,40 @@ drive:1TI3fGW-0oQzomdqaGXAKF7BHWParM6vc:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1TMIKLGzh2i2lMEGTdqgvoVV1zxuQ3F8f:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 57% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.57
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
+drive:1TMPUepts4rXzvWlUlhscCUfzO6HcdA6u:
+  about: Jamaica patty food beef patty coco bread food (recognised from the picture,
+    90% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.9
+  credit: ''
+  kind: scenery
+  label: jamaican patty
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-jamaican-patty
 drive:1TPUOAqAbNeIy5dbo4qmFNeSYT_FESI5M:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -4366,6 +6204,41 @@ drive:1TPUOAqAbNeIy5dbo4qmFNeSYT_FESI5M:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1TfHCsTsUoSni0qx5emXpfXojkU-I7kTd:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    46% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.46
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-waterfall
+drive:1Tshc6-WwIb5aFlXwN7sQUXP81psruJuS:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 83% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.83
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: river rafting
+  series: own-ai-attraction
 drive:1TvkdQyT0hjrdLRIa8qyDoYHo8vOd74wh:
   about: Arah Rides rental vehicle cars (recognised from the picture, 100% sure) -
     own photo
@@ -4399,6 +6272,23 @@ drive:1U-2F2PbxnYNbVQO2VdVuKlvOOS9y9WMh:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1U-B4d5u4fDzPA4IFP3ybUJ6ZVFdDkwKo:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 57% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.57
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-attraction
 drive:1U0o5Wat8r1XBtz7GChQex4VO8rg9MDNE:
   about: Jamaica sunrise morning dawn nature sunrise (recognised from the picture,
     80% sure) - own photo
@@ -4433,6 +6323,23 @@ drive:1U1WI8cxgZoWQUgB1YUbiwnCVRkHKkgRJ:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1U3SELnml3ltZK_LRufJqYsDIQiN0KPbf:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 59% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.59
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: kingston
+  series: own-ai-attraction
 drive:1U3k1PpgHrTu1MypZqpugim5223o-uEAC:
   about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
     from the picture, 77% sure) - own photo
@@ -4541,6 +6448,23 @@ drive:1UJ-OOerj-waVwvoNTP3Pg8DdxigK7Oxh:
   quality: 3
   runner_up: road trip
   series: own-ai-attraction
+drive:1UL_7Np3khfG9V-I8ID0Srr9q2xyNU4gP:
+  about: Jamaica patty food beef patty coco bread food (recognised from the picture,
+    100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: jamaican patty
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-jamaican-patty
 drive:1USkXtinpbomUTo2wmj2MnzDGLOxnWosl:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 57%
     sure) - own photo
@@ -4575,6 +6499,24 @@ drive:1UUTm54QP3WO9aGcxnAYjrlujHoRlD0e_:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1UUp5CM1sfp44ADPRIIvfsUqhQsMUIpu2:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 81% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.81
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1UVX1jZi_uEDiEeawhTIXlN63WxlB5e9h:
   about: Arah Rides rental vehicle cars (recognised from the picture, 100% sure) -
     own photo
@@ -4592,6 +6534,29 @@ drive:1UVX1jZi_uEDiEeawhTIXlN63WxlB5e9h:
   quality: 4
   runner_up: not usable
   series: own-ai-rental-car
+drive:1U_SjegNQDGp4V1dxJMqj28x-QQJ41erA:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 77% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.77
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-bob-marley
 drive:1UcVx0dfN_7e1oTKDTz-GY3qsS7OxIRdh:
   about: New Kingston, St Andrew (placed by GPS, 0.8 km away) - own photo
   auto: true
@@ -4693,6 +6658,28 @@ drive:1UrFQ9u-0LqjrOknRDGsbh4iGaTnD9AvN:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1V0nkIZcdoZNJJchIV-w9Uj4ivqlEHOXU:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 55% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.55
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
 drive:1V4mUoNp25beLR7-iyZfAKO24deYG-JpE:
   about: Kingston Lime Cay Man Beach (Kingston) - Jamaica Tourist Board photo (matches
     your labelled photo, 91% alike)
@@ -4724,6 +6711,23 @@ drive:1V5QsHUiL4LwCyqa7LdkHaZLb6PvSpGji:
   plate_visible: false
   quality: 4
   runner_up: road trip
+  series: own-ai-attraction
+drive:1V8moBNRjtR3nSdAW-tb3nOjcrYfYOAZ7:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 96% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.96
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
   series: own-ai-attraction
 drive:1VB9Z6k44ym71UFjIQSdfXkivD_gjRLdE:
   about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
@@ -4833,6 +6837,24 @@ drive:1VkLvEWEBt-2r-ipjD-Dj6aIS5vhE3zJ3:
   quality: 4
   runner_up: drinks
   series: own-ai-holland-bamboo
+drive:1VwN11MpsmzItLmlzX9G4QkRgLJF1jCQZ:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 92% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-river-rafting
 drive:1W7VykCRrBqLg4GgTtREJunGMCrPnjqPO:
   about: DunnsRiverFalls0240e (Dunn's River Falls, Ocho Rios) - Jamaica Tourist Board
     photo (matches your labelled photo, 94% alike)
@@ -4864,6 +6886,23 @@ drive:1WCNAuQvZr82HK2vn8wUGuRjg4MT5nTTD:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1WGDRgO0wg11Z1lGgt5598AZRPrsasISS:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1WHHNbUltHg2RG-WRkLP_Fiq3Xc2aTm4A:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 52% sure) - own photo
@@ -4881,6 +6920,41 @@ drive:1WHHNbUltHg2RG-WRkLP_Fiq3Xc2aTm4A:
   quality: 4
   runner_up: resort
   series: own-ai-attraction
+drive:1WTvjekhTT6RRUIlhGTZACcFG_uMLYOuG:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-drinks
+drive:1WW076NfszCXjfouESdbPercomgd1zL41:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    58% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.58
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1Wajzo_Hv7xAxmxpy_eLdegfwPX8gkR2N:
   about: Arah Rides rental vehicle cars (recognised from the picture, 90% sure) -
     own photo
@@ -4929,6 +7003,21 @@ drive:1WccR-lSWCoPWRF1yZOWUkC7IWBP8KMTY:
   plate_visible: false
   quality: 3
   series: jtb-reachfalls
+drive:1WeFmHFVhB2Y-3kXs64W7azBArnM4pURe:
+  about: ReachFalls (Reach Falls, Portland) - Jamaica Tourist Board photo (matches
+    your labelled photo, 91% alike)
+  ai: true
+  auto: true
+  confidence: 0.91
+  credit: ''
+  kind: scenery
+  label: matched
+  orientation: landscape
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 3
+  series: jtb-reachfalls
 drive:1WfIYxYNA83pFjVTBRfTKgK53DpbSYWyz:
   about: Jamaica beach sea sand coast beach (recognised from the picture, 84% sure)
     - own photo
@@ -4962,6 +7051,23 @@ drive:1Wp6d8pxjBoiw9Ca5kcCRCoxCl70rjeDG:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:1WzgPgXx911TDYugRkZLf5T-EgomvpRww:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1X-2cgEMVoXlhDpptGcSNxaClOc6RNcpH:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 61%
     sure) - own photo
@@ -4979,6 +7085,24 @@ drive:1X-2cgEMVoXlhDpptGcSNxaClOc6RNcpH:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1X2rAiTCgmY4i8piqqXXFWr5bjTImlTat:
+  about: Jamaica sunset sea evening beach beach sunset (recognised from the picture,
+    51% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  - sunset
+  confidence: 0.51
+  credit: ''
+  kind: scenery
+  label: sunset
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-sunset
 drive:1X5HTnU-yd0FsV0OeCz7gJ4ikb2gb6vG2:
   about: Jamaica people friends family travellers people (recognised from the picture,
     93% sure) - own photo
@@ -5012,6 +7136,23 @@ drive:1XDN-06xlqk05ntH4NlhQBw9FmEh1Ns3b:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1XFRuxrJSJ-8s3XQHlKzheouwsfRJ1gqF:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-resort
 drive:1X_vptM_gOxSmpibiTDxQsIGzdnQHynLU:
   about: FrenchmansCove (Frenchman's Cove, Port Antonio) - Jamaica Tourist Board photo
     (matches your labelled photo, 95% alike)
@@ -5027,6 +7168,23 @@ drive:1X_vptM_gOxSmpibiTDxQsIGzdnQHynLU:
   plate_visible: false
   quality: 3
   series: jtb-frenchmanscove
+drive:1XfPVl0vnMKAoybu2qNsEi3_lOMuzAfTJ:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: fruit
+  series: own-ai-food
 drive:1XgkvBu_6UUHHMyS-QJzyLfm5ESvnwWfU:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -5044,6 +7202,23 @@ drive:1XgkvBu_6UUHHMyS-QJzyLfm5ESvnwWfU:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1XsxZc-KSJIsooUy8AQqwBS1Wd39yAK29:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 93% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.93
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1XuAAvpgbKVImpjWXbiAMP2ILjqC2phWw:
   about: New Kingston, St Andrew (placed by GPS, 0.8 km away) - own photo
   auto: true
@@ -5075,6 +7250,23 @@ drive:1Xws2m0yLlFNRjgJtCUfYqNcij15rvcAr:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:1XzGCYf8aXKQQLrsn6wgbEJVTAmhPs7zF:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1Y1o7OLwLr4QFz3K_Hdid2a4LKhIndyEa:
   about: Blue Mountains foothills, St Andrew (placed by GPS, 2.6 km away) - own photo
   auto: true
@@ -5107,6 +7299,29 @@ drive:1Y4sU6Hd1FDwQVOksbynDg0NqWBERJrOF:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1Y63QXH6rS1qbQ6rwx3WjwHkhjEDRqSbi:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 68% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.68
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: reggae
+  series: own-ai-bob-marley
 drive:1Y7MgLXUizHkZeNunZOBy4pC6DtvLT6_Z:
   about: No GPS point in this photo
   confidence: 0.19
@@ -5119,6 +7334,24 @@ drive:1Y7MgLXUizHkZeNunZOBy4pC6DtvLT6_Z:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1YH1uvvtIgqcaDacG_Xvs0JGmnninnxOa:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 90% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 0.9
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-river-rafting
 drive:1YN8KPJCWElixIiv_Qv-LHh2ldRZ5Uw26:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -5135,6 +7368,54 @@ drive:1YN8KPJCWElixIiv_Qv-LHh2ldRZ5Uw26:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1YOeTnE-4EjVMxXOOIzL1c-UOLdbiIOdo:
+  about: No GPS point in this photo
+  confidence: 0.43
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1YSRP_CXSd3FWsU77qEi46rIWJxLyt8sU:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-river-rafting
+drive:1YXgE7StuL54S9gj4Cml3kDfnNcsAI2f7:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunset
+  series: own-ai-drinks
 drive:1YYph_hQmGY8XxQtLGwk8EbHsKvEQnEl-:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 100% sure) - own photo
@@ -5153,6 +7434,24 @@ drive:1YYph_hQmGY8XxQtLGwk8EbHsKvEQnEl-:
   quality: 3
   runner_up: negril cliffs
   series: own-ai-drinks
+drive:1Y_x-aPuc2n9HUSgP4v-idh0aiqLHdr-W:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-river-rafting
 drive:1YdLGbcAxiHPUQ4n4uKhIH8ferAzyHbvH:
   about: Arah Rides rental vehicle cars (recognised from the picture, 79% sure) -
     own photo
@@ -5219,6 +7518,40 @@ drive:1YwQwkivNSI2Isbgnxh3hxaNnDuvpVCXO:
   quality: 4
   runner_up: river rafting
   series: own-ai-attraction
+drive:1Ywl7GJI6WP6dqV2rc2gVKJoyF0IoaAIU:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: fruit
+  series: own-ai-food
+drive:1YyeEX0-6spyIzbLrYxvdCE6en83jRYjP:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1Z4IVZjMZEO5oHqAxHwGswv5i4Kxx8TD3:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -5254,6 +7587,58 @@ drive:1Z4YIwBjlSPt5dei829Q4OL6LnUZ9MQNt:
   quality: 3
   runner_up: attraction
   series: own-ai-waterfall
+drive:1ZGHRFOOfHlab9xUZkf_6d0mpFcLKfHTx:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    75% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.75
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-resort
+drive:1ZMDuucvC1OOAx72elmfocqddrrBAgDgZ:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 55% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.55
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-food
+drive:1ZMMZNogZCM2gd02X_7nas2lydwsyT8DK:
+  about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
+    from the picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: river rafting
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-river-rafting
 drive:1ZbLAnhO_wP1aMx9lzyH6EmOr8AXDAYo2:
   about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
     picture, 98% sure) - own photo
@@ -5326,6 +7711,18 @@ drive:1_7k1dZd6u_a6fyopD7WQPIu3Gpb-vFAT:
   quality: 4
   runner_up: attraction
   series: own-ai-drinks
+drive:1_JDlfzWVOoxykhbDxCGhxZePsNMAVIi5:
+  about: No GPS point in this photo
+  confidence: 0.32
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1_JxoHZ3rhH9JLG5hNQMcobQbxWuARigu:
   about: Jamaica people friends family travellers people (recognised from the picture,
     45% sure) - own photo
@@ -5376,6 +7773,41 @@ drive:1_dz6wjdhFZsBlsZfL3A_mab06Uibknzd:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1_oYFpLgubw6h0_UF9VLjWxPdrFnPMq06:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 81% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.81
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: not usable
+  series: own-ai-drinks
+drive:1_zAr9k9plZkqjaRV1bPBFHxwaiq1FFiu:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 92% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-attraction
 drive:1aJg1fWjsv7IC_9gzShxznuVUaMag2fKD:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -5507,6 +7939,24 @@ drive:1bLEJ6J2DT65sAPH3pfcLwU5Ld2qbBbDj:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1bN2PY4MIMUkWuIUnDwMMc_laL7dDFkzB:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 73% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-beach
 drive:1balTnSJ24KVIomfbEGbjM2wLJtf2KwD9:
   about: Jamaica patty food beef patty coco bread food (recognised from the picture,
     97% sure) - own photo
@@ -5588,6 +8038,18 @@ drive:1buETxVKULyRv1ds605lkbHsXhhIp-GBz:
   plate_visible: false
   quality: 3
   series: jtb-montegobay
+drive:1bzYvbwLRHJn_VNWTG7fsvMRR9MjcDFSk:
+  about: No GPS point in this photo
+  confidence: 0.43
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1c30zOj85UbyFaMNOCE3EIbKuIiYry4M8:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -5706,6 +8168,23 @@ drive:1cgof0_6jb4R2q-xWuRqg63A7VlIkXX6d:
   quality: 4
   runner_up: blue mountains
   series: own-ai-attraction
+drive:1cnVhm0Bjpf7w9pSYUQD0YEmAsUL2AUFV:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 80% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.8
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1crkSulk6Mh8qJLJ1v5Qfk61ff5sup6L4:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 72% sure) - own photo
@@ -5758,6 +8237,40 @@ drive:1d-eOr7k_ssENIAnNggbbYCXrlepVMPuh:
   quality: 3
   runner_up: jamaican patty
   series: own-ai-jerk-chicken
+drive:1d6QDdpO2gMMD2JY2Sxi_8JCLbwZSekYh:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    90% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.9
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-resort
+drive:1d7D_T-ZaoNH8cWC2OOarEd7VlPAm77Sw:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    51% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.51
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunrise
+  series: own-ai-resort
 drive:1d8TYJ-d_XwL9mTYfynTlzUyJ4id3zWtT:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 72% sure) - own photo
@@ -5917,6 +8430,57 @@ drive:1doV8t9WvvcGaaVGzYSfJfAxbq97s--Ls:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1dxkSFYBsHZvGURROTxBXitDaQ7jMHyLK:
+  about: No GPS point in this photo
+  confidence: 0.5
+  credit: ''
+  guess: negril cliffs
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1e-25lEm1WdbCbg7I-APsfsfrRvdkFcx8:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
+drive:1e0mFx5HgddJUwzmHnbqurT7iA_10sJ34:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1e2PR20I3YoA83x40apnFXPf0nh-djHk1:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 53% sure) - own photo
@@ -5934,6 +8498,18 @@ drive:1e2PR20I3YoA83x40apnFXPf0nh-djHk1:
   quality: 3
   runner_up: waterfall
   series: own-ai-attraction
+drive:1e4YxZabYvwnHXlMD1clXCCV4T5r0S-y2:
+  about: No GPS point in this photo
+  confidence: 0.33
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1eDLiQSzyr6_HkocmkjHtziL9QAzK-Go1:
   about: No GPS point in this photo
   confidence: 0.38
@@ -5946,6 +8522,63 @@ drive:1eDLiQSzyr6_HkocmkjHtziL9QAzK-Go1:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1eGI2eVYBUoOtbTTjONp16CDVVTNCqPXD:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 54% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.54
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
+drive:1eKzNpPqyfS77Tcd-ETht_42MYUmDCU36:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 76% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.76
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jerk-chicken
+drive:1eR_1a8We296MjAltEOroh5hWZuZJeafU:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 79% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.79
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1eVZUnpvlbTq4lX7uVe--gpkemgFKk0fo:
   about: New Kingston, St Andrew (placed by GPS, 6.9 km away) - own photo
   auto: true
@@ -6016,6 +8649,24 @@ drive:1emSxxzuhBwvE0_5d9fniZ9Ro1SadOB2W:
   quality: 3
   runner_up: sunrise
   series: own-ai-sunset
+drive:1eoE9f-FSsP4C_F5VMDPE5KPiK9VhIChg:
+  about: Jamaica fruit market mango pineapple ackee food culture food (recognised
+    from the picture, 82% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - culture
+  - food
+  confidence: 0.82
+  credit: ''
+  kind: scenery
+  label: fruit
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-fruit
 drive:1eoEv-9D1UtLs-dfcU5exMSH0nYIyMx6O:
   about: Jamaica patty food beef patty coco bread food (recognised from the picture,
     70% sure) - own photo
@@ -6146,6 +8797,24 @@ drive:1fObg-_-zCRK1GqRkzqrM-fLuqv96DswG:
   quality: 4
   runner_up: drinks
   series: own-ai-carnival
+drive:1fTibmPrAIspsuiAAopfRZ9Vaml2k0UNI:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 55% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.55
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-drinks
 drive:1f_WLZyi9i1AWrH2zjdPKuOaXhBOsZivd:
   about: NegrilBeach (Negril) - Jamaica Tourist Board photo (matches your labelled
     photo, 92% alike)
@@ -6206,6 +8875,23 @@ drive:1fn_9FpwMcF27RZw97ctVlKhh-r5QstuC:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1fq7pHoAUnUl6lgIVUrOPVyMvrB950BWC:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    87% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.87
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1g2xhAPmcuR29EwI-rcxW4OJf1IDj8RXA:
   about: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel attractions
     nature road (recognised from the picture, 100% sure) - own photo
@@ -6276,6 +8962,23 @@ drive:1gI0QpnJ-v8awYSudRvz4lg2U3IQTWftU:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1gMTYziRCLOatc7H9WdBMSsFu1k6csOyf:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1gOiQOiDHBAIp3nGdmmB8fjLZDFTO3VfZ:
   about: Montego Bay Hip Strip, St James (placed by GPS, 0.7 km away) - own photo
   auto: true
@@ -6418,6 +9121,18 @@ drive:1h9wBSx3VwaP5tnLYNYN8zXz-VH5lKLex:
   quality: 3
   runner_up: market
   series: own-ai-jerk-chicken
+drive:1hBW-Fg-Tv4tfZQbcJGlAdSPPZ7fwCPox:
+  about: No GPS point in this photo
+  confidence: 0.43
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1hE60KOnQNm-P3tR_Miz__PNJzzIx0XMv:
   about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
     70% sure) - own photo
@@ -6452,6 +9167,24 @@ drive:1hGSFA9_uhU4rS9yDdZVP143HMz92S4Ga:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1hH13y9LfbPP3vE8IgLF6Cp2fhntL12zH:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 85% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-drinks
 drive:1hJtUc7D38EEStKKwoBEJgCv-7GQmvYBD:
   about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
     96% sure) - own photo
@@ -6469,6 +9202,24 @@ drive:1hJtUc7D38EEStKKwoBEJgCv-7GQmvYBD:
   quality: 4
   runner_up: beach
   series: own-ai-resort
+drive:1hLliBeFtskEW6bihdHGhQWoTTo3x5mH3:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: dunn's river falls
+  series: own-ai-waterfall
 drive:1hVXlcsrCkzSS_F3aqXWQLCibgICxli5O:
   about: Arah Rides rental vehicle cars (recognised from the picture, 64% sure) -
     own photo
@@ -6502,6 +9253,40 @@ drive:1hXVypeQBYTb6wauCf5byBq-OikLTLIpW:
   plate_visible: false
   quality: 4
   series: own-mandeville-202403
+drive:1hbsBBMcoOBY0I-dKfP4fJ4Zp149OUC1q:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    66% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.66
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-people
+drive:1hqD1ntD1mitnQ4Ej94YPhN7rQ-zsI1NM:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    54% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.54
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1hqWMHjnJDZILmC-hnA9A01Wkbq5gkuBB:
   about: Kingston Carnival Dance (Kingston) - Jamaica Tourist Board photo (matches
     your labelled photo, 92% alike)
@@ -6533,6 +9318,18 @@ drive:1hvECVQ6HgLcMfgf0DM8aXJJESb6bsegG:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1hyyky1I0ZYG-ek9rkMI-uSaP5qeiqn1F:
+  about: No GPS point in this photo
+  confidence: 0.5
+  credit: ''
+  guess: negril cliffs
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1iAUBEkR4K1vKa7su73PfnZ0UriBZi2i6:
   about: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel attractions
     nature road (recognised from the picture, 47% sure) - own photo
@@ -6624,6 +9421,18 @@ drive:1ie5skcvaarm59x9LuPoH4v1WbzwFk0EF:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1iiNvLTkGpw8zze_hML58cGsDbYb-ni9T:
+  about: No GPS point in this photo
+  confidence: 0.4
+  credit: ''
+  guess: waterfall
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1j0UgOL8xc150S_Mj2ZVArq4aWuTnbKUm:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 73% sure) - own photo
@@ -6641,6 +9450,24 @@ drive:1j0UgOL8xc150S_Mj2ZVArq4aWuTnbKUm:
   plate_visible: false
   quality: 3
   runner_up: beach
+  series: own-ai-drinks
+drive:1j3eKbeHm-ppJ-q0Tm7n7lEElc0xvyefi:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: sunset
   series: own-ai-drinks
 drive:1jCiMjzzTotOF2IzjufX_t51pfoSUyz_v:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 61%
@@ -6696,6 +9523,24 @@ drive:1jR5YUK991tm8nIArY4dthxn5G_nXHUj7:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1j__v_34lwJZoScmWYY2Xr7lsT_Nojg2d:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    80% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.8
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: river rafting
+  series: own-ai-waterfall
 drive:1jdAW8uGDMG5TuVfvt7L57C3JMtbttv7z:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 53% sure) - own photo
@@ -6735,6 +9580,53 @@ drive:1jn38NWiAVug6Lem-O4YEbObt1uYw5tQd:
   quality: 4
   runner_up: attraction
   series: own-ai-negril-cliffs
+drive:1jqN3pg9wJ5t2sceuV5WCWzBFYLsdD2Oh:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    47% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.47
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-resort
+drive:1jsm8Dl9hDZ_v70StEghHtCVrvCINgo4a:
+  about: No GPS point in this photo
+  confidence: 0.38
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
+drive:1k01pd48MsMc_ippcY7Q5Cbpbmq4xVj4P:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 58% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.58
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: holland bamboo
+  series: own-ai-blue-mountains
 drive:1k1nB-wEa7pmjhsZep9uNC9DVOS1kkCDV:
   about: Arah Rides rental vehicle cars (recognised from the picture, 100% sure) -
     own photo
@@ -6803,6 +9695,45 @@ drive:1k9minrQvJ0n6cG20Hluxi0iSR2iB8D9P:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1kBqdAlLy2qpNCRd2n2QaI46I3Mlcvgsz:
+  about: Jamaica people friends family travellers people (recognised from the picture,
+    73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - people
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: people
+  orientation: portrait
+  people: true
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-people
+drive:1kJbZFaoEQ02DslM6GWZHdWsBXl41t3bW:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
 drive:1kJh8u7MzCxay7Mo9HRKHb1OBhW3hNm0y:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 60%
     sure) - own photo
@@ -6904,6 +9835,23 @@ drive:1knZpkH8-jvChGcsFq4bGSGydAZVziqIm:
   quality: 3
   runner_up: resort
   series: own-ai-sunset
+drive:1kouelUPl_g7diusJKwFzCnVok5kNzoQE:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1kpRtNXBiaB1D5jJ0Y0GnqfANPCd9OZFN:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 64%
     sure) - own photo
@@ -6974,6 +9922,18 @@ drive:1kuuP-O5yrRVzU9dPi_MaX6BdkbMeUbLU:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1kwQk3z7qPK5JMWNWH4rasrA5bbSHnjFA:
+  about: No GPS point in this photo
+  confidence: 0.29
+  credit: ''
+  guess: drinks
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1l1ruzkXvnNsZ4C1tCU4tT_9C5EtH5nLL:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -7074,6 +10034,23 @@ drive:1lZmNGiYPtBjiZcN2-tJjriAXCHkQcKj0:
   quality: 3
   runner_up: people
   series: own-ai-drinks
+drive:1lfaNNgOG27dgi79rJoBcywdRQ9i8kqo6:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 67% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.67
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1lgi2WZGnKWo5zbAF-lK_j72FiDT7Nn82:
   about: Arah Rides rental vehicle cars (recognised from the picture, 84% sure) -
     own photo
@@ -7108,6 +10085,24 @@ drive:1lhUHW6wHOBDbxcIu4WFBXmrEi_ju895R:
   quality: 4
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:1liqVIZeejQmlyjadjqTq4myhCt8mYOXV:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 79% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.79
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-beach
 drive:1lllOCCsixt7-gqz0HIKQGKwPeGjYQPNr:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -7229,6 +10224,47 @@ drive:1miEq8TwhMy_RpIlnilbkB2--I5Tsx5KE:
   quality: 3
   runner_up: market
   series: own-ai-road-trip
+drive:1mqhSiZmqomELr52Kzt3syq0ZLtnLT1EE:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 75% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.75
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-drinks
+drive:1muX5hlrnOvS4u7jqwMB3Ezd9_ld9utam:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 57% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.57
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-bob-marley
 drive:1mvgu_xabs5RYrhC02r7OHcx8YWLKBJbS:
   about: Runaway Bay, St Ann (placed by GPS, 3.4 km away) - own photo
   auto: true
@@ -7320,6 +10356,23 @@ drive:1nDXa1WLdjhQ6KiiRXMso5F0GxgM63uPt:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1nGrXa0x4GVaG9RvxqAWBzw1SQQUTu63h:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    92% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1nMuf8IJga9W559dmKaCM_mxVrKQ5lpOj:
   about: No GPS point in this photo
   confidence: 0.41
@@ -7407,6 +10460,18 @@ drive:1nXLQG8lmgFclKRYKan-F4RbOqgv1OMEg:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1niSG3zA3hU4K6PkqskwsYKKDaeHJpQZW:
+  about: No GPS point in this photo
+  confidence: 0.35
+  credit: ''
+  guess: bob marley
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1njblnIsjD6LE7enhXgvuhNAjNL_vc7r9:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -7439,6 +10504,40 @@ drive:1nlKT8alR-xOrwb5ZBvlgm0Tsgz5z89Ea:
   plate_visible: false
   quality: 4
   series: own-new-kingston-202403
+drive:1nlY0mcsvj8ncGyaANy94QOPyq69f5knL:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 94% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.94
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-food
+drive:1nnJ16zuRu5NB4y2aBAYMA9URk7iYgiTp:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1nnLu8tuP0icR8XA8fUbEX4qv85ikKRMz:
   about: Arah Rides rental vehicle cars (recognised from the picture, 97% sure) -
     own photo
@@ -7456,6 +10555,23 @@ drive:1nnLu8tuP0icR8XA8fUbEX4qv85ikKRMz:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1npKAoD29iF5_aXiQy8qIKYlupeBWtpME:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    90% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.9
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1nvVMR5i2E71aTQR_J1uKIw9apxMyTPF_:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 59% sure) - own photo
@@ -7524,6 +10640,23 @@ drive:1o2fTuKY6QL4YsF4QroLMiWpV2xB83crv:
   quality: 3
   runner_up: rental car
   series: own-ai-road-trip
+drive:1o5luqdNsVbCE3WYD2j__47VyMkoQoD4D:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    50% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.5
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: blue mountains
+  series: own-ai-resort
 drive:1o7DVk1tN9mMvHp4p-MLlLZcAfcUcblYq:
   about: Arah Rides rental vehicle cars (recognised from the picture, 89% sure) -
     own photo
@@ -7608,6 +10741,43 @@ drive:1oOE-20KGBDD68YBgk7U6wa984Q50EuPB:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1oQ8X8gEObrMS0tJelc8BtMAy3qOQinuE:
+  about: Jamaica market craft culture city culture food (recognised from the picture,
+    63% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - city
+  - culture
+  - food
+  confidence: 0.63
+  credit: ''
+  kind: scenery
+  label: market
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-market
+drive:1oQKpyEAyuw-dXUaezz8HMpY7C_5K3-_o:
+  about: Jamaica fruit market mango pineapple ackee food culture food (recognised
+    from the picture, 78% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - culture
+  - food
+  confidence: 0.78
+  credit: ''
+  kind: scenery
+  label: fruit
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: market
+  series: own-ai-fruit
 drive:1oY7L7lgjxA58uaYYRLQ1pOHpZRyw74R6:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 82% sure) - own photo
@@ -7640,6 +10810,24 @@ drive:1oed06aibxWRLtDHEo-TxLIAsAacLtgMe:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:1ofZ3nCSl7xybHnc8Byyn3dmqE8mcPUTS:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 72% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.72
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-blue-mountains
 drive:1ohvhGra7orwufByp0OejZWq8FqY3dp-l:
   about: No GPS point in this photo
   confidence: 0.37
@@ -7686,6 +10874,24 @@ drive:1okhvLzclFAQrX9rq1QBkdUTgzjRf6QyT:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1ol2D4lYc1Kek2M5mvwnffHDZhEDqhgPj:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 73% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.73
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-drinks
 drive:1ooxE11mKkBhpA7Z-qlMHtuCqCqG3MNKr:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 78% sure) - own photo
@@ -7776,6 +10982,23 @@ drive:1p9BrtwK80rou7Gf6_sLRFIFmHlEAHpX3:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1p9uIVnkz-p4obsA_UTTb0bbCwU9poo9X:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 95% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.95
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1pLHvFTHSB0lI7turZAwQunglDyPQZzJ5:
   about: Arah Rides rental vehicle cars (recognised from the picture, 96% sure) -
     own photo
@@ -7793,6 +11016,23 @@ drive:1pLHvFTHSB0lI7turZAwQunglDyPQZzJ5:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1pOOP3l-c_R17n3nIdXYd6O4b4qR728j2:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 77% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.77
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1pQ6Sxzq7Cqxt3_Q1v6lCgivzDDfxgKXV:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 77% sure) - own photo
@@ -7828,6 +11068,46 @@ drive:1pQuQ0knBZmX0i8sF01I8oBKafD7k6Ov8:
   quality: 3
   runner_up: negril cliffs
   series: own-ai-road-trip
+drive:1pTRXAVBj-INmrdsQ6-O7T8a8WBzv5Qf9:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 76% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.76
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-negril-cliffs
+drive:1pVWgWGZCk6olQkKL7FIlsjJPZOWHx5fE:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 88% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.88
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1pcvKG_za7ipQYUb_0bf9ls77f2fD1_Um:
   about: No GPS point in this photo
   confidence: 0.43
@@ -7855,6 +11135,28 @@ drive:1pdlbfCf1aDybdjCRnhwDEPMWY7jH_dK4:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:1pehdR8sh4EAYSTd3JfXvavIyvyey4wJO:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
 drive:1ps9KHZmxSf2g-Rg_M4wdpIh1tHqwnTy1:
   about: Jamaica beach sea sand coast beach (recognised from the picture, 53% sure)
     - own photo
@@ -7902,6 +11204,36 @@ drive:1q5X458qS1bkgK5mzZrQu3EWZno0f0jvv:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1q8rvF3JTr1kGzP22OKLIJCchvMb80gB8:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 75% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.75
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
+drive:1qC46Z4Y97LSTWi1_tYmbbLU9JjxjB47F:
+  about: No GPS point in this photo
+  confidence: 0.38
+  credit: ''
+  guess: river rafting
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1qHGD5MCtg4xcTg4_0x15bPop80JEHADq:
   about: Nature PortAntonio One raft in river (Port Antonio) - Jamaica Tourist Board
     photo (matches your labelled photo, 92% alike)
@@ -7933,6 +11265,23 @@ drive:1qHOWQZTm6Z58JIChAOLrC_4tRNXNfJEV:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1qHUmpx2Ad9OGAHTvvWIkud45Fd4rdWFG:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 76% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.76
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1qI0fotf2OktM8QUOxRo03UevWRmOkQ9E:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 90%
     sure) - own photo
@@ -8001,6 +11350,23 @@ drive:1qQoswq-k26JoWKqttjbKqifHuLCK6abW:
   quality: 4
   runner_up: drinks
   series: own-ai-people
+drive:1qT9pHnZc1wgqpTpaMx6qt6Ue3DfHO1OW:
+  about: Jamaica jerk chicken food jerk food (recognised from the picture, 100% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: jerk chicken
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-jerk-chicken
 drive:1qgFasp_mLqLD_lM8h4ZfzJsA1_FmcYs5:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -8056,6 +11422,23 @@ drive:1qo8-rZ7DWS5ubA2Pom1rpIWR5119nxSv:
   quality: 4
   runner_up: beach
   series: own-ai-negril-cliffs
+drive:1quNRyowXm2AriYYVJDWbq-F_Kwa5EGRM:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 69% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.69
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
 drive:1qw-e1whJCG1BiEozBf0GGETJEnRRl1_5:
   about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
     (recognised from the picture, 76% sure) - own photo
@@ -8079,6 +11462,58 @@ drive:1qw-e1whJCG1BiEozBf0GGETJEnRRl1_5:
   quality: 3
   runner_up: food
   series: own-ai-bob-marley
+drive:1r03NN41mfyp-RihUlG9j9zeSaPEoP-mS:
+  about: Jamaica fruit market mango pineapple ackee food culture food (recognised
+    from the picture, 87% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - culture
+  - food
+  confidence: 0.87
+  credit: ''
+  kind: scenery
+  label: fruit
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-fruit
+drive:1r2ZqX7GuompB2Jnx-cfwnRKlFyUrpPYF:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 74% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.74
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
+drive:1r5iH7zG_JZsuUDsW55EXGiTgIKkFghT0:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 91% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.91
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: dunn's river falls
+  series: own-ai-attraction
 drive:1r8qGvpTmMEfuyPAZFTO4BSQMn2LCaMLZ:
   about: Arah Rides rental vehicle cars (recognised from the picture, 75% sure) -
     own photo
@@ -8114,6 +11549,24 @@ drive:1rEpa1Fvq-HsVrNtKWPxf_OpuDlKUKqdU:
   quality: 4
   runner_up: beach
   series: own-ai-drinks
+drive:1rFxR4IranQqWMaDu0TeMmgkdfQoWw2o9:
+  about: Jamaica sunrise morning dawn nature sunrise (recognised from the picture,
+    61% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - sunrise
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: sunrise
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-sunrise
 drive:1rPXZJhZtLCio5rpEGm0Jf1af1sbt3py5:
   about: Arah Rides rental vehicle cars (recognised from the picture, 99% sure) -
     own photo
@@ -8131,6 +11584,18 @@ drive:1rPXZJhZtLCio5rpEGm0Jf1af1sbt3py5:
   quality: 4
   runner_up: airport
   series: own-ai-rental-car
+drive:1rVE1KUpVagrFGYAtBwG6LqDCAW0yngHG:
+  about: No GPS point in this photo
+  confidence: 0.48
+  credit: ''
+  guess: reggae
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1rfAPiSwH56OtyQIGVggWo_sgSUj_75DN:
   about: Arah Rides rental vehicle cars (recognised from the picture, 86% sure) -
     own photo
@@ -8148,6 +11613,23 @@ drive:1rfAPiSwH56OtyQIGVggWo_sgSUj_75DN:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1rjKwz0D5MfU5U1uf_-0q8zZ9ZIdf3RZ2:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 98% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.98
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1roghMLbs5i_buzdMMBV_cPz4g4iwBldW:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -8343,6 +11825,23 @@ drive:1shbnOH754UlJc2e5HRfbjoK6x4_it-mC:
   quality: 3
   runner_up: beach
   series: own-ai-drinks
+drive:1sm12NMkhOhtdYzsvpA4EaMtTudB2C3vC:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    91% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.91
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-resort
 drive:1soUA2JWhvzeVXWSP038CmJR-butbK78R:
   about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
     picture, 100% sure) - own photo
@@ -8360,6 +11859,23 @@ drive:1soUA2JWhvzeVXWSP038CmJR-butbK78R:
   quality: 3
   runner_up: jamaican patty
   series: own-ai-food
+drive:1srjsbkPag0fDEXreJ8O_dasCHGGNzMNf:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 82% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.82
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-attraction
 drive:1t0Vkp2_7A2NAeJKRIdaW4YHTNOi0IDsi:
   about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
     nature (recognised from the picture, 73% sure) - own photo
@@ -8528,6 +12044,45 @@ drive:1tQUMRwHI-J5cLeJ_5OisbvS6Aj6cvdE7:
   quality: 4
   runner_up: attraction
   series: own-ai-negril-cliffs
+drive:1tRDCam18bvgzxKj6vaK5i8UgrW0MMvRv:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 75% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.75
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: negril cliffs
+  series: own-ai-attraction
+drive:1tTwGgbTWJvKyG5TihQoX3jN8CTW0tQIO:
+  about: Holland Bamboo Avenue, Black River road, St Elizabeth - bamboo tunnel attractions
+    nature road (recognised from the picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - nature
+  - road
+  coastal: false
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: holland bamboo
+  orientation: portrait
+  parish: St Elizabeth
+  people: false
+  place: Holland Bamboo
+  plate_visible: false
+  quality: 3
+  runner_up: road trip
+  series: own-ai-holland-bamboo
 drive:1tbFLpf5uFvz0_qvE9Cq-Cj9q4Ri6Dj8K:
   about: Arah Rides rental vehicle cars (recognised from the picture, 89% sure) -
     own photo
@@ -8545,6 +12100,23 @@ drive:1tbFLpf5uFvz0_qvE9Cq-Cj9q4Ri6Dj8K:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1te8iBJlSIv3Cg-2BYbT5PagFTtSojn4B:
+  about: Jamaica patty food beef patty coco bread food (recognised from the picture,
+    100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: jamaican patty
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: food
+  series: own-ai-jamaican-patty
 drive:1tfy0ZaJ6BoDk5R00petyLrSCHgYjJpqV:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 94% sure) - own photo
@@ -8563,6 +12135,18 @@ drive:1tfy0ZaJ6BoDk5R00petyLrSCHgYjJpqV:
   quality: 3
   runner_up: food
   series: own-ai-drinks
+drive:1thh1W6GDRsF6AwLI4VyrfIZTSLgKh8VE:
+  about: No GPS point in this photo
+  confidence: 0.51
+  credit: ''
+  guess: attraction
+  kind: unplaced
+  label: null
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1tpfVGZkFAnERkUsALoDQ-4A2mTHmkPIw:
   about: Arah Rides rental vehicle cars (recognised from the picture, 87% sure) -
     own photo
@@ -8580,6 +12164,24 @@ drive:1tpfVGZkFAnERkUsALoDQ-4A2mTHmkPIw:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1txsY2aeRlp-oZ6WACAFySTn43EJ2ixcK:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 81% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.81
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: market
+  series: own-ai-drinks
 drive:1u-yQUiohrxj7EzIGQpmFhLvCj-RWkR1B:
   about: Jamaica river rafting Martha Brae Rio Grande river attractions nature (recognised
     from the picture, 80% sure) - own photo
@@ -8667,6 +12269,24 @@ drive:1uBn_4UOUofWoWmoPlkERIKzmRUNcfqIG:
   quality: 4
   runner_up: rental car
   series: own-ai-road-trip
+drive:1uHVcp0s4q5Zx12HKDaXPZZTvsQ1k1xvP:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 61% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-beach
 drive:1uJsGZiSUq5Squdau-vQZEtpcMmDr7fXS:
   about: Montego Bay Hip Strip, St James (placed by GPS, 2.2 km away) - own photo
   auto: true
@@ -8722,6 +12342,23 @@ drive:1uLco_L3nf3OiJhw4ZiHqgB7ZxtVwsfBD:
   quality: 4
   runner_up: not usable
   series: own-ai-negril-cliffs
+drive:1uOHDOza9k6AT-i4_aQEviWF8TCTrnhgZ:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: bob marley
+  series: own-ai-food
 drive:1uQ3eIiZcV6gXlLnN3eBGgeHQb2i7bYoU:
   about: Jamaica beach sea sand coast beach (recognised from the picture, 62% sure)
     - own photo
@@ -8802,6 +12439,24 @@ drive:1ui5iZAlxuzOYygEgQYUGwMhjbhrCpCcQ:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1umq8_55CL_iFKbER3ttx8hFqLV6lv9pD:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.7
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-blue-mountains
 drive:1uqI1PV-umSvGxAmTrAxG_whyjECTgC-v:
   about: Arah Rides rental vehicle cars (recognised from the picture, 97% sure) -
     own photo
@@ -8864,6 +12519,57 @@ drive:1v0P0Bi4NNpOOKBWU4Wm22CnSvTaHGfhO:
   plate_visible: false
   quality: 4
   series: unplaced
+drive:1vArUJ5W7JYueGOSSyBMH2iE_koaanedf:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 84% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.84
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-attraction
+drive:1vCum_bIi_hTeigzVIlMLgS4gyXJdnG7A:
+  about: Jamaica attraction tour great house zipline attractions (recognised from
+    the picture, 53% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  confidence: 0.53
+  credit: ''
+  kind: scenery
+  label: attraction
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: waterfall
+  series: own-ai-attraction
+drive:1vIiWnb-fZJr35Wq0naJlakoAWpFK7tae:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 100% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 1.0
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1vLxptR2gPUKg6k4d2HH5xPNLAXl_tMk-:
   about: Salem, St Ann, St Ann (placed by GPS, 3.4 km away) - own photo
   auto: true
@@ -8897,6 +12603,40 @@ drive:1vRc3Si5eMOGWP9eCSoaS88S-d1A9qzTI:
   quality: 3
   runner_up: beach
   series: own-ai-attraction
+drive:1vTTP403ScDrxRnM-5BP3uwopzczt6C8M:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 84% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.84
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
+drive:1vZFVJFjnZkXK8PYtvgM81gxGr5uNJvpe:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 99% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.99
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1vaKG7ievTD-i7FPTj6jkR9xDpLEKMOAX:
   about: Arah Rides rental vehicle cars (recognised from the picture, 98% sure) -
     own photo
@@ -8931,6 +12671,23 @@ drive:1vhTZpff2Ztmy4W7Dwx41eKuHhYAQf4ik:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1voZFR2HtwT0GJ4NI9EUsDGeTAt7ELlGK:
+  about: Jamaica resort villa hotel pool stay accommodation (recognised from the picture,
+    97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - accommodation
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: resort
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-resort
 drive:1vqgV-_AxLEqhkg76HNDR0AfpQESEXTA9:
   about: Mandeville, Manchester (placed by GPS, 13.1 km away) - own photo
   auto: true
@@ -8980,6 +12737,63 @@ drive:1wBURO2r5HYLOAFDsUQEQAJWBt_BCbvwx:
   plate_visible: false
   quality: 4
   series: own-blue-mountains-foothills-202403
+drive:1wIfaFdMO0JQ4Z-mze_cD3us8MCBh_XIH:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 53% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.53
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-negril-cliffs
+drive:1wOLYH5dwgTVwlDd6pkgUmmu_OPKWKfJU:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 61% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.61
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: river rafting
+  series: own-ai-drinks
+drive:1wTHaWHbkkxA2t8ZI0PAx269kLHwlK5Wo:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 97% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.97
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jerk chicken
+  series: own-ai-food
 drive:1wWkBp8XAJ6cxC8JrLMEZk6K4lovBLI0M:
   about: Arah Rides rental vehicle cars (recognised from the picture, 79% sure) -
     own photo
@@ -9065,6 +12879,44 @@ drive:1wls4zAMtfVDwoPyB3b0lBpCb5TzXVwHK:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1wnUvZhSPDxq5bkFeJWbUMWersL834ymN:
+  about: DunnsRiverFalls0240e (Dunn's River Falls, Ocho Rios) - Jamaica Tourist Board
+    photo (matches your labelled photo, 92% alike)
+  ai: true
+  auto: true
+  confidence: 0.92
+  credit: ''
+  kind: scenery
+  label: matched
+  orientation: landscape
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 3
+  series: jtb-dunnsriverfalls
+drive:1wnqoHmCaNIIqZCsdvst3siCoYSpYDcsK:
+  about: Bob Marley Museum, Kingston - reggae culture attractions city culture music
+    (recognised from the picture, 56% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - city
+  - culture
+  - music
+  coastal: false
+  confidence: 0.56
+  credit: ''
+  kind: scenery
+  label: bob marley
+  orientation: portrait
+  parish: Kingston
+  people: false
+  place: Bob Marley Museum
+  plate_visible: false
+  quality: 3
+  runner_up: kingston
+  series: own-ai-bob-marley
 drive:1wqAJiMgJ_1Jja0_nicEDKSUIrFbjwGE3:
   about: Jamaica attraction tour great house zipline attractions (recognised from
     the picture, 81% sure) - own photo
@@ -9082,6 +12934,23 @@ drive:1wqAJiMgJ_1Jja0_nicEDKSUIrFbjwGE3:
   quality: 4
   runner_up: negril cliffs
   series: own-ai-attraction
+drive:1wtCjpFF7Z7o-_dGstb4-M_IVIJu2I9yR:
+  about: Jamaica food rice and peas oxtail ackee saltfish food (recognised from the
+    picture, 85% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - food
+  confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: food
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: jamaican patty
+  series: own-ai-food
 drive:1wwihPHyV8r25mWpi-bdKBT46sMf-jTS9:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 46% sure) - own photo
@@ -9109,6 +12978,24 @@ drive:1x0G_O0DKS-KGT45e6-5-2kwqRCQrBySN:
   - drinks
   - food
   confidence: 0.85
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
+drive:1x39bi3jN0TWc0_Ozs5ky809Dj7iIngel:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 82% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.82
   credit: ''
   kind: scenery
   label: drinks
@@ -9184,6 +13071,24 @@ drive:1xIFII5reLgACH5xRFq8A_B5tJ75lXOeE:
   plate_visible: false
   quality: 3
   series: unplaced
+drive:1xPFliRNb4edMr2HWMwN4X3A9DTrKNQjZ:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 67% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.67
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: resort
+  series: own-ai-drinks
 drive:1xSoXRwSILe5rvVoW-4hi6oyCT1HMLbRY:
   about: Brand MontegoBay DoctorsCaveBeach (Montego Bay) - Jamaica Tourist Board photo
     (matches your labelled photo, 91% alike)
@@ -9243,6 +13148,18 @@ drive:1xmsaQ1QNoW7QlCMJLRuP9OfwixCjIXKy:
   plate_visible: false
   quality: 4
   series: jtb-kingston-people
+drive:1xr3HTFPcVakcCGmow8E8fi9ZNZJevItr:
+  about: No GPS point in this photo
+  confidence: 0.46
+  credit: ''
+  guess: resort
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1xriYAAP2Iydpd4YVX3qmi7wMR50ahpRX:
   about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
     the picture, 57% sure) - own photo
@@ -9358,6 +13275,42 @@ drive:1y8_ZmXMXM_snPeBZNF2WgsDBbtRuVvY7:
   plate_visible: false
   quality: 4
   series: own-montego-bay-hip-strip-202403
+drive:1yDM3uEhQ9FsbLE6WddkT4jDTSTfDjGX6:
+  about: Jamaica beach sea sand coast beach (recognised from the picture, 48% sure)
+    - own photo
+  ai: true
+  auto: true
+  cats:
+  - beach
+  coastal: true
+  confidence: 0.48
+  credit: ''
+  kind: scenery
+  label: beach
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: drinks
+  series: own-ai-beach
+drive:1yMpVECXZ1arwc81tZjP7U6ia02KIKY3q:
+  about: Jamaica drinks rum punch coconut Red Stripe drinks food (recognised from
+    the picture, 74% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - drinks
+  - food
+  confidence: 0.74
+  credit: ''
+  kind: scenery
+  label: drinks
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: beach
+  series: own-ai-drinks
 drive:1yN_a31xCGbKlgg_rpU94dmeYIDEqTtMo:
   about: No GPS point in this photo
   confidence: 0.44
@@ -9387,6 +13340,58 @@ drive:1yP5NEz9WwwNTzbgqEfPh7-evBLLRuOp4:
   quality: 4
   runner_up: road trip
   series: own-ai-rental-car
+drive:1yRZ6gPGt6dd6JmdUGZp1gwKOOyMP_Lr0:
+  about: Negril cliffs West End, Westmoreland - lighthouse cliff attractions beach
+    nature (recognised from the picture, 86% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - attractions
+  - beach
+  - nature
+  coastal: true
+  confidence: 0.86
+  credit: ''
+  kind: scenery
+  label: negril cliffs
+  orientation: portrait
+  parish: Westmoreland
+  people: false
+  place: Negril
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-negril-cliffs
+drive:1yUmmRzS8odstPAQ9isz8jG-tORMhYRcZ:
+  about: Jamaica waterfall river nature nature waterfall (recognised from the picture,
+    81% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - waterfall
+  confidence: 0.81
+  credit: ''
+  kind: scenery
+  label: waterfall
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: people
+  series: own-ai-waterfall
+drive:1ybNY4eMv4DvLPsT4NC7Y51tMIdtCMzRu:
+  about: No GPS point in this photo
+  confidence: 0.46
+  credit: ''
+  guess: sunset
+  kind: unplaced
+  label: null
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  series: unplaced
 drive:1ym7Yr1oAbpIS50-Q1W-I0mddFqHfd3af:
   about: Arah Rides rental vehicle cars (recognised from the picture, 100% sure) -
     own photo
@@ -9553,6 +13558,24 @@ drive:1z6VUQrHrcaJkzg6WpUjPX4CH4uLZSNN7:
   quality: 3
   runner_up: road trip
   series: own-ai-rental-car
+drive:1zCWZPB2vmlUl_ta6RIyftNsbWDEEmyP2:
+  about: Jamaica Blue Mountains hills coffee mountain nature road (recognised from
+    the picture, 89% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - nature
+  - road
+  confidence: 0.89
+  credit: ''
+  kind: scenery
+  label: blue mountains
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 3
+  runner_up: attraction
+  series: own-ai-blue-mountains
 drive:1zETHtjnv4iYpDzMfWNeGPLfpxzkdJmm_:
   about: Jamaica road trip drive scenic road road (recognised from the picture, 100%
     sure) - own photo
