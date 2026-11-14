@@ -483,6 +483,13 @@ class Picker:
             return None
         if kind != "car" and too_old_looking(dest):
             log.info("skip %s: black-and-white or sepia look", item["id"]); return None
+        if kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
+            try:
+                from . import vision as _V
+                if not _V.jamaica_gate(str(dest), src.name + ":" + item["id"]):
+                    log.info("skip %s: Claude says it is not Jamaica", item["id"]); return None
+            except Exception as e:
+                log.warning("Jamaica check skipped: %s", e)
         hv = L.dhash(dest)
         why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
         if why:

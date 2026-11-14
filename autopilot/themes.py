@@ -91,6 +91,7 @@ def out_of_season(text, month):
 JUNK = re.compile(r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
                   r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
                   r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
+                  r"railroad|railway|rail yard|rail tracks|train station|subway|\bmetro\b|locomotive|jamaica station|jamaica avenue|jamaica plain|queens|new york|\bnyc\b|long island|lirr|brooklyn|manhattan|boston|"
                   r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)
 
 EVENT_THEMES = [(re.compile(r"fashion", re.I), "fashion"), (re.compile(r"tennis", re.I), "tennis")]

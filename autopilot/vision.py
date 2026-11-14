@@ -188,3 +188,31 @@ def claude_review(paths, model=None, batch=6):
         except Exception as e:
             log.warning("Claude review failed for a batch: %s", e); out += [None] * len(ch)
     return out
+
+
+_GATE = {}
+def jamaica_gate(path, key):
+    """Claude looks at a photo from the web and says whether it was taken in Jamaica. True = ok to use. Verdicts are kept in content/web_checked.json so a photo is only ever checked once.
+    No API key: returns True (the text rules still apply). Not Jamaica, unsure, or not usable: False."""
+    import os, json
+    from pathlib import Path
+    f = Path(os.environ.get("AUTOPILOT_ROOT") or ".") / "content" / "web_checked.json"
+    if not _GATE:
+        try: _GATE.update(json.loads(f.read_text()))
+        except Exception: pass
+    if key in _GATE:
+        return _GATE[key]
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return True
+    res = claude_review([path], batch=1)
+    r = (res or [None])[0]
+    if not r:
+        return True                                   # Claude could not be reached: do not block everything
+    ok = r.get("jamaica") in ("yes", "likely") and r.get("kind") != "not-usable"
+    _GATE[key] = ok
+    try:
+        f.parent.mkdir(parents=True, exist_ok=True); f.write_text(json.dumps(_GATE, indent=0))
+    except Exception:
+        pass
+    if not ok: log.info("Claude says not Jamaica / not usable: %s (%s)", key, r.get("what", ""))
+    return ok
