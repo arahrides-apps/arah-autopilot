@@ -282,6 +282,13 @@ def moment_story(b, post, pages, m):
             if c:
                 cover = T.ccover(c.path, m.get("k", ""), m.get("h", ""), "Swipe for the details."); post.setdefault("flags", []).append(c.flags[0])
         return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), photos, typ="moment")
+    if m.get("theme"):                                       # a seasonal campaign (Christmas...): its own photos on the cover and slides
+        ph = [b.pk.theme_photo(m["theme"]) for _ in range(3)]
+        for x in ph:
+            if x: post.setdefault("flags", []).append(x.flags[0])
+        cover = T.ccover(ph[0].path, m.get("k", ""), m.get("h", ""), "Swipe for the plan.") if ph[0] else pages[0][0]
+        its = [(m.get("s1", "Plan your wheels."), m["b"]), ("Pick up where you land.", PICKUPS), price_slide(b)]
+        return _slides(b, post, cover, its, b.rng.choice(CLOSE_GENERAL), {0: ph[1], 1: ph[2]} if ph[1] and ph[2] else {}, typ=_T)
     items = [("Plan your wheels.", "Cars are limited around busy dates. Reserve yours at arahrides.com."),
              ("Pick up where you land.", PICKUPS), ("Book in 3 steps.", BOOK3)]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)

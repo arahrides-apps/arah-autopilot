@@ -25,6 +25,9 @@ ATTRACTIONS = {
 
 # theme -> (queries, regex the photo description must match, people allowed)
 THEMES = {
+    "xmas": (["Jamaica Christmas", "Jamaica Christmas Grand Market", "Jamaica Christmas family beach", "Jamaica sorrel Christmas drink", "Jamaica Christmas lights Kingston",
+              "Jamaica Jonkanoo", "Jamaica family reunion holiday", "Jamaica Christmas dinner"],
+             r"christmas|xmas|santa|grand market|sorrel|jonkanoo|holiday|lights|family|reunion|gift|festive", True),
     "fashion": (["Jamaica fashion week runway", "Jamaica fashion show models", "Ocho Rios fashion", "Jamaican designer runway"],
                 r"fashion|runway|model|designer|style", True),
     "tennis": (["tennis court Jamaica", "tennis Montego Bay", "Half Moon Jamaica tennis", "tennis court tropical Jamaica"],
