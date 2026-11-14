@@ -1,0 +1,19 @@
+# Jamaica Fashion Week 2026 (Nov 19-22, Ocho Rios). Upload the two event photos to photos/jamaica/ with these exact names.
+fashion_week_01_runway_model_green_outfit:
+  about: 'Jamaica Fashion Week 2026, Ocho Rios: a model walking the runway in a green floral top and wide-leg trousers'
+  kind: scenery
+  people: true
+  plate_visible: false
+  quality: 5
+  series: fashion-week-01
+  orientation: portrait
+  place: Ocho Rios
+fashion_week_02_guests_at_fashion_week_banner:
+  about: 'Jamaica Fashion Week 2026, Ocho Rios: two guests posing in front of the event banner, November 19 to 22'
+  kind: scenery
+  people: true
+  plate_visible: false
+  quality: 4
+  series: fashion-week-02
+  orientation: portrait
+  place: Ocho Rios

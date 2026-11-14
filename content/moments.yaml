@@ -14,12 +14,6 @@
   h: Food, rum and reggae in Treasure Beach.
   b: Nov 6 to 8 on the south coast. Jamaica has plenty going on, so book your car early.
   badge: NOV 6–8
-- date: '2026-11-19'
-  lead_days: 5
-  k: JAMAICA INTERNATIONAL FASHION WEEK
-  h: Fashion week in Ocho Rios.
-  b: Nov 19 to 22. Rent a car and see the north coast. Book before December sells out.
-  badge: NOV 19–22
 - date: '2026-11-26'
   lead_days: 2
   k: THANKSGIVING WEEK
@@ -46,7 +40,7 @@
   lead_days: 5
   k: DECEMBER IN JAMAICA
   h: December is packed.
-  b: Racing at Caymanas Park Dec 5, Reggae Marathon Dec 6, Kingston International Festival Dec 6 to 13. Cars are limited. Book now.
+  b: Racing at Caymanas Park Dec 4 and 5, Reggae Marathon Dec 6, Kingston International Festival Dec 6 to 13. Cars are limited. Book now.
   badge: DEC 5–13
 - date: '2026-12-20'
   lead_days: 3
@@ -121,8 +115,8 @@
 # Dates are from the organisers' announcements (checked Nov 2026). Add your own: date = first day, end = last day, badge = short date label, where = town/venue,
 # place = a place in stories.yaml (used for photos and the drive instructions), loc = place name for the Instagram location tag.
 - {event: true, date: '2026-11-11', end: '2026-11-16', k: JAMAICA CUP TENNIS, h: Jamaica Cup tennis at Half Moon., b: 'Six days of tennis in Montego Bay. Pick up at MBJ and drive there your way.', badge: NOV 11–16, where: 'Half Moon, Montego Bay', place: montego bay, loc: Montego Bay}
-- {event: true, date: '2026-11-19', end: '2026-11-22', k: JAMAICA INTERNATIONAL FASHION WEEK, h: Fashion week in Ocho Rios., b: 'Runway shows and style on the north coast. Rent a car and see the rest of Ocho Rios too.', badge: NOV 19–22, where: 'Ocho Rios, St. Ann', place: ocho rios, loc: Ocho Rios}
-- {event: true, date: '2026-12-05', end: '2026-12-05', k: MOUTTET MILE, h: Race day at Caymanas Park., b: 'The Mouttet Mile Invitational is Saturday Dec 5. Pick up in Kingston and drive to the track.', badge: DEC 5, where: 'Caymanas Park, St. Catherine', place: kingston, loc: Kingston}
+- {event: true, date: '2026-11-19', end: '2026-11-22', k: JAMAICA FASHION WEEK 2026, h: Jamaica Fashion Week in Ocho Rios., b: 'Runway shows, live entertainment, and music and cultural experiences, Nov 19 to 22. Rent a car and see the rest of Ocho Rios too.', badge: NOV 19–22, where: 'Ocho Rios, St. Ann', place: ocho rios, loc: Ocho Rios}
+- {event: true, date: '2026-12-04', end: '2026-12-05', k: MOUTTET MILE, h: The Mouttet Mile at Caymanas Park., b: 'Two days of racing and Dancehall Glam on Dec 4 and 5, with a US$300,000 purse. Pick up in Kingston and drive to the track. Must be 18 or older to bet or play.', note: 'Betting and gaming are 18 and older.', badge: DEC 4–5, where: 'Caymanas Park, Portmore, St. Catherine', place: kingston, loc: Kingston}
 - {event: true, date: '2026-12-06', end: '2026-12-06', k: REGGAE MARATHON, h: Reggae Marathon weekend., b: 'Run, cheer or just enjoy the music on Sunday Dec 6. Book your car early: December fills up.', badge: DEC 6, where: 'Check reggaemarathon.com for the start line', place: negril, loc: Jamaica}
 - {event: true, date: '2027-01-01', end: '2027-01-01', k: FRENCHMEN PARTY CLIMAX, h: Start 2027 with a party., b: 'Frenchmen Party Climax is Friday Jan 1 at Caymanas Golf Course. Plan your ride before you land.', badge: JAN 1, where: 'Caymanas Golf Course, Kingston', place: kingston, loc: Kingston}
 - {event: true, date: '2027-01-06', end: '2027-01-06', k: ACCOMPONG MAROON FESTIVAL, h: Accompong Maroon Festival., b: 'Drumming, history and food in the Maroon town of Accompong, in the hills of St. Elizabeth. Go by road, on your own timetable.', badge: JAN 6, where: 'Accompong, St. Elizabeth', place: mandeville, loc: Jamaica}
