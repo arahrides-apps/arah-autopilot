@@ -1,6 +1,12 @@
 name: Send test to Make
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "What to send: a carousel (photo fields) or a reel (video fields)"
+        type: choice
+        options: [carousel, reel]
+        default: carousel
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,4 +21,4 @@ jobs:
           POST_WEBHOOK_URL: ${{ secrets.POST_WEBHOOK_URL }}
           MEDIA_BRANCH: ${{ github.ref_name }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python -m autopilot test-webhook
+        run: python -m autopilot test-webhook ${{ inputs.kind == 'reel' && '--reel' || '' }}

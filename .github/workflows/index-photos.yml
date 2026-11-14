@@ -24,6 +24,15 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Picture recognition (CPU)
         run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install transformers
+      - name: Check what is installed
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          echo "files in autopilot:"; ls autopilot | tr '\n' ' '; echo
+          echo "indexer has deep pass (should be >=1): $(grep -c _retag autopilot/indexer.py || true)"
+          echo "vision.py present: $(test -f autopilot/vision.py && echo yes || echo NO)"
+          python -c "import torch, transformers; print('torch', torch.__version__, 'transformers', transformers.__version__)" || echo "TORCH/TRANSFORMERS NOT INSTALLED"
+          echo "Claude API key set: $(test -n "$ANTHROPIC_API_KEY" && echo yes || echo NO)"
       - name: Index photos (GPS, picture recognition, web comparison, Claude review)
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
