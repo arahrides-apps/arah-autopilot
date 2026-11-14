@@ -10,7 +10,16 @@ W, H, FPS = 1080, 1920, 25
 def _have_ffmpeg():
     return shutil.which("ffmpeg") is not None
 
-def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8):
+MOTIONS = {  # per-slide camera moves: z = zoom expression, x/y = pan expression
+    "in":    ("1+0.07*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),
+    "out":   ("1.09-0.07*on/{n}", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"),
+    "left":  ("1.08", "(iw-iw/zoom)*(1-on/{n})", "ih/2-(ih/zoom/2)"),
+    "right": ("1.08", "(iw-iw/zoom)*on/{n}", "ih/2-(ih/zoom/2)"),
+    "up":    ("1.08", "iw/2-(iw/zoom/2)", "(ih-ih/zoom)*(1-on/{n})"),
+}
+STYLES = {"classic": ["in"], "dynamic": ["in", "right", "out", "left", "up"], "punchy": ["in", "out"]}
+
+def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8, style="classic"):
     """images: list of image paths (1080x1350 slides). Writes an H.264 MP4, 1080x1920, no audio (add trending sound in the Instagram app)."""
     n = len(images); out = Path(out); out.parent.mkdir(parents=True, exist_ok=True)
     cmd = ["ffmpeg", "-y", "-loglevel", "error"]
@@ -20,9 +29,11 @@ def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8):
     f = []
     for i in range(n):
         frames = int((per_slide + fade + (hold_last if i == n - 1 else 0)) * FPS)
+        mz, mx, my = MOTIONS[STYLES.get(style, STYLES["classic"])[i % len(STYLES.get(style, STYLES["classic"]))]]
+        mz, mx, my = (e.replace("{n}", str(frames)) for e in (mz, mx, my))
         f.append(f"[{i}:v]split[b{i}][f{i}];"
                  f"[b{i}]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=40:4,eq=brightness=-0.08[bg{i}];"
-                 f"[f{i}]scale=2160:-2,zoompan=z='1+0.07*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x1350:fps={FPS}[fg{i}];"
+                 f"[f{i}]scale=2160:-2,zoompan=z='{mz}':x='{mx}':y='{my}':d=1:s={W}x1350:fps={FPS}[fg{i}];"
                  f"[bg{i}][fg{i}]overlay=0:(H-h)/2,format=yuv420p,setsar=1[v{i}]")
     last, t = "v0", per_slide
     for i in range(1, n):
@@ -47,15 +58,22 @@ def add_reels(cfg, posts, date):
     notes = []; lib = sorted(f for d in ("content/reels", "reels") for f in (Q.ROOT / d).glob("*_9x16.mp4")) if rc.get("library", True) else []
     cand = [p for p in posts if len(p.get("images", [])) >= 4 and p["type"] in REEL_TYPES and not p.get("single") and not any("Illustration" in f for f in p.get("flags", []))]
     step = max(1, len(cand) // max(1, n)); pick = cand[::step][:n]
+    ev = [p for p in posts if p.get("event_reel_src")][:1] or [p for p in posts if p.get("event_reel_flag") and p in cand][:1]                   # an event's own video comes first (the last week before the event)
+    pick = ev + [p for p in pick if p not in ev][:max(0, n - len(ev))] if ev else pick
     used_lib = False
     for p in pick:
         rel = p["images"][0].rsplit("_", 1)[0] + ".mp4"
         try:
-            if lib and not used_lib and p["type"] in ("moment", "chat", "tip"):      # one animated ad per day replaces a plain slideshow
+            if p.get("event_reel_src"):
+                shutil.copy(p["event_reel_src"], Q.DOCS / rel); p["reel_kind"] = "event video"
+            elif lib and not used_lib and p["type"] in ("moment", "chat", "tip"):      # one animated ad per day replaces a plain slideshow
                 seed = int(hashlib.md5(str(date).encode()).hexdigest()[:4], 16)
                 shutil.copy(lib[seed % len(lib)], Q.DOCS / rel); used_lib = True; p["reel_kind"] = "animated ad"
             else:
-                make_reel([Q.DOCS / i for i in p["images"]], Q.DOCS / rel); p["reel_kind"] = "slideshow reel"
+                seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:4], 16)
+                sty = ("dynamic", "punchy", "dynamic", "classic")[seed % 4]
+                make_reel([Q.DOCS / i for i in p["images"]], Q.DOCS / rel, per_slide=1.9 if sty == "punchy" else 2.4, style=sty)
+                p["reel_kind"] = "animated slideshow (%s)" % sty
             p["reel"] = rel
             p.setdefault("flags", []).append("Goes out as a Reel (%s): approve as usual. Add trending audio in Instagram if you like." % p["reel_kind"])
         except Exception as e:

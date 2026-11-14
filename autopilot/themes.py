@@ -25,6 +25,8 @@ ATTRACTIONS = {
 
 # theme -> (queries, regex the photo description must match, people allowed)
 THEMES = {
+    "fashion": (["Jamaica fashion week runway", "Jamaica fashion show models", "Ocho Rios fashion", "Jamaican designer runway"],
+                r"fashion|runway|model|designer|style", True),
     "tennis": (["tennis court Jamaica", "tennis Montego Bay", "Half Moon Jamaica tennis", "tennis court tropical Jamaica"],
                r"tennis|court|racquet|net", False),
     "road": (["Holland Bamboo Jamaica", "Reach Falls Jamaica", "Jamaica highway road", "Jamaica road trip", "Jamaica roadside fruit stand", "Jamaica coconut water vendor",
@@ -75,6 +77,7 @@ SEASONAL = [   # (words in the photo's name/description, months it may be used)
     (re.compile(r"independence|emancipation day|heroes day", re.I), {7, 8, 10}),
     (re.compile(r"reggae sumfest|sumfest", re.I), {7, 8}),
     (re.compile(r"reggae marathon", re.I), {11, 12}),
+    (re.compile(r"jamaica cup", re.I), {11}), (re.compile(r"fashion week", re.I), {11}),
     (re.compile(r"spring break|summer", re.I), {3, 4, 5, 6, 7, 8}),
 ]
 def out_of_season(text, month):
@@ -87,7 +90,7 @@ JUNK = re.compile(r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|
                   r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
                   r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)
 
-EVENT_THEMES = [(re.compile(r"tennis", re.I), "tennis")]
+EVENT_THEMES = [(re.compile(r"fashion", re.I), "fashion"), (re.compile(r"tennis", re.I), "tennis")]
 def event_theme(*texts):
     t = " ".join(texts)
     for rx, th in EVENT_THEMES:

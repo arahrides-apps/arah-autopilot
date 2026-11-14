@@ -209,8 +209,56 @@ def trust_story(b, post, pages, e):
              ("Say Hi to Winston.", "Questions? Winston answers on WhatsApp, 24/7.")]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)
 
+def _event_files(m, pattern):
+    from pathlib import Path as _P
+    import re as _re
+    root = _P(__file__).resolve().parent.parent / "content"
+    k = (m.get("k", "") + " " + m.get("h", "")).lower()
+    out = []
+    for f in sorted(root.glob(pattern)):
+        stem = _re.sub(r"_\d+$", "", f.stem.split("_", 1)[1] if pattern.startswith("poster") else f.stem)
+        stem = stem.replace("poster_", "").replace("event_", "")
+        if stem.replace("_", " ") in k:
+            out.append(f)
+    return out
+
+def _event_poster(m):
+    """content/poster_<event words>[_N].jpg are the event's finished posters (for example poster_jamaica_cup.jpg, poster_mouttet_mile_1.jpg)."""
+    return _event_files(m, "poster_*.jpg")
+
+def _event_reel(post, m):
+    """content/reels/event_<event words>.mp4 is that event's own video. It goes out as the Reel in the final week before the event and during it."""
+    import datetime as _dt
+    vids = _event_files(m, "reels/event_*.mp4")
+    try:
+        left = (_dt.date.fromisoformat(str(m["date"])) - _dt.date.fromisoformat(post["date"])).days
+    except Exception:
+        return
+    if left <= 7:
+        post["event_reel_flag"] = True               # no video supplied: still goes out as an animated slideshow Reel
+    if left <= 7 and vids:
+        post["event_reel_src"] = str(vids[0])
+
 def moment_story(b, post, pages, m):
     _T = "moment"
+    posters = _event_poster(m) if m.get("event") else []
+    if m.get("event") and len(posters) >= 2:                  # several finished posters: they are the first slides, then how to get there, the price, book
+        key, stp = find_place(m.get("place", ""))
+        n = len(posters[:3]); total = n + 3
+        drive = (stp or {}).get("drive") or PICKUPS
+        out = [(T.posterfull(f), 1350) for f in posters[:3]]
+        out.append((T.slide(n + 1, total, "Drive there.", drive + " " + m.get("note", ""), alt=False), 1350))
+        ph, pb = price_slide(b)
+        out.append((T.slide(n + 2, total, ph, pb, alt=True), 1350))
+        cl = b.rng.choice(CLOSE_GENERAL)
+        out.append((T.slide(total, total, cl[0], cl[1], alt=False, cta=True), 1350))
+        post.setdefault("flags", []).append("Slides 1 to %d are the supplied event posters, unchanged" % n)
+        _event_reel(post, m)
+        return out
+    if m.get("event") and len(posters) == 1:
+        pages = [(T.posterslide(posters[0], m.get("k", ""), m.get("h", ""), "Pick up at MBJ and drive there your way."), 1350)] + list(pages[1:])
+        post.setdefault("flags", []).append("Cover is the supplied event poster")
+        _event_reel(post, m)
     if m.get("event"):                                       # an upcoming event: what, when/where, how to drive there, the price, book
         key, stp = find_place(m.get("place", ""))
         items = [("What is on.", m["b"]), ("When and where.", f"{m['badge'].title().replace('–', ' to ')}. {m['where']}."),
@@ -227,7 +275,13 @@ def moment_story(b, post, pages, m):
                 if i in photos: continue
                 x = b.story_photo(post, key)
                 if x: photos[i] = x
-        return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), photos, typ="moment")
+        _event_reel(post, m)
+        cover = pages[0][0]
+        if et:
+            c = b.pk.theme_photo(et)
+            if c:
+                cover = T.ccover(c.path, m.get("k", ""), m.get("h", ""), "Swipe for the details."); post.setdefault("flags", []).append(c.flags[0])
+        return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), photos, typ="moment")
     items = [("Plan your wheels.", "Cars are limited around busy dates. Reserve yours at arahrides.com."),
              ("Pick up where you land.", PICKUPS), ("Book in 3 steps.", BOOK3)]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)

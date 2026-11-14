@@ -399,6 +399,13 @@ class Picker:
         self.cfg, self.led, self.today, self.rng = cfg, ledger, today, rng
         self.cache = Path(cache or ROOT / "cache")
         self.meta = dict(load_yaml("photo_meta.yaml"))
+        for f in sorted((ROOT / "content").glob("photo_meta_*.yaml")):          # extra hand-made label files (e.g. photo_meta_jamaica_cup.yaml); the auto file is read below
+            if f.name != "photo_meta_auto.yaml":
+                try:
+                    for k, v in (load_yaml(f.name) or {}).items():
+                        self.meta.setdefault(k, v)
+                except Exception:
+                    pass
         try:
             for k, v in (load_yaml("photo_meta_auto.yaml") or {}).items():      # labels made from each photo's GPS point (index-photos); hand labels win
                 self.meta.setdefault(k, v)

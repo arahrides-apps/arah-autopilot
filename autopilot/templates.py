@@ -238,6 +238,22 @@ def ccover(path, k, h, s, pos="50% 50%"):
                 f'<div style="position:absolute;left:64px;right:64px;bottom:90px;display:flex;flex-direction:column;gap:20px">{chip(k, Y, K)}'
                 f'<h1 style="margin:0;{HD};font-size:{fs(h, 132)}px;line-height:.96;color:{C}">{hl(h, Y)}</h1><div style="font-size:34px;color:{C}">{E(s)}</div></div>', 1350, K, C)
 
+def posterfull(path):
+    """A finished 4:5 poster used exactly as supplied (full slide, nothing added)."""
+    G, Y, C, K = c()
+    return wrap(f'<img src="{Path(path).resolve().as_uri()}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">', 1350, K, C)
+
+def posterslide(path, k="", h="", s=""):
+    """A finished event poster as the cover: shown whole on a blurred copy of itself, with the brand mark and SWIPE on top."""
+    G, Y, C, K = c()
+    uri = Path(path).resolve().as_uri()
+    return wrap(f'<img src="{uri}" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(38px) brightness(.55)">'
+                f'<img src="{uri}" style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);width:1080px;box-shadow:0 20px 60px rgba(0,0,0,.45)">'
+                f'<div style="position:absolute;left:64px;right:64px;top:56px;display:flex;justify-content:space-between;align-items:center">{mark(C)}'
+                f'<div style="background:{Y};color:{K};font-size:24px;font-weight:800;letter-spacing:3px;padding:14px 28px;border-radius:40px">SWIPE →</div></div>'
+                + (f'<div style="position:absolute;left:64px;right:64px;bottom:96px;display:flex;flex-direction:column;gap:20px">{chip(k, Y, K)}'
+                   f'<h1 style="margin:0;{HD};font-size:{fs(h, 112)}px;line-height:.98;color:{C}">{hl(h, Y)}</h1><div style="font-size:34px;color:{C}">{E(s)}</div></div>' if h else ""), 1350, K, C)
+
 def ccover_plain(k, h, s):
     G, Y, C, K = c()
     return col(mark(Y, "SWIPE →") + f'<div style="flex-grow:1"></div>{chip(k, Y, K)}'
