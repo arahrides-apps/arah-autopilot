@@ -98,9 +98,9 @@ locations:
   treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 reels:
-  per_day: 0                       # (set to 4 tonight) this many of each day's carousels go out as Reels (video). 0 = none
+  per_day: 6                       # this many of each day's carousels go out as Reels (video). 0 = none
   library: true                   # one a day uses an animated ad from content/reels/
-  publish_as_reel: false          # true = post the video. Turn on only after the Make scenario has a Reel branch (see SETUP); false = still post the carousels
+  publish_as_reel: true            # true = post the video as a Reel (Make has the Reel route). false = post the carousels instead
 
 photos:
   reuse_days: 90                   # the same photo is never used again within this many days
