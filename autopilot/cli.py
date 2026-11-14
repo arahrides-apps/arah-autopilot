@@ -7,7 +7,7 @@ def main(argv=None):
     g = sub.add_parser("generate"); g.add_argument("--days", type=int); g.add_argument("--no-render", action="store_true")
     r = sub.add_parser("regenerate"); r.add_argument("--from", dest="start"); r.add_argument("--no-render", action="store_true"); r.add_argument("--wipe", action="store_true", help="throw away every post not yet published, approved ones too, and start fresh")
     p = sub.add_parser("publish"); p.add_argument("--dry-run", action="store_true"); p.add_argument("--catch-up", action="store_true", help="post every approved due post now, ignoring the 20-minute spacing")
-    sub.add_parser("recaption"); rs = sub.add_parser("resend"); rs.add_argument("--since", required=True, help="e.g. 2026-11-01T08:00 (Jamaica time)"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("index-photos"); sub.add_parser("status"); sub.add_parser("test-webhook")
+    sub.add_parser("recaption"); rs = sub.add_parser("resend"); rs.add_argument("--since", required=True, help="e.g. 2026-11-01T08:00 (Jamaica time)"); sub.add_parser("refresh-token"); sub.add_parser("prune"); sub.add_parser("index-photos"); sub.add_parser("status"); tw = sub.add_parser("test-webhook"); tw.add_argument("--reel", action="store_true", help="send a sample reel (media_type REELS + video_url) so Make learns those fields")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     cfg = config.load()
@@ -54,8 +54,14 @@ def main(argv=None):
         urls = [base + i for i in p["images"][:6]]
         while len(urls) < 6:               # pad to 6 so Make learns every carousel field (test message only)
             urls.append(urls[len(urls) % len(p["images"])])
-        WebhookPoster(cfg).post(urls, "TEST ONLY - this is a connection test from Arah Autopilot. Do not publish.", "test", meta={"id": "TEST", "slot": ""})
-        print("Test sent to Make with image", urls[0])
+        wp = WebhookPoster(cfg); wp.check_live = False
+        sample = {"id": "TEST", "slot": "", "location": {"name": "Negril, Jamaica", "id": "110074689016001"}}
+        if a.reel:
+            wp.post_reel(base + "reels/test.mp4", "TEST ONLY - sample Reel from Arah Autopilot. Do not publish.", meta=sample)
+            print("Sample REEL sent to Make (media_type, video_url, image_count 0, location)")
+        else:
+            wp.post(urls, "TEST ONLY - this is a connection test from Arah Autopilot. Do not publish.", "test", meta=sample)
+            print("Test sent to Make with image", urls[0])
     elif a.cmd == "refresh-token":
         from .instagram import refresh_token
         tok, exp = refresh_token(cfg)
