@@ -1101,8 +1101,8 @@
  },
  "2026-11-14_1800_experience": {
   "status": "retrying",
-  "at": "2026-11-14T18:00:05.178656-05:00",
+  "at": "2026-11-14T18:08:58.379272-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_1800_experience.mp4",
-  "tries": 1
+  "tries": 2
  }
 }
