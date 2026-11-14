@@ -507,7 +507,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         if at <= now or hhmm in skip:
             continue
         typ = typ0; cur = (mom, left)
-        if events and idx in ev_slots and (ev_slots.index(idx) == 0 or len(events) > 1):
+        if events and idx in ev_slots and date.weekday() in cfg.get("event_days", range(7)) and (ev_slots.index(idx) == 0 or len(events) > 1):
             k = ev_slots.index(idx); cur = events[(date.toordinal() + k) % len(events)]; typ = "moment"
         elif mom and typ0 == "tip" and not used_mom:
             typ, used_mom = "moment", True
@@ -529,7 +529,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 nt = FALLBACK.get(t)
                 b.notes.append(f"No fresh photo for a {t} post on {date}: made a {nt} post instead.")
                 t = nt; post["type"] = nt; post["id"] = f"{date}_{hhmm.replace(':', '')}_{nt}"
-        if idx in cfg.get("single_slots", []) and len(pages) == 1:
+        if idx in cfg.get("single_slots", []) and len(pages) == 1 and date.toordinal() % 5 < cfg.get("single_days_per_5", 5):
             post["single"] = True                       # a deliberate single-picture post (about 20% of the day), not turned into a carousel
         elif cfg.get("all_carousels", True) and post["type"] != "carousel" and (len(pages) == 1 or post.get("story_done")):
             ol = None
