@@ -155,7 +155,7 @@ class DayBuilder:
             ph = self.pk.car(tag="big")
             if ph:
                 e = self.pick("hero_big")
-        if not ph and self.pk.web and self.rng.random() < self.cfg["photos"].get("stock_car_share", 0.25):
+        if not ph and self.pk.web and self.cfg["photos"].get("stock_composites", False) and self.rng.random() < self.cfg["photos"].get("stock_car_share", 0.25):
             ph = self.pk.car_stock(self.cfg["photos"].get("fleet_models", []))      # a clean stock photo of one of our models...
             if ph:
                 comp, bg = self.pk.composite_car(ph)                                 # ...placed on a real Jamaica background
