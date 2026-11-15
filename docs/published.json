@@ -1139,15 +1139,20 @@
   "permalink": ""
  },
  "2026-11-15_0600_place": {
-  "status": "failed",
-  "at": "2026-11-15T09:58:27.018531-05:00",
-  "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-15/2026-11-15_0600_place.mp4",
-  "tries": 3
+  "status": "skipped",
+  "at": "2026-11-15T10:03:29.072006-05:00",
+  "note": "missed its window"
  },
  "2026-11-15_0800_trip": {
   "status": "failed",
-  "at": "2026-11-15T09:58:27.018531-05:00",
+  "at": "2026-11-15T10:03:29.072006-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-15/2026-11-15_0800_trip.mp4",
   "tries": 3
+ },
+ "2026-11-15_1000_experience": {
+  "status": "published",
+  "at": "2026-11-15T10:03:29.072006-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
