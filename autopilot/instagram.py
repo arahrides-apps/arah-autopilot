@@ -83,7 +83,8 @@ def wait_live(urls, session=None, tries=24, pause=10):
         for n in range(tries):
             try:
                 r = s.get(u, timeout=20, stream=True)
-                ok = r.status_code == 200 and r.headers.get("content-type", "").lower().startswith("image/")
+                ct = r.headers.get("content-type", "").lower()
+                ok = r.status_code == 200 and (ct.startswith("image/") or ct.startswith("video/") or (u.lower().split("?")[0].endswith(".mp4") and ct.startswith(("application/octet-stream", "binary/"))))
                 r.close()
             except requests.RequestException:
                 ok = False
