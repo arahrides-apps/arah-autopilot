@@ -1117,7 +1117,7 @@
  },
  "2026-11-14_2200_trust": {
   "status": "failed",
-  "at": "2026-11-14T23:26:05.820439-05:00",
+  "at": "2026-11-14T23:31:08.148740-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_2200_trust.mp4",
   "tries": 3
  }
