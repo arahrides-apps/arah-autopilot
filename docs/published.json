@@ -1140,14 +1140,14 @@
  },
  "2026-11-15_0600_place": {
   "status": "failed",
-  "at": "2026-11-15T08:10:03.604872-05:00",
+  "at": "2026-11-15T08:18:56.392155-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-15/2026-11-15_0600_place.mp4",
   "tries": 3
  },
  "2026-11-15_0800_trip": {
   "status": "retrying",
-  "at": "2026-11-15T08:10:03.604872-05:00",
+  "at": "2026-11-15T08:18:56.392155-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-15/2026-11-15_0800_trip.mp4",
-  "tries": 2
+  "tries": 3
  }
 }
