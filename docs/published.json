@@ -1101,8 +1101,19 @@
  },
  "2026-11-14_1800_experience": {
   "status": "failed",
-  "at": "2026-11-14T19:58:00.792627-05:00",
+  "at": "2026-11-14T20:03:03.574182-05:00",
   "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_1800_experience.mp4",
   "tries": 3
+ },
+ "2026-11-14_1600_carousel": {
+  "status": "skipped",
+  "at": "2026-11-14T20:03:03.574182-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-14_2000_qa": {
+  "status": "published",
+  "at": "2026-11-14T20:03:03.574182-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
