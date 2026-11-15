@@ -1137,5 +1137,11 @@
   "at": "2026-11-15T04:02:49.718486-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-15_0600_place": {
+  "status": "retrying",
+  "at": "2026-11-15T06:03:42.746500-05:00",
+  "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-15/2026-11-15_0600_place.mp4",
+  "tries": 1
  }
 }
