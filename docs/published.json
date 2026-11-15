@@ -1116,14 +1116,19 @@
   "permalink": ""
  },
  "2026-11-14_2200_trust": {
-  "status": "failed",
-  "at": "2026-11-15T01:57:30.940534-05:00",
-  "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_2200_trust.mp4",
-  "tries": 3
+  "status": "skipped",
+  "at": "2026-11-15T02:02:33.220090-05:00",
+  "note": "missed its window"
  },
  "2026-11-15_0000_car_hero": {
   "status": "published",
   "at": "2026-11-15T00:01:21.331755-05:00",
+  "media_id": "webhook",
+  "permalink": ""
+ },
+ "2026-11-15_0200_offer": {
+  "status": "published",
+  "at": "2026-11-15T02:02:33.220090-05:00",
   "media_id": "webhook",
   "permalink": ""
  }
