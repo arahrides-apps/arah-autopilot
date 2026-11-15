@@ -1100,10 +1100,9 @@
   "permalink": ""
  },
  "2026-11-14_1800_experience": {
-  "status": "failed",
-  "at": "2026-11-14T21:58:54.687091-05:00",
-  "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_1800_experience.mp4",
-  "tries": 3
+  "status": "skipped",
+  "at": "2026-11-14T22:03:57.702577-05:00",
+  "note": "missed its window"
  },
  "2026-11-14_1600_carousel": {
   "status": "skipped",
@@ -1115,5 +1114,11 @@
   "at": "2026-11-14T20:03:03.574182-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-14_2200_trust": {
+  "status": "retrying",
+  "at": "2026-11-14T22:03:57.702577-05:00",
+  "note": "picture not online yet, will retry: https://raw.githubusercontent.com/arahrides-apps/arah-autopilot/main/docs/media/2026-11-14/2026-11-14_2200_trust.mp4",
+  "tries": 1
  }
 }
