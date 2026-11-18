@@ -1351,5 +1351,11 @@
   "at": "2026-11-18T04:03:04.468292-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-18_0600_place": {
+  "status": "published",
+  "at": "2026-11-18T06:03:49.782742-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
