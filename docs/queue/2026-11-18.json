@@ -455,10 +455,9 @@
    "slot": "2026-11-18T22:00:00-05:00",
    "type": "trust",
    "flags": [
-    "Slide photo (group): Arah Rides",
-    "Slide photo (family): Arah Rides",
     "Slide photo (road): Arah Rides",
-    "Goes out as a Reel (animated slideshow (punchy)): approve as usual. Add trending audio in Instagram if you like."
+    "Slide photo (culture): Photo: Jamaica Tourist Board",
+    "Slide photo (food): Arah Rides"
    ],
    "images": [
     "media/2026-11-18/2026-11-18_2200_trust_1.jpg",
@@ -467,30 +466,28 @@
     "media/2026-11-18/2026-11-18_2200_trust_4.jpg",
     "media/2026-11-18/2026-11-18_2200_trust_5.jpg"
    ],
-   "copy_text": "As seen on Smile Jamaica. 🎥\n\nWatch the interview and see what Arah Rides is about.",
-   "alt": "Arah Rides on Smile Jamaica: As seen on Smile Jamaica. (carousel: swipe for more)",
+   "copy_text": "Meet the team behind Arah Rides. 🎥\n\nWatch our Smile Jamaica interview and see why people rent Jamaican.",
+   "alt": "Arah Rides on Smile Jamaica: Meet the team behind Arah Rides. (carousel: swipe for more)",
    "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
    },
-   "caption": "As seen on Smile Jamaica. 🎥\n\nWatch the interview and see what Arah Rides is about.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental for Ocho Rios and the north coast\n\nWatch the interview: https://youtu.be/vMKRKG8bN-8\nBook: arahrides.com\n\n#OchoRios #JamaicaRentalCar #ArahRides #JamaicaVacation #SelfDriveJamaica",
+   "caption": "Meet the team behind Arah Rides. 🎥\n\nWatch our Smile Jamaica interview and see why people rent Jamaican.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nWatch the interview: https://youtu.be/vMKRKG8bN-8\nBook: arahrides.com\n\n#NormanManleyAirport #JamaicaRentalCar #DiscoverTheRealJamaica #JamaicaTravel #SelfDriveJamaica",
    "photos_extra": [
-    {
-     "id": "drive:17mLmmMTbglDDeP-teBpNlBP_n97OCMjU",
-     "name": "IMG_9774"
-    },
-    {
-     "id": "drive:1EHcUOl2cIGuQKzryScvUoHqHTu5Z8o2t",
-     "name": "IMG_9782"
-    },
     {
      "id": "drive:171ZSdJHcQ6Ws8PAC9S_nDW56p4xAIfne",
      "name": "0b5c7c04-517b-4839-95fa-b1c3924e2219"
+    },
+    {
+     "id": "drive:1xwWK-kEcdy1oxKEyPS5MD5fDrZi3FKYr",
+     "name": "JTB_Music_PortAntonio_DJ_Tony"
+    },
+    {
+     "id": "drive:1Jt885iJi66Ly68o-6bcyb6QuLmzIhatg",
+     "name": "042_JTB_Spring_2025_Kingston_Palisadoes_Coconut_Drink"
     }
    ],
-   "status": "pending",
-   "reel_kind": "animated slideshow (punchy)",
-   "reel": "media/2026-11-18/2026-11-18_2200_trust.mp4"
+   "status": "pending"
   }
  ]
 }
