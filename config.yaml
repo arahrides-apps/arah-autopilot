@@ -11,7 +11,7 @@ max_posts_per_run: 1              # the publisher runs every 10 minutes
 slots: ["00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]   # Jamaica time
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["car_hero", "brand", "chat|qa", "place", "trip", "experience", "review|tip", "place|trip", "carousel|list", "trip|experience", "qa", "chat|trust"]
+pattern: ["car_hero", "journey", "chat|qa", "place", "journey", "experience", "review|tip", "place|trip", "journey|carousel", "trip|experience", "place|experience", "experience|trust"]
 event_slots: [8]                    # pattern positions (16:00 and 22:00) that highlight an upcoming event while one is within 3 weeks; the second only when 2+ events are due
 single_days_per_5: 3               # single-picture posts (about 5% of all posts): the midnight car photo, on 3 days out of every 5
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
@@ -108,6 +108,7 @@ reels:
   publish_as_reel: true            # true = post the video as a Reel (Make has the Reel route). false = post the carousels instead
 
 photos:
+  retired: [jamaica_cup, tennis]            # never use photos whose file name contains these (the Jamaica Cup tennis is over; remove the line to bring them back next year)
   reuse_days: 90                   # the same photo is never used again within this many days
   near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
   near_duplicate_distance: 10
