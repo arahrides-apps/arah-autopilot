@@ -75,6 +75,9 @@ class DayBuilder:
     def __init__(self, cfg, led, picker, date, rng, moments):
         self.cfg, self.led, self.pk, self.date, self.rng = cfg, led, picker, date, rng
         self.bank = expand_bank(load_yaml("bank.yaml")); self.moments = moments; self.notes = []
+        story._S = None
+        if lounge_paused(cfg, date):                         # the lounge pass offer is paused (see offers.lounge_pass.pause_until in config.yaml)
+            self.bank = strip_lounge(self.bank); story._S = strip_lounge(load_yaml("stories.yaml"))
         self.today = date; self.led_loc = []; self.used_follow = set()
 
     def cooldown(self, kind, n):
@@ -457,6 +460,22 @@ class DayBuilder:
         post["alt"] = (post.get("alt") or "") + " (carousel: swipe for more)"
         return out
 
+LOUNGE = re.compile(r"lounge|departure pass|club mobay|club kingston|vip attractions", re.I)
+
+def lounge_paused(cfg, date):
+    o = (cfg.get("offers") or {}).get("lounge_pass") or {}
+    return (not o.get("enabled")) or str(date) < str(o.get("pause_until", "0000-00-00"))
+
+def strip_lounge(x):
+    """Takes every mention of the lounge pass out of the wording pools (used while the offer is paused). A pool that would end up empty is left alone."""
+    hit = lambda v: bool(LOUNGE.search(str(v)))
+    if isinstance(x, list):
+        keep = [strip_lounge(i) for i in x if not hit(i)]
+        return keep if keep else x
+    if isinstance(x, dict):
+        return {k: strip_lounge(v) for k, v in x.items() if not hit(k) and not (isinstance(v, str) and hit(v))}
+    return x
+
 def expand_bank(b):
     for a, c in b.get("this_or_that", []):
         b["engage"].append({"h": f"{a} or {c}?", "b": "Comment your pick."})
@@ -495,7 +514,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     rng = random.Random(f"{date}-{now.timestamp() // 60}")
     b = DayBuilder(cfg, led, picker, date, rng, load_yaml("moments.yaml"))
     mom, left = active_moment(cfg, b.moments, date)
-    offer = next(((k, v) for k, v in cfg["offers"].items() if k == "lounge_pass" and v.get("enabled") and v.get("text")), None)
+    offer = next(((k, v) for k, v in cfg["offers"].items() if k == "lounge_pass" and v.get("enabled") and v.get("text") and not lounge_paused(cfg, date)), None)
     zone = tz(cfg); posts = []; jobs = []
     pattern = cfg["pattern"][: cfg["posts_per_day"]]
     used_mom = used_offer = False
