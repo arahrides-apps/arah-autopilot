@@ -306,7 +306,7 @@ class PixabaySource:
         if not self.key:
             return []
         d = http_json("https://pixabay.com/api/", params={"key": self.key, "q": query[:100], "image_type": "photo", "per_page": 50,
-                                                          "page": rng.randint(1, 3), "safesearch": "true", "min_width": 1000})
+                                                          "page": 1, "safesearch": "true", "min_width": 1000})
         return [{"id": "pixabay:%s" % p["id"], "name": "pixabay-%s" % p["id"], "url": p.get("largeImageURL") or p["webformatURL"],
                  "w": p.get("imageWidth", 0), "h": p.get("imageHeight", 0), "text": p.get("tags", "") + " " + (p.get("pageURL") or ""),
                  "credit": "Photo by %s on Pixabay" % p.get("user", "?")} for p in d.get("hits", [])]
@@ -425,7 +425,8 @@ class Picker:
                 self.pool.append(DriveSource(cfg))
             if s["local"]["enabled"]:
                 self.pool.append(LocalSource(cfg))
-        order = (("unsplash", UnsplashSource), ("pexels", PexelsSource), ("pixabay", PixabaySource), ("wikimedia", WikimediaSource), ("openverse", OpenverseSource))
+        order = (("pixabay", PixabaySource), ("unsplash", UnsplashSource), ("pexels", PexelsSource),        # Pixabay first: 100 searches a minute; Unsplash allows only 50 an hour
+                 ("wikimedia", WikimediaSource), ("openverse", OpenverseSource))
         self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": k != "pixabay"})["enabled"]]
         self.notes = []
         self.tried = set()
