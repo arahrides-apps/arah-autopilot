@@ -45,7 +45,7 @@ def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8, style="classi
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
 
-REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel")
+REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel", "journey")
 KEEP_CAROUSEL = ("offer", "review", "versus", "list", "carousel", "qa", "trust")   # these read best as swipeable carousels
 
 def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):
@@ -60,6 +60,13 @@ def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):
     if r.returncode != 0:
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
+
+def _fresh_file(files, date, peek=False):
+    """Strict no-reuse for ready-made videos: a file not used in the last 90 days, or None (the post then becomes a photo slideshow)."""
+    from . import promo as _P
+    k = _P._pick([str(f) for f in files], date)
+    if k and not peek: _P.note_use(k, date)
+    return Path(k) if k else None
 
 def add_reels(cfg, posts, date):
     """Marks some of the day's posts to go out as Reels. Returns notes. A reel replaces that slot's carousel on Instagram; the review page still shows the slides."""
@@ -84,21 +91,22 @@ def add_reels(cfg, posts, date):
         rel = p["images"][0].rsplit("_", 1)[0] + ".mp4"
         try:
             if p.get("promo"):
-                from . import promo as _P
+                from . import promo as _P, promo_art as _A
                 pr = _P.active(date); k = prom.index(p) if p in prom else 0
-                clip = _P.get_clip(cfg, date, k) if pr else None
-                if clip is not None:
-                    _P.make_promo_reel(clip, pr, Q.DOCS / rel); p["reel_kind"] = "sale video (from a Drive clip)"
+                got = _P.get_clip(cfg, date, k) if (pr and k % 2 == 0) else None        # the 1st promo Reel of the day is on a video clip, the 2nd is a photo slideshow
+                if got:
+                    _P.make_promo_reel(got[0], pr, Q.DOCS / rel, start=got[1]); _P.note_use(got[2], date); p["reel_kind"] = "sale video (Drive clip)"
                 else:
-                    make_reel([Q.DOCS / i for i in p["images"]], Q.DOCS / rel, per_slide=1.9, style="punchy"); p["reel_kind"] = "sale slideshow (no Drive video found)"
+                    _, endcard = _A.render(pr, Q.DOCS / "media" / "promo")
+                    make_reel([Q.DOCS / i for i in p["images"]] + [endcard], Q.DOCS / rel, per_slide=2.0, style=("dynamic", "punchy")[(date.toordinal() + k) % 2])
+                    p["reel_kind"] = "sale slideshow (photos + code card)"
             elif p.get("event_reel_src"):
                 shutil.copy(p["event_reel_src"], Q.DOCS / rel); p["reel_kind"] = "event video"
-            elif clips and p["type"] in ("tip", "chat", "qa", "brand", "engage", "trust") and int(hashlib.md5((p["id"]).encode()).hexdigest()[:4], 16) % 2 == 0:
-                seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:4], 16)
-                make_clip_reel(clips[seed % len(clips)], Q.DOCS / p["images"][-1], Q.DOCS / rel); p["reel_kind"] = "video clip"
-            elif lib and not used_lib and p["type"] in ("moment", "chat", "tip"):      # one animated ad per day replaces a plain slideshow
-                seed = int(hashlib.md5(str(date).encode()).hexdigest()[:4], 16)
-                shutil.copy(lib[seed % len(lib)], Q.DOCS / rel); used_lib = True; p["reel_kind"] = "animated ad"
+            elif clips and _fresh_file(clips, date, peek=True) and p["type"] in ("tip", "chat", "qa", "brand", "engage", "trust") and int(hashlib.md5((p["id"]).encode()).hexdigest()[:4], 16) % 2 == 0:
+                _c = _fresh_file(clips, date)
+                make_clip_reel(_c, Q.DOCS / p["images"][-1], Q.DOCS / rel); p["reel_kind"] = "video clip"
+            elif lib and not used_lib and _fresh_file(lib, date, peek=True) and p["type"] in ("moment", "chat", "tip"):      # one animated ad per day replaces a plain slideshow
+                shutil.copy(_fresh_file(lib, date), Q.DOCS / rel); used_lib = True; p["reel_kind"] = "animated ad"
             else:
                 seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:4], 16)
                 sty = ("dynamic", "punchy", "dynamic", "classic")[seed % 4]

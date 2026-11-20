@@ -36,7 +36,7 @@ THEMES = {
               "Bamboo Avenue Jamaica", "Jamaica countryside road", "Jamaica mountain road", "Jamaica roadside jerk stand"],
              r"road|highway|bamboo|route|drive|fruit|coconut|vendor|stand|roadside|falls|countryside|mountain|hill|village|market", True),
     "food": (["bun and cheese Jamaica", "Jamaica jerk chicken", "Jamaican patty", "ackee and saltfish", "Jamaica fruit vendor", "Jamaica coconut water", "Jamaica river cooking food",
-              "Jamaica street food", "Jamaican breakfast", "Jamaica roadside jerk"],
+              "Jamaica street food", "Jamaican breakfast", "Jamaica roadside jerk", "juicy beef patty close up", "Jamaican beef patty cheese coco bread", "jerk pit smoke Jamaica", "jerk shack Boston Bay"],
              r"bun|cheese|jerk|patty|ackee|saltfish|fruit|coconut|food|cook|market|vendor|stand|breakfast|dish|fish|festival|rice", True),
     "river": (["Jamaica river people swimming", "Jamaica river cooking friends", "Jamaica waterfall swimming people", "Jamaica river rafting", "Jamaica riverside picnic"],
               r"river|falls|waterfall|swim|raft|cook|picnic|pool|creek", True),

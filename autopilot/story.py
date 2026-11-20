@@ -293,6 +293,23 @@ def moment_story(b, post, pages, m):
              ("Pick up where you land.", PICKUPS), ("Book in 3 steps.", BOOK3)]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)
 
+def journey_story(b, post, pages, j):
+    """Cover + 3 story beats + price + book. Every slide gets its own real Jamaica photo; none is reused (the picker records each one)."""
+    pl = list(j.get("places", [])) + [None] * 4
+    def photo(i):
+        x = b.story_photo(post, pl[i]) if pl[i] else None
+        x = x or b.pk.theme_photo(j.get("theme", "road"))
+        if x: post.setdefault("flags", []).append(x.flags[0] if getattr(x, "flags", None) else "Story photo")
+        return x
+    c = photo(0)
+    cover = T.ccover(c.path, j["k"], j["h"], "Swipe for the story.") if c else pages[0][0]
+    items, own = [], {}
+    for i, (h, t) in enumerate(j["beats"]):
+        items.append((h, t)); x = photo(i + 1)
+        if x: own[i] = x
+    items.append(price_slide(b))
+    return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), own)
+
 def versus_story(b, post, pages, e):
     ph = b.cover_photo(post, "", "road")
     cover = T.ccover(ph.path, e["k"], e["h"], "Swipe to compare.") if ph else T.ccover_plain(e["k"], e["h"], "Swipe to compare.")
@@ -328,6 +345,8 @@ def build(b, post, typ, pages):
         return trust_story(b, post, pages, e)
     if typ == "moment":
         return moment_story(b, post, pages, e)
+    if typ == "journey":
+        return journey_story(b, post, pages, e)
     if typ == "versus":
         return versus_story(b, post, pages, e)
     if typ == "list":

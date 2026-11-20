@@ -57,31 +57,53 @@ def drive_videos(cfg):
             if not tok: break
     return sorted(out)
 
+USE = ROOT / "data" / "clip_use.json"
+
+def _uses():
+    try: return json.loads(USE.read_text())
+    except Exception: return {}
+
+def _pick(keys, date, days=90):
+    """Strict no-reuse: only a clip not used in the last 90 days. Returns the key, or None when every clip has had its turn."""
+    u = _uses(); today = date if isinstance(date, dt.date) else dt.date.fromisoformat(str(date))
+    def fresh(k):
+        last = (u.get(k) or [None])[-1]
+        return last is None or (today - dt.date.fromisoformat(last)).days >= days
+    free = sorted(k for k in keys if fresh(k))
+    return free[0] if free else None
+
+def note_use(key, date):
+    u = _uses(); u.setdefault(key, []).append(str(date)); u[key] = u[key][-30:]
+    USE.parent.mkdir(parents=True, exist_ok=True); USE.write_text(json.dumps(u, indent=0))
+
 def get_clip(cfg, date, k):
-    """One clip for the day's k-th promo Reel (rotates so the same clip is not used twice in a row). None if there are no clips."""
+    """A clip for a promo Reel: (path, start_second, key) or None. Rotates through every clip and starts later in the clip each time it comes round."""
     test = os.environ.get("ARAH_TEST_CLIPS")
     if test:
-        fs = sorted(Path(test).glob("*.mp4"))
-        return fs[(date.toordinal() * 2 + k) % len(fs)] if fs else None
+        fs = {f.name: f for f in sorted(Path(test).glob("*.mp4"))}
+        if not fs: return None
+        key = _pick(list(fs), date)
+        return (fs[key], 1, key) if key else None
     try:
         vids = drive_videos(cfg)
     except Exception as e:
         log.warning("Drive clips unavailable: %s", e); return None
     cap = int(cfg["reels"].get("max_clip_mb", 250)) << 20
-    vids = [v for v in vids if 0 < v[2] <= cap]
+    vids = {v[0]: v for v in vids if 0 < v[2] <= cap}
     if not vids: return None
-    vid = vids[(date.toordinal() * 2 + k) % len(vids)]
-    dest = ROOT / "cache" / "clips" / (vid[0] + ".mp4")
+    key = _pick(list(vids), date)
+    if not key: return None
+    dest = ROOT / "cache" / "clips" / (key + ".mp4")
     if not dest.exists():
         from googleapiclient.http import MediaIoBaseDownload
         dest.parent.mkdir(parents=True, exist_ok=True)
         with open(dest, "wb") as fh:
-            dl = MediaIoBaseDownload(fh, _service(cfg).files().get_media(fileId=vid[0], supportsAllDrives=True), chunksize=16 << 20)
+            dl = MediaIoBaseDownload(fh, _service(cfg).files().get_media(fileId=key, supportsAllDrives=True), chunksize=16 << 20)
             done = False
             while not done: _, done = dl.next_chunk()
-    return dest
+    return dest, 1, key
 
-def make_promo_reel(clip, p, out, seconds=8, hold=2.6, art=None):
+def make_promo_reel(clip, p, out, seconds=8, hold=2.6, art=None, start=1):
     """Clip cropped to 1080x1920 (first `seconds` seconds, starting a little in), the promo banner over it, then the code end card."""
     from . import promo_art
     art = Path(art or (Q.DOCS / "media" / "promo")); banner, end = promo_art.render(p, art)
@@ -89,9 +111,12 @@ def make_promo_reel(clip, p, out, seconds=8, hold=2.6, art=None):
     fc = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1,format=yuv420p[a0];"
           f"[1:v]format=rgba[bn];[a0][bn]overlay=0:0,format=yuv420p[a];"
           f"[2:v]scale={W}:{H},fps={FPS},setsar=1,format=yuv420p[e];[a][e]concat=n=2:v=1:a=0[v]")
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-t", str(seconds), "-i", str(clip),
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(start), "-t", str(seconds), "-i", str(clip),
            "-loop", "1", "-framerate", str(FPS), "-t", str(seconds), "-i", str(banner), "-loop", "1", "-framerate", str(FPS), "-t", str(hold), "-i", str(end),
            "-filter_complex", fc, "-map", "[v]", "-c:v", "libx264", "-crf", "22", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0 or not out.exists() or out.stat().st_size < 20000:       # started past the end of a short clip: play it from the beginning
+        cmd[cmd.index("-ss") + 1] = "0"
+        r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0: raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out

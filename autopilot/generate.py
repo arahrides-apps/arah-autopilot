@@ -13,10 +13,10 @@ import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚"}
+EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
-            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica"}
-FALLBACK = {"review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
+            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel"}
+FALLBACK = {"journey": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -297,6 +297,17 @@ class DayBuilder:
         post["caption"] = self.cap(post, "moment", post["copy_text"], place=m.get("loc"))
         return [(html, 1350)]
 
+    def journey(self, post):
+        """A short human story (fly down, book a car, visit grandma...) told as a swipeable post with a real Jamaica photo on every slide."""
+        js = load_yaml("journeys.yaml")["journeys"]
+        i, _c = self.led.copy_pick("journey", len(js), self.today, self.rng, 20)
+        self.led.copy_record("journey", i, self.today)
+        j = js[i]; self.last = {"kind": "journey", "e": j}
+        post["copy_text"] = f"{j['h']} {EMOJI['journey']}\n\n" + "\n".join(f"{h} {t}" for h, t in j["beats"])
+        post["alt"] = f"Story: {j['h']}"
+        post["caption"] = self.cap(post, "journey", post["copy_text"], place=j.get("loc"))
+        return [(T.big(j["k"], j["h"], "Swipe for the story.", "green"), 1350)]
+
     def offer(self, post, name, o):
         e = self.pick("offer"); self.last_offer = e
         self.vip_used = []
@@ -547,6 +558,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "trip": pages = b.trip(post)
             elif t == "review": pages = b.review(post)
             elif t == "moment": pages = b.moment(post, *cur)
+            elif t == "journey": pages = b.journey(post)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
             if pages is None:

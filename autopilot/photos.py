@@ -510,6 +510,8 @@ class Picker:
             for it in items:
                 if it["id"] in self.tried or self.led.blocked(["name:" + it["name"], it["id"]], None, self.today, self.cfg):
                     continue
+                if any(r.lower() in it["name"].lower() for r in self.cfg["photos"].get("retired", [])):
+                    continue                                        # photos of an event that is over (see photos.retired in config.yaml)
                 m = self._meta(it["name"], it); q = 3
                 if tag and (not m or m.get("tag") != tag):
                     continue
