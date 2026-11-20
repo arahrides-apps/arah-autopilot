@@ -1,0 +1,203 @@
+# Short stories about the people we want to rent to. Each one becomes a swipeable story post (cover + 3 beats + price + book).
+#   k = small label, h = hook on the cover, theme = photo topic, places = a real Jamaica place for each photo (cover, beat 1, 2, 3),
+#   beats = three short lines (heading, text), loc = the place tagged on the post.
+# Add more any time. Keep each line short and human. No made-up prices or times.
+journeys:
+- k: FLY DOWN. DRIVE HOME.
+  h: She landed at 2pm. Grandma was cooking by 4.
+  theme: family
+  places: [mandeville, bamboo avenue, mandeville, family visit]
+  loc: Mandeville
+  beats:
+  - ["Land. Grab the keys.", "Your car is waiting at MBJ. No taxi haggling after a long flight."]
+  - ["The drive home.", "Bamboo Avenue, hills, a patty stop. The island says welcome back."]
+  - ["Grandma sees the grandkids.", "Hugs at the gate. Dinner is already on. This is why you came."]
+- k: FAMILY REUNION
+  h: Twelve cousins. One road trip. Zero stress.
+  theme: group
+  places: [ocho rios, dunn's river falls, river, ocho rios]
+  loc: Ocho Rios
+  beats:
+  - ["Everybody fits.", "Vans and SUVs for the whole crew, so nobody is left behind."]
+  - ["Make a day of it.", "Waterfalls, a river lime, jerk by the road. Your schedule, your stops."]
+  - ["Photos for the family chat.", "Everyone in one place, on their own time."]
+- k: HONEYMOON
+  h: Just the two of you and an open road.
+  theme: couple
+  places: [negril, seven mile beach, negril, rick's cafe]
+  loc: Negril
+  beats:
+  - ["Skip the resort bubble.", "Drive to the beach you spotted on the way in."]
+  - ["Seven Mile mornings.", "Long beach, slow coffee, nowhere to be."]
+  - ["Sunset at the cliffs.", "Catch it from Rick's side, then drive back at your own pace."]
+- k: FIRST TIME IN JAMAICA
+  h: First time here? Start with the Blue Mountains.
+  theme: road
+  places: [blue mountains, blue mountain coffee, holywell, kingston]
+  loc: Blue Mountains
+  beats:
+  - ["Rise early.", "Cool air, mist and views over Kingston."]
+  - ["Coffee at the source.", "Jamaica Blue Mountain coffee, close to where it grows."]
+  - ["Back to town.", "Pick up at Norman Manley, return by evening, then go find dinner."]
+- k: COMING HOME FOR CHRISTMAS
+  h: Same house. Same road. Better rice and peas.
+  theme: xmas
+  places: [mandeville, grand market, mandeville, family visit]
+  loc: Mandeville
+  beats:
+  - ["Book before you land.", "December fills up. Pick the car you want to drive."]
+  - ["Grand Market lights.", "Last-minute gifts and sorrel on the way."]
+  - ["Christmas morning.", "The whole family at one table. You drove there yourself."]
+- k: GIRLS TRIP
+  h: Rental car, playlist, three friends, one island.
+  theme: group
+  places: [montego bay, doctor's cave beach, falmouth, treasure beach]
+  loc: Montego Bay
+  beats:
+  - ["Pickup at MBJ.", "Bags in, windows down."]
+  - ["Beach, then lunch.", "Doctor's Cave in the morning, seafood on the way east or south."]
+  - ["Pelican Bar by boat.", "Treasure Beach has the stories you will tell for years."]
+- k: SOLO TRAVEL
+  h: Going solo? The island is easier with your own car.
+  theme: solo
+  places: [port antonio, boston bay, reach falls, winnifred beach]
+  loc: Port Antonio
+  beats:
+  - ["Go east.", "Portland is green, calm and a favourite with solo travellers."]
+  - ["Jerk at Boston Bay.", "The home of jerk. Eat first, plan later."]
+  - ["Swim at Reach Falls.", "Cool water at the end of the road."]
+- k: CRUISE DAY
+  h: Ship in port. Eight hours. Make them count.
+  theme: road
+  places: [ocho rios, dunn's river falls, blue hole, fern gully]
+  loc: Ocho Rios
+  beats:
+  - ["Skip the crowded tour bus.", "Your own car means your own timing. Reserve ahead and ask Winston about pickup."]
+  - ["Falls and Blue Hole.", "Two of the north coast's best, close together."]
+  - ["Back on board.", "Leave time to spare and drive Fern Gully on the way."]
+- k: WEDDING WEEKEND
+  h: The wedding is Saturday. Do not rely on a ride.
+  theme: couple
+  places: [montego bay, rose hall, falmouth, montego bay]
+  loc: Montego Bay
+  beats:
+  - ["Get there on time.", "A car that is yours all weekend. No waiting for a lift."]
+  - ["Fit the whole party.", "Bridesmaids, groomsmen, aunties. SUVs and vans are on the site."]
+  - ["Then explore.", "Rose Hall in the day, music at night."]
+- k: DIASPORA WEEKEND
+  h: Three days. Two parishes. One long list of family.
+  theme: family
+  places: [kingston, trench town, hope gardens, kingston]
+  loc: Kingston
+  beats:
+  - ["Land in Kingston.", "Collect your car at Norman Manley and start visiting."]
+  - ["Show the kids where you grew up.", "Streets, schools, and the shop that still sells the bun."]
+  - ["Leave with a full phone.", "Photos of everyone, and a car you did not have to share."]
+- k: FOODIES
+  h: Jamaica on a plate, one stop at a time.
+  theme: food
+  places: [boston bay, jerk, treasure beach, fish]
+  loc: Boston Bay
+  beats:
+  - ["Jerk in Boston Bay.", "Smoke, pimento wood, and a long queue for a reason."]
+  - ["Fresh fish by the sea.", "Treasure Beach and Black River serve it the same day."]
+  - ["Bring an appetite.", "Your car is your best tour guide for roadside stops."]
+- k: WATERFALL DAY
+  h: Wake up. Drive. Jump.
+  theme: river
+  places: [ys falls, ys falls, black river, bamboo avenue]
+  loc: Treasure Beach
+  beats:
+  - ["Start early.", "YS Falls is best before the crowds."]
+  - ["Swim and swing.", "Cool water, rope swings, shade."]
+  - ["Wind down in Treasure Beach.", "South coast sunsets are slow and golden."]
+- k: BOXING DAY
+  h: The fete starts at 10. Get there your way.
+  theme: culture
+  places: [kingston, reggae, kingston, trench town]
+  loc: Kingston
+  beats:
+  - ["Boxing Day in Kingston.", "Music, food and everybody you know."]
+  - ["No stress on the road.", "Plan your pickup ahead. Holiday cars are limited."]
+  - ["Keep the car, keep the vibe.", "Drive to the next one when the first one wraps."]
+- k: SUNRISE AT HOLYWELL
+  h: Worth the early alarm.
+  theme: road
+  places: [holywell, blue mountains, blue mountain peak, kingston]
+  loc: Blue Mountains
+  beats:
+  - ["Leave while it is dark.", "Roads are winding, so take your time."]
+  - ["Fog and sunrise.", "Green hills, cold air, the whole city below."]
+  - ["Breakfast after.", "Coffee, then a slow drive back down."]
+- k: BIRTHDAY TRIP
+  h: Turning 40 in Jamaica? Do it properly.
+  theme: group
+  places: [negril, seven mile beach, rick's cafe, negril]
+  loc: Negril
+  beats:
+  - ["Pick the crew.", "Everyone in one car or two. You choose the vehicle."]
+  - ["Beach by day.", "Seven Mile Beach is long enough for everyone to find a spot."]
+  - ["Cliffs at night.", "Sunset, music and a ride back that you control."]
+- k: BUSINESS + BEACH
+  h: Meetings in Kingston. Weekend in Port Antonio.
+  theme: road
+  places: [kingston, port royal, port antonio, blue lagoon]
+  loc: Kingston
+  beats:
+  - ["Work Monday to Friday.", "A car at Norman Manley means no taxis between meetings."]
+  - ["Friday, head east.", "Two to two and a half hours to Portland, green the whole way."]
+  - ["Swim before you fly.", "Blue Lagoon, then the road back for your flight."]
+- k: ROAD TRIP
+  h: Montego Bay to Treasure Beach in one day.
+  theme: road
+  places: [montego bay, black river, ys falls, treasure beach]
+  loc: Treasure Beach
+  beats:
+  - ["Leave MBJ early.", "Head south through St Elizabeth."]
+  - ["Black River stop.", "Boat safari or lunch by the water."]
+  - ["End at the south coast.", "Quiet beaches and a sky full of stars."]
+- k: GRADUATION
+  h: She walked the stage. Now the whole family drives to dinner.
+  theme: family
+  places: [kingston, devon house, emancipation park, kingston]
+  loc: Kingston
+  beats:
+  - ["Everyone arrives.", "Aunts, cousins and one proud grandmother. Pick a van or an SUV."]
+  - ["Devon House for ice cream.", "A Kingston tradition for celebrations."]
+  - ["Photos in the park.", "Emancipation Park is perfect for the family picture."]
+- k: STAYCATION
+  h: Live in Jamaica? Treat yourself to a rental weekend.
+  theme: couple
+  places: [portland, reach falls, boston bay, winnifred beach]
+  loc: Port Antonio
+  beats:
+  - ["Pick a new parish.", "You have been meaning to go. Now go."]
+  - ["Your own car, your own plan.", "No schedule, no queue, no problem."]
+  - ["Be home Sunday.", "Rested, with photos and a full tank of stories."]
+- k: BLACK RIVER SAFARI
+  h: Crocodiles, mangroves and a slow river morning.
+  theme: river
+  places: [black river, black river, treasure beach, pelican bar]
+  loc: Black River
+  beats:
+  - ["Drive south.", "From Mandeville or MBJ, a scenic route."]
+  - ["Float the river.", "Quiet water, birds and the occasional crocodile."]
+  - ["Treasure Beach after.", "Fresh fish and a sunset to end it."]
+- k: NIGHT AND DAY
+  h: Land late? Your car is still waiting.
+  theme: road
+  places: [montego bay, ocho rios, ocho rios, fern gully]
+  loc: Montego Bay
+  beats:
+  - ["Late flight, no problem.", "Tell Winston your flight and pickup airport on WhatsApp."]
+  - ["Drive to your hotel.", "Montego Bay to Ocho Rios is a straight, easy run."]
+  - ["Wake up to the north coast.", "Morning swim, then your first Jamaican breakfast."]
+- k: JAMAICA IN WINTER
+  h: Leave the cold. Take the long way to the beach.
+  theme: couple
+  places: [montego bay, doctor's cave beach, falmouth, negril]
+  loc: Montego Bay
+  beats:
+  - ["Snow at home. Sun here.", "Pick up at MBJ and head west."]
+  - ["Stop for coconut water.", "Roadside vendors have it ice cold."]
+  - ["Stay as long as you can.", "Stay 7 days or more and ask Winston what your rate looks like."]
