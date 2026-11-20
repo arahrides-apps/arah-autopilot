@@ -11,7 +11,7 @@ max_posts_per_run: 1              # the publisher runs every 10 minutes
 slots: ["00:00", "07:00", "11:00", "14:00", "18:00", "21:00"]   # Jamaica time (US East Coast is the same hour in winter)
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["car_hero", "journey", "place|trip", "carousel|list", "journey|experience", "review|qa"]
+pattern: ["car_hero", "journey", "spotlight", "carousel|list", "journey|spotlight", "review|qa"]
 event_slots: [2]                    # the 11:00 post highlights an upcoming event (only on event_days)
 single_days_per_5: 3               # the midnight car photo goes out as a single picture on 3 days out of every 5 (about 10% of posts)
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
@@ -114,6 +114,7 @@ photos:
   near_duplicate_days: 365         # a near-identical shot (burst photos, same view) is held back just as long
   near_duplicate_distance: 14       # higher = stricter about 'looks the same'
   web_share: 0.6                   # share of photos that come from licence-free web photos of Jamaica first (Unsplash, Pexels, Pixabay, Wikimedia public domain), each checked by Claude
+  allow_text_cover: false          # false = a post with no fresh photo for its cover is skipped, never posted as a text card
   illustrations: false             # real photos only. true = allow drawn placeholder scenes when no photo can be found
   stock_car_share: 0.35            # share of car posts that use a clean stock photo of one of our models (needs the Pexels / Unsplash / Pixabay keys)
   stock_composites: false      # true = paste stock car photos onto Jamaica backgrounds (looked rough, so off)
