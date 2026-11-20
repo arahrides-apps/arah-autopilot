@@ -1,0 +1,1177 @@
+# Jamaica points of interest, from your list (all 14 parishes). Each one becomes a 'spotlight' post: a real photo of that place,
+# where it is, why go, and pickup at the nearest airport. A place is only posted when a real photo of it is found.
+# cat: beach, waterfall, river, cave, mountain, heritage, garden, food, lighthouse, adventure.  tier: major or gem (hidden gem).
+# Add 'about:' lines to give a place a better 'why go' line. Remove any place you don't want posted.
+attractions:
+- name: Bob Marley Museum
+  parish: Kingston
+  cat: heritage
+  tier: major
+  airport: Kingston
+  about: Hope Road
+- name: Devon House
+  parish: Kingston
+  cat: food
+  tier: major
+  airport: Kingston
+  about: historic mansion, restaurants and ice cream
+- name: Port Royal
+  parish: Kingston
+  cat: heritage
+  tier: major
+  airport: Kingston
+  about: historic pirate town
+- name: Fort Charles
+  parish: Kingston
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Emancipation Park
+  parish: Kingston
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: Hope Botanical Gardens
+  parish: Kingston
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: National Heroes Park
+  parish: Kingston
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: Peter Tosh Museum
+  parish: Kingston
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Lime Cay
+  parish: Kingston
+  cat: beach
+  tier: gem
+  airport: Kingston
+  about: offshore beach and swimming
+- name: Maiden Cay
+  parish: Kingston
+  cat: beach
+  tier: gem
+  airport: Kingston
+  about: island beach excursion
+- name: Fort Rocky
+  parish: Kingston
+  cat: heritage
+  tier: gem
+  airport: Kingston
+  about: coastal historic fortification
+- name: Ward Theatre
+  parish: Kingston
+  cat: heritage
+  tier: gem
+  airport: Kingston
+  about: historic performing arts venue
+- name: Holy Trinity Cathedral
+  parish: Kingston
+  cat: heritage
+  tier: gem
+  airport: Kingston
+  about: historic architecture
+- name: Coke Methodist Church
+  parish: Kingston
+  cat: heritage
+  tier: gem
+  airport: Kingston
+  about: heritage church
+- name: Coronation Market
+  parish: Kingston
+  cat: food
+  tier: gem
+  airport: Kingston
+  about: local shopping and Jamaican culture
+- name: Hope Zoo
+  parish: Kingston
+  cat: garden
+  tier: gem
+  airport: Kingston
+  about: family attraction
+- name: Rockfort Mineral Bath
+  parish: Kingston
+  cat: river
+  tier: gem
+  airport: Kingston
+  about: mineral spring bathing
+- name: Ferry River Cave
+  parish: Kingston
+  cat: cave
+  tier: gem
+  airport: Kingston
+  about: cave exploration area
+- name: Skyline Drive
+  parish: Kingston
+  cat: mountain
+  tier: gem
+  airport: Kingston
+  about: scenic Kingston viewpoints
+- name: Blue Mountain Peak
+  parish: St. Andrew
+  cat: mountain
+  tier: major
+  airport: Kingston
+- name: Holywell National Park
+  parish: St. Andrew
+  cat: mountain
+  tier: major
+  airport: Kingston
+- name: Cinchona Botanical Gardens
+  parish: St. Andrew
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: Strawberry Hill
+  parish: St. Andrew
+  cat: mountain
+  tier: major
+  airport: Kingston
+- name: Hope Gardens
+  parish: St. Andrew
+  cat: garden
+  tier: major
+  airport: Kingston
+  about: near the St. Andrew boundary
+- name: Wag Water River
+  parish: St. Andrew
+  cat: river
+  tier: major
+  airport: Kingston
+- name: Red Light District mountain viewpoints
+  parish: St. Andrew
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: Dallas Castle
+  parish: St. Andrew
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Cane River Falls
+  parish: St. Andrew
+  cat: waterfall
+  tier: gem
+  airport: Kingston
+- name: Cane River Park
+  parish: St. Andrew
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Blue Mountain coffee farms
+  parish: St. Andrew
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: Papine Market
+  parish: St. Andrew
+  cat: food
+  tier: gem
+  airport: Kingston
+- name: Gordon Town Mineral Spring
+  parish: St. Andrew
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Portland Gap hiking area
+  parish: St. Andrew
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: Reggae Falls
+  parish: St. Thomas
+  cat: waterfall
+  tier: major
+  airport: Kingston
+- name: Bath Fountain and Mineral Spa
+  parish: St. Thomas
+  cat: river
+  tier: major
+  airport: Kingston
+- name: Bath Botanical Gardens
+  parish: St. Thomas
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: Morant Bay Courthouse
+  parish: St. Thomas
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Lyssons Beach
+  parish: St. Thomas
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Holland Bay
+  parish: St. Thomas
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Yallahs Salt Ponds
+  parish: St. Thomas
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Prospect Beach
+  parish: St. Thomas
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Albion Mountain scenery
+  parish: St. Thomas
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: Plantain Garden River
+  parish: St. Thomas
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Potosi Springs
+  parish: St. Thomas
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Morant Point Lighthouse
+  parish: St. Thomas
+  cat: lighthouse
+  tier: gem
+  airport: Kingston
+- name: Hector's River
+  parish: St. Thomas
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Banana River Cave
+  parish: St. Thomas
+  cat: cave
+  tier: gem
+  airport: Kingston
+- name: Blue Lagoon
+  parish: Portland
+  cat: river
+  tier: major
+  airport: Kingston
+- name: Reach Falls
+  parish: Portland
+  cat: waterfall
+  tier: major
+  airport: Kingston
+- name: Frenchman's Cove
+  parish: Portland
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Rio Grande Rafting
+  parish: Portland
+  cat: river
+  tier: major
+  airport: Kingston
+- name: Winnifred Beach
+  parish: Portland
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Boston Beach
+  parish: Portland
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Somerset Falls
+  parish: Portland
+  cat: waterfall
+  tier: major
+  airport: Kingston
+- name: San San Beach
+  parish: Portland
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Nonsuch Caves
+  parish: Portland
+  cat: cave
+  tier: major
+  airport: Kingston
+- name: Nonsuch Falls
+  parish: Portland
+  cat: waterfall
+  tier: gem
+  airport: Kingston
+- name: Scatter Falls
+  parish: Portland
+  cat: waterfall
+  tier: gem
+  airport: Kingston
+- name: Turtle Bay
+  parish: Portland
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Fairy Hill Beach
+  parish: Portland
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Long Bay Beach
+  parish: Portland
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Norwich Public Beach
+  parish: Portland
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Folly Ruins
+  parish: Portland
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Folly Point Lighthouse
+  parish: Portland
+  cat: lighthouse
+  tier: gem
+  airport: Kingston
+- name: San San Lagoon
+  parish: Portland
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Trident Castle
+  parish: Portland
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Moore Town Maroon community
+  parish: Portland
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Charles Town Maroon community
+  parish: Portland
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Buff Bay
+  parish: Portland
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Rio Grande Valley viewpoints
+  parish: Portland
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: Blue Mountains coffee farms
+  parish: Portland
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: James Bond Beach
+  parish: St. Mary
+  cat: beach
+  tier: major
+  airport: Ocho Rios
+- name: Firefly Estate
+  parish: St. Mary
+  cat: garden
+  tier: major
+  airport: Ocho Rios
+- name: White River
+  parish: St. Mary
+  cat: river
+  tier: major
+  airport: Ocho Rios
+- name: Oracabessa Bay
+  parish: St. Mary
+  cat: beach
+  tier: major
+  airport: Ocho Rios
+- name: GoldenEye
+  parish: St. Mary
+  cat: garden
+  tier: major
+  airport: Ocho Rios
+- name: Cranbrook Flower Forest
+  parish: St. Mary
+  cat: garden
+  tier: major
+  airport: Ocho Rios
+- name: Castleton Botanical Gardens
+  parish: St. Mary
+  cat: garden
+  tier: major
+  airport: Ocho Rios
+- name: Robin's Bay
+  parish: St. Mary
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Pagee Beach
+  parish: St. Mary
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Galina Lighthouse
+  parish: St. Mary
+  cat: lighthouse
+  tier: gem
+  airport: Ocho Rios
+- name: Annotto Bay
+  parish: St. Mary
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Fort Haldane
+  parish: St. Mary
+  cat: heritage
+  tier: gem
+  airport: Ocho Rios
+- name: Oracabessa Fish Sanctuary
+  parish: St. Mary
+  cat: garden
+  tier: gem
+  airport: Ocho Rios
+- name: Boscobel Beach
+  parish: St. Mary
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: White River Valley
+  parish: St. Mary
+  cat: river
+  tier: gem
+  airport: Ocho Rios
+- name: Castleton River
+  parish: St. Mary
+  cat: river
+  tier: gem
+  airport: Ocho Rios
+- name: Port Maria heritage buildings
+  parish: St. Mary
+  cat: heritage
+  tier: gem
+  airport: Ocho Rios
+- name: Athenry Gardens
+  parish: St. Mary
+  cat: garden
+  tier: gem
+  airport: Ocho Rios
+- name: Dunn's River Falls
+  parish: St. Ann
+  cat: waterfall
+  tier: major
+  airport: Ocho Rios
+- name: Mystic Mountain
+  parish: St. Ann
+  cat: mountain
+  tier: major
+  airport: Ocho Rios
+- name: Green Grotto Caves
+  parish: St. Ann
+  cat: cave
+  tier: major
+  airport: Ocho Rios
+- name: Blue Hole
+  parish: St. Ann
+  cat: river
+  tier: major
+  airport: Ocho Rios
+- name: Dolphin Cove
+  parish: St. Ann
+  cat: adventure
+  tier: major
+  airport: Ocho Rios
+- name: Konoko Falls
+  parish: St. Ann
+  cat: waterfall
+  tier: major
+  airport: Ocho Rios
+- name: Seville Heritage Park
+  parish: St. Ann
+  cat: heritage
+  tier: major
+  airport: Ocho Rios
+- name: Nine Mile Bob Marley Mausoleum
+  parish: St. Ann
+  cat: heritage
+  tier: major
+  airport: Ocho Rios
+- name: Puerto Seco Beach
+  parish: St. Ann
+  cat: beach
+  tier: major
+  airport: Ocho Rios
+- name: Shaw Park Gardens
+  parish: St. Ann
+  cat: garden
+  tier: major
+  airport: Ocho Rios
+- name: Turtle River Falls and Gardens
+  parish: St. Ann
+  cat: waterfall
+  tier: major
+  airport: Ocho Rios
+- name: Little Dunn's River Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Reggae Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Cardiff Hall Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Priory Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Salem Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Runaway Bay Beach
+  parish: St. Ann
+  cat: beach
+  tier: gem
+  airport: Ocho Rios
+- name: Chukka Cove
+  parish: St. Ann
+  cat: adventure
+  tier: gem
+  airport: Ocho Rios
+- name: Cranbrook River
+  parish: St. Ann
+  cat: river
+  tier: gem
+  airport: Ocho Rios
+- name: Roaring River
+  parish: St. Ann
+  cat: river
+  tier: gem
+  airport: Ocho Rios
+- name: White River Valley swimming areas
+  parish: St. Ann
+  cat: river
+  tier: gem
+  airport: Ocho Rios
+- name: Discovery Bay historical sites
+  parish: St. Ann
+  cat: heritage
+  tier: gem
+  airport: Ocho Rios
+- name: 32 Market Street heritage site
+  parish: St. Ann
+  cat: heritage
+  tier: gem
+  airport: Ocho Rios
+- name: Marcus Garvey birthplace area
+  parish: St. Ann
+  cat: heritage
+  tier: gem
+  airport: Ocho Rios
+- name: Shaw Park lookout points
+  parish: St. Ann
+  cat: mountain
+  tier: gem
+  airport: Ocho Rios
+- name: Martha Brae River Rafting
+  parish: Trelawny
+  cat: river
+  tier: major
+  airport: Montego Bay
+- name: Glistening Waters Luminous Lagoon
+  parish: Trelawny
+  cat: river
+  tier: major
+  airport: Montego Bay
+- name: Good Hope Estate
+  parish: Trelawny
+  cat: garden
+  tier: major
+  airport: Montego Bay
+- name: Falmouth Historic District
+  parish: Trelawny
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Bengal Beach
+  parish: Trelawny
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Burwood Beach
+  parish: Trelawny
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Greenwood Great House
+  parish: Trelawny
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Silver Sands Beach
+  parish: Trelawny
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Duncans Bay
+  parish: Trelawny
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Coral Spring
+  parish: Trelawny
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Bengal Bay
+  parish: Trelawny
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Hampden Estate
+  parish: Trelawny
+  cat: garden
+  tier: gem
+  airport: Montego Bay
+- name: Luminous Lagoon shoreline
+  parish: Trelawny
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Windsor Cave
+  parish: Trelawny
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: White Cave
+  parish: Trelawny
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: Maroon Town
+  parish: Trelawny
+  cat: heritage
+  tier: gem
+  airport: Montego Bay
+- name: Historic Falmouth buildings and Georgian architecture
+  parish: Trelawny
+  cat: heritage
+  tier: gem
+  airport: Montego Bay
+- name: Doctor's Cave Beach
+  parish: St. James
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Rose Hall Great House
+  parish: St. James
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Martha Brae and Great River excursions
+  parish: St. James
+  cat: river
+  tier: major
+  airport: Montego Bay
+- name: Rocklands Bird Sanctuary
+  parish: St. James
+  cat: garden
+  tier: major
+  airport: Montego Bay
+- name: Ahhh…Ras Natango Gallery and Garden
+  parish: St. James
+  cat: garden
+  tier: major
+  airport: Montego Bay
+- name: Montego Bay Marine Park
+  parish: St. James
+  cat: adventure
+  tier: major
+  airport: Montego Bay
+- name: Sam Sharpe Square
+  parish: St. James
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Bellefield Great House
+  parish: St. James
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Montego Bay Cultural Centre
+  parish: St. James
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Dead End Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Walter Fletcher Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Harmony Beach Park
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Dump-Up Beach and Events Park
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: One Man Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Cornwall Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Tropical Bliss Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Reading Beach
+  parish: St. James
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Montpelier Jungle Outpost
+  parish: St. James
+  cat: adventure
+  tier: gem
+  airport: Montego Bay
+- name: Lethe River
+  parish: St. James
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Great River rafting
+  parish: St. James
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Barry Cave
+  parish: St. James
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: Barnett Estate historic areas
+  parish: St. James
+  cat: heritage
+  tier: gem
+  airport: Montego Bay
+- name: Fort Charlotte
+  parish: Hanover
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Half Moon Beach
+  parish: Hanover
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Bloody Bay
+  parish: Hanover
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Lucea Clock Tower
+  parish: Hanover
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Blenheim Birthplace of Alexander Bustamante
+  parish: Hanover
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Dolphin Head Mountain
+  parish: Hanover
+  cat: mountain
+  tier: gem
+  airport: Montego Bay
+- name: Orange Bay
+  parish: Hanover
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Sandy Bay
+  parish: Hanover
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Cousins Cove
+  parish: Hanover
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Flint River
+  parish: Hanover
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Rejoin Cave
+  parish: Hanover
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: Mosquito Cove
+  parish: Hanover
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Little Bay
+  parish: Hanover
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Round Hill coastal scenery
+  parish: Hanover
+  cat: mountain
+  tier: gem
+  airport: Montego Bay
+- name: Seven Mile Beach
+  parish: Westmoreland
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Rick's Cafe
+  parish: Westmoreland
+  cat: food
+  tier: major
+  airport: Montego Bay
+- name: Negril Lighthouse
+  parish: Westmoreland
+  cat: lighthouse
+  tier: major
+  airport: Montego Bay
+- name: Mayfield Falls
+  parish: Westmoreland
+  cat: waterfall
+  tier: major
+  airport: Montego Bay
+- name: Roaring River and Blue Hole
+  parish: Westmoreland
+  cat: river
+  tier: major
+  airport: Montego Bay
+- name: Bluefields Beach
+  parish: Westmoreland
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Peter Tosh Memorial
+  parish: Westmoreland
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Savanna-la-Mar
+  parish: Westmoreland
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+  about: historic town
+- name: Bluefields Bay
+  parish: Westmoreland
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Paradise Park
+  parish: Westmoreland
+  cat: garden
+  tier: gem
+  airport: Montego Bay
+- name: Belmont Beach
+  parish: Westmoreland
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Negril Royal Palm Reserve
+  parish: Westmoreland
+  cat: garden
+  tier: gem
+  airport: Montego Bay
+- name: Cabarita River
+  parish: Westmoreland
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Roaring River Cave
+  parish: Westmoreland
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: Negril Great Morass
+  parish: Westmoreland
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Morgan's Bridge
+  parish: Westmoreland
+  cat: mountain
+  tier: gem
+  airport: Montego Bay
+- name: Black River Safari
+  parish: St. Elizabeth
+  cat: river
+  tier: major
+  airport: Montego Bay
+- name: YS Falls
+  parish: St. Elizabeth
+  cat: waterfall
+  tier: major
+  airport: Montego Bay
+- name: Appleton Estate Rum Experience
+  parish: St. Elizabeth
+  cat: garden
+  tier: major
+  airport: Montego Bay
+- name: Treasure Beach
+  parish: St. Elizabeth
+  cat: beach
+  tier: major
+  airport: Montego Bay
+- name: Floyd's Pelican Bar
+  parish: St. Elizabeth
+  cat: food
+  tier: major
+  airport: Montego Bay
+- name: Lover's Leap
+  parish: St. Elizabeth
+  cat: mountain
+  tier: major
+  airport: Montego Bay
+- name: Accompong Maroon Village
+  parish: St. Elizabeth
+  cat: heritage
+  tier: major
+  airport: Montego Bay
+- name: Parottee Beach
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Billy's Bay
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Frenchman's Bay
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Calabash Bay
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Great Bay
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Jack Sprat Beach
+  parish: St. Elizabeth
+  cat: beach
+  tier: gem
+  airport: Montego Bay
+- name: Wallingford Main Cave
+  parish: St. Elizabeth
+  cat: cave
+  tier: gem
+  airport: Montego Bay
+- name: Middle Quarters shrimp vendors
+  parish: St. Elizabeth
+  cat: food
+  tier: gem
+  airport: Montego Bay
+- name: Apple Valley Park
+  parish: St. Elizabeth
+  cat: garden
+  tier: gem
+  airport: Montego Bay
+- name: Black River historic town and waterfront
+  parish: St. Elizabeth
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: The Black River Great Morass
+  parish: St. Elizabeth
+  cat: river
+  tier: gem
+  airport: Montego Bay
+- name: Cecil Charlton Park
+  parish: Manchester
+  cat: garden
+  tier: major
+  airport: Montego Bay or Kingston
+- name: Marshall's Pen Great House
+  parish: Manchester
+  cat: heritage
+  tier: major
+  airport: Montego Bay or Kingston
+- name: Roxborough
+  parish: Manchester
+  cat: heritage
+  tier: major
+  airport: Montego Bay or Kingston
+  about: Norman Manley's birthplace
+- name: Spur Tree Hill viewpoint
+  parish: Manchester
+  cat: mountain
+  tier: gem
+  airport: Montego Bay or Kingston
+- name: Manchester Parish Church
+  parish: Manchester
+  cat: heritage
+  tier: gem
+  airport: Montego Bay or Kingston
+- name: Milk River Mineral Bath
+  parish: Clarendon
+  cat: river
+  tier: major
+  airport: Kingston
+- name: Portland Ridge
+  parish: Clarendon
+  cat: mountain
+  tier: major
+  airport: Kingston
+- name: Halse Hall Great House
+  parish: Clarendon
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Jackson Bay
+  parish: Clarendon
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Salt River
+  parish: Clarendon
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Longville Park
+  parish: Clarendon
+  cat: garden
+  tier: gem
+  airport: Kingston
+- name: Milk River waterfront
+  parish: Clarendon
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Salt River mineral springs
+  parish: Clarendon
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: White Goat Cave
+  parish: Clarendon
+  cat: cave
+  tier: gem
+  airport: Kingston
+- name: Mason River Protected Area
+  parish: Clarendon
+  cat: river
+  tier: gem
+  airport: Kingston
+- name: Spanish Town Historic District
+  parish: St. Catherine
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Emancipation Square
+  parish: St. Catherine
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Old King's House
+  parish: St. Catherine
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Hellshire Beach
+  parish: St. Catherine
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Fort Clarence Beach
+  parish: St. Catherine
+  cat: beach
+  tier: major
+  airport: Kingston
+- name: Worthy Park Estate
+  parish: St. Catherine
+  cat: garden
+  tier: major
+  airport: Kingston
+- name: Colbeck Castle
+  parish: St. Catherine
+  cat: heritage
+  tier: major
+  airport: Kingston
+- name: Bog Walk Gorge
+  parish: St. Catherine
+  cat: adventure
+  tier: major
+  airport: Kingston
+- name: Flat Bridge
+  parish: St. Catherine
+  cat: mountain
+  tier: gem
+  airport: Kingston
+- name: White Marl Taino Museum
+  parish: St. Catherine
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Old Harbour Bay
+  parish: St. Catherine
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Salt Pond Beach
+  parish: St. Catherine
+  cat: beach
+  tier: gem
+  airport: Kingston
+- name: Linstead Market
+  parish: St. Catherine
+  cat: food
+  tier: gem
+  airport: Kingston
+- name: Spanish Town historic churches
+  parish: St. Catherine
+  cat: heritage
+  tier: gem
+  airport: Kingston
+- name: Mount Nebo Baptist Church
+  parish: St. Catherine
+  cat: heritage
+  tier: gem
+  airport: Kingston
