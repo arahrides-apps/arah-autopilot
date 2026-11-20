@@ -75,6 +75,19 @@ TYPE_THEMES = {"car_hero": ["road", "group", "couple", "family"], "qa": ["road",
                "moment": ["group", "culture", "family"], "versus": ["road", "couple", "river"], "place": ["couple", "family", "group", "river"],
                "experience": ["food", "river", "group", "culture"]}
 
+def _matched(b, post, text):
+    """A photo matching the slide's words (coconut water -> coconut vendor; grandma -> grandmother with grandkids), or None."""
+    from . import themes as TH
+    for q in TH.slide_queries(text)[:3]:
+        w = [x for x in q.lower().replace("'", "").split() if len(x) > 4 and x not in ("jamaica", "jamaican", "caribbean")][:2]
+        ph = b.pk._own("scenery", None, None, about=w) if w else None        # our own labelled Drive photos first
+        ph = ph or b.pk.scene(q, None, words=w)
+        if ph:
+            post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
+            post.setdefault("flags", []).append(f"Slide photo matched to '{q}': {ph.credit or 'our own photo'}")
+            return ph
+    return None
+
 def _themed(b, post, typ, n):
     """n different Jamaica photos for slides of a story (road trips, food, river days, couples, families, groups...). Missing ones are simply left as text slides."""
     from . import themes as TH
@@ -101,9 +114,14 @@ def _slides(b, post, cover, items, closer, own_photos=None, typ=None):
     total = len(items) + 2
     out = [(cover, 1350)]
     own_photos = dict(own_photos or {})
-    if typ and b.cfg["photos"].get("themed_slides", True):      # photos behind the story slides, not just words
-        free = [i for i, (h, _b) in enumerate(items) if i not in own_photos and not h.lower().startswith(("know the price", "price"))]
-        want = [i for i in free if i % 2 == 0][:2] + [None]                  # slides 2 and 4, plus the closing slide
+    typ = typ or post.get("type")
+    if b.cfg["photos"].get("themed_slides", True):              # a photo behind every slide, not just words; a text card only when no fresh photo exists
+        free = [i for i, (h, _b) in enumerate(items) if i not in own_photos]
+        for i in list(free):                                                   # first: a photo of what the slide actually talks about
+            ph = _matched(b, post, " ".join(items[i]))
+            if ph:
+                own_photos[i] = ph; free.remove(i)
+        want = free + [None]                                                   # the rest: a topic photo; plus the closing slide
         got = _themed(b, post, typ, len(want))
         closer_ph = got.pop() if len(got) == len(want) else None
         for i, ph in zip([w for w in want if w is not None], got):
@@ -293,19 +311,38 @@ def moment_story(b, post, pages, m):
              ("Pick up where you land.", PICKUPS), ("Book in 3 steps.", BOOK3)]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ=_T)
 
+SPOT_WHY = {"beach": "Clear water, soft sand and a slower pace. Bring a towel and stay for the afternoon.",
+            "waterfall": "Cool water, green all around and a swim at the end of the walk. Wear shoes that can get wet.",
+            "river": "Calm water and shade. A good half day away from the crowds.",
+            "cave": "Limestone caves are part of Jamaica's hidden side. Go with a local guide where one is offered.",
+            "mountain": "Cool air, big views and quiet roads. Go early for the clearest sky.",
+            "heritage": "Real places where Jamaica's story happened. Take your time and take the photos.",
+            "garden": "Plants, birds and shade. An easy stop for families.",
+            "food": "Local flavour, the way Jamaicans eat it. Come hungry.",
+            "lighthouse": "Sea views at the edge of the island. Best near sunset.",
+            "adventure": "A full day out. Book ahead where you can."}
+
+def spotlight_story(b, post, pages, e):
+    """Cover (a real photo of the place) + where + why go + getting there + price + book."""
+    where = f"{e['name']}, {e['parish']}." + (f" {e['about']}." if e.get("about") else "")
+    items = [("Where it is.", where), ("Why go.", SPOT_WHY.get(e["cat"], "A side of Jamaica most visitors never see.")),
+             ("Getting there.", f"Pick up your car at {e['airport']} and drive yourself. Hours and fees can change, so check before you go."), price_slide(b)]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ="place")
+
 def journey_story(b, post, pages, j):
     """Cover + 3 story beats + price + book. Every slide gets its own real Jamaica photo; none is reused (the picker records each one)."""
     pl = list(j.get("places", [])) + [None] * 4
-    def photo(i):
-        x = b.story_photo(post, pl[i]) if pl[i] else None
+    def photo(i, text=""):
+        x = _matched(b, post, text) if text else None
+        x = x or (b.story_photo(post, pl[i]) if pl[i] else None)
         x = x or b.pk.theme_photo(j.get("theme", "road"))
-        if x: post.setdefault("flags", []).append(x.flags[0] if getattr(x, "flags", None) else "Story photo")
+        if x and not text: post.setdefault("flags", []).append(f"Story photo ({pl[i] or j.get('theme')}): {x.credit or 'our own photo'}")
         return x
-    c = photo(0)
+    c = photo(0, j["h"] + " " + j["k"])
     cover = T.ccover(c.path, j["k"], j["h"], "Swipe for the story.") if c else pages[0][0]
     items, own = [], {}
     for i, (h, t) in enumerate(j["beats"]):
-        items.append((h, t)); x = photo(i + 1)
+        items.append((h, t)); x = photo(i + 1, h + " " + t)
         if x: own[i] = x
     items.append(price_slide(b))
     return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), own)
@@ -345,6 +382,8 @@ def build(b, post, typ, pages):
         return trust_story(b, post, pages, e)
     if typ == "moment":
         return moment_story(b, post, pages, e)
+    if typ == "spotlight":
+        return spotlight_story(b, post, pages, e)
     if typ == "journey":
         return journey_story(b, post, pages, e)
     if typ == "versus":

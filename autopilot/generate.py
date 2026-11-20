@@ -8,15 +8,16 @@ from .photos import Picker, Photo, rule_for
 from .render import render_all
 from . import story
 from . import promo as promo_mod
+from . import themes as TH
 from .ledger import dhash
 import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳"}
+EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
-            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel"}
-FALLBACK = {"journey": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
+            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel", "spotlight": "#VisitJamaica"}
+FALLBACK = {"journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -259,13 +260,30 @@ class DayBuilder:
             alt = f"Arah Rides on Smile Jamaica: {e['h']}"
             post["copy_text"] = txt; post["alt"] = alt
             post["caption"] = self.cap(post, kind, txt, cta=f"Watch the interview: {link}\nBook: {self.cfg['brand']['site']}")
-            return [(html, 1350)]
+            return [(self.photo_cover(post, kind, e, html), 1350)]
         elif kind == "chat":
             html = T.chat(e["h"], e["u"], e["b"]); txt = f"{e['h']} {EMOJI['chat']}\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app."
             alt = f"WhatsApp chat with Winston: {e['u']} / {e['b']}"
         post["copy_text"] = txt; post["alt"] = alt
         post["caption"] = self.cap(post, kind, txt, cta=None)
-        return [(html, 1350)]
+        return [(self.photo_cover(post, kind, e, html), 1350)]
+
+    def photo_cover(self, post, kind, e, html):
+        """Q&A, tips, lists, chats and brand posts open on a real Jamaica photo that matches the words, not a plain text card."""
+        g = e.get
+        k, h, sub = {"qa": ("ASK ARAH", g("q"), "Swipe for the answer."), "tip": (g("k"), g("h"), "Swipe for the full tip."),
+                     "engage": ("YOUR TURN", g("h"), g("b")), "list": (g("k"), g("h"), "Swipe through."), "versus": (g("k"), g("h"), "Swipe to compare."),
+                     "chat": ("ASK WINSTON", g("h"), f"\u201c{g('u')}\u201d")}.get(kind, (g("k"), g("h"), g("b")))
+        words = " ".join(str(x) for x in (h, sub, g("a"), g("b"), " ".join(g("items") or [])) if x)
+        ph = None
+        for q in TH.slide_queries(words)[:3]:
+            ph = self.pk.scene(q, None, words=[w for w in q.lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2])
+            if ph: break
+        if not ph:
+            ph = self.cover_photo(post, "", self.rng.choice(story.TYPE_THEMES.get(kind, ["road", "couple", "family", "group"])))
+        else:
+            self.photo_flags(post, ph)
+        return T.ccover(ph.path, k or "ARAH RIDES", h or "", sub or "") if ph else html
 
     def carousel(self, post):
         e = self.pick("carousel"); n = len(e["slides"]) + 1
@@ -282,7 +300,14 @@ class DayBuilder:
             cover = T.ccover(ph.path, e["k"], e["title"], e["sub"]) if ph else T.ccover_plain(e["k"], e["title"], e["sub"])
         pages = [(cover, 1350)]
         for i, (h, b) in enumerate(e["slides"]):
-            pages.append((T.slide(i + 2, n, h, b, alt=bool(i % 2), cta=(i == len(e["slides"]) - 1)), 1350))
+            last = i == len(e["slides"]) - 1
+            sp = None
+            if not last:                                   # a photo of the place or thing each slide names (Doctor's Cave Beach, Mayfield Falls...)
+                pk_, _st = story.find_place(h)
+                sp = self.pk.scene(story.nice(pk_) + " Jamaica", story.nice(pk_), strict=True) if pk_ else None
+                sp = sp or story._matched(self, post, f"{h} {b}")
+            sp = sp or (self.pk.theme_photo(self.rng.choice(["road", "couple", "family", "group"])) if last else None)
+            pages.append(((T.photoslide(sp.path, i + 2, n, h, b, cta=last) if sp else T.slide(i + 2, n, h, b, alt=bool(i % 2), cta=last)), 1350))
         body = "\n".join(f"• {h}: {b}" for h, b in e["slides"])
         post["copy_text"] = f"{e['title']} {EMOJI['carousel']}\n\n{e['sub']}\n\n{body}"
         post["alt"] = f"Carousel: {e['title']}"
@@ -301,6 +326,33 @@ class DayBuilder:
         post["alt"] = f"Event graphic: {m['h']}" if m.get("event") else f"Seasonal graphic: {m['h']}"
         post["caption"] = self.cap(post, "moment", post["copy_text"], place=m.get("loc"))
         return [(html, 1350)]
+
+    SPOT_HEAD = {"beach": "{n}. Your next swim.", "waterfall": "{n}. Worth the drive.", "river": "{n}. Cool water, slow day.", "cave": "Go underground at {n}.",
+                 "mountain": "{n}. The view is the reward.", "heritage": "{n}. Jamaica's story, up close.", "garden": "Slow down at {n}.", "food": "{n}. Come hungry.",
+                 "lighthouse": "{n}. End-of-the-road views.", "adventure": "{n}. Make a day of it."}
+
+    def spotlight(self, post):
+        """One named Jamaica attraction from content/attractions.yaml, shown with a real photo of that place. A place with no photo is passed over."""
+        A = load_yaml("attractions.yaml")["attractions"]
+        for _ in range(4):
+            i, _c = self.led.copy_pick("poi", len(A), self.today, self.rng, 365)
+            e = A[i]; n = e["name"]
+            words = [w for w in re.findall(r"[a-z']+", n.lower()) if len(w) > 3 and w not in ("beach", "river", "falls", "great", "house", "park", "gardens", "botanical", "historic", "district")][:2] or [n.lower()]
+            ph = self.pk.scene(f"{n} Jamaica", n, strict=True, words=words)
+            self.led.copy_record("poi", i, self.today)              # tried today: a place without a photo is not retried for a year
+            if not ph:
+                continue
+            self.photo_flags(post, ph)
+            head = self.SPOT_HEAD.get(e["cat"], "{n}. Go see it.").format(n=n)
+            kick = ("HIDDEN GEM" if e.get("tier") == "gem" else "MUST SEE") + " · " + e["parish"].upper()
+            self.last = {"kind": "spotlight", "e": dict(e, head=head, kick=kick)}
+            loc = n if self.where(n).get("id") else e["airport"].split(" or ")[0]
+            post["copy_text"] = f"{head} {EMOJI['spotlight']}\n\n{n}, {e['parish']}." + (f" {e['about']}." if e.get("about") else "") + f"\nPick up your car at {e['airport']} and drive there on your own time."
+            post["alt"] = f"{n}, {e['parish']}, Jamaica"
+            post["caption"] = self.cap(post, "spotlight", post["copy_text"], place=loc)
+            post["story_done"] = False
+            return [(T.ccover(ph.path, kick, head, "Swipe for the story."), 1350)]
+        return None
 
     def journey(self, post):
         """A short human story (fly down, book a car, visit grandma...) told as a swipeable post with a real Jamaica photo on every slide."""
@@ -564,6 +616,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "review": pages = b.review(post)
             elif t == "moment": pages = b.moment(post, *cur)
             elif t == "journey": pages = b.journey(post)
+            elif t == "spotlight": pages = b.spotlight(post)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
             if pages is None:
@@ -577,6 +630,13 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             if post["type"] == "offer":
                 ol = (b.last_offer, "")
             pages = b.expand(post, post["type"], pages, ol)
+        if not pages or '<img src="file:' not in pages[0][0]:
+            if not cfg["photos"].get("allow_text_cover", False):        # every post opens on a real photo; no fresh photo = no post (never a text card cover)
+                b.notes.append(f"Skipped the {hhmm} post on {date}: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.")
+                continue
+        nph = sum('<img src="file:' in h_ for h_, _ in pages)
+        if nph < len(pages):
+            post.setdefault("flags", []).append(f"{nph} of {len(pages)} slides have photos")
         for i, (html_, h) in enumerate(pages):
             rel = f"media/{date}/{post['id']}_{i + 1}.jpg"
             post["images"].append(rel)

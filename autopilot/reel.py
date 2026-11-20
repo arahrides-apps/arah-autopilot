@@ -45,7 +45,7 @@ def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8, style="classi
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
 
-REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel", "journey")
+REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel", "journey", "spotlight")
 KEEP_CAROUSEL = ("offer", "review", "versus", "list", "carousel", "qa", "trust")   # these read best as swipeable carousels
 
 def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):

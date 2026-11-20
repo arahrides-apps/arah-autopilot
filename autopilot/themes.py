@@ -43,9 +43,9 @@ THEMES = {
     "culture": (["Jamaica reggae music", "Jamaica Rastafari culture", "Jamaica street art", "Jamaica dancehall", "Jamaica carnival", "Jamaica drummers", "Jamaican culture festival",
                  "Bob Marley Museum", "Jamaica Art Walk Kingston"],
                 r"reggae|music|rasta|culture|art|mural|dance|carnival|drum|festival|marley|band|street|craft", True),
-    "couple": (["couple Jamaica beach", "couple Jamaica vacation", "couple Jamaica waterfall", "romantic Jamaica sunset couple", "couple Jamaica Negril"],
+    "couple": (["Black couple Jamaica beach", "couple Jamaica vacation", "interracial couple Caribbean beach", "couple Jamaica waterfall", "romantic Jamaica sunset couple", "couple Jamaica Negril"],
                r"couple|romantic|honeymoon|two|together|love", True),
-    "family": (["family Jamaica beach", "family Jamaica vacation", "family Jamaica river", "Jamaica kids beach family", "Jamaican family"],
+    "family": (["Black family Jamaica beach", "Jamaican family vacation", "Jamaican mother and child", "Black father and daughter beach", "interracial family Caribbean beach", "Jamaican grandmother with grandchildren", "single mom and son Caribbean beach", "Black family river Jamaica"],
                r"family|kids|children|child|parents|together|group", True),
     "group": (["friends Jamaica beach", "group of friends Jamaica", "friends Jamaica waterfall", "Jamaica friends road trip", "Jamaica group vacation party"],
               r"friends|group|together|party|people|crowd|team", True),
@@ -100,3 +100,34 @@ def event_theme(*texts):
     for rx, th in EVENT_THEMES:
         if rx.search(t):
             return th
+
+
+# What a slide talks about -> the photo to search for, so the picture matches the words (coconut water -> coconut vendor, grandma -> grandmother with grandkids).
+SLIDE_TOPICS = [
+    (r"coconut", ["coconut water vendor Jamaica", "coconut tree Jamaica beach"]),
+    (r"\bjerk\b|pimento", ["jerk chicken pit Jamaica", "jerk pork Boston Bay"]),
+    (r"patt(y|ies)|coco bread", ["Jamaican beef patty", "Jamaican patty coco bread"]),
+    (r"\bfish\b|seafood|lobster", ["fried fish Jamaica beach", "Jamaica seafood plate"]),
+    (r"coffee", ["Blue Mountain coffee Jamaica", "coffee farm Jamaica"]),
+    (r"ackee|breakfast|rice and peas|sorrel|food|eat|dinner|lunch|cook", ["Jamaican food plate", "Jamaican family dinner"]),
+    (r"grandma|grandmother|granny", ["Jamaican grandmother with grandchildren", "grandmother hugging grandchild"]),
+    (r"single (mom|mum|mother|dad|father)", ["single mother and child beach", "Black father and son beach"]),
+    (r"famil|kids|children|grandkids|cousins|reunion|pickney|graduat", ["Black family Jamaica beach", "Jamaican mother and child", "Black father and daughter beach", "interracial family Caribbean beach"]),
+    (r"honeymoon|couple|wedding|romantic|two of you|anniversary", ["Black couple Jamaica beach", "couple Jamaica sunset", "interracial couple Caribbean beach"]),
+    (r"friends|girls|crew|birthday|party", ["friends Jamaica beach", "group of friends Jamaica"]),
+    (r"waterfall|\bfalls\b|blue hole|swim", ["waterfall Jamaica swimming", "Dunn's River Falls climbing"]),
+    (r"river|raft|safari|mangrove|crocodile", ["river rafting Jamaica", "Black River Jamaica boat"]),
+    (r"sunset|cliff", ["Negril cliffs sunset", "Jamaica sunset beach"]),
+    (r"beach|sand|\bsea\b|ocean|seven mile", ["Jamaica beach people", "Seven Mile Beach Negril"]),
+    (r"mountain|hike|holywell|peak|sunrise|mist", ["Blue Mountains Jamaica", "Blue Mountains sunrise"]),
+    (r"reggae|music|fete|dancehall|boxing day", ["reggae music Jamaica", "Jamaica street party"]),
+    (r"market|vendor|shop|gift|christmas", ["Jamaica market fruit vendor", "Jamaica Christmas market"]),
+    (r"airport|\blanded\b|flight", ["Montego Bay Jamaica airport arrival", "travelers airport Caribbean"]),
+    (r"cruise|ship|port", ["cruise ship Ocho Rios Jamaica", "Ocho Rios Jamaica bay"]),
+    (r"road trip|windows down|bamboo|coastal road|scenic", ["Jamaica coastal road drive", "Bamboo Avenue Jamaica"]),
+]
+
+def slide_queries(text):
+    """Photo searches that match what a slide says, best match first. Empty when nothing specific is mentioned."""
+    t = (text or "").lower()
+    return [q for rx, qs in SLIDE_TOPICS if re.search(rx, t) for q in qs]
