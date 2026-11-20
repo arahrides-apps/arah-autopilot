@@ -185,7 +185,8 @@ def publish_due(cfg, ig=None, dry_run=False, max_posts=None, spacing=True):
         try:
             if dry_run:
                 log_.append(f"DRY RUN would post {p['id']} ({len(urls)} image(s))"); n += 1; continue
-            if p.get("reel") and cfg.get("reels", {}).get("publish_as_reel", False) and hasattr(ig, "post_reel"):
+            as_ = (dec.get(p["id"]) or {}).get("as", "reel")
+            if p.get("reel") and as_ != "carousel" and tries < 2 and cfg.get("reels", {}).get("publish_as_reel", False) and hasattr(ig, "post_reel"):
                 mid, link = ig.post_reel(base + p["reel"], cap_txt, meta=p)
             else:
                 mid, link = ig.post(urls, cap_txt, p.get("alt"), meta=p)

@@ -93,7 +93,7 @@ def add_reels(cfg, posts, date):
             if p.get("promo"):
                 from . import promo as _P, promo_art as _A
                 pr = _P.active(date); k = prom.index(p) if p in prom else 0
-                got = _P.get_clip(cfg, date, k) if (pr and k % 2 == 0) else None        # the 1st promo Reel of the day is on a video clip, the 2nd is a photo slideshow
+                got = _P.get_clip(cfg, date, k) if (pr and (k + date.toordinal()) % 2 == 0) else None        # promo Reels alternate day by day: video clip, then photo slideshow        # the 1st promo Reel of the day is on a video clip, the 2nd is a photo slideshow
                 if got:
                     _P.make_promo_reel(got[0], pr, Q.DOCS / rel, start=got[1]); _P.note_use(got[2], date); p["reel_kind"] = "sale video (Drive clip)"
                 else:

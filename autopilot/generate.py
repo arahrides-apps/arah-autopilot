@@ -129,6 +129,11 @@ class DayBuilder:
             if have:
                 tag_loc = L[have[(self.date.toordinal() + len(self.led_loc)) % len(have)]]
         post["location"] = {"name": tag_loc["name"], "id": tag_loc.get("id", "")}
+        pr = promo_mod.active(self.date)
+        if pr and pr.get("caption_line", True) and pr["code"].lower() not in text.lower():       # the sale is on: every caption carries the code
+            end = dt.date.fromisoformat(str(pr["end"])); left = (end - self.date).days
+            when = "Last day!" if left <= 0 else ("Ends tomorrow." if left == 1 else f"Ends {end.strftime('%b')} {end.day}.")
+            text = f"{text}\n\n🔥 {pr['name'].title()}: up to US${pr['amount']} off with code {pr['code']} at checkout. {when} {pr.get('terms', '')}".rstrip()
         return caption(self.cfg, typ, text, extra_tag, cta, credit, loc, self.rng)
 
     def cover_photo(self, post, text="", theme="road", place=None):
@@ -529,7 +534,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     zone = tz(cfg); posts = []; jobs = []
     pattern = cfg["pattern"][: cfg["posts_per_day"]]
     used_mom = used_offer = False
-    promo = promo_mod.active(date); pslots = (promo or {}).get('slots', [5, 9]); is_promo = False
+    promo = promo_mod.active(date); pslots = (promo or {}).get('slots', [4]); is_promo = False
     events = upcoming_events(b.moments, date); ev_slots = cfg.get("event_slots", [8, 11]); cur = (mom, left)
     for idx, typ0 in enumerate(pattern):
         if "|" in typ0:

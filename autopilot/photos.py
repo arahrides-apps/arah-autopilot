@@ -497,8 +497,10 @@ class Picker:
         if not self.cfg["photos"]["allow_people_photos"] and not (kind == "scenery" and self.cfg["photos"].get("allow_people_scenery")) and has_face(dest):
             log.info("skip %s: face detected", item["id"]); return None
         e = extra or {}
-        return Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
-                     e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
+        ph = Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
+                   e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
+        self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
+        return ph
 
     def _own(self, want, tag=None, ok=None, about=None):
         cands = []
@@ -542,7 +544,7 @@ class Picker:
         if not fresh and cands:
             n = "Photo library is running thin: similar photos from the same shoot are coming back sooner than %d days. Add new photos to the Drive folder." % gap
             if n not in self.notes: self.notes.append(n)
-            fresh = sorted(cands, key=lambda c: -c[5])[:max(3, len(cands) // 3)]
+            fresh = [] if self.cfg["photos"].get("series_strict", True) else sorted(cands, key=lambda c: -c[5])[:max(3, len(cands) // 3)]
         fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
         for q, _, src, it, flags, _age in fresh[:25]:
             self.tried.add(it["id"])
@@ -622,6 +624,13 @@ class Picker:
         return c, bg
 
     def theme_photo(self, theme, ok_extra=None):
+        """Every topic photo is written to the ledger the moment it is picked, so it cannot come back for 90 days (promo, event, story and Christmas posts used to skip this)."""
+        ph = self._theme_photo(theme, ok_extra)
+        if ph:
+            self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
+        return ph
+
+    def _theme_photo(self, theme, ok_extra=None):
         """A Jamaica photo for a topic (road trip, food, river, culture, couple, family, group, solo): our own labelled photos first, then web photos
         whose description says Jamaica AND matches the topic. People are welcome here."""
         queries, rx, _people = TH.THEMES[theme]

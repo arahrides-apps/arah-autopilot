@@ -63,8 +63,13 @@ def _uses():
     try: return json.loads(USE.read_text())
     except Exception: return {}
 
-def _pick(keys, date, days=90):
+def _pick(keys, date, days=None):
     """Strict no-reuse: only a clip not used in the last 90 days. Returns the key, or None when every clip has had its turn."""
+    if days is None:
+        try:
+            from .config import load as _load_cfg; days = int(_load_cfg().get("reels", {}).get("video_reuse_days", 365))
+        except Exception:
+            days = 365
     u = _uses(); today = date if isinstance(date, dt.date) else dt.date.fromisoformat(str(date))
     def fresh(k):
         last = (u.get(k) or [None])[-1]
@@ -73,7 +78,7 @@ def _pick(keys, date, days=90):
     return free[0] if free else None
 
 def note_use(key, date):
-    u = _uses(); u.setdefault(key, []).append(str(date)); u[key] = u[key][-30:]
+    u = _uses(); u.setdefault(key, []).append(str(date)); u[key] = u[key][-50:]
     USE.parent.mkdir(parents=True, exist_ok=True); USE.write_text(json.dumps(u, indent=0))
 
 def get_clip(cfg, date, k):
