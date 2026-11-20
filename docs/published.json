@@ -1483,5 +1483,10 @@
   "at": "2026-11-20T02:01:34.009816-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-20_0200_journey": {
+  "status": "skipped",
+  "at": "2026-11-20T06:02:17.787917-05:00",
+  "note": "not approved in time"
  }
 }
