@@ -1,0 +1,8 @@
+# Sales promotions. While one is active, `per_day` posts a day are about it and each goes out as a Reel (video clips from the Drive folder, or a slideshow if none).
+- code: PureCyber
+  name: BLACK FRIDAY + CYBER MONDAY
+  amount: 40
+  start: '2026-11-20'
+  end: '2026-11-30'          # Cyber Monday. Change this date if the sale is extended
+  slots: [5, 9]              # which of the day's posts (0 = midnight, 5 = 10 am, 9 = 6 pm) are promo Reels
+  terms: Conditions apply.
