@@ -4,5 +4,6 @@
   amount: 40
   start: '2026-11-20'
   end: '2026-11-30'          # Cyber Monday. Change this date if the sale is extended
-  slots: [5, 9]              # which of the day's posts (0 = midnight, 5 = 10 am, 9 = 6 pm) are promo Reels
+  slots: [4]                 # which of the day's posts is the promo Reel (0 = midnight, 4 = 6 pm, the busiest time)
+  caption_line: true         # every other post's caption also mentions the code while the sale is on
   terms: Conditions apply.
