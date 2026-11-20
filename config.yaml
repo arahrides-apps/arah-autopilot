@@ -139,7 +139,7 @@ sources:
     enabled: true                                        # free key: unsplash.com/developers (New Application > Access Key)
     api_key_env: UNSPLASH_ACCESS_KEY
   pexels:
-    enabled: true                                        # free key: pexels.com/api
+    enabled: false                                       # Pexels has paused new API keys; turn on if you ever get one
     api_key_env: PEXELS_API_KEY
   pixabay:
     enabled: true                                        # free key: pixabay.com/api/docs  (secret PIXABAY_API_KEY)
