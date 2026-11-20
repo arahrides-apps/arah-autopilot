@@ -150,6 +150,7 @@ sources:
 offers:
   lounge_pass:
     enabled: true
+    pause_until: '2027-01-01'      # no lounge pass posts or wording before this date (paused for the Black Friday / Christmas sales). It comes back by itself on Jan 1
     text: "Book a rental for 7 days or more and get a Club Mobay or Club Kingston departure pass for 1 guest. Cannot be combined with other promo codes or discounts. Conditions apply."
     buy_url: "https://booking.vipattractions.com/affiliate/8285"     # buy a lounge pass without renting
   black_friday:
