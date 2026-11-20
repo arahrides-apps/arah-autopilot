@@ -1,21 +1,21 @@
 # Arah Rides Instagram Autopilot - settings you may want to change.
 timezone: America/Jamaica          # UTC-5 all year, no daylight saving
-posts_per_day: 12                  # one post every 2 hours, starting at midnight Jamaica time (most reservations are made late at night)
+posts_per_day: 6                   # 6 strong posts a day beat 12 that repeat photos. Most reservations are made late at night, so midnight stays
 days_ahead: 3                      # keep this many future days drafted for your review
 publish_grace_hours: 4             # if a post is still unapproved/undelivered this long after its slot, it is skipped (never posted late)
 max_posts_per_day_hard_cap: 15
 min_gap_minutes: 20               # posts approved late are spaced at least this far apart
 max_posts_per_run: 1              # the publisher runs every 10 minutes
 
-# Times in Jamaica time. Must contain at least posts_per_day entries.
-slots: ["00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]   # Jamaica time
+# Times in Jamaica time. Must contain at least posts_per_day entries. (The 12-a-day schedule was 00:00 to 22:00 every 2 hours.)
+slots: ["00:00", "07:00", "11:00", "14:00", "18:00", "21:00"]   # Jamaica time (US East Coast is the same hour in winter)
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["car_hero", "journey", "chat|qa", "place", "journey", "experience", "review|tip", "place|trip", "journey|carousel", "trip|experience", "place|experience", "experience|trust"]
-event_slots: [8]                    # pattern positions (16:00 and 22:00) that highlight an upcoming event while one is within 3 weeks; the second only when 2+ events are due
-single_days_per_5: 3               # single-picture posts (about 5% of all posts): the midnight car photo, on 3 days out of every 5
+pattern: ["car_hero", "journey", "place|trip", "carousel|list", "journey|experience", "review|qa"]
+event_slots: [2]                    # the 11:00 post highlights an upcoming event (only on event_days)
+single_days_per_5: 3               # the midnight car photo goes out as a single picture on 3 days out of every 5 (about 10% of posts)
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
-single_slots: [0]                   # positions in the pattern posted as a single picture (car_hero at midnight, qa at 20:00); the other 10 of 12 are swipeable carousels
+single_slots: [0]                   # the midnight car post
 # Night slots (00:00 to 04:00) carry the booking posts: car photo, lounge offer or brand, Winston chat. Day slots carry destination plans, reviews and tips.
 # The old 15-a-day pattern, to go back to: ["car_hero", "qa", "experience", "tip", "brand|chat", "carousel|list", "trip", "experience", "tip", "place", "qa|trust|review", "trip", "brand|versus", "place", "list|carousel"]
 all_carousels: true               # every feed post is a swipeable carousel (cover + 4 slides); Instagram favours carousels for non-followers
@@ -100,24 +100,26 @@ locations:
   treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 reels:
-  per_day: 12                      # upper limit; the mix below decides how many
-  carousels_per_day: 2             # carousels kept as carousels (about 15%); single pictures are about 5%; everything else (about 80%) goes out as a Reel
+  per_day: 4                      # Reels a day (about 60-65%); 3 on days with a single picture
+  carousels_per_day: 2             # carousels kept as carousels (about 30%): the 14:00 guide and the 21:00 review/Q&A
   clips: true                      # videos you drop in content/reels/ named clip_*.mp4 are used in Reels
   max_clip_mb: 250                 # biggest Drive video clip it will download
   library: true                   # one a day uses an animated ad from content/reels/
+  video_reuse_days: 365            # a video clip or animated ad is never used again within a year
   publish_as_reel: true            # true = post the video as a Reel (Make has the Reel route). false = post the carousels instead
 
 photos:
   retired: [jamaica_cup, tennis]            # never use photos whose file name contains these (the Jamaica Cup tennis is over; remove the line to bring them back next year)
-  reuse_days: 90                   # the same photo is never used again within this many days
-  near_duplicate_days: 30          # a near-identical shot (burst photos) is also held back this long
-  near_duplicate_distance: 10
-  web_share: 0.5                   # share of scenery posts that look for a licence-free web photo first (0 = own photos first, 1 = web first)
+  reuse_days: 365                  # a photo (your Drive library or any web source) is never used again within a year
+  near_duplicate_days: 365         # a near-identical shot (burst photos, same view) is held back just as long
+  near_duplicate_distance: 14       # higher = stricter about 'looks the same'
+  web_share: 0.6                   # share of photos that come from licence-free web photos of Jamaica first (Unsplash, Pexels, Pixabay, Wikimedia public domain), each checked by Claude
   illustrations: false             # real photos only. true = allow drawn placeholder scenes when no photo can be found
   stock_car_share: 0.35            # share of car posts that use a clean stock photo of one of our models (needs the Pexels / Unsplash / Pixabay keys)
   stock_composites: false      # true = paste stock car photos onto Jamaica backgrounds (looked rough, so off)
   fleet_models: [BMW 2 Series, BMW 3 Series, BMW 5 Series GT, Foton View CS2, GWM Haval GT, GWM Haval H6, Honda CR-V, Honda Fit, Honda Grace, Honda HR-V, Hyundai Creta, Hyundai Tucson, Jetour T2, Kia Cerato, Kia Seltos, Kia Soluto, Kia Sportage, Mazda Demio, MG ZS, Nissan Sylphy, Nissan Teana, Nissan X-Trail, Subaru G4, Subaru Impreza, Subaru Legacy, Subaru XV, Suzuki Baleno, Suzuki Swift, Suzuki Vitara, Suzuki XL7, Toyota Aqua, Toyota Axio, Toyota Corolla, Toyota Corolla Cross, Toyota Corolla Touring, Toyota Hiace, Toyota Noah, Toyota RAV4, Toyota Rush, Toyota Vitz, Toyota Voxy, Toyota Yaris, Toyota Yaris Cross]     # the models on arahrides.com
-  series_days: 14                  # photos from the same shoot (same car, same spot) are spaced at least this many days apart
+  series_days: 21                  # photos from the same shoot (same car, same spot) are spaced at least this many days apart
+  series_strict: true              # never break that rule when the library runs thin: the post uses another topic instead
   min_short_side: 1000
   allow_unreviewed_drive: false    # true = also use Drive photos I have not looked at. Only switch on after checking the Drive folder holds nothing private
   allow_people_scenery: true       # Jamaica scenery/lifestyle photos may show people (couples, families, groups). Car photos still follow the next line
