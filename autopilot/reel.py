@@ -72,7 +72,8 @@ def add_reels(cfg, posts, date):
     notes = []; lib = sorted(f for d in ("content/reels", "reels") for f in (Q.ROOT / d).glob("*_9x16.mp4")) if rc.get("library", True) else []
     cand = [p for p in posts if len(p.get("images", [])) >= 4 and p["type"] in REEL_TYPES and not p.get("single") and not any("Illustration" in f for f in p.get("flags", []))]
     keep = int(rc.get("carousels_per_day", 2))
-    first = [p for p in cand if p.get("event_reel_src")] + [p for p in cand if p.get("event_reel_flag") and not p.get("event_reel_src")]
+    prom = [p for p in posts if p.get("promo") and len(p.get("images", [])) >= 2]       # the sale: every promo post is a Reel
+    first = prom + [p for p in cand if p.get("event_reel_src") and p not in prom] + [p for p in cand if p.get("event_reel_flag") and not p.get("event_reel_src") and p not in prom]
     keepers = [p for p in cand if p["type"] in KEEP_CAROUSEL and p not in first][:keep]
     rest = [p for p in cand if p not in first and p not in keepers]
     keepers += rest[:max(0, keep - len(keepers))]                                  # not enough carousel-type posts: keep a few others as carousels
@@ -82,7 +83,15 @@ def add_reels(cfg, posts, date):
     for p in pick:
         rel = p["images"][0].rsplit("_", 1)[0] + ".mp4"
         try:
-            if p.get("event_reel_src"):
+            if p.get("promo"):
+                from . import promo as _P
+                pr = _P.active(date); k = prom.index(p) if p in prom else 0
+                clip = _P.get_clip(cfg, date, k) if pr else None
+                if clip is not None:
+                    _P.make_promo_reel(clip, pr, Q.DOCS / rel); p["reel_kind"] = "sale video (from a Drive clip)"
+                else:
+                    make_reel([Q.DOCS / i for i in p["images"]], Q.DOCS / rel, per_slide=1.9, style="punchy"); p["reel_kind"] = "sale slideshow (no Drive video found)"
+            elif p.get("event_reel_src"):
                 shutil.copy(p["event_reel_src"], Q.DOCS / rel); p["reel_kind"] = "event video"
             elif clips and p["type"] in ("tip", "chat", "qa", "brand", "engage", "trust") and int(hashlib.md5((p["id"]).encode()).hexdigest()[:4], 16) % 2 == 0:
                 seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:4], 16)

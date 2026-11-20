@@ -7,6 +7,7 @@ from .ledger import Ledger
 from .photos import Picker, Photo, rule_for
 from .render import render_all
 from . import story
+from . import promo as promo_mod
 from .ledger import dhash
 import types
 from PIL import Image
@@ -498,6 +499,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     zone = tz(cfg); posts = []; jobs = []
     pattern = cfg["pattern"][: cfg["posts_per_day"]]
     used_mom = used_offer = False
+    promo = promo_mod.active(date); pslots = (promo or {}).get('slots', [5, 9]); is_promo = False
     events = upcoming_events(b.moments, date); ev_slots = cfg.get("event_slots", [8, 11]); cur = (mom, left)
     for idx, typ0 in enumerate(pattern):
         if "|" in typ0:
@@ -506,14 +508,17 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         at = dt.datetime.combine(date, dt.time.fromisoformat(hhmm), zone)
         if at <= now or hhmm in skip:
             continue
-        typ = typ0; cur = (mom, left)
-        if events and idx in ev_slots and date.weekday() in cfg.get("event_days", range(7)) and (ev_slots.index(idx) == 0 or len(events) > 1):
+        typ = typ0; cur = (mom, left); is_promo = False
+        if promo and idx in pslots:
+            cur = (promo_mod.moment(promo, pslots.index(idx), date), 0); typ = "moment"; is_promo = True
+        elif events and idx in ev_slots and date.weekday() in cfg.get("event_days", range(7)) and (ev_slots.index(idx) == 0 or len(events) > 1):
             k = ev_slots.index(idx); cur = events[(date.toordinal() + k) % len(events)]; typ = "moment"
         elif mom and typ0 == "tip" and not used_mom:
             typ, used_mom = "moment", True
         elif offer and typ0 in ("brand", "versus") and not used_offer:
             typ, used_offer = "offer", True
         post = {"id": f"{date}_{hhmm.replace(':', '')}_{typ}", "date": str(date), "slot": at.isoformat(), "type": typ, "flags": [], "images": []}
+        if is_promo: post["promo"] = promo["code"]
         pages = None; t = typ
         while pages is None:
             if t == "car_hero": pages = b.car_hero(post)
