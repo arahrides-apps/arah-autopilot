@@ -27,7 +27,7 @@ brand:
   site: arahrides.com
   whatsapp: "+1 201-371-3152"
   wa_link: "wa.me/12013713152"        # opens a WhatsApp chat with Winston
-  price_from: "cars from US$28 a day, SUVs from US$50 a day"   # from Winston's knowledge base; change it here when rates change, or make it "" to show no price
+  price_from: "holiday rates: cars from US$50 a day, SUVs from US$72 a day"   # from Winston's knowledge base; change it here when rates change, or make it "" to show no price
   tagline: "Rent Jamaican. Discover the Real Jamaica."
   green: "#0B6B3A"
   gold: "#E8A93A"
@@ -103,6 +103,7 @@ reels:
   per_day: 12                      # upper limit; the mix below decides how many
   carousels_per_day: 2             # carousels kept as carousels (about 15%); single pictures are about 5%; everything else (about 80%) goes out as a Reel
   clips: true                      # videos you drop in content/reels/ named clip_*.mp4 are used in Reels
+  max_clip_mb: 250                 # biggest Drive video clip it will download
   library: true                   # one a day uses an animated ad from content/reels/
   publish_as_reel: true            # true = post the video as a Reel (Make has the Reel route). false = post the carousels instead
 
