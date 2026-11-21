@@ -36,6 +36,7 @@
    "flags": [
     "Its 02:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
     "Number plate visible (kept sharp on purpose)",
+    "Slide photo matched to 'Jamaican food plate': Photo by Ronise daluz on Unsplash",
     "3 of 5 slides have photos"
    ],
    "images": [
@@ -47,28 +48,34 @@
    ],
    "_deal_k": 1,
    "photo": {
-    "id": "local:arah_b1_8_honda-fit-silver",
-    "name": "arah_b1_8_honda-fit-silver",
+    "id": "local:arah_b1_9_honda-fit-silver",
+    "name": "arah_b1_9_honda-fit-silver",
     "source": "local",
     "credit": "Arah Rides"
    },
-   "copy_text": "Honda Fit (2017) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "copy_text": "Honda Fit from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
    "alt": "Honda Fit rental car in Jamaica (carousel: swipe for more)",
    "location": {
     "name": "Montego Bay, Jamaica",
     "id": "115773858436055"
    },
-   "caption": "Honda Fit (2017) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #RentACarJamaica #DiscoverTheRealJamaica #VisitJamaica #JamaicaItinerary",
+   "caption": "Honda Fit from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #SelfDriveJamaica #RentJamaican #TravelJamaica #JamaicaTravel",
    "beat_lines": [
     "From US$50 a day",
     "Deposit just US$250",
     "Easy to park and easy on gas.",
     "Book in minutes: website or WhatsApp Winston"
    ],
+   "photos_extra": [
+    {
+     "id": "unsplash:WERPqT_E5jE",
+     "name": "unsplash-WERPqT_E5jE"
+    }
+   ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/2d82643afafe8728.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/7558a45ba5facb30.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/fdd4016fd3ec7e1a.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/36eca6fadbec9fa9.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/05535181c25b4a65.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/82aea9541ed0c59d.jpg"
    ],
    "status": "pending"
   },
@@ -78,8 +85,9 @@
    "slot": "2026-11-21T07:00:00-05:00",
    "type": "journey",
    "flags": [
-    "Slide photo from unsplash (licence-free): Photo by Alexander John on Unsplash",
-    "Slide photo matched to 'Jamaican family dinner': Photo by NinaLakomy on Pixabay",
+    "Its 07:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
+    "Slide photo matched to 'Jamaica market fruit vendor': Photo by NinaLakomy on Pixabay",
+    "Slide photo (culture): Photo by Peter Verwimp, Wikimedia Commons (CC0)",
     "2 of 6 slides have photos"
    ],
    "images": [
@@ -90,28 +98,32 @@
     "media/2026-11-21/2026-11-21_0700_journey_5.jpg",
     "media/2026-11-21/2026-11-21_0700_journey_6.jpg"
    ],
-   "copy_text": "Montego Bay to Treasure Beach in one day. 🧳\n\nLeave MBJ early. Head south through St Elizabeth.\nBlack River stop. Boat safari or lunch by the water.\nEnd at the south coast. Quiet beaches and a sky full of stars.",
-   "alt": "Story: Montego Bay to Treasure Beach in one day. (carousel: swipe for more)",
+   "copy_text": "Masks, drums and dancing in the street. 🧳\n\nA Jamaican Christmas tradition. Jonkonnu dancers bring the street to life.\nGrand Market night. Food, lights and music for the whole family.\nDrive home happy. Your own car means no waiting at midnight.",
+   "alt": "Story: Masks, drums and dancing in the street. (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Montego Bay to Treasure Beach in one day. 🧳\n\nLeave MBJ early. Head south through St Elizabeth.\nBlack River stop. Boat safari or lunch by the water.\nEnd at the south coast. Quiet beaches and a sky full of stars.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #RentJamaican #JamaicaTravel #SelfDriveJamaica",
+   "caption": "Masks, drums and dancing in the street. 🧳\n\nA Jamaican Christmas tradition. Jonkonnu dancers bring the street to life.\nGrand Market night. Food, lights and music for the whole family.\nDrive home happy. Your own car means no waiting at midnight.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #JamaicaRentalCar #RentJamaican #JamaicaRoadTrip #JamaicaCarRental",
    "photos_extra": [
     {
      "id": "pixabay:3625028",
      "name": "pixabay-3625028"
+    },
+    {
+     "id": "wikimedia:141399831",
+     "name": "wikimedia-141399831"
     }
    ],
    "beat_lines": [
-    "Leave MBJ early.",
-    "Black River stop.",
-    "End at the south coast.",
+    "A Jamaican Christmas tradition.",
+    "Grand Market night.",
+    "Drive home happy.",
     "Know the price before you land."
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/d4b76fba98d74903.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/dd0483a99f7024e9.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/dd0483a99f7024e9.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/96fb332b18d15208.jpg"
    ],
    "status": "pending"
   },
@@ -121,10 +133,11 @@
    "slot": "2026-11-21T22:00:00-05:00",
    "type": "deal",
    "flags": [
-    "Stock photo of a Suzuki Swift. It shows the model, not one of our own cars: check it looks clean and has no people",
-    "Stock photo of this model",
-    "2 of 5 slides have photos",
-    "Goes out as a Reel (animated slideshow (dynamic))."
+    "Number plate visible (kept sharp on purpose)",
+    "Slide photo (culture): Photo by Peter Verwimp, Wikimedia Commons (CC0)",
+    "3 of 5 slides have photos",
+    "Silent Reel: add royalty-free tracks (mp3) to content/music/ and every Reel gets music. Or post it from the Instagram app with a trending sound.",
+    "Goes out as a Reel (hook Reel: real photos, fast cuts, captions, no music)."
    ],
    "images": [
     "media/2026-11-21/2026-11-21_2200_deal_1.jpg",
@@ -135,30 +148,37 @@
    ],
    "_deal_k": 2,
    "photo": {
-    "id": "wikimedia:203208069",
-    "name": "wikimedia-203208069",
-    "source": "wikimedia",
-    "credit": "Photo by Aboutdamnavantime.wiki, Wikimedia Commons (CC BY 4.0)"
+    "id": "local:arah_listing_179_1_2015-suzuki-swift",
+    "name": "arah_listing_179_1_2015-suzuki-swift",
+    "source": "local",
+    "credit": "Arah Rides"
    },
-   "copy_text": "Suzuki Swift (2015) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\nPhoto shows the model; the car you rent may differ in colour and trim.",
+   "copy_text": "Suzuki Swift from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
    "alt": "Suzuki Swift rental car in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
    },
-   "caption": "Suzuki Swift (2015) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\nPhoto shows the model; the car you rent may differ in colour and trim.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #ArahRides #JamaicaVacation #CarRentalJamaica",
+   "caption": "Suzuki Swift from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #JamaicaCarRental #ArahRides #VisitJamaica #JamaicaItinerary",
    "beat_lines": [
     "From US$50 a day",
     "Deposit just US$250",
     "Easy to park and easy on gas.",
     "Book in minutes: website or WhatsApp Winston"
    ],
+   "photos_extra": [
+    {
+     "id": "wikimedia:141400452",
+     "name": "wikimedia-141400452"
+    }
+   ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/d09f8063b7be96bf.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/6739f45f596f6a25.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e334b0156a39a285.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/81f2a33bfe7259bf.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b13fb9d0ad56f966.jpg"
    ],
    "status": "pending",
-   "reel_kind": "animated slideshow (dynamic)",
+   "reel_kind": "hook Reel: real photos, fast cuts, captions, no music",
    "reel": "media/2026-11-21/2026-11-21_2200_deal.mp4"
   }
  ]
