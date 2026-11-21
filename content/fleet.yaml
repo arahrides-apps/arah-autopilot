@@ -1,0 +1,1121 @@
+fleet:
+- id: 230
+  title: MG ZS
+  make: MG
+  model: ZS
+  year: '-'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 77
+  currency: USD
+  url: https://www.arahrides.com/cars/230
+- id: 206
+  title: 'Suzuki Vitara '
+  make: Suzuki
+  model: Vitara
+  year: '2018'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 72
+  currency: USD
+  url: https://www.arahrides.com/cars/206
+- id: 190
+  title: 'Toyota Corolla '
+  make: Toyota
+  model: Corolla
+  year: '2023'
+  type: Sedan
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 57
+  currency: USD
+  url: https://www.arahrides.com/cars/190
+- id: 185
+  title: 'Toyota Corolla '
+  make: Toyota
+  model: Corolla
+  year: '2022'
+  type: Sedan
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 57
+  currency: USD
+  url: https://www.arahrides.com/cars/185
+- id: 127
+  title: 'MBJ -  Luxury Airport Transfer '
+  make: Chevrolet
+  model: Suburban
+  year: '2017'
+  type: Airport Transfer
+  host: 4ecd0810-0b25-11ef-a65c-77fd1edde67b
+  price_per_day: 1
+  currency: USD
+  url: https://www.arahrides.com/cars/127
+- id: 120
+  title: 'Toyota Corolla Cross '
+  make: Toyota
+  model: Corolla Cross
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/120
+- id: 65
+  title: 'Toyota Corolla '
+  make: Toyota
+  model: Corolla
+  year: '2020'
+  type: Sedan
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 57
+  currency: USD
+  url: https://www.arahrides.com/cars/65
+- id: 191
+  title: Mazda Demio
+  make: Mazda
+  model: Demio
+  year: '2017'
+  type: Hatchback
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/191
+- id: 268
+  title: Honda HRV
+  make: Honda
+  model: Vezel /HRV
+  year: '2016'
+  type: SUV
+  host: 5af3ced0-7eb6-11ef-88f0-73585f00e9d6
+  price_per_day: 85
+  currency: USD
+  url: https://www.arahrides.com/cars/268
+- id: 265
+  title: Toyota Corolla Touring
+  make: Toyota
+  model: Corolla
+  year: '2019'
+  type: Sedan
+  host: 5af3ced0-7eb6-11ef-88f0-73585f00e9d6
+  price_per_day: 75
+  currency: USD
+  url: https://www.arahrides.com/cars/265
+- id: 263
+  title: 'Montego Bay - MBJ Airport Lux Transportation '
+  make: Cadillac
+  model: Escalade
+  year: '-'
+  type: Airport Transfer
+  host: f39fa150-5483-11f1-b0cb-13e702a522e2
+  price_per_day: 1
+  currency: USD
+  url: https://www.arahrides.com/cars/263
+- id: 262
+  title: 'Kingston - NMIA Airport Lux Transportation '
+  make: Cadillac
+  model: Escalade
+  year: '-'
+  type: Airport Transfer
+  host: f39fa150-5483-11f1-b0cb-13e702a522e2
+  price_per_day: 1
+  currency: USD
+  url: https://www.arahrides.com/cars/262
+- id: 260
+  title: 'MG ZS '
+  make: MG
+  model: ZS
+  year: '-'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 110
+  currency: USD
+  url: https://www.arahrides.com/cars/260
+- id: 259
+  title: 'Toyota  Corolla '
+  make: Toyota
+  model: Corolla
+  year: '2019'
+  type: Sedan
+  host: 5af3ced0-7eb6-11ef-88f0-73585f00e9d6
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/259
+- id: 255
+  title: Honda Vezel
+  make: Honda
+  model: Vezel /HRV
+  year: '-'
+  type: SUV
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 110
+  currency: USD
+  url: https://www.arahrides.com/cars/255
+- id: 254
+  title: Honda Vezel - One Day Rental
+  make: Honda
+  model: Vezel /HRV
+  year: '-'
+  type: 1 Day Rental
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 150
+  currency: USD
+  url: https://www.arahrides.com/cars/254
+- id: 253
+  title: Nissan Tenana
+  make: 'Nissan '
+  model: Teana
+  year: '-'
+  type: Sedan
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/253
+- id: 252
+  title: 'Nissan Sylphy - One Day Rental '
+  make: 'Nissan '
+  model: Sylphy
+  year: '-'
+  type: 1 Day Rental
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 80
+  currency: USD
+  url: https://www.arahrides.com/cars/252
+- id: 251
+  title: 'Toyota Vitz '
+  make: Toyota
+  model: Vitz
+  year: '-'
+  type: Hatchback
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/251
+- id: 250
+  title: 'Nissan Teana - One Day Rental '
+  make: 'Nissan '
+  model: Teana
+  year: '-'
+  type: 1 Day Rental
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 90
+  currency: USD
+  url: https://www.arahrides.com/cars/250
+- id: 242
+  title: GWH Haval GT
+  make: GWM
+  model: Haval H6
+  year: '-'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 170
+  currency: USD
+  url: https://www.arahrides.com/cars/242
+- id: 239
+  title: Jetour T2
+  make: Jetour
+  model: T2
+  year: '-'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 190
+  currency: USD
+  url: https://www.arahrides.com/cars/239
+- id: 236
+  title: 'Volkswagen Tiguan '
+  make: Volkwagen
+  model: Tiguan
+  year: '-'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 150
+  currency: USD
+  url: https://www.arahrides.com/cars/236
+- id: 235
+  title: 'Kia Sportage '
+  make: Kia
+  model: Sportage
+  year: '-'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 135
+  currency: USD
+  url: https://www.arahrides.com/cars/235
+- id: 234
+  title: 'Toyota Corolla '
+  make: Toyota
+  model: Corolla
+  year: '-'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 70
+  currency: USD
+  url: https://www.arahrides.com/cars/234
+- id: 233
+  title: 'Kia Seltos '
+  make: Kia
+  model: Seltos
+  year: '-'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 110
+  currency: USD
+  url: https://www.arahrides.com/cars/233
+- id: 231
+  title: Honda Stepwgn
+  make: Honda
+  model: StepWagon
+  year: '-'
+  type: 7 Seater
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/231
+- id: 228
+  title: 'Toyota Vitz - One Day Rental '
+  make: Toyota
+  model: Vitz
+  year: '2017'
+  type: 1 Day Rental
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/228
+- id: 227
+  title: ' Nissan Xtrail - One Day Rental '
+  make: 'Nissan '
+  model: XTrail
+  year: '2018'
+  type: 1 Day Rental
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 125
+  currency: USD
+  url: https://www.arahrides.com/cars/227
+- id: 226
+  title: 'Nissan Sylphy '
+  make: 'Nissan '
+  model: Sylphy
+  year: '2018'
+  type: Sedan
+  host: e1099440-6827-11f0-a597-4b59476c4b4f
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/226
+- id: 221
+  title: 'Toyota Hiace '
+  make: Toyota
+  model: Hiace
+  year: '-'
+  type: Mini Bus
+  host: 394aca20-5158-11f0-8174-9910b57b4968
+  price_per_day: 200
+  currency: USD
+  url: https://www.arahrides.com/cars/221
+- id: 217
+  title: 'Real Deal 4 Hr Cruise - Ocho Rios '
+  make: Boat / Yacht
+  model: Real Deal
+  year: '-'
+  type: Boat / Yacht
+  host: 3756d090-3f08-11f0-a178-f1d988707641
+  price_per_day: 1800
+  currency: USD
+  url: https://www.arahrides.com/cars/217
+- id: 216
+  title: Sea Cookie -  4hr Cruise (1-9 Guest)
+  make: Boat / Yacht
+  model: Aquarius
+  year: '-'
+  type: Boat / Yacht
+  host: 3756d090-3f08-11f0-a178-f1d988707641
+  price_per_day: 1100
+  currency: USD
+  url: https://www.arahrides.com/cars/216
+- id: 215
+  title: Glass Bottom Boat Tour - Ocho Rios  - $50 p/p
+  make: Boat / Yacht
+  model: Glass Bottom Boat
+  year: '-'
+  type: Boat / Yacht
+  host: 3756d090-3f08-11f0-a178-f1d988707641
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/215
+- id: 214
+  title: Aquarius - 4 Hour Cruise - Ocho Rios
+  make: Boat / Yacht
+  model: Aquarius
+  year: '-'
+  type: Boat / Yacht
+  host: 3756d090-3f08-11f0-a178-f1d988707641
+  price_per_day: 1900
+  currency: USD
+  url: https://www.arahrides.com/cars/214
+- id: 213
+  title: 'Aquarius - 3 Hour Cruise - Ocho Rios '
+  make: Boat / Yacht
+  model: Aquarius
+  year: '-'
+  type: Boat / Yacht
+  host: 3756d090-3f08-11f0-a178-f1d988707641
+  price_per_day: 1500
+  currency: USD
+  url: https://www.arahrides.com/cars/213
+- id: 208
+  title: Toyota Voxy
+  make: Toyota
+  model: Voxy
+  year: '2017'
+  type: 7 Seater
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 122
+  currency: USD
+  url: https://www.arahrides.com/cars/208
+- id: 207
+  title: 'Toyota Rush '
+  make: Toyota
+  model: Rush
+  year: '2021'
+  type: 7 Seater
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 112
+  currency: USD
+  url: https://www.arahrides.com/cars/207
+- id: 205
+  title: Toyota Yaris Cross
+  make: Toyota
+  model: Yaris Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 77
+  currency: USD
+  url: https://www.arahrides.com/cars/205
+- id: 204
+  title: 'Suzuki Vitara '
+  make: Suzuki
+  model: Vitara
+  year: '2022'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 72
+  currency: USD
+  url: https://www.arahrides.com/cars/204
+- id: 203
+  title: 'Toyota Corolla Cross '
+  make: Toyota
+  model: Corolla Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/203
+- id: 202
+  title: 'Toyota Rav4 '
+  make: Toyota
+  model: Rav4
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/202
+- id: 201
+  title: 'Toyota Rav4 '
+  make: Toyota
+  model: Rav4
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/201
+- id: 200
+  title: 'Toyota Corolla Cross '
+  make: Toyota
+  model: Corolla Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/200
+- id: 199
+  title: Toyota Rav4
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/199
+- id: 198
+  title: 'Toyota Rav4 '
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/198
+- id: 196
+  title: 'Foton View CS2 - 15 Seater '
+  make: Foton
+  model: View CS2
+  year: '2025'
+  type: Mini Bus
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 200
+  currency: USD
+  url: https://www.arahrides.com/cars/196
+- id: 194
+  title: 'Toyota RAV4 '
+  make: Toyota
+  model: Rav4
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/194
+- id: 193
+  title: Toyota Yaris Cross
+  make: Toyota
+  model: Yaris Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 77
+  currency: USD
+  url: https://www.arahrides.com/cars/193
+- id: 192
+  title: Toyota Corolla Cross
+  make: Toyota
+  model: Corolla Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/192
+- id: 189
+  title: Toyota Rav4
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/189
+- id: 187
+  title: Suzuki XL7
+  make: Suzuki
+  model: XL7
+  year: '2021'
+  type: 7 Seater
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 112
+  currency: USD
+  url: https://www.arahrides.com/cars/187
+- id: 186
+  title: 'Suzuki Vitara '
+  make: Suzuki
+  model: Vitara
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 77
+  currency: USD
+  url: https://www.arahrides.com/cars/186
+- id: 184
+  title: Toyota Rav4
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/184
+- id: 183
+  title: Toyota Rav4
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/183
+- id: 181
+  title: 'BMW 3 Series '
+  make: 'BMW '
+  model: 3 Series
+  year: '2023'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 250
+  currency: USD
+  url: https://www.arahrides.com/cars/181
+- id: 180
+  title: 'Toyota Mark X '
+  make: Toyota
+  model: Mark X
+  year: '2018'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/180
+- id: 179
+  title: Suzuki Swift
+  make: Suzuki
+  model: Swift
+  year: '2015'
+  type: Hatchback
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/179
+- id: 178
+  title: Honda Grace
+  make: Honda
+  model: Grace
+  year: '2018'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/178
+- id: 177
+  title: Honda Grace
+  make: Honda
+  model: Grace
+  year: '2018'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/177
+- id: 176
+  title: Honda Grace
+  make: Honda
+  model: Grace
+  year: '2018'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/176
+- id: 175
+  title: 'Subaru Impreza '
+  make: Subaru
+  model: Impreza
+  year: '2020'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/175
+- id: 174
+  title: 'Subaru Impreza '
+  make: Subaru
+  model: Impreza
+  year: '2020'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/174
+- id: 173
+  title: Toyota Axio
+  make: Toyota
+  model: Axio
+  year: '2011'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/173
+- id: 172
+  title: ' Hyundai Creta'
+  make: Hyundai
+  model: Creta
+  year: '2018'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 100
+  currency: USD
+  url: https://www.arahrides.com/cars/172
+- id: 171
+  title: Kia Seltos
+  make: Kia
+  model: Seltos
+  year: '2022'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 110
+  currency: USD
+  url: https://www.arahrides.com/cars/171
+- id: 170
+  title: Toyota Voxy
+  make: Toyota
+  model: Voxy
+  year: '2020'
+  type: 7 Seater
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/170
+- id: 169
+  title: Honda Fit
+  make: Honda
+  model: Fit
+  year: '2017'
+  type: Hatchback
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/169
+- id: 168
+  title: Honda Fit
+  make: Honda
+  model: Fit
+  year: '2017'
+  type: Hatchback
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/168
+- id: 167
+  title: 'Hyundai Tucson '
+  make: Hyundai
+  model: Tucson
+  year: '2020'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 120
+  currency: USD
+  url: https://www.arahrides.com/cars/167
+- id: 166
+  title: Hyundai Tucson
+  make: Hyundai
+  model: Tucson
+  year: '2024'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 120
+  currency: USD
+  url: https://www.arahrides.com/cars/166
+- id: 165
+  title: Subaru XV
+  make: Subaru
+  model: XV
+  year: '2018'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/165
+- id: 164
+  title: Kia Soluto
+  make: Kia
+  model: Soluto
+  year: '2025'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/164
+- id: 163
+  title: Kia Soluto
+  make: Kia
+  model: Soluto
+  year: '2025'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/163
+- id: 162
+  title: Toyota CR-H
+  make: Toyota
+  model: CH-R
+  year: '2019'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/162
+- id: 161
+  title: 'BMW 3 Series '
+  make: 'BMW '
+  model: 3 Series
+  year: '2017'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 250
+  currency: USD
+  url: https://www.arahrides.com/cars/161
+- id: 160
+  title: Honda HR-V
+  make: Honda
+  model: Vezel /HRV
+  year: '2016'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/160
+- id: 159
+  title: Toyota Yaris
+  make: Toyota
+  model: Yaris
+  year: '2018'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/159
+- id: 158
+  title: GWM Haval H6
+  make: GWM
+  model: Haval H6
+  year: '2025'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 150
+  currency: USD
+  url: https://www.arahrides.com/cars/158
+- id: 157
+  title: Honda Fit
+  make: Honda
+  model: Fit
+  year: '2017'
+  type: Hatchback
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/157
+- id: 156
+  title: 'BMW 2 Series '
+  make: 'BMW '
+  model: 2 Series
+  year: '2022'
+  type: Luxury Vehicles
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 200
+  currency: USD
+  url: https://www.arahrides.com/cars/156
+- id: 151
+  title: 'Suzuki Baleno '
+  make: Suzuki
+  model: Baleno
+  year: '2023'
+  type: Hatchback
+  host: 08ffa9b0-f08a-11ee-9339-77c3b651ca5d
+  price_per_day: 57
+  currency: USD
+  url: https://www.arahrides.com/cars/151
+- id: 148
+  title: 'Toyota Aqua '
+  make: Toyota
+  model: Aqua
+  year: '2019'
+  type: Hatchback
+  host: 5af3ced0-7eb6-11ef-88f0-73585f00e9d6
+  price_per_day: 45
+  currency: USD
+  url: https://www.arahrides.com/cars/148
+- id: 144
+  title: 'Mazda Demio '
+  make: Mazda
+  model: Demio
+  year: '2019'
+  type: Hatchback
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/144
+- id: 131
+  title: Toyota Axio
+  make: Toyota
+  model: Axio
+  year: '2017'
+  type: Sedan
+  host: 5af3ced0-7eb6-11ef-88f0-73585f00e9d6
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/131
+- id: 123
+  title: 'Toyota Aqua '
+  make: Toyota
+  model: Aqua
+  year: '2018'
+  type: Hatchback
+  host: 4ecd0810-0b25-11ef-a65c-77fd1edde67b
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/123
+- id: 122
+  title: 'Subaru G4 '
+  make: Subaru
+  model: G4
+  year: '2015'
+  type: Sedan
+  host: 4ecd0810-0b25-11ef-a65c-77fd1edde67b
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/122
+- id: 121
+  title: 'Toyota Rav4 '
+  make: Toyota
+  model: Rav4
+  year: '2020'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/121
+- id: 119
+  title: 'Toyota Corolla '
+  make: Toyota
+  model: Corolla
+  year: '2022'
+  type: Sedan
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 57
+  currency: USD
+  url: https://www.arahrides.com/cars/119
+- id: 117
+  title: 'Suzuki Vitara '
+  make: Suzuki
+  model: Vitara
+  year: '2016'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 72
+  currency: USD
+  url: https://www.arahrides.com/cars/117
+- id: 115
+  title: 'Toyota Noah '
+  make: Toyota
+  model: Noah
+  year: '2018'
+  type: 7 Seater
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 122
+  currency: USD
+  url: https://www.arahrides.com/cars/115
+- id: 114
+  title: 'Suzuki XL7 '
+  make: Suzuki
+  model: XL7
+  year: '2021'
+  type: 7 Seater
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 112
+  currency: USD
+  url: https://www.arahrides.com/cars/114
+- id: 112
+  title: Subaru Legacy B4
+  make: Subaru
+  model: 'Legacy '
+  year: '2019'
+  type: Sedan
+  host: 281eb2c0-fdc1-11ee-8c7c-8ddb1764594a
+  price_per_day: 80
+  currency: USD
+  url: https://www.arahrides.com/cars/112
+- id: 111
+  title: Toyota Corolla Axio
+  make: Toyota
+  model: Axio
+  year: '2018'
+  type: Sedan
+  host: 281eb2c0-fdc1-11ee-8c7c-8ddb1764594a
+  price_per_day: 60
+  currency: USD
+  url: https://www.arahrides.com/cars/111
+- id: 110
+  title: Toyota Corolla Axio
+  make: Toyota
+  model: Axio
+  year: '2017'
+  type: Sedan
+  host: 281eb2c0-fdc1-11ee-8c7c-8ddb1764594a
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/110
+- id: 109
+  title: 'Toyota Yaris Cross '
+  make: Toyota
+  model: Yaris Cross
+  year: '2024'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 77
+  currency: USD
+  url: https://www.arahrides.com/cars/109
+- id: 102
+  title: Kia Cerato
+  make: Kia
+  model: Cerato
+  year: '2020'
+  type: Sedan
+  host: 08ffa9b0-f08a-11ee-9339-77c3b651ca5d
+  price_per_day: 62
+  currency: USD
+  url: https://www.arahrides.com/cars/102
+- id: 99
+  title: Toyota Corolla Cross
+  make: Toyota
+  model: Corolla Cross
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/99
+- id: 97
+  title: 'Toyota Corolla Cross '
+  make: Toyota
+  model: Corolla Cross
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/97
+- id: 95
+  title: Toyota Corolla Axio
+  make: Toyota
+  model: Axio
+  year: '2017'
+  type: Sedan
+  host: 281eb2c0-fdc1-11ee-8c7c-8ddb1764594a
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/95
+- id: 91
+  title: Toyota Wish
+  make: Toyota
+  model: Wish
+  year: '2011'
+  type: 7 Seater
+  host: 281eb2c0-fdc1-11ee-8c7c-8ddb1764594a
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/91
+- id: 89
+  title: 'Honda City '
+  make: Honda
+  model: 'City '
+  year: '2022'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 65
+  currency: USD
+  url: https://www.arahrides.com/cars/89
+- id: 88
+  title: ' Hyundai Creta'
+  make: Hyundai
+  model: Creta
+  year: '2018'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 85
+  currency: USD
+  url: https://www.arahrides.com/cars/88
+- id: 76
+  title: 'Honda CRV '
+  make: Honda
+  model: CR-V
+  year: '2021'
+  type: SUV
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 100
+  currency: USD
+  url: https://www.arahrides.com/cars/76
+- id: 74
+  title: Toyota Axio
+  make: Toyota
+  model: Axio
+  year: '2017'
+  type: Sedan
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 55
+  currency: USD
+  url: https://www.arahrides.com/cars/74
+- id: 73
+  title: Kia Carens
+  make: Kia
+  model: Carens
+  year: '2024'
+  type: 7 Seater
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 120
+  currency: USD
+  url: https://www.arahrides.com/cars/73
+- id: 72
+  title: Suzuki XL7
+  make: Suzuki
+  model: XL7
+  year: '2022'
+  type: 7 Seater
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 120
+  currency: USD
+  url: https://www.arahrides.com/cars/72
+- id: 71
+  title: 'Nissan XTrail '
+  make: 'Nissan '
+  model: XTrail
+  year: '2019'
+  type: 7 Seater
+  host: 6d4a6670-e726-11ee-82fb-7372c2f38f9c
+  price_per_day: 95
+  currency: USD
+  url: https://www.arahrides.com/cars/71
+- id: 68
+  title: Mazda Demio
+  make: Mazda
+  model: Demio
+  year: '2016'
+  type: Hatchback
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/68
+- id: 67
+  title: Suzuki Vitara
+  make: Suzuki
+  model: Vitara
+  year: '2016'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 72
+  currency: USD
+  url: https://www.arahrides.com/cars/67
+- id: 66
+  title: 'Mazda Demio '
+  make: Mazda
+  model: Demio
+  year: '2019'
+  type: Hatchback
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 50
+  currency: USD
+  url: https://www.arahrides.com/cars/66
+- id: 64
+  title: 'Toyota Rav4 '
+  make: Toyota
+  model: Rav4
+  year: '2023'
+  type: SUV
+  host: d7e96350-e582-11ee-a472-21629a9d3e48
+  price_per_day: 82
+  currency: USD
+  url: https://www.arahrides.com/cars/64
