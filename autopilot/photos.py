@@ -499,13 +499,22 @@ class Picker:
         if not self.cfg["photos"]["allow_people_photos"] and not (kind == "scenery" and self.cfg["photos"].get("allow_people_scenery")) and has_face(dest):
             log.info("skip %s: face detected", item["id"]); return None
         e = extra or {}
-        ph = Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
+        use = dest
+        if kind == "car" and self.cfg["photos"].get("remove_plate_boxes", True):      # paint out the 'Arah Rides' box some fleet photos carry over the plate
+            try:
+                from . import deplate as _D
+                use = _D.clean(dest, src.name + ":" + item["id"])
+            except Exception as ex:
+                log.warning("plate box check skipped: %s", ex)
+        ph = Photo(item["id"], item["name"], src.name, str(use), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                    e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
         self.picked.append(ph.path)
         self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
         return ph
 
-    def _own(self, want, tag=None, ok=None, about=None):
+    INTERIOR = re.compile(r"interior|console|dashboard|dash\b|steering|seats?\b|cabin|boot|trunk|cargo|screen|gear|odometer|rear view|back seat", re.I)
+
+    def _own(self, want, tag=None, ok=None, about=None, about_not=None, exterior=False):
         cands = []
         for src in self.pool:
             try:
@@ -525,7 +534,12 @@ class Picker:
                         continue
                     if ok and not ok(self._settings(m, it["name"])):
                         continue
-                    if about and not any(w in ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ") for w in about):
+                    _txt = ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ")
+                    if about and not any(w in _txt for w in about):
+                        continue
+                    if about_not and any(w in _txt for w in about_not):
+                        continue
+                    if exterior and self.INTERIOR.search(_txt):              # car covers show the outside of the car
                         continue
                     if want == "scenery" and not text_ok((m.get("about") or "") + " " + it["name"].replace("_", " "), self.today.month):
                         continue
@@ -540,7 +554,7 @@ class Picker:
                     flags = ["New Drive photo I have not looked at: check the picture"]
                 cands.append([-q, self.rng.random(), src, it, flags])
         # Spread the picks out: prefer shoots (series) not used recently, then mix at random with a mild lean to better photos.
-        gap = self.cfg["photos"].get("series_days", 21)
+        gap = self.cfg["photos"].get("series_days_cars", 3) if want == "car" else self.cfg["photos"].get("series_days", 21)   # the same car may appear again after a few days, in a different photo
         for c in cands:
             c.append(self.led.series_age(self._series(c[3]["name"]), self.today))
         fresh = [c for c in cands if c[5] >= gap]

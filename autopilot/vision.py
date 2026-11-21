@@ -158,6 +158,7 @@ PROMPT = ("You are indexing photos for a Jamaican car rental company's Instagram
           '{"n":1,"kind":"scenery|car|food|people|not-usable","label":"one of %s or other","place":"specific Jamaican place or empty","parish":"","what":"max 14 words saying what the photo shows",'
           '"categories":["any of: %s"],"people":true|false,"season":"any|christmas|carnival|summer","jamaica":"yes|likely|no|unsure","confidence":0.0-1.0}. '
           "Name a specific place only if the picture shows it clearly (a sign, a landmark you recognise, a distinctive view such as the bamboo tunnel at Holland Bamboo or the castle at Trident); otherwise leave place empty and say confidence honestly. "
+          "Mark not-usable any photo whose main subject is an old, classic, vintage, rusty or wrecked car, a racing or rally car, a race track or a car show: we rent modern everyday cars. "
           "Do not identify real people from their faces; statues, murals and signs are fine. Mark screenshots, documents, logos and stock photos of other countries not-usable or jamaica:no. "
           "Likely places in this library: " + PLACES + ".")
 
@@ -216,3 +217,32 @@ def jamaica_gate(path, key):
         pass
     if not ok: log.info("Claude says not Jamaica / not usable: %s (%s)", key, r.get("what", ""))
     return ok
+
+
+ART_PROMPT = ("You are the art director of a top marketing agency, checking an Instagram post cover for a Jamaican car rental company (Arah Rides) before it goes out. "
+              "The post's headline is: \"%s\". List only real problems, each in a few plain words: "
+              "an old, classic, rusty or racing car; a photo not from Jamaica; a photo that does not fit the headline (a beach for an inland town, a different place, food that is not mentioned); "
+              "text hard to read; a model year shown; blurry or dark photo; a box or label covering a number plate; anything that would look amateur. "
+              "A car of the same body style as the one named is acceptable. Reply with ONLY JSON: {\"ok\": true|false, \"issues\": [\"...\"]}")
+
+def art_check(path, headline, model=None):
+    """Claude looks at the finished cover like an art director. -> list of issues ([] = looks good, None = could not check)."""
+    import os, io, json, base64, requests
+    from PIL import Image
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    im = Image.open(path).convert("RGB"); im.thumbnail((900, 900)); b = io.BytesIO(); im.save(b, "JPEG", quality=85)
+    try:
+        r = requests.post("https://api.anthropic.com/v1/messages", timeout=90,
+                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                          json={"model": model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": 300,
+                                "messages": [{"role": "user", "content": [
+                                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}},
+                                    {"type": "text", "text": ART_PROMPT % headline[:160]}]}]})
+        r.raise_for_status()
+        txt = "".join(x.get("text", "") for x in r.json()["content"])
+        d = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        return [] if d.get("ok") else [str(i) for i in d.get("issues", [])][:4]
+    except Exception as e:
+        log.warning("art check failed: %s", e); return None

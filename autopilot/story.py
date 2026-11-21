@@ -330,9 +330,8 @@ FOR_WHO = {"Hatchback": "Easy to park and easy on gas. Great for one or two peop
 def deal_story(b, post, pages, e):
     """Car photo cover -> price -> deposit -> who it's for -> book. Inner slides use more photos of the same model when we have them."""
     extra = []
-    for _ in range(2):
-        ph, _st = b.camp_car_photo(e["model"])
-        if ph: extra.append(ph)
+    ph, _st = b.camp_car_photo(e["model"], e["category"], exterior=False)      # one more fleet photo (outside or inside) of this car; the other slides show Jamaica
+    if ph: extra.append(ph)
     dep = f"US${e['deposit_at_price']} on this rate." + (f" Some {e['model']} units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "")
     items = [("The price.", f"From US${e['price']} a day. That's the base rate; holiday dates can cost more. Check availability and your price at www.arahrides.com or with Winston on WhatsApp."),
              ("The deposit.", dep + " It's released after you return the car, under the rental terms."),
@@ -349,7 +348,7 @@ def deposits_story(b, post, pages, e):
     for i, (c, ph, _st) in enumerate(e["cars"]):
         items.append((f"{c['model']}: US${c['low_deposit']} deposit.", f"From US${c['price_at_low_deposit']} a day. {c['category']}."))
         if ph and not cover_done:                  # the first car's photo is the cover; its slide gets a second photo, never the same one
-            cover_done = True; ph = b.camp_car_photo(c["model"])[0]
+            cover_done = True; ph = b.camp_car_photo(c["model"], c["category"], exterior=False)[0]
         if ph: own[i] = ph
     cars = [x for x in e["cars"] if x[1]]
     post["hook_line"] = f"Low deposit: {cars[0][0]['model']}, just US${cars[0][0]['low_deposit']}" if cars else None

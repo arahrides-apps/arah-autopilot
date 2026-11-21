@@ -329,14 +329,41 @@ class DayBuilder:
         return [(html, 1350)]
 
     # ---- Fleet campaign (content/campaign_fleet.yaml): cars from the lowest price up, and the lowest security deposits ----
-    def camp_car_photo(self, model):
-        """A photo of this model: our own Drive photos first, then a clean web photo of the same model (flagged, and the caption says it shows the model)."""
-        bits = [w for w in model.lower().replace("(", " ").replace(")", " ").split() if w not in ("toyota", "honda", "nissan", "suzuki", "mazda", "kia", "hyundai", "subaru", "series", "seater", "15", "gwm", "mg", "bmw", "volkswagen", "foton")]
-        ph = self.pk._own("car", None, None, about=[" ".join(bits)] if bits else [model.lower()]) if bits else None
-        stock = False
-        if not ph and self.pk.web:
-            ph = self.pk.car_stock([model]); stock = bool(ph)
-        return ph, stock
+    # how each model is named in fleet photo files and labels (honda-fit-silver, mazda2-red, haval-black...)
+    CAR_ALIASES = {"mazda demio": ["demio", "mazda2", "mazda 2"], "honda hr-v": ["hrv", "hr-v", "vezel"], "honda cr-v": ["crv", "cr-v"],
+                   "gwm haval h6": ["haval"], "gwm haval gt": ["haval"], "mg zs": ["mg-", "mg zs", " mg "], "jetour t2": ["jetour"],
+                   "toyota c-hr": ["c-hr", "chr"], "nissan x-trail": ["xtrail", "x-trail"], "foton view cs2 (15 seater)": ["foton"],
+                   "subaru legacy b4": ["legacy"], "subaru g4": ["g4", "impreza g4"], "honda stepwgn": ["stepwgn"], "toyota hiace": ["hiace"]}
+    CAR_NOT = {"toyota corolla": ["cross", "axio", "touring"], "toyota yaris": ["cross"], "toyota axio": [], "honda fit": ["outfit"]}
+
+    def _car_words(self, model):
+        m = model.lower()
+        if m in self.CAR_ALIASES:
+            return self.CAR_ALIASES[m]
+        base = re.sub(r"^(toyota|honda|nissan|suzuki|mazda|kia|hyundai|subaru|bmw|volkswagen|gwm|mg)\s+", "", m)
+        return [m, m.replace(" ", "-"), base.replace(" ", "-") if " " in base else base]
+
+    def camp_car_photo(self, model, category=None, exterior=True):
+        """A real fleet photo (photos/cars, photos/listings, Drive): this model first, then a car of the same body style. Never web stock photos.
+        Returns (photo, similar): similar=True when it shows another model of the same body style."""
+        ph = self.pk._own("car", None, None, about=self._car_words(model), about_not=self.CAR_NOT.get(model.lower()), exterior=exterior)
+        if ph:
+            return ph, False
+        if category:
+            cars = load_yaml("campaign_fleet.yaml")["cars"]
+            order = [c["model"] for c in cars]; at = order.index(model) if model in order else len(order)
+            same = [c["model"] for c in cars if c["category"] == category and c["model"] != model]
+            # borrow from models already featured first, so a model coming up soon keeps its own photos
+            ph = None
+            for group in ([m for m in same if order.index(m) < at], [m for m in same if order.index(m) > at]):
+                words = [w for mm in group for w in self._car_words(mm)]
+                ph = self.pk._own("car", None, None, about=words, exterior=exterior) if words else None
+                if ph:
+                    break
+            if ph:
+                ph.flags.append(f"Similar {category.lower()} shown for the {model} (same body style, from our fleet photos)")
+                return ph, True
+        return None, False
 
     def deal(self, post, k):
         """One car per post, in order from the cheapest daily rate up (then the lowest deposit). A car with no photo is passed to the next one."""
@@ -348,18 +375,18 @@ class DayBuilder:
             e = cars[(start + j) % len(cars)]
             if e["model"] in done:
                 continue
-            ph, stock = self.camp_car_photo(e["model"])
+            ph, stock = self.camp_car_photo(e["model"], e["category"])
             if not ph:
-                self.notes.append(f"No photo of a {e['model']} (Drive or web) for the {self.date} deal post: add one to Drive. Showed the next car instead.")
+                self.notes.append(f"No fleet photo of a {e['model']} or another {e['category'].lower()} left for the {self.date} deal post: run 'Fetch fleet' or add car photos to Drive. Showed the next car instead.")
                 continue
             done.add(e["model"]); self.photo_flags(post, ph)
             self.last = {"kind": "deal", "e": dict(e, stock=stock)}
-            yrs = f" ({e['years']})" if e.get("years") else ""
+            yrs = ""                                     # no model years in posts: make and model only
             post["copy_text"] = (f"{e['model']}{yrs} from US${e['price']} a day {EMOJI['deal']}\n\nSecurity deposit: US${e['deposit_at_price']}." +
                                  (f" Some units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "") +
                                  f"\n{e['category']}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." +
                                  "\n\nDecember dates are filling fast. Lock in your car now." + "\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay." +
-                                 ("\nPhoto shows the model; the car you rent may differ in colour and trim." if stock else ""))
+                                 ("\nVehicle shown may differ from the one you rent." if stock else ""))
             post["alt"] = f"{e['model']} rental car in Jamaica"
             post["caption"] = self.cap(post, "deal", post["copy_text"])
             head = f"{e['model']}"; kick = f"FROM US${e['price']}/DAY"
@@ -378,7 +405,7 @@ class DayBuilder:
         pick = [low[(day * 4 + i) % len(low)] for i in range(min(4, len(low)))]
         shots = []
         for c in pick:
-            ph, stock = self.camp_car_photo(c["model"])
+            ph, stock = self.camp_car_photo(c["model"], c["category"])
             shots.append((c, ph, stock))
         cov = next((x for x in shots if x[1]), None)
         if not cov:
@@ -388,7 +415,7 @@ class DayBuilder:
         lo = min(c["low_deposit"] for c in pick)
         post["copy_text"] = (f"Low deposit cars in Jamaica {EMOJI['deposits']}\n\n" + "\n".join(f"• {c['model']}: deposit US${c['low_deposit']}, from US${c['price_at_low_deposit']} a day" for c in pick) +
                              "\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ." +
-                             ("\nSome photos show the model; the car you rent may differ in colour and trim." if any(x[2] for x in shots) else ""))
+                             ("\nVehicles shown may differ from the one you rent." if any(x[2] for x in shots) else ""))
         post["alt"] = "Low security deposit rental cars in Jamaica"
         post["caption"] = self.cap(post, "deposits", post["copy_text"])
         pr = promo_mod.active(self.date)
@@ -747,6 +774,17 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         from . import reel
         rn = reel.add_reels(cfg, posts, date)
         b.notes += rn
+        if cfg.get("art_director", True):            # Claude checks every finished cover like an agency art director; problems show on the review card
+            from . import vision as V
+            for p in posts:
+                if not p.get("images"):
+                    continue
+                head = re.split(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]|\n", p.get("copy_text") or p.get("alt") or "")[0].strip()
+                iss = V.art_check(Q.DOCS / p["images"][0], head)
+                if iss:
+                    p["flags"].insert(0, "⚠ Art director check: " + "; ".join(iss) + ". Look closely before approving.")
+                elif iss == []:
+                    p["flags"].append("Art director check: cover looks good")
     if notes is not None:
         notes += b.notes
     return posts
