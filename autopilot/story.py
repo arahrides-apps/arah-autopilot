@@ -112,6 +112,7 @@ def _themed(b, post, typ, n):
 def _slides(b, post, cover, items, closer, own_photos=None, typ=None):
     """items: [(heading, body)] ; closer: (heading, body). Returns the finished pages, 5 slides at most 6."""
     total = len(items) + 2
+    post.setdefault("beat_lines", [h for h, _b in items])
     out = [(cover, 1350)]
     own_photos = dict(own_photos or {})
     typ = typ or post.get("type")
@@ -322,11 +323,47 @@ SPOT_WHY = {"beach": "Clear water, soft sand and a slower pace. Bring a towel an
             "lighthouse": "Sea views at the edge of the island. Best near sunset.",
             "adventure": "A full day out. Book ahead where you can."}
 
+FOR_WHO = {"Hatchback": "Easy to park and easy on gas. Great for one or two people.", "Sedan": "Room for four and the luggage. Smooth on the highway.",
+           "SUV": "A higher seat and more room for the family and the bags.", "7 Seater": "Seats seven. One car for the whole family.",
+           "Luxury Vehicles": "Arrive in style. Weddings, business trips and special nights.", "Mini Bus": "Up to 15 people. The whole crew in one vehicle."}
+
+def deal_story(b, post, pages, e):
+    """Car photo cover -> price -> deposit -> who it's for -> book. Inner slides use more photos of the same model when we have them."""
+    extra = []
+    for _ in range(2):
+        ph, _st = b.camp_car_photo(e["model"])
+        if ph: extra.append(ph)
+    dep = f"US${e['deposit_at_price']} on this rate." + (f" Some {e['model']} units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "")
+    items = [("The price.", f"From US${e['price']} a day. That's the base rate; holiday dates can cost more. Check availability and your price at www.arahrides.com or with Winston on WhatsApp."),
+             ("The deposit.", dep + " It's released after you return the car, under the rental terms."),
+             ("Who it's for.", FOR_WHO.get(e["category"], "Choose the car you want to drive."))]
+    own = {i: x for i, x in enumerate(extra)}
+    post["beat_lines"] = [f"From US${e['price']} a day", f"Deposit just US${min(e['deposit_at_price'], e['low_deposit'])}" if min(e['deposit_at_price'], e['low_deposit']) <= 300 else f"Deposit US${e['deposit_at_price']}",
+                          FOR_WHO.get(e["category"], "Choose your car.").split(".")[0] + ".", "Book in minutes: website or WhatsApp Winston"]
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), own, typ="road")
+
+def deposits_story(b, post, pages, e):
+    """One slide per low-deposit car, with its photo where we have one."""
+    items, own = [], {}
+    cover_done = False
+    for i, (c, ph, _st) in enumerate(e["cars"]):
+        items.append((f"{c['model']}: US${c['low_deposit']} deposit.", f"From US${c['price_at_low_deposit']} a day. {c['category']}."))
+        if ph and not cover_done:                  # the first car's photo is the cover; its slide gets a second photo, never the same one
+            cover_done = True; ph = b.camp_car_photo(c["model"])[0]
+        if ph: own[i] = ph
+    cars = [x for x in e["cars"] if x[1]]
+    post["hook_line"] = f"Low deposit: {cars[0][0]['model']}, just US${cars[0][0]['low_deposit']}" if cars else None
+    post["beat_lines"] = [f"{c['model']}: US${c['low_deposit']} deposit" for c, _p, _s in cars[1:]] + ["Book in minutes: arahrides.com"]
+    items.append(("How deposits work.", "Paid when you pick up the car and released after you return it, under the rental terms. Ask Winston on WhatsApp for any car's deposit."))
+    return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), own, typ="road")
+
 def spotlight_story(b, post, pages, e):
     """Cover (a real photo of the place) + where + why go + getting there + price + book."""
     where = f"{e['name']}, {e['parish']}." + (f" {e['about']}." if e.get("about") else "")
-    items = [("Where it is.", where), ("Why go.", SPOT_WHY.get(e["cat"], "A side of Jamaica most visitors never see.")),
+    items = [("Where it is.", where)] + ([("What to order.", e["eat"] + ".")] if e.get("eat") else []) + [("Why go.", SPOT_WHY.get(e["cat"], "A side of Jamaica most visitors never see.")),
              ("Getting there.", f"Pick up your car at {e['airport']} and drive yourself. Hours and fees can change, so check before you go."), price_slide(b)]
+    post["beat_lines"] = [f"📍 {e['name']}, {e['parish']}", (f"Order: {e['eat'].split(',')[0]}" if e.get("eat") else SPOT_WHY.get(e["cat"], "See the real Jamaica.").split(".")[0] + "."),
+                          f"Pick up your car at {e['airport']}.", "Book in minutes at arahrides.com"]
     return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), typ="place")
 
 def journey_story(b, post, pages, j):
@@ -382,6 +419,10 @@ def build(b, post, typ, pages):
         return trust_story(b, post, pages, e)
     if typ == "moment":
         return moment_story(b, post, pages, e)
+    if typ == "deal":
+        return deal_story(b, post, pages, e)
+    if typ == "deposits":
+        return deposits_story(b, post, pages, e)
     if typ == "spotlight":
         return spotlight_story(b, post, pages, e)
     if typ == "journey":

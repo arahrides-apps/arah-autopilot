@@ -146,13 +146,24 @@ def due_posts(cfg, now, posts, decisions, pub):
         if slot > now:
             continue
         d = decisions.get(p["id"])
-        if now - slot > grace:
+        late_ok = cfg.get("late_same_day", True) and slot.date() == now.date()      # today's posts whose time passed can still go out once you approve them
+        if now - slot > grace and not late_ok:
             skipped.append((p["id"], "rejected" if d and d["decision"] == "reject" else "skipped", "not approved in time" if not (d and d["decision"] == "approve") else "missed its window"))
             continue
         if not d or d["decision"] != "approve":
             continue
         out.append((p, d.get("caption") or p["caption"]))
-    return out, skipped
+    # late posts go out one at a time, at least 30 minutes apart, so the feed is not flooded
+    gap = dt.timedelta(minutes=cfg.get("late_gap_minutes", 30))
+    last = max([dt.datetime.fromisoformat(v["at"]) for v in pub.values() if v.get("status") == "published" and v.get("at")] or [now - 2 * gap])
+    kept, late_sent = [], False
+    for p, c in out:
+        is_late = now - dt.datetime.fromisoformat(p["slot"]) > dt.timedelta(minutes=45)
+        if is_late and (late_sent or now - last < gap):
+            continue
+        late_sent = late_sent or is_late
+        kept.append((p, c))
+    return kept, skipped
 
 def publish_due(cfg, ig=None, dry_run=False, max_posts=None, spacing=True):
     now = now_fn(cfg); posts = Q.all_posts(); dec = Q.decisions(); pub = Q.published()

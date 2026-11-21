@@ -430,6 +430,7 @@ class Picker:
         self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": k != "pixabay"})["enabled"]]
         self.notes = []
         self.tried = set()
+        self.picked = []          # every photo handed out for the post being built (the Reel is made from these, not from the slides)
         self._sc = {}; self._dead = set()          # search results are reused within a run; a source that errors (rate limit) is skipped for the run
 
     def _search(self, web, query):
@@ -500,6 +501,7 @@ class Picker:
         e = extra or {}
         ph = Photo(item["id"], item["name"], src.name, str(dest), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                    e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
+        self.picked.append(ph.path)
         self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
         return ph
 

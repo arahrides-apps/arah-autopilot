@@ -14,10 +14,10 @@ import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍"}
+EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍", "deal": "🚗", "deposits": "🔑"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
-            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel", "spotlight": "#VisitJamaica"}
-FALLBACK = {"journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
+            "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel", "spotlight": "#VisitJamaica", "deal": "#JamaicaCarRental", "deposits": "#JamaicaCarRental"}
+FALLBACK = {"deal": "car_hero", "deposits": "carousel", "journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -59,7 +59,8 @@ def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng
         text = f"{text}\n\n{rng.choice(ENGAGE_LINES)}"
     if credit:
         text = f"{text}\n\n📷 {credit}"
-    cta = cta or f"Book: {b['site']}\nWhatsApp Winston: https://{b['wa_link']}"
+    cta = cta or (f"Book in minutes, your way:\n💻 Online: {b['site']}\n💬 WhatsApp Winston, 24/7: https://{b['wa_link']} (quote, book and pay in one chat)")
+    cta += "\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp."
     kw = f"\n\n{loc['kw']}" if loc and loc.get("kw") else ""        # plain-words line: Instagram search reads the caption
     return f"{text}{kw}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag, loc, rng)}"
 
@@ -327,6 +328,72 @@ class DayBuilder:
         post["caption"] = self.cap(post, "moment", post["copy_text"], place=m.get("loc"))
         return [(html, 1350)]
 
+    # ---- Fleet campaign (content/campaign_fleet.yaml): cars from the lowest price up, and the lowest security deposits ----
+    def camp_car_photo(self, model):
+        """A photo of this model: our own Drive photos first, then a clean web photo of the same model (flagged, and the caption says it shows the model)."""
+        bits = [w for w in model.lower().replace("(", " ").replace(")", " ").split() if w not in ("toyota", "honda", "nissan", "suzuki", "mazda", "kia", "hyundai", "subaru", "series", "seater", "15", "gwm", "mg", "bmw", "volkswagen", "foton")]
+        ph = self.pk._own("car", None, None, about=[" ".join(bits)] if bits else [model.lower()]) if bits else None
+        stock = False
+        if not ph and self.pk.web:
+            ph = self.pk.car_stock([model]); stock = bool(ph)
+        return ph, stock
+
+    def deal(self, post, k):
+        """One car per post, in order from the cheapest daily rate up (then the lowest deposit). A car with no photo is passed to the next one."""
+        C = load_yaml("campaign_fleet.yaml"); cars = C["cars"]; c0 = C["campaign"]
+        day = (self.date - dt.date.fromisoformat(str(c0["start"]))).days
+        n = len(c0.get("deal_slots", [0, 5])); start = (day * n + k) % len(cars)
+        done = self.__dict__.setdefault("_deal_done", set())
+        for j in range(len(cars)):
+            e = cars[(start + j) % len(cars)]
+            if e["model"] in done:
+                continue
+            ph, stock = self.camp_car_photo(e["model"])
+            if not ph:
+                self.notes.append(f"No photo of a {e['model']} (Drive or web) for the {self.date} deal post: add one to Drive. Showed the next car instead.")
+                continue
+            done.add(e["model"]); self.photo_flags(post, ph)
+            self.last = {"kind": "deal", "e": dict(e, stock=stock)}
+            yrs = f" ({e['years']})" if e.get("years") else ""
+            post["copy_text"] = (f"{e['model']}{yrs} from US${e['price']} a day {EMOJI['deal']}\n\nSecurity deposit: US${e['deposit_at_price']}." +
+                                 (f" Some units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "") +
+                                 f"\n{e['category']}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." +
+                                 "\n\nDecember dates are filling fast. Lock in your car now." + "\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay." +
+                                 ("\nPhoto shows the model; the car you rent may differ in colour and trim." if stock else ""))
+            post["alt"] = f"{e['model']} rental car in Jamaica"
+            post["caption"] = self.cap(post, "deal", post["copy_text"])
+            head = f"{e['model']}"; kick = f"FROM US${e['price']}/DAY"
+            pr = promo_mod.active(self.date)
+            sub = f"Deposit US${e['deposit_at_price']}." + (f" Code {pr['code']}: up to US${pr['amount']} off." if pr else "")
+            return [(T.ccover(ph.path, kick, head, sub), 1350)]
+        return None
+
+    def deposits(self, post):
+        """Low security deposits: a short list of models, lowest deposit first, rotating through the list day by day."""
+        C = load_yaml("campaign_fleet.yaml"); c0 = C["campaign"]
+        low = sorted([c for c in C["cars"] if c["low_deposit"] <= c0.get("deposit_max", 150)], key=lambda c: (c["low_deposit"], c["price_at_low_deposit"]))
+        if not low:
+            return None
+        day = (self.date - dt.date.fromisoformat(str(c0["start"]))).days // 2
+        pick = [low[(day * 4 + i) % len(low)] for i in range(min(4, len(low)))]
+        shots = []
+        for c in pick:
+            ph, stock = self.camp_car_photo(c["model"])
+            shots.append((c, ph, stock))
+        cov = next((x for x in shots if x[1]), None)
+        if not cov:
+            return None
+        self.photo_flags(post, cov[1])
+        self.last = {"kind": "deposits", "e": {"cars": shots}}
+        lo = min(c["low_deposit"] for c in pick)
+        post["copy_text"] = (f"Low deposit cars in Jamaica {EMOJI['deposits']}\n\n" + "\n".join(f"• {c['model']}: deposit US${c['low_deposit']}, from US${c['price_at_low_deposit']} a day" for c in pick) +
+                             "\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ." +
+                             ("\nSome photos show the model; the car you rent may differ in colour and trim." if any(x[2] for x in shots) else ""))
+        post["alt"] = "Low security deposit rental cars in Jamaica"
+        post["caption"] = self.cap(post, "deposits", post["copy_text"])
+        pr = promo_mod.active(self.date)
+        return [(T.ccover(cov[1].path, "LOW DEPOSIT CARS", f"Deposits from US${lo}.", (f"Plus code {pr['code']}: up to US${pr['amount']} off. " if pr else "") + "Swipe for the cars."), 1350)]
+
     SPOT_HEAD = {"beach": "{n}. Your next swim.", "waterfall": "{n}. Worth the drive.", "river": "{n}. Cool water, slow day.", "cave": "Go underground at {n}.",
                  "mountain": "{n}. The view is the reward.", "heritage": "{n}. Jamaica's story, up close.", "garden": "Slow down at {n}.", "food": "{n}. Come hungry.",
                  "lighthouse": "{n}. End-of-the-road views.", "adventure": "{n}. Make a day of it."}
@@ -334,11 +401,17 @@ class DayBuilder:
     def spotlight(self, post):
         """One named Jamaica attraction from content/attractions.yaml, shown with a real photo of that place. A place with no photo is passed over."""
         A = load_yaml("attractions.yaml")["attractions"]
+        want_food = self.date.toordinal() % 3 == 0          # every third day the place spotlight is a food stop (jerk, pepper shrimp, fried fish...)
         for _ in range(4):
-            i, _c = self.led.copy_pick("poi", len(A), self.today, self.rng, 365)
+            for _t in range(40):
+                i, _c = self.led.copy_pick("poi", len(A), self.today, self.rng, 365)
+                if not want_food or A[i]["cat"] == "food":
+                    break
             e = A[i]; n = e["name"]
             words = [w for w in re.findall(r"[a-z']+", n.lower()) if len(w) > 3 and w not in ("beach", "river", "falls", "great", "house", "park", "gardens", "botanical", "historic", "district")][:2] or [n.lower()]
             ph = self.pk.scene(f"{n} Jamaica", n, strict=True, words=words)
+            if not ph and e.get("photo"):                # food stop: a real photo of the dish it is known for
+                ph = self.pk.scene(e["photo"], None, words=[w for w in e["photo"].lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2])
             self.led.copy_record("poi", i, self.today)              # tried today: a place without a photo is not retried for a year
             if not ph:
                 continue
@@ -347,17 +420,23 @@ class DayBuilder:
             kick = ("HIDDEN GEM" if e.get("tier") == "gem" else "MUST SEE") + " · " + e["parish"].upper()
             self.last = {"kind": "spotlight", "e": dict(e, head=head, kick=kick)}
             loc = n if self.where(n).get("id") else e["airport"].split(" or ")[0]
-            post["copy_text"] = f"{head} {EMOJI['spotlight']}\n\n{n}, {e['parish']}." + (f" {e['about']}." if e.get("about") else "") + f"\nPick up your car at {e['airport']} and drive there on your own time."
+            post["copy_text"] = f"{head} {EMOJI['spotlight']}\n\n{n}, {e['parish']}." + (f" {e['about']}." if e.get("about") else "") + (f"\nWhat to order: {e['eat']}." if e.get("eat") else "") + f"\nPick up your car at {e['airport']} and drive there on your own time."
             post["alt"] = f"{n}, {e['parish']}, Jamaica"
             post["caption"] = self.cap(post, "spotlight", post["copy_text"], place=loc)
             post["story_done"] = False
-            return [(T.ccover(ph.path, kick, head, "Swipe for the story."), 1350)]
+            return [(T.ccover(ph.path, kick, head, "Places to see with your Arah rental. Swipe →"), 1350)]
         return None
 
     def journey(self, post):
         """A short human story (fly down, book a car, visit grandma...) told as a swipeable post with a real Jamaica photo on every slide."""
         js = load_yaml("journeys.yaml")["journeys"]
-        i, _c = self.led.copy_pick("journey", len(js), self.today, self.rng, 20)
+        xmas = (self.date.month == 12) or (self.date.month == 11 and self.date.day >= 15)
+        for _ in range(12):                       # Christmas stories only from mid-November to December
+            i, _c = self.led.copy_pick("journey", len(js), self.today, self.rng, 20)
+            if (js[i].get("theme") == "xmas" or "CHRISTMAS" in js[i]["k"]) == xmas or not (js[i].get("theme") == "xmas" or "CHRISTMAS" in js[i]["k"]):
+                if not xmas and (js[i].get("theme") == "xmas" or "CHRISTMAS" in js[i]["k"]):
+                    continue
+                break
         self.led.copy_record("journey", i, self.today)
         j = js[i]; self.last = {"kind": "journey", "e": j}
         post["copy_text"] = f"{j['h']} {EMOJI['journey']}\n\n" + "\n".join(f"{h} {t}" for h, t in j["beats"])
@@ -586,17 +665,27 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
     zone = tz(cfg); posts = []; jobs = []
     pattern = cfg["pattern"][: cfg["posts_per_day"]]
     used_mom = used_offer = False
-    promo = promo_mod.active(date); pslots = (promo or {}).get('slots', [4]); is_promo = False
+    try:
+        _cf = load_yaml("campaign_fleet.yaml"); camp = _cf["campaign"] if date >= dt.date.fromisoformat(str(_cf["campaign"]["start"])) and (not _cf["campaign"].get("end") or date <= dt.date.fromisoformat(str(_cf["campaign"]["end"]))) else None
+    except Exception:
+        camp = None
+    deal_k = 0
+    promo = promo_mod.active(date); pslots = (promo or {}).get('slots', [5]); is_promo = False
     events = upcoming_events(b.moments, date); ev_slots = cfg.get("event_slots", [8, 11]); cur = (mom, left)
     for idx, typ0 in enumerate(pattern):
         if "|" in typ0:
             opts = typ0.split("|"); typ0 = opts[(date.toordinal() + idx) % len(opts)]
         hhmm = cfg["slots"][idx]
         at = dt.datetime.combine(date, dt.time.fromisoformat(hhmm), zone)
-        if at <= now or hhmm in skip:
+        past = at <= now
+        if hhmm in skip or (past and not (cfg.get("draft_past_slots_today", True) and date == now.date())):
             continue
         typ = typ0; cur = (mom, left); is_promo = False
-        if promo and idx in pslots:
+        if camp and idx in camp.get("deal_slots", []):
+            typ = "deal"; deal_k = camp["deal_slots"].index(idx)
+        elif camp and idx == camp.get("deposit_slot") and date.toordinal() % 2 == 0:
+            typ = "deposits"
+        elif promo and idx in pslots:
             cur = (promo_mod.moment(promo, pslots.index(idx), date), 0); typ = "moment"; is_promo = True
         elif events and idx in ev_slots and date.weekday() in cfg.get("event_days", range(7)) and (ev_slots.index(idx) == 0 or len(events) > 1):
             k = ev_slots.index(idx); cur = events[(date.toordinal() + k) % len(events)]; typ = "moment"
@@ -605,7 +694,11 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         elif offer and typ0 in ("brand", "versus") and not used_offer:
             typ, used_offer = "offer", True
         post = {"id": f"{date}_{hhmm.replace(':', '')}_{typ}", "date": str(date), "slot": at.isoformat(), "type": typ, "flags": [], "images": []}
+        if past:
+            post["flags"].append(f"Its {hhmm} time has passed: approve it and it posts today, one late post every 30 minutes or so.")
         if is_promo: post["promo"] = promo["code"]
+        if typ == "deal": post["_deal_k"] = deal_k
+        b.pk.picked = []
         pages = None; t = typ
         while pages is None:
             if t == "car_hero": pages = b.car_hero(post)
@@ -617,6 +710,8 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "moment": pages = b.moment(post, *cur)
             elif t == "journey": pages = b.journey(post)
             elif t == "spotlight": pages = b.spotlight(post)
+            elif t == "deal": pages = b.deal(post, post.get("_deal_k", 0))
+            elif t == "deposits": pages = b.deposits(post)
             elif t == "offer": pages = b.offer(post, *offer)
             else: pages = b.simple(post, t)
             if pages is None:
@@ -630,6 +725,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             if post["type"] == "offer":
                 ol = (b.last_offer, "")
             pages = b.expand(post, post["type"], pages, ol)
+        post["raw"] = list(dict.fromkeys(str(x) for x in b.pk.picked))
         if not pages or '<img src="file:' not in pages[0][0]:
             if not cfg["photos"].get("allow_text_cover", False):        # every post opens on a real photo; no fresh photo = no post (never a text card cover)
                 b.notes.append(f"Skipped the {hhmm} post on {date}: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.")

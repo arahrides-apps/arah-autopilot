@@ -1,5 +1,6 @@
 """Reels: turns a finished carousel into a short vertical video (slow push-in on every slide, soft cross-fades), and rotates in the
 animated Arah Rides ads from content/reels/. Reels get far more reach than still carousels. Needs ffmpeg (already on GitHub's runners)."""
+import re
 import os, shutil, subprocess, logging, hashlib
 from pathlib import Path
 from . import queue as Q
@@ -45,8 +46,8 @@ def make_reel(images, out, per_slide=2.4, fade=0.4, hold_last=1.8, style="classi
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
 
-REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel", "journey", "spotlight")
-KEEP_CAROUSEL = ("offer", "review", "versus", "list", "carousel", "qa", "trust")   # these read best as swipeable carousels
+REEL_TYPES = ("place", "experience", "trip", "moment", "car_hero", "tip", "review", "chat", "qa", "brand", "engage", "list", "offer", "trust", "versus", "carousel", "journey", "spotlight", "deal")
+KEEP_CAROUSEL = ("deposits", "offer", "review", "versus", "list", "carousel", "qa", "trust")   # these read best as swipeable carousels
 
 def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):
     """A supplied video clip (any size) cropped to 1080x1920 and trimmed, then the slide with the booking button held at the end."""
@@ -60,6 +61,23 @@ def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):
     if r.returncode != 0:
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
+
+def _hook(p, out, end_img, date):
+    """The scroll-stopping Reel: real photos, hook line first, fast cuts, pop-in captions, end card. False when the post has fewer than 3 photos."""
+    from . import reel2
+    raw = [x for x in p.get("raw", []) if Path(x).exists()]
+    if len(raw) < 3:
+        return False
+    first = re.split(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]|\n", p.get("copy_text") or p.get("alt") or "")[0].strip()
+    lines = [p.get("hook_line") or first] + list(p.get("beat_lines", []))
+    while len(lines) < len(raw):
+        lines.append("")
+    seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:6], 16)
+    _o, music = reel2.make_hook_reel(raw, lines[:len(raw)], end_img, out, seed=seed)
+    p["reel_kind"] = "hook Reel: real photos, fast cuts, captions" + ("" if music else ", no music")
+    if not music:
+        p.setdefault("flags", []).append("Silent Reel: add royalty-free tracks (mp3) to content/music/ and every Reel gets music. Or post it from the Instagram app with a trending sound.")
+    return True
 
 def _fresh_file(files, date, peek=False):
     """Strict no-reuse for ready-made videos: a file not used in the last 90 days, or None (the post then becomes a photo slideshow)."""
@@ -98,8 +116,9 @@ def add_reels(cfg, posts, date):
                     _P.make_promo_reel(got[0], pr, Q.DOCS / rel, start=got[1]); _P.note_use(got[2], date); p["reel_kind"] = "sale video (Drive clip)"
                 else:
                     _, endcard = _A.render(pr, Q.DOCS / "media" / "promo")
-                    make_reel([Q.DOCS / i for i in p["images"]] + [endcard], Q.DOCS / rel, per_slide=2.0, style=("dynamic", "punchy")[(date.toordinal() + k) % 2])
-                    p["reel_kind"] = "sale slideshow (photos + code card)"
+                    if not _hook(p, Q.DOCS / rel, endcard, date):
+                        make_reel([Q.DOCS / i for i in p["images"]] + [endcard], Q.DOCS / rel, per_slide=2.0, style=("dynamic", "punchy")[(date.toordinal() + k) % 2])
+                        p["reel_kind"] = "sale slideshow (photos + code card)"
             elif p.get("event_reel_src"):
                 shutil.copy(p["event_reel_src"], Q.DOCS / rel); p["reel_kind"] = "event video"
             elif clips and _fresh_file(clips, date, peek=True) and p["type"] in ("tip", "chat", "qa", "brand", "engage", "trust") and int(hashlib.md5((p["id"]).encode()).hexdigest()[:4], 16) % 2 == 0:
@@ -107,13 +126,15 @@ def add_reels(cfg, posts, date):
                 make_clip_reel(_c, Q.DOCS / p["images"][-1], Q.DOCS / rel); p["reel_kind"] = "video clip"
             elif lib and not used_lib and _fresh_file(lib, date, peek=True) and p["type"] in ("moment", "chat", "tip"):      # one animated ad per day replaces a plain slideshow
                 shutil.copy(_fresh_file(lib, date), Q.DOCS / rel); used_lib = True; p["reel_kind"] = "animated ad"
+            elif _hook(p, Q.DOCS / rel, Q.DOCS / p["images"][-1], date):
+                pass
             else:
                 seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:4], 16)
                 sty = ("dynamic", "punchy", "dynamic", "classic")[seed % 4]
                 make_reel([Q.DOCS / i for i in p["images"]], Q.DOCS / rel, per_slide=1.9 if sty == "punchy" else 2.4, style=sty)
                 p["reel_kind"] = "animated slideshow (%s)" % sty
             p["reel"] = rel
-            p.setdefault("flags", []).append("Goes out as a Reel (%s): approve as usual. Add trending audio in Instagram if you like." % p["reel_kind"])
+            p.setdefault("flags", []).append("Goes out as a Reel (%s)." % p["reel_kind"])
         except Exception as e:
             notes.append("Reel for %s failed, stays a carousel: %s" % (p["id"], str(e)[:120]))
     return notes
