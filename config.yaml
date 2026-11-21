@@ -5,6 +5,7 @@ days_ahead: 3                      # keep this many future days drafted for your
 publish_grace_hours: 4             # posts from earlier days that were never approved are skipped after this long
 late_same_day: true                 # today's posts whose time has passed still post once you approve them (one every late_gap_minutes)
 late_gap_minutes: 30
+art_director: true                  # Claude reviews every finished cover (old/racing cars, wrong place, unreadable text, plate boxes...) and flags problems on the review card
 draft_past_slots_today: true        # when you draft or redraft, today's earlier time slots are drafted too, so you can approve and post them
 max_posts_per_day_hard_cap: 15
 min_gap_minutes: 20               # posts approved late are spaced at least this far apart
@@ -119,9 +120,11 @@ photos:
   web_share: 0.6                   # share of photos that come from licence-free web photos of Jamaica first (Unsplash, Pexels, Pixabay, Wikimedia public domain), each checked by Claude
   allow_text_cover: false          # false = a post with no fresh photo for its cover is skipped, never posted as a text card
   illustrations: false             # real photos only. true = allow drawn placeholder scenes when no photo can be found
-  stock_car_share: 0.35            # share of car posts that use a clean stock photo of one of our models (needs the Pexels / Unsplash / Pixabay keys)
+  remove_plate_boxes: true          # Claude finds the 'Arah Rides' box some fleet photos have over the number plate, and it is painted out (originals untouched)
+  stock_car_share: 0                # never: web stock photos of car models brought in old and racing cars. Car posts use our fleet photos only
   stock_composites: false      # true = paste stock car photos onto Jamaica backgrounds (looked rough, so off)
   fleet_models: [BMW 2 Series, BMW 3 Series, BMW 5 Series GT, Foton View CS2, GWM Haval GT, GWM Haval H6, Honda CR-V, Honda Fit, Honda Grace, Honda HR-V, Hyundai Creta, Hyundai Tucson, Jetour T2, Kia Cerato, Kia Seltos, Kia Soluto, Kia Sportage, Mazda Demio, MG ZS, Nissan Sylphy, Nissan Teana, Nissan X-Trail, Subaru G4, Subaru Impreza, Subaru Legacy, Subaru XV, Suzuki Baleno, Suzuki Swift, Suzuki Vitara, Suzuki XL7, Toyota Aqua, Toyota Axio, Toyota Corolla, Toyota Corolla Cross, Toyota Corolla Touring, Toyota Hiace, Toyota Noah, Toyota RAV4, Toyota Rush, Toyota Vitz, Toyota Voxy, Toyota Yaris, Toyota Yaris Cross]     # the models on arahrides.com
+  series_days_cars: 0              # the same fleet car may appear again on another day, always in a photo not used before
   series_days: 21                  # photos from the same shoot (same car, same spot) are spaced at least this many days apart
   series_strict: true              # never break that rule when the library runs thin: the post uses another topic instead
   min_short_side: 1000
