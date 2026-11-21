@@ -201,3 +201,111 @@ journeys:
   - ["Snow at home. Sun here.", "Pick up at MBJ and head west."]
   - ["Stop for coconut water.", "Roadside vendors have it ice cold."]
   - ["Stay as long as you can.", "Stay 7 days or more and ask Winston what your rate looks like."]
+- k: GRANDPA'S PLACE
+  h: Grandpa still waits at the gate every time.
+  theme: family
+  places: [st elizabeth, treasure beach, santa cruz, family visit]
+  loc: Treasure Beach
+  beats:
+  - ["Out in the country.", "No bus goes to his door. Your own car does."]
+  - ["Mangoes off the tree.", "He still picks the best ones for the grandkids."]
+  - ["Stay the whole day.", "No rush to catch a ride back. Leave when the stories are done."]
+- k: COUSINS
+  h: The kids met their cousins for the first time.
+  theme: family
+  places: [clarendon, may pen, milk river, family visit]
+  loc: May Pen
+  beats:
+  - ["One car, the whole crew.", "Car seats, snacks and a playlist for the drive."]
+  - ["Instant best friends.", "Ten minutes in, nobody remembers they just met."]
+  - ["Make it a tradition.", "Same time next year. Book the car early."]
+- k: SINGLE DAD WEEKEND
+  h: Just me and my daughter. Best weekend of the year.
+  theme: family
+  places: [ocho rios, dunn's river falls, blue hole, ocho rios]
+  loc: Ocho Rios
+  beats:
+  - ["Our plan, our pace.", "No tour schedule. Stop wherever she points."]
+  - ["She climbed the falls.", "Holding hands the whole way up."]
+  - ["Ice cream on the way back.", "Some trips are about the little things."]
+- k: MOM AND SON TRIP
+  h: He's off to college next year. This trip was for us.
+  theme: family
+  places: [negril, seven mile beach, negril, rick's cafe]
+  loc: Negril
+  beats:
+  - ["Windows down.", "His music, my rules. We met in the middle."]
+  - ["Beach all afternoon.", "Phones away, real conversation."]
+  - ["Sunset dinner.", "The photo I'll keep forever."]
+- k: ANNIVERSARY
+  h: Twenty-five years. Back where it started.
+  theme: couple
+  places: [port antonio, frenchman's cove, blue lagoon, port antonio]
+  loc: Port Antonio
+  beats:
+  - ["The same road.", "Portland is still the greenest drive on the island."]
+  - ["Frenchman's Cove.", "River meets sea. Still the most beautiful spot we know."]
+  - ["Dinner for two.", "Drive back slow. No one else's schedule."]
+- k: RETIREMENT TRIP
+  h: Forty years of work. Now the island is the plan.
+  theme: couple
+  places: [mandeville, treasure beach, ys falls, treasure beach]
+  loc: Treasure Beach
+  beats:
+  - ["No alarm clock.", "Leave when you're ready. The car waits."]
+  - ["South coast slow living.", "Fresh fish, quiet beaches, long talks."]
+  - ["Visit old friends.", "The ones you promised to see for years."]
+- k: SELF-CARE WEEKEND
+  h: No kids. No email. Just the sea.
+  theme: solo
+  places: [negril, seven mile beach, negril, rick's cafe]
+  loc: Negril
+  beats:
+  - ["Book the car, then the massage.", "Getting there is part of the rest."]
+  - ["Long beach walks.", "Seven Mile Beach is made for slowing down."]
+  - ["Sunset alone, happily.", "Drive back with the windows down."]
+- k: GIRLS GETAWAY
+  h: Four friends. One SUV. Zero plans before noon.
+  theme: group
+  places: [ocho rios, blue hole, ocho rios, dunn's river falls]
+  loc: Ocho Rios
+  beats:
+  - ["Brunch first.", "Everyone fits, and so do the bags."]
+  - ["Blue Hole jump.", "Somebody screams. Everybody laughs."]
+  - ["Night out.", "A car of your own means you leave when you want."]
+- k: CULTURE TRIP
+  h: You can't feel reggae from a hotel room.
+  theme: culture
+  places: [nine mile, nine mile, kingston, bob marley museum]
+  loc: Nine Mile
+  beats:
+  - ["Drive up to Nine Mile.", "Bob Marley's birthplace, in the St Ann hills."]
+  - ["Hear the stories.", "Local guides share the music and the history."]
+  - ["End in Kingston.", "The Bob Marley Museum on Hope Road."]
+- k: JONKONNU AT CHRISTMAS
+  h: Masks, drums and dancing in the street.
+  theme: xmas
+  places: [kingston, grand market, kingston, port royal]
+  loc: Kingston
+  beats:
+  - ["A Jamaican Christmas tradition.", "Jonkonnu dancers bring the street to life."]
+  - ["Grand Market night.", "Food, lights and music for the whole family."]
+  - ["Drive home happy.", "Your own car means no waiting at midnight."]
+- k: TASTE OF JAMAICA
+  h: Peppered shrimp, jerk and fresh fish in one drive.
+  theme: food
+  places: [middle quarters, boston bay, treasure beach, jerk]
+  loc: Black River
+  beats:
+  - ["Middle Quarters shrimp.", "Spicy peppered shrimp from the roadside vendors."]
+  - ["Jerk stop.", "Smoke, spice and a cold drink."]
+  - ["Fish by the sea.", "Treasure Beach serves it straight from the boats."]
+- k: FAMILY CHRISTMAS DINNER
+  h: Everybody at one table. Somebody has to drive the pots.
+  theme: xmas
+  places: [mandeville, family visit, mandeville, grand market]
+  loc: Mandeville
+  beats:
+  - ["Pick up the family.", "A 7-seater gets everyone there together."]
+  - ["Ham, sorrel, rice and peas.", "The table every Jamaican waits for."]
+  - ["Stay late.", "Leave when the dominoes are done."]

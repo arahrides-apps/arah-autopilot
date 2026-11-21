@@ -1,6 +1,7 @@
 # Jamaica points of interest, from your list (all 14 parishes). Each one becomes a 'spotlight' post: a real photo of that place,
 # where it is, why go, and pickup at the nearest airport. A place is only posted when a real photo of it is found.
 # cat: beach, waterfall, river, cave, mountain, heritage, garden, food, lighthouse, adventure.  tier: major or gem (hidden gem).
+# Food stops also have 'eat:' (what to order) and 'photo:' (a photo search for the dish when no photo of the spot itself is found).
 # Add 'about:' lines to give a place a better 'why go' line. Remove any place you don't want posted.
 attractions:
 - name: Bob Marley Museum
@@ -14,7 +15,9 @@ attractions:
   cat: food
   tier: major
   airport: Kingston
-  about: historic mansion, restaurants and ice cream
+  about: Landmark courtyard in Kingston, known for tropical ice cream, baked goods and patties
+  eat: Soursop, stout or mango ice cream, and a flaky patty
+  photo: Devon House ice cream Kingston
 - name: Port Royal
   parish: Kingston
   cat: heritage
@@ -1004,11 +1007,6 @@ attractions:
   cat: cave
   tier: gem
   airport: Montego Bay
-- name: Middle Quarters shrimp vendors
-  parish: St. Elizabeth
-  cat: food
-  tier: gem
-  airport: Montego Bay
 - name: Apple Valley Park
   parish: St. Elizabeth
   cat: garden
@@ -1175,3 +1173,75 @@ attractions:
   cat: heritage
   tier: gem
   airport: Kingston
+- name: Middle Quarters
+  parish: St. Elizabeth
+  cat: food
+  tier: major
+  airport: Montego Bay
+  about: Roadside vendors on the A2 sell bags of fiery pepper shrimp
+  eat: Pepper shrimp cooked with garlic and Scotch bonnet
+  photo: Jamaican pepper shrimp
+- name: Gloria's, Port Royal
+  parish: Kingston
+  cat: food
+  tier: major
+  airport: Kingston
+  about: Long-running seafood spot by the harbour in Port Royal
+  eat: Steamed fish with okra and crackers, escovitch fish, bammy and fish tea
+  photo: Jamaican steamed fish bammy
+- name: Boston Bay jerk
+  parish: Portland
+  cat: food
+  tier: major
+  airport: Kingston
+  about: Known as the birthplace of Jamaican jerk
+  eat: Pimento-wood jerk pork and chicken with festival
+  photo: jerk pork pimento wood Jamaica
+- name: Hellshire Beach fried fish
+  parish: St. Catherine
+  cat: food
+  tier: major
+  airport: Kingston
+  about: Beachside cookshops frying fish to order
+  eat: Whole fried snapper or parrotfish with escovitch sauce, bammy and festival
+  photo: escovitch fish Jamaica
+- name: Little Ochie, Alligator Pond
+  parish: St. Elizabeth
+  cat: food
+  tier: major
+  airport: Montego Bay or Kingston
+  about: South-coast seafood spot where you choose your fish and eat by the water
+  eat: Fresh fish fried, steamed or escovitch, lobster and bammy
+  photo: Little Ochie Alligator Pond
+- name: Scotchies, Drax Hall
+  parish: St. Ann
+  cat: food
+  tier: major
+  airport: Ocho Rios
+  about: Open-air jerk spot cooking slowly over pimento wood
+  eat: Jerk chicken, pork and sausage with festival and roast breadfruit
+  photo: jerk chicken Jamaica grill
+- name: Negril jerk and seafood
+  parish: Westmoreland
+  cat: food
+  tier: major
+  airport: Montego Bay
+  about: Drum-pan and cliffside jerk stops, seafood grills and local bakeries
+  eat: Roadside jerk chicken, grilled seafood, and a patty in coco bread
+  photo: Negril jerk chicken drum pan
+- name: Port Antonio and the Rio Grande
+  parish: Portland
+  cat: food
+  tier: gem
+  airport: Kingston
+  about: Lush coastal Portland, known for roast breadfruit and river crayfish
+  eat: Roast breadfruit and river crayfish
+  photo: roasted breadfruit Jamaica
+- name: Blue Mountain coffee stop
+  parish: St. Andrew
+  cat: food
+  tier: gem
+  airport: Kingston
+  about: Mountain cafés serving Blue Mountain coffee and farm-style plates
+  eat: A cup of Blue Mountain coffee with a view
+  photo: Blue Mountain coffee cup Jamaica

@@ -1,0 +1,566 @@
+# Fleet campaign: cars from the lowest daily price to the highest, then the lowest security deposit.
+# Three car posts a day (00:00, 02:00, 22:00, late night is when most bookings happen): all 50 models by about Dec 7.
+# Built from the fleet list you sent on Nov 20, 2026 (98 rental units grouped into 50 models; airport transfers, boats and 1-day listings left out).
+# Rates are base daily rates; holiday and date-specific prices can differ, and the posts say so.
+# price / deposit_at_price: the cheapest unit of that model and its deposit (shown together, always from the same unit).
+# low_deposit / price_at_low_deposit: the unit with the lowest deposit (used by the low-deposit posts).
+# A unit whose deposit was cut off or missing in the list is left out rather than guessed (e.g. Toyota Yaris, listing 159).
+# Update this file whenever prices change.
+campaign:
+  name: Low price, low deposit
+  start: '2026-11-21'
+  deal_slots:
+  - 0
+  - 1
+  - 7
+  deposit_slot: 4
+  deposit_max: 150
+cars:
+- model: Toyota Aqua
+  category: Hatchback
+  years: 2018-2019
+  units: 2
+  price: 45
+  deposit_at_price: 65
+  low_deposit: 65
+  price_at_low_deposit: 45
+  listing_ids:
+  - 123
+  - 148
+- model: Honda Fit
+  category: Hatchback
+  years: '2017'
+  units: 3
+  price: 50
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 50
+  listing_ids:
+  - 157
+  - 168
+  - 169
+- model: Suzuki Swift
+  category: Hatchback
+  years: '2015'
+  units: 1
+  price: 50
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 50
+  listing_ids:
+  - 179
+- model: Mazda Demio
+  category: Hatchback
+  years: 2016-2019
+  units: 4
+  price: 50
+  deposit_at_price: 750
+  low_deposit: 750
+  price_at_low_deposit: 50
+  listing_ids:
+  - 66
+  - 68
+  - 144
+  - 191
+- model: Toyota Corolla Axio
+  category: Sedan
+  years: 2017-2018
+  units: 3
+  price: 55
+  deposit_at_price: 60
+  low_deposit: 60
+  price_at_low_deposit: 55
+  listing_ids:
+  - 95
+  - 110
+  - 111
+- model: Toyota Axio
+  category: Sedan
+  years: 2011-2017
+  units: 3
+  price: 55
+  deposit_at_price: 80
+  low_deposit: 80
+  price_at_low_deposit: 55
+  listing_ids:
+  - 74
+  - 131
+  - 173
+- model: Toyota Vitz
+  category: Hatchback
+  years: ''
+  units: 1
+  price: 55
+  deposit_at_price: 100
+  low_deposit: 100
+  price_at_low_deposit: 55
+  listing_ids:
+  - 251
+- model: Suzuki Baleno
+  category: Hatchback
+  years: '2023'
+  units: 1
+  price: 57
+  deposit_at_price: 100
+  low_deposit: 100
+  price_at_low_deposit: 57
+  listing_ids:
+  - 151
+- model: Toyota Corolla
+  category: Sedan
+  years: 2019-2023
+  units: 6
+  price: 57
+  deposit_at_price: 500
+  low_deposit: 100
+  price_at_low_deposit: 65
+  listing_ids:
+  - 65
+  - 119
+  - 185
+  - 190
+  - 234
+  - 259
+- model: Nissan Sylphy
+  category: Sedan
+  years: '2018'
+  units: 1
+  price: 60
+  deposit_at_price: 200
+  low_deposit: 200
+  price_at_low_deposit: 60
+  listing_ids:
+  - 226
+- model: Honda Grace
+  category: Sedan
+  years: '2018'
+  units: 3
+  price: 60
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 60
+  listing_ids:
+  - 176
+  - 177
+  - 178
+- model: Kia Soluto
+  category: Sedan
+  years: '2025'
+  units: 2
+  price: 60
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 60
+  listing_ids:
+  - 163
+  - 164
+- model: Subaru G4
+  category: Sedan
+  years: '2015'
+  units: 1
+  price: 60
+  deposit_at_price: 500
+  low_deposit: 500
+  price_at_low_deposit: 60
+  listing_ids:
+  - 122
+- model: Kia Cerato
+  category: Sedan
+  years: '2020'
+  units: 1
+  price: 62
+  deposit_at_price: 125
+  low_deposit: 125
+  price_at_low_deposit: 62
+  listing_ids:
+  - 102
+- model: Toyota Wish
+  category: 7 Seater
+  years: '2011'
+  units: 1
+  price: 65
+  deposit_at_price: 60
+  low_deposit: 60
+  price_at_low_deposit: 65
+  listing_ids:
+  - 91
+- model: Nissan Teana
+  category: Sedan
+  years: ''
+  units: 1
+  price: 65
+  deposit_at_price: 200
+  low_deposit: 200
+  price_at_low_deposit: 65
+  listing_ids:
+  - 253
+- model: Honda City
+  category: Sedan
+  years: '2022'
+  units: 1
+  price: 65
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 65
+  listing_ids:
+  - 89
+- model: Subaru Impreza
+  category: Sedan
+  years: '2020'
+  units: 2
+  price: 65
+  deposit_at_price: 250
+  low_deposit: 250
+  price_at_low_deposit: 65
+  listing_ids:
+  - 174
+  - 175
+- model: Suzuki Vitara
+  category: SUV
+  years: 2016-2023
+  units: 5
+  price: 72
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 72
+  listing_ids:
+  - 67
+  - 117
+  - 186
+  - 204
+  - 206
+- model: Toyota Corolla Touring
+  category: Sedan
+  years: '2019'
+  units: 1
+  price: 75
+  deposit_at_price: 100
+  low_deposit: 100
+  price_at_low_deposit: 75
+  listing_ids:
+  - 265
+- model: MG ZS
+  category: SUV
+  years: ''
+  units: 2
+  price: 77
+  deposit_at_price: 1000
+  low_deposit: 300
+  price_at_low_deposit: 110
+  listing_ids:
+  - 230
+  - 260
+- model: Toyota Yaris Cross
+  category: SUV
+  years: '2024'
+  units: 3
+  price: 77
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 77
+  listing_ids:
+  - 109
+  - 193
+  - 205
+- model: Subaru Legacy B4
+  category: Sedan
+  years: '2019'
+  units: 1
+  price: 80
+  deposit_at_price: 80
+  low_deposit: 80
+  price_at_low_deposit: 80
+  listing_ids:
+  - 112
+- model: Toyota Corolla Cross
+  category: SUV
+  years: 2023-2024
+  units: 6
+  price: 82
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 82
+  listing_ids:
+  - 97
+  - 99
+  - 120
+  - 192
+  - 200
+  - 203
+- model: Toyota RAV4
+  category: SUV
+  years: 2020-2024
+  units: 10
+  price: 82
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 82
+  listing_ids:
+  - 64
+  - 121
+  - 183
+  - 184
+  - 189
+  - 194
+  - 198
+  - 199
+  - 201
+  - 202
+- model: Honda HR-V
+  category: SUV
+  years: '2016'
+  units: 2
+  price: 85
+  deposit_at_price: 100
+  low_deposit: 100
+  price_at_low_deposit: 85
+  listing_ids:
+  - 160
+  - 268
+- model: Hyundai Creta
+  category: SUV
+  years: '2018'
+  units: 2
+  price: 85
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 85
+  listing_ids:
+  - 88
+  - 172
+- model: Honda Stepwgn
+  category: 7 Seater
+  years: ''
+  units: 1
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 231
+- model: Nissan X-Trail
+  category: 7 Seater
+  years: '2019'
+  units: 1
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 71
+- model: Toyota Voxy
+  category: 7 Seater
+  years: 2017-2020
+  units: 2
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 170
+  - 208
+- model: Toyota Mark X
+  category: Luxury Vehicles
+  years: '2018'
+  units: 1
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 180
+- model: Subaru XV
+  category: SUV
+  years: '2018'
+  units: 1
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 165
+- model: Toyota C-HR
+  category: SUV
+  years: '2019'
+  units: 1
+  price: 95
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 95
+  listing_ids:
+  - 162
+- model: Honda CR-V
+  category: SUV
+  years: '2021'
+  units: 1
+  price: 100
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 100
+  listing_ids:
+  - 76
+- model: Honda Vezel
+  category: SUV
+  years: ''
+  units: 1
+  price: 110
+  deposit_at_price: 200
+  low_deposit: 200
+  price_at_low_deposit: 110
+  listing_ids:
+  - 255
+- model: Kia Seltos
+  category: SUV
+  years: '2022'
+  units: 2
+  price: 110
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 110
+  listing_ids:
+  - 171
+  - 233
+- model: Suzuki XL7
+  category: 7 Seater
+  years: 2021-2022
+  units: 3
+  price: 112
+  deposit_at_price: 1000
+  low_deposit: 300
+  price_at_low_deposit: 120
+  listing_ids:
+  - 72
+  - 114
+  - 187
+- model: Toyota Rush
+  category: 7 Seater
+  years: '2021'
+  units: 1
+  price: 112
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 112
+  listing_ids:
+  - 207
+- model: Kia Carens
+  category: 7 Seater
+  years: '2024'
+  units: 1
+  price: 120
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 120
+  listing_ids:
+  - 73
+- model: Hyundai Tucson
+  category: SUV
+  years: 2020-2024
+  units: 2
+  price: 120
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 120
+  listing_ids:
+  - 166
+  - 167
+- model: Toyota Noah
+  category: 7 Seater
+  years: '2018'
+  units: 1
+  price: 122
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 122
+  listing_ids:
+  - 115
+- model: Kia Sportage
+  category: SUV
+  years: ''
+  units: 1
+  price: 135
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 135
+  listing_ids:
+  - 235
+- model: Volkswagen Tiguan
+  category: SUV
+  years: ''
+  units: 1
+  price: 150
+  deposit_at_price: 300
+  low_deposit: 300
+  price_at_low_deposit: 150
+  listing_ids:
+  - 236
+- model: GWM Haval H6
+  category: Luxury Vehicles
+  years: '2025'
+  units: 1
+  price: 150
+  deposit_at_price: 500
+  low_deposit: 500
+  price_at_low_deposit: 150
+  listing_ids:
+  - 158
+- model: GWM Haval GT
+  category: Luxury Vehicles
+  years: ''
+  units: 1
+  price: 170
+  deposit_at_price: 750
+  low_deposit: 750
+  price_at_low_deposit: 170
+  listing_ids:
+  - 242
+- model: Jetour T2
+  category: Luxury Vehicles
+  years: ''
+  units: 1
+  price: 190
+  deposit_at_price: 750
+  low_deposit: 750
+  price_at_low_deposit: 190
+  listing_ids:
+  - 239
+- model: BMW 2 Series
+  category: Luxury Vehicles
+  years: '2022'
+  units: 1
+  price: 200
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 200
+  listing_ids:
+  - 156
+- model: Foton View CS2 (15 seater)
+  category: Mini Bus
+  years: '2025'
+  units: 1
+  price: 200
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 200
+  listing_ids:
+  - 196
+- model: Toyota Hiace
+  category: Mini Bus
+  years: ''
+  units: 1
+  price: 200
+  deposit_at_price: 1500
+  low_deposit: 1500
+  price_at_low_deposit: 200
+  listing_ids:
+  - 221
+- model: BMW 3 Series
+  category: Luxury Vehicles
+  years: 2017-2023
+  units: 2
+  price: 250
+  deposit_at_price: 1000
+  low_deposit: 1000
+  price_at_low_deposit: 250
+  listing_ids:
+  - 161
+  - 181
