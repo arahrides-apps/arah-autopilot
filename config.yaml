@@ -1,19 +1,22 @@
 # Arah Rides Instagram Autopilot - settings you may want to change.
 timezone: America/Jamaica          # UTC-5 all year, no daylight saving
-posts_per_day: 6                   # 6 strong posts a day beat 12 that repeat photos. Most reservations are made late at night, so midnight stays
+posts_per_day: 8                   # most bookings happen late at night, so 00:00, 02:00 and 22:00 always have a post
 days_ahead: 3                      # keep this many future days drafted for your review
-publish_grace_hours: 4             # if a post is still unapproved/undelivered this long after its slot, it is skipped (never posted late)
+publish_grace_hours: 4             # posts from earlier days that were never approved are skipped after this long
+late_same_day: true                 # today's posts whose time has passed still post once you approve them (one every late_gap_minutes)
+late_gap_minutes: 30
+draft_past_slots_today: true        # when you draft or redraft, today's earlier time slots are drafted too, so you can approve and post them
 max_posts_per_day_hard_cap: 15
 min_gap_minutes: 20               # posts approved late are spaced at least this far apart
 max_posts_per_run: 1              # the publisher runs every 10 minutes
 
 # Times in Jamaica time. Must contain at least posts_per_day entries. (The 12-a-day schedule was 00:00 to 22:00 every 2 hours.)
-slots: ["00:00", "07:00", "11:00", "14:00", "18:00", "21:00"]   # Jamaica time (US East Coast is the same hour in winter)
+slots: ["00:00", "02:00", "07:00", "11:00", "14:00", "18:00", "20:00", "22:00"]   # Jamaica time (US East Coast is the same hour in winter)
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["car_hero", "journey", "spotlight", "carousel|list", "journey|spotlight", "review|qa"]
-event_slots: [2]                    # the 11:00 post highlights an upcoming event (only on event_days)
-single_days_per_5: 3               # the midnight car photo goes out as a single picture on 3 days out of every 5 (about 10% of posts)
+pattern: ["car_hero", "journey|chat", "journey", "spotlight", "chat", "journey|spotlight", "review|qa", "car_hero"]   # fleet campaign: 00:00, 02:00 and 22:00 become car deals, 14:00 low-deposit cars on even days (Winston chat on odd days)
+event_slots: [3]                    # the 11:00 post highlights an upcoming event (only on event_days)
+single_days_per_5: 3               # the midnight car photo goes out as a single picture on 3 days out of every 5 (about 8% of posts)
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
 single_slots: [0]                   # the midnight car post
 # Night slots (00:00 to 04:00) carry the booking posts: car photo, lounge offer or brand, Winston chat. Day slots carry destination plans, reviews and tips.
@@ -100,7 +103,7 @@ locations:
   treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 reels:
-  per_day: 4                      # Reels a day (about 60-65%); 3 on days with a single picture
+  per_day: 5                      # Reels a day (about 60-65%); 4 on days with a single picture
   carousels_per_day: 2             # carousels kept as carousels (about 30%): the 14:00 guide and the 21:00 review/Q&A
   clips: true                      # videos you drop in content/reels/ named clip_*.mp4 are used in Reels
   max_clip_mb: 250                 # biggest Drive video clip it will download
