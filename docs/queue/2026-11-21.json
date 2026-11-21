@@ -29,12 +29,58 @@
    "status": "pending"
   },
   {
+   "id": "2026-11-21_0200_deal",
+   "date": "2026-11-21",
+   "slot": "2026-11-21T02:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "Its 02:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
+    "Number plate visible (kept sharp on purpose)",
+    "3 of 5 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-21/2026-11-21_0200_deal_1.jpg",
+    "media/2026-11-21/2026-11-21_0200_deal_2.jpg",
+    "media/2026-11-21/2026-11-21_0200_deal_3.jpg",
+    "media/2026-11-21/2026-11-21_0200_deal_4.jpg",
+    "media/2026-11-21/2026-11-21_0200_deal_5.jpg"
+   ],
+   "_deal_k": 1,
+   "photo": {
+    "id": "local:arah_b1_8_honda-fit-silver",
+    "name": "arah_b1_8_honda-fit-silver",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "copy_text": "Honda Fit (2017) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "Honda Fit rental car in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "Honda Fit (2017) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #RentACarJamaica #DiscoverTheRealJamaica #VisitJamaica #JamaicaItinerary",
+   "beat_lines": [
+    "From US$50 a day",
+    "Deposit just US$250",
+    "Easy to park and easy on gas.",
+    "Book in minutes: website or WhatsApp Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/2d82643afafe8728.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/7558a45ba5facb30.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/fdd4016fd3ec7e1a.jpg"
+   ],
+   "status": "pending"
+  },
+  {
    "id": "2026-11-21_0700_journey",
    "date": "2026-11-21",
    "slot": "2026-11-21T07:00:00-05:00",
    "type": "journey",
    "flags": [
-    "Goes out as a Reel (animated slideshow (dynamic)): approve as usual. Add trending audio in Instagram if you like."
+    "Slide photo from unsplash (licence-free): Photo by Alexander John on Unsplash",
+    "Slide photo matched to 'Jamaican family dinner': Photo by NinaLakomy on Pixabay",
+    "2 of 6 slides have photos"
    ],
    "images": [
     "media/2026-11-21/2026-11-21_0700_journey_1.jpg",
@@ -44,95 +90,76 @@
     "media/2026-11-21/2026-11-21_0700_journey_5.jpg",
     "media/2026-11-21/2026-11-21_0700_journey_6.jpg"
    ],
-   "copy_text": "Just the two of you and an open road. 🧳\n\nSkip the resort bubble. Drive to the beach you spotted on the way in.\nSeven Mile mornings. Long beach, slow coffee, nowhere to be.\nSunset at the cliffs. Catch it from Rick's side, then drive back at your own pace.",
-   "alt": "Story: Just the two of you and an open road. (carousel: swipe for more)",
+   "copy_text": "Montego Bay to Treasure Beach in one day. 🧳\n\nLeave MBJ early. Head south through St Elizabeth.\nBlack River stop. Boat safari or lunch by the water.\nEnd at the south coast. Quiet beaches and a sky full of stars.",
+   "alt": "Story: Montego Bay to Treasure Beach in one day. (carousel: swipe for more)",
    "location": {
     "name": "Sangster International Airport",
     "id": "106111078512570"
    },
-   "caption": "Just the two of you and an open road. 🧳\n\nSkip the resort bubble. Drive to the beach you spotted on the way in.\nSeven Mile mornings. Long beach, slow coffee, nowhere to be.\nSunset at the cliffs. Catch it from Rick's side, then drive back at your own pace.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#SangsterAirport #CarRentalJamaica #RentJamaican #JamaicaItinerary #RentACarJamaica",
-   "status": "pending",
-   "reel_kind": "animated slideshow (dynamic)",
-   "reel": "media/2026-11-21/2026-11-21_0700_journey.mp4"
-  },
-  {
-   "id": "2026-11-21_1100_trip",
-   "date": "2026-11-21",
-   "slot": "2026-11-21T11:00:00-05:00",
-   "type": "trip",
-   "flags": [
-    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
-    "Goes out as a Reel (animated slideshow (dynamic)): approve as usual. Add trending audio in Instagram if you like."
+   "caption": "Montego Bay to Treasure Beach in one day. 🧳\n\nLeave MBJ early. Head south through St Elizabeth.\nBlack River stop. Boat safari or lunch by the water.\nEnd at the south coast. Quiet beaches and a sky full of stars.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #RentJamaican #JamaicaTravel #SelfDriveJamaica",
+   "photos_extra": [
+    {
+     "id": "pixabay:3625028",
+     "name": "pixabay-3625028"
+    }
    ],
-   "images": [
-    "media/2026-11-21/2026-11-21_1100_trip_1.jpg",
-    "media/2026-11-21/2026-11-21_1100_trip_2.jpg",
-    "media/2026-11-21/2026-11-21_1100_trip_3.jpg",
-    "media/2026-11-21/2026-11-21_1100_trip_4.jpg",
-    "media/2026-11-21/2026-11-21_1100_trip_5.jpg",
-    "media/2026-11-21/2026-11-21_1100_trip_6.jpg"
+   "beat_lines": [
+    "Leave MBJ early.",
+    "Black River stop.",
+    "End at the south coast.",
+    "Know the price before you land."
    ],
-   "copy_text": "A north coast day in 3 stops 🗺️\n\n1. Nine Mile: Visit the village in St Ann where Bob Marley was born.\n2. Blue Hole: Cool, clear water and hidden spots near Ocho Rios. Jump in.\n3. Dunn's River Falls: Climb the terraced falls and cool off in the pools.\n\nPick up at OCJ (Ian Fleming) and the north coast is on your doorstep.",
-   "alt": "Day plan: A north coast day in 3 stops (carousel: swipe for more)",
-   "location": {
-    "name": "Montego Bay, Jamaica",
-    "id": "115773858436055"
-   },
-   "caption": "A north coast day in 3 stops 🗺️\n\n1. Nine Mile: Visit the village in St Ann where Bob Marley was born.\n2. Blue Hole: Cool, clear water and hidden spots near Ocho Rios. Jump in.\n3. Dunn's River Falls: Climb the terraced falls and cool off in the pools.\n\nPick up at OCJ (Ian Fleming) and the north coast is on your doorstep.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#MontegoBayJamaica #JamaicaRentalCar #ArahRides #TravelJamaica #SelfDriveJamaica",
-   "status": "pending",
-   "reel_kind": "animated slideshow (dynamic)",
-   "reel": "media/2026-11-21/2026-11-21_1100_trip.mp4"
-  },
-  {
-   "id": "2026-11-21_1800_moment",
-   "date": "2026-11-21",
-   "slot": "2026-11-21T18:00:00-05:00",
-   "type": "moment",
-   "flags": [
-    "Goes out as a Reel (sale slideshow (photos + code card)): approve as usual. Add trending audio in Instagram if you like."
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/d4b76fba98d74903.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/dd0483a99f7024e9.jpg"
    ],
-   "images": [
-    "media/2026-11-21/2026-11-21_1800_moment_1.jpg",
-    "media/2026-11-21/2026-11-21_1800_moment_2.jpg",
-    "media/2026-11-21/2026-11-21_1800_moment_3.jpg",
-    "media/2026-11-21/2026-11-21_1800_moment_4.jpg",
-    "media/2026-11-21/2026-11-21_1800_moment_5.jpg"
-   ],
-   "promo": "PureCyber",
-   "copy_text": "Landing in Jamaica soon? 🇯🇲\n\nHave your car waiting. Use code PureCyber at checkout and save up to $40 on ArahRides.com. Conditions apply.",
-   "alt": "Seasonal graphic: Landing in Jamaica soon? (carousel: swipe for more)",
-   "location": {
-    "name": "Norman Manley International Airport",
-    "id": "583154638527853"
-   },
-   "caption": "Landing in Jamaica soon? 🇯🇲\n\nHave your car waiting. Use code PureCyber at checkout and save up to $40 on ArahRides.com. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#NormanManleyAirport #JamaicaCarRental #RentJamaican #JamaicaEvents #JamaicaVacation",
-   "status": "pending",
-   "reel_kind": "sale slideshow (photos + code card)",
-   "reel": "media/2026-11-21/2026-11-21_1800_moment.mp4"
-  },
-  {
-   "id": "2026-11-21_2100_review",
-   "date": "2026-11-21",
-   "slot": "2026-11-21T21:00:00-05:00",
-   "type": "review",
-   "flags": [
-    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only"
-   ],
-   "images": [
-    "media/2026-11-21/2026-11-21_2100_review_1.jpg",
-    "media/2026-11-21/2026-11-21_2100_review_2.jpg",
-    "media/2026-11-21/2026-11-21_2100_review_3.jpg",
-    "media/2026-11-21/2026-11-21_2100_review_4.jpg",
-    "media/2026-11-21/2026-11-21_2100_review_5.jpg"
-   ],
-   "copy_text": "Car rental in Jamaica: what real renters say about booking, pickup and customer service on Arah Rides ⭐\n\n“I've had such a great experience renting with Arah! The whole process was quick and easy, which made it even better. It’s nice knowing they’re always there for you, ready to help when you need it.” — Sophia, Mazda Demio\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Highly recommended service. Communication was clear from the minute the reservation was made. Definitely would recommend this service to anyone.” — Steven, Toyota Corolla Cross\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇",
-   "alt": "Renter reviews of the Easy from start to finish on Arah Rides (carousel: swipe for more)",
-   "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
-   },
-   "caption": "“I've had such a great experience renting with Arah! The whole process was quick and easy, which made it even better. It’s nice knowing they’re always there for you, ready to help when you need it.” — Sophia, Mazda Demio\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Highly recommended service. Communication was clear from the minute the reservation was made. Definitely would recommend this service to anyone.” — Steven, Toyota Corolla Cross\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental for Ocho Rios and the north coast\n\nBook: arahrides.com\nWhatsApp Winston: https://wa.me/12013713152\n\n#OchoRios #JamaicaCarRental #DiscoverTheRealJamaica #RentACarJamaica #CarRentalJamaica",
    "status": "pending"
+  },
+  {
+   "id": "2026-11-21_2200_deal",
+   "date": "2026-11-21",
+   "slot": "2026-11-21T22:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "Stock photo of a Suzuki Swift. It shows the model, not one of our own cars: check it looks clean and has no people",
+    "Stock photo of this model",
+    "2 of 5 slides have photos",
+    "Goes out as a Reel (animated slideshow (dynamic))."
+   ],
+   "images": [
+    "media/2026-11-21/2026-11-21_2200_deal_1.jpg",
+    "media/2026-11-21/2026-11-21_2200_deal_2.jpg",
+    "media/2026-11-21/2026-11-21_2200_deal_3.jpg",
+    "media/2026-11-21/2026-11-21_2200_deal_4.jpg",
+    "media/2026-11-21/2026-11-21_2200_deal_5.jpg"
+   ],
+   "_deal_k": 2,
+   "photo": {
+    "id": "wikimedia:203208069",
+    "name": "wikimedia-203208069",
+    "source": "wikimedia",
+    "credit": "Photo by Aboutdamnavantime.wiki, Wikimedia Commons (CC BY 4.0)"
+   },
+   "copy_text": "Suzuki Swift (2015) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\nPhoto shows the model; the car you rent may differ in colour and trim.",
+   "alt": "Suzuki Swift rental car in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
+   },
+   "caption": "Suzuki Swift (2015) from US$50 a day 🚗\n\nSecurity deposit: US$250.\nHatchback. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\nPhoto shows the model; the car you rent may differ in colour and trim.\n\n🔥 Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook in minutes, your way:\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #ArahRides #JamaicaVacation #CarRentalJamaica",
+   "beat_lines": [
+    "From US$50 a day",
+    "Deposit just US$250",
+    "Easy to park and easy on gas.",
+    "Book in minutes: website or WhatsApp Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/d09f8063b7be96bf.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/6739f45f596f6a25.jpg"
+   ],
+   "status": "pending",
+   "reel_kind": "animated slideshow (dynamic)",
+   "reel": "media/2026-11-21/2026-11-21_2200_deal.mp4"
   }
  ]
 }
