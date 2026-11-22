@@ -1533,5 +1533,11 @@
   "status": "skipped",
   "at": "2026-11-22T00:00:18.509504-05:00",
   "note": "not approved in time"
+ },
+ "2026-11-22_0200_deal": {
+  "status": "published",
+  "at": "2026-11-22T02:00:28.426522-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
