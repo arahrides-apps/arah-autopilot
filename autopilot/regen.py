@@ -1,4 +1,4 @@
-"""Redo every post that is not approved yet (and not already published), from now on.
+"""Redo every post that is not approved yet (and not already published): all of today (earlier slots included, so you can still approve and post them) and the days ahead.
 Approved carousels are never touched; approved single-picture posts are rebuilt as carousels. Photos from the thrown-away drafts go back in the pool."""
 import datetime as dt, random, logging
 from . import queue as Q
@@ -26,7 +26,7 @@ def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
             if wipe:                                             # reset: only posts already on Instagram survive, approved or not
                 if p["id"] in pub:
                     keep.append(p); kept += 1; continue
-            elif (approved and not single) or p["id"] in pub or dt.datetime.fromisoformat(p["slot"]) <= now:
+            elif (approved and not single) or p["id"] in pub or (dt.datetime.fromisoformat(p["slot"]) <= now and d < now.date()):   # today's passed, unapproved posts are redrafted too
                 keep.append(p); kept += 1; continue
             dropped += 1
             for im in p["images"]:
