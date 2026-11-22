@@ -75,20 +75,35 @@ def make_hook_reel(photos, lines, end_img, out, seed=0, hook_s=2.0, beat_s=1.35,
     rng = random.Random(seed)
     durs = [hook_s] + [beat_s] * (n - 1) + [end_s]
     cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+    isvid = [p.suffix.lower() in (".mp4", ".mov", ".webm") for p in photos]
+    if isvid[0] and n > 1:                                   # video clips get a little longer on screen
+        pass
     for i in range(n):
-        cmd += ["-loop", "1", "-t", f"{durs[i]:.2f}", "-framerate", str(FPS), "-i", str(photos[i])]
+        if isvid[i]:
+            durs[i] = max(durs[i], 2.2)
+            cmd += ["-ss", "0.5", "-t", f"{durs[i]:.2f}", "-i", str(photos[i])]
+        else:
+            cmd += ["-loop", "1", "-t", f"{durs[i]:.2f}", "-framerate", str(FPS), "-i", str(photos[i])]
     for i in range(n):
         cmd += ["-loop", "1", "-t", f"{durs[i]:.2f}", "-framerate", str(FPS), "-i", str(caps[i])]
     cmd += ["-loop", "1", "-t", f"{end_s:.2f}", "-framerate", str(FPS), "-i", str(end_img)]
-    music = pick_music(seed)
+    try:
+        from . import music as M
+        music, credit = M.pick(seed)
+    except Exception:
+        music, credit = pick_music(seed), None
     if music:
-        cmd += ["-i", str(music)]
+        cmd += ["-ss", "12", "-i", str(music)]                  # skip the slow intro: start where the beat is going
     f = []
     moves = MOVES[:]; rng.shuffle(moves); moves = [MOVES[0]] + moves      # the hook always pushes in
     for i in range(n):
         N = int(durs[i] * FPS); z, x, y = (m.replace("/N", f"/{N}") for m in moves[i % len(moves)])
-        f.append(f"[{i}:v]scale={int(W*1.25)}:{int(HH*1.25)}:force_original_aspect_ratio=increase,crop={int(W*1.25)}:{int(HH*1.25)},setsar=1,"
-                 f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={W}x{HH}:fps={FPS},eq=contrast=1.06:saturation=1.12,trim=duration={durs[i]:.2f},setpts=PTS-STARTPTS[p{i}]")
+        if isvid[i]:                                         # a real video clip: fill the frame, keep its own motion
+            f.append(f"[{i}:v]fps={FPS},scale={W}:{HH}:force_original_aspect_ratio=increase,crop={W}:{HH},setsar=1,eq=contrast=1.05:saturation=1.1,"
+                     f"tpad=stop_mode=clone:stop_duration=3,trim=duration={durs[i]:.2f},setpts=PTS-STARTPTS[p{i}]")
+        else:
+            f.append(f"[{i}:v]scale={int(W*1.25)}:{int(HH*1.25)}:force_original_aspect_ratio=increase,crop={int(W*1.25)}:{int(HH*1.25)},setsar=1,"
+                     f"zoompan=z='{z}':x='{x}':y='{y}':d=1:s={W}x{HH}:fps={FPS},eq=contrast=1.06:saturation=1.12,trim=duration={durs[i]:.2f},setpts=PTS-STARTPTS[p{i}]")
         f.append(f"[{n + i}:v]format=rgba,fade=in:st=0.05:d=0.2:alpha=1,setpts=PTS-STARTPTS[c{i}]")
         f.append(f"[p{i}][c{i}]overlay=x=0:y='if(lt(t,0.3),(0.3-t)*260,0)':shortest=1,format=yuv420p[b{i}]")
     e = 2 * n
@@ -107,4 +122,5 @@ def make_hook_reel(photos, lines, end_img, out, seed=0, hook_s=2.0, beat_s=1.35,
         cmd += ["-map", f"{a}:a", "-af", f"afade=t=in:d=0.4,afade=t=out:st={total - 0.8:.2f}:d=0.8", "-c:a", "aac", "-b:a", "160k"]
     cmd += ["-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     subprocess.run(cmd, check=True, timeout=600)
+    make_hook_reel.credit = credit if music else None
     return out, bool(music)

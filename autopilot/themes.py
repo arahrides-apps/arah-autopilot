@@ -43,9 +43,9 @@ THEMES = {
     "culture": (["Jamaica reggae music", "Jamaica Rastafari culture", "Jamaica street art", "Jamaica dancehall", "Jamaica carnival", "Jamaica drummers", "Jamaican culture festival",
                  "Bob Marley Museum", "Jamaica Art Walk Kingston"],
                 r"reggae|music|rasta|culture|art|mural|dance|carnival|drum|festival|marley|band|street|craft", True),
-    "couple": (["Black couple Jamaica beach", "couple Jamaica vacation", "interracial couple Caribbean beach", "couple Jamaica waterfall", "romantic Jamaica sunset couple", "couple Jamaica Negril"],
+    "couple": (["Black couple Jamaica beach", "couple Jamaica vacation", "mixed couple Jamaica beach", "couple Jamaica waterfall", "romantic Jamaica sunset couple", "couple Jamaica Negril"],
                r"couple|romantic|honeymoon|two|together|love", True),
-    "family": (["Black family Jamaica beach", "Jamaican family vacation", "Jamaican mother and child", "Black father and daughter beach", "interracial family Caribbean beach", "Jamaican grandmother with grandchildren", "single mom and son Caribbean beach", "Black family river Jamaica"],
+    "family": (["Black family Jamaica beach", "Jamaican family vacation", "Jamaican mother and child", "Jamaican father and daughter", "mixed family Jamaica beach", "Jamaican grandmother with grandchildren", "Jamaican mother and son", "Black family river Jamaica"],
                r"family|kids|children|child|parents|together|group", True),
     "group": (["friends Jamaica beach", "group of friends Jamaica", "friends Jamaica waterfall", "Jamaica friends road trip", "Jamaica group vacation party"],
               r"friends|group|together|party|people|crowd|team", True),
@@ -109,7 +109,7 @@ SLIDE_TOPICS = [
     (r"\bjerk\b|pimento", ["jerk chicken pit Jamaica", "jerk pork Boston Bay"]),
     (r"patt(y|ies)|coco bread", ["Jamaican beef patty", "Jamaican patty coco bread"]),
     (r"\bfish\b|seafood|lobster", ["fried fish Jamaica beach", "Jamaica seafood plate"]),
-    (r"escovitch|snapper|parrotfish", ["escovitch fish Jamaica", "fried snapper Caribbean"]),
+    (r"escovitch|snapper|parrotfish", ["escovitch fish Jamaica", "fried snapper Jamaica"]),
     (r"bammy|festival", ["bammy fried fish Jamaica", "festival dumpling Jamaica"]),
     (r"pepper shrimp", ["Jamaican pepper shrimp", "spicy shrimp Jamaica"]),
     (r"ackee|saltfish", ["ackee and saltfish", "Jamaican breakfast ackee"]),
@@ -120,10 +120,10 @@ SLIDE_TOPICS = [
     (r"coffee", ["Blue Mountain coffee Jamaica", "coffee farm Jamaica"]),
     (r"ackee|breakfast|rice and peas|sorrel|food|eat|dinner|lunch|cook", ["Jamaican food plate", "Jamaican family dinner"]),
     (r"grandma|grandmother|granny", ["Jamaican grandmother with grandchildren", "grandmother hugging grandchild"]),
-    (r"single (mom|mum|mother)|mom and (son|daughter)|mother and (son|daughter)", ["Black mother and son beach", "Jamaican mother and child"]),
-    (r"single (dad|father)|dad and (son|daughter)|my daughter|father and (son|daughter)", ["Black father and daughter beach", "father and daughter waterfall"]),
-    (r"famil|kids|children|grandkids|cousins|reunion|pickney|graduat", ["Black family Jamaica beach", "Jamaican mother and child", "Black father and daughter beach", "interracial family Caribbean beach"]),
-    (r"honeymoon|couple|wedding|romantic|two of you|anniversary", ["Black couple Jamaica beach", "couple Jamaica sunset", "interracial couple Caribbean beach"]),
+    (r"single (mom|mum|mother)|mom and (son|daughter)|mother and (son|daughter)", ["Jamaican mother and son", "Jamaican mother and child"]),
+    (r"single (dad|father)|dad and (son|daughter)|my daughter|father and (son|daughter)", ["Jamaican father and daughter", "father and daughter Jamaica beach"]),
+    (r"famil|kids|children|grandkids|cousins|reunion|pickney|graduat", ["Black family Jamaica beach", "Jamaican mother and child", "Jamaican father and daughter", "mixed family Jamaica beach"]),
+    (r"honeymoon|couple|wedding|romantic|two of you|anniversary", ["Black couple Jamaica beach", "couple Jamaica sunset", "mixed couple Jamaica beach"]),
     (r"friends|girls|crew|birthday|party", ["friends Jamaica beach", "group of friends Jamaica"]),
     (r"waterfall|\bfalls\b|blue hole|swim", ["waterfall Jamaica swimming", "Dunn's River Falls climbing"]),
     (r"river|raft|safari|mangrove|crocodile", ["river rafting Jamaica", "Black River Jamaica boat"]),
@@ -132,7 +132,7 @@ SLIDE_TOPICS = [
     (r"mountain|hike|holywell|peak|sunrise|mist", ["Blue Mountains Jamaica", "Blue Mountains sunrise"]),
     (r"reggae|music|fete|dancehall|boxing day", ["reggae music Jamaica", "Jamaica street party"]),
     (r"market|vendor|shop|gift|christmas", ["Jamaica market fruit vendor", "Jamaica Christmas market"]),
-    (r"airport|\blanded\b|flight", ["Montego Bay Jamaica airport arrival", "travelers airport Caribbean"]),
+    (r"airport|\blanded\b|flight", ["Montego Bay Jamaica airport arrival", "Sangster airport Montego Bay"]),
     (r"cruise|ship|port", ["cruise ship Ocho Rios Jamaica", "Ocho Rios Jamaica bay"]),
     (r"road trip|windows down|bamboo|coastal road|scenic", ["Jamaica coastal road drive", "Bamboo Avenue Jamaica"]),
 ]
@@ -141,3 +141,8 @@ def slide_queries(text):
     """Photo searches that match what a slide says, best match first. Empty when nothing specific is mentioned."""
     t = (text or "").lower()
     return [q for rx, qs in SLIDE_TOPICS if re.search(rx, t) for q in qs]
+
+
+# A photo from the web whose own title or credit names somewhere else is never used, whatever Claude says.
+NOT_JAMAICA = re.compile(r"\b(usa|u\.s\.a|united states|america|california|fresno|florida|miami|new york|texas|hawaii|mexico|cancun|bahamas|cuba|dominican|punta cana|barbados|trinidad|aruba|puerto rico|haiti|st\.? lucia|antigua|grenada|cayman|costa rica|belize|brazil|colombia|canada|toronto|england|london|uk|africa|nigeria|ghana|kenya|india|thailand|bali|indonesia|philippines|vietnam|australia|spain|italy|france|greece|maldives|fiji)\b", re.I)
+PEOPLE = re.compile(r"mother|father|mom|dad|daughter|son\b|family|couple|grand(mother|father|ma|pa)|kids|child|friends|group", re.I)

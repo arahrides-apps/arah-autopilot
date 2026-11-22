@@ -246,3 +246,27 @@ def art_check(path, headline, model=None):
         return [] if d.get("ok") else [str(i) for i in d.get("issues", [])][:4]
     except Exception as e:
         log.warning("art check failed: %s", e); return None
+
+
+def shows(path, want, model=None):
+    """Claude: does this photo clearly show <want> (e.g. 'a father and his daughter')? True / False / None (could not check)."""
+    import os, io, json, base64, requests
+    from PIL import Image
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    im = Image.open(path).convert("RGB"); im.thumbnail((800, 800)); b = io.BytesIO(); im.save(b, "JPEG", quality=85)
+    q = (f"Does this photo clearly show {want}? Judge only what is visible (people, ages, activity, setting). "
+         "Reply with ONLY JSON: {\"yes\": true|false}")
+    try:
+        r = requests.post("https://api.anthropic.com/v1/messages", timeout=60,
+                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                          json={"model": model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": 50,
+                                "messages": [{"role": "user", "content": [
+                                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}},
+                                    {"type": "text", "text": q}]}]})
+        r.raise_for_status()
+        txt = "".join(x.get("text", "") for x in r.json()["content"])
+        return bool(json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("yes"))
+    except Exception as e:
+        log.warning("subject check failed: %s", e); return None

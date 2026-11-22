@@ -62,6 +62,13 @@ def make_clip_reel(clip, end_card, out, seconds=9, hold=2.0):
         raise RuntimeError("ffmpeg: " + r.stderr[-300:])
     return out
 
+def cfg_web_video():
+    try:
+        from .config import load
+        return load().get("reels", {}).get("web_video", True)
+    except Exception:
+        return True
+
 def _hook(p, out, end_img, date):
     """The scroll-stopping Reel: real photos, hook line first, fast cuts, pop-in captions, end card. False when the post has fewer than 3 photos."""
     from . import reel2
@@ -72,11 +79,30 @@ def _hook(p, out, end_img, date):
     lines = [p.get("hook_line") or first] + list(p.get("beat_lines", []))
     while len(lines) < len(raw):
         lines.append("")
+    nclips = 0
+    if cfg_web_video() and p.get("type") not in ("deal", "deposits", "car_hero"):     # mix real Jamaica video clips into the Reel (free Pixabay videos)
+        from . import webvideo as WV, story as S, themes as TH
+        used = set()
+        for i in range(len(raw)):                                # every shot, hook included, becomes a video clip when a fitting one exists
+            t = f"{lines[i] if i < len(lines) else ''} {first}"
+            qs = S.place_queries(t) + TH.slide_queries(t) + S.place_queries(p.get("copy_text", ""))
+            got = WV.find(qs, t, date, want=1, used=used) if qs else []
+            if got:
+                raw[i] = str(got[0]); used.add(str(got[0])); nclips += 1
     seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:6], 16)
     _o, music = reel2.make_hook_reel(raw, lines[:len(raw)], end_img, out, seed=seed)
-    p["reel_kind"] = "hook Reel: real photos, fast cuts, captions" + ("" if music else ", no music")
+    if nclips:
+        p.setdefault("flags", []).append(f"Reel includes {nclips} real video clip(s) from Pixabay (free licence), checked by Claude against the words")
+    p["reel_kind"] = "hook Reel: real photos and clips, fast cuts, captions" + (", instrumental music" if music else ", no music")
     if not music:
-        p.setdefault("flags", []).append("Silent Reel: add royalty-free tracks (mp3) to content/music/ and every Reel gets music. Or post it from the Instagram app with a trending sound.")
+        p.setdefault("flags", []).append("Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.")
+    else:
+        credit = getattr(reel2.make_hook_reel, "credit", None)
+        if credit and credit not in p.get("caption", ""):         # CC BY tracks need a credit; it goes just above the hashtags
+            parts = p["caption"].rstrip().split("\n\n")
+            at = len(parts) - 1 if parts and parts[-1].strip().startswith("#") else len(parts)
+            parts.insert(at, credit); p["caption"] = "\n\n".join(parts)[:2200]
+        p.setdefault("flags", []).append("Music: " + (credit.replace("🎵 Music: ", "") if credit else "royalty-free instrumental (no credit needed)"))
     return True
 
 def _fresh_file(files, date, peek=False):
@@ -87,6 +113,11 @@ def _fresh_file(files, date, peek=False):
     return Path(k) if k else None
 
 def add_reels(cfg, posts, date):
+    try:                                                       # instrumental, commercial-use music for every Reel (Openverse, no key needed)
+        from . import music as _M
+        _M.fetch(cfg.get("reels", {}).get("music_tracks", 20))
+    except Exception as _e:
+        log.warning("music fetch skipped: %s", _e) if "log" in globals() else None
     """Marks some of the day's posts to go out as Reels. Returns notes. A reel replaces that slot's carousel on Instagram; the review page still shows the slides."""
     rc = cfg.get("reels") or {}
     n = rc.get("per_day", 0)

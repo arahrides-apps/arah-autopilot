@@ -75,16 +75,71 @@ TYPE_THEMES = {"car_hero": ["road", "group", "couple", "family"], "qa": ["road",
                "moment": ["group", "culture", "family"], "versus": ["road", "couple", "river"], "place": ["couple", "family", "group", "river"],
                "experience": ["food", "river", "group", "culture"]}
 
-def _matched(b, post, text):
-    """A photo matching the slide's words (coconut water -> coconut vendor; grandma -> grandmother with grandkids), or None."""
+def _fits(post, ph, text):
+    """Claude checks the photo against the slide's words. False only when Claude says it does not fit (no key or no answer: allowed)."""
+    from . import vision as V
+    want = f"what this caption describes: \"{text[:200]}\" (the same place, the same kind of people, the same food or activity it names; in Jamaica)"
+    if V.shows(ph.path, want) is False:
+        post.setdefault("flags", []).append(f"Skipped a photo that did not match: {text[:60]}")
+        return False
+    return True
+
+CITIES = ["kingston", "montego bay", "ocho rios", "negril", "port antonio", "mandeville", "treasure beach", "falmouth", "black river", "spanish town",
+          "runaway bay", "savanna-la-mar", "port royal", "portland", "st ann", "st elizabeth", "lucea", "morant bay", "may pen", "discovery bay", "oracabessa"]
+
+def place_queries(text):
+    """Searches for the place a slide names: the place itself, then its town or parish (still the right part of Jamaica)."""
+    t = (text or "").lower(); out = []
+    try:
+        A = load_yaml("attractions.yaml")["attractions"]
+    except Exception:
+        A = []
+    hit = max((a for a in A if a["name"].lower().split(",")[0] in t), key=lambda a: len(a["name"]), default=None)
+    if hit:
+        n = hit["name"].split(",")[0]
+        out += [f"{n} Jamaica", n, f"{hit['parish']} Jamaica"]
+    k, st = find_place(t) if t else (None, None)
+    if k and k in t:
+        out += [f"{nice(k)} Jamaica", nice(k)] + ([f"{st['region']} Jamaica"] if st and st.get("region") else [])
+    for c in sorted(CITIES, key=len, reverse=True):
+        if re.search(r"\b" + re.escape(c) + r"\b", t):
+            out += [f"{c} Jamaica", f"{c} Jamaica people", f"{c} Jamaica street"]
+            break
+    seen = set(); res = []
+    for q in out:
+        if q.lower() not in seen:
+            seen.add(q.lower()); res.append(q)
+    return res
+
+def _matched(b, post, text, max_tries=8):
+    """A photo that shows what the slide says: the place it names (then its town or parish), the people, the food or the activity.
+    Our own labelled Drive photos first, then every web source. Each candidate is checked by Claude against the words."""
     from . import themes as TH
-    for q in TH.slide_queries(text)[:3]:
-        w = [x for x in q.lower().replace("'", "").split() if len(x) > 4 and x not in ("jamaica", "jamaican", "caribbean")][:2]
-        ph = b.pk._own("scenery", None, None, about=w) if w else None        # our own labelled Drive photos first
-        ph = ph or b.pk.scene(q, None, words=w)
-        if ph:
-            post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
-            post.setdefault("flags", []).append(f"Slide photo matched to '{q}': {ph.credit or 'our own photo'}")
+    tries = 0
+    for q in (place_queries(text) + TH.slide_queries(text))[:7]:
+        w = [x for x in q.lower().replace("'", "").split() if len(x) > 3 and x not in ("jamaica", "jamaican", "people", "street")][:2]
+        for _k in range(3):
+            if tries >= max_tries:
+                return None
+            tries += 1
+            ph = b.pk._own("scenery", None, None, about=w) if (w and _k == 0) else None
+            ph = ph or b.pk.scene(q, None, words=w or None)
+            if not ph:
+                break                                          # this search has nothing left: try the next one
+            if _fits(post, ph, text):
+                post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
+                post.setdefault("flags", []).append(f"Slide photo matched to '{q}': {ph.credit or 'our own photo'}")
+                return ph
+    return None
+
+def _backdrop(b, post, text, typ):
+    """Last resort before a text slide: a Jamaica photo for the post's topic that Claude says does not contradict the slide."""
+    from . import themes as TH
+    order = list(TYPE_THEMES.get(typ, TH.GENERIC_BOOKING)) + list(TH.GENERIC_BOOKING)
+    for th in list(dict.fromkeys(order))[:5]:
+        ph = b.pk.theme_photo(th)
+        if ph and _fits(post, ph, f"{text} (a general photo of Jamaica is fine as long as it does not show a different named place, different people or different food)"):
+            post.setdefault("flags", []).append(f"Slide photo ({th}), checked against the words: {ph.credit or 'our own photo'}")
             return ph
     return None
 
@@ -122,11 +177,19 @@ def _slides(b, post, cover, items, closer, own_photos=None, typ=None):
             ph = _matched(b, post, " ".join(items[i]))
             if ph:
                 own_photos[i] = ph; free.remove(i)
-        want = free + [None]                                                   # the rest: a topic photo; plus the closing slide
+        # the rest: a general mood photo, but only behind slides that do not name a place, people or a dish
+        # (a slide about Kingston with no Kingston photo stays a clean text slide rather than showing somewhere else)
+        want = [i for i in free if not TH.slide_queries(" ".join(items[i])) and not find_place(" ".join(items[i]))[0]] + [None]
         got = _themed(b, post, typ, len(want))
         closer_ph = got.pop() if len(got) == len(want) else None
         for i, ph in zip([w for w in want if w is not None], got):
             own_photos[i] = ph
+        for i, (h, body) in enumerate(items):                                  # never a bare text slide while a fitting photo can be found
+            if i not in own_photos:
+                ph = _backdrop(b, post, f"{h} {body}", typ)
+                if ph: own_photos[i] = ph
+        if closer_ph is None:
+            closer_ph = _backdrop(b, post, " ".join(closer[:2]), typ)
         if closer_ph is not None:
             closer = tuple(closer) + (closer_ph,)
     for i, (h, body) in enumerate(items):
@@ -329,6 +392,12 @@ FOR_WHO = {"Hatchback": "Easy to park and easy on gas. Great for one or two peop
 
 def deal_story(b, post, pages, e):
     """Car photo cover -> price -> deposit -> who it's for -> book. Inner slides use more photos of the same model when we have them."""
+    if e.get("style"):                                  # body-style post: no slide puts a model name on a photo of another car
+        items = [("The price.", f"{e['style']} from US${e['price']} a day: " + ", ".join(e["names"]) + " and more. Base rates; holiday dates can cost more."),
+                 ("The deposit.", f"Deposits from US${min(e['low_deposit'], e['deposit_at_price'])} on some units, released after you return the car under the rental terms."),
+                 ("Who it's for.", FOR_WHO.get(e["category"], "Choose the car you want to drive."))]
+        post["beat_lines"] = [f"From US${e['price']} a day", ", ".join(e["names"][:2]), FOR_WHO.get(e["category"], "").split(".")[0] + ".", "Check availability: arahrides.com or Winston"]
+        return _slides(b, post, pages[0][0], items, b.rng.choice(CLOSE_GENERAL), {}, typ="road")
     extra = []
     ph, _st = b.camp_car_photo(e["model"], e["category"], exterior=False)      # one more fleet photo (outside or inside) of this car; the other slides show Jamaica
     if ph: extra.append(ph)
@@ -370,8 +439,11 @@ def journey_story(b, post, pages, j):
     pl = list(j.get("places", [])) + [None] * 4
     def photo(i, text=""):
         x = _matched(b, post, text) if text else None
-        x = x or (b.story_photo(post, pl[i]) if pl[i] else None)
-        x = x or b.pk.theme_photo(j.get("theme", "road"))
+        for _t in range(3):                                   # place photo, then topic photo; each must fit the words
+            if x: break
+            y = (b.story_photo(post, pl[i]) if pl[i] and _t == 0 else None) or b.pk.theme_photo(j.get("theme", "road"))
+            if y and (not text or _fits(post, y, f"{text} ({pl[i] or ''})")):
+                x = y
         if x and not text: post.setdefault("flags", []).append(f"Story photo ({pl[i] or j.get('theme')}): {x.credit or 'our own photo'}")
         return x
     c = photo(0, j["h"] + " " + j["k"])

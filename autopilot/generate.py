@@ -60,6 +60,7 @@ def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng
     if credit:
         text = f"{text}\n\n📷 {credit}"
     cta = cta or (f"Book in minutes, your way:\n💻 Online: {b['site']}\n💬 WhatsApp Winston, 24/7: https://{b['wa_link']} (quote, book and pay in one chat)")
+    cta += "\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios"          # the words people type into Instagram search
     cta += "\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp."
     kw = f"\n\n{loc['kw']}" if loc and loc.get("kw") else ""        # plain-words line: Instagram search reads the caption
     return f"{text}{kw}\n\n{cta}\n\n{hashtags(cfg, typ, extra_tag, loc, rng)}"
@@ -279,6 +280,8 @@ class DayBuilder:
         ph = None
         for q in TH.slide_queries(words)[:3]:
             ph = self.pk.scene(q, None, words=[w for w in q.lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2])
+            if ph and not story._fits(post, ph, f"{h} {sub}"):          # the cover must show what the headline talks about
+                ph = None
             if ph: break
         if not ph:
             ph = self.cover_photo(post, "", self.rng.choice(story.TYPE_THEMES.get(kind, ["road", "couple", "family", "group"])))
@@ -334,7 +337,7 @@ class DayBuilder:
                    "gwm haval h6": ["haval"], "gwm haval gt": ["haval"], "mg zs": ["mg-", "mg zs", " mg "], "jetour t2": ["jetour"],
                    "toyota c-hr": ["c-hr", "chr"], "nissan x-trail": ["xtrail", "x-trail"], "foton view cs2 (15 seater)": ["foton"],
                    "subaru legacy b4": ["legacy"], "subaru g4": ["g4", "impreza g4"], "honda stepwgn": ["stepwgn"], "toyota hiace": ["hiace"]}
-    CAR_NOT = {"toyota corolla": ["cross", "axio", "touring"], "toyota yaris": ["cross"], "toyota axio": [], "honda fit": ["outfit"]}
+    CAR_NOT = {"toyota corolla": ["cross", "axio", "touring"], "toyota yaris": ["cross"], "toyota corolla axio": ["cross"], "toyota corolla touring": ["cross"], "toyota axio": [], "honda fit": ["outfit"]}
 
     def _car_words(self, model):
         m = model.lower()
@@ -355,9 +358,12 @@ class DayBuilder:
             same = [c["model"] for c in cars if c["category"] == category and c["model"] != model]
             # borrow from models already featured first, so a model coming up soon keeps its own photos
             ph = None
+            # never borrow a car of another body style whose name contains a same-style name (Corolla Cross is an SUV, Corolla is a sedan)
+            others = [w for c in cars if c["category"] != category for w in self._car_words(c["model"])]
             for group in ([m for m in same if order.index(m) < at], [m for m in same if order.index(m) > at]):
                 words = [w for mm in group for w in self._car_words(mm)]
-                ph = self.pk._own("car", None, None, about=words, exterior=exterior) if words else None
+                bad = [o for o in others if any(w in o for w in words)] + [x for mm in group for x in self.CAR_NOT.get(mm.lower(), [])]
+                ph = self.pk._own("car", None, None, about=words, about_not=bad or None, exterior=exterior) if words else None
                 if ph:
                     break
             if ph:
@@ -380,19 +386,29 @@ class DayBuilder:
                 self.notes.append(f"No fleet photo of a {e['model']} or another {e['category'].lower()} left for the {self.date} deal post: run 'Fetch fleet' or add car photos to Drive. Showed the next car instead.")
                 continue
             done.add(e["model"]); self.photo_flags(post, ph)
-            self.last = {"kind": "deal", "e": dict(e, stock=stock)}
-            yrs = ""                                     # no model years in posts: make and model only
-            post["copy_text"] = (f"{e['model']}{yrs} from US${e['price']} a day {EMOJI['deal']}\n\nSecurity deposit: US${e['deposit_at_price']}." +
-                                 (f" Some units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "") +
-                                 f"\n{e['category']}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." +
-                                 "\n\nDecember dates are filling fast. Lock in your car now." + "\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay." +
-                                 ("\nVehicle shown may differ from the one you rent." if stock else ""))
-            post["alt"] = f"{e['model']} rental car in Jamaica"
-            post["caption"] = self.cap(post, "deal", post["copy_text"])
-            head = f"{e['model']}"; kick = f"FROM US${e['price']}/DAY"
             pr = promo_mod.active(self.date)
-            sub = f"Deposit US${e['deposit_at_price']}." + (f" Code {pr['code']}: up to US${pr['amount']} off." if pr else "")
-            return [(T.ccover(ph.path, kick, head, sub), 1350)]
+            code = f" Code {pr['code']}: up to US${pr['amount']} off." if pr else ""
+            tail = ("\n\nDecember dates are filling fast. Lock in your car now." +
+                    "\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.")
+            if not stock:                                   # we have a photo of this very model: the post is about this car
+                self.last = {"kind": "deal", "e": dict(e, stock=False)}
+                post["copy_text"] = (f"{e['model']} from US${e['price']} a day {EMOJI['deal']}\n\nSecurity deposit: US${e['deposit_at_price']}." +
+                                     (f" Some units have a deposit of just US${e['low_deposit']}." if e["low_deposit"] < e["deposit_at_price"] else "") +
+                                     f"\n{e['category']}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." + tail)
+                post["alt"] = f"{e['model']} rental car in Jamaica"
+                post["caption"] = self.cap(post, "deal", post["copy_text"])
+                return [(T.ccover(ph.path, f"FROM US${e['price']}/DAY", e["model"], f"Deposit US${e['deposit_at_price']}." + code), 1350)]
+            # no photo of this model: the post is about the body style (the photo shows one of our cars of that style), never a wrong model name on a photo
+            group = [c for c in cars if c["category"] == e["category"]]
+            names = [e["model"]] + [c["model"] for c in sorted(group, key=lambda c: c["price"]) if c["model"] != e["model"]][:2]
+            style = {"Hatchback": "Hatchbacks", "Sedan": "Sedans", "SUV": "SUVs", "7 Seater": "7-seaters", "Luxury Vehicles": "Luxury cars", "Mini Bus": "Minibuses"}.get(e["category"], e["category"])
+            lo_dep = min(c["low_deposit"] for c in group)
+            self.last = {"kind": "deal", "e": dict(e, stock=True, style=style, names=names)}
+            post["copy_text"] = (f"{style} from US${e['price']} a day {EMOJI['deal']}\n\n" + ", ".join(names) + " and more." +
+                                 f"\nDeposits from US${lo_dep}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." + tail)
+            post["alt"] = f"{style} for rent in Jamaica"
+            post["caption"] = self.cap(post, "deal", post["copy_text"])
+            return [(T.ccover(ph.path, f"FROM US${e['price']}/DAY", style, ", ".join(names[:2]) + " and more." + code), 1350)]
         return None
 
     def deposits(self, post):
@@ -406,8 +422,9 @@ class DayBuilder:
         shots = []
         for c in pick:
             ph, stock = self.camp_car_photo(c["model"], c["category"])
-            shots.append((c, ph, stock))
-        cov = next((x for x in shots if x[1]), None)
+            shots.append((c, None if stock else ph, stock, ph))          # a slide that names a model only shows that model
+        cov = next((x for x in shots if x[1]), None) or next(((c, p4, st) for c, _p, st, p4 in shots if p4), None)
+        shots = [x[:3] for x in shots]
         if not cov:
             return None
         self.photo_flags(post, cov[1])

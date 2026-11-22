@@ -485,6 +485,11 @@ class Picker:
             return None
         if kind != "car" and too_old_looking(dest):
             log.info("skip %s: black-and-white or sepia look", item["id"]); return None
+        if kind != "car" and src.name not in ("drive", "local"):
+            from . import themes as _TH
+            meta = " ".join(str(x) for x in (item.get("name", ""), (extra or {}).get("credit", ""), (extra or {}).get("text", ""), item.get("title", ""), item.get("description", "")))
+            if _TH.NOT_JAMAICA.search(meta) and "jamaica" not in meta.lower():
+                log.info("skip %s: its own title/credit names another place", item["id"]); return None
         if kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
             try:
                 from . import vision as _V
