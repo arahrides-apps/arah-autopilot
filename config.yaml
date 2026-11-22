@@ -17,7 +17,7 @@ slots: ["00:00", "02:00", "07:00", "11:00", "14:00", "18:00", "20:00", "22:00"] 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
 pattern: ["car_hero", "journey|chat", "journey", "spotlight", "chat", "journey|spotlight", "review|qa", "car_hero"]   # fleet campaign: 00:00, 02:00 and 22:00 become car deals, 14:00 low-deposit cars on even days (Winston chat on odd days)
 event_slots: [3]                    # the 11:00 post highlights an upcoming event (only on event_days)
-single_days_per_5: 3               # the midnight car photo goes out as a single picture on 3 days out of every 5 (about 8% of posts)
+single_days_per_5: 0               # no single-picture posts: video reaches more people
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
 single_slots: [0]                   # the midnight car post
 # Night slots (00:00 to 04:00) carry the booking posts: car photo, lounge offer or brand, Winston chat. Day slots carry destination plans, reviews and tips.
@@ -104,11 +104,13 @@ locations:
   treasure_beach: {name: "Treasure Beach, Jamaica",                  id: "109565452394927", tag: "#TreasureBeach",        kw: "Car rental for Treasure Beach and the south coast"}
 
 reels:
-  per_day: 5                      # Reels a day (about 60-65%); 4 on days with a single picture
-  carousels_per_day: 2             # carousels kept as carousels (about 30%): the 14:00 guide and the 21:00 review/Q&A
+  per_day: 7                      # Reels a day: 7 of 8 posts are video (Explore pushes Reels to people who do not follow us)
+  carousels_per_day: 1             # one swipeable post a day (the low-deposit list or a guide)
   clips: true                      # videos you drop in content/reels/ named clip_*.mp4 are used in Reels
   max_clip_mb: 250                 # biggest Drive video clip it will download
   library: true                   # one a day uses an animated ad from content/reels/
+  music_tracks: 20                 # instrumental, commercial-use tracks pulled from Openverse each run (your own tracks in content/music come first)
+  web_video: true                  # Reels mix in real Jamaica video clips found on Pixabay (same key as photos), each checked by Claude
   video_reuse_days: 365            # a video clip or animated ad is never used again within a year
   publish_as_reel: true            # true = post the video as a Reel (Make has the Reel route). false = post the carousels instead
 
