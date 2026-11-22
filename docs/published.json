@@ -1528,5 +1528,10 @@
   "at": "2026-11-21T22:00:05.002890-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-21_0700_journey": {
+  "status": "skipped",
+  "at": "2026-11-22T00:00:18.509504-05:00",
+  "note": "not approved in time"
  }
 }
