@@ -26,7 +26,13 @@ all_carousels: true               # every feed post is a swipeable carousel (cov
 copy_cooldown_days: 30             # same wording is not reused sooner than this (photos follow the stricter rule below)
 
 brand:
+  holiday_logo:                       # the Christmas logo replaces the regular mark on posts dated in this window, then the regular logo comes back
+    file: content/logo_holiday.png
+    start: 2026-11-22
+    end: 2026-12-26
   name: Arah Rides
+  book_line: Book your car rental in minutes on ArahRides.com
+  pay_options: Klarna, Affirm, Link, Google Pay and Apple Pay      # shown on sale ads and in captions
   handle: "@arahrides"
   site: arahrides.com
   whatsapp: "+1 201-371-3152"
