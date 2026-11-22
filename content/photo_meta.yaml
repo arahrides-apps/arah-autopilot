@@ -2786,6 +2786,154 @@ arah_b6_9_toyota-corolla-silver:
   plate_visible: false
   quality: 3
   series: toyota-corolla-silver
+arah_listing_102_1_2020-kia-cerato:
+  about: 2020 Kia Cerato from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: kia-cerato
+arah_listing_102_2_2020-kia-cerato:
+  about: 2020 Kia Cerato from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: kia-cerato
+arah_listing_109_1_2024-toyota-yaris-cross:
+  about: 2024 Toyota Yaris Cross from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-yaris-cross
+arah_listing_109_2_2024-toyota-yaris-cross:
+  about: 2024 Toyota Yaris Cross from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-yaris-cross
+arah_listing_110_1_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_110_2_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-axio
+arah_listing_111_1_2018-toyota-axio:
+  about: 2018 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_111_2_2018-toyota-axio:
+  about: 2018 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_112_1_2019-subaru-legacy:
+  about: 2019 Subaru Legacy from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: subaru-legacy
+arah_listing_112_2_2019-subaru-legacy:
+  about: 2019 Subaru Legacy from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: subaru-legacy
+arah_listing_114_1_2021-suzuki-xl7:
+  about: 2021 Suzuki XL7 from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: suzuki-xl7
+  tag: big
+arah_listing_114_2_2021-suzuki-xl7:
+  about: 2021 Suzuki XL7 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: suzuki-xl7
+  tag: big
+arah_listing_115_1_2018-toyota-noah:
+  about: 2018 Toyota Noah from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-noah
+  tag: big
+arah_listing_115_2_2018-toyota-noah:
+  about: 2018 Toyota Noah from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-noah
+  tag: big
+arah_listing_117_1_2016-suzuki-vitara:
+  about: 2016 Suzuki Vitara from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: suzuki-vitara
+arah_listing_117_2_2016-suzuki-vitara:
+  about: 2016 Suzuki Vitara from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: suzuki-vitara
+arah_listing_119_1_2022-toyota-corolla:
+  about: 2022 Toyota Corolla from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-corolla
+arah_listing_119_2_2022-toyota-corolla:
+  about: 2022 Toyota Corolla from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-corolla
 arah_listing_120_1_2023-toyota-corolla-cross:
   about: 2023 Toyota Corolla Cross from arahrides.com listing photo
   kind: car
@@ -2802,6 +2950,70 @@ arah_listing_120_2_2023-toyota-corolla-cross:
   plate_visible: true
   quality: 4
   series: toyota-corolla-cross
+arah_listing_121_1_2020-toyota-rav4:
+  about: 2020 Toyota Rav4 from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-rav4
+arah_listing_121_2_2020-toyota-rav4:
+  about: 2020 Toyota Rav4 from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-rav4
+arah_listing_122_1_2015-subaru-g4:
+  about: 2015 Subaru G4 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: subaru-g4
+arah_listing_122_2_2015-subaru-g4:
+  about: 2015 Subaru G4 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: subaru-g4
+arah_listing_123_1_2018-toyota-aqua:
+  about: 2018 Toyota Aqua from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-aqua
+arah_listing_123_2_2018-toyota-aqua:
+  about: 2018 Toyota Aqua from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-aqua
+arah_listing_131_1_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_131_2_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
 arah_listing_144_1_2019-mazda-demio:
   about: 2019 Mazda Demio from arahrides.com listing photo
   kind: car
@@ -4063,6 +4275,14 @@ arah_listing_268_2_2016-honda-vezel-hrv:
   plate_visible: true
   quality: 3
   series: honda-vezel-hrv
+arah_listing_64_2_2023-toyota-rav4:
+  about: 2023 Toyota Rav4 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-rav4
 arah_listing_65_1_2020-toyota-corolla:
   about: 2020 Toyota Corolla from arahrides.com listing photo
   kind: car
@@ -4079,6 +4299,238 @@ arah_listing_65_2_2020-toyota-corolla:
   plate_visible: true
   quality: 4
   series: toyota-corolla
+arah_listing_66_1_2019-mazda-demio:
+  about: 2019 Mazda Demio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: mazda-demio
+arah_listing_66_2_2019-mazda-demio:
+  about: 2019 Mazda Demio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: mazda-demio
+arah_listing_67_1_2016-suzuki-vitara:
+  about: 2016 Suzuki Vitara from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: suzuki-vitara
+arah_listing_67_2_2016-suzuki-vitara:
+  about: 2016 Suzuki Vitara from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: suzuki-vitara
+arah_listing_68_1_2016-mazda-demio:
+  about: 2016 Mazda Demio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: mazda-demio
+arah_listing_68_2_2016-mazda-demio:
+  about: 2016 Mazda Demio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: mazda-demio
+arah_listing_71_1_2019-nissan-xtrail:
+  about: 2019 Nissan  XTrail from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: nissan-xtrail
+  tag: big
+arah_listing_71_2_2019-nissan-xtrail:
+  about: 2019 Nissan  XTrail from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: nissan-xtrail
+  tag: big
+arah_listing_72_1_2022-suzuki-xl7:
+  about: 2022 Suzuki XL7 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: suzuki-xl7
+  tag: big
+arah_listing_72_2_2022-suzuki-xl7:
+  about: 2022 Suzuki XL7 from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: suzuki-xl7
+  tag: big
+arah_listing_73_1_2024-kia-carens:
+  about: 2024 Kia Carens from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: kia-carens
+  tag: big
+arah_listing_73_2_2024-kia-carens:
+  about: 2024 Kia Carens from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: kia-carens
+  tag: big
+arah_listing_74_1_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_74_2_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-axio
+arah_listing_76_1_2021-honda-cr-v:
+  about: 2021 Honda CR-V from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: honda-cr-v
+arah_listing_76_2_2021-honda-cr-v:
+  about: 2021 Honda CR-V from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: honda-cr-v
+arah_listing_88_1_2018-hyundai-creta:
+  about: 2018 Hyundai Creta from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: hyundai-creta
+arah_listing_88_2_2018-hyundai-creta:
+  about: 2018 Hyundai Creta from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: hyundai-creta
+arah_listing_89_1_2022-honda-city:
+  about: 2022 Honda City from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: honda-city
+arah_listing_89_2_2022-honda-city:
+  about: 2022 Honda City from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: honda-city
+arah_listing_91_1_2011-toyota-wish:
+  about: 2011 Toyota Wish from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-wish
+  tag: big
+arah_listing_91_2_2011-toyota-wish:
+  about: 2011 Toyota Wish from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-wish
+  tag: big
+arah_listing_95_1_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-axio
+arah_listing_95_2_2017-toyota-axio:
+  about: 2017 Toyota Axio from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-axio
+arah_listing_97_1_2023-toyota-corolla-cross:
+  about: 2023 Toyota Corolla Cross from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-corolla-cross
+arah_listing_97_2_2023-toyota-corolla-cross:
+  about: 2023 Toyota Corolla Cross from arahrides.com listing photo
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-corolla-cross
+arah_listing_99_1_2023-toyota-corolla-cross:
+  about: 2023 Toyota Corolla Cross from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-corolla-cross
+arah_listing_99_2_2023-toyota-corolla-cross:
+  about: 2023 Toyota Corolla Cross from arahrides.com listing photo
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: true
+  quality: 3
+  series: toyota-corolla-cross
 bamboo_rafting_river:
   about: bamboo raft on green river, rafter in green shirt
   kind: scenery

@@ -1,4 +1,4 @@
 photo fields that work: coverPhoto listPhotos { id name }
 listings found: 112
 daily prices: lowest 1.0, highest 1900.0, 112 listings priced (currency USD)
-photos saved: 160, skipped (too small, a face, or not found): 8
+photos saved: 55, skipped (too small, a face, or not found): 9
