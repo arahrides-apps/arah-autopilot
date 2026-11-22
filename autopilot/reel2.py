@@ -22,6 +22,12 @@ def _clean(t, n=60):
     t = re.sub(r"\s+", " ", t)
     return t if len(t) <= n else t[:n].rsplit(" ", 1)[0] + "…"
 
+def _brand():
+    from . import templates as T
+    hl = T.holiday_src()
+    logo = f"<img src='{hl}' style='width:120px;display:block;margin:0 auto 10px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))'>" if hl else ""
+    return f"<div class=brand style='top:{70 if hl else 150}px'>{logo}ARAHRIDES.COM</div>"
+
 def _caption_html(text, hook, idx, total):
     words = H.escape(text).split(" ")
     # highlight the last two words in yellow (the punchline), like the bold caption templates on Reels
@@ -39,7 +45,7 @@ body{{width:{W}px;height:{HH}px;background:transparent;font-family:'Poppins','In
 .brand{{position:absolute;left:0;right:0;top:150px;text-align:center;color:{C};font-weight:800;font-size:34px;letter-spacing:6px;text-shadow:0 3px 12px rgba(0,0,0,.6)}}
 .dots{{position:absolute;left:0;right:0;top:1540px;display:flex;gap:14px;justify-content:center}}
 .dots i{{width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.45)}}.dots i.on{{background:{Y};width:46px;border-radius:10px}}
-</style></head><body><div class=shade></div><div class=brand>ARAHRIDES.COM</div><div class=cap>{body}</div><div class=dots>{dots}</div></body></html>"""
+</style></head><body><div class=shade></div>{_brand()}<div class=cap>{body}</div><div class=dots>{dots}</div></body></html>"""
 
 def render_captions(lines, outdir):
     from playwright.sync_api import sync_playwright

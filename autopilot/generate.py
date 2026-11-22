@@ -59,7 +59,8 @@ def caption(cfg, typ, text, extra_tag=None, cta=None, credit=None, loc=None, rng
         text = f"{text}\n\n{rng.choice(ENGAGE_LINES)}"
     if credit:
         text = f"{text}\n\n📷 {credit}"
-    cta = cta or (f"Book in minutes, your way:\n💻 Online: {b['site']}\n💬 WhatsApp Winston, 24/7: https://{b['wa_link']} (quote, book and pay in one chat)")
+    cta = cta or (f"{b.get('book_line', 'Book your car rental in minutes on ArahRides.com')} 🚗\n💻 Online: {b['site']}\n💬 WhatsApp Winston, 24/7: https://{b['wa_link']} (quote, book and pay in one chat)"
+                  + (f"\n💳 Pay your way at checkout: {b['pay_options']}" if b.get("pay_options") else ""))
     cta += "\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios"          # the words people type into Instagram search
     cta += "\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp."
     kw = f"\n\n{loc['kw']}" if loc and loc.get("kw") else ""        # plain-words line: Instagram search reads the caption
@@ -136,7 +137,7 @@ class DayBuilder:
         if pr and pr.get("caption_line", True) and pr["code"].lower() not in text.lower():       # the sale is on: every caption carries the code
             end = dt.date.fromisoformat(str(pr["end"])); left = (end - self.date).days
             when = "Last day!" if left <= 0 else ("Ends tomorrow." if left == 1 else f"Ends {end.strftime('%b')} {end.day}.")
-            text = f"{text}\n\n🔥 {pr['name'].title()}: up to US${pr['amount']} off with code {pr['code']} at checkout. {when} {pr.get('terms', '')}".rstrip()
+            text = f"{text}\n\n🎄🔥 Holiday {pr['name'].title()}: up to US${pr['amount']} off with code {pr['code']} at checkout. {when} {pr.get('terms', '')}".rstrip()
         return caption(self.cfg, typ, text, extra_tag, cta, credit, loc, self.rng)
 
     def cover_photo(self, post, text="", theme="road", place=None):
@@ -397,7 +398,8 @@ class DayBuilder:
                                      f"\n{e['category']}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." + tail)
                 post["alt"] = f"{e['model']} rental car in Jamaica"
                 post["caption"] = self.cap(post, "deal", post["copy_text"])
-                return [(T.ccover(ph.path, f"FROM US${e['price']}/DAY", e["model"], f"Deposit US${e['deposit_at_price']}." + code), 1350)]
+                kick = ("🎄 HOLIDAY DEAL · " if T.holiday_logo() else "") + f"FROM US${e['price']}/DAY"
+                return [(T.ccover(ph.path, kick, e["model"], f"Deposit US${e['deposit_at_price']}." + code), 1350)]
             # no photo of this model: the post is about the body style (the photo shows one of our cars of that style), never a wrong model name on a photo
             group = [c for c in cars if c["category"] == e["category"]]
             names = [e["model"]] + [c["model"] for c in sorted(group, key=lambda c: c["price"]) if c["model"] != e["model"]][:2]
@@ -408,7 +410,7 @@ class DayBuilder:
                                  f"\nDeposits from US${lo_dep}. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp." + tail)
             post["alt"] = f"{style} for rent in Jamaica"
             post["caption"] = self.cap(post, "deal", post["copy_text"])
-            return [(T.ccover(ph.path, f"FROM US${e['price']}/DAY", style, ", ".join(names[:2]) + " and more." + code), 1350)]
+            return [(T.ccover(ph.path, ("🎄 HOLIDAY DEAL · " if T.holiday_logo() else "") + f"FROM US${e['price']}/DAY", style, ", ".join(names[:2]) + " and more." + code), 1350)]
         return None
 
     def deposits(self, post):
@@ -702,6 +704,7 @@ def upcoming_events(moments, date):
     return sorted(out, key=lambda x: (max(x[1], 0), x[0]["date"]))
 
 def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
+    T.CURRENT_DATE = date                     # posts dated Nov 22 - Dec 26 carry the Christmas logo
     rng = random.Random(f"{date}-{now.timestamp() // 60}")
     b = DayBuilder(cfg, led, picker, date, rng, load_yaml("moments.yaml"))
     mom, left = active_moment(cfg, b.moments, date)

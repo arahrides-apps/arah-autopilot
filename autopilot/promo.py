@@ -19,7 +19,7 @@ def active(date):
     return None
 
 ANGLES = [
-    ("Up to ${a} off.", "Use promo code {c} at checkout on ArahRides.com and save up to ${a} on your booking. Choose the car you want to drive and see Jamaica your way. {t}"),
+    ("Holiday savings: up to ${a} off.", "Use promo code {c} at checkout on ArahRides.com and save up to ${a} on your booking. Choose the car you want to drive and see Jamaica your way. {t}"),
     ("Book now. Save more.", "Promo code {c} takes up to ${a} off your Jamaica car rental. Airport pickup in Montego Bay, Kingston and Ocho Rios. {t}"),
     ("Christmas cars are filling up.", "Lock in your holiday car and save up to ${a} with code {c} at checkout. Cars are limited in December, so book early. {t}"),
     ("Landing in Jamaica soon?", "Have your car waiting. Use code {c} at checkout and save up to ${a} on ArahRides.com. {t}"),
@@ -33,7 +33,10 @@ def moment(p, k, date):
     h, b = ANGLES[(date.toordinal() + k) % len(ANGLES)]
     if last:
         h, b = "Last day to save.", "Today is the last day: use code {c} at checkout and save up to ${a} on ArahRides.com. {t}"
-    return {"k": p["name"], "h": h.format(a=a, c=c), "b": b.format(a=a, c=c, t=t), "badge": "", "theme": "road"}
+    from . import templates as T
+    holiday = bool(T.holiday_logo())
+    b = b.format(a=a, c=c, t=t) + " Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp."
+    return {"k": ("Holiday " if holiday else "") + p["name"], "h": h.format(a=a, c=c), "b": b, "badge": "", "theme": "xmas" if holiday else "road"}
 
 # ---- video clips from Drive ----------------------------------------------------------------------------
 def _service(cfg):

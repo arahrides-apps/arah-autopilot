@@ -15,6 +15,9 @@ def configure(cfg):
     b = cfg["brand"]
     B.update(green=b["green"], gold=b["gold"], cream=b["cream"], dark=b["dark"], name=b["name"], handle=b["handle"],
              site=b["site"], wa=b["whatsapp"], wa_link=b.get("wa_link", "wa.me/12013713152"), tag=b["tagline"])
+    HOLIDAY.clear(); HOLIDAY.update(b.get("holiday_logo") or {})
+
+HOLIDAY = {}
 
 def c():
     return B["green"], B["gold"], B["cream"], B["dark"]
@@ -38,8 +41,43 @@ def wrap(inner, h, bg, fg):
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>body{{margin:0}}div{{box-sizing:border-box}}</style></head><body>'
             f'<div style="width:1080px;height:{h}px;position:relative;overflow:hidden;background:{bg};color:{fg};{F}">{inner}{STRIPE}</div></body></html>')
 
+CURRENT_DATE = None          # set by the generator to the day being drafted (the holiday logo depends on the post's date)
+
+def holiday_logo():
+    """Path of the seasonal logo when the post's date is inside its window (config brand.holiday_logo), else None."""
+    import datetime as _dt
+    from pathlib import Path as _P
+    try:
+        if not HOLIDAY:
+            from .config import load as _load
+            HOLIDAY.update(((_load().get("brand") or {}).get("holiday_logo")) or {"none": 1})
+        h = HOLIDAY if "file" in HOLIDAY else {}
+        d = CURRENT_DATE or _dt.date.today()
+        f = _P(__file__).resolve().parent.parent / h.get("file", "")
+        if h and _dt.date.fromisoformat(str(h["start"])) <= d <= _dt.date.fromisoformat(str(h["end"])) and f.is_file():
+            return f
+    except Exception:
+        pass
+    return None
+
+_URI = {}
+def holiday_src():
+    """The holiday logo as an inline data URI (works in every renderer), or None outside the holiday window."""
+    import base64
+    f = holiday_logo()
+    if not f:
+        return None
+    if str(f) not in _URI:
+        _URI[str(f)] = "data:image/png;base64," + base64.b64encode(open(f, "rb").read()).decode()
+    return _URI[str(f)]
+
 def mark(col, right=None, ring=None, badge=None):
     G, Y, C, K = c()
+    hl = holiday_src()
+    if hl:                                   # the Christmas logo (round badge with its own ARAH RIDES wording) replaces the drawn mark
+        pill = (f'<div style="font-size:20px;font-weight:800;letter-spacing:3.5px;color:{col};border:2px solid {ring or col};border-radius:40px;padding:10px 22px">{E(right)}</div>' if right else "")
+        return (f'<div style="display:flex;justify-content:space-between;align-items:center">'
+                f'<img src="{hl}" style="width:150px;height:auto;margin:-40px 0 -40px -12px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))">{pill}</div>')
     bdg, bfg = (badge, Y) if badge else (Y, K)
     pill = (f'<div style="font-size:20px;font-weight:800;letter-spacing:3.5px;color:{col};border:2px solid {ring or col};border-radius:40px;padding:10px 22px">{E(right)}</div>' if right else "")
     return (f'<div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;align-items:center;gap:14px">'
