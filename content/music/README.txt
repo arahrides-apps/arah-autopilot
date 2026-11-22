@@ -1,4 +1,10 @@
-Put royalty-free music here (.mp3 or .m4a) and every Reel gets a track (rotated, faded in and out).
-Use music you are allowed to use commercially, for example Pixabay Music (pixabay.com/music) or the YouTube Audio Library (no-attribution tracks).
-Upbeat dancehall/reggae-style instrumentals, 15-30 seconds or longer, work best.
-Instagram's own trending sounds cannot be attached through the posting API. To use one, download the Reel from the review page and post it from the Instagram app.
+Music for Reels (instrumental only).
+
+Automatic: every drafting run pulls up to 20 instrumental tracks from Openverse (api.openverse.org) whose licence allows commercial use:
+CC0 / public domain (no credit needed) and CC BY (a short 'Music: title by artist (CC BY)' credit is added to that Reel's caption).
+Only tracks marked instrumental, riddim, beat or dub are taken; anything mentioning vocals, lyrics or a singer is skipped.
+Styles searched: reggae, dancehall riddim, soca, afrobeat, tropical house, Caribbean, steel drum, dub, afro house.
+
+Your own tracks: put instrumental mp3/m4a files in this folder and they are used first (for example from Pixabay Music or the
+YouTube Audio Library, no-attribution tracks). Instagram's own trending sounds cannot be attached by the autopilot; for your best
+Reels, download the video from the review page and post it from the Instagram app with a trending sound.
