@@ -145,4 +145,3 @@ def slide_queries(text):
 
 # A photo from the web whose own title or credit names somewhere else is never used, whatever Claude says.
 NOT_JAMAICA = re.compile(r"\b(usa|u\.s\.a|united states|america|california|fresno|florida|miami|new york|texas|hawaii|mexico|cancun|bahamas|cuba|dominican|punta cana|barbados|trinidad|aruba|puerto rico|haiti|st\.? lucia|antigua|grenada|cayman|costa rica|belize|brazil|colombia|canada|toronto|england|london|uk|africa|nigeria|ghana|kenya|india|thailand|bali|indonesia|philippines|vietnam|australia|spain|italy|france|greece|maldives|fiji)\b", re.I)
-PEOPLE = re.compile(r"mother|father|mom|dad|daughter|son\b|family|couple|grand(mother|father|ma|pa)|kids|child|friends|group", re.I)
