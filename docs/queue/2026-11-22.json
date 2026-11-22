@@ -122,46 +122,6 @@
    "reel": "media/2026-11-22/2026-11-22_0700_journey.mp4"
   },
   {
-   "id": "2026-11-22_1100_tip",
-   "date": "2026-11-22",
-   "slot": "2026-11-22T11:00:00-05:00",
-   "type": "tip",
-   "flags": [
-    "Web photo: check it shows Jamaica and has no recognisable people or brands",
-    "Web photo checked against its description",
-    "1 of 5 slides have photos"
-   ],
-   "images": [
-    "media/2026-11-22/2026-11-22_1100_tip_1.jpg",
-    "media/2026-11-22/2026-11-22_1100_tip_2.jpg",
-    "media/2026-11-22/2026-11-22_1100_tip_3.jpg",
-    "media/2026-11-22/2026-11-22_1100_tip_4.jpg",
-    "media/2026-11-22/2026-11-22_1100_tip_5.jpg"
-   ],
-   "copy_text": "Driving Tip: Dip your lights. 💡\n\nDip high beams for oncoming drivers on dark hill roads.",
-   "alt": "Tip graphic: Dip your lights. (carousel: swipe for more)",
-   "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
-   },
-   "caption": "Driving Tip: Dip your lights. 💡\n\nDip high beams for oncoming drivers on dark hill roads.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #AirportPickupJamaica #RentJamaican #JamaicaTravelTips #JamaicaRentalCar",
-   "photo": {
-    "id": "unsplash:nL3uIVZdWOI",
-    "name": "unsplash-nL3uIVZdWOI",
-    "source": "unsplash",
-    "credit": "Photo by Brighton Pereira on Unsplash"
-   },
-   "beat_lines": [
-    "The detail.",
-    "On your trip.",
-    "Book in 3 steps."
-   ],
-   "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/15180b47ae7e6136.jpg"
-   ],
-   "status": "pending"
-  },
-  {
    "id": "2026-11-22_1400_deposits",
    "date": "2026-11-22",
    "slot": "2026-11-22T14:00:00-05:00",
@@ -191,7 +151,7 @@
     "name": "Ocho Rios, Jamaica",
     "id": "111964835488149"
    },
-   "caption": "Low deposit cars in Jamaica 🔑\n\n• Toyota Corolla Axio: deposit US$60, from US$55 a day\n• Toyota Wish: deposit US$60, from US$65 a day\n• Toyota Aqua: deposit US$65, from US$45 a day\n• Toyota Axio: deposit US$80, from US$55 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #JamaicaRentalCar #RentJamaican #JamaicaTravel #JamaicaCarRental",
+   "caption": "Low deposit cars in Jamaica 🔑\n\n• Toyota Corolla Axio: deposit US$60, from US$55 a day\n• Toyota Wish: deposit US$60, from US$65 a day\n• Toyota Aqua: deposit US$65, from US$45 a day\n• Toyota Axio: deposit US$80, from US$55 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #CarRentalJamaica #DiscoverTheRealJamaica #VisitJamaica #JamaicaItinerary",
    "hook_line": "Low deposit: Toyota Wish, just US$60",
    "beat_lines": [
     "Toyota Aqua: US$65 deposit",
@@ -237,7 +197,7 @@
     "name": "Sangster International Airport",
     "id": "106111078512570"
    },
-   "caption": "Toyota Axio from US$55 a day 🚗\n\nSecurity deposit: US$80.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #RentACarJamaica #ArahRides #JamaicaItinerary #TravelJamaica",
+   "caption": "Toyota Axio from US$55 a day 🚗\n\nSecurity deposit: US$80.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaCarRental #DiscoverTheRealJamaica #VisitJamaica #JamaicaRoadTrip",
    "beat_lines": [
     "From US$55 a day",
     "Deposit just US$80",
