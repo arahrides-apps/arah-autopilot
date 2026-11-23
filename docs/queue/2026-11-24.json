@@ -166,45 +166,6 @@
    "status": "pending"
   },
   {
-   "id": "2026-11-24_2000_review",
-   "date": "2026-11-24",
-   "slot": "2026-11-24T20:00:00-05:00",
-   "type": "review",
-   "flags": [
-    "Number plate visible (kept sharp on purpose)",
-    "1 of 5 slides have photos"
-   ],
-   "images": [
-    "media/2026-11-24/2026-11-24_2000_review_1.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_2.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_3.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_4.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_5.jpg"
-   ],
-   "photo": {
-    "id": "local:arah_listing_99_1_2023-toyota-corolla-cross",
-    "name": "arah_listing_99_1_2023-toyota-corolla-cross",
-    "source": "local",
-    "credit": "Arah Rides"
-   },
-   "beat_lines": [
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla"
-   ],
-   "copy_text": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇",
-   "alt": "Renter reviews of the Toyota Corolla on Arah Rides (carousel: swipe for more)",
-   "location": {
-    "name": "Norman Manley International Airport",
-    "id": "583154638527853"
-   },
-   "caption": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\n#NormanManleyAirport #CarRentalJamaica #ArahRides #JamaicaCarRental #JamaicaRoadTrip",
-   "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/08ac157f467ac37a.jpg"
-   ],
-   "status": "pending"
-  },
-  {
    "id": "2026-11-24_2200_deal",
    "date": "2026-11-24",
    "slot": "2026-11-24T22:00:00-05:00",

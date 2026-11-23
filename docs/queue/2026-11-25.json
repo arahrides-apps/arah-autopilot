@@ -89,6 +89,108 @@
    "reel": "media/2026-11-25/2026-11-25_0200_deal.mp4"
   },
   {
+   "id": "2026-11-25_0700_journey",
+   "date": "2026-11-25",
+   "slot": "2026-11-25T07:00:00-05:00",
+   "type": "journey",
+   "flags": [
+    "Slide photo matched to 'Jamaica': Photo by anselmo7511 on Pixabay",
+    "Slide photo matched to 'Jamaica Christmas market': Photo by vhsPfaffenhofen on Pixabay",
+    "2 of 6 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-25/2026-11-25_0700_journey_1.jpg",
+    "media/2026-11-25/2026-11-25_0700_journey_2.jpg",
+    "media/2026-11-25/2026-11-25_0700_journey_3.jpg",
+    "media/2026-11-25/2026-11-25_0700_journey_4.jpg",
+    "media/2026-11-25/2026-11-25_0700_journey_5.jpg",
+    "media/2026-11-25/2026-11-25_0700_journey_6.jpg"
+   ],
+   "copy_text": "Leave the cold. Take the long way to the beach. 🧳\n\nSnow at home. Sun here. Pick up at MBJ and head west.\nStop for coconut water. Roadside vendors have it ice cold.\nStay as long as you can. Stay 7 days or more and ask Winston what your rate looks like.",
+   "alt": "Story: Leave the cold. Take the long way to the beach. (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "Leave the cold. Take the long way to the beach. 🧳\n\nSnow at home. Sun here. Pick up at MBJ and head west.\nStop for coconut water. Roadside vendors have it ice cold.\nStay as long as you can. Stay 7 days or more and ask Winston what your rate looks like.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBay #SangsterAirport #MontegoBayJamaica #RentACarJamaica #DiscoverTheRealJamaica",
+   "photos_extra": [
+    {
+     "id": "pixabay:10576579",
+     "name": "pixabay-10576579"
+    },
+    {
+     "id": "pixabay:569230",
+     "name": "pixabay-569230"
+    }
+   ],
+   "beat_lines": [
+    "Snow at home. Sun here.",
+    "Stop for coconut water.",
+    "Stay as long as you can.",
+    "Know the price before you land."
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/0cf2301b63d7f7af.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/cb9cd5d1616d3751.jpg"
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-25_1100_spotlight",
+   "date": "2026-11-25",
+   "slot": "2026-11-25T11:00:00-05:00",
+   "type": "spotlight",
+   "flags": [
+    "Web photo: check it shows Jamaica and has no recognisable people or brands",
+    "Place confirmed by photo description",
+    "Slide photo matched to 'Bluefields Bay Jamaica': Photo by Ridiculopathy, Wikimedia Commons (CC0)",
+    "2 of 6 slides have photos",
+    "Reel includes 4 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
+    "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
+    "Goes out as a Reel (hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music)."
+   ],
+   "images": [
+    "media/2026-11-25/2026-11-25_1100_spotlight_1.jpg",
+    "media/2026-11-25/2026-11-25_1100_spotlight_2.jpg",
+    "media/2026-11-25/2026-11-25_1100_spotlight_3.jpg",
+    "media/2026-11-25/2026-11-25_1100_spotlight_4.jpg",
+    "media/2026-11-25/2026-11-25_1100_spotlight_5.jpg",
+    "media/2026-11-25/2026-11-25_1100_spotlight_6.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia:148890960",
+    "name": "wikimedia-148890960",
+    "source": "wikimedia",
+    "credit": "Photo by Ridiculopathy, Wikimedia Commons (CC0)"
+   },
+   "copy_text": "Bluefields Bay. Your next swim. 📍\n\nBluefields Bay, Westmoreland.\nPick up your car at Montego Bay and drive there on your own time.",
+   "alt": "Bluefields Bay, Westmoreland, Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "Bluefields Bay. Your next swim. 📍\n\nBluefields Bay, Westmoreland.\nPick up your car at Montego Bay and drive there on your own time.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#SangsterAirport #MBJAirport #MontegoBayJamaica #SelfDriveJamaica #DiscoverTheRealJamaica",
+   "beat_lines": [
+    "📍 Bluefields Bay, Westmoreland",
+    "Clear water, soft sand and a slower pace.",
+    "Pick up your car at Montego Bay.",
+    "Book in minutes at arahrides.com"
+   ],
+   "photos_extra": [
+    {
+     "id": "wikimedia:148890937",
+     "name": "wikimedia-148890937"
+    }
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/0e3ccf8f384ed967.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/3933c7ab46fa238a.jpg"
+   ],
+   "status": "pending",
+   "reel_kind": "hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music",
+   "reel": "media/2026-11-25/2026-11-25_1100_spotlight.mp4"
+  },
+  {
    "id": "2026-11-25_2200_deal",
    "date": "2026-11-25",
    "slot": "2026-11-25T22:00:00-05:00",
