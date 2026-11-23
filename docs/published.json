@@ -1579,5 +1579,11 @@
   "at": "2026-11-23T00:01:19.615595-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-23_0200_deal": {
+  "status": "published",
+  "at": "2026-11-23T02:02:28.558701-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
