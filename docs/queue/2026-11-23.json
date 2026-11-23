@@ -94,11 +94,11 @@
    "type": "journey",
    "flags": [
     "Its 07:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
-    "Slide photo matched to 'Jamaican father and daughter': Photo by White77 on Pixabay",
-    "Slide photo matched to 'Jamaican food plate': Photo by Ronise daluz on Unsplash",
-    "Slide photo matched to 'friends Jamaica beach': Photo by Sander S on Unsplash",
-    "Slide photo (food): Photo by rajdeepcraft on Pixabay",
-    "5 of 6 slides have photos",
+    "Slide photo matched to 'Jamaica Jamaica': Photo by David Groves on Unsplash",
+    "Slide photo matched to 'Middle Quarters Jamaica': Photo by Peter Muniz on Unsplash",
+    "Slide photo matched to 'treasure beach Jamaica people': Photo by Sander S on Unsplash",
+    "Slide photo (couple): Photo by Adam Dillon on Unsplash",
+    "Slide photo (family): Photo by White77 on Pixabay",
     "Reel includes 2 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
     "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
     "Goes out as a Reel (hook Reel: 3 photos + 2 video clips, fast cuts, captions, no music)."
@@ -111,77 +111,80 @@
     "media/2026-11-23/2026-11-23_0700_journey_5.jpg",
     "media/2026-11-23/2026-11-23_0700_journey_6.jpg"
    ],
-   "copy_text": "The kids met their cousins for the first time. 🧳\n\nOne car, the whole crew. Car seats, snacks and a playlist for the drive.\nInstant best friends. Ten minutes in, nobody remembers they just met.\nMake it a tradition. Same time next year. Book the car early.",
-   "alt": "Story: The kids met their cousins for the first time. (carousel: swipe for more)",
+   "copy_text": "Peppered shrimp, jerk and fresh fish in one drive. 🧳\n\nMiddle Quarters shrimp. Spicy peppered shrimp from the roadside vendors.\nJerk stop. Smoke, spice and a cold drink.\nFish by the sea. Treasure Beach serves it straight from the boats.",
+   "alt": "Story: Peppered shrimp, jerk and fresh fish in one drive. (carousel: swipe for more)",
    "location": {
-    "name": "Kingston, Jamaica",
-    "id": "109489972411518"
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
    },
-   "caption": "The kids met their cousins for the first time. 🧳\n\nOne car, the whole crew. Car seats, snacks and a playlist for the drive.\nInstant best friends. Ten minutes in, nobody remembers they just met.\nMake it a tradition. Same time next year. Book the car early.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\n#KingstonJamaica #SelfDriveJamaica #RentJamaican #JamaicaTravel #JamaicaRentalCar",
+   "caption": "Peppered shrimp, jerk and fresh fish in one drive. 🧳\n\nMiddle Quarters shrimp. Spicy peppered shrimp from the roadside vendors.\nJerk stop. Smoke, spice and a cold drink.\nFish by the sea. Treasure Beach serves it straight from the boats.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental for Black River, Jamaica\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#BlackRiverJamaica #TreasureBeach #BlackRiver #SelfDriveJamaica #ArahRides",
    "photos_extra": [
     {
-     "id": "pixabay:521551",
-     "name": "pixabay-521551"
+     "id": "unsplash:Oh3M-rCN4q0",
+     "name": "unsplash-Oh3M-rCN4q0"
     },
     {
-     "id": "unsplash:DSudd5RNjx8",
-     "name": "unsplash-DSudd5RNjx8"
+     "id": "unsplash:o9DTuuDkhP0",
+     "name": "unsplash-o9DTuuDkhP0"
     },
     {
      "id": "unsplash:fj4PK8TJk6I",
      "name": "unsplash-fj4PK8TJk6I"
     },
     {
-     "id": "pixabay:5930496",
-     "name": "pixabay-5930496"
+     "id": "unsplash:tYFyHYbuHcw",
+     "name": "unsplash-tYFyHYbuHcw"
+    },
+    {
+     "id": "pixabay:521551",
+     "name": "pixabay-521551"
     }
    ],
    "beat_lines": [
-    "One car, the whole crew.",
-    "Instant best friends.",
-    "Make it a tradition.",
+    "Middle Quarters shrimp.",
+    "Jerk stop.",
+    "Fish by the sea.",
     "Know the price before you land."
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/4294cbf4be314255.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/7a4759907b051b14.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/41c557aff0cc557a.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/a20338d40903868c.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/c7cfb3cd48f6807d.jpg",
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/6c908738653400f7.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/46cc01d447892ba8.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/c7cfb3cd48f6807d.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/e1fe33b9710e6f36.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/4294cbf4be314255.jpg"
    ],
    "status": "pending",
    "reel_kind": "hook Reel: 3 photos + 2 video clips, fast cuts, captions, no music",
    "reel": "media/2026-11-23/2026-11-23_0700_journey.mp4"
   },
   {
-   "id": "2026-11-23_1100_tip",
+   "id": "2026-11-23_1400_chat",
    "date": "2026-11-23",
-   "slot": "2026-11-23T11:00:00-05:00",
-   "type": "tip",
+   "slot": "2026-11-23T14:00:00-05:00",
+   "type": "chat",
    "flags": [
-    "Its 11:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
+    "Its 14:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
     "Web photo (people, food or activity): checked by Claude",
-    "Slide photo (food): Photo by asad_sumbul on Pixabay",
-    "Slide photo (road): Photo by TitusStaunton on Pixabay",
-    "Slide photo (culture), checked against the words: Photo by jossiel_castillo on Pixabay",
-    "4 of 5 slides have photos",
+    "1 of 5 slides have photos",
+    "Reel includes 3 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
     "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
-    "Goes out as a Reel (hook Reel: 4 photos + 0 video clips, fast cuts, captions, no music)."
+    "Goes out as a Reel (hook Reel: 1 photos + 3 video clips, fast cuts, captions, no music)."
    ],
    "images": [
-    "media/2026-11-23/2026-11-23_1100_tip_1.jpg",
-    "media/2026-11-23/2026-11-23_1100_tip_2.jpg",
-    "media/2026-11-23/2026-11-23_1100_tip_3.jpg",
-    "media/2026-11-23/2026-11-23_1100_tip_4.jpg",
-    "media/2026-11-23/2026-11-23_1100_tip_5.jpg"
+    "media/2026-11-23/2026-11-23_1400_chat_1.jpg",
+    "media/2026-11-23/2026-11-23_1400_chat_2.jpg",
+    "media/2026-11-23/2026-11-23_1400_chat_3.jpg",
+    "media/2026-11-23/2026-11-23_1400_chat_4.jpg",
+    "media/2026-11-23/2026-11-23_1400_chat_5.jpg"
    ],
-   "copy_text": "Patois 101: Wah gwaan? 💡\n\nIt means What's going on? Say it with a smile.",
-   "alt": "Tip graphic: Wah gwaan? (carousel: swipe for more)",
+   "copy_text": "Landing at MBJ? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
+   "alt": "WhatsApp chat with Winston: I land at MBJ on Friday. / Welcome! Tell me your dates and I will set up your pickup. (carousel: swipe for more)",
    "location": {
-    "name": "Norman Manley International Airport",
-    "id": "583154638527853"
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
    },
-   "caption": "Patois 101: Wah gwaan? 💡\n\nIt means What's going on? Say it with a smile.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\n#NormanManleyAirport #SelfDriveJamaica #ArahRides #TravelTips #CarRentalJamaica",
+   "caption": "Landing at MBJ? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#OchoRios #RentACarJamaica #DiscoverTheRealJamaica #JamaicaTravelTips #JamaicaItinerary",
    "photo": {
     "id": "pixabay:7514966",
     "name": "pixabay-7514966",
@@ -189,29 +192,16 @@
     "credit": "Photo by WaleedKhalid on Pixabay"
    },
    "beat_lines": [
-    "The detail.",
-    "On your trip.",
-    "Book in 3 steps."
-   ],
-   "photos_extra": [
-    {
-     "id": "pixabay:9243920",
-     "name": "pixabay-9243920"
-    },
-    {
-     "id": "pixabay:4488439",
-     "name": "pixabay-4488439"
-    }
+    "Step 1: Say Hi.",
+    "Step 2: Get a quote.",
+    "Step 3: Book and pay."
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/5fd96555e6b2c287.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/b8ee0b6da48ce9e5.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/5c4d077faf351037.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/92984db70c39813f.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/5fd96555e6b2c287.jpg"
    ],
    "status": "pending",
-   "reel_kind": "hook Reel: 4 photos + 0 video clips, fast cuts, captions, no music",
-   "reel": "media/2026-11-23/2026-11-23_1100_tip.mp4"
+   "reel_kind": "hook Reel: 1 photos + 3 video clips, fast cuts, captions, no music",
+   "reel": "media/2026-11-23/2026-11-23_1400_chat.mp4"
   },
   {
    "id": "2026-11-23_2000_qa",
@@ -220,10 +210,7 @@
    "type": "qa",
    "flags": [
     "Web photo (people, food or activity): checked by Claude",
-    "Slide photo (food), checked against the words: Photo by tehzeebkazmii on Pixabay",
-    "Slide photo (food), checked against the words: Photo by 2SIF on Pixabay",
-    "Slide photo (food), checked against the words: Photo by garten-gg on Pixabay",
-    "4 of 5 slides have photos"
+    "1 of 5 slides have photos"
    ],
    "images": [
     "media/2026-11-23/2026-11-23_2000_qa_1.jpg",
@@ -232,18 +219,18 @@
     "media/2026-11-23/2026-11-23_2000_qa_4.jpg",
     "media/2026-11-23/2026-11-23_2000_qa_5.jpg"
    ],
-   "copy_text": "Can I pick up in one city and drop off in another? 🤔\n\nYes, one-way rentals are available, for example Montego Bay to Kingston. A one-way fee applies and shows in your quote.\n\nQuestions? Ask Winston on WhatsApp, any time.",
-   "alt": "Question and answer graphic: Can I pick up in one city and drop off in another? (carousel: swipe for more)",
+   "copy_text": "What does a rental day mean? 🤔\n\nA rental day is 24 hours from your pickup time.\n\nQuestions? Ask Winston on WhatsApp, any time.",
+   "alt": "Question and answer graphic: What does a rental day mean? (carousel: swipe for more)",
    "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Can I pick up in one city and drop off in another? 🤔\n\nYes, one-way rentals are available, for example Montego Bay to Kingston. A one-way fee applies and shows in your quote.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #RentACarJamaica #DiscoverTheRealJamaica #TravelJamaica #JamaicaRoadTrip",
+   "caption": "What does a rental day mean? 🤔\n\nA rental day is 24 hours from your pickup time.\n\nQuestions? Ask Winston on WhatsApp, any time.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #SelfDriveJamaica #RentJamaican #JamaicaTravelTips #VisitJamaica",
    "photo": {
-    "id": "pixabay:4027313",
-    "name": "pixabay-4027313",
+    "id": "pixabay:5930494",
+    "name": "pixabay-5930494",
     "source": "pixabay",
-    "credit": "Photo by balouriarajesh on Pixabay"
+    "credit": "Photo by rajdeepcraft on Pixabay"
    },
    "beat_lines": [
     "The answer.",
@@ -251,10 +238,7 @@
     "Book in 3 steps."
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/34c3aee268927f8b.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/09c5e0144517fc8f.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/020e1f2363fa96f4.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/d516be99624ad381.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/dc9b9df466e30187.jpg"
    ],
    "status": "pending"
   },
@@ -290,7 +274,7 @@
     "name": "Norman Manley International Airport",
     "id": "583154638527853"
    },
-   "caption": "Toyota Corolla from US$57 a day 🚗\n\nSecurity deposit: US$500. Some units have a deposit of just US$100.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\n#NormanManleyAirport #JamaicaCarRental #DiscoverTheRealJamaica #JamaicaVacation #AirportPickupJamaica",
+   "caption": "Toyota Corolla from US$57 a day 🚗\n\nSecurity deposit: US$500. Some units have a deposit of just US$100.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#NormanManleyAirport #JamaicaRentalCar #ArahRides #JamaicaRoadTrip #JamaicaItinerary",
    "beat_lines": [
     "From US$57 a day",
     "Deposit just US$100",
