@@ -88,7 +88,10 @@ def out_of_season(text, month):
     return any(rx.search(t) and month not in months for rx, months in SEASONAL)
 
 # ---- things that make a photo wrong for a car-rental brand even when the place matches
-JUNK = re.compile(r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
+JUNK = re.compile(r"cannabis|marijuana|\bweed\b|ganja|hemp|\bdrugs?\b|smoking|cigar|joint\b|bong|vape|"
+                  r"cartoon|animation|animated|\b3d\b|render|vector|motion graphic|abstract|particles|\bloop\b|green screen|chroma|"
+                  r"bikini|lingerie|\bsexy\b|\bfeet\b|\bfoot\b|toes|"
+                  r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
                   r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
                   r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
                   r"railroad|railway|rail yard|rail tracks|train station|subway|\bmetro\b|locomotive|jamaica station|jamaica avenue|jamaica plain|queens|new york|\bnyc\b|long island|lirr|brooklyn|manhattan|boston|"

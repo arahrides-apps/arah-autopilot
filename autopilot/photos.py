@@ -496,7 +496,8 @@ class Picker:
         if kind != "car" and src.name not in ("drive", "local") and getattr(self, "_lenient", False):
             try:                                                            # people / food / activity photo: it must look like it could be Jamaica
                 from . import vision as _V
-                if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, and no landmarks, signs or flags of another country") is False:
+                if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, no landmarks, signs or flags of another country, "
+                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); nothing about drugs, smoking or bare feet close-ups") is False:
                     log.info("skip %s: Claude says it does not look like Jamaica", item["id"]); return None
             except Exception as e:
                 log.warning("Jamaica look check skipped: %s", e)
@@ -731,6 +732,9 @@ class Picker:
         """A web photo of people, food or an activity (a dad and his daughter, jerk chicken, rafting) when no Jamaica-tagged photo exists.
         Stock sites rarely tag these 'Jamaica', so the search widens: the query as written, then Caribbean, then the subject alone.
         The photo must name the subject in its tags, must not name another country, and Claude checks it could be Jamaica and fits the words."""
+        from . import vision as _V
+        if not _V.ai_on():                                              # without an AI to look at the photo, never widen beyond Jamaica-tagged photos
+            return None
         base = re.sub(r"\b(jamaica|jamaican)\b", "", query, flags=re.I).strip()
         qs = list(dict.fromkeys([query, base + " Caribbean", base]))
         need = [w.lower() for w in (words or []) if w]

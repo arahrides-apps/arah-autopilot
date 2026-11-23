@@ -24,7 +24,7 @@ def _search(q, n=30):
     for attempt in range(3):
         try:
             r = requests.get("https://pixabay.com/api/videos/", timeout=30,
-                             params={"key": key, "q": q[:100], "per_page": n, "safesearch": "true"})
+                             params={"key": key, "q": q[:100], "per_page": n, "safesearch": "true", "video_type": "film"})   # real footage only, never animation
             if r.status_code == 429:
                 time.sleep(20 * (attempt + 1)); continue
             r.raise_for_status()
@@ -49,7 +49,8 @@ def find(queries, text, date, want=2, used=(), strict=False):
     variants = []
     for q in queries[:5]:
         base = re.sub(r"\b(jamaica|jamaican)\b", "", q, flags=re.I).strip()
-        variants += [base + " Jamaica"] + ([] if strict else [base + " Caribbean", base + " tropical", base])
+        from . import vision as _V
+        variants += [base + " Jamaica"] + ([] if (strict or not _V.ai_on()) else [base + " Caribbean", base + " tropical", base])
     for qq in list(dict.fromkeys(variants)):
         if len(out) >= want:
             break
@@ -65,6 +66,12 @@ def find(queries, text, date, want=2, used=(), strict=False):
                 continue
             if JUNK.search(tags) or (NOT_JAMAICA.search(tags) and "jamaica" not in tags) or h.get("duration", 0) < 4:
                 continue
+            if h.get("type") and h.get("type") != "film":
+                continue
+            if not V.ai_on():                                       # no AI to look at the clip: only clips tagged Jamaica, and tagged with the subject
+                words = [w for w in re.findall(r"[a-z]{4,}", qq.lower()) if w not in ("jamaica", "jamaican", "caribbean", "tropical", "aerial", "drone")]
+                if "jamaica" not in tags or (words and not any(w[:5] in tags for w in words)):
+                    continue
             v = h.get("videos", {}); src = (v.get("medium") or v.get("large") or v.get("small") or {}).get("url")
             if not src:
                 continue

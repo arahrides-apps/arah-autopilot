@@ -70,7 +70,7 @@ def cfg_web_video():
         return True
 
 CTA_LINES = ["Book in minutes on ArahRides.com", "Airport pickup: Montego Bay, Kingston, Ocho Rios", "Pay with Klarna, Affirm, Apple Pay or Google Pay", "WhatsApp Winston, 24/7"]
-GENERIC_CLIPS = ["Jamaica beach", "Jamaica coastal road drive", "Jamaica aerial coast", "Negril beach", "Jamaica waterfall", "tropical road trip", "Caribbean beach drone", "palm trees beach sunset"]
+GENERIC_CLIPS = ["Jamaica beach", "Jamaica road", "Jamaica coast aerial", "Negril beach", "Jamaica waterfall", "Montego Bay", "Ocho Rios", "Kingston Jamaica"]
 
 def _hook(p, out, end_img, date):
     """The scroll-stopping Reel: real photos and real video clips, hook line first, fast cuts, pop-in captions, music, end card.
@@ -80,7 +80,10 @@ def _hook(p, out, end_img, date):
     raw = [x for x in p.get("raw", []) if Path(x).exists()]
     first = re.split(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]|\n", p.get("copy_text") or p.get("alt") or "")[0].strip()
     lines = [p.get("hook_line") or first] + list(p.get("beat_lines", []))
+    carpost = p.get("type") in ("deal", "deposits", "car_hero")
     target = max(4, min(6, len(lines)))
+    if carpost:                                                      # car posts: the car photos carry the Reel, plus at most 2 Jamaica clips
+        target = max(3, min(len(raw) + 2, 5))
     i = 0
     while len(lines) < target:
         lines.append(CTA_LINES[i % len(CTA_LINES)]); i += 1
@@ -88,7 +91,7 @@ def _hook(p, out, end_img, date):
     nclips = 0
     if cfg_web_video():
         from . import webvideo as WV, story as S, themes as TH
-        used = set(); carpost = p.get("type") in ("deal", "deposits", "car_hero")
+        used = set()
         for k in range(target):
             if carpost and k == 0:
                 continue                                             # a car post always opens on our own car photo
