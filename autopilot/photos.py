@@ -658,6 +658,14 @@ class Picker:
     def theme_photo(self, theme, ok_extra=None):
         """Every topic photo is written to the ledger the moment it is picked, so it cannot come back for 90 days (promo, event, story and Christmas posts used to skip this)."""
         ph = self._theme_photo(theme, ok_extra)
+        if not ph and self.web:                                        # nothing tagged 'Jamaica' left: widen to people / food / activity photos for the topic
+            qs = list(TH.THEMES.get(theme, ([],))[0])
+            self.rng.shuffle(qs)
+            for q in qs[:3]:
+                w = [x for x in re.sub(r"\b(jamaica|jamaican|caribbean)\b", "", q, flags=re.I).lower().split() if len(x) > 3][:2]
+                ph = self.topic(q, w)
+                if ph:
+                    break
         if ph:
             self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
         return ph
@@ -715,7 +723,8 @@ class Picker:
         import os
         src = ", ".join(f"{k} {v[0]} searches / {v[1]} results" for k, v in sorted(self.stats.items())) or "no web searches"
         dead = (" · stopped early (limit or error): " + ", ".join(sorted(self._dead))) if self._dead else ""
-        claude = "Claude photo checks ON" if os.environ.get("ANTHROPIC_API_KEY") else "Claude photo checks OFF: add the ANTHROPIC_API_KEY secret in GitHub (Settings → Secrets → Actions)"
+        from . import vision as _V
+        claude = (f"{_V.ai_name()} photo checks ON" if _V.ai_on() else "AI photo checks OFF: add your Gemini key as a GitHub secret named GEMINI_API_KEY (Settings → Secrets → Actions) and check the workflow files pass it")
         return f"Run check · photos used {self.loaded} · {src}{dead} · {claude}"
 
     def topic(self, query, words=None):
@@ -734,7 +743,7 @@ class Picker:
                 good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"] * 0.8
                         and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
                         and not self.DRAWN.search(i.get("text", "")) and self._web_ok(web, i)
-                        and (not need or any(w in i.get("text", "").lower() for w in need))]
+                        and (not need or any(w[:5] in i.get("text", "").lower() for w in need))]      # grandmother ~ grandma, daughters ~ daughter
                 for it in good[:6]:
                     self.tried.add(it["id"])
                     self._lenient = True

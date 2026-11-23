@@ -11,21 +11,28 @@ CACHE = ROOT / "cache" / "webclips"
 _dead = False
 ADDED = [0]
 
-def _search(q, n=20):
-    global _dead
-    import requests
+_CACHE_Q = {}
+
+def _search(q, n=30):
+    """Pixabay video search, cached for the run. On the rate limit (100 a minute) it waits and tries again instead of giving up for the whole run."""
+    import requests, time
     key = os.environ.get("PIXABAY_API_KEY")
-    if not key or _dead:
+    if not key:
         return []
-    try:
-        r = requests.get("https://pixabay.com/api/videos/", timeout=30,
-                         params={"key": key, "q": q[:100], "per_page": n, "safesearch": "true", "video_type": "film"})
-        if r.status_code == 429:
-            _dead = True; return []
-        r.raise_for_status()
-        return r.json().get("hits", [])
-    except Exception as e:
-        log.warning("video search failed (%s): %s", q, e); return []
+    if q in _CACHE_Q:
+        return _CACHE_Q[q]
+    for attempt in range(3):
+        try:
+            r = requests.get("https://pixabay.com/api/videos/", timeout=30,
+                             params={"key": key, "q": q[:100], "per_page": n, "safesearch": "true"})
+            if r.status_code == 429:
+                time.sleep(20 * (attempt + 1)); continue
+            r.raise_for_status()
+            _CACHE_Q[q] = r.json().get("hits", []); return _CACHE_Q[q]
+        except Exception as e:
+            log.warning("video search failed (%s): %s", q, e); break
+    _CACHE_Q[q] = []
+    return []
 
 def _frame(path, out, at=1.5):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(at), "-i", str(path), "-frames:v", "1", str(out)], timeout=60)

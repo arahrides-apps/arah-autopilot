@@ -152,6 +152,71 @@ def web_match(img_emb, refs, min_sim=0.86):
     return (refs[1][int(j)], round(float(v), 2)) if float(v) >= min_sim else None
 
 
+# ---------------------------------------------------------------- which AI looks at the pictures: Gemini (GEMINI_API_KEY) or Claude (ANTHROPIC_API_KEY)
+def ai_provider():
+    """('gemini', key) or ('anthropic', key) or (None, None). A Gemini key (starts with 'AIza') also works when saved under ANTHROPIC_API_KEY."""
+    import os
+    g = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    a = os.environ.get("ANTHROPIC_API_KEY")
+    if g:
+        return "gemini", g
+    if a and a.startswith("AIza"):
+        return "gemini", a
+    if a:
+        return "anthropic", a
+    return None, None
+
+def ai_on():
+    return ai_provider()[0] is not None
+
+def ai_name():
+    return {"gemini": "Gemini", "anthropic": "Claude"}.get(ai_provider()[0], "AI")
+
+_GMODEL = []
+def ask(parts, max_tokens=600):
+    """parts: list of str (text) or bytes (a JPEG). -> the model's reply text. Raises on error; returns None when no key."""
+    import os, base64, requests
+    prov, key = ai_provider()
+    if not prov:
+        return None
+    if prov == "anthropic":
+        content = [{"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(x).decode()}} if isinstance(x, bytes)
+                   else {"type": "text", "text": x} for x in parts]
+        r = requests.post("https://api.anthropic.com/v1/messages", timeout=120,
+                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                          json={"model": os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": max_tokens, "messages": [{"role": "user", "content": content}]})
+        r.raise_for_status()
+        return "".join(b.get("text", "") for b in r.json()["content"])
+    gparts = [{"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(x).decode()}} if isinstance(x, bytes) else {"text": x} for x in parts]
+    models = _GMODEL or [m for m in (os.environ.get("GEMINI_MODEL"), "gemini-flash-latest", "gemini-2.5-flash", "gemini-2.0-flash") if m]
+    last = None
+    for m in models:
+        for think in (True, False):
+            gen = {"maxOutputTokens": max_tokens, "temperature": 0}
+            if think:
+                gen["thinkingConfig"] = {"thinkingBudget": 0}          # answer straight away (thinking would eat the reply's tokens)
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=120,
+                              headers={"x-goog-api-key": key, "content-type": "application/json"},
+                              json={"contents": [{"role": "user", "parts": gparts}], "generationConfig": gen})
+            if r.status_code == 400 and think and "thinking" in r.text.lower():
+                continue                                              # this model has no thinking setting: ask again without it
+            if r.status_code == 404:
+                last = r; break                                       # model name not available: try the next one
+            r.raise_for_status()
+            if not _GMODEL: _GMODEL.append(m)
+            c = (r.json().get("candidates") or [{}])[0]
+            return "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []))
+    if last is not None:
+        last.raise_for_status()
+    return None
+
+def _jpeg(path, size=768):
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB"); im.thumbnail((size, size)); b = io.BytesIO(); im.save(b, "JPEG", quality=82)
+    return b.getvalue()
+
+
 # ---------------------------------------------------------------- Claude reviews the picture (needs ANTHROPIC_API_KEY; skipped without it)
 PLACES = "Kingston, Port Antonio, Ocho Rios, Montego Bay, Negril, Treasure Beach, Mandeville, Blue Mountains, Falmouth, Black River, Holland Bamboo, Trident Castle, Bob Marley Museum, Devon House, Dunn's River Falls, Blue Hole, Reach Falls, Lover's Leap, Rose Hall, Lime Cay"
 PROMPT = ("You are indexing photos for a Jamaican car rental company's Instagram. For each numbered photo answer one JSON object. Reply with ONLY a JSON array, one object per photo, in order: "
@@ -163,31 +228,24 @@ PROMPT = ("You are indexing photos for a Jamaican car rental company's Instagram
           "Likely places in this library: " + PLACES + ".")
 
 def claude_review(paths, model=None, batch=6):
-    """-> list of dicts (or None per photo) from Claude, or None when no API key / error."""
-    import os, io, json, base64, requests
-    from PIL import Image
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
-        log.warning("ANTHROPIC_API_KEY is not set: Claude review skipped (add it under Settings > Secrets and variables > Actions)"); return None
+    """-> list of dicts (or None per photo) from the AI (Gemini or Claude), or None when no API key / error."""
+    import json
+    if not ai_on():
+        log.warning("No AI key set (GEMINI_API_KEY or ANTHROPIC_API_KEY): photo review skipped"); return None
     if not paths: return None
-    model = model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5"
     out = []
     for i in range(0, len(paths), batch):
-        ch = paths[i:i + batch]; content = []
+        ch = paths[i:i + batch]; parts = []
         for k, p in enumerate(ch, 1):
-            im = Image.open(p).convert("RGB"); im.thumbnail((768, 768)); b = io.BytesIO(); im.save(b, "JPEG", quality=80)
-            content += [{"type": "text", "text": "Photo %d:" % k}, {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}}]
-        content.append({"type": "text", "text": PROMPT % (", ".join(NAMES), ", ".join(CATS))})
+            parts += ["Photo %d:" % k, _jpeg(p)]
+        parts.append(PROMPT % (", ".join(NAMES), ", ".join(CATS)))
         try:
-            r = requests.post("https://api.anthropic.com/v1/messages", timeout=120, headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                              json={"model": model, "max_tokens": 1500, "messages": [{"role": "user", "content": content}]})
-            r.raise_for_status()
-            txt = "".join(b.get("text", "") for b in r.json()["content"])
+            txt = ask(parts, 1500) or ""
             arr = json.loads(txt[txt.index("["): txt.rindex("]") + 1])
             by = {int(a.get("n", 0)): a for a in arr if isinstance(a, dict)}
             out += [by.get(k) for k in range(1, len(ch) + 1)]
         except Exception as e:
-            log.warning("Claude review failed for a batch: %s", e); out += [None] * len(ch)
+            log.warning("AI review failed for a batch: %s", e); out += [None] * len(ch)
     return out
 
 
@@ -203,7 +261,7 @@ def jamaica_gate(path, key):
         except Exception: pass
     if key in _GATE:
         return _GATE[key]
-    if not os.environ.get("ANTHROPIC_API_KEY"):
+    if not ai_on():
         return True
     res = claude_review([path], batch=1)
     r = (res or [None])[0]
@@ -226,47 +284,26 @@ ART_PROMPT = ("You are the art director of a top marketing agency, checking an I
               "A car of the same body style as the one named is acceptable. Reply with ONLY JSON: {\"ok\": true|false, \"issues\": [\"...\"]}")
 
 def art_check(path, headline, model=None):
-    """Claude looks at the finished cover like an art director. -> list of issues ([] = looks good, None = could not check)."""
-    import os, io, json, base64, requests
-    from PIL import Image
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
+    """The AI looks at the finished cover like an art director. -> list of issues ([] = looks good, None = could not check)."""
+    import json
+    if not ai_on():
         return None
-    im = Image.open(path).convert("RGB"); im.thumbnail((900, 900)); b = io.BytesIO(); im.save(b, "JPEG", quality=85)
     try:
-        r = requests.post("https://api.anthropic.com/v1/messages", timeout=90,
-                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                          json={"model": model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": 300,
-                                "messages": [{"role": "user", "content": [
-                                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}},
-                                    {"type": "text", "text": ART_PROMPT % headline[:160]}]}]})
-        r.raise_for_status()
-        txt = "".join(x.get("text", "") for x in r.json()["content"])
+        txt = ask([_jpeg(path, 900), ART_PROMPT % headline[:160]], 400) or ""
         d = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
         return [] if d.get("ok") else [str(i) for i in d.get("issues", [])][:4]
     except Exception as e:
         log.warning("art check failed: %s", e); return None
 
-
 def shows(path, want, model=None):
-    """Claude: does this photo clearly show <want> (e.g. 'a father and his daughter')? True / False / None (could not check)."""
-    import os, io, json, base64, requests
-    from PIL import Image
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
+    """Does this photo clearly show <want>? True / False / None (could not check). Uses Gemini or Claude, whichever key is set."""
+    import json
+    if not ai_on():
         return None
-    im = Image.open(path).convert("RGB"); im.thumbnail((800, 800)); b = io.BytesIO(); im.save(b, "JPEG", quality=85)
     q = (f"Does this photo clearly show {want}? Judge only what is visible (people, ages, activity, setting). "
-         "Reply with ONLY JSON: {\"yes\": true|false}")
+         'Reply with ONLY JSON: {"yes": true|false}')
     try:
-        r = requests.post("https://api.anthropic.com/v1/messages", timeout=60,
-                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                          json={"model": model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": 50,
-                                "messages": [{"role": "user", "content": [
-                                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}},
-                                    {"type": "text", "text": q}]}]})
-        r.raise_for_status()
-        txt = "".join(x.get("text", "") for x in r.json()["content"])
+        txt = ask([_jpeg(path, 800), q], 100) or ""
         return bool(json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("yes"))
     except Exception as e:
         log.warning("subject check failed: %s", e); return None

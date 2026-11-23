@@ -2,7 +2,7 @@
 
 Claude finds the box once per photo (the answer is kept in content/deplate.json), then OpenCV paints it out
 from the surrounding bumper. The original photo is never changed: a cleaned copy is saved next to it in the cache.
-No ANTHROPIC_API_KEY, or Claude cannot be reached: the photo is used as it is."""
+No AI key (Gemini or Claude), or the AI cannot be reached: the photo is used as it is."""
 import os, io, json, base64, logging
 from pathlib import Path
 
@@ -30,25 +30,15 @@ def _save():
         pass
 
 def find_boxes(path, model=None):
-    import requests
-    from PIL import Image
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
+    from . import vision as V
+    if not V.ai_on():
         return None
-    im = Image.open(path).convert("RGB"); im.thumbnail((1024, 1024)); b = io.BytesIO(); im.save(b, "JPEG", quality=85)
     try:
-        r = requests.post("https://api.anthropic.com/v1/messages", timeout=90,
-                          headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                          json={"model": model or os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": 300,
-                                "messages": [{"role": "user", "content": [
-                                    {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b.getvalue()).decode()}},
-                                    {"type": "text", "text": PROMPT}]}]})
-        r.raise_for_status()
-        txt = "".join(x.get("text", "") for x in r.json()["content"])
+        txt = V.ask([V._jpeg(path, 1024), PROMPT], 400) or ""
         boxes = json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("boxes") or []
         return [[float(v) for v in bx] for bx in boxes if len(bx) == 4]
     except Exception as e:
-        log.warning("deplate: Claude check failed for %s: %s", path, e)
+        log.warning("deplate: AI check failed for %s: %s", path, e)
         return None
 
 def paint_out(path, boxes, out):

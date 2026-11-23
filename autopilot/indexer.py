@@ -101,7 +101,7 @@ def _retag(pk, manual, done, cap=1500):
     searches, so a photo labelled only 'Kingston Carnival Dance' also matches 'dance', 'people' or 'street'. Hand labels are never changed.
     Returns the list of photos whose picture seems to disagree with their label."""
     import os
-    if not (V.available() or os.environ.get("ANTHROPIC_API_KEY")):
+    if not (V.available() or V.ai_on()):
         return []
     tags = {} if os.environ.get("INDEX_FORCE") else (dict(yaml.safe_load(open(TAGS)) or {}) if TAGS.exists() else {})
     todo = []

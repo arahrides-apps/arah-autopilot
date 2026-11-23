@@ -98,8 +98,10 @@ def _hook(p, out, end_img, date):
             t = f"{lines[k]} {first}"
             pq = S.place_queries(t)
             qs = (pq + TH.slide_queries(t)) if not carpost else []
-            qs = qs or (S.place_queries(p.get("copy_text", "")) + GENERIC_CLIPS)
-            got = WV.find(qs, t, date, want=1, used=used, strict=bool(pq) and not carpost)
+            qs = qs or S.place_queries(p.get("copy_text", ""))
+            got = WV.find(qs, t, date, want=1, used=used, strict=bool(pq) and not carpost) if qs else []
+            if not got and (k >= len(shots) or carpost):                # still short of shots: a Jamaica scenery clip rather than a slideshow
+                got = WV.find(GENERIC_CLIPS, "a beautiful scene in Jamaica", date, want=1, used=used)
             if got:
                 used.add(str(got[0])); nclips += 1
                 if have_photo: shots[k] = str(got[0])
