@@ -50,7 +50,7 @@ def find(queries, text, date, want=2, used=(), strict=False):
     for q in queries[:5]:
         base = re.sub(r"\b(jamaica|jamaican)\b", "", q, flags=re.I).strip()
         from . import vision as _V
-        variants += [base + " Jamaica"] + ([] if (strict or not _V.ai_on()) else [base + " Caribbean", base + " tropical", base])
+        variants += [base + " Jamaica"] + ([] if (strict or not _V.ai_on()) else [base + " Caribbean"])      # never the subject alone: that is how snow and burgers got in
     for qq in list(dict.fromkeys(variants)):
         if len(out) >= want:
             break
@@ -88,12 +88,12 @@ def find(queries, text, date, want=2, used=(), strict=False):
             fr = _frame(dest, CACHE / f"{h['id']}.jpg")
             if not fr:
                 continue
-            if strict or "jamaica" in qq.lower():
-                if not V.jamaica_gate(str(fr), key) and strict:
+            if V.ai_on():                                           # the AI must say yes to both; no answer = not used
+                if strict and not V.jamaica_gate(str(fr), key):
                     continue
-            if not strict and V.shows(str(fr), "a real video frame that could have been filmed in Jamaica or the Caribbean: tropical or neutral setting, no snow, no landmarks, signs or flags of another country") is False:
-                continue
-            if V.shows(str(fr), f"what this caption describes: \"{text[:200]}\" (same kind of place, people, food or activity)") is False:
-                continue
+                if not strict and V.shows(str(fr), "a real video frame that could have been filmed in Jamaica or the Caribbean: tropical setting, no snow, no landmarks, signs or flags of another country") is not True:
+                    continue
+                if V.shows(str(fr), f"what this caption describes: \"{text[:200]}\" (same kind of place, people, food or activity)") is not True:
+                    continue
             P.note_use(key, date); out.append(dest); ADDED[0] += 1
     return out

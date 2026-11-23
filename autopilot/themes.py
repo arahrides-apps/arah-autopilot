@@ -91,6 +91,8 @@ def out_of_season(text, month):
 JUNK = re.compile(r"cannabis|marijuana|\bweed\b|ganja|hemp|\bdrugs?\b|smoking|cigar|joint\b|bong|vape|"
                   r"cartoon|animation|animated|\b3d\b|render|vector|motion graphic|abstract|particles|\bloop\b|green screen|chroma|"
                   r"bikini|lingerie|\bsexy\b|\bfeet\b|\bfoot\b|toes|"
+                  r"\bsnow|snowy|winter|\bski|glacier|alps|alpine|autumn|\bfall foliage|fall colou?rs|pine forest|\bdesert|dune|iceland|norway|switzerland|"
+                  r"burger|hamburger|pizza|sushi|hot ?dog|fries|kebab|taco|noodle|"
                   r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
                   r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
                   r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
@@ -107,6 +109,9 @@ def event_theme(*texts):
 
 
 # What a slide talks about -> the photo to search for, so the picture matches the words (coconut water -> coconut vendor, grandma -> grandmother with grandkids).
+FOOD = re.compile(r"\b(jerk|pimento|patt(y|ies)|coco bread|fish|seafood|lobster|escovitch|snapper|bammy|festival|shrimps?|ackee|saltfish|oxtail|curry goat|brown stew|"
+                  r"ice cream|soursop|breadfruit|crayfish|fish tea|soup|coconut water|coffee|rice and peas|sorrel|food|eat|eats|eating|dinner|lunch|cook|cooking|dish|plate)\b", re.I)
+
 SLIDE_TOPICS = [
     (r"coconut", ["coconut water vendor Jamaica", "coconut tree Jamaica beach"]),
     (r"\bjerk\b|pimento", ["jerk chicken pit Jamaica", "jerk pork Boston Bay"]),
@@ -114,14 +119,14 @@ SLIDE_TOPICS = [
     (r"\bfish\b|seafood|lobster", ["fried fish Jamaica beach", "Jamaica seafood plate"]),
     (r"escovitch|snapper|parrotfish", ["escovitch fish Jamaica", "fried snapper Jamaica"]),
     (r"bammy|festival", ["bammy fried fish Jamaica", "festival dumpling Jamaica"]),
-    (r"pepper shrimp", ["Jamaican pepper shrimp", "spicy shrimp Jamaica"]),
+    (r"pepper(ed)? shrimp|\bshrimps?\b|middle quarters", ["Jamaican pepper shrimp", "spicy red shrimp", "pepper shrimp bag Jamaica"]),
     (r"ackee|saltfish", ["ackee and saltfish", "Jamaican breakfast ackee"]),
     (r"oxtail|curry goat|brown stew", ["Jamaican oxtail", "curry goat Jamaica"]),
     (r"ice cream|soursop", ["Devon House ice cream Kingston", "tropical ice cream cone"]),
     (r"breadfruit|crayfish", ["roasted breadfruit Jamaica", "river crayfish Jamaica"]),
     (r"fish tea|soup|steamed fish", ["Jamaican steamed fish okra", "Jamaican soup pot"]),
     (r"coffee", ["Blue Mountain coffee Jamaica", "coffee farm Jamaica"]),
-    (r"ackee|breakfast|rice and peas|sorrel|food|eat|dinner|lunch|cook", ["Jamaican food plate", "Jamaican family dinner"]),
+    (r"\b(rice and peas|sorrel|food|foodie|eat|eats|eating|dinner|lunch|cook|cooking)\b", ["Jamaican food plate", "Jamaican family dinner"]),
     (r"grandma|grandmother|granny", ["Jamaican grandmother with grandchildren", "grandmother hugging grandchild"]),
     (r"single (mom|mum|mother)|mom and (son|daughter)|mother and (son|daughter)", ["Jamaican mother and son", "Jamaican mother and child"]),
     (r"single (dad|father)|dad and (son|daughter)|my daughter|father and (son|daughter)", ["Jamaican father and daughter", "father and daughter Jamaica beach"]),
@@ -135,7 +140,7 @@ SLIDE_TOPICS = [
     (r"mountain|hike|holywell|peak|sunrise|mist", ["Blue Mountains Jamaica", "Blue Mountains sunrise"]),
     (r"reggae|music|fete|dancehall|boxing day", ["reggae music Jamaica", "Jamaica street party"]),
     (r"market|vendor|shop|gift|christmas", ["Jamaica market fruit vendor", "Jamaica Christmas market"]),
-    (r"airport|\blanded\b|flight", ["Montego Bay Jamaica airport arrival", "Sangster airport Montego Bay"]),
+    (r"airport|\blanded\b|\blanding\b|flight|\bmbj\b|sangster|norman manley", ["Montego Bay Jamaica airport arrival", "Sangster airport Montego Bay"]),
     (r"cruise|ship|port", ["cruise ship Ocho Rios Jamaica", "Ocho Rios Jamaica bay"]),
     (r"road trip|windows down|bamboo|coastal road|scenic", ["Jamaica coastal road drive", "Bamboo Avenue Jamaica"]),
 ]

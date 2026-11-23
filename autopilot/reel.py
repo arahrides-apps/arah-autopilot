@@ -70,7 +70,7 @@ def cfg_web_video():
         return True
 
 CTA_LINES = ["Book in minutes on ArahRides.com", "Airport pickup: Montego Bay, Kingston, Ocho Rios", "Pay with Klarna, Affirm, Apple Pay or Google Pay", "WhatsApp Winston, 24/7"]
-GENERIC_CLIPS = ["Jamaica beach", "Jamaica road", "Jamaica coast aerial", "Negril beach", "Jamaica waterfall", "Montego Bay", "Ocho Rios", "Kingston Jamaica"]
+GENERIC_CLIPS = ["Jamaica road", "Jamaica coastal road drive", "Jamaica car driving", "Jamaica highway"]      # filler for car posts only: driving, which is what a rental is
 
 def _hook(p, out, end_img, date):
     """The scroll-stopping Reel: real photos and real video clips, hook line first, fast cuts, pop-in captions, music, end card.
@@ -103,8 +103,8 @@ def _hook(p, out, end_img, date):
             qs = (pq + TH.slide_queries(t)) if not carpost else []
             qs = qs or S.place_queries(p.get("copy_text", ""))
             got = WV.find(qs, t, date, want=1, used=used, strict=bool(pq) and not carpost) if qs else []
-            if not got and (k >= len(shots) or carpost):                # still short of shots: a Jamaica scenery clip rather than a slideshow
-                got = WV.find(GENERIC_CLIPS, "a beautiful scene in Jamaica", date, want=1, used=used)
+            if not got and carpost:                                    # car posts only: a Jamaica driving clip (other posts never get a clip that does not fit their words)
+                got = WV.find(GENERIC_CLIPS, "a car driving on a road in Jamaica", date, want=1, used=used)
             if got:
                 used.add(str(got[0])); nclips += 1
                 if have_photo: shots[k] = str(got[0])

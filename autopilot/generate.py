@@ -146,10 +146,17 @@ class DayBuilder:
         ph = None
         if place or text:
             ph = self.pk.scene((text or place) + " Jamaica", place, strict=True)
-        for th in (theme, "road", "food", "family", "couple", "group"):
+        if not ph and text:
+            ph = story._matched(self, post, text)               # the dish, the place or the people the headline names
+        named = bool(text and (TH.slide_queries(text) or story.find_place(text)[0]))
+        for th in ((theme, "road") if not named else ()):         # a headline that names nothing: a Jamaica road / topic photo that suits it
             if ph: break
-            try: ph = self.pk.theme_photo(th)
-            except KeyError: ph = None
+            for _t in range(3):
+                try: c = self.pk.theme_photo(th)
+                except KeyError: c = None
+                if not c: break
+                if not text or story._fits(post, c, f"{text} (a car rental in Jamaica; a general Jamaica photo is fine if it does not show a different named place, different people or a different food)"):
+                    ph = c; break
         if ph:
             self.photo_flags(post, ph)
         else:
@@ -312,7 +319,9 @@ class DayBuilder:
                 pk_, _st = story.find_place(h)
                 sp = self.pk.scene(story.nice(pk_) + " Jamaica", story.nice(pk_), strict=True) if pk_ else None
                 sp = sp or story._matched(self, post, f"{h} {b}")
-            sp = sp or (self.pk.theme_photo(self.rng.choice(["road", "couple", "family", "group"])) if last else None)
+            if not sp and last:
+                c = self.pk.theme_photo(self.rng.choice(["road", "couple", "family", "group"]))
+                sp = c if c and story._fits(post, c, f"{h} {b} (booking a rental car in Jamaica)") else None
             pages.append(((T.photoslide(sp.path, i + 2, n, h, b, cta=last) if sp else T.slide(i + 2, n, h, b, alt=bool(i % 2), cta=last)), 1350))
         body = "\n".join(f"• {h}: {b}" for h, b in e["slides"])
         post["copy_text"] = f"{e['title']} {EMOJI['carousel']}\n\n{e['sub']}\n\n{body}"

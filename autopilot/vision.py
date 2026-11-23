@@ -185,30 +185,58 @@ def ask(parts, max_tokens=600):
         r = requests.post("https://api.anthropic.com/v1/messages", timeout=120,
                           headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
                           json={"model": os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": max_tokens, "messages": [{"role": "user", "content": content}]})
-        r.raise_for_status()
+        if r.status_code >= 400:
+            STATS["fail"] += 1
+        r.raise_for_status(); STATS["ok"] += 1
         return "".join(b.get("text", "") for b in r.json()["content"])
     gparts = [{"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(x).decode()}} if isinstance(x, bytes) else {"text": x} for x in parts]
-    models = _GMODEL or [m for m in (os.environ.get("GEMINI_MODEL"), "gemini-flash-latest", "gemini-2.5-flash", "gemini-2.0-flash") if m]
-    last = None
-    for m in models:
-        for think in (True, False):
-            gen = {"maxOutputTokens": max_tokens, "temperature": 0}
-            if think:
-                gen["thinkingConfig"] = {"thinkingBudget": 0}          # answer straight away (thinking would eat the reply's tokens)
-            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=120,
-                              headers={"x-goog-api-key": key, "content-type": "application/json"},
-                              json={"contents": [{"role": "user", "parts": gparts}], "generationConfig": gen})
-            if r.status_code == 400 and think and "thinking" in r.text.lower():
-                continue                                              # this model has no thinking setting: ask again without it
-            if r.status_code == 404:
-                last = r; break                                       # model name not available: try the next one
-            r.raise_for_status()
-            if not _GMODEL: _GMODEL.append(m)
-            c = (r.json().get("candidates") or [{}])[0]
-            return "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []))
-    if last is not None:
-        last.raise_for_status()
-    return None
+    # Every Gemini model has its own free-tier limit, so when one is used up (429) the next one answers.
+    models = [m for m in ([os.environ.get("GEMINI_MODEL")] + GEMINI_MODELS) if m and m not in _GDEAD]
+    import time
+    for rnd in range(2):
+        for m in models:
+            if m in _GDEAD:
+                continue
+            for think in (True, False):
+                gen = {"maxOutputTokens": max_tokens, "temperature": 0}
+                if think:
+                    gen["thinkingConfig"] = {"thinkingBudget": 0}          # answer straight away (thinking would eat the reply's tokens)
+                try:
+                    r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=90,
+                                      headers={"x-goog-api-key": key, "content-type": "application/json"},
+                                      json={"contents": [{"role": "user", "parts": gparts}], "generationConfig": gen})
+                except Exception:
+                    STATS["fail"] += 1; break
+                if r.status_code == 400 and think and "thinking" in r.text.lower():
+                    continue                                              # this model has no thinking setting: ask again without it
+                if r.status_code in (404, 403):
+                    _GDEAD.add(m); break                                  # model not available for this key: never ask it again this run
+                if r.status_code in (429, 500, 503):
+                    STATS["limit"] += 1
+                    if "PerDay" in r.text or "per day" in r.text.lower():
+                        _GDEAD.add(m)                                     # used up for today
+                    break                                                 # try the next model
+                if r.status_code >= 400:
+                    STATS["fail"] += 1; break
+                c = (r.json().get("candidates") or [{}])[0]
+                STATS["ok"] += 1
+                return "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []))
+        time.sleep(15)                                                    # every model busy: wait a moment, then one more round
+    STATS["fail"] += 1
+    raise RuntimeError("Gemini did not answer (rate limit or error)")
+
+GEMINI_MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-lite"]
+_GDEAD = set()
+STATS = {"ok": 0, "fail": 0, "limit": 0}
+
+def status():
+    """One line for the review page: how many AI checks answered, and how many could not be done (those photos were NOT used)."""
+    if not ai_on():
+        return "AI photo checks OFF"
+    s = f"{ai_name()} checks answered {STATS['ok']}"
+    if STATS["fail"] or STATS["limit"]:
+        s += f", not answered {STATS['fail']} (busy {STATS['limit']}x): photos it could not check were left out"
+    return s
 
 def _jpeg(path, size=768):
     import io
@@ -266,7 +294,7 @@ def jamaica_gate(path, key):
     res = claude_review([path], batch=1)
     r = (res or [None])[0]
     if not r:
-        return True                                   # Claude could not be reached: do not block everything
+        return False                                  # the AI could not look at it: do not use it (it is asked again next run)
     ok = r.get("jamaica") in ("yes", "likely") and r.get("kind") != "not-usable"
     _GATE[key] = ok
     try:
@@ -295,15 +323,36 @@ def art_check(path, headline, model=None):
     except Exception as e:
         log.warning("art check failed: %s", e); return None
 
+_SHOWS = {}
 def shows(path, want, model=None):
-    """Does this photo clearly show <want>? True / False / None (could not check). Uses Gemini or Claude, whichever key is set."""
+    """Does this photo clearly show <want>? True / False / None (could not check). Uses Gemini or Claude, whichever key is set.
+    Callers treat None as NO for anything from the web: a photo nobody could check is never used."""
     import json
     if not ai_on():
         return None
-    q = (f"Does this photo clearly show {want}? Judge only what is visible (people, ages, activity, setting). "
+    import os, hashlib
+    from pathlib import Path as _P
+    f = _P(os.environ.get("AUTOPILOT_ROOT") or ".") / "content" / "shows_checked.json"     # answers are kept, so the free Gemini limit goes further
+    if not _SHOWS:
+        try: _SHOWS.update(json.loads(f.read_text()))
+        except Exception: _SHOWS["_"] = True
+    k = hashlib.md5((_P(path).name + "|" + want).encode()).hexdigest()[:20]
+    if k in _SHOWS:
+        return _SHOWS[k]
+    q = (f"Does this photo clearly show {want}? Judge only what is visible. Be strict, like a picky art director: "
+         "answer no when the photo shows a different food (for example a burger or pizza when the words say jerk, patties, shrimp or fish), "
+         "a different place or a generic view when the words name a specific place, animals or birds the words do not mention, "
+         "snow, autumn leaves, pine forests, deserts or anything that could not be Jamaica, people who do not match (a white family for a Jamaican family, "
+         "no child when the words say daughter or son), or anything only loosely related. "
          'Reply with ONLY JSON: {"yes": true|false}')
     try:
         txt = ask([_jpeg(path, 800), q], 100) or ""
-        return bool(json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("yes"))
+        v = bool(json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("yes"))
+        _SHOWS[k] = v
+        try:
+            f.parent.mkdir(parents=True, exist_ok=True); f.write_text(json.dumps(_SHOWS, indent=0))
+        except Exception:
+            pass
+        return v
     except Exception as e:
         log.warning("subject check failed: %s", e); return None

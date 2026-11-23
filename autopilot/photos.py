@@ -497,17 +497,17 @@ class Picker:
             try:                                                            # people / food / activity photo: it must look like it could be Jamaica
                 from . import vision as _V
                 if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, no landmarks, signs or flags of another country, "
-                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); nothing about drugs, smoking or bare feet close-ups") is False:
-                    log.info("skip %s: Claude says it does not look like Jamaica", item["id"]); return None
+                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); nothing about drugs, smoking or bare feet close-ups") is not True:
+                    log.info("skip %s: the AI says it does not look like Jamaica (or could not check it)", item["id"]); return None
             except Exception as e:
-                log.warning("Jamaica look check skipped: %s", e)
+                log.warning("Jamaica look check failed, photo left out: %s", e); return None
         elif kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
             try:
                 from . import vision as _V
                 if not _V.jamaica_gate(str(dest), src.name + ":" + item["id"]):
                     log.info("skip %s: Claude says it is not Jamaica", item["id"]); return None
             except Exception as e:
-                log.warning("Jamaica check skipped: %s", e)
+                log.warning("Jamaica check failed, photo left out: %s", e); return None
         hv = L.dhash(dest)
         why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
         if why:
@@ -726,7 +726,7 @@ class Picker:
         dead = (" · stopped early (limit or error): " + ", ".join(sorted(self._dead))) if self._dead else ""
         from . import vision as _V
         claude = (f"{_V.ai_name()} photo checks ON" if _V.ai_on() else "AI photo checks OFF: add your Gemini key as a GitHub secret named GEMINI_API_KEY (Settings → Secrets → Actions) and check the workflow files pass it")
-        return f"Run check · photos used {self.loaded} · {src}{dead} · {claude}"
+        return f"Run check · photos used {self.loaded} · {src}{dead} · {claude} · {_V.status()}"
 
     def topic(self, query, words=None):
         """A web photo of people, food or an activity (a dad and his daughter, jerk chicken, rafting) when no Jamaica-tagged photo exists.
@@ -752,7 +752,7 @@ class Picker:
                     self.tried.add(it["id"])
                     self._lenient = True
                     try:
-                        p = self._load(web, it, "scenery", ["Web photo (people, food or activity): checked by Claude"],
+                        p = self._load(web, it, "scenery", ["Web photo (people, food or activity): checked by AI"],
                                        {"credit": it.get("credit", ""), "text": it.get("text", "")})
                     finally:
                         self._lenient = False

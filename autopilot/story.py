@@ -79,10 +79,13 @@ def _fits(post, ph, text):
     """Claude checks the photo against the slide's words. False only when Claude says it does not fit (no key or no answer: allowed)."""
     from . import vision as V
     want = f"what this caption describes: \"{text[:200]}\" (the same place, the same kind of people, the same food or activity it names; in Jamaica)"
-    if V.shows(ph.path, want) is False:
-        post.setdefault("flags", []).append(f"Skipped a photo that did not match: {text[:60]}")
-        return False
-    return True
+    v = V.shows(ph.path, want)
+    if v is True:
+        return True
+    if v is None and ph.source in ("drive", "local") and not V.ai_on():
+        return True                      # our own photo, picked by its labels, and no AI set up to look at it
+    post.setdefault("flags", []).append(f"Left out a photo that {'did not match' if v is False else 'could not be checked'}: {text[:60]}")
+    return False
 
 CITIES = ["kingston", "montego bay", "ocho rios", "negril", "port antonio", "mandeville", "treasure beach", "falmouth", "black river", "spanish town",
           "runaway bay", "savanna-la-mar", "port royal", "portland", "st ann", "st elizabeth", "lucea", "morant bay", "may pen", "discovery bay", "oracabessa"]
@@ -116,7 +119,12 @@ def _matched(b, post, text, max_tries=8):
     Our own labelled Drive photos first, then every web source. Each candidate is checked by Claude against the words."""
     from . import themes as TH
     tries = 0
-    for q in (place_queries(text) + TH.slide_queries(text))[:7]:
+    pq, tq = place_queries(text), TH.slide_queries(text)
+    if TH.FOOD.search(text or ""):
+        qs = tq + pq[:2]                 # a dish: show the dish (a photo of the town is not a photo of its shrimp)
+    else:
+        qs = pq + tq
+    for q in qs[:7]:
         w = [x for x in q.lower().replace("'", "").split() if len(x) > 3 and x not in ("jamaica", "jamaican", "people", "street")][:2]
         for _k in range(3):
             if tries >= max_tries:
@@ -136,6 +144,8 @@ def _matched(b, post, text, max_tries=8):
 def _backdrop(b, post, text, typ):
     """Last resort before a text slide: a Jamaica photo for the post's topic that Claude says does not contradict the slide."""
     from . import themes as TH
+    if TH.slide_queries(text) or find_place(text)[0]:
+        return None                      # the slide names a dish, a place or people: only a photo of exactly that will do
     order = list(TYPE_THEMES.get(typ, TH.GENERIC_BOOKING)) + list(TH.GENERIC_BOOKING)
     for th in list(dict.fromkeys(order))[:5]:
         ph = b.pk.theme_photo(th)
@@ -193,6 +203,12 @@ def _slides(b, post, cover, items, closer, own_photos=None, typ=None):
             closer_ph = _backdrop(b, post, " ".join(closer[:2]), typ)
         if closer_ph is not None:
             closer = tuple(closer) + (closer_ph,)
+    keep = [i for i in range(len(items)) if i in own_photos]
+    if len(keep) >= 2 and len(keep) < len(items):    # slides with no matching photo are left out (never the wrong photo, never a bare text slide)
+        post.setdefault("flags", []).append(f"Left out {len(items) - len(keep)} slide(s) with no matching photo")
+        items = [items[i] for i in keep]; own_photos = {n: own_photos[i] for n, i in enumerate(keep)}
+        post["beat_lines"] = [h for h, _b in items]
+        total = len(items) + 2
     for i, (h, body) in enumerate(items):
         ph = own_photos.get(i)
         if ph:

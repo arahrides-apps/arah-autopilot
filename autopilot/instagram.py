@@ -140,12 +140,15 @@ def due_posts(cfg, now, posts, decisions, pub):
     """Yield (post, caption) for approved, due, unpublished posts inside the grace window, oldest first. Also reports what was skipped."""
     grace = dt.timedelta(hours=cfg["publish_grace_hours"]); out = []; skipped = []
     for p in sorted(posts, key=lambda x: x["slot"]):
-        if p["id"] in pub and pub[p["id"]]["status"] in ("published", "skipped", "rejected"):
+        d = decisions.get(p["id"])
+        st = pub.get(p["id"], {}).get("status")
+        if st == "published":
             continue
+        if st in ("skipped", "rejected") and not (d and d["decision"] == "approve"):
+            continue                     # still not approved; an approval given later (you changed your mind) is honoured below
         slot = dt.datetime.fromisoformat(p["slot"])
         if slot > now:
             continue
-        d = decisions.get(p["id"])
         late_ok = cfg.get("late_same_day", True) and slot.date() == now.date()      # today's posts whose time passed can still go out once you approve them
         if now - slot > grace and not late_ok:
             skipped.append((p["id"], "rejected" if d and d["decision"] == "reject" else "skipped", "not approved in time" if not (d and d["decision"] == "approve") else "missed its window"))
