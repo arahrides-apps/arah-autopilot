@@ -9,6 +9,7 @@ from .config import ROOT
 log = logging.getLogger("webvideo")
 CACHE = ROOT / "cache" / "webclips"
 _dead = False
+ADDED = [0]
 
 def _search(q, n=20):
     global _dead
@@ -30,24 +31,32 @@ def _frame(path, out, at=1.5):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(at), "-i", str(path), "-frames:v", "1", str(out)], timeout=60)
     return out if Path(out).exists() else None
 
-def find(queries, text, date, want=2, used=()):
-    """-> list of local mp4 paths (at most `want`) that fit `text`, never used before."""
+def find(queries, text, date, want=2, used=(), strict=False):
+    """-> list of local mp4 paths (at most `want`) that fit `text`, never used before.
+    strict=True (the words name a place): the clip must be Jamaica. Otherwise (a beach, a drive, food, a family) the search widens to
+    Caribbean and then the subject alone, and Claude checks the clip could be Jamaica and fits the words."""
     from . import promo as P, vision as V
-    from .themes import JUNK
+    from .themes import JUNK, NOT_JAMAICA
     CACHE.mkdir(parents=True, exist_ok=True)
-    out = []
+    out = []; seen = set()
+    variants = []
     for q in queries[:5]:
+        base = re.sub(r"\b(jamaica|jamaican)\b", "", q, flags=re.I).strip()
+        variants += [base + " Jamaica"] + ([] if strict else [base + " Caribbean", base + " tropical", base])
+    for qq in list(dict.fromkeys(variants)):
         if len(out) >= want:
             break
-        qq = q if "jamaica" in q.lower() else q + " Jamaica"
         for h in _search(qq):
             if len(out) >= want:
                 break
             key = f"pixabay-video:{h['id']}"
-            tags = (h.get("tags") or "").lower()
-            if key in used or P._pick([key], date) is None:           # used within the reuse window
+            if key in seen or key in used:
                 continue
-            if JUNK.search(tags) or h.get("duration", 0) < 4:
+            seen.add(key)
+            tags = (h.get("tags") or "").lower()
+            if P._pick([key], date) is None:                        # used within the reuse window
+                continue
+            if JUNK.search(tags) or (NOT_JAMAICA.search(tags) and "jamaica" not in tags) or h.get("duration", 0) < 4:
                 continue
             v = h.get("videos", {}); src = (v.get("medium") or v.get("large") or v.get("small") or {}).get("url")
             if not src:
@@ -65,9 +74,12 @@ def find(queries, text, date, want=2, used=()):
             fr = _frame(dest, CACHE / f"{h['id']}.jpg")
             if not fr:
                 continue
-            if not V.jamaica_gate(str(fr), key):
+            if strict or "jamaica" in qq.lower():
+                if not V.jamaica_gate(str(fr), key) and strict:
+                    continue
+            if not strict and V.shows(str(fr), "a real video frame that could have been filmed in Jamaica or the Caribbean: tropical or neutral setting, no snow, no landmarks, signs or flags of another country") is False:
                 continue
-            if V.shows(str(fr), f"what this caption describes: \"{text[:200]}\" (same place, people, food or activity; in Jamaica)") is False:
+            if V.shows(str(fr), f"what this caption describes: \"{text[:200]}\" (same kind of place, people, food or activity)") is False:
                 continue
-            P.note_use(key, date); out.append(dest)
+            P.note_use(key, date); out.append(dest); ADDED[0] += 1
     return out

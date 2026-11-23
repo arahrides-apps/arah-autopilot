@@ -74,6 +74,52 @@ def fetch(want=20):
             have.append(t["id"]); _save(m)
     return len(have)
 
+CCM_TAGS = ["instrumental,reggae", "instrumental,dub", "instrumental,dancehall", "instrumental,afrobeat", "instrumental,world", "instrumental,tropical", "instrumental,funk", "instrumental,upbeat"]
+
+def fetch_ccmixter(want=20):
+    """Second source, no key: ccMixter (instrumental tag, CC BY or CC0 only, so commercial use is allowed)."""
+    import requests
+    m = _meta(); have = [k for k, v in m.items() if (CACHE / v["file"]).exists()]
+    fails = 0
+    for tags in CCM_TAGS:
+        if len(have) >= want or fails >= 2:
+            break
+        try:
+            r = requests.get("https://ccmixter.org/api/query", timeout=15, headers={"User-Agent": "arah-autopilot"},
+                             params={"f": "json", "tags": tags, "limit": 25, "sort": "rank"})
+            r.raise_for_status(); res = r.json()
+        except Exception as e:
+            fails += 1; log.warning("ccMixter search failed (%s): %s", tags, e); continue
+        for t in res:
+            if len(have) >= want:
+                break
+            lic = (t.get("license_url") or "").lower()
+            if not ("/licenses/by/" in lic or "publicdomain/zero" in lic):      # CC BY or CC0 only (no NonCommercial, no ShareAlike)
+                continue
+            title = t.get("upload_name") or ""; tg = (t.get("upload_tags") or "") if isinstance(t.get("upload_tags"), str) else " ".join(t.get("upload_tags") or [])
+            if VOCALS.search(title + " " + tg) or JUNK.search(title + " " + tg) or "vocal" in tg.lower():
+                continue
+            key = f"ccm:{t.get('upload_id')}"
+            if key in m:
+                continue
+            mp3 = next((f.get("download_url") for f in t.get("files") or [] if str(f.get("download_url", "")).lower().endswith(".mp3")), None)
+            if not mp3:
+                continue
+            f = f"ccm_{t.get('upload_id')}.mp3"
+            try:
+                with requests.get(mp3, timeout=120, stream=True) as d:
+                    d.raise_for_status(); CACHE.mkdir(parents=True, exist_ok=True)
+                    with open(CACHE / f, "wb") as out:
+                        for chunk in d.iter_content(1 << 16): out.write(chunk)
+                if (CACHE / f).stat().st_size < 200_000:
+                    (CACHE / f).unlink(); continue
+            except Exception as e:
+                log.warning("ccMixter download failed: %s", e); continue
+            m[key] = {"file": f, "title": title, "creator": t.get("user_name") or "", "license": "cc0" if "zero" in lic else "by",
+                      "source": t.get("file_page_url") or "", "style": tags}
+            have.append(key); _save(m)
+    return len(have)
+
 def tracks():
     """[(path, credit or None)]: your own tracks first, then the downloaded ones."""
     own = sorted(OWN.glob("*.mp3")) + sorted(OWN.glob("*.m4a")) if OWN.exists() else []

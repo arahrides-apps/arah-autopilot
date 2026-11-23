@@ -54,6 +54,12 @@ def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
         if new:
             Q.save_day(str(d), sorted(keep + new, key=lambda p: p["slot"])); made.append((str(d), len(new)))
     notes += picker.notes
+    notes.append(picker.health())
+    try:
+        from . import music as _M, webvideo as _WV
+        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · video clips added to Reels {_WV.ADDED[0]}")
+    except Exception:
+        pass
     led.prune(now.date()); led.save()
     Q.write_index(sorted(set(notes)), now.isoformat())
     return made, kept, dropped, notes

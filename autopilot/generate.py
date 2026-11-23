@@ -280,7 +280,8 @@ class DayBuilder:
         words = " ".join(str(x) for x in (h, sub, g("a"), g("b"), " ".join(g("items") or [])) if x)
         ph = None
         for q in TH.slide_queries(words)[:3]:
-            ph = self.pk.scene(q, None, words=[w for w in q.lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2])
+            _w = [w for w in q.lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2]
+            ph = self.pk.scene(q, None, words=_w) or self.pk.topic(q, _w)
             if ph and not story._fits(post, ph, f"{h} {sub}"):          # the cover must show what the headline talks about
                 ph = None
             if ph: break
@@ -822,6 +823,12 @@ def run(cfg, picker=None, led=None, render=True, days=None):
         if posts:
             Q.save_day(str(d), posts); made.append((str(d), len(posts)))
     notes += picker.notes
+    notes.append(picker.health())
+    try:
+        from . import music as _M, webvideo as _WV
+        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · video clips added to Reels {_WV.ADDED[0]}")
+    except Exception:
+        pass
     led.prune(now.date()); led.save()
     Q.write_index(sorted(set(notes)), now.isoformat())
     return made, notes

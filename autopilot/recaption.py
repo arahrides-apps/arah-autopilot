@@ -1,6 +1,6 @@
 """Gives every post that has not gone out yet the new caption ending: a plain-words search line, 5 fresh hashtags and a tagged location.
 The wording of the post is kept. Approved posts keep their approval. Posts already published are never touched."""
-import re, random, logging
+import re, random, logging, json
 from . import queue as Q
 from .config import now as now_fn
 from .generate import hashtags
@@ -58,5 +58,9 @@ def run(cfg):
                 json.dump(d, open(Q.DOCS / "decisions" / f"{p['id']}.json", "w"), indent=1, ensure_ascii=False)
         if changed:
             json.dump(day, open(f, "w"), indent=1, ensure_ascii=False)
-    Q.write_index([], now.isoformat())
+    try:                                             # keep the notes the drafting run wrote (skipped posts, run checks)
+        old = json.load(open(Q.DOCS / "index.json")).get("notes", [])
+    except Exception:
+        old = []
+    Q.write_index(old, now.isoformat())
     return n

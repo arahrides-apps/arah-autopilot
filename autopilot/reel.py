@@ -69,36 +69,60 @@ def cfg_web_video():
     except Exception:
         return True
 
+CTA_LINES = ["Book in minutes on ArahRides.com", "Airport pickup: Montego Bay, Kingston, Ocho Rios", "Pay with Klarna, Affirm, Apple Pay or Google Pay", "WhatsApp Winston, 24/7"]
+GENERIC_CLIPS = ["Jamaica beach", "Jamaica coastal road drive", "Jamaica aerial coast", "Negril beach", "Jamaica waterfall", "tropical road trip", "Caribbean beach drone", "palm trees beach sunset"]
+
 def _hook(p, out, end_img, date):
-    """The scroll-stopping Reel: real photos, hook line first, fast cuts, pop-in captions, end card. False when the post has fewer than 3 photos."""
+    """The scroll-stopping Reel: real photos and real video clips, hook line first, fast cuts, pop-in captions, music, end card.
+    Shots are filled with free video clips (Pixabay) that fit each caption; car posts keep the car photo as the hook and add Jamaica scenery clips.
+    False only when fewer than 3 shots could be found."""
     from . import reel2
     raw = [x for x in p.get("raw", []) if Path(x).exists()]
-    if len(raw) < 3:
-        return False
     first = re.split(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]|\n", p.get("copy_text") or p.get("alt") or "")[0].strip()
     lines = [p.get("hook_line") or first] + list(p.get("beat_lines", []))
-    while len(lines) < len(raw):
-        lines.append("")
+    target = max(4, min(6, len(lines)))
+    i = 0
+    while len(lines) < target:
+        lines.append(CTA_LINES[i % len(CTA_LINES)]); i += 1
+    shots = raw[:target]
     nclips = 0
-    if cfg_web_video() and p.get("type") not in ("deal", "deposits", "car_hero"):     # mix real Jamaica video clips into the Reel (free Pixabay videos)
+    if cfg_web_video():
         from . import webvideo as WV, story as S, themes as TH
-        used = set()
-        for i in range(len(raw)):                                # every shot, hook included, becomes a video clip when a fitting one exists
-            t = f"{lines[i] if i < len(lines) else ''} {first}"
-            qs = S.place_queries(t) + TH.slide_queries(t) + S.place_queries(p.get("copy_text", ""))
-            got = WV.find(qs, t, date, want=1, used=used) if qs else []
+        used = set(); carpost = p.get("type") in ("deal", "deposits", "car_hero")
+        for k in range(target):
+            if carpost and k == 0:
+                continue                                             # a car post always opens on our own car photo
+            have_photo = k < len(shots)
+            if have_photo and k % 2 == 0:
+                continue                                             # alternate: photo, clip, photo, clip... (more video, fewer stills)
+            t = f"{lines[k]} {first}"
+            pq = S.place_queries(t)
+            qs = (pq + TH.slide_queries(t)) if not carpost else []
+            qs = qs or (S.place_queries(p.get("copy_text", "")) + GENERIC_CLIPS)
+            got = WV.find(qs, t, date, want=1, used=used, strict=bool(pq) and not carpost)
             if got:
-                raw[i] = str(got[0]); used.add(str(got[0])); nclips += 1
+                used.add(str(got[0])); nclips += 1
+                if have_photo: shots[k] = str(got[0])
+                else: shots.append(str(got[0]))
+    if len(shots) < 3:
+        return False
     seed = int(hashlib.md5((str(date) + p["id"]).encode()).hexdigest()[:6], 16)
-    _o, music = reel2.make_hook_reel(raw, lines[:len(raw)], end_img, out, seed=seed)
+    try:                                                         # a branded end frame: logo, the offer, book in minutes, Winston, payment options
+        from . import promo_art as _A
+        if not str(end_img).endswith("end.png"):
+            head = lines[0] if len(lines[0]) <= 48 else lines[0][:46].rsplit(" ", 1)[0] + "…"
+            end_img = _A.render_reel_end(head, "Choose the car you want to drive.", Path(out).with_name(Path(out).stem + "_end.png"))
+    except Exception as e:
+        log.warning("branded end card failed, using the last slide: %s", e) if "log" in globals() else None
+    _o, music = reel2.make_hook_reel(shots, lines[:len(shots)], end_img, out, seed=seed)
+    p["reel_kind"] = f"hook Reel: {len(shots) - nclips} photos + {nclips} video clips, fast cuts, captions" + (", instrumental music" if music else ", no music")
     if nclips:
         p.setdefault("flags", []).append(f"Reel includes {nclips} real video clip(s) from Pixabay (free licence), checked by Claude against the words")
-    p["reel_kind"] = "hook Reel: real photos and clips, fast cuts, captions" + (", instrumental music" if music else ", no music")
     if not music:
         p.setdefault("flags", []).append("Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.")
     else:
         credit = getattr(reel2.make_hook_reel, "credit", None)
-        if credit and credit not in p.get("caption", ""):         # CC BY tracks need a credit; it goes just above the hashtags
+        if credit and credit not in p.get("caption", ""):
             parts = p["caption"].rstrip().split("\n\n")
             at = len(parts) - 1 if parts and parts[-1].strip().startswith("#") else len(parts)
             parts.insert(at, credit); p["caption"] = "\n\n".join(parts)[:2200]
@@ -115,7 +139,9 @@ def _fresh_file(files, date, peek=False):
 def add_reels(cfg, posts, date):
     try:                                                       # instrumental, commercial-use music for every Reel (Openverse, no key needed)
         from . import music as _M
-        _M.fetch(cfg.get("reels", {}).get("music_tracks", 20))
+        _n = cfg.get("reels", {}).get("music_tracks", 20)
+        if _M.fetch(_n) < _n:
+            _M.fetch_ccmixter(_n)
     except Exception as _e:
         log.warning("music fetch skipped: %s", _e) if "log" in globals() else None
     """Marks some of the day's posts to go out as Reels. Returns notes. A reel replaces that slot's carousel on Instagram; the review page still shows the slides."""

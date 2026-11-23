@@ -1,6 +1,12 @@
 import argparse, logging, os, sys, random, datetime as dt, shutil, json
 from . import config, queue as Q
 
+def _save_after(cmd):
+    """Save this run's drafts right away with the clash-proof save (scripts/save.sh), so a slow run never loses its work to a clash."""
+    if os.environ.get("GITHUB_ACTIONS") == "true" and os.path.exists("scripts/save.sh") and cmd in ("generate", "regenerate", "recaption"):
+        msg = {"generate": "Draft posts for review", "regenerate": "Redo posts that were not approved", "recaption": "Update captions"}[cmd]
+        os.system(f'bash scripts/save.sh "{msg}"')
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="autopilot")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -11,6 +17,9 @@ def main(argv=None):
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     cfg = config.load()
+    in_actions = os.environ.get("GITHUB_ACTIONS") == "true" and os.path.exists("scripts/save.sh")
+    if in_actions and a.cmd in ("generate", "regenerate"):
+        os.system("git pull --ff-only -q || true")             # start from the newest version, even on a re-run of an old job
     if a.cmd == "generate":
         from .generate import run
         made, notes = run(cfg, render=not a.no_render, days=a.days)
@@ -85,6 +94,7 @@ def main(argv=None):
         pub = Q.published(); posts = Q.all_posts(); dec = Q.decisions()
         for p in posts:
             print(p["slot"][:16], p["type"].ljust(9), (pub.get(p["id"], {}).get("status") or dec.get(p["id"], {}).get("decision") or "pending"))
+    _save_after(a.cmd)
     return 0
 
 if __name__ == "__main__":

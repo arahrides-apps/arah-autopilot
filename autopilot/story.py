@@ -124,6 +124,7 @@ def _matched(b, post, text, max_tries=8):
             tries += 1
             ph = b.pk._own("scenery", None, None, about=w) if (w and _k == 0) else None
             ph = ph or b.pk.scene(q, None, words=w or None)
+            ph = ph or b.pk.topic(q, w)                        # people, food, activities: widen the search beyond photos tagged 'Jamaica'
             if not ph:
                 break                                          # this search has nothing left: try the next one
             if _fits(post, ph, text):

@@ -431,6 +431,7 @@ class Picker:
         self.notes = []
         self.tried = set()
         self.picked = []          # every photo handed out for the post being built (the Reel is made from these, not from the slides)
+        self._lenient = False; self.stats = {}; self.loaded = 0
         self._sc = {}; self._dead = set()          # search results are reused within a run; a source that errors (rate limit) is skipped for the run
 
     def _search(self, web, query):
@@ -439,8 +440,10 @@ class Picker:
             return []
         k = (web.name, query)
         if k not in self._sc:
+            st = self.stats.setdefault(web.name, [0, 0])
             try:
                 self._sc[k] = web.search(query, self.rng)
+                st[0] += 1; st[1] += len(self._sc[k])
             except Exception as e:
                 self.notes.append("%s search failed: %s" % (web.name, str(e)[:80]))
                 if any(c in str(e) for c in ("429", "403", "401")): self._dead.add(web.name)
@@ -490,7 +493,14 @@ class Picker:
             meta = " ".join(str(x) for x in (item.get("name", ""), (extra or {}).get("credit", ""), (extra or {}).get("text", ""), item.get("title", ""), item.get("description", "")))
             if _TH.NOT_JAMAICA.search(meta) and "jamaica" not in meta.lower():
                 log.info("skip %s: its own title/credit names another place", item["id"]); return None
-        if kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
+        if kind != "car" and src.name not in ("drive", "local") and getattr(self, "_lenient", False):
+            try:                                                            # people / food / activity photo: it must look like it could be Jamaica
+                from . import vision as _V
+                if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, and no landmarks, signs or flags of another country") is False:
+                    log.info("skip %s: Claude says it does not look like Jamaica", item["id"]); return None
+            except Exception as e:
+                log.warning("Jamaica look check skipped: %s", e)
+        elif kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
             try:
                 from . import vision as _V
                 if not _V.jamaica_gate(str(dest), src.name + ":" + item["id"]):
@@ -513,7 +523,7 @@ class Picker:
                 log.warning("plate box check skipped: %s", ex)
         ph = Photo(item["id"], item["name"], src.name, str(use), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                    e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
-        self.picked.append(ph.path)
+        self.picked.append(ph.path); self.loaded += 1
         self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
         return ph
 
@@ -696,6 +706,46 @@ class Picker:
         kind = IL.make(text, dest)
         return Photo("drawn:" + dest.stem, "drawn-" + dest.stem, "drawn", str(dest), "scenery", "Arah Rides illustration", text,
                      ["Illustration (%s scene): no free photo of %s could be confirmed, so this is a drawing, not a photo. Swap in a real photo if you have one" % (kind, text or "this place")], 0, "", 1080, 1350)
+
+    DRAWN = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|\b3d\b|poster|logo|icon|graphic|ai generated|"
+                       r"generative|midjourney|nude|naked|topless|lingerie|bikini|snow|winter|skiing|christmas tree farm", re.I)
+
+    def health(self):
+        """One line for the review page: which photo sources answered this run, and whether Claude's checks ran."""
+        import os
+        src = ", ".join(f"{k} {v[0]} searches / {v[1]} results" for k, v in sorted(self.stats.items())) or "no web searches"
+        dead = (" · stopped early (limit or error): " + ", ".join(sorted(self._dead))) if self._dead else ""
+        claude = "Claude photo checks ON" if os.environ.get("ANTHROPIC_API_KEY") else "Claude photo checks OFF: add the ANTHROPIC_API_KEY secret in GitHub (Settings → Secrets → Actions)"
+        return f"Run check · photos used {self.loaded} · {src}{dead} · {claude}"
+
+    def topic(self, query, words=None):
+        """A web photo of people, food or an activity (a dad and his daughter, jerk chicken, rafting) when no Jamaica-tagged photo exists.
+        Stock sites rarely tag these 'Jamaica', so the search widens: the query as written, then Caribbean, then the subject alone.
+        The photo must name the subject in its tags, must not name another country, and Claude checks it could be Jamaica and fits the words."""
+        base = re.sub(r"\b(jamaica|jamaican)\b", "", query, flags=re.I).strip()
+        qs = list(dict.fromkeys([query, base + " Caribbean", base]))
+        need = [w.lower() for w in (words or []) if w]
+        for web in self.web:
+            if web.name in self._dead or web.name == "wikimedia":          # Wikimedia people photos are archive shots: skip
+                continue
+            for q in qs:
+                items = self._search(web, q)
+                self.rng.shuffle(items)
+                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"] * 0.8
+                        and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
+                        and not self.DRAWN.search(i.get("text", "")) and self._web_ok(web, i)
+                        and (not need or any(w in i.get("text", "").lower() for w in need))]
+                for it in good[:6]:
+                    self.tried.add(it["id"])
+                    self._lenient = True
+                    try:
+                        p = self._load(web, it, "scenery", ["Web photo (people, food or activity): checked by Claude"],
+                                       {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                    finally:
+                        self._lenient = False
+                    if p:
+                        return p
+        return None
 
     def scene(self, query, place=None, ok=None, strict=False, words=None):
         try:
