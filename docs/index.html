@@ -72,10 +72,12 @@ async function load(){
   }
   render();
 }
-function status(p){const u=PUB[p.id];if(u&&u.status!=="retrying")return u.status;const d=DEC[p.id];if(d&&d.decision!=="pending")return d.decision==="approve"?"approved":"rejected";return "pending"}
+function status(p){const u=PUB[p.id];if(u&&["published","failed"].includes(u.status))return u.status;const d=DEC[p.id];if(d&&d.decision!=="pending")return d.decision==="approve"?"approved":"rejected";return "pending"}   // your latest choice always wins until the post is live
 function render(){
   $("#notes").innerHTML=(IDX.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join("")+(S.tok&&S.repo?"":'<div class="note">Tap <b>Settings</b> and add your GitHub token so Approve works.</div>');
-  const days=[...new Set(IDX.posts.map(p=>p.date))].sort();
+  const tz=(IDX.tz||"America/Jamaica"),iso=t=>new Intl.DateTimeFormat("en-CA",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit"}).format(t);
+  const today=iso(new Date()),last=iso(new Date(Date.now()+10*864e5));      // only today and the next 10 days are shown
+  const days=[...new Set(IDX.posts.map(p=>p.date))].filter(d=>d>=today&&d<=last).sort();
   if(!DAY||!days.includes(DAY))DAY=days.find(d=>IDX.posts.some(p=>p.date===d&&status(p)==="pending"))||days[0];
   $("#tabs").innerHTML=days.map(d=>{const ps=IDX.posts.filter(p=>p.date===d),a=ps.filter(p=>["approved","published"].includes(status(p))).length;return `<div class="tab ${d===DAY?"on":""}" data-d="${d}">${fmtDay(d)} · ${a}/${ps.length}</div>`}).join("");
   document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{DAY=t.dataset.d;render()});
@@ -92,7 +94,7 @@ const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 function fmtDay(d,l){const x=new Date(d+"T12:00:00");return x.toLocaleDateString(undefined,l?{weekday:"long",month:"long",day:"numeric"}:{weekday:"short",month:"short",day:"numeric"})}
 function fmtTime(s){const m=s.match(/T(\d\d):(\d\d)/);let h=+m[1];return `${h%12||12}:${m[2]} ${h<12?"AM":"PM"}`}
 function card(p){
-  const s=status(p),d=DEC[p.id],cap=(d&&d.caption)||p.caption,locked=["published","skipped"].includes(s),u=PUB[p.id]||{};
+  const s=status(p),d=DEC[p.id],cap=(d&&d.caption)||p.caption,locked=s==="published",u=PUB[p.id]||{};
   return `<div class="card ${s}" id="c-${p.id}">${p.reel?`<div style="padding:8px 12px 0"><div class="chip" style="background:#c1272d;color:#fff;display:inline-block;margin-bottom:6px">🎬 REEL · ${esc(p.reel_kind||"")}</div><video src="${p.reel}" controls playsinline preload="metadata" style="width:100%;max-height:70vh;border-radius:10px;background:#000"></video><div style="font-size:12px;opacity:.7;padding:4px 0">This posts to Instagram as a Reel. The slides below are the same story.</div></div>`:""}<div class="imgs">${p.images.map(i=>`<img loading="lazy" src="${i}" alt="${esc(p.alt)}">`).join("")}</div>
   <div class="meta"><span class="chip">${p.type.replace("_"," ")}</span>${p.reel?`<span class="chip" style="background:#c1272d;color:#fff">REEL</span>`:""}<span>${fmtTime(p.slot)}</span>${p.images.length>1?`<span>${p.images.length} slides</span>`:""}<span class="st ${s}">${s}</span></div>
   ${p.location&&p.location.name?`<div class="flags" style="color:#9fd6b0"><div style="list-style:none">📍 Location tag: ${esc(p.location.name)}${p.location.id?" (ID "+esc(p.location.id)+")":" (no ID: will post without a tag)"}</div></div>`:""}
@@ -101,7 +103,7 @@ function card(p){
   ${u.permalink?`<div class="cnt"><a href="${u.permalink}" target="_blank">View on Instagram</a></div>`:""}${u.note&&!locked?`<div class="cnt bad">${esc(u.note)}</div>`:""}
   <div class="act" style="padding-bottom:0"><button class="btn ghost" data-copy="${p.id}">Copy caption</button>${p.images.map((i,k)=>`<a class="btn ghost" style="text-align:center;text-decoration:none" href="${i}" download="${p.id}_${k+1}.jpg">Image${p.images.length>1?" "+(k+1):""}</a>`).join("")}</div>
   ${p.reel&&s==="approved"?`<div class="cnt" style="color:#9fd6b0">Will post as: <b>${d&&d.as==="carousel"?"Carousel (Reel skipped)":"Reel"}</b></div>`:""}
-  <div class="act">${locked?"":p.reel?`<button class="btn ok" data-a="approve" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"&&!(d&&d.as==="carousel")?"Save edit":"Approve Reel"}</button><button class="btn ok" style="background:#E8A93A;color:#1A1F1C" data-a="carousel" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"&&d&&d.as==="carousel"?"Save edit":"Approve carousel only"}</button>`:`<button class="btn ok" data-a="approve" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"?"Save edit":"Approve"}</button><button class="btn no" data-a="reject" data-id="${p.id}" ${S.tok?"":"disabled"}>Reject</button>${s!=="pending"?`<button class="btn ghost" data-a="pending" data-id="${p.id}" ${S.tok?"":"disabled"}>Undo</button>`:""}`}</div></div>`
+  <div class="act">${locked?"":p.reel?`<button class="btn ok" data-a="approve" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"&&!(d&&d.as==="carousel")?"Save edit":"Approve Reel"}</button><button class="btn ok" style="background:#E8A93A;color:#1A1F1C" data-a="carousel" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"&&d&&d.as==="carousel"?"Save edit":"Approve carousel only"}</button>`:`<button class="btn ok" data-a="approve" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="approved"?"Save edit":"Approve"}</button>`}${locked?"":`<button class="btn no" data-a="reject" data-id="${p.id}" ${S.tok?"":"disabled"}>${s==="rejected"?"Rejected":"Reject"}</button>${s!=="pending"?`<button class="btn ghost" data-a="pending" data-id="${p.id}" ${S.tok?"":"disabled"}>Undo (back to pending)</button>`:""}`}</div></div>`
 }
 function cnt(t){const id=t.id.slice(2),n=$("#n-"+id),tags=(t.value.match(/#\w+/g)||[]).length,bad=tags>5||t.value.length>2200;n.textContent=`${t.value.length}/2200 characters · ${tags}/5 hashtags`;n.className="cnt"+(bad?" bad":"")}
 async function put(p,decision,caption,as){
