@@ -8,10 +8,7 @@
    "type": "deal",
    "flags": [
     "Number plate visible (kept sharp on purpose)",
-    "2 of 5 slides have photos",
-    "Reel includes 4 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
-    "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
-    "Goes out as a Reel (hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music)."
+    "2 of 5 slides have photos"
    ],
    "images": [
     "media/2026-11-24/2026-11-24_0000_deal_1.jpg",
@@ -22,18 +19,18 @@
    ],
    "_deal_k": 0,
    "photo": {
-    "id": "local:arah_listing_226_2_2018-nissan-sylphy",
-    "name": "arah_listing_226_2_2018-nissan-sylphy",
+    "id": "local:arah_listing_252_2_nissan-sylphy",
+    "name": "arah_listing_252_2_nissan-sylphy",
     "source": "local",
     "credit": "Arah Rides"
    },
    "copy_text": "Nissan Sylphy from US$60 a day 🚗\n\nSecurity deposit: US$200.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
    "alt": "Nissan Sylphy rental car in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
    },
-   "caption": "Nissan Sylphy from US$60 a day 🚗\n\nSecurity deposit: US$200.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #ArahRides #JamaicaVacation #CarRentalJamaica",
+   "caption": "Nissan Sylphy from US$60 a day 🚗\n\nSecurity deposit: US$200.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#OchoRios #JamaicaRentalCar #ArahRides #JamaicaVacation #JamaicaTravel",
    "beat_lines": [
     "From US$60 a day",
     "Deposit just US$200",
@@ -41,12 +38,10 @@
     "Book in minutes: website or WhatsApp Winston"
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/c7994aa35714f856.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/d28158cf7dd7a9c1.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/50a23a2b1e612912.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e90fe3e79d0b9552.jpg"
    ],
-   "status": "pending",
-   "reel_kind": "hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music",
-   "reel": "media/2026-11-24/2026-11-24_0000_deal.mp4"
+   "status": "pending"
   },
   {
    "id": "2026-11-24_0200_deal",
@@ -55,11 +50,11 @@
    "type": "deal",
    "flags": [
     "Number plate visible (kept sharp on purpose)",
-    "Similar sedan shown for the Honda Grace (same body style, from our fleet photos)",
+    "Similar 7 seater shown for the Toyota Wish (same body style, from our fleet photos)",
     "1 of 5 slides have photos",
-    "Reel includes 4 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
+    "Reel includes 2 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
     "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
-    "Goes out as a Reel (hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music)."
+    "Goes out as a Reel (hook Reel: 1 photos + 2 video clips, fast cuts, captions, no music)."
    ],
    "images": [
     "media/2026-11-24/2026-11-24_0200_deal_1.jpg",
@@ -70,29 +65,29 @@
    ],
    "_deal_k": 1,
    "photo": {
-    "id": "local:arah_listing_112_1_2019-subaru-legacy",
-    "name": "arah_listing_112_1_2019-subaru-legacy",
+    "id": "local:arah_listing_71_2_2019-nissan-xtrail",
+    "name": "arah_listing_71_2_2019-nissan-xtrail",
     "source": "local",
     "credit": "Arah Rides"
    },
-   "copy_text": "Sedans from US$60 a day 🚗\n\nHonda Grace, Toyota Corolla Axio, Toyota Axio and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
-   "alt": "Sedans for rent in Jamaica (carousel: swipe for more)",
+   "copy_text": "7-seaters from US$65 a day 🚗\n\nToyota Wish, Honda Stepwgn, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "7-seaters for rent in Jamaica (carousel: swipe for more)",
    "location": {
     "name": "Kingston, Jamaica",
     "id": "109489972411518"
    },
-   "caption": "Sedans from US$60 a day 🚗\n\nHonda Grace, Toyota Corolla Axio, Toyota Axio and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\n#KingstonJamaica #CarRentalJamaica #ArahRides #JamaicaTravel #AirportPickupJamaica",
+   "caption": "7-seaters from US$65 a day 🚗\n\nToyota Wish, Honda Stepwgn, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #JamaicaCarRental #DiscoverTheRealJamaica #JamaicaItinerary #JamaicaRentalCar",
    "beat_lines": [
-    "From US$60 a day",
-    "Honda Grace, Toyota Corolla Axio",
-    "Room for four and the luggage.",
+    "From US$65 a day",
+    "Toyota Wish, Honda Stepwgn",
+    "Seats seven.",
     "Check availability: arahrides.com or Winston"
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e90fe3e79d0b9552.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/53da487a4a37b892.jpg"
    ],
    "status": "pending",
-   "reel_kind": "hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music",
+   "reel_kind": "hook Reel: 1 photos + 2 video clips, fast cuts, captions, no music",
    "reel": "media/2026-11-24/2026-11-24_0200_deal.mp4"
   },
   {
@@ -122,7 +117,7 @@
     "name": "Kingston, Jamaica",
     "id": "109489972411518"
    },
-   "caption": "The Mouttet Mile at Caymanas Park. 🇯🇲\n\nTwo days of racing and Dancehall Glam on Dec 4 and 5, with a US$300,000 purse. Pick up in Kingston and drive to the track. Must be 18 or older to bet or play.\n\n📅 Dec 4 to 5\n📍 Caymanas Park, Portmore, St. Catherine\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\n#KingstonJamaica #JamaicaRentalCar #ArahRides #VisitJamaica #AirportPickupJamaica",
+   "caption": "The Mouttet Mile at Caymanas Park. 🇯🇲\n\nTwo days of racing and Dancehall Glam on Dec 4 and 5, with a US$300,000 purse. Pick up in Kingston and drive to the track. Must be 18 or older to bet or play.\n\n📅 Dec 4 to 5\n📍 Caymanas Park, Portmore, St. Catherine\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #NormanManleyAirport #JamaicaCarRental #RentJamaican #VisitJamaica",
    "raw": [],
    "status": "pending",
    "reel_kind": "hook Reel: 0 photos + 4 video clips, fast cuts, captions, no music",
@@ -136,7 +131,7 @@
    "flags": [
     "Number plate visible (kept sharp on purpose)",
     "Similar hatchback shown for the Toyota Vitz (same body style, from our fleet photos)",
-    "Slide photo (food): Photo by tehzeebkazmii on Pixabay",
+    "Slide photo (food): Photo by rajdeepcraft on Pixabay",
     "2 of 7 slides have photos"
    ],
    "images": [
@@ -160,23 +155,60 @@
     "name": "Montego Bay, Jamaica",
     "id": "115773858436055"
    },
-   "caption": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #RentACarJamaica #ArahRides #TravelJamaica #JamaicaTravel",
+   "caption": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #SelfDriveJamaica #ArahRides #JamaicaItinerary #JamaicaRentalCar",
    "hook_line": null,
    "beat_lines": [
     "Book in minutes: arahrides.com"
    ],
    "photos_extra": [
     {
-     "id": "pixabay:10391441",
-     "name": "pixabay-10391441"
+     "id": "pixabay:5930494",
+     "name": "pixabay-5930494"
     }
    ],
    "raw": [
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/9a3e063143d709f7.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/eeb608bcf6b321af.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/09c5e0144517fc8f.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/6e7b8d7bc66040f7.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/dc9b9df466e30187.jpg"
    ],
    "status": "pending"
+  },
+  {
+   "id": "2026-11-24_1800_moment",
+   "date": "2026-11-24",
+   "slot": "2026-11-24T18:00:00-05:00",
+   "type": "moment",
+   "flags": [
+    "Web photo (people, food or activity): checked by Claude",
+    "1 of 5 slides have photos",
+    "Goes out as a Reel (sale video (Drive clip))."
+   ],
+   "images": [
+    "media/2026-11-24/2026-11-24_1800_moment_1.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_2.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_3.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_4.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_5.jpg"
+   ],
+   "promo": "PureCyber",
+   "copy_text": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.",
+   "alt": "Seasonal graphic: Holiday savings: up to $40 off. (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#NormanManleyAirport #JamaicaCarRental #DiscoverTheRealJamaica #ExploreJamaica #JamaicaItinerary",
+   "beat_lines": [
+    "Plan your wheels.",
+    "Pick up where you land.",
+    "Know the price before you land."
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/1b4bd67abf5d702c.jpg"
+   ],
+   "status": "pending",
+   "reel_kind": "sale video (Drive clip)",
+   "reel": "media/2026-11-24/2026-11-24_1800_moment.mp4"
   },
   {
    "id": "2026-11-24_2000_review",
@@ -224,11 +256,10 @@
    "type": "deal",
    "flags": [
     "Number plate visible (kept sharp on purpose)",
-    "Similar 7 seater shown for the Toyota Wish (same body style, from our fleet photos)",
-    "1 of 5 slides have photos",
-    "Reel includes 4 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
+    "2 of 5 slides have photos",
+    "Reel includes 3 real video clip(s) from Pixabay (free licence), checked by Claude against the words",
     "Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.",
-    "Goes out as a Reel (hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music)."
+    "Goes out as a Reel (hook Reel: 1 photos + 3 video clips, fast cuts, captions, no music)."
    ],
    "images": [
     "media/2026-11-24/2026-11-24_2200_deal_1.jpg",
@@ -239,29 +270,30 @@
    ],
    "_deal_k": 2,
    "photo": {
-    "id": "local:arah_listing_208_1_2017-toyota-voxy",
-    "name": "arah_listing_208_1_2017-toyota-voxy",
+    "id": "local:arah_b3_12_suzuki-vitara-red",
+    "name": "arah_b3_12_suzuki-vitara-red",
     "source": "local",
     "credit": "Arah Rides"
    },
-   "copy_text": "7-seaters from US$65 a day 🚗\n\nToyota Wish, Honda Stepwgn, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
-   "alt": "7-seaters for rent in Jamaica (carousel: swipe for more)",
+   "copy_text": "Suzuki Vitara from US$72 a day 🚗\n\nSecurity deposit: US$1000.\nSUV. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "Suzuki Vitara rental car in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
    },
-   "caption": "7-seaters from US$65 a day 🚗\n\nToyota Wish, Honda Stepwgn, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #JamaicaCarRental #ArahRides #VisitJamaica #JamaicaTravel",
+   "caption": "Suzuki Vitara from US$72 a day 🚗\n\nSecurity deposit: US$1000.\nSUV. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#SangsterAirport #JamaicaCarRental #RentJamaican #JamaicaVacation #JamaicaRentalCar",
    "beat_lines": [
-    "From US$65 a day",
-    "Toyota Wish, Honda Stepwgn",
-    "Seats seven.",
-    "Check availability: arahrides.com or Winston"
+    "From US$72 a day",
+    "Deposit US$1000",
+    "A higher seat and more room for the family and the bags.",
+    "Book in minutes: website or WhatsApp Winston"
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/6d32587edf0719ac.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/be3d9f00d21b1016.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/596bf8cb33231767.jpg"
    ],
    "status": "pending",
-   "reel_kind": "hook Reel: 1 photos + 4 video clips, fast cuts, captions, no music",
+   "reel_kind": "hook Reel: 1 photos + 3 video clips, fast cuts, captions, no music",
    "reel": "media/2026-11-24/2026-11-24_2200_deal.mp4"
   }
  ]
