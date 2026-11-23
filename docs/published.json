@@ -1563,5 +1563,21 @@
   "at": "2026-11-22T22:01:07.371244-05:00",
   "media_id": "webhook",
   "permalink": ""
+ },
+ "2026-11-22_1100_tip": {
+  "status": "skipped",
+  "at": "2026-11-23T00:01:19.615595-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-22_2000_review": {
+  "status": "skipped",
+  "at": "2026-11-23T00:01:19.615595-05:00",
+  "note": "not approved in time"
+ },
+ "2026-11-23_0000_deal": {
+  "status": "published",
+  "at": "2026-11-23T00:01:19.615595-05:00",
+  "media_id": "webhook",
+  "permalink": ""
  }
 }
