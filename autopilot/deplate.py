@@ -35,7 +35,9 @@ def find_boxes(path, model=None):
         return None
     try:
         txt = V.ask([V._jpeg(path, 1024), PROMPT], 400) or ""
-        boxes = json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("boxes") or []
+        import re as _re
+        m = _re.search(r"\{.*\}", txt, _re.S)
+        boxes = (json.loads(m.group(0)).get("boxes") or []) if m else []
         return [[float(v) for v in bx] for bx in boxes if len(bx) == 4]
     except Exception as e:
         log.warning("deplate: AI check failed for %s: %s", path, e)

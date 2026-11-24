@@ -737,6 +737,9 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         past = at <= now
         if hhmm in skip or (past and not (cfg.get("draft_past_slots_today", True) and date == now.date())):
             continue
+        import time as _tm
+        if cfg.get("_deadline") and _tm.time() > cfg["_deadline"]:
+            break                                       # out of time: keep what this day has so far, the next run fills the rest
         typ = typ0; cur = (mom, left); is_promo = False
         if camp and idx in camp.get("deal_slots", []):
             typ = "deal"; deal_k = camp["deal_slots"].index(idx)
@@ -823,8 +826,12 @@ def run(cfg, picker=None, led=None, render=True, days=None):
     now = now_fn(cfg); led = led or Ledger(); notes = []
     picker = picker or Picker(cfg, led, now.date(), random.Random())
     made = []
+    import time as _time; _t0 = _time.time(); cfg["_deadline"] = _t0 + cfg.get("max_run_minutes", 50) * 60
     for off in range(0, (days if days is not None else cfg["days_ahead"]) + 1):
         d = now.date() + dt.timedelta(days=off)
+        if _time.time() - _t0 > cfg.get("max_run_minutes", 50) * 60:     # stop in time to save: the run limit cancels everything unsaved
+            notes.append(f"Run check · stopped early after {cfg.get('max_run_minutes', 50)} minutes to save what was made; the next run fills the rest")
+            break
         day = Q.load_day(str(d))
         keep = day["posts"] if day else []
         # a day that already exists keeps its posts; only its empty slots still ahead are filled (posts skipped earlier get another try)

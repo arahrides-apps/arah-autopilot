@@ -12,6 +12,7 @@ log = logging.getLogger("regen")
 
 def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
     now = now_fn(cfg); led = led or Ledger(); notes = []
+    import time as _tm; cfg["_deadline"] = _tm.time() + cfg.get("max_run_minutes", 50) * 60     # save before the run limit
     dec = Q.decisions(); pub = Q.published()
     start = dt.date.fromisoformat(start) if start else now.date()
     dropped = kept = 0

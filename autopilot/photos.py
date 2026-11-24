@@ -545,6 +545,8 @@ class Picker:
                 m = self._meta(it["name"], it); q = 3
                 if tag and (not m or m.get("tag") != tag):
                     continue
+                if m and m.get("tag") == "cyber-promo" and tag != "cyber-promo":
+                    continue                                        # new cars not on the site yet: only the cyber promo posts may show them
                 if m:
                     if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"] and not (want == "scenery" and self.cfg["photos"].get("allow_people_scenery"))) or m["quality"] < 3:
                         continue

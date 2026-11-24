@@ -388,7 +388,18 @@ def moment_story(b, post, pages, m):
                 cover = T.ccover(c.path, m.get("k", ""), m.get("h", ""), "Swipe for the details."); post.setdefault("flags", []).append(c.flags[0])
         return _slides(b, post, cover, items, b.rng.choice(CLOSE_GENERAL), photos, typ="moment")
     if m.get("theme"):                                       # a seasonal campaign (Christmas...): its own photos on the cover and slides
-        ph = [b.pk.theme_photo(m["theme"]) for _ in range(3)]
+        ph = []
+        if post.get("promo"):                                # the cyber promo: our newest cars first (outside on the cover, inside on a slide), never named
+            try:
+                c = b.pk._own("car", tag="cyber-promo", exterior=True)
+                if c:
+                    ph.append(c)
+                    i = b.pk._own("car", tag="cyber-promo")
+                    if i: ph.append(i)
+                    post.setdefault("flags", []).append("Shows new fleet cars that are not on the site yet (no model named in the post)")
+            except Exception:
+                ph = []
+        ph += [b.pk.theme_photo(m["theme"]) for _ in range(3 - len(ph))]
         for x in ph:
             if x: post.setdefault("flags", []).append(x.flags[0])
         cover = T.ccover(ph[0].path, m.get("k", ""), m.get("h", ""), "Swipe for the plan.") if ph[0] else pages[0][0]

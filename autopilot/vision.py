@@ -218,7 +218,7 @@ def _ask(parts, max_tokens=600):
             if m in _GDEAD:
                 continue
             for think in (True, False):
-                gen = {"maxOutputTokens": max_tokens, "temperature": 0}
+                gen = {"maxOutputTokens": max(max_tokens, 2048), "temperature": 0}   # newer Gemini models think before answering: room for both
                 if think:
                     gen["thinkingConfig"] = {"thinkingBudget": 0}          # answer straight away (thinking would eat the reply's tokens)
                 try:
@@ -242,8 +242,12 @@ def _ask(parts, max_tokens=600):
                         raise RuntimeError(f"Gemini key rejected ({r.status_code}): {r.text[:100]}")
                     break
                 c = (r.json().get("candidates") or [{}])[0]
+                txt = "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []) if not x.get("thought"))
+                if not txt.strip():
+                    STATS["empty"] = STATS.get("empty", 0) + 1
+                    continue                                              # empty reply (thinking used it all up): ask again the other way
                 STATS["ok"] += 1
-                return "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []))
+                return txt
         time.sleep(15)                                                    # every model busy: wait a moment, then one more round
     STATS["fail"] += 1
     raise RuntimeError("Gemini did not answer (rate limit or error)")
@@ -294,7 +298,7 @@ def claude_review(paths, model=None, batch=6):
         parts.append(PROMPT % (", ".join(NAMES), ", ".join(CATS)))
         try:
             txt = ask(parts, 1500) or ""
-            arr = json.loads(txt[txt.index("["): txt.rindex("]") + 1])
+            import re as _re; arr = json.loads(_re.search(r"\[.*\]", txt, _re.S).group(0))
             by = {int(a.get("n", 0)): a for a in arr if isinstance(a, dict)}
             out += [by.get(k) for k in range(1, len(ch) + 1)]
         except Exception as e:
@@ -343,10 +347,28 @@ def art_check(path, headline, model=None):
         return None
     try:
         txt = ask([_jpeg(path, 900), ART_PROMPT % headline[:160]], 400) or ""
-        d = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        import re as _re; d = json.loads(_re.search(r"\{.*\}", txt, _re.S).group(0))
         return [] if d.get("ok") else [str(i) for i in d.get("issues", [])][:4]
     except Exception as e:
         log.warning("art check failed: %s", e); return None
+
+def yes_no(txt):
+    """Reads a yes/no answer however the model words it: {"yes": true}, ```json ...```, 'Yes.', 'No, it shows...'. None if it cannot tell."""
+    import json, re
+    t = (txt or "").strip()
+    m = re.search(r"\{.*?\}", t, re.S)
+    if m:
+        try:
+            d = json.loads(m.group(0)); v = d.get("yes", d.get("answer", d.get("match")))
+            if isinstance(v, bool): return v
+            if isinstance(v, str): t = v
+        except Exception:
+            pass
+    m = re.search(r'"yes"\s*:\s*(true|false)', t, re.I)
+    if m: return m.group(1).lower() == "true"
+    m = re.match(r"\W*(yes|true|no|false)\b", t, re.I)
+    if m: return m.group(1).lower() in ("yes", "true")
+    return None
 
 _SHOWS = {}
 def shows(path, want, model=None):
@@ -372,7 +394,13 @@ def shows(path, want, model=None):
          'Reply with ONLY JSON: {"yes": true|false}')
     try:
         txt = ask([_jpeg(path, 800), q], 100) or ""
-        v = bool(json.loads(txt[txt.index("{"): txt.rindex("}") + 1]).get("yes"))
+        v = yes_no(txt)
+        if v is None:
+            STATS["unread"] = STATS.get("unread", 0) + 1
+            if STATS["unread"] >= 15 and STATS.get("read", 0) == 0 and not _BROKEN:
+                _BROKEN.append(f"answers could not be read, e.g. {txt[:60]!r}"); log.error("AI checks switched off: answers unreadable: %r", txt[:200])
+            raise ValueError(f"unreadable answer: {txt[:80]!r}")
+        STATS["read"] = STATS.get("read", 0) + 1
         _SHOWS[k] = v
         try:
             f.parent.mkdir(parents=True, exist_ok=True); f.write_text(json.dumps(_SHOWS, indent=0))
