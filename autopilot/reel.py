@@ -74,7 +74,7 @@ GENERIC_CLIPS = ["Jamaica road", "Jamaica coastal road drive", "Jamaica car driv
 
 def _hook(p, out, end_img, date):
     """The scroll-stopping Reel: real photos and real video clips, hook line first, fast cuts, pop-in captions, music, end card.
-    Shots are filled with free video clips (Pixabay) that fit each caption; car posts keep the car photo as the hook and add Jamaica scenery clips.
+    Shots are filled with video clips (your Drive clips first, then Pexels, then Pixabay) that fit each caption; car posts keep the car photo as the hook and add Jamaica scenery clips.
     False only when fewer than 3 shots could be found."""
     from . import reel2
     raw = [x for x in p.get("raw", []) if Path(x).exists()]
@@ -107,6 +107,7 @@ def _hook(p, out, end_img, date):
                 got = WV.find(GENERIC_CLIPS, "a car driving on a road in Jamaica", date, want=1, used=used)
             if got:
                 used.add(str(got[0])); nclips += 1
+                p.setdefault("clips", []).append(WV.KEYS.get(str(got[0]), ""))      # so a clip from a draft that is thrown away can be used again
                 if have_photo: shots[k] = str(got[0])
                 else: shots.append(str(got[0]))
     if len(shots) < 3:

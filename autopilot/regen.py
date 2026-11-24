@@ -57,7 +57,7 @@ def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
     notes.append(picker.health())
     try:
         from . import music as _M, webvideo as _WV
-        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · video clips added to Reels {_WV.ADDED[0]}")
+        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · {_WV.status()}")
     except Exception:
         pass
     try:

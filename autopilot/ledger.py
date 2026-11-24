@@ -99,6 +99,19 @@ class Ledger:
                 del self.data["photos"][k]; freed += 1
             else:
                 e["last_used"] = e["first_used"]
+        clips = set()
+        for f in glob.glob(str(root / "docs" / "queue" / "*.json")):
+            try: clips |= {c for p in json.loads(Path(f).read_text()).get("posts", []) for c in p.get("clips") or []}
+            except Exception: pass
+        try:                                                   # the same for video clips (data/clip_use.json)
+            cf = root / "data" / "clip_use.json"; cu = json.loads(cf.read_text())
+            for k in list(cu):
+                if k.split(":")[0] in ("pixabay-video", "pexels-video", "drive-video") and k not in clips:
+                    cu[k] = [d for d in cu[k] if d < since]
+                    if not cu[k]: del cu[k]
+            cf.write_text(json.dumps(cu, indent=0))
+        except Exception:
+            pass
         live = set(self.data["photos"])
         self.data["hashes"] = [e for e in self.data["hashes"] if e["date"] < since or e.get("id") in live]
         self.data["series"] = [e for e in self.data["series"] if e["date"] < since or e.get("id") in live]
