@@ -13688,6 +13688,253 @@ drive:1zpiirX3hzWMdEhGtG0pNvCN6xzhD7JVt:
   quality: 4
   runner_up: attraction
   series: own-ai-blue-mountains
+local:arah_b7_10_toyota-corolla-touring-silver:
+  about: Jamaica - Silver Toyota Corolla Touring hybrid parked on gravel lot cars
+    (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_11_toyota-corolla-touring-silver:
+  about: Jamaica - Open trunk of a silver Toyota Corolla Touring hybrid car cars (Claude
+    reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_12_toyota-corolla-touring-silver:
+  about: Jamaica - Interior view of rear seats of a silver rental car cars (Claude
+    reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_13_toyota-corolla-touring-silver:
+  about: Jamaica - Dashboard, touchscreen and steering wheel interior of modern car
+    cars (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: landscape
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_1_omoda-c5-white:
+  about: Jamaica - Side profile of white Omoda 5 SUV parked outside cars (Claude reviewed
+    the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_2_omoda-c5-white:
+  about: Jamaica - Front angle view of modern white Omoda SUV parked outdoors cars
+    (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_3_omoda-c5-white:
+  about: Jamaica - Front passenger side view of a modern car interior with black seats
+    cars (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_4_omoda-c5-white:
+  about: Jamaica - Rear passenger seating area of a modern SUV with black leather
+    seats cars (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_5_omoda-c5-white:
+  about: Jamaica - Open trunk cargo space of a white modern crossover SUV cars (Claude
+    reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_6_omoda-c5-white:
+  about: Jamaica - View of the front dashboard, steering wheel and digital displays
+    from backseat cars (Claude reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: landscape
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_7_omoda-c5-white:
+  about: Jamaica - Modern Omoda dashboard featuring steering wheel and wide digital
+    infotainment screens cars (Claude reviewed the picture, 80% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.8
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: landscape
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_8_gwm-tank-300-grey:
+  about: Jamaica - Grey modern 4x4 SUV parked in a gravel parking lot cars (Claude
+    reviewed the picture, 70% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.7
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: portrait
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
+local:arah_b7_9_gwm-tank-300-grey:
+  about: Jamaica - Modern interior and dashboard view of a right-hand drive rental
+    car cars (Claude reviewed the picture, 60% sure) - own photo
+  ai: true
+  auto: true
+  cats:
+  - cars
+  claude: true
+  confidence: 0.6
+  credit: ''
+  kind: car
+  label: rental car
+  orientation: landscape
+  parish: ''
+  people: false
+  place: ''
+  plate_visible: false
+  quality: 4
+  series: own-claude-rental-car
 local:jamaica_cup_01_team_group_on_court:
   about: Jamaica people friends family travellers people (recognised from the picture,
     95% sure) - own photo

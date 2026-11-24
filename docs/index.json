@@ -1,9 +1,33 @@
 {
- "generated": "2026-11-24T05:25:14.403052-05:00",
+ "generated": "2026-11-24T08:12:09.784554-05:00",
  "notes": [
-  "Run check · gave back 5 photos that were looked at but not used in any post (they can be used again)",
-  "Run check · music tracks ready 0 · video clips added to Reels 0",
-  "Run check · photos used 0 · no web searches · Gemini checks answered 0"
+  "No fresh photo for a place post on 2026-11-25: made a tip post instead.",
+  "No fresh photo for a place post on 2026-11-26: made a tip post instead.",
+  "No fresh photo for a spotlight post on 2026-11-25: made a place post instead.",
+  "No fresh photo for a spotlight post on 2026-11-26: made a place post instead.",
+  "Photo library is running thin: similar photos from the same shoot are coming back sooner than 21 days. Add new photos to the Drive folder.",
+  "Run check · gave back 30 photos that were looked at but not used in any post (they can be used again)",
+  "Run check · music tracks ready 0 · video clips added to Reels 0 (your Drive clips 0, Pexels 0, Wikimedia 0, Pixabay 0) · Drive clips found 0 · video libraries on: Pixabay, Wikimedia",
+  "Run check · photos used 15 · openverse 366 searches / 0 results, pixabay 367 searches / 18102 results, unsplash 83 searches / 154 results, wikimedia 145 searches / 1120 results · stopped early (limit or error): unsplash · Gemini checks answered 54, not answered 6 (busy 4x): photos it could not check were left out",
+  "Skipped the 07:00 post on 2026-11-24: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 07:00 post on 2026-11-25: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 07:00 post on 2026-11-26: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 07:00 post on 2026-11-27: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 11:00 post on 2026-11-25: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 11:00 post on 2026-11-26: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 11:00 post on 2026-11-27: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 14:00 post on 2026-11-25: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 14:00 post on 2026-11-27: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 18:00 post on 2026-11-24: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 18:00 post on 2026-11-25: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 18:00 post on 2026-11-26: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 18:00 post on 2026-11-27: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 20:00 post on 2026-11-25: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Skipped the 20:00 post on 2026-11-27: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.",
+  "Wording for 'chat' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
+  "Wording for 'place' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
+  "Wording for 'qa' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml.",
+  "unsplash search failed: 403 Client Error: Forbidden for url: https://api.unsplash.com/search/photos?quer"
  ],
  "posts": [
   {

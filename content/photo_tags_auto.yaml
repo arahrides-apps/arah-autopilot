@@ -10476,6 +10476,164 @@ local:arah_b6_9_toyota-corolla-silver:
   name: arah_b6_9_toyota-corolla-silver
   web: ''
   words: Arah Rides rental vehicle
+local:arah_b7_10_toyota-corolla-touring-silver:
+  also: ''
+  cats:
+  - cars
+  claude: Silver Toyota Corolla Touring hybrid parked on gravel lot
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_10_toyota-corolla-touring-silver
+  web: ''
+  words: Silver Toyota Corolla Touring hybrid parked on gravel lot
+local:arah_b7_11_toyota-corolla-touring-silver:
+  also: ''
+  cats:
+  - cars
+  claude: Open trunk of a silver Toyota Corolla Touring hybrid car
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_11_toyota-corolla-touring-silver
+  web: ''
+  words: Open trunk of a silver Toyota Corolla Touring hybrid car
+local:arah_b7_12_toyota-corolla-touring-silver:
+  also: ''
+  cats:
+  - cars
+  claude: Interior view of rear seats of a silver rental car
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_12_toyota-corolla-touring-silver
+  web: ''
+  words: Interior view of rear seats of a silver rental car
+local:arah_b7_13_toyota-corolla-touring-silver:
+  also: ''
+  cats:
+  - cars
+  claude: Dashboard, touchscreen and steering wheel interior of modern car
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_13_toyota-corolla-touring-silver
+  web: ''
+  words: Dashboard, touchscreen and steering wheel interior of modern car
+local:arah_b7_1_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Side profile of white Omoda 5 SUV parked outside
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_1_omoda-c5-white
+  web: ''
+  words: Side profile of white Omoda 5 SUV parked outside
+local:arah_b7_2_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Front angle view of modern white Omoda SUV parked outdoors
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_2_omoda-c5-white
+  web: ''
+  words: Front angle view of modern white Omoda SUV parked outdoors
+local:arah_b7_3_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Front passenger side view of a modern car interior with black seats
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_3_omoda-c5-white
+  web: ''
+  words: Front passenger side view of a modern car interior with black seats
+local:arah_b7_4_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Rear passenger seating area of a modern SUV with black leather seats
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_4_omoda-c5-white
+  web: ''
+  words: Rear passenger seating area of a modern SUV with black leather seats
+local:arah_b7_5_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Open trunk cargo space of a white modern crossover SUV
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_5_omoda-c5-white
+  web: ''
+  words: Open trunk cargo space of a white modern crossover SUV
+local:arah_b7_6_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: View of the front dashboard, steering wheel and digital displays from backseat
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_6_omoda-c5-white
+  web: ''
+  words: View of the front dashboard, steering wheel and digital displays from backseat
+local:arah_b7_7_omoda-c5-white:
+  also: ''
+  cats:
+  - cars
+  claude: Modern Omoda dashboard featuring steering wheel and wide digital infotainment
+    screens
+  claude_conf: 0.8
+  claude_place: ''
+  confidence: 0.8
+  label: rental car
+  name: arah_b7_7_omoda-c5-white
+  web: ''
+  words: Modern Omoda dashboard featuring steering wheel and wide digital infotainment
+    screens
+local:arah_b7_8_gwm-tank-300-grey:
+  also: ''
+  cats:
+  - cars
+  claude: Grey modern 4x4 SUV parked in a gravel parking lot
+  claude_conf: 0.7
+  claude_place: ''
+  confidence: 0.7
+  label: rental car
+  name: arah_b7_8_gwm-tank-300-grey
+  web: ''
+  words: Grey modern 4x4 SUV parked in a gravel parking lot
+local:arah_b7_9_gwm-tank-300-grey:
+  also: ''
+  cats:
+  - cars
+  claude: Modern interior and dashboard view of a right-hand drive rental car
+  claude_conf: 0.6
+  claude_place: ''
+  confidence: 0.6
+  label: rental car
+  name: arah_b7_9_gwm-tank-300-grey
+  web: ''
+  words: Modern interior and dashboard view of a right-hand drive rental car
 local:arah_listing_102_1_2020-kia-cerato:
   also: rental car
   cats:
