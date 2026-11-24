@@ -1,0 +1,104 @@
+arah_b7_1_omoda-c5-white:
+  about: white Omoda C5 SUV side view, parked on the lot
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_2_omoda-c5-white:
+  about: white Omoda C5 SUV front view, diamond grille
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: omoda-c5-white
+arah_b7_3_omoda-c5-white:
+  about: Omoda C5 interior, front seat and dashboard through the open door
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_4_omoda-c5-white:
+  about: Omoda C5 interior, back seat through the open rear door
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_5_omoda-c5-white:
+  about: Omoda C5 trunk open, cargo space
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_6_omoda-c5-white:
+  about: Omoda C5 interior from the back seat, dashboard and screens
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_7_omoda-c5-white:
+  about: Omoda C5 dashboard, dual screens and steering wheel
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: omoda-c5-white
+arah_b7_8_gwm-tank-300-grey:
+  about: grey GWM Tank 300 off-road SUV front side view, parked on the lot
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: gwm-tank-300-grey
+arah_b7_9_gwm-tank-300-grey:
+  about: GWM Tank 300 interior, dashboard, screens and steering wheel
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: gwm-tank-300-grey
+arah_b7_10_toyota-corolla-touring-silver:
+  about: silver Toyota Corolla Touring hybrid wagon front side view, parked on the lot
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: true
+  quality: 4
+  series: toyota-corolla-touring-silver
+arah_b7_11_toyota-corolla-touring-silver:
+  about: Toyota Corolla Touring wagon trunk open, cargo space
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: toyota-corolla-touring-silver
+arah_b7_12_toyota-corolla-touring-silver:
+  about: Toyota Corolla Touring interior, back seat
+  kind: car
+  orientation: portrait
+  people: false
+  plate_visible: false
+  quality: 4
+  series: toyota-corolla-touring-silver
+arah_b7_13_toyota-corolla-touring-silver:
+  about: Toyota Corolla Touring dashboard and steering wheel
+  kind: car
+  orientation: landscape
+  people: false
+  plate_visible: false
+  quality: 4
+  series: toyota-corolla-touring-silver
