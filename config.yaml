@@ -15,7 +15,7 @@ max_posts_per_run: 1              # the publisher runs every 10 minutes
 slots: ["00:00", "02:00", "07:00", "11:00", "14:00", "18:00", "20:00", "22:00"]   # Jamaica time (US East Coast is the same hour in winter)
 
 # Order of post types inside one day (length = posts_per_day). 'a|b' alternates day by day. Own car photos are limited, so only 1 car post a day.
-pattern: ["car_hero", "journey|chat", "journey", "spotlight", "chat", "journey|spotlight", "review|qa", "car_hero"]   # fleet campaign: 00:00, 02:00 and 22:00 become car deals, 14:00 low-deposit cars on even days (Winston chat on odd days)
+pattern: ["car_hero", "journey|chat", "spotlight|journey", "spotlight", "chat", "spotlight", "spotlight|qa", "car_hero"]   # about 3 places-to-see posts a day (07:00, 11:00, 18:00, 20:00 rotate); fleet campaign: 00:00, 02:00 and 22:00 become car deals, 14:00 low-deposit cars on even days (Winston chat on odd days)
 event_slots: [3]                    # the 11:00 post highlights an upcoming event (only on event_days)
 single_days_per_5: 0               # no single-picture posts: video reaches more people
 event_days: [1, 4]                 # events are highlighted only on Tuesday and Friday (2 event posts a week)
