@@ -474,6 +474,86 @@ place:
   h1: Seven Mile Beach.
   h2: White sand, long walks.
   sub: Negril's famous beach, best at golden hour.
+- place: Firefly Estate
+  query: Firefly Estate St Mary Jamaica
+  h1: Firefly.
+  h2: The view Noel Coward loved.
+  sub: A hilltop house in St Mary looking over the north coast. Drive up for the view.
+- place: Bath Fountain
+  query: Bath Fountain St Thomas Jamaica
+  h1: Bath Fountain.
+  h2: Hot springs in the hills.
+  sub: Mineral spring baths in St Thomas. A quiet drive east of Kingston.
+- place: Scatter Falls
+  query: Scatter Falls Portland Jamaica
+  h1: Scatter Falls.
+  h2: Bamboo, river, waterfall.
+  sub: A short bamboo raft ride and a swim in Portland's Rio Grande valley.
+- place: San San Beach
+  query: San San Beach Portland Jamaica
+  h1: San San Beach.
+  h2: Calm, clear and green.
+  sub: A small Portland beach with clear water. Pair it with Frenchman's Cove.
+- place: Long Bay
+  query: Long Bay Portland Jamaica
+  h1: Long Bay.
+  h2: Wild east coast.
+  sub: A long sweep of sand on Portland's east coast. Big waves, few crowds.
+- place: Trident Castle
+  query: Trident Castle Port Antonio Jamaica
+  h1: Trident Castle.
+  h2: A castle by the sea.
+  sub: The white castle on the coast road east of Port Antonio. Slow down and look.
+- place: Folly Ruins
+  query: Folly Ruins Port Antonio Jamaica
+  h1: Folly Ruins.
+  h2: A mansion left to the sea.
+  sub: Old concrete ruins on a Port Antonio point. Great light in the late afternoon.
+- place: Cane River Falls
+  query: Cane River Falls Jamaica
+  h1: Cane River Falls.
+  h2: Close to Kingston.
+  sub: A river and falls east of the city. A short drive for a cool dip.
+- place: Strawberry Hill
+  query: Strawberry Hill Irish Town Jamaica
+  h1: Strawberry Hill.
+  h2: Lunch with a view.
+  sub: Up in the hills above Kingston. Drive the winding road and look out over the city.
+- place: Holywell
+  query: Holywell National Park Blue Mountains Jamaica
+  h1: Holywell.
+  h2: Pine air and trails.
+  sub: Cool mountain air and easy walks in the Blue Mountains. Bring a light jacket.
+- place: Oracabessa Bay
+  query: Oracabessa Bay St Mary Jamaica
+  h1: Oracabessa Bay.
+  h2: The quiet side of St Mary.
+  sub: Small beaches and a fishing village feel, east of Ocho Rios.
+- place: James Bond Beach
+  query: James Bond Beach Oracabessa Jamaica
+  h1: James Bond Beach.
+  h2: Sand with a story.
+  sub: A beach near GoldenEye in Oracabessa. Make a day of the north coast.
+- place: Coronation Market
+  query: Coronation Market Kingston Jamaica
+  h1: Coronation Market.
+  h2: Kingston's big market.
+  sub: Fruit, spices and noise in downtown Kingston. Go early on a Saturday.
+- place: Peter Tosh Museum
+  query: Peter Tosh Museum Kingston Jamaica
+  h1: Peter Tosh Museum.
+  h2: Reggae history.
+  sub: On Hope Road in Kingston, close to the Bob Marley Museum. See both in one day.
+- place: Middle Quarters
+  query: Middle Quarters pepper shrimp Jamaica
+  h1: Middle Quarters.
+  h2: Pepper shrimp stop.
+  sub: The roadside pepper shrimp village in St Elizabeth, on the way to YS Falls.
+- place: Faith's Pen
+  query: Faith's Pen food stalls Jamaica
+  h1: Faith's Pen.
+  h2: The road food stop.
+  sub: Food stalls on the hill road between Kingston and Ocho Rios. Come hungry.
 neutral:
 - h1: Discover
   h2: the real Jamaica.
@@ -612,6 +692,34 @@ qa:
   a: It depends on the vehicle and the rental company, from about $65 for an economy car. It is collected at pickup and released after you return the car refueled, on time and undamaged.
 - q: What does a rental day mean?
   a: A rental day is 24 hours from your pickup time.
+- q: How can I pay at checkout?
+  a: Card, Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on arahrides.com.
+- q: Is there a deal right now?
+  a: Yes. Use code PureCyber at checkout for up to US$40 off. Conditions apply.
+- q: Can I book without talking to anyone?
+  a: Yes. Choose your car on arahrides.com and book in minutes. Winston is on WhatsApp 24/7 if you have questions.
+- q: Can I see the car before I book?
+  a: Yes. Every listing on arahrides.com shows photos of the car, so you choose the car you want to drive.
+- q: Are the cars new?
+  a: Our listings are 2017 or newer, and many are brand new models.
+- q: Can I book for my family arriving from abroad?
+  a: Yes. Book on arahrides.com and add the driver's details. Pickup is at Norman Manley, MBJ or OCJ.
+- q: What if my flight lands late at night?
+  a: Tell Winston on WhatsApp. He is up 24/7 and can help plan a late pickup with your host.
+- q: Is it easy to drive from MBJ to Ocho Rios?
+  a: Yes. It is about 1.5 hours along the north coast highway.
+- q: How far is Kingston from Ocho Rios?
+  a: About 1.5 hours over the hills on the highway.
+- q: Do I need a deposit?
+  a: Yes. A security deposit is held at pickup and released after you return the car. Many cars have low deposits.
+- q: Can two people share the driving?
+  a: Ask your host when you book. Each driver needs a valid licence held for at least 2 years.
+- q: Where should I go in Portland?
+  a: Frenchman's Cove, Blue Lagoon, Reach Falls, Boston Bay jerk and a raft on the Rio Grande.
+- q: Where should I go on the south coast?
+  a: Treasure Beach, YS Falls, Black River, Pelican Bar and pepper shrimp at Middle Quarters.
+- q: What should I eat on a road trip?
+  a: Jerk in Boston Bay, pepper shrimp in Middle Quarters, fried fish and festival in Hellshire, and a patty anywhere.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -1156,6 +1264,48 @@ chat:
 - h: Booking for December?
   u: Should I book for December?
   b: Yes. Cars are limited around the holidays, so book early.
+- h: Pay your way.
+  u: Can I pay with Klarna?
+  b: Yes. Klarna, Affirm, Link, Google Pay and Apple Pay all work at checkout.
+- h: Cyber deal?
+  u: Any deals this week?
+  b: Yes! Use code PureCyber at checkout for up to US$40 off. Conditions apply.
+- h: Low deposit cars.
+  u: Do you have cars with a low deposit?
+  b: Yes. Tell me your dates and I will show you the cars with the lowest deposits.
+- h: Family trip?
+  u: We are 5 with luggage.
+  b: An SUV or a 7 seater works best. Tell me your dates and pickup spot.
+- h: Visiting grandma?
+  u: I need a car to visit family in St Elizabeth.
+  b: Lovely. Pick up at MBJ or Kingston and drive down. Tell me your dates.
+- h: Wedding weekend?
+  u: I need a nice car for a wedding.
+  b: Congratulations! Tell me the date and I will show you our nicest cars.
+- h: Book in minutes.
+  u: How long does booking take?
+  b: Minutes. Choose your car on arahrides.com, pay at checkout and you are done.
+- h: Hotel delivery?
+  u: Can you bring the car to my hotel?
+  b: Yes. Delivery covers hotels, resorts, Airbnbs and homes. Tell me where you are staying.
+- h: One-way trip?
+  u: Can I pick up in MoBay and drop off in Kingston?
+  b: Yes. One-way rentals are available. The fee shows in your quote.
+- h: Unlimited miles?
+  u: Is mileage limited?
+  b: No. Unlimited mileage is included, so drive the whole island.
+- h: First time driving here?
+  u: I have never driven in Jamaica.
+  b: Keep left, take your time and use your map. I can suggest an easy first route.
+- h: Road trip ideas?
+  u: Where should I drive this weekend?
+  b: Try Portland. Frenchman's Cove, Blue Lagoon and jerk at Boston Bay.
+- h: Saw a car you like?
+  u: I like the SUV on your page.
+  b: Great choice. Tell me your dates and I will check it for you.
+- h: Back home for Christmas?
+  u: I am coming home for Christmas.
+  b: Welcome home! Book early, cars go fast around the holidays.
 carousel:
 - k: 3 ROAD TRIPS FROM KINGSTON
   title: Where to this weekend?
