@@ -475,6 +475,8 @@ class Picker:
 
     def _series(self, name):
         m = self._meta(name)
+        if m and re.search(r"tourist board|jtb", (m.get("credit") or "") + " " + (m.get("about") or "") + " " + (m.get("series") or ""), re.I):
+            return name.split(".")[0]          # JTB library photos are separate pictures, not one shoot: each is its own (never repeated, no 21-day group wait)
         return (m or {}).get("series") or re.sub(r"[_\-]?\d+(_\d+)?$", "", name.split(".")[0]) or name
 
     def _load(self, src, item, kind, flags, extra=None):
