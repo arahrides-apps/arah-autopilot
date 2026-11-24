@@ -154,27 +154,46 @@ def web_match(img_emb, refs, min_sim=0.86):
 
 # ---------------------------------------------------------------- which AI looks at the pictures: Gemini (GEMINI_API_KEY) or Claude (ANTHROPIC_API_KEY)
 def ai_provider():
-    """('gemini', key) or ('anthropic', key) or (None, None). A Gemini key (starts with 'AIza') also works when saved under ANTHROPIC_API_KEY."""
+    """('gemini', key) or ('anthropic', key) or (None, None). Gemini is used whenever a Gemini key exists (GEMINI_API_KEY, GOOGLE_API_KEY,
+    or a Gemini key saved under ANTHROPIC_API_KEY: they start with 'AIza')."""
     import os
-    g = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    a = os.environ.get("ANTHROPIC_API_KEY")
+    g = (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or "").strip()
+    a = (os.environ.get("ANTHROPIC_API_KEY") or "").strip()
     if g:
         return "gemini", g
-    if a and a.startswith("AIza"):
+    if a.startswith("AIza"):
         return "gemini", a
     if a:
         return "anthropic", a
     return None, None
 
+_BROKEN = []
 def ai_on():
-    return ai_provider()[0] is not None
+    """False when no key is set, or when the key failed so often this run that the AI is switched off (see ask)."""
+    return ai_provider()[0] is not None and not _BROKEN
 
 def ai_name():
     return {"gemini": "Gemini", "anthropic": "Claude"}.get(ai_provider()[0], "AI")
 
 _GMODEL = []
 def ask(parts, max_tokens=600):
-    """parts: list of str (text) or bytes (a JPEG). -> the model's reply text. Raises on error; returns None when no key."""
+    """parts: list of str (text) or bytes (a JPEG). -> the model's reply text. Raises on error; returns None when no key.
+    After 15 failures in a row with no answer at all (wrong key, no access), the AI is switched off for the rest of the run,
+    so a bad key can never make a run crawl into its time limit again; the run then uses the stricter no-AI photo rules."""
+    if _BROKEN:
+        raise RuntimeError("AI switched off for this run: " + _BROKEN[0])
+    try:
+        out = _ask(parts, max_tokens)
+        STATS["streak"] = 0
+        return out
+    except Exception as e:
+        STATS["streak"] = STATS.get("streak", 0) + 1
+        if not STATS.get("why"): STATS["why"] = str(e)[:160]
+        if STATS["streak"] >= 15 and STATS["ok"] == 0:
+            _BROKEN.append(STATS["why"]); log.error("AI checks switched off for this run: %s", STATS["why"])
+        raise
+
+def _ask(parts, max_tokens=600):
     import os, base64, requests
     prov, key = ai_provider()
     if not prov:
@@ -187,7 +206,8 @@ def ask(parts, max_tokens=600):
                           json={"model": os.environ.get("CLAUDE_MODEL") or "claude-sonnet-5-5", "max_tokens": max_tokens, "messages": [{"role": "user", "content": content}]})
         if r.status_code >= 400:
             STATS["fail"] += 1
-        r.raise_for_status(); STATS["ok"] += 1
+            raise RuntimeError(f"Claude key rejected ({r.status_code}): {r.text[:100]}")
+        STATS["ok"] += 1
         return "".join(b.get("text", "") for b in r.json()["content"])
     gparts = [{"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(x).decode()}} if isinstance(x, bytes) else {"text": x} for x in parts]
     # Every Gemini model has its own free-tier limit, so when one is used up (429) the next one answers.
@@ -217,7 +237,10 @@ def ask(parts, max_tokens=600):
                         _GDEAD.add(m)                                     # used up for today
                     break                                                 # try the next model
                 if r.status_code >= 400:
-                    STATS["fail"] += 1; break
+                    STATS["fail"] += 1
+                    if r.status_code in (400, 401) and "key" in r.text.lower():
+                        raise RuntimeError(f"Gemini key rejected ({r.status_code}): {r.text[:100]}")
+                    break
                 c = (r.json().get("candidates") or [{}])[0]
                 STATS["ok"] += 1
                 return "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []))
@@ -230,10 +253,12 @@ _GDEAD = set()
 STATS = {"ok": 0, "fail": 0, "limit": 0}
 
 def status():
-    """One line for the review page: how many AI checks answered, and how many could not be done (those photos were NOT used)."""
-    if not ai_on():
-        return "AI photo checks OFF"
+    """One line for the review page: which AI ran, how many checks it answered, and why it stopped if it did."""
+    if ai_provider()[0] is None:
+        return "AI photo checks OFF: add GEMINI_API_KEY in GitHub Settings → Secrets → Actions"
     s = f"{ai_name()} checks answered {STATS['ok']}"
+    if _BROKEN:
+        return s + f" · AI SWITCHED OFF this run, key not working ({_BROKEN[0][:90]}): only photos tagged with the subject were used"
     if STATS["fail"] or STATS["limit"]:
         s += f", not answered {STATS['fail']} (busy {STATS['limit']}x): photos it could not check were left out"
     return s

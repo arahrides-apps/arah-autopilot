@@ -82,8 +82,14 @@ def _fits(post, ph, text):
     v = V.shows(ph.path, want)
     if v is True:
         return True
-    if v is None and ph.source in ("drive", "local") and not V.ai_on():
-        return True                      # our own photo, picked by its labels, and no AI set up to look at it
+    if v is None and not V.ai_on():      # no AI this run: trust only labels/titles that name the slide's subject
+        if ph.source in ("drive", "local"):
+            return True
+        stop = {"jamaica", "jamaican", "with", "your", "from", "this", "that", "they", "rental", "book", "drive", "there", "where", "what", "when", "best", "time", "minutes"}
+        want = {w[:5] for w in re.findall(r"[a-z]{4,}", text.lower()) if w not in stop}
+        have = {w[:5] for w in re.findall(r"[a-z]{4,}", (ph.text or "").lower())}
+        if "jamai" in have and want & have:
+            return True
     post.setdefault("flags", []).append(f"Left out a photo that {'did not match' if v is False else 'could not be checked'}: {text[:60]}")
     return False
 

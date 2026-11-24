@@ -726,7 +726,7 @@ class Picker:
         dead = (" · stopped early (limit or error): " + ", ".join(sorted(self._dead))) if self._dead else ""
         from . import vision as _V
         claude = (f"{_V.ai_name()} photo checks ON" if _V.ai_on() else "AI photo checks OFF: add your Gemini key as a GitHub secret named GEMINI_API_KEY (Settings → Secrets → Actions) and check the workflow files pass it")
-        return f"Run check · photos used {self.loaded} · {src}{dead} · {claude} · {_V.status()}"
+        return f"Run check · photos used {self.loaded} · {src}{dead} · {_V.status()}"
 
     def topic(self, query, words=None):
         """A web photo of people, food or an activity (a dad and his daughter, jerk chicken, rafting) when no Jamaica-tagged photo exists.
