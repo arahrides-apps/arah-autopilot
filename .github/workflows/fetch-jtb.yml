@@ -1,6 +1,11 @@
 name: Fetch JTB images
 on:
   workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: autopilot
+  cancel-in-progress: false
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -12,17 +17,18 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: |
-          pip install playwright pillow
+          pip install playwright pillow requests pyyaml
           playwright install --with-deps chromium
-      - name: Download all JTB images
-        run: python autopilot/fetch_jtb.py
-      - name: Zip the result
+      - name: Download new JTB images (stops after 60 minutes, saves what it has; run again to continue)
+        env:
+          JTB_MINUTES: "60"
+        run: python scripts/fetch_jtb.py
+      - name: Save to repository (photos/jtb + content/photo_meta_jtb.yaml)
         if: always()
-        run: |
-          cd jtb_out && zip -qr ../JTB_images.zip . || true
+        run: bash scripts/save.sh "JTB photos"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: JTB_images
-          path: JTB_images.zip
+          name: JTB_report
+          path: jtb_report.txt
           retention-days: 14
