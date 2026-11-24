@@ -68,6 +68,42 @@ class Ledger:
         self.data["hashes"] = [e for e in self.data["hashes"] if not (e.get("id") == photo_id and e["date"] == date)]
         self.data["series"] = [e for e in self.data["series"] if not (e.get("id") == photo_id and e["date"] == date)]
 
+    def reconcile(self, today, days=5):
+        """Give back every photo marked used in the last `days` days that is not in any post on the review page or on Instagram.
+        Photos get marked the moment they are looked at, so ones the match check turned down, and ones from drafts thrown away
+        by Redo, were being burned for a year. This keeps the no-repeat rule for photos that were really used, and frees the rest."""
+        import glob, json, hashlib
+        from pathlib import Path
+        root = Path(__file__).resolve().parent.parent
+        ids, names, stems = set(), set(), set()
+        for f in glob.glob(str(root / "docs" / "queue" / "*.json")):
+            try: posts = json.loads(Path(f).read_text()).get("posts", [])
+            except Exception: continue
+            for p in posts:
+                for x in [p.get("photo") or {}] + list(p.get("photos_extra") or []):
+                    if x.get("id"): ids.add(x["id"])
+                    if x.get("name"): names.add(x["name"])
+                for r in p.get("raw") or []:
+                    stems.add(Path(str(r)).stem.replace("_clean", ""))
+        since = (today - dt.timedelta(days=days)).isoformat()
+        def kept(k):
+            if k.startswith("name:"):
+                return k[5:] in names
+            return k in ids or hashlib.md5(k.encode()).hexdigest()[:16] in stems
+        freed = 0
+        for k in list(self.data["photos"]):
+            e = self.data["photos"][k]
+            if e.get("last_used", "") < since or e.get("source") in ("vip", "seed") or kept(k):
+                continue
+            if e.get("first_used", "") >= since:
+                del self.data["photos"][k]; freed += 1
+            else:
+                e["last_used"] = e["first_used"]
+        live = set(self.data["photos"])
+        self.data["hashes"] = [e for e in self.data["hashes"] if e["date"] < since or e.get("id") in live]
+        self.data["series"] = [e for e in self.data["series"] if e["date"] < since or e.get("id") in live]
+        return freed
+
     def record(self, keys, h, today, source="", series=""):
         if series:
             self.data["series"].append({"s": series, "date": today.isoformat(), "id": keys[0]})

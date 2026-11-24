@@ -60,6 +60,11 @@ def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
         notes.append(f"Run check · music tracks ready {len(_M.tracks())} · video clips added to Reels {_WV.ADDED[0]}")
     except Exception:
         pass
+    try:
+        freed = led.reconcile(now.date())
+        if freed: notes.append(f"Run check · gave back {freed} photos that were looked at but not used in any post (they can be used again)")
+    except Exception as e:
+        log.warning("photo give-back failed: %s", e)
     led.prune(now.date()); led.save()
     Q.write_index(sorted(set(notes)), now.isoformat())
     return made, kept, dropped, notes
