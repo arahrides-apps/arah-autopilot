@@ -88,68 +88,73 @@
    "reel": "media/2026-11-24/2026-11-24_0200_deal.mp4"
   },
   {
-   "id": "2026-11-24_0700_tip",
+   "id": "2026-11-24_0700_place",
    "date": "2026-11-24",
    "slot": "2026-11-24T07:00:00-05:00",
-   "type": "tip",
+   "type": "place",
    "flags": [
-    "⚠ Art director check: Duplicate swipe button at top right; Photo is underexposed and dark. Look closely before approving.",
+    "⚠ Art director check: beach photo does not fit Kingston. Look closely before approving.",
     "Its 07:00 time has passed: approve it and it posts today, one late post every 30 minutes or so.",
-    "Own photo matched to topic: road",
-    "Slide photo (food): Photo: Jamaica Tourist Board",
-    "Slide photo (culture): Photo by Peter Verwimp, Wikimedia Commons (CC0)",
+    "Place confirmed by photo description",
     "Slide photo (river): Photo: Jamaica Tourist Board",
-    "Slide photo (group): Photo by 4677693 on Pixabay"
+    "Slide photo (couple): Photo by Adam Dillon on Unsplash"
    ],
    "images": [
-    "media/2026-11-24/2026-11-24_0700_tip_1.jpg",
-    "media/2026-11-24/2026-11-24_0700_tip_2.jpg",
-    "media/2026-11-24/2026-11-24_0700_tip_3.jpg",
-    "media/2026-11-24/2026-11-24_0700_tip_4.jpg",
-    "media/2026-11-24/2026-11-24_0700_tip_5.jpg"
+    "media/2026-11-24/2026-11-24_0700_place_1.jpg",
+    "media/2026-11-24/2026-11-24_0700_place_2.jpg",
+    "media/2026-11-24/2026-11-24_0700_place_3.jpg",
+    "media/2026-11-24/2026-11-24_0700_place_4.jpg",
+    "media/2026-11-24/2026-11-24_0700_place_5.jpg",
+    "media/2026-11-24/2026-11-24_0700_place_6.jpg"
    ],
-   "copy_text": "Travel Tip: Leave early. 💡\n\nCity traffic builds at rush hour. An early start gives you a calmer drive.",
-   "alt": "Tip graphic: Leave early. (carousel: swipe for more)",
-   "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
-   },
-   "caption": "Travel Tip: Leave early. 💡\n\nCity traffic builds at rush hour. An early start gives you a calmer drive.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaCarRental #DiscoverTheRealJamaica #TravelTips #JamaicaTravel",
    "photo": {
-    "id": "drive:11sPEEMG4M8nCfy86crJrWEXQLXfagbAC",
-    "name": "093_JTB_Adventure_OchoRios_BlueHole_IslandGullyFalls_SeasonedTraveller_man_on_platform",
+    "id": "drive:1IPJeigHAMJDEzPCA7TPbvKC_ZB9f_Com",
+    "name": "068_JTB_Spring_2025_Kingston_Lady_on_Hammock",
     "source": "drive",
     "credit": "Photo: Jamaica Tourist Board"
    },
-   "beat_lines": [
-    "The detail.",
-    "On your trip.",
-    "Book in 3 steps."
-   ],
+   "copy_text": "Kingston Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nKingston. Music, food and art. 🌴\n\nJamaica's capital rewards a slow day.\n\nMusic, murals, food and history in a city with a pulse.\n\nGetting there: Pick up at Norman Manley or our Kingston offices and you are in the middle of it.\n\nDevon House for ice cream, the Bob Marley Museum and Hope Gardens are all in town.",
+   "alt": "Scenery in Kingston, Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Kingston Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nKingston. Music, food and art. 🌴\n\nJamaica's capital rewards a slow day.\n\nMusic, murals, food and history in a city with a pulse.\n\nGetting there: Pick up at Norman Manley or our Kingston offices and you are in the middle of it.\n\nDevon House for ice cream, the Bob Marley Museum and Hope Gardens are all in town.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\n📷 Photo: Jamaica Tourist Board\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #NormanManleyAirport #CarRentalJamaica #RentJamaican #JamaicaTravel",
    "photos_extra": [
     {
-     "id": "drive:1LhtXSTZihyrNtKP-tx1pJN30dhpBafMt",
-     "name": "120_JTB_Brand_OchoRios_Ackee_fruit"
+     "id": "drive:1y2sxSrFS6xvot_olakW08MYRK8RszcS4",
+     "name": "008_JTB_Spring_2025_Kingston_Romance_Lime_Cay"
     },
     {
-     "id": "wikimedia:141401289",
-     "name": "wikimedia-141401289"
+     "id": "drive:1liKbfhIzDWARnaJTwU8ET95ZOZ5AQ2TE",
+     "name": "030_JTB_Spring_2025_Kingston_Norman_Manley_International_Airport_Greeting"
     },
     {
-     "id": "drive:1IoepQ3SfPHQleSpSRIy2CQzFKO1wcMqU",
-     "name": "214_JTB_Wellness_PortAntonio_Young_woman_floating_in_river"
+     "id": "drive:1PX3dIH3scKDUvSFoJPuqM8dksmf4ZQTh",
+     "name": "055_JTB_Spring_2025_Kingston_Palisodoes_Strip_Sunset"
     },
     {
-     "id": "pixabay:2103130",
-     "name": "pixabay-2103130"
+     "id": "drive:11sPEEMG4M8nCfy86crJrWEXQLXfagbAC",
+     "name": "093_JTB_Adventure_OchoRios_BlueHole_IslandGullyFalls_SeasonedTraveller_man_on_platform"
+    },
+    {
+     "id": "unsplash:tYFyHYbuHcw",
+     "name": "unsplash-tYFyHYbuHcw"
     }
    ],
+   "beat_lines": [
+    "What you will love.",
+    "Getting there.",
+    "Make a day of it.",
+    "Know the price before you land."
+   ],
    "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/0afe491a321cfe6d.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/19e7bf793a6d65a7.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/840d3dc8ce6947a3.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/1e1b453d0ca8fb7f.jpg",
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/184d84a2dbe199bb.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/8fb8c746a804675d.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/d1a1980208b699e1.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/e93bcdf277bbcaef.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/2aded1623add6a1c.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/unsplash/e1fe33b9710e6f36.jpg"
    ],
    "status": "pending"
   },
@@ -191,9 +196,10 @@
    "slot": "2026-11-24T14:00:00-05:00",
    "type": "deposits",
    "flags": [
+    "⚠ Art director check: Duplicate swipe button in top right; Awkward tilted camera angle; Dark underexposed photo; Amateur car photo with messy reflections. Look closely before approving.",
     "Number plate visible (kept sharp on purpose)",
-    "Similar hatchback shown for the Toyota Vitz (same body style, from our fleet photos)",
-    "1 of 7 slides have photos"
+    "Slide photo (river): Photo: Jamaica Tourist Board",
+    "Slide photo (group): Photo by 4677693 on Pixabay"
    ],
    "images": [
     "media/2026-11-24/2026-11-24_1400_deposits_1.jpg",
@@ -205,24 +211,43 @@
     "media/2026-11-24/2026-11-24_1400_deposits_7.jpg"
    ],
    "photo": {
-    "id": "local:arah_listing_68_1_2016-mazda-demio",
-    "name": "arah_listing_68_1_2016-mazda-demio",
+    "id": "local:arah_listing_112_2_2019-subaru-legacy",
+    "name": "arah_listing_112_2_2019-subaru-legacy",
     "source": "local",
     "credit": "Arah Rides"
    },
-   "copy_text": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.",
+   "copy_text": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.",
    "alt": "Low security deposit rental cars in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
    },
-   "caption": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\nVehicles shown may differ from the one you rent.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #SelfDriveJamaica #RentJamaican #VisitJamaica #TravelJamaica",
-   "hook_line": null,
+   "caption": "Low deposit cars in Jamaica 🔑\n\n• Subaru Legacy B4: deposit US$80, from US$80 a day\n• Toyota Vitz: deposit US$100, from US$55 a day\n• Suzuki Baleno: deposit US$100, from US$57 a day\n• Toyota Corolla: deposit US$100, from US$65 a day\n\nDecember dates are filling fast. Lock in your car now.\nThe deposit is released after you return the car, under the rental terms. Base daily rates; holiday dates can differ.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#OchoRios #AirportPickupJamaica #RentJamaican #JamaicaTravel #JamaicaVacation",
+   "hook_line": "Low deposit: Subaru Legacy B4, just US$80",
    "beat_lines": [
+    "Toyota Vitz: US$100 deposit",
+    "Suzuki Baleno: US$100 deposit",
+    "Toyota Corolla: US$100 deposit",
     "Book in minutes: arahrides.com"
    ],
+   "photos_extra": [
+    {
+     "id": "drive:1IoepQ3SfPHQleSpSRIy2CQzFKO1wcMqU",
+     "name": "214_JTB_Wellness_PortAntonio_Young_woman_floating_in_river"
+    },
+    {
+     "id": "pixabay:2103130",
+     "name": "pixabay-2103130"
+    }
+   ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/9a3e063143d709f7.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/708a6e3fae9593c8.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/273dff2e797e5513.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/a2db20cedd4a3135.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/c1bb9233ca18c9c4.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e90fe3e79d0b9552.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/e93bcdf277bbcaef.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/2aded1623add6a1c.jpg"
    ],
    "status": "pending"
   },
@@ -232,12 +257,12 @@
    "slot": "2026-11-24T18:00:00-05:00",
    "type": "moment",
    "flags": [
-    "⚠ Art director check: food shown is not mentioned in headline; no car shown for car rental ad; duplicate swipe button in top right; subject wearing face mask looks dated. Look closely before approving.",
+    "⚠ Art director check: No car shown for car rental company; Alcohol shown for a driving service; Duplicate swipe button at top right. Look closely before approving.",
     "Own photo matched to topic: xmas",
+    "Web photo (xmas): checked by AI",
     "Own photo matched to topic: xmas",
-    "Own photo matched to topic: xmas",
-    "Slide photo (river): Photo: Jamaica Tourist Board",
-    "Slide photo (food): Photo by Sponchia on Pixabay",
+    "Slide photo (culture): Photo by Peter Verwimp, Wikimedia Commons (CC0)",
+    "Slide photo (road): Photo: Jamaica Tourist Board",
     "Goes out as a Reel (sale video (Drive clip))."
    ],
    "images": [
@@ -251,10 +276,10 @@
    "copy_text": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.",
    "alt": "Seasonal graphic: Holiday savings: up to $40 off. (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
    },
-   "caption": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaCarRental #DiscoverTheRealJamaica #VisitJamaica #JamaicaItinerary",
+   "caption": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #RentACarJamaica #RentJamaican #VisitJamaica #TravelJamaica",
    "beat_lines": [
     "Plan your wheels.",
     "Pick up where you land.",
@@ -262,64 +287,100 @@
    ],
    "photos_extra": [
     {
-     "id": "drive:1sFlf1lNQCYrZYGWyoZ4Sq4OevaF9KDlg",
-     "name": "219_JTB_Romance_OchoRios_Sunset_in_pool_at_villa"
+     "id": "wikimedia:141405219",
+     "name": "wikimedia-141405219"
     },
     {
-     "id": "pixabay:2977251",
-     "name": "pixabay-2977251"
+     "id": "drive:1LhtXSTZihyrNtKP-tx1pJN30dhpBafMt",
+     "name": "120_JTB_Brand_OchoRios_Ackee_fruit"
     }
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/07f01354218e164e.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/b1b3ac4fb8c71469.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/ea66fd47ff066835.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/f78e3f162afa0262.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/28d265c3445826b2.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/efc5212a91f0e0a7.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/cb9cd5d1616d3751.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/12f3bf9336aeb982.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/190e7c0b9de20e6e.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/8fb8c746a804675d.jpg"
    ],
    "status": "pending",
    "reel_kind": "sale video (Drive clip)",
    "reel": "media/2026-11-24/2026-11-24_1800_moment.mp4"
   },
   {
-   "id": "2026-11-24_2000_review",
+   "id": "2026-11-24_2000_spotlight",
    "date": "2026-11-24",
    "slot": "2026-11-24T20:00:00-05:00",
-   "type": "review",
+   "type": "spotlight",
    "flags": [
-    "⚠ Art director check: Photo is underexposed and dark; Car is parked awkwardly on shoulder/ditch; SUV shown instead of standard Corolla body style. Look closely before approving.",
-    "Number plate visible (kept sharp on purpose)",
-    "1 of 5 slides have photos"
+    "⚠ Art director check: Duplicate 'SWIPE' button in top corner. Look closely before approving.",
+    "Place confirmed by photo description",
+    "Slide photo matched to 'Montego Bay Marine Park Jamaica': Photo: Jamaica Tourist Board",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Left out a photo that did not match: Getting there. Pick up your car at Montego Bay and drive you",
+    "Slide photo (river): Photo: Jamaica Tourist Board",
+    "Left out a photo that did not match: Know the price before you land. Holiday rates: cars from US$",
+    "Left out 2 slide(s) with no matching photo",
+    "3 of 4 slides have photos",
+    "No music on this Reel: add a trending sound in the Instagram app after it posts (cuts are on a 120 BPM beat, so most trending sounds line up).",
+    "Goes out as a Reel (save this Reel, about 5s-7s, loops: 4 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app)."
    ],
    "images": [
-    "media/2026-11-24/2026-11-24_2000_review_1.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_2.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_3.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_4.jpg",
-    "media/2026-11-24/2026-11-24_2000_review_5.jpg"
+    "media/2026-11-24/2026-11-24_2000_spotlight_1.jpg",
+    "media/2026-11-24/2026-11-24_2000_spotlight_2.jpg",
+    "media/2026-11-24/2026-11-24_2000_spotlight_3.jpg",
+    "media/2026-11-24/2026-11-24_2000_spotlight_4.jpg"
    ],
    "photo": {
-    "id": "drive:1-3saOOMouUVu6q0-_Yfgh8vSHOMWuHTT",
-    "name": "white_corolla_cross_rear_cutting",
+    "id": "drive:1rYibt7ub5u1zuXf-c9fXtQj8FmXo3h1K",
+    "name": "DoctorsCaveBeach0224",
     "source": "drive",
-    "credit": "Arah Rides"
+    "credit": "Photo: Jamaica Tourist Board"
    },
-   "beat_lines": [
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla"
-   ],
-   "copy_text": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇",
-   "alt": "Renter reviews of the Toyota Corolla on Arah Rides (carousel: swipe for more)",
+   "copy_text": "Montego Bay Marine Park. Make a day of it. 📍\n\nMontego Bay Marine Park, St. James.\nPick up your car at Montego Bay and drive there on your own time.",
+   "alt": "Montego Bay Marine Park, St. James, Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Norman Manley International Airport",
-    "id": "583154638527853"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\n#NormanManleyAirport #RentACarJamaica #DiscoverTheRealJamaica #JamaicaCarRental #TravelJamaica",
-   "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/cb6bea7767e50e59.jpg"
+   "caption": "Montego Bay Marine Park. Make a day of it. 📍\n\nMontego Bay Marine Park, St. James.\nPick up your car at Montego Bay and drive there on your own time.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#SangsterAirport #MontegoBay #MontegoBayJamaica #RentACarJamaica #RentJamaican",
+   "beat_lines": [
+    "Where it is.",
+    "Why go."
    ],
-   "status": "pending"
+   "photos_extra": [
+    {
+     "id": "drive:1G6jBQEq0O8GOqL0Ju3g8-CwG5-Ram4DN",
+     "name": "DoctorsCaveBeach6262"
+    },
+    {
+     "id": "drive:1sFlf1lNQCYrZYGWyoZ4Sq4OevaF9KDlg",
+     "name": "219_JTB_Romance_OchoRios_Sunset_in_pool_at_villa"
+    }
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/ff9c326b75673db4.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/2676e041065c3eed.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/8d3cde45fdf78cc0.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/90bafebe882243ee.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/f8d7bf3a7035bc88.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/433ce50ee2a4c0cd.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/be29df326824e6b1.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/b1646a8b5d782033.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/56a432cf8525635b.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/71c539a2ff21ad50.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/f78e3f162afa0262.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/b08db55791ca7ae1.jpg"
+   ],
+   "status": "pending",
+   "reel_format": "save this",
+   "reel_kind": "save this Reel, about 5s-7s, loops: 4 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app",
+   "reel": "media/2026-11-24/2026-11-24_2000_spotlight.mp4"
   },
   {
    "id": "2026-11-24_2200_deal",
@@ -327,43 +388,57 @@
    "slot": "2026-11-24T22:00:00-05:00",
    "type": "deal",
    "flags": [
+    "⚠ Art director check: Duplicate swipe button at top right; Harsh shadow across car; Stray colored bar at bottom edge; Cluttered amateur background. Look closely before approving.",
     "Number plate visible (kept sharp on purpose)",
-    "2 of 5 slides have photos",
-    "Goes out as a Reel (animated slideshow (classic))."
+    "Slide photo (food): Photo by asad_sumbul on Pixabay",
+    "Left out 1 slide(s) with no matching photo",
+    "3 of 4 slides have photos",
+    "Reel includes 2 real video clip(s) (your Drive / Pexels / Wikimedia / Pixabay, free licences), checked by the AI against the words",
+    "No music on this Reel: add a trending sound in the Instagram app after it posts (cuts are on a 120 BPM beat, so most trending sounds line up).",
+    "Goes out as a Reel (POV Reel, about 5s-7s, loops: 2 photos + 2 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app)."
    ],
    "images": [
     "media/2026-11-24/2026-11-24_2200_deal_1.jpg",
     "media/2026-11-24/2026-11-24_2200_deal_2.jpg",
     "media/2026-11-24/2026-11-24_2200_deal_3.jpg",
-    "media/2026-11-24/2026-11-24_2200_deal_4.jpg",
-    "media/2026-11-24/2026-11-24_2200_deal_5.jpg"
+    "media/2026-11-24/2026-11-24_2200_deal_4.jpg"
    ],
    "_deal_k": 2,
    "photo": {
-    "id": "local:arah_b3_12_suzuki-vitara-red",
-    "name": "arah_b3_12_suzuki-vitara-red",
+    "id": "local:arah_listing_164_1_2025-kia-soluto",
+    "name": "arah_listing_164_1_2025-kia-soluto",
     "source": "local",
     "credit": "Arah Rides"
    },
-   "copy_text": "Suzuki Vitara from US$72 a day 🚗\n\nSecurity deposit: US$1000.\nSUV. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
-   "alt": "Suzuki Vitara rental car in Jamaica (carousel: swipe for more)",
+   "copy_text": "Kia Soluto from US$60 a day 🚗\n\nSecurity deposit: US$250.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "Kia Soluto rental car in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Suzuki Vitara from US$72 a day 🚗\n\nSecurity deposit: US$1000.\nSUV. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #JamaicaRentalCar #DiscoverTheRealJamaica #JamaicaItinerary #VisitJamaica",
+   "caption": "Kia Soluto from US$60 a day 🚗\n\nSecurity deposit: US$250.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #JamaicaRentalCar #ArahRides #JamaicaItinerary #TravelJamaica",
    "beat_lines": [
-    "From US$72 a day",
-    "Deposit US$1000",
-    "A higher seat and more room for the family and the bags.",
-    "Book in minutes: website or WhatsApp Winston"
+    "The price.",
+    "The deposit."
+   ],
+   "photos_extra": [
+    {
+     "id": "pixabay:9243920",
+     "name": "pixabay-9243920"
+    }
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/be3d9f00d21b1016.jpg",
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/34252df8b4bc56f1.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/86d2ddb9689f66b0.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/b9515b0c7ad188ad.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/b8ee0b6da48ce9e5.jpg"
    ],
    "status": "pending",
-   "reel_kind": "animated slideshow (classic)",
+   "reel_format": "POV",
+   "clips": [
+    "drive-video:1cz0IBjBXaT3S9jI483hMGFFB_pRRj-bV",
+    "drive-video:1s4muoDHhV0uRby6Lkj9iR52i6qqtDdyx"
+   ],
+   "reel_kind": "POV Reel, about 5s-7s, loops: 2 photos + 2 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app",
    "reel": "media/2026-11-24/2026-11-24_2200_deal.mp4"
   }
  ]
