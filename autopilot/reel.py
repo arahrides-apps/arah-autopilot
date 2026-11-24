@@ -72,6 +72,39 @@ def cfg_web_video():
 CTA_LINES = ["Book in minutes on ArahRides.com", "Airport pickup: Montego Bay, Kingston, Ocho Rios", "Pay with Klarna, Affirm, Apple Pay or Google Pay", "WhatsApp Winston, 24/7"]
 GENERIC_CLIPS = ["Jamaica road", "Jamaica coastal road drive", "Jamaica car driving", "Jamaica highway"]      # filler for car posts only: driving, which is what a rental is
 
+def _format(p, first, lines, date):
+    """Rotates the Reel formats that do well for travel brands right now. Only the framing changes; the facts stay the post's own.
+      deal      -> "What US$60 a day gets you in Jamaica"  or  "POV: you land at MBJ and your Nissan Sylphy is waiting"
+      deposits  -> "POV: renting a car in Jamaica without a big deposit"
+      place / spotlight / journey -> "POV: you rented a car and drove to Negril", a numbered list "Negril: 3 things to know",
+                   or the save-bait "Save this for your Jamaica trip: Negril"
+    -> (lines, format name or None)"""
+    from . import story as S
+    seed = int(hashlib.md5((str(date) + p["id"] + "fmt").encode()).hexdigest()[:6], 16)
+    t = p.get("type"); beats = list(lines[1:])
+    if t == "deal":
+        m = re.search(r"from US\$(\d+) a day", first or "", re.I)
+        model = re.split(r"\s+from\s+US", first or "", flags=re.I)[0].strip()
+        if m and seed % 2 == 0:
+            return [f"What US${m.group(1)} a day gets you in Jamaica"] + beats, "price story"
+        if model and len(model) <= 28:
+            return [f"POV: you land at MBJ and your {model} is waiting"] + beats, "POV"
+    if t == "deposits":
+        return ["POV: renting a car in Jamaica without a big deposit"] + beats, "POV"
+    if t in ("place", "spotlight", "journey", "moment"):
+        name, _e = S.find_place(first)
+        if not name:
+            name, _e = S.find_place(p.get("copy_text") or "")
+        if name:
+            place = name.title().replace("'S", "'s")
+            pick = seed % 3
+            if pick == 0 and len(beats) >= 3:
+                return [f"{place}: {min(len(beats), 4)} things to know"] + [f"{i + 1}. {b}" for i, b in enumerate(beats[:4])], "numbered list"
+            if pick == 1:
+                return [f"POV: you rented a car and drove to {place}"] + beats, "POV"
+            return [f"Save this for your Jamaica trip: {place}"] + beats, "save this"
+    return lines, None
+
 def _hook(p, out, end_img, date):
     """The scroll-stopping Reel: real photos and real video clips, hook line first, fast cuts, pop-in captions, music, end card.
     Shots are filled with video clips (your Drive clips first, then Pexels, then Pixabay) that fit each caption; car posts keep the car photo as the hook and add Jamaica scenery clips.
@@ -81,9 +114,13 @@ def _hook(p, out, end_img, date):
     first = re.split(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]|\n", p.get("copy_text") or p.get("alt") or "")[0].strip()
     lines = [p.get("hook_line") or first] + list(p.get("beat_lines", []))
     carpost = p.get("type") in ("deal", "deposits", "car_hero")
-    target = max(4, min(6, len(lines)))
+    if not p.get("hook_line"):
+        lines, fmt = _format(p, first, lines, date)
+        if fmt:
+            p["reel_format"] = fmt
+    target = max(4, min(5, len(lines)))                              # 7-10 seconds: short Reels that loop get watched twice
     if carpost:                                                      # car posts: the car photos carry the Reel, plus at most 2 Jamaica clips
-        target = max(3, min(len(raw) + 2, 5))
+        target = max(3, min(len(raw) + 2, 4))
     i = 0
     while len(lines) < target:
         lines.append(CTA_LINES[i % len(CTA_LINES)]); i += 1
@@ -121,11 +158,21 @@ def _hook(p, out, end_img, date):
     except Exception as e:
         log.warning("branded end card failed, using the last slide: %s", e) if "log" in globals() else None
     _o, music = reel2.make_hook_reel(shots, lines[:len(shots)], end_img, out, seed=seed)
-    p["reel_kind"] = f"hook Reel: {len(shots) - nclips} photos + {nclips} video clips, fast cuts, captions" + (", instrumental music" if music else ", no music")
+    p["reel_kind"] = (f"{p.get('reel_format', 'hook')} Reel, about {len(shots) + 1}s-{len(shots) + 3}s, loops: {len(shots) - nclips} photos + {nclips} video clips, cuts on a 120 BPM beat"
+                      + (", instrumental music" if music else ", add a trending sound in the Instagram app"))
+    try:                                                         # credit CC BY video clips (Wikimedia) in the caption
+        from . import webvideo as _WV
+        cr = [_WV.CREDITS[k] for k in p.get("clips", []) if k in _WV.CREDITS]
+        if cr and p.get("caption"):
+            parts = p["caption"].rstrip().split("\n\n")
+            at = len(parts) - 1 if parts and parts[-1].strip().startswith("#") else len(parts)
+            parts.insert(at, "\n".join(dict.fromkeys(cr))); p["caption"] = "\n\n".join(parts)[:2200]
+    except Exception:
+        pass
     if nclips:
-        p.setdefault("flags", []).append(f"Reel includes {nclips} real video clip(s) from Pixabay (free licence), checked by Claude against the words")
+        p.setdefault("flags", []).append(f"Reel includes {nclips} real video clip(s) (your Drive / Pexels / Wikimedia / Pixabay, free licences), checked by the AI against the words")
     if not music:
-        p.setdefault("flags", []).append("Silent Reel: no music could be fetched this run. Add instrumental tracks (mp3) to content/music/, or post it from the Instagram app with a trending sound.")
+        p.setdefault("flags", []).append("No music on this Reel: add a trending sound in the Instagram app after it posts (cuts are on a 120 BPM beat, so most trending sounds line up).")
     else:
         credit = getattr(reel2.make_hook_reel, "credit", None)
         if credit and credit not in p.get("caption", ""):

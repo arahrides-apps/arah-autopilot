@@ -4,7 +4,9 @@
      Name them for what they show ("Negril beach sunset.mp4", "jerk stop Boston.mov", "family at airport.mp4") or put them in a
      sub-folder with that name: the name is how a clip is matched to a post's words.
   2. Pexels videos (PEXELS_API_KEY, free, commercial use allowed): the biggest free library of Caribbean footage.
-  3. Pixabay videos (PIXABAY_API_KEY, same key as the photos).
+  3. Wikimedia Commons videos (no key): real footage filmed in Jamaica, public domain / CC0 / CC BY only, filmed 2008 or later.
+     CC BY clips are credited in the caption.
+  4. Pixabay videos (PIXABAY_API_KEY, same key as the photos).
 
 Every clip is checked by the AI on a frame (Jamaica, and it must fit the words) and is never used twice (data/clip_use.json).
 Your own clips are trusted to be Jamaica, so only the fit is checked."""
@@ -15,7 +17,8 @@ from .config import ROOT
 log = logging.getLogger("webvideo")
 CACHE = ROOT / "cache" / "webclips"
 ADDED = [0]
-COUNT = {"own": 0, "pexels": 0, "pixabay": 0}
+COUNT = {"own": 0, "pexels": 0, "wikimedia": 0, "pixabay": 0}
+CREDITS = {}                   # clip key -> credit line for the caption (CC BY clips)
 KEYS = {}                      # local path -> clip key, so a post can record which clips it used
 
 VID_EXT = (".mp4", ".mov", ".m4v", ".webm")
@@ -73,6 +76,36 @@ def _pexels(q, n=30):
             break
     return out
 
+def _wikimedia(q, n=30):
+    """Wikimedia Commons video search. Takes the 720p transcode (small, quick to download); old footage (before 2008) is skipped."""
+    from .photos import WikimediaSource, re_tags
+    j = _get("https://commons.wikimedia.org/w/api.php", {
+        "action": "query", "format": "json", "generator": "search", "gsrsearch": q + " filetype:video", "gsrnamespace": 6, "gsrlimit": n,
+        "prop": "videoinfo", "viprop": "url|size|mime|extmetadata|derivatives"}, WikimediaSource.UA) or {}
+    out = []
+    for pg in (j.get("query", {}).get("pages") or {}).values():
+        vi = (pg.get("videoinfo") or [{}])[0]; md = vi.get("extmetadata") or {}
+        if not WikimediaSource.free(md):
+            continue
+        when = (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or ""
+        ym = re.search(r"(19\d\d|20\d\d)", when)
+        if ym and int(ym.group(1)) < 2008:
+            continue
+        ders = [d for d in vi.get("derivatives") or [] if d.get("src") and re.search(r"(720|480|1080)p", d.get("src", ""))]
+        ders.sort(key=lambda d: (0 if "720p" in d["src"] else 1 if "480p" in d["src"] else 2, 0 if "vp9" in d["src"] else 1))
+        src = ders[0]["src"] if ders else (vi.get("url") if int(vi.get("size") or 0) < (80 << 20) else None)
+        if not src:
+            continue
+        dur = float((md.get("Duration") or {}).get("value") or vi.get("duration") or 10) if str((md.get("Duration") or {}).get("value") or "").replace(".", "").isdigit() else 10
+        text = (pg.get("title") or "") + " " + re_tags((md.get("ImageDescription") or {}).get("value") or "") + " " + re_tags((md.get("Categories") or {}).get("value") or "").replace("|", " ")
+        lic = (md.get("LicenseShortName") or {}).get("value") or "public domain"
+        who = re_tags((md.get("Artist") or {}).get("value") or "").strip()[:50] or "unknown"
+        key = f"wikimedia-video:{pg['pageid']}"
+        if lic.lower().startswith("cc by"):
+            CREDITS[key] = f"🎥 Video: {who}, Wikimedia Commons ({lic})"
+        out.append({"key": key, "tags": text.lower(), "duration": dur, "src": src, "own": False, "via": "wikimedia", "convert": True})
+    return out
+
 _OWN = None
 def _own_list():
     """Every video file under the Drive folder(s), with its file name and folder names as its words."""
@@ -123,7 +156,7 @@ def _own(q):
 
 def _search(q):
     if q not in _CACHE_Q:
-        _CACHE_Q[q] = _own(q) + _pexels(q) + _pixabay(q)
+        _CACHE_Q[q] = _own(q) + _pexels(q) + _wikimedia(q) + _pixabay(q)
     return _CACHE_Q[q]
 
 
@@ -153,10 +186,16 @@ def _download(h, dest):
             tmp.unlink(missing_ok=True)
         else:
             import requests
-            with requests.get(h["src"], timeout=120, stream=True) as r:
+            from .photos import WikimediaSource
+            tmp = dest.with_suffix(".orig") if h.get("convert") else dest
+            with requests.get(h["src"], timeout=180, stream=True, headers=WikimediaSource.UA) as r:
                 r.raise_for_status()
-                with open(dest, "wb") as f:
+                with open(tmp, "wb") as f:
                     for chunk in r.iter_content(1 << 16): f.write(chunk)
+            if h.get("convert"):                                  # webm / ogv -> H.264 the Reel builder can cut fast
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-t", "20", "-vf", "scale='if(gt(iw,ih),-2,1080)':'if(gt(iw,ih),1080,-2)'",
+                                "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", str(dest)], timeout=300, check=True)
+                tmp.unlink(missing_ok=True)
         return dest.exists()
     except Exception as e:
         log.warning("clip download failed (%s): %s", h["key"], e)
@@ -221,5 +260,5 @@ def find(queries, text, date, want=2, used=(), strict=False):
 def status():
     have = [n for n, k in (("Pexels", "PEXELS_API_KEY"), ("Pixabay", "PIXABAY_API_KEY")) if os.environ.get(k)]
     own = len(_OWN or [])
-    return (f"video clips added to Reels {ADDED[0]} (your Drive clips {COUNT['own']}, Pexels {COUNT['pexels']}, Pixabay {COUNT['pixabay']})"
-            f" · Drive clips found {own} · video libraries on: {', '.join(have) or 'none (add PEXELS_API_KEY)'}")
+    return (f"video clips added to Reels {ADDED[0]} (your Drive clips {COUNT['own']}, Pexels {COUNT['pexels']}, Wikimedia {COUNT['wikimedia']}, Pixabay {COUNT['pixabay']})"
+            f" · Drive clips found {own} · video libraries on: {', '.join(have + ['Wikimedia'])}")

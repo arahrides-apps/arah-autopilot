@@ -74,7 +74,7 @@ def reel_end_html(head, sub=""):
         pass
     code = (f'<div class="abs" style="left:64px;right:64px;top:1020px;text-align:center;font-size:38px;font-weight:700">Code <span style="background:{Y};color:{K};padding:6px 24px;border-radius:14px;font-weight:900;letter-spacing:3px">{H.escape(pr["code"])}</span> · up to ${pr["amount"]} off</div>' if pr else "")
     return _base(f"""
-<div class=abs style="inset:0;background:radial-gradient(circle at 50% 30%,rgba(11,107,58,.55),rgba(26,31,28,1) 70%)"></div>
+<div class=abs style="inset:0;background:radial-gradient(circle at 50% 30%,rgba(11,107,58,.55),rgba(26,31,28,.86) 70%)"></div>
 {_lights()}
 <div class=abs style="left:0;right:0;top:170px;display:flex;justify-content:center">{_mark().replace('class="abs" ', '').replace('left:52px;top:110px;', '').replace('left:64px;top:140px;', '').replace('width:150px', 'width:240px')}</div>
 <div class="abs big" style="left:70px;right:70px;top:560px;text-align:center;font-size:92px;line-height:1.02;text-wrap:balance">{H.escape(head)}</div>
@@ -84,14 +84,14 @@ def reel_end_html(head, sub=""):
 <div class="abs" style="left:64px;right:64px;top:1320px;text-align:center;font-size:34px;font-weight:700">💬 WhatsApp Winston 24/7 · wa.me/12013713152</div>
 <div class="abs" style="left:64px;right:64px;top:1400px;text-align:center;font-size:30px;opacity:.9">Airport pickup: Montego Bay · Kingston · Ocho Rios</div>
 {_pay().replace('top:1600px','top:1500px')}
-<div class="abs" style="left:64px;right:64px;top:1660px;text-align:center;font-size:22px;opacity:.65">Check availability and book at www.arahrides.com or with Winston on WhatsApp.</div>""", False)
+<div class="abs" style="left:64px;right:64px;top:1660px;text-align:center;font-size:22px;opacity:.65">Check availability and book at www.arahrides.com or with Winston on WhatsApp.</div>""", True)
 
 def render_reel_end(head, sub, out):
     from playwright.sync_api import sync_playwright
     out = Path(out); out.parent.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as pw:
         br = pw.chromium.launch(); pg = br.new_page(viewport={"width": 1080, "height": 1920})
-        pg.set_content(reel_end_html(head, sub)); pg.wait_for_timeout(250); pg.screenshot(path=str(out)); br.close()
+        pg.set_content(reel_end_html(head, sub)); pg.wait_for_timeout(250); pg.screenshot(path=str(out), omit_background=True); br.close()   # see-through: the opening shot shows behind it, so the Reel loops
     return out
 
 def render(p, outdir):
