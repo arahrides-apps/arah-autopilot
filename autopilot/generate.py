@@ -363,6 +363,13 @@ class DayBuilder:
         ph = self.pk._own("car", None, None, about=self._car_words(model), about_not=self.CAR_NOT.get(model.lower()), exterior=exterior)
         if ph:
             return ph, False
+        if self.pk.web and self.cfg["photos"].get("stock_exact_model", True):
+            try:                                              # no fleet photo of this model left: a checked stock photo of exactly this model (2017+, Chinese 2024+)
+                ph = self.pk.car_stock([model])
+            except Exception as e:
+                log.warning("stock car photo failed: %s", e); ph = None
+            if ph:
+                return ph, False
         if category:
             cars = load_yaml("campaign_fleet.yaml")["cars"]
             order = [c["model"] for c in cars]; at = order.index(model) if model in order else len(order)

@@ -281,6 +281,7 @@ PROMPT = ("You are indexing photos for a Jamaican car rental company's Instagram
           '"categories":["any of: %s"],"people":true|false,"season":"any|christmas|carnival|summer","jamaica":"yes|likely|no|unsure","confidence":0.0-1.0}. '
           "Name a specific place only if the picture shows it clearly (a sign, a landmark you recognise, a distinctive view such as the bamboo tunnel at Holland Bamboo or the castle at Trident); otherwise leave place empty and say confidence honestly. "
           "Mark not-usable any photo whose main subject is an old, classic, vintage, rusty or wrecked car, a racing or rally car, a race track or a car show: we rent modern everyday cars. "
+          "Mark not-usable any black-and-white, sepia, archive or historical photo, or one that clearly looks older than about 2014 (old cars, old clothing, faded film). "
           "Do not identify real people from their faces; statues, murals and signs are fine. Mark screenshots, documents, logos and stock photos of other countries not-usable or jamaica:no. "
           "Likely places in this library: " + PLACES + ".")
 

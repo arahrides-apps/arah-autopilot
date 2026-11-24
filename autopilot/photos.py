@@ -460,7 +460,8 @@ class Picker:
             return False
         y = i.get("year")
         if web.name == "wikimedia" and not y:
-            return False
+            from . import vision as _V
+            return _V.ai_on()                    # undated Commons file: only when the AI checks it (old-looking photos are refused there)
         return not (y and y < self.MIN_YEAR)
 
     def _meta(self, name, item=None):
@@ -497,7 +498,7 @@ class Picker:
             try:                                                            # people / food / activity photo: it must look like it could be Jamaica
                 from . import vision as _V
                 if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, no landmarks, signs or flags of another country, "
-                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); nothing about drugs, smoking or bare feet close-ups") is not True:
+                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); a recent colour photo, not historical or archive; nothing about drugs, smoking or bare feet close-ups") is not True:
                     log.info("skip %s: the AI says it does not look like Jamaica (or could not check it)", item["id"]); return None
             except Exception as e:
                 log.warning("Jamaica look check failed, photo left out: %s", e); return None
@@ -516,7 +517,7 @@ class Picker:
             log.info("skip %s: face detected", item["id"]); return None
         e = extra or {}
         use = dest
-        if kind == "car" and self.cfg["photos"].get("remove_plate_boxes", True):      # paint out the 'Arah Rides' box some fleet photos carry over the plate
+        if kind == "car" and src.name in ("drive", "local") and self.cfg["photos"].get("remove_plate_boxes", True):      # paint out the 'Arah Rides' box some fleet photos carry over the plate
             try:
                 from . import deplate as _D
                 use = _D.clean(dest, src.name + ":" + item["id"])
@@ -611,6 +612,8 @@ class Picker:
                          r"crash|accident|wreck|damage|junk|scrap|rust|burn|flood|police|taxi|"
                          r"portrait|selfie|woman|man\b|girl|boy|people|person|crowd|driver|passenger|family|couple", re.I)
 
+    CN_MAKES = ("gwm", "haval", "jetour", "chery", "omoda", "jaecoo", "mg", "byd", "changan", "geely", "foton", "tank", "great wall", "baic", "dongfeng", "gac", "jac")
+
     def car_stock(self, models, ok_models=None):
         """A clean web photo of one of our fleet models (e.g. 'Toyota Corolla'), for when our own photos of it are thin or used lately.
         The photo's description must name both the make and the model, and show a plain car photo: no people, drawings or damage."""
@@ -624,16 +627,25 @@ class Picker:
                 except Exception as e:
                     self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
                 self.rng.shuffle(items)
-                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
+                cn = make.lower() in self.CN_MAKES or any(m in model.lower() for m in self.CN_MAKES)
+                min_year = 2024 if cn else 2017                     # nothing on the site is older than 2017; the Chinese models are 2024-2026
+                def _year_ok(t):
+                    ys = [int(y) for y in re.findall(r"\b(19[5-9]\d|20[0-3]\d)\b", t)]
+                    return not ys or max(ys) >= min_year
+                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"] * 0.8
                         and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
-                        and all(n in i.get("text", "").lower() for n in need) and not self.BAD_CAR.search(i.get("text", ""))]
-                for it in good[:6]:
+                        and all(n in i.get("text", "").lower() for n in need) and not self.BAD_CAR.search(i.get("text", "")) and _year_ok(i.get("text", ""))]
+                for it in good[:8]:
                     self.tried.add(it["id"])
-                    p = self._load(web, it, "car", ["Stock photo of a %s. It shows the model, not one of our own cars: check it looks clean and has no people" % model],
+                    p = self._load(web, it, "car", ["Stock photo of the %s (same make and model as on the site)" % model],
                                    {"credit": it.get("credit", ""), "text": it.get("text", "")})
-                    if p:
-                        p.flags.append("Stock photo of this model")
-                        return p
+                    if not p:
+                        continue
+                    from . import vision as _V
+                    if _V.ai_on() and _V.shows(p.path, f"a {model} car (this exact make and model, not another model), current generation: it looks {min_year} or newer; "
+                                               "a real photo where the whole car is the main subject; not a race car, rally car, concept car, old or modified car; no people in front of it") is not True:
+                        self.led.data["photos"].pop(it["id"], None); continue      # not the right car: give it back, try the next one
+                    return p
         return None
 
     def composite_car(self, car):
@@ -695,11 +707,20 @@ class Picker:
             self.rng.shuffle(items)
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
-            good = [i for i in good if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) and need.search(i.get("text", "") + " " + i.get("name", ""))
+            from . import vision as _V
+            ai = _V.ai_on()
+            # stock sites almost never tag 'Jamaica': with the AI on, the photo only has to match the topic and not name another country, and the AI judges the look
+            good = [i for i in good if (TH.JA.search(i.get("text", "") + " " + i.get("name", "")) or (ai and not TH.NOT_JAMAICA.search(i.get("text", ""))))
+                    and need.search(i.get("text", "") + " " + i.get("name", "")) and not TH.JUNK.search(i.get("text", ""))
                     and not self.BAD_WEB_PEOPLE_OK.search(i.get("text", "")) and self._web_ok(web, i)]
-            for it in good[:8]:
+            good.sort(key=lambda i: not TH.JA.search(i.get("text", "") + " " + i.get("name", "")))     # photos tagged Jamaica first
+            for it in good[:12]:
                 self.tried.add(it["id"])
-                p = self._load(web, it, "scenery", ["Web photo (%s): check it is Jamaica and suits the post; people are fine, no obvious brands" % theme], {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                self._lenient = ai and not TH.JA.search(it.get("text", "") + " " + it.get("name", ""))
+                try:
+                    p = self._load(web, it, "scenery", ["Web photo (%s): checked by AI" % theme], {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                finally:
+                    self._lenient = False
                 if p:
                     return p
         if not own_first:
@@ -796,21 +817,24 @@ class Picker:
             if len(items) < 6 and place and place.lower() not in query.lower():
                 items += self._search(web, place + " Jamaica")
             self.rng.shuffle(items)
-            items = [i for i in items if TH.JA.search(i.get("text", "") + " " + i.get("name", ""))]       # Jamaica only: the photo itself must say so
+            from . import vision as _V
+            _named = lambda i: bool(place) and any(n in (i.get("text", "") + " " + i.get("name", "")).lower() for n in names)
+            # Jamaica only: the photo itself must say so, or name the place (Dunn's River, Devon House...) and pass the AI's Jamaica check
+            items = [i for i in items if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) or (_V.ai_on() and _named(i) and not TH.NOT_JAMAICA.search(i.get("text", "")))]
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
                     and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
             # never use drawings, animals, close-ups or people; the description must show a real landscape
             bad = self.BAD_WEB_PEOPLE_OK if (self.cfg["photos"].get("allow_people_scenery") and web.name != "wikimedia") else self.BAD_WEB
-            good = [i for i in good if not bad.search(i.get("text", "")) and self.SCENIC.search(i.get("text", "")) and self._web_ok(web, i)]
+            good = [i for i in good if not bad.search(i.get("text", "")) and (self.SCENIC.search(i.get("text", "")) or _named(i)) and self._web_ok(web, i)]
             if inland:      # no beach, sea or boat photo for a town that is not on the coast
                 good = [i for i in good if not COASTAL_PHOTO.search(i.get("text", ""))]
             if place:   # the description must name the place (or a word that belongs to it)
                 good = [i for i in good if any(n in i.get("text", "").lower() for n in names) and not names_other_place(i.get("text", ""), names)]
             if ok:
                 good = [i for i in good if ok(settings_of(i.get("text", "")))]
-            for it in good[:8]:
+            for it in good[:12]:
                 self.tried.add(it["id"])
-                p = self._load(web, it, "scenery", ["Web photo: check it shows Jamaica and has no recognisable people or brands"],
+                p = self._load(web, it, "scenery", ["Web photo of the place: checked by AI"],
                                {"credit": it.get("credit", ""), "text": it.get("text", "")})
                 if p:
                     p.flags.append("Place confirmed by photo description" if place else "Web photo checked against its description")
