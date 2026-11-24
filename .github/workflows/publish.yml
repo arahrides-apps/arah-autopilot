@@ -42,15 +42,15 @@ jobs:
         run: |
           git config user.name "arah-autopilot"
           git config user.email "autopilot@users.noreply.github.com"
-          save() { git add -A; if ! git diff --cached --quiet; then git commit -m "Post results"; git pull --rebase; git push; fi; }
+          save() { bash scripts/save.sh "Post results"; }
           if [ "$CATCH" = "true" ] || [ "$DRY" = "true" ]; then
-            git pull --rebase || true
+            git pull --rebase -X theirs -q || git rebase --abort || true
             if [ "$DRY" = "true" ]; then python -m autopilot publish --dry-run; else python -m autopilot publish --catch-up; fi
             save; exit 0
           fi
           END=$((SECONDS + 19800))
           while [ $SECONDS -lt $END ]; do
-            git pull --rebase || true
+            git pull --rebase -X theirs -q || git rebase --abort || true
             python -m autopilot publish || true
             save || true
             sleep 300
