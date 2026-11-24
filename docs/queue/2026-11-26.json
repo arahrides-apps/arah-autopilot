@@ -49,10 +49,9 @@
    "slot": "2026-11-26T02:00:00-05:00",
    "type": "deal",
    "flags": [
-    "⚠ Art director check: Duplicate swipe buttons in top right; Only shows dark back seats instead of the car; Seats look dusty and unvacuumed; Amateur snapshot photo quality. Look closely before approving.",
+    "⚠ Art director check: Car front is dark and in deep shadow; Duplicate swipe buttons in top right; Text and banner awkwardly cover number plate. Look closely before approving.",
     "Number plate visible (kept sharp on purpose)",
-    "1 of 5 slides have photos",
-    "Goes out as a Reel (animated slideshow (classic))."
+    "2 of 5 slides have photos"
    ],
    "images": [
     "media/2026-11-26/2026-11-26_0200_deal_1.jpg",
@@ -63,18 +62,18 @@
    ],
    "_deal_k": 1,
    "photo": {
-    "id": "local:arah_listing_89_2_2022-honda-city",
-    "name": "arah_listing_89_2_2022-honda-city",
-    "source": "local",
+    "id": "drive:1ytkc8TjQwEKJiF-1GQ8lMKtk9plA9eKX",
+    "name": "gray_honda_city_front_left",
+    "source": "drive",
     "credit": "Arah Rides"
    },
    "copy_text": "Honda City from US$65 a day 🚗\n\nSecurity deposit: US$250.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
    "alt": "Honda City rental car in Jamaica (carousel: swipe for more)",
    "location": {
-    "name": "Sangster International Airport",
-    "id": "106111078512570"
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
    },
-   "caption": "Honda City from US$65 a day 🚗\n\nSecurity deposit: US$250.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\n#SangsterAirport #CarRentalJamaica #RentJamaican #TravelJamaica #JamaicaVacation",
+   "caption": "Honda City from US$65 a day 🚗\n\nSecurity deposit: US$250.\nSedan. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #AirportPickupJamaica #ArahRides #JamaicaVacation #CarRentalJamaica",
    "beat_lines": [
     "From US$65 a day",
     "Deposit just US$250",
@@ -82,11 +81,10 @@
     "Book in minutes: website or WhatsApp Winston"
    ],
    "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/cf6cb9ad1098cfbd.jpg"
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/222190b2ac80f5fd.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e013d713892730d9.jpg"
    ],
-   "status": "pending",
-   "reel_kind": "animated slideshow (classic)",
-   "reel": "media/2026-11-26/2026-11-26_0200_deal.mp4"
+   "status": "pending"
   },
   {
    "id": "2026-11-26_1400_deposits",
@@ -126,45 +124,6 @@
    "raw": [
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/9f143e336da2ae46.jpg",
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/15155517255a4cf2.jpg"
-   ],
-   "status": "pending"
-  },
-  {
-   "id": "2026-11-26_2000_review",
-   "date": "2026-11-26",
-   "slot": "2026-11-26T20:00:00-05:00",
-   "type": "review",
-   "flags": [
-    "Number plate visible (kept sharp on purpose)",
-    "1 of 5 slides have photos"
-   ],
-   "images": [
-    "media/2026-11-26/2026-11-26_2000_review_1.jpg",
-    "media/2026-11-26/2026-11-26_2000_review_2.jpg",
-    "media/2026-11-26/2026-11-26_2000_review_3.jpg",
-    "media/2026-11-26/2026-11-26_2000_review_4.jpg",
-    "media/2026-11-26/2026-11-26_2000_review_5.jpg"
-   ],
-   "photo": {
-    "id": "local:arah_listing_200_1_2024-toyota-corolla-cross",
-    "name": "arah_listing_200_1_2024-toyota-corolla-cross",
-    "source": "local",
-    "credit": "Arah Rides"
-   },
-   "beat_lines": [
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla",
-    "★★★★★ Toyota Corolla"
-   ],
-   "copy_text": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇",
-   "alt": "Renter reviews of the Toyota Corolla on Arah Rides (carousel: swipe for more)",
-   "location": {
-    "name": "Montego Bay, Jamaica",
-    "id": "115773858436055"
-   },
-   "caption": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\n#MontegoBayJamaica #SelfDriveJamaica #ArahRides #JamaicaCarRental #JamaicaTravel",
-   "raw": [
-    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/132439192ec6cd7c.jpg"
    ],
    "status": "pending"
   },

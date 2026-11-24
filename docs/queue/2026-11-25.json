@@ -90,6 +90,46 @@
    "reel": "media/2026-11-25/2026-11-25_0200_deal.mp4"
   },
   {
+   "id": "2026-11-25_1400_chat",
+   "date": "2026-11-25",
+   "slot": "2026-11-25T14:00:00-05:00",
+   "type": "chat",
+   "flags": [
+    "⚠ Art director check: duplicate swipe button cut off at top edge. Look closely before approving.",
+    "Own photo matched to topic: solo",
+    "1 of 5 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-25/2026-11-25_1400_chat_1.jpg",
+    "media/2026-11-25/2026-11-25_1400_chat_2.jpg",
+    "media/2026-11-25/2026-11-25_1400_chat_3.jpg",
+    "media/2026-11-25/2026-11-25_1400_chat_4.jpg",
+    "media/2026-11-25/2026-11-25_1400_chat_5.jpg"
+   ],
+   "copy_text": "One-way trip? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.",
+   "alt": "WhatsApp chat with Winston: Can I pick up in MoBay and drop off in Kingston? / Yes. One-way rentals are available. The fee shows in your quote. (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "One-way trip? 💬\n\nWinston is your 24/7 WhatsApp assistant. Quote, book and pay by Stripe. No app.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #JamaicaCarRental #ArahRides #TravelJamaica #VisitJamaica",
+   "photo": {
+    "id": "drive:1G6jBQEq0O8GOqL0Ju3g8-CwG5-Ram4DN",
+    "name": "DoctorsCaveBeach6262",
+    "source": "drive",
+    "credit": "Photo: Jamaica Tourist Board"
+   },
+   "beat_lines": [
+    "Step 1: Say Hi.",
+    "Step 2: Get a quote.",
+    "Step 3: Book and pay."
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/2676e041065c3eed.jpg"
+   ],
+   "status": "pending"
+  },
+  {
    "id": "2026-11-25_2200_deal",
    "date": "2026-11-25",
    "slot": "2026-11-25T22:00:00-05:00",
