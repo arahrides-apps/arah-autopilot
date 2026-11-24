@@ -161,6 +161,54 @@
    "status": "pending"
   },
   {
+   "id": "2026-11-24_1800_moment",
+   "date": "2026-11-24",
+   "slot": "2026-11-24T18:00:00-05:00",
+   "type": "moment",
+   "flags": [
+    "⚠ Art director check: Duplicate swipe button at top right; No car shown for car rental ad. Look closely before approving.",
+    "Web photo (xmas): checked by AI",
+    "Left out a photo that did not match: Pick up where you land. Kingston, Norman Manley, Montego Bay",
+    "Slide photo (food): Photo by asad_sumbul on Pixabay",
+    "2 of 5 slides have photos",
+    "Goes out as a Reel (sale video (Drive clip))."
+   ],
+   "images": [
+    "media/2026-11-24/2026-11-24_1800_moment_1.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_2.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_3.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_4.jpg",
+    "media/2026-11-24/2026-11-24_1800_moment_5.jpg"
+   ],
+   "promo": "PureCyber",
+   "copy_text": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.",
+   "alt": "Seasonal graphic: Holiday savings: up to $40 off. (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Holiday savings: up to $40 off. 🇯🇲\n\nUse promo code PureCyber at checkout on ArahRides.com and save up to $40 on your booking. Choose the car you want to drive and see Jamaica your way. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #SelfDriveJamaica #DiscoverTheRealJamaica #JamaicaEvents #JamaicaItinerary",
+   "beat_lines": [
+    "Plan your wheels.",
+    "Pick up where you land.",
+    "Know the price before you land."
+   ],
+   "photos_extra": [
+    {
+     "id": "pixabay:9243920",
+     "name": "pixabay-9243920"
+    }
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/cb9cd5d1616d3751.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/8d3cde45fdf78cc0.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/b8ee0b6da48ce9e5.jpg"
+   ],
+   "status": "pending",
+   "reel_kind": "sale video (Drive clip)",
+   "reel": "media/2026-11-24/2026-11-24_1800_moment.mp4"
+  },
+  {
    "id": "2026-11-24_2000_review",
    "date": "2026-11-24",
    "slot": "2026-11-24T20:00:00-05:00",
