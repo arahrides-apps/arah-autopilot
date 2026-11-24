@@ -825,12 +825,17 @@ def run(cfg, picker=None, led=None, render=True, days=None):
     made = []
     for off in range(0, (days if days is not None else cfg["days_ahead"]) + 1):
         d = now.date() + dt.timedelta(days=off)
-        if Q.load_day(str(d)) is not None:
+        day = Q.load_day(str(d))
+        keep = day["posts"] if day else []
+        # a day that already exists keeps its posts; only its empty slots still ahead are filled (posts skipped earlier get another try)
+        gone = set() if cfg.get("draft_past_slots_today") else {s for s in cfg["slots"] if dt.datetime.fromisoformat(f"{d}T{s}:00").replace(tzinfo=now.tzinfo) <= now}
+        skip = {p["slot"][11:16] for p in keep} | gone
+        if len(skip) >= len(cfg["slots"]):
             continue
         picker.today = d; led_today = d
-        posts = generate_day(cfg, led, picker, d, now, render, notes)
+        posts = generate_day(cfg, led, picker, d, now, render, notes, skip=skip)
         if posts:
-            Q.save_day(str(d), posts); made.append((str(d), len(posts)))
+            Q.save_day(str(d), sorted(keep + posts, key=lambda p: p["slot"])); made.append((str(d), len(posts)))
     notes += picker.notes
     notes.append(picker.health())
     try:
