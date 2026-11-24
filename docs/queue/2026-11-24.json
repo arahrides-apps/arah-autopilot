@@ -95,7 +95,8 @@
    "flags": [
     "Slides 1 to 3 are the supplied event posters, unchanged",
     "3 of 6 slides have photos",
-    "Goes out as a Reel (animated slideshow (classic))."
+    "Goes out as a Reel (animated slideshow (classic)).",
+    "Art director check: cover looks good"
    ],
    "images": [
     "media/2026-11-24/2026-11-24_1100_moment_1.jpg",
@@ -109,10 +110,10 @@
    "event_id": "MOUTTET MILE",
    "alt": "Event graphic: The Mouttet Mile at Caymanas Park. (carousel: swipe for more)",
    "location": {
-    "name": "Ocho Rios, Jamaica",
-    "id": "111964835488149"
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
    },
-   "caption": "The Mouttet Mile at Caymanas Park. 🇯🇲\n\nTwo days of racing and Dancehall Glam on Dec 4 and 5, with a US$300,000 purse. Pick up in Kingston and drive to the track. Must be 18 or older to bet or play.\n\n📅 Dec 4 to 5\n📍 Caymanas Park, Portmore, St. Catherine\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\nCar rental for Ocho Rios and the north coast\n\n#OchoRios #AirportPickupJamaica #DiscoverTheRealJamaica #JamaicaEvents #JamaicaRoadTrip",
+   "caption": "The Mouttet Mile at Caymanas Park. 🇯🇲\n\nTwo days of racing and Dancehall Glam on Dec 4 and 5, with a US$300,000 purse. Pick up in Kingston and drive to the track. Must be 18 or older to bet or play.\n\n📅 Dec 4 to 5\n📍 Caymanas Park, Portmore, St. Catherine\n\nRent a car and get there your way. Choose the car you want to drive at arahrides.com.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #NormanManleyAirport #CarRentalJamaica #ArahRides #VisitJamaica",
    "raw": [],
    "status": "pending",
    "reel_kind": "animated slideshow (classic)",
@@ -156,6 +157,46 @@
    ],
    "raw": [
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/9a3e063143d709f7.jpg"
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-24_2000_review",
+   "date": "2026-11-24",
+   "slot": "2026-11-24T20:00:00-05:00",
+   "type": "review",
+   "flags": [
+    "⚠ Art director check: Photo is underexposed and dark; Car is parked awkwardly on shoulder/ditch; SUV shown instead of standard Corolla body style. Look closely before approving.",
+    "Number plate visible (kept sharp on purpose)",
+    "1 of 5 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-24/2026-11-24_2000_review_1.jpg",
+    "media/2026-11-24/2026-11-24_2000_review_2.jpg",
+    "media/2026-11-24/2026-11-24_2000_review_3.jpg",
+    "media/2026-11-24/2026-11-24_2000_review_4.jpg",
+    "media/2026-11-24/2026-11-24_2000_review_5.jpg"
+   ],
+   "photo": {
+    "id": "drive:1-3saOOMouUVu6q0-_Yfgh8vSHOMWuHTT",
+    "name": "white_corolla_cross_rear_cutting",
+    "source": "drive",
+    "credit": "Arah Rides"
+   },
+   "beat_lines": [
+    "★★★★★ Toyota Corolla",
+    "★★★★★ Toyota Corolla",
+    "★★★★★ Toyota Corolla"
+   ],
+   "copy_text": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇",
+   "alt": "Renter reviews of the Toyota Corolla on Arah Rides (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "Toyota Corolla rental in Jamaica: what real renters say about booking with Arah Rides ⭐\n\n“Smooth and easy process. Nice selection of cars. Excellent customer service. Reasonable pricing.” — Aston, Toyota Corolla\n“Picking up and dropping off car was easy. Car was in good condition and had no issues. I’ll use them again !” — Xavier, Toyota Corolla\n“Awesome experience. Everything went smoothly, from booking, pick up and returning the vehicle.” — Dean, Toyota Corolla\n\nReviews left on arahrides.com by real renters. Rented with us before? Tell us how it went 👇\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#KingstonJamaica #AirportPickupJamaica #RentJamaican #RentACarJamaica #JamaicaCarRental",
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/cb6bea7767e50e59.jpg"
    ],
    "status": "pending"
   },
