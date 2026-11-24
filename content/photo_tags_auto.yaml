@@ -2533,14 +2533,6 @@ drive:1Fw_WA98pG19PuHXF0RUzhWqPmkSoiPPh:
   name: reggae_falls_big_waterfall
   web: ''
   words: Jamaica waterfall river nature
-drive:1FxodqDD32cGDpmEgpwxXbZROsud05xPu:
-  also: river rafting
-  cats: []
-  confidence: 0.72
-  label: not usable
-  name: img0162
-  web: ''
-  words: not usable
 drive:1G-3upnUyQceD-9oaW6j1vJiMMXDjIG4L:
   also: reggae
   cats:
@@ -5720,15 +5712,6 @@ drive:1bN2PY4MIMUkWuIUnDwMMc_laL7dDFkzB:
   name: img0251
   web: ''
   words: Jamaica beach sea sand coast
-drive:1balTnSJ24KVIomfbEGbjM2wLJtf2KwD9:
-  also: not usable
-  cats:
-  - food
-  confidence: 0.97
-  label: jamaican patty
-  name: img0224
-  web: ''
-  words: Jamaica patty food beef patty coco bread
 drive:1bhL4uNugpOHZuz_ofgV37UC4K2DocmmI:
   also: waterfall
   cats:
@@ -10494,1725 +10477,1937 @@ local:arah_b6_9_toyota-corolla-silver:
   web: ''
   words: Arah Rides rental vehicle
 local:arah_listing_102_1_2020-kia-cerato:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.67
+  label: road trip
   name: arah_listing_102_1_2020-kia-cerato
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_102_2_2020-kia-cerato:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.84
+  label: rental car
   name: arah_listing_102_2_2020-kia-cerato
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_109_1_2024-toyota-yaris-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.98
+  label: road trip
   name: arah_listing_109_1_2024-toyota-yaris-cross
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_109_2_2024-toyota-yaris-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.85
+  label: road trip
   name: arah_listing_109_2_2024-toyota-yaris-cross
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_110_1_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_110_1_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_110_2_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_110_2_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_111_1_2018-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_111_1_2018-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_111_2_2018-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_111_2_2018-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_112_1_2019-subaru-legacy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_112_1_2019-subaru-legacy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_112_2_2019-subaru-legacy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_112_2_2019-subaru-legacy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_114_1_2021-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_114_1_2021-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_114_2_2021-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_114_2_2021-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_115_1_2018-toyota-noah:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_115_1_2018-toyota-noah
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_115_2_2018-toyota-noah:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
   name: arah_listing_115_2_2018-toyota-noah
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_117_1_2016-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_117_1_2016-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_117_2_2016-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_117_2_2016-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_119_1_2022-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.64
+  label: rental car
   name: arah_listing_119_1_2022-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_119_2_2022-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.57
+  label: rental car
   name: arah_listing_119_2_2022-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_120_1_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_120_1_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_120_2_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_120_2_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_121_1_2020-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
   name: arah_listing_121_1_2020-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_121_2_2020-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.59
+  label: rental car
   name: arah_listing_121_2_2020-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_122_1_2015-subaru-g4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.9
+  label: road trip
   name: arah_listing_122_1_2015-subaru-g4
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_122_2_2015-subaru-g4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.73
+  label: rental car
   name: arah_listing_122_2_2015-subaru-g4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_123_1_2018-toyota-aqua:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_123_1_2018-toyota-aqua
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_123_2_2018-toyota-aqua:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_123_2_2018-toyota-aqua
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_131_1_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_131_1_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_131_2_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_131_2_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_144_1_2019-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
   name: arah_listing_144_1_2019-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_144_2_2019-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_144_2_2019-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_148_1_2019-toyota-aqua:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_148_1_2019-toyota-aqua
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_148_2_2019-toyota-aqua:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_148_2_2019-toyota-aqua
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_151_1_2023-suzuki-baleno:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_151_1_2023-suzuki-baleno
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_151_2_2023-suzuki-baleno:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
   name: arah_listing_151_2_2023-suzuki-baleno
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_156_1_2022-bmw-2-series:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.75
+  label: rental car
   name: arah_listing_156_1_2022-bmw-2-series
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_156_2_2022-bmw-2-series:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_156_2_2022-bmw-2-series
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_157_1_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_157_1_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_157_2_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_157_2_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_158_1_2025-gwm-haval-h6:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.75
+  label: rental car
   name: arah_listing_158_1_2025-gwm-haval-h6
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_158_2_2025-gwm-haval-h6:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
   name: arah_listing_158_2_2025-gwm-haval-h6
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_159_1_2018-toyota-yaris:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_159_1_2018-toyota-yaris
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_159_2_2018-toyota-yaris:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_159_2_2018-toyota-yaris
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_160_1_2016-honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_160_1_2016-honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_160_2_2016-honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_160_2_2016-honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_161_1_2017-bmw-3-series:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.54
+  label: rental car
   name: arah_listing_161_1_2017-bmw-3-series
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_161_2_2017-bmw-3-series:
-  also: ''
+  also: rental car
   cats: []
-  confidence: 0.0
+  confidence: 0.52
   label: null
   name: arah_listing_161_2_2017-bmw-3-series
   web: ''
   words: ''
 local:arah_listing_162_1_2019-toyota-ch-r:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
   name: arah_listing_162_1_2019-toyota-ch-r
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_162_2_2019-toyota-ch-r:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_162_2_2019-toyota-ch-r
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_163_1_2025-kia-soluto:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_163_1_2025-kia-soluto
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_163_2_2025-kia-soluto:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_163_2_2025-kia-soluto
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_164_1_2025-kia-soluto:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_164_1_2025-kia-soluto
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_164_2_2025-kia-soluto:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.71
+  label: rental car
   name: arah_listing_164_2_2025-kia-soluto
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_165_1_2018-subaru-xv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_165_1_2018-subaru-xv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_165_2_2018-subaru-xv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_165_2_2018-subaru-xv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_166_1_2024-hyundai-tucson:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
   name: arah_listing_166_1_2024-hyundai-tucson
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_166_2_2024-hyundai-tucson:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_166_2_2024-hyundai-tucson
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_167_1_2020-hyundai-tucson:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_167_1_2020-hyundai-tucson
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_167_2_2020-hyundai-tucson:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_167_2_2020-hyundai-tucson
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_168_1_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_168_1_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_168_2_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_168_2_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_169_1_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_169_1_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_169_2_2017-honda-fit:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_169_2_2017-honda-fit
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_170_1_2020-toyota-voxy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_170_1_2020-toyota-voxy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_170_2_2020-toyota-voxy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_170_2_2020-toyota-voxy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_171_1_2022-kia-seltos:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_171_1_2022-kia-seltos
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_171_2_2022-kia-seltos:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_171_2_2022-kia-seltos
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_172_1_2018-hyundai-creta:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_172_1_2018-hyundai-creta
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_172_2_2018-hyundai-creta:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_172_2_2018-hyundai-creta
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_173_1_2011-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_173_1_2011-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_173_2_2011-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_173_2_2011-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_174_1_2020-subaru-impreza:
-  also: ''
+  also: rental car
   cats: []
-  confidence: 0.0
+  confidence: 0.51
   label: null
   name: arah_listing_174_1_2020-subaru-impreza
   web: ''
   words: ''
 local:arah_listing_174_2_2020-subaru-impreza:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_174_2_2020-subaru-impreza
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_175_1_2020-subaru-impreza:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.8
+  label: rental car
   name: arah_listing_175_1_2020-subaru-impreza
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_175_2_2020-subaru-impreza:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_175_2_2020-subaru-impreza
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_176_1_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
   name: arah_listing_176_1_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_176_2_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_176_2_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_177_1_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
   name: arah_listing_177_1_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_177_2_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_177_2_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_178_1_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_178_1_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_178_2_2018-honda-grace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.68
+  label: rental car
   name: arah_listing_178_2_2018-honda-grace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_179_1_2015-suzuki-swift:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
   name: arah_listing_179_1_2015-suzuki-swift
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_179_2_2015-suzuki-swift:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_179_2_2015-suzuki-swift
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_180_1_2018-toyota-mark-x:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
   name: arah_listing_180_1_2018-toyota-mark-x
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_180_2_2018-toyota-mark-x:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_180_2_2018-toyota-mark-x
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_181_1_2023-bmw-3-series:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.58
+  label: road trip
   name: arah_listing_181_1_2023-bmw-3-series
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_181_2_2023-bmw-3-series:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.56
+  label: rental car
   name: arah_listing_181_2_2023-bmw-3-series
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_183_1_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_183_1_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_183_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_183_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_184_1_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_184_1_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_184_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_184_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_185_1_2022-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.79
+  label: road trip
   name: arah_listing_185_1_2022-toyota-corolla
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_185_2_2022-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_185_2_2022-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_186_1_2023-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
   name: arah_listing_186_1_2023-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_186_2_2023-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_186_2_2023-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_187_1_2021-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_187_1_2021-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_187_2_2021-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_187_2_2021-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_189_1_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_189_1_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_189_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_189_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_190_1_2023-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
   name: arah_listing_190_1_2023-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_190_2_2023-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.72
+  label: road trip
   name: arah_listing_190_2_2023-toyota-corolla
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_191_1_2017-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.64
+  label: rental car
   name: arah_listing_191_1_2017-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_191_2_2017-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.72
+  label: rental car
   name: arah_listing_191_2_2017-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_192_1_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.74
+  label: rental car
   name: arah_listing_192_1_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_192_2_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_192_2_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_193_2_2024-toyota-yaris-cross:
-  also: ''
+  also: road trip
   cats: []
-  confidence: 0.0
+  confidence: 0.54
   label: null
   name: arah_listing_193_2_2024-toyota-yaris-cross
   web: ''
   words: ''
 local:arah_listing_194_1_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_194_1_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_194_2_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_194_2_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_196_1_2025-foton-view-cs2:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.95
+  label: rental car
   name: arah_listing_196_1_2025-foton-view-cs2
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_196_2_2025-foton-view-cs2:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_196_2_2025-foton-view-cs2
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_198_1_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_198_1_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_198_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_198_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_199_1_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_199_1_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_199_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_199_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_200_1_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.7
+  label: rental car
   name: arah_listing_200_1_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_200_2_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
   name: arah_listing_200_2_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_201_1_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_201_1_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_201_2_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.85
+  label: rental car
   name: arah_listing_201_2_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_202_1_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_202_1_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_202_2_2024-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_202_2_2024-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_203_1_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.87
+  label: rental car
   name: arah_listing_203_1_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_203_2_2024-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_203_2_2024-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_204_1_2022-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_204_1_2022-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_204_2_2022-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_204_2_2022-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_205_1_2024-toyota-yaris-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_205_1_2024-toyota-yaris-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_205_2_2024-toyota-yaris-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_205_2_2024-toyota-yaris-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_206_1_2018-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_206_1_2018-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_206_2_2018-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_206_2_2018-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_207_1_2021-toyota-rush:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.99
+  label: road trip
   name: arah_listing_207_1_2021-toyota-rush
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_207_2_2021-toyota-rush:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_207_2_2021-toyota-rush
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_208_1_2017-toyota-voxy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_208_1_2017-toyota-voxy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_208_2_2017-toyota-voxy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_208_2_2017-toyota-voxy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_213_2_boat-yacht-aquarius:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.51
+  label: negril cliffs
   name: arah_listing_213_2_boat-yacht-aquarius
   web: ''
-  words: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
 local:arah_listing_214_1_boat-yacht-aquarius:
-  also: ''
+  also: attraction
   cats: []
-  confidence: 0.0
+  confidence: 0.41
   label: null
   name: arah_listing_214_1_boat-yacht-aquarius
   web: ''
   words: ''
 local:arah_listing_214_2_boat-yacht-aquarius:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: attraction
+  cats:
+  - attractions
+  - beach
+  - nature
+  confidence: 0.51
+  label: negril cliffs
   name: arah_listing_214_2_boat-yacht-aquarius
   web: ''
-  words: ''
+  words: Negril cliffs West End, Westmoreland - lighthouse cliff
 local:arah_listing_215_2_boat-yacht-glass-bottom-boat:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: river rafting
+  cats:
+  - people
+  confidence: 0.87
+  label: people
   name: arah_listing_215_2_boat-yacht-glass-bottom-boat
   web: ''
-  words: ''
+  words: Jamaica people friends family travellers
 local:arah_listing_216_1_boat-yacht-aquarius:
-  also: ''
+  also: river rafting
   cats: []
-  confidence: 0.0
+  confidence: 0.37
   label: null
   name: arah_listing_216_1_boat-yacht-aquarius
   web: ''
   words: ''
 local:arah_listing_217_1_boat-yacht-real-deal:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: drinks
+  cats:
+  - attractions
+  confidence: 0.62
+  label: attraction
   name: arah_listing_217_1_boat-yacht-real-deal
   web: ''
-  words: ''
+  words: Jamaica attraction tour great house zipline
 local:arah_listing_217_2_boat-yacht-real-deal:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - attractions
+  confidence: 0.52
+  label: attraction
   name: arah_listing_217_2_boat-yacht-real-deal
   web: ''
-  words: ''
+  words: Jamaica attraction tour great house zipline
 local:arah_listing_221_1_toyota-hiace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_221_1_toyota-hiace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_221_2_toyota-hiace:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_221_2_toyota-hiace
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_226_1_2018-nissan-sylphy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_226_1_2018-nissan-sylphy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_226_2_2018-nissan-sylphy:
-  also: ''
+  also: rental car
   cats: []
-  confidence: 0.0
+  confidence: 0.54
   label: null
   name: arah_listing_226_2_2018-nissan-sylphy
   web: ''
   words: ''
 local:arah_listing_227_1_2018-nissan-xtrail:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_227_1_2018-nissan-xtrail
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_227_2_2018-nissan-xtrail:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_227_2_2018-nissan-xtrail
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_228_1_2017-toyota-vitz:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_228_1_2017-toyota-vitz
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_228_2_2017-toyota-vitz:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_228_2_2017-toyota-vitz
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_230_1_mg-zs:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.58
+  label: rental car
   name: arah_listing_230_1_mg-zs
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_230_2_mg-zs:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.73
+  label: rental car
   name: arah_listing_230_2_mg-zs
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_231_1_honda-stepwagon:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_231_1_honda-stepwagon
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_233_1_kia-seltos:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_233_1_kia-seltos
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_233_2_kia-seltos:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_233_2_kia-seltos
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_234_1_toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.55
+  label: rental car
   name: arah_listing_234_1_toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_234_2_toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.93
+  label: rental car
   name: arah_listing_234_2_toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_235_1_kia-sportage:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.8
+  label: rental car
   name: arah_listing_235_1_kia-sportage
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_235_2_kia-sportage:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_235_2_kia-sportage
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_236_1_volkwagen-tiguan:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
   name: arah_listing_236_1_volkwagen-tiguan
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_236_2_volkwagen-tiguan:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_236_2_volkwagen-tiguan
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_239_1_jetour-t2:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_239_1_jetour-t2
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_239_2_jetour-t2:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_239_2_jetour-t2
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_242_1_gwm-haval-h6:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_242_1_gwm-haval-h6
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_242_2_gwm-haval-h6:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_242_2_gwm-haval-h6
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_250_1_nissan-teana:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
   name: arah_listing_250_1_nissan-teana
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_251_1_toyota-vitz:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
   name: arah_listing_251_1_toyota-vitz
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_251_2_toyota-vitz:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_251_2_toyota-vitz
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_252_1_nissan-sylphy:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_252_1_nissan-sylphy
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_252_2_nissan-sylphy:
-  also: ''
+  also: rental car
   cats: []
-  confidence: 0.0
+  confidence: 0.54
   label: null
   name: arah_listing_252_2_nissan-sylphy
   web: ''
   words: ''
 local:arah_listing_253_1_nissan-teana:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_253_1_nissan-teana
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_253_2_nissan-teana:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.91
+  label: rental car
   name: arah_listing_253_2_nissan-teana
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_254_1_honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_254_1_honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_254_2_honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_254_2_honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_255_1_honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_255_1_honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_255_2_honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_255_2_honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_259_1_2019-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_259_1_2019-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_259_2_2019-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_259_2_2019-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_260_1_mg-zs:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.96
+  label: rental car
   name: arah_listing_260_1_mg-zs
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_260_2_mg-zs:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_260_2_mg-zs
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_262_1_cadillac-escalade:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_262_1_cadillac-escalade
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_262_2_cadillac-escalade:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: not usable
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_262_2_cadillac-escalade
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_263_1_cadillac-escalade:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_263_1_cadillac-escalade
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_263_2_cadillac-escalade:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_263_2_cadillac-escalade
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_265_1_2019-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_265_1_2019-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_265_2_2019-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_265_2_2019-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_268_1_2016-honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_268_1_2016-honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_268_2_2016-honda-vezel-hrv:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_268_2_2016-honda-vezel-hrv
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_64_2_2023-toyota-rav4:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_64_2_2023-toyota-rav4
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_65_1_2020-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: rental car
+  cats:
+  - road
+  confidence: 0.86
+  label: road trip
   name: arah_listing_65_1_2020-toyota-corolla
   web: ''
-  words: ''
+  words: Jamaica road trip drive scenic road
 local:arah_listing_65_2_2020-toyota-corolla:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_65_2_2020-toyota-corolla
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_66_1_2019-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_66_1_2019-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_66_2_2019-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_66_2_2019-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_67_1_2016-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_67_1_2016-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_67_2_2016-suzuki-vitara:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.97
+  label: rental car
   name: arah_listing_67_2_2016-suzuki-vitara
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_68_1_2016-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_68_1_2016-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_68_2_2016-mazda-demio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.86
+  label: rental car
   name: arah_listing_68_2_2016-mazda-demio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_71_1_2019-nissan-xtrail:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
   name: arah_listing_71_1_2019-nissan-xtrail
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_71_2_2019-nissan-xtrail:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.89
+  label: rental car
   name: arah_listing_71_2_2019-nissan-xtrail
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_72_1_2022-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_72_1_2022-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_72_2_2022-suzuki-xl7:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_72_2_2022-suzuki-xl7
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_73_1_2024-kia-carens:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_73_1_2024-kia-carens
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_73_2_2024-kia-carens:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: airport
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_73_2_2024-kia-carens
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_74_1_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.88
+  label: rental car
   name: arah_listing_74_1_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_74_2_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.9
+  label: rental car
   name: arah_listing_74_2_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_76_1_2021-honda-cr-v:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_76_1_2021-honda-cr-v
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_76_2_2021-honda-cr-v:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.83
+  label: rental car
   name: arah_listing_76_2_2021-honda-cr-v
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_88_1_2018-hyundai-creta:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_88_1_2018-hyundai-creta
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_88_2_2018-hyundai-creta:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_88_2_2018-hyundai-creta
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_89_1_2022-honda-city:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.92
+  label: rental car
   name: arah_listing_89_1_2022-honda-city
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_89_2_2022-honda-city:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.98
+  label: rental car
   name: arah_listing_89_2_2022-honda-city
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_91_1_2011-toyota-wish:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_91_1_2011-toyota-wish
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_91_2_2011-toyota-wish:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_91_2_2011-toyota-wish
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_95_1_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_95_1_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_95_2_2017-toyota-axio:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_95_2_2017-toyota-axio
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_97_1_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_97_1_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_97_2_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 1.0
+  label: rental car
   name: arah_listing_97_2_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_99_1_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.99
+  label: rental car
   name: arah_listing_99_1_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:arah_listing_99_2_2023-toyota-corolla-cross:
-  also: ''
-  cats: []
-  confidence: 0.0
-  label: null
+  also: road trip
+  cats:
+  - cars
+  confidence: 0.94
+  label: rental car
   name: arah_listing_99_2_2023-toyota-corolla-cross
   web: ''
-  words: ''
+  words: Arah Rides rental vehicle
 local:jamaica_cup_01_team_group_on_court:
   also: drinks
   cats:
