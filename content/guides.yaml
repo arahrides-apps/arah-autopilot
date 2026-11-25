@@ -1,0 +1,694 @@
+# Drive Guides: save-worthy carousels in the magazine style (destination first, the car on the last slide).
+# style: list = big condensed headline (listicles) · story = elegant serif italic (story hooks)
+# Each stop: name, q (photo search), what (one line), drive (about how far, from where), best (best time). park is optional.
+# Drive times are approximate; they are shown as "about".
+guides:
+- id: waterfalls
+  style: list
+  title: 7 Waterfalls You Can Drive To
+  sub: From the north coast to the south. Save it for your trip.
+  car: any
+  stops:
+  - name: Dunn's River Falls
+    q: Dunn's River Falls Jamaica
+    what: Climb the falls hand in hand, right on the beach.
+    drive: 1h 30 from MBJ
+    park: Paid parking at the entrance.
+    best: Go early, before the cruise crowds.
+  - name: YS Falls
+    q: YS Falls Jamaica
+    what: Seven tiers, rope swing and cool pools in St Elizabeth.
+    drive: 1h 45 from MBJ
+    park: Parking at the entrance.
+    best: Weekday mornings.
+  - name: Reach Falls
+    q: Reach Falls Portland Jamaica
+    what: Turquoise pools in the Portland rainforest.
+    drive: 40 min from Port Antonio
+    park: Parking at the entrance.
+    best: Late morning, when the sun hits the pools.
+  - name: Mayfield Falls
+    q: Mayfield Falls Jamaica
+    what: Walk up the river through 21 small falls.
+    drive: 1h from MoBay
+    best: Morning, with water shoes.
+  - name: Konoko Falls
+    q: Konoko Falls Ocho Rios Jamaica
+    what: Gardens, falls and a quiet swim above Ocho Rios.
+    drive: 10 min from Ocho Rios
+    park: Parking at the entrance.
+    best: Afternoon, after the beach.
+  - name: Somerset Falls
+    q: Somerset Falls Portland Jamaica
+    what: A short boat ride into a hidden gorge.
+    drive: 20 min from Port Antonio
+    best: Midday.
+  - name: Blue Hole
+    q: Blue Hole Ocho Rios Jamaica
+    what: Deep blue pools and jumps in the hills.
+    drive: 20 min from Ocho Rios
+    best: Weekdays, before noon.
+- id: kingston-lookouts
+  style: list
+  title: Kingston's Best Lookouts
+  sub: 4 stops, 1 tank, 1 day.
+  car: SUV
+  stops:
+  - name: Fort Charles
+    q: Fort Charles Port Royal Jamaica
+    what: Harbour views from the old fort at Port Royal.
+    drive: 35 min from New Kingston
+    best: Morning, before the heat.
+  - name: Strawberry Hill
+    q: Strawberry Hill Irish Town Jamaica
+    what: The whole city below you from the hills.
+    drive: 45 min from New Kingston
+    best: Lunch, with clear skies.
+  - name: Craighton Estate
+    q: Craighton coffee estate Blue Mountains Jamaica
+    what: Blue Mountain coffee with a valley view.
+    drive: 40 min from New Kingston
+    best: Mid-morning.
+  - name: Holywell
+    q: Holywell National Park Blue Mountains Jamaica
+    what: Pine trails and cool air at the top.
+    drive: 1h from New Kingston
+    best: Before noon; clouds roll in later.
+- id: portland-day
+  style: list
+  title: Portland In A Day
+  sub: A river ride, a waterfall, a beach day and a food stop.
+  car: any
+  stops:
+  - name: Rio Grande Rafting
+    q: Rio Grande bamboo rafting Portland Jamaica
+    what: A slow bamboo raft down the river.
+    drive: 20 min from Port Antonio
+    best: Start early; it takes a few hours.
+  - name: Reach Falls
+    q: Reach Falls Portland Jamaica
+    what: Swim in the rainforest pools.
+    drive: 40 min from Port Antonio
+    park: Parking at the entrance.
+    best: Late morning.
+  - name: Frenchman's Cove
+    q: Frenchman's Cove Portland Jamaica
+    what: Where a cool river meets a white sand cove.
+    drive: 15 min from Port Antonio
+    best: Afternoon swim.
+  - name: Boston Bay
+    q: Boston Bay jerk Portland Jamaica
+    what: Jerk where it all started.
+    drive: 25 min from Port Antonio
+    best: Lunch or an early dinner.
+- id: for-two
+  style: story
+  title: Jamaica, for two.
+  sub: 4 drives couples love, in your own car.
+  car: any
+  stops:
+  - name: Rick's Café
+    q: Rick's Cafe Negril cliff sunset Jamaica
+    what: Cliff jumpers and the famous Negril sunset.
+    drive: 1h 30 from MBJ
+    best: Arrive by 5 pm for sunset.
+  - name: Blue Lagoon
+    q: Blue Lagoon Portland Jamaica
+    what: A calm blue lagoon for a quiet swim together.
+    drive: 15 min from Port Antonio
+    best: Morning, when it is still.
+  - name: Strawberry Hill
+    q: Strawberry Hill Irish Town Jamaica
+    what: A long lunch in the hills above Kingston.
+    drive: 45 min from New Kingston
+    best: Lunch, with clear skies.
+  - name: Pelican Bar
+    q: Floyd's Pelican Bar Jamaica
+    what: A bar on stilts at sea, reached by boat.
+    drive: 2h from MBJ to Parottee, then a short boat ride
+    best: Afternoon.
+- id: kingston-food
+  style: list
+  title: Hidden Gems Kingston
+  sub: The foodie drive.
+  car: any
+  stops:
+  - name: Devon House
+    q: Devon House Kingston Jamaica
+    what: Famous ice cream and patties on the great house lawn.
+    drive: 10 min from New Kingston
+    park: Parking on site.
+    best: Afternoon.
+  - name: Coronation Market
+    q: Coronation Market Kingston Jamaica
+    what: Fruit, spices and the buzz of downtown.
+    drive: 15 min from New Kingston
+    best: Saturday morning.
+  - name: Hellshire Beach
+    q: Hellshire Beach fried fish Jamaica
+    what: Fried fish and festival by the sea.
+    drive: 35 min from New Kingston
+    best: Sunday lunch.
+  - name: Port Royal
+    q: Port Royal fried fish Jamaica
+    what: Fresh fish at the old pirate town.
+    drive: 35 min from New Kingston
+    best: Early dinner.
+- id: no-road
+  style: story
+  title: This bar has no road.
+  sub: Off the south coast, the way to Pelican Bar is by boat. The way to the boat is by car.
+  car: any
+  stops:
+  - name: Black River
+    q: Black River safari Jamaica
+    what: A river safari with crocodiles and mangroves.
+    drive: 1h 45 from MBJ
+    best: Morning boat.
+  - name: Pelican Bar
+    q: Floyd's Pelican Bar Jamaica
+    what: A wooden bar standing in the sea.
+    drive: Short boat ride from Parottee
+    best: Afternoon.
+  - name: Treasure Beach
+    q: Treasure Beach Jamaica
+    what: Slow fishing villages and quiet sand.
+    drive: 2h from MBJ
+    best: Sunset.
+  - name: Middle Quarters
+    q: Middle Quarters pepper shrimp Jamaica
+    what: Pepper shrimp sold right at the roadside.
+    drive: 1h 45 from MBJ
+    best: On the way back.
+- id: bond
+  style: story
+  title: Before the world knew Bond, there was Jamaica.
+  sub: Ian Fleming wrote James Bond at his seaside home in Oracabessa. Drive the coast he loved.
+  car: any
+  stops:
+  - name: James Bond Beach
+    q: James Bond Beach Oracabessa Jamaica
+    what: A small beach on Oracabessa Bay.
+    drive: 25 min from Ocho Rios
+    best: Morning swim.
+  - name: Oracabessa Bay
+    q: Oracabessa Bay St Mary Jamaica
+    what: The quiet fishing bay beside Fleming's home.
+    drive: 25 min from Ocho Rios
+    best: Late morning.
+  - name: Firefly
+    q: Firefly Estate St Mary Jamaica
+    what: Noel Coward's hilltop home above the coast.
+    drive: 45 min from Ocho Rios
+    best: Afternoon, for the view.
+- id: south-coast
+  style: list
+  title: South Coast In A Day
+  sub: Falls, rum, shrimp and sunset.
+  car: any
+  stops:
+  - name: YS Falls
+    q: YS Falls Jamaica
+    what: Seven tiers of cool water.
+    drive: 1h 45 from MBJ
+    park: Parking at the entrance.
+    best: Morning.
+  - name: Appleton Estate
+    q: Appleton Estate rum tour Jamaica
+    what: The rum tour in the Nassau Valley.
+    drive: 2h from MBJ
+    park: Parking on site.
+    best: Midday.
+  - name: Middle Quarters
+    q: Middle Quarters pepper shrimp Jamaica
+    what: Pepper shrimp from the roadside vendors.
+    drive: 25 min from YS Falls
+    best: Late lunch.
+  - name: Treasure Beach
+    q: Treasure Beach Jamaica
+    what: End the day on the sand.
+    drive: 45 min from Middle Quarters
+    best: Sunset.
+- id: negril-day
+  style: list
+  title: Negril In A Day
+  sub: Sand, cliffs and the best sunset on the island.
+  car: any
+  stops:
+  - name: Seven Mile Beach
+    q: Seven Mile Beach Negril Jamaica
+    what: Long, soft and calm.
+    drive: 1h 20 from MBJ
+    best: Morning.
+  - name: Negril Lighthouse
+    q: Negril Lighthouse Jamaica
+    what: The white lighthouse on the West End cliffs.
+    drive: 10 min from the beach
+    best: Afternoon.
+  - name: Rick's Café
+    q: Rick's Cafe Negril cliff Jamaica
+    what: Cliff jumping and sunset.
+    drive: 10 min from the lighthouse
+    best: From 5 pm.
+- id: mobay-day
+  style: list
+  title: Montego Bay Straight From The Airport
+  sub: Land, pick up your car, start here.
+  car: any
+  stops:
+  - name: Doctor's Cave Beach
+    q: Doctor's Cave Beach Montego Bay Jamaica
+    what: Clear water a few minutes from MBJ.
+    drive: 10 min from MBJ
+    best: Morning.
+  - name: Rose Hall Great House
+    q: Rose Hall Great House Jamaica
+    what: The great house and its legend.
+    drive: 20 min from MBJ
+    park: Parking on site.
+    best: Afternoon tour.
+  - name: Hip Strip
+    q: Gloucester Avenue Hip Strip Montego Bay Jamaica
+    what: Food, shops and music by the sea.
+    drive: 10 min from MBJ
+    best: Evening.
+  - name: Scotchies
+    q: Scotchies jerk Montego Bay Jamaica
+    what: Jerk pork and chicken from the pit.
+    drive: 15 min from MBJ
+    best: Dinner.
+- id: ocho-adventure
+  style: list
+  title: Ocho Rios Adventure Day
+  sub: Climb, swim, jump, ride.
+  car: any
+  stops:
+  - name: Mystic Mountain
+    q: Mystic Mountain Ocho Rios Jamaica
+    what: Chairlift and bobsled through the forest.
+    drive: 5 min from Ocho Rios
+    park: Parking at the entrance.
+    best: Morning.
+  - name: Dunn's River Falls
+    q: Dunn's River Falls Jamaica
+    what: The famous falls climb.
+    drive: 10 min from Ocho Rios
+    park: Paid parking at the entrance.
+    best: Before 10 am.
+  - name: Blue Hole
+    q: Blue Hole Ocho Rios Jamaica
+    what: Jumps into deep blue pools.
+    drive: 20 min from Ocho Rios
+    best: Midday.
+  - name: Konoko Falls
+    q: Konoko Falls Ocho Rios Jamaica
+    what: Gardens and a quieter swim.
+    drive: 10 min from Ocho Rios
+    best: Afternoon.
+- id: road-food
+  style: list
+  title: Jamaica's Road Food Trail
+  sub: 5 stops worth the drive.
+  car: any
+  stops:
+  - name: Boston Bay
+    q: Boston Bay jerk Portland Jamaica
+    what: The home of jerk.
+    drive: 25 min from Port Antonio
+    best: Lunch.
+  - name: Faith's Pen
+    q: Faith's Pen food stalls Jamaica
+    what: Roadside stalls on the hill road.
+    drive: 30 min from Ocho Rios
+    best: Breakfast or lunch.
+  - name: Middle Quarters
+    q: Middle Quarters pepper shrimp Jamaica
+    what: Bags of hot pepper shrimp.
+    drive: 1h 45 from MBJ
+    best: Afternoon.
+  - name: Hellshire Beach
+    q: Hellshire Beach fried fish Jamaica
+    what: Fried fish and festival.
+    drive: 35 min from New Kingston
+    best: Sunday.
+  - name: Little Ochie
+    q: Little Ochie Alligator Pond seafood Jamaica
+    what: Seafood by the boats in Alligator Pond.
+    drive: 45 min from Mandeville
+    best: Weekend lunch.
+- id: rivers
+  style: list
+  title: Rivers You Can Swim In
+  sub: Cool water, an easy drive away.
+  car: any
+  stops:
+  - name: Martha Brae
+    q: Martha Brae rafting Jamaica
+    what: A gentle bamboo raft ride.
+    drive: 40 min from MBJ
+    best: Morning.
+  - name: YS Falls
+    q: YS Falls Jamaica
+    what: Pools under the falls.
+    drive: 1h 45 from MBJ
+    best: Weekdays.
+  - name: Blue Hole
+    q: Blue Hole Ocho Rios Jamaica
+    what: Deep pools in the hills.
+    drive: 20 min from Ocho Rios
+    best: Midday.
+  - name: Rio Grande Rafting
+    q: Rio Grande bamboo rafting Portland Jamaica
+    what: The long, slow raft in Portland.
+    drive: 20 min from Port Antonio
+    best: Early start.
+  - name: Somerset Falls
+    q: Somerset Falls Portland Jamaica
+    what: A gorge you enter by boat.
+    drive: 20 min from Port Antonio
+    best: Midday.
+- id: beaches
+  style: list
+  title: Beaches Worth The Drive
+  sub: Skip the hotel strip. Drive to these.
+  car: any
+  stops:
+  - name: Frenchman's Cove
+    q: Frenchman's Cove Portland Jamaica
+    what: A river and a cove in one.
+    drive: 15 min from Port Antonio
+    best: Weekday.
+  - name: Winnifred Beach
+    q: Winnifred Beach Portland Jamaica
+    what: The locals' favourite in Portland.
+    drive: 15 min from Port Antonio
+    best: Morning.
+  - name: Treasure Beach
+    q: Treasure Beach Jamaica
+    what: Quiet south coast sand.
+    drive: 2h from MBJ
+    best: Sunset.
+  - name: Seven Mile Beach
+    q: Seven Mile Beach Negril Jamaica
+    what: The long Negril classic.
+    drive: 1h 20 from MBJ
+    best: Morning.
+  - name: Lime Cay
+    q: Lime Cay Kingston Jamaica
+    what: A tiny island off Port Royal.
+    drive: 35 min to Port Royal, then a short boat ride
+    best: Weekend.
+- id: grandma
+  style: story
+  title: The drive to grandma's.
+  sub: Up through Manchester and into St Elizabeth, with the stops everyone makes.
+  car: any
+  stops:
+  - name: Spur Tree Hill
+    q: Spur Tree Hill Manchester Jamaica
+    what: Curry goat stalls with a view down the hill.
+    drive: 1h 30 from Kingston
+    best: Lunch.
+  - name: Mandeville
+    q: Mandeville Jamaica
+    what: The cool hill town in the middle of the island.
+    drive: 1h 15 from Kingston
+    best: Morning.
+  - name: Bamboo Avenue
+    q: Bamboo Avenue Holland St Elizabeth Jamaica
+    what: A road under a tunnel of bamboo.
+    drive: 45 min from Mandeville
+    best: Afternoon light.
+  - name: Lovers' Leap
+    q: Lovers' Leap St Elizabeth Jamaica
+    what: High cliffs over the south coast.
+    drive: 1h from Mandeville
+    best: Sunset.
+- id: blue-mountain-morning
+  style: story
+  title: A Blue Mountain morning.
+  sub: Coffee, cool air and the whole of Kingston below.
+  car: SUV
+  stops:
+  - name: Craighton Estate
+    q: Craighton coffee estate Blue Mountains Jamaica
+    what: Coffee on the hillside.
+    drive: 40 min from New Kingston
+    best: Early.
+  - name: Newcastle
+    q: Newcastle Blue Mountains Jamaica
+    what: The hill station with a view over the city.
+    drive: 1h from New Kingston
+    best: Mid-morning.
+  - name: Holywell
+    q: Holywell National Park Blue Mountains Jamaica
+    what: Pine trails at the top of the road.
+    drive: 1h from New Kingston
+    best: Before noon.
+- id: glow-lagoon
+  style: story
+  title: A lagoon that glows at night.
+  sub: Falmouth by day, the luminous lagoon after dark.
+  car: any
+  stops:
+  - name: Falmouth
+    q: Falmouth Trelawny Jamaica
+    what: Georgian streets by the sea.
+    drive: 35 min from MBJ
+    best: Afternoon.
+  - name: Martha Brae
+    q: Martha Brae rafting Jamaica
+    what: A raft down the river.
+    drive: 10 min from Falmouth
+    best: Late afternoon.
+  - name: Luminous Lagoon
+    q: Luminous Lagoon Falmouth Jamaica
+    what: The water lights up when you move.
+    drive: 10 min from Falmouth
+    best: After dark, on a moonless night.
+- id: not-jamaica
+  style: list
+  title: Places That Don't Look Like Jamaica
+  sub: And how to drive to each.
+  car: any
+  stops:
+  - name: Bamboo Avenue
+    q: Bamboo Avenue Holland St Elizabeth Jamaica
+    what: A tunnel of giant bamboo.
+    drive: 45 min from Mandeville
+    best: Afternoon.
+  - name: Holywell
+    q: Holywell National Park Blue Mountains Jamaica
+    what: Pine forest and mist.
+    drive: 1h from New Kingston
+    best: Morning.
+  - name: Trident Castle
+    q: Trident Castle Port Antonio Jamaica
+    what: A white castle on the sea.
+    drive: 5 min from Port Antonio
+    best: Any time, from the road.
+  - name: Lovers' Leap
+    q: Lovers' Leap St Elizabeth Jamaica
+    what: Cliffs like a far-off coast.
+    drive: 1h from Mandeville
+    best: Sunset.
+  - name: Luminous Lagoon
+    q: Luminous Lagoon Falmouth Jamaica
+    what: Glowing water at night.
+    drive: 40 min from MBJ
+    best: After dark.
+  - name: Black River
+    q: Black River safari Jamaica
+    what: Mangroves and crocodiles.
+    drive: 1h 45 from MBJ
+    best: Morning.
+- id: kingston-culture
+  style: list
+  title: Kingston Culture Day
+  sub: Music, art and history in one drive.
+  car: any
+  stops:
+  - name: Bob Marley Museum
+    q: Bob Marley Museum Kingston Jamaica
+    what: Bob's home and studio on Hope Road.
+    drive: 10 min from New Kingston
+    park: Parking on site.
+    best: Morning tour.
+  - name: Devon House
+    q: Devon House Kingston Jamaica
+    what: The great house, patties and ice cream.
+    drive: 10 min from New Kingston
+    park: Parking on site.
+    best: Afternoon.
+  - name: National Gallery
+    q: National Gallery of Jamaica Kingston
+    what: Jamaican art downtown.
+    drive: 15 min from New Kingston
+    best: Midday.
+  - name: Emancipation Park
+    q: Emancipation Park Kingston Jamaica
+    what: An evening walk in New Kingston.
+    drive: In New Kingston
+    best: Evening.
+- id: port-royal
+  style: story
+  title: The pirate town at the end of the road.
+  sub: Drive the Palisadoes strip to Port Royal and Lime Cay.
+  car: any
+  stops:
+  - name: Palisadoes
+    q: Palisadoes road Kingston Jamaica
+    what: The long road between harbour and sea.
+    drive: 25 min from New Kingston
+    best: Morning light.
+  - name: Fort Charles
+    q: Fort Charles Port Royal Jamaica
+    what: The old fort and its history.
+    drive: 35 min from New Kingston
+    best: Morning.
+  - name: Lime Cay
+    q: Lime Cay Kingston Jamaica
+    what: A sand cay a short boat ride away.
+    drive: Boat from Port Royal
+    best: Weekend.
+  - name: Port Royal
+    q: Port Royal fried fish Jamaica
+    what: Fried fish to end the day.
+    drive: Back in Port Royal
+    best: Early dinner.
+- id: family-day
+  style: list
+  title: Family Day Out, Kids Approved
+  sub: 4 stops around Ocho Rios.
+  car: SUV or 7 seater
+  stops:
+  - name: Dolphin Cove
+    q: Dolphin Cove Ocho Rios Jamaica
+    what: Meet the dolphins.
+    drive: 10 min from Ocho Rios
+    park: Parking at the entrance.
+    best: Morning.
+  - name: Mystic Mountain
+    q: Mystic Mountain Ocho Rios Jamaica
+    what: Chairlift and bobsled.
+    drive: 5 min from Ocho Rios
+    park: Parking at the entrance.
+    best: Late morning.
+  - name: Green Grotto Caves
+    q: Green Grotto Caves Jamaica
+    what: Caves with an underground lake.
+    drive: 40 min from Ocho Rios
+    park: Parking at the entrance.
+    best: Afternoon.
+  - name: Dunn's River Falls
+    q: Dunn's River Falls Jamaica
+    what: The family climb.
+    drive: 10 min from Ocho Rios
+    park: Paid parking at the entrance.
+    best: Early.
+- id: great-houses
+  style: list
+  title: Jamaica's Great Houses
+  sub: A history drive along the north coast.
+  car: any
+  stops:
+  - name: Rose Hall Great House
+    q: Rose Hall Great House Jamaica
+    what: The best-known great house.
+    drive: 20 min from MBJ
+    park: Parking on site.
+    best: Afternoon.
+  - name: Greenwood Great House
+    q: Greenwood Great House Jamaica
+    what: Antiques and a sea view.
+    drive: 25 min from MBJ
+    park: Parking on site.
+    best: Morning.
+  - name: Good Hope
+    q: Good Hope Great House Trelawny Jamaica
+    what: A hilltop estate in Trelawny.
+    drive: 1h from MBJ
+    best: Midday.
+  - name: Seville Heritage Park
+    q: Seville Heritage Park St Ann Jamaica
+    what: History of St Ann's Bay.
+    drive: 15 min from Ocho Rios
+    best: Afternoon.
+- id: treasure-weekend
+  style: story
+  title: A slow weekend in Treasure Beach.
+  sub: No resorts, no rush. Just the south coast.
+  car: any
+  stops:
+  - name: Treasure Beach
+    q: Treasure Beach Jamaica
+    what: Fishing boats and quiet sand.
+    drive: 2h from MBJ
+    best: Sunset.
+  - name: Lovers' Leap
+    q: Lovers' Leap St Elizabeth Jamaica
+    what: Cliffs above the sea.
+    drive: 30 min from Treasure Beach
+    best: Late afternoon.
+  - name: Pelican Bar
+    q: Floyd's Pelican Bar Jamaica
+    what: A bar out at sea.
+    drive: Boat from the south coast
+    best: Afternoon.
+  - name: Little Ochie
+    q: Little Ochie Alligator Pond seafood Jamaica
+    what: Seafood by the boats.
+    drive: 1h from Treasure Beach
+    best: Weekend lunch.
+- id: portland-beaches
+  style: list
+  title: Portland's Hidden Beaches
+  sub: The quiet side of Jamaica.
+  car: any
+  stops:
+  - name: Frenchman's Cove
+    q: Frenchman's Cove Portland Jamaica
+    what: River meets sea.
+    drive: 15 min from Port Antonio
+    best: Weekday.
+  - name: San San Beach
+    q: San San Beach Portland Jamaica
+    what: Clear, calm water.
+    drive: 15 min from Port Antonio
+    best: Morning.
+  - name: Winnifred Beach
+    q: Winnifred Beach Portland Jamaica
+    what: Food stalls and a local vibe.
+    drive: 15 min from Port Antonio
+    best: Lunch.
+  - name: Long Bay
+    q: Long Bay Portland Jamaica
+    what: Big waves and long sand.
+    drive: 35 min from Port Antonio
+    best: Afternoon.
+  - name: Boston Bay
+    q: Boston Bay jerk Portland Jamaica
+    what: Swim, then jerk.
+    drive: 25 min from Port Antonio
+    best: Late lunch.
+- id: no-bus
+  style: story
+  title: This beach has no bus.
+  sub: The best of Portland is off the tour routes. You need your own car.
+  car: any
+  stops:
+  - name: Reach Falls
+    q: Reach Falls Portland Jamaica
+    what: Rainforest pools at the end of a country road.
+    drive: 40 min from Port Antonio
+    best: Late morning.
+  - name: Long Bay
+    q: Long Bay Portland Jamaica
+    what: A wild beach on the east coast.
+    drive: 35 min from Port Antonio
+    best: Afternoon.
+  - name: Winnifred Beach
+    q: Winnifred Beach Portland Jamaica
+    what: Down a bumpy road, worth every bump.
+    drive: 15 min from Port Antonio
+    best: Morning.
