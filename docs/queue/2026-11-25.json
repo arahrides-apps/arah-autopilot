@@ -99,6 +99,50 @@
    "reel": "media/2026-11-25/2026-11-25_0200_deal.mp4"
   },
   {
+   "id": "2026-11-25_1800_moment",
+   "date": "2026-11-25",
+   "slot": "2026-11-25T18:00:00-05:00",
+   "type": "moment",
+   "flags": [
+    "⚠ Art director check: No car shown for a car rental company; Photo is out of focus; Duplicate swipe buttons in top right corner. Look closely before approving.",
+    "Web photo (people, food or activity): checked by AI",
+    "Left out a photo that did not match: Plan your wheels. Promo code PureCyber takes up to $40 off y",
+    "Left out a photo that did not match: Plan your wheels. Promo code PureCyber takes up to $40 off y",
+    "1 of 5 slides have photos",
+    "No music on this Reel: add a trending sound in the Instagram app after it posts (cuts are on a 120 BPM beat, so most trending sounds line up).",
+    "Goes out as a Reel (numbered list Reel, about 4s-6s, loops: 3 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app)."
+   ],
+   "images": [
+    "media/2026-11-25/2026-11-25_1800_moment_1.jpg",
+    "media/2026-11-25/2026-11-25_1800_moment_2.jpg",
+    "media/2026-11-25/2026-11-25_1800_moment_3.jpg",
+    "media/2026-11-25/2026-11-25_1800_moment_4.jpg",
+    "media/2026-11-25/2026-11-25_1800_moment_5.jpg"
+   ],
+   "promo": "PureCyber",
+   "copy_text": "Book now. Save more. 🇯🇲\n\nPromo code PureCyber takes up to $40 off your Jamaica car rental. Airport pickup in Montego Bay, Kingston and Ocho Rios. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.",
+   "alt": "Seasonal graphic: Book now. Save more. (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "Book now. Save more. 🇯🇲\n\nPromo code PureCyber takes up to $40 off your Jamaica car rental. Airport pickup in Montego Bay, Kingston and Ocho Rios. Conditions apply. Pay with Klarna, Affirm, Link, Google Pay or Apple Pay. Book your car rental in minutes on ArahRides.com or with Winston on WhatsApp.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#NormanManleyAirport #JamaicaRentalCar #DiscoverTheRealJamaica #JamaicaEvents #JamaicaRoadTrip",
+   "beat_lines": [
+    "Plan your wheels.",
+    "Pick up where you land.",
+    "Know the price before you land."
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/1b4bd67abf5d702c.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/8306fcb6e6938a73.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/81bc28cb8087029d.jpg"
+   ],
+   "status": "pending",
+   "reel_format": "numbered list",
+   "reel_kind": "numbered list Reel, about 4s-6s, loops: 3 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app",
+   "reel": "media/2026-11-25/2026-11-25_1800_moment.mp4"
+  },
+  {
    "id": "2026-11-25_2200_deal",
    "date": "2026-11-25",
    "slot": "2026-11-25T22:00:00-05:00",
