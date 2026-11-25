@@ -30,8 +30,6 @@ THEMES = {
              r"christmas|xmas|santa|grand market|sorrel|jonkanoo|holiday|lights|family|reunion|gift|festive", True),
     "fashion": (["Jamaica fashion week runway", "Jamaica fashion show models", "Ocho Rios fashion", "Jamaican designer runway"],
                 r"fashion|runway|model|designer|style", True),
-    "tennis": (["tennis court Jamaica", "tennis Montego Bay", "Half Moon Jamaica tennis", "tennis court tropical Jamaica"],
-               r"tennis|court|racquet|net", False),
     "road": (["Holland Bamboo Jamaica", "Reach Falls Jamaica", "Jamaica highway road", "Jamaica road trip", "Jamaica roadside fruit stand", "Jamaica coconut water vendor",
               "Bamboo Avenue Jamaica", "Jamaica countryside road", "Jamaica mountain road", "Jamaica roadside jerk stand"],
              r"road|highway|bamboo|route|drive|fruit|coconut|vendor|stand|roadside|falls|countryside|mountain|hill|village|market", True),
@@ -90,6 +88,7 @@ def out_of_season(text, month):
 # ---- things that make a photo wrong for a car-rental brand even when the place matches
 JUNK = re.compile(r"cannabis|marijuana|\bweed\b|ganja|hemp|\bdrugs?\b|smoking|cigar|joint\b|bong|vape|"
                   r"cartoon|animation|animated|\b3d\b|render|vector|motion graphic|abstract|particles|\bloop\b|green screen|chroma|"
+                  r"tennis|pickleball|racket|racquet|jamaica cup|"
                   r"bikini|lingerie|\bsexy\b|\bfeet\b|\bfoot\b|toes|"
                   r"\bsnow|snowy|winter|\bski|glacier|alps|alpine|autumn|\bfall foliage|fall colou?rs|pine forest|\bdesert|dune|iceland|norway|switzerland|"
                   r"burger|hamburger|pizza|sushi|hot ?dog|fries|kebab|taco|noodle|"
@@ -100,7 +99,7 @@ JUNK = re.compile(r"cannabis|marijuana|\bweed\b|ganja|hemp|\bdrugs?\b|smoking|ci
                   r"\brac(e|es|ing)\b|race ?car|rally|motorsport|formula|nascar|drift|drag race|go-?kart|karting|speedway|circuit|grand prix|hot ?rod|muscle car|classic car|old car|oldtimer|car show|rusty|rust\b|wreck|junkyard|abandoned car|"
                   r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)
 
-EVENT_THEMES = [(re.compile(r"fashion", re.I), "fashion"), (re.compile(r"tennis", re.I), "tennis")]
+EVENT_THEMES = [(re.compile(r"fashion", re.I), "fashion")]
 def event_theme(*texts):
     t = " ".join(texts)
     for rx, th in EVENT_THEMES:

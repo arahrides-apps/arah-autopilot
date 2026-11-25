@@ -363,3 +363,94 @@ def lounge_split(k, h, b, buy=False, photo=None):
     return wrap(inner, 1350, C, K)
 
 LOUNGE_DESIGNS = {"pass": ticket, "board": lounge_board, "free": lounge_free, "math": lounge_math, "split": lounge_split}
+
+
+# ---------------------------------------------------------------- Drive Guides (magazine style: destination first, the car last)
+GFONTS = ('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+          '<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@1,600;1,700&display=block" rel="stylesheet">')
+CONDENSED = "font-family:Oswald,'Roboto Condensed','DejaVu Sans Condensed','Arial Narrow',sans-serif;font-stretch:condensed;text-transform:uppercase;font-weight:700;letter-spacing:.5px"
+SERIF = "font-family:'Playfair Display','DejaVu Serif',Georgia,serif;font-style:italic;font-weight:700;letter-spacing:-.5px"
+INK, PAPER = "#121614", "#F4EFE4"
+
+def _gwrap(inner, bg=INK, fg=PAPER):
+    return (f'<!doctype html><html><head><meta charset="utf-8">{GFONTS}<style>body{{margin:0}}div{{box-sizing:border-box}}</style></head><body>'
+            f'<div style="width:1080px;height:1350px;position:relative;overflow:hidden;background:{bg};color:{fg};{F}">{inner}</div></body></html>')
+
+def _glabel(col=PAPER, right=""):
+    """The consistent top label on every guide slide: ARAH RIDES · DRIVE GUIDE (the holiday logo in season)."""
+    hl = holiday_src()
+    logo = (f'<img src="{hl}" style="width:96px;height:auto;margin:-26px 14px -26px -8px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))">' if hl else "")
+    r = f'<div style="font-size:21px;font-weight:700;letter-spacing:4px;opacity:.85">{E(right)}</div>' if right else ""
+    return (f'<div style="position:absolute;left:64px;right:64px;top:58px;display:flex;justify-content:space-between;align-items:center;color:{col};z-index:5">'
+            f'<div style="display:flex;align-items:center">{logo}<div style="font-size:22px;font-weight:800;letter-spacing:5px">ARAH RIDES <span style="opacity:.55">·</span> DRIVE GUIDE</div></div>{r}</div>'
+            f'<div style="position:absolute;left:64px;right:64px;top:104px;height:2px;background:{col};opacity:.35;z-index:5"></div>')
+
+def _gfs(t, big, small):
+    n = len(t)
+    return big if n <= 16 else int(big * .86) if n <= 26 else int(big * .72) if n <= 40 else small
+
+def guide_cover(path, title, sub, style="list", count=None, pos="50% 45%"):
+    """Cover: one hero photo of the destination (never a car), big headline, short promise. Listicles in a tall condensed face, stories in serif italic."""
+    G, Y, C, K = c()
+    head = (f'<div style="{CONDENSED};font-size:{_gfs(title, 150, 96)}px;line-height:.92;color:{PAPER}">{E(title)}</div>' if style == "list" else
+            f'<div style="{SERIF};font-size:{_gfs(title, 124, 84)}px;line-height:1.02;color:{PAPER}">{E(title)}</div>')
+    num = (f'<div style="{CONDENSED};font-size:30px;letter-spacing:6px;color:{Y};margin-bottom:6px">{count} STOPS · ONE CAR</div>' if count else "")
+    return _gwrap(img(path, pos) +
+                  '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,11,.55) 0%,rgba(10,12,11,0) 22%,rgba(10,12,11,0) 46%,rgba(10,12,11,.82) 78%,rgba(10,12,11,.94) 100%)"></div>'
+                  + _glabel(PAPER, "SAVE THIS ↗") +
+                  f'<div style="position:absolute;left:64px;right:64px;bottom:84px;display:flex;flex-direction:column;gap:22px">{num}{head}'
+                  f'<div style="width:96px;height:6px;background:{Y}"></div>'
+                  f'<div style="font-size:36px;line-height:1.32;color:{PAPER};opacity:.92;max-width:900px">{E(sub)}</div>'
+                  f'<div style="font-size:22px;font-weight:700;letter-spacing:4px;color:{PAPER};opacity:.7">SWIPE FOR THE ROUTE →</div></div>')
+
+def guide_route(path, title, stops, car=None):
+    """Slide 2: the route at a glance. Numbered stops on a dotted line, each with its drive time."""
+    G, Y, C, K = c()
+    rows = "".join(
+        f'<div style="display:flex;align-items:center;gap:26px;position:relative">'
+        f'<div style="flex:none;width:64px;height:64px;border-radius:50%;background:{Y};color:{K};{CONDENSED};font-size:34px;display:flex;align-items:center;justify-content:center;z-index:2">{i + 1}</div>'
+        f'<div style="flex:1;min-width:0"><div style="{CONDENSED};font-size:{44 if len(s["name"]) < 20 else 36}px;line-height:1.05;color:{PAPER}">{E(s["name"])}</div>'
+        f'<div style="font-size:25px;color:{PAPER};opacity:.72;margin-top:4px">about {E(s["drive"])}</div></div></div>' for i, s in enumerate(stops))
+    gap = 34 if len(stops) <= 5 else 22
+    carline = (f'<div style="font-size:26px;color:{PAPER};opacity:.85">Best car for this route: <b style="color:{Y}">{E(car)}</b></div>' if car and car != "any" else
+               f'<div style="font-size:26px;color:{PAPER};opacity:.85">Any car on arahrides.com does this drive.</div>')
+    return _gwrap(f'<img src="{Path(path).resolve().as_uri()}" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(26px) brightness(.32) saturate(1.2)">'
+                  + _glabel(PAPER, "THE ROUTE") +
+                  f'<div style="position:absolute;left:64px;right:64px;top:150px;{CONDENSED};font-size:64px;line-height:1;color:{PAPER}">{E(title)}</div>'
+                  f'<div style="position:absolute;left:95px;top:{300}px;bottom:250px;border-left:4px dotted {Y};opacity:.7"></div>'
+                  f'<div style="position:absolute;left:64px;right:64px;top:270px;bottom:230px;display:flex;flex-direction:column;justify-content:center;gap:{gap}px">{rows}</div>'
+                  f'<div style="position:absolute;left:64px;right:64px;bottom:70px;display:flex;flex-direction:column;gap:12px">'
+                  f'<div style="height:2px;background:{PAPER};opacity:.3"></div>{carline}'
+                  f'<div style="font-size:21px;color:{PAPER};opacity:.55">Drive times are approximate and depend on traffic.</div></div>')
+
+def guide_stop(path, n, total, s, style="list", pos="50% 50%"):
+    """One place per slide: the photo, what it is, how far, where to park, when to go."""
+    G, Y, C, K = c()
+    name = (f'<div style="{CONDENSED};font-size:{_gfs(s["name"], 104, 76)}px;line-height:.95;color:{PAPER}">{E(s["name"])}</div>' if style == "list" else
+            f'<div style="{SERIF};font-size:{_gfs(s["name"], 96, 70)}px;line-height:1.02;color:{PAPER}">{E(s["name"])}</div>')
+    def row(ic, t):
+        return (f'<div style="display:flex;gap:18px;align-items:flex-start;font-size:29px;line-height:1.3;color:{PAPER}">'
+                f'<div style="flex:none;width:44px;height:44px;border-radius:12px;background:{Y};color:{K};font-weight:900;font-size:24px;display:flex;align-items:center;justify-content:center">{ic}</div><div>{E(t)}</div></div>')
+    info = row("⏱", "About " + s["drive"]) + (row("P", s["park"]) if s.get("park") else "") + row("☀", "Best time: " + s["best"])
+    return _gwrap(img(path, pos) +
+                  '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,11,.55) 0%,rgba(10,12,11,0) 20%,rgba(10,12,11,0) 38%,rgba(10,12,11,.86) 64%,rgba(10,12,11,.96) 100%)"></div>'
+                  + _glabel(PAPER, f"STOP {n:02d} / {total:02d}") +
+                  f'<div style="position:absolute;left:64px;right:64px;bottom:70px;display:flex;flex-direction:column;gap:20px">{name}'
+                  f'<div style="font-size:36px;line-height:1.3;color:{PAPER}">{E(s["what"])}</div>'
+                  f'<div style="height:2px;background:{PAPER};opacity:.3;margin:4px 0"></div>{info}</div>')
+
+def guide_end(car_path, title, car=None, code=None):
+    """Last slide: save the route, then book the car to do it."""
+    G, Y, C, K = c()
+    deal = (f'<div style="font-size:28px;font-weight:700;color:{G}">Code {E(code["code"])}: up to US${code["amount"]} off at checkout.</div>' if code else "")
+    return _gwrap(f'<div style="position:absolute;left:0;right:0;top:0;height:640px;overflow:hidden">{img(car_path)}'
+                  '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,11,.55),rgba(10,12,11,0) 30%)"></div></div>'
+                  + _glabel(PAPER, "YOUR CAR") +
+                  f'<div style="position:absolute;left:0;right:0;top:600px;bottom:0;background:{PAPER};color:{INK};padding:56px 64px 60px;display:flex;flex-direction:column;gap:22px">'
+                  f'<div style="display:flex;align-items:center;gap:18px"><svg viewBox="0 0 24 24" width="54" height="54"><path d="M6 3h12v18l-6-4.5L6 21z" fill="{G}"/></svg>'
+                  f'<div style="{CONDENSED};font-size:84px;line-height:1;color:{INK}">Save this route</div></div>'
+                  f'<div style="font-size:34px;line-height:1.3">{E(title)}: keep it for your trip, send it to who you are going with.</div>'
+                  f'<div style="flex-grow:1"></div>{deal}'
+                  f'<div style="background:{G};color:{PAPER};border-radius:70px;padding:26px 40px;display:flex;justify-content:space-between;align-items:center">'
+                  f'<div style="{HD};font-size:36px;letter-spacing:-.6px">Book the car for this drive</div><div style="{HD};font-size:32px;color:{Y}">{E(B["site"])}</div></div>'
+                  f'<div style="display:flex;justify-content:space-between;font-size:23px;font-weight:600;opacity:.75"><span>Book in minutes · Klarna, Affirm, Apple Pay, Google Pay</span><span>Winston on WhatsApp</span></div></div>')

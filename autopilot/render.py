@@ -15,6 +15,9 @@ def render_all(jobs):
             try:
                 pg.set_viewport_size({"width": 1080, "height": h})
                 pg.goto(Path(name).as_uri()); pg.wait_for_timeout(150)
+                if "fonts.googleapis" in html_:                  # guide slides use web fonts: wait until they are loaded (falls back to local fonts if offline)
+                    try: pg.evaluate("Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 4000))]).then(() => 1)")
+                    except Exception: pass
                 pg.screenshot(path=str(out), type="jpeg", quality=90, clip={"x": 0, "y": 0, "width": 1080, "height": h})
             finally:
                 os.unlink(name)

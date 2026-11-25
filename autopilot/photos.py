@@ -80,6 +80,8 @@ def rule_for(text):
         return lambda s: "beach" not in s or "road" in s    # a drive never gets a beach-only photo
     return None
 
+NEVER_USE = re.compile(r"tennis|jamaica[ _-]?cup|pickleball|racket|racquet", re.I)      # never used again, from any source (owner's rule)
+
 @dataclass
 class Photo:
     id: str                 # e.g. drive:<fileId>, local:<stem>, pexels:123
@@ -314,33 +316,53 @@ class PixabaySource:
         http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
 
 class OpenverseSource:
-    """Only CC0 and public-domain images. Openverse now needs free API credentials (OPENVERSE_CLIENT_ID / OPENVERSE_CLIENT_SECRET);
-    without them this source is skipped."""
+    """Openverse (the open-source WordPress search over ~800 million openly licensed images, including Flickr's Creative Commons photos
+    of Jamaica). Search is public, so no key is needed; free keys (OPENVERSE_CLIENT_ID / OPENVERSE_CLIENT_SECRET) only raise the rate limit.
+    Licences: CC BY (credited in the caption), CC0 and public domain. No NonCommercial, no NoDerivatives, no ShareAlike."""
     name = "openverse"
+    UA = {"User-Agent": "ArahAutopilot/1.0 (https://arahrides.com; marketing)"}
     def __init__(self, cfg):
-        self.lic = cfg["sources"]["openverse"].get("licenses", "cc0,pdm")
+        lic = cfg["sources"]["openverse"].get("licenses", "by,cc0,pdm")
+        self.lic = "by,cc0,pdm" if lic in ("cc0,pdm", "cc0", "pdm") else lic
         self.cid = os.environ.get("OPENVERSE_CLIENT_ID", ""); self.sec = os.environ.get("OPENVERSE_CLIENT_SECRET", "")
-        self._tok = None
-    def _token(self):
-        if self._tok is None:
-            import requests
-            r = requests.post("https://api.openverse.org/v1/auth_tokens/token/", timeout=25,
-                              data={"grant_type": "client_credentials", "client_id": self.cid, "client_secret": self.sec})
-            r.raise_for_status(); self._tok = r.json()["access_token"]
-        return self._tok
+        self._tok = None; self._off = False
+    def _headers(self):
+        h = dict(self.UA)
+        if self.cid and self.sec and self._tok is not False:
+            try:
+                if self._tok is None:
+                    import requests
+                    r = requests.post("https://api.openverse.org/v1/auth_tokens/token/", timeout=25,
+                                      data={"grant_type": "client_credentials", "client_id": self.cid, "client_secret": self.sec})
+                    r.raise_for_status(); self._tok = r.json()["access_token"]
+                h["Authorization"] = "Bearer " + self._tok
+            except Exception:
+                self._tok = False                       # keys not working: carry on without them
+        return h
     def search(self, query, rng):
-        if not (self.cid and self.sec):
+        if self._off:
             return []
-        d = http_json("https://api.openverse.org/v1/images/", headers={"Authorization": "Bearer " + self._token()}, params={
-            "q": query, "license": self.lic, "category": "photograph", "page_size": 30, "page": rng.randint(1, 2), "extension": "jpg"})
+        import requests, time
+        for attempt in range(2):
+            r = requests.get("https://api.openverse.org/v1/images/", headers=self._headers(), timeout=30, params={
+                "q": query, "license": self.lic, "category": "photograph", "page_size": 20, "page": rng.randint(1, 2), "mature": "false"})
+            if r.status_code == 429:
+                if attempt == 0:
+                    time.sleep(15); continue
+                self._off = True                         # daily limit reached: skip Openverse for the rest of this run
+                return []
+            r.raise_for_status(); d = r.json(); break
         out = []
         for p in d.get("results", []):
-            if not p.get("url"):
+            if not p.get("url") or (p.get("filetype") or "jpg").lower() not in ("jpg", "jpeg", "png", ""):
+                continue
+            lic = (p.get("license") or "").lower()
+            if lic not in ("by", "cc0", "pdm"):
                 continue
             out.append({"id": "openverse:%s" % p["id"], "name": "openverse-%s" % p["id"], "url": p["url"],
                         "w": p.get("width") or 0, "h": p.get("height") or 0,
                         "text": " ".join([p.get("title") or ""] + [t.get("name", "") for t in p.get("tags") or []]),
-                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", (p.get("license") or "").upper())})
+                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", ("CC BY" if lic == "by" else lic.upper()))})
         return out
     def fetch(self, item, dest):
         http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
@@ -431,6 +453,7 @@ class Picker:
         self.notes = []
         self.tried = set()
         self.picked = []          # every photo handed out for the post being built (the Reel is made from these, not from the slides)
+        self.credits = {}         # photo path -> credit line (CC BY photographers, Jamaica Tourist Board...) so every slide's photo is credited
         self._lenient = False; self.stats = {}; self.loaded = 0
         self._sc = {}; self._dead = set()          # search results are reused within a run; a source that errors (rate limit) is skipped for the run
 
@@ -475,11 +498,17 @@ class Picker:
 
     def _series(self, name):
         m = self._meta(name)
+        mm = re.match(r"arah_listing_(\d+)_", name)
+        if mm:
+            return "listing-" + mm.group(1)     # every photo of one fleet listing is the same car: they are spaced out (photos.series_days_cars)
         if m and re.search(r"tourist board|jtb", (m.get("credit") or "") + " " + (m.get("about") or "") + " " + (m.get("series") or ""), re.I):
             return name.split(".")[0]          # JTB library photos are separate pictures, not one shoot: each is its own (never repeated, no 21-day group wait)
         return (m or {}).get("series") or re.sub(r"[_\-]?\d+(_\d+)?$", "", name.split(".")[0]) or name
 
     def _load(self, src, item, kind, flags, extra=None):
+        _m = self._meta(item.get("name", "")) or {}
+        if NEVER_USE.search(" ".join([item.get("name", ""), item.get("text", ""), str(_m.get("about", "")), str(_m.get("series", ""))])):
+            return None
         dest = self.cache / src.name / (hashlib.md5(item["id"].encode()).hexdigest()[:16] + ".jpg")
         try:
             if not dest.exists():
@@ -528,6 +557,8 @@ class Picker:
         ph = Photo(item["id"], item["name"], src.name, str(use), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
                    e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
         self.picked.append(ph.path); self.loaded += 1
+        if ph.credit and ph.credit != "Arah Rides":
+            self.__dict__.setdefault("credits", {})[ph.path] = ph.credit
         self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
         return ph
 
@@ -799,7 +830,8 @@ class Picker:
             _ok = ok
             ok = lambda st, _o=_ok: "beach" not in st and (_o is None or _o(st))
         self._inland = inland; self._place_words = names if place else None
-        web_first = bool(self.web) and self.rng.random() < self.cfg["photos"].get("web_share", 0.5)
+        # photos of a named place come from the web first (Wikimedia / Openverse titles name the actual place); the Drive library is the fallback
+        web_first = bool(self.web) and (bool(place) or self.rng.random() < self.cfg["photos"].get("web_share", 0.5))
         if place and not web_first:
             key = [place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()]
             p = self._own("scenery", None, ok, about=key)
@@ -810,7 +842,8 @@ class Picker:
         if city:                                           # Kingston => Art Walk, Devon House, Emancipation Park...; Ocho Rios => Dunn's River, Fern Gully...
             names = sorted(set(names) | set(TH.attraction_words(city)))
         qs = [query] + (self.rng.sample(atts, min(3, len(atts))) if atts else [])
-        for web in self.web:
+        order = {"wikimedia": 0, "openverse": 1, "unsplash": 2, "pixabay": 3}
+        for web in (sorted(self.web, key=lambda w: order.get(w.name, 9)) if place else self.web):
             if web.name in self._dead:
                 continue
             items = []
@@ -821,6 +854,7 @@ class Picker:
             self.rng.shuffle(items)
             from . import vision as _V
             _named = lambda i: bool(place) and any(n in (i.get("text", "") + " " + i.get("name", "")).lower() for n in names)
+            items.sort(key=lambda i: not _named(i))         # photos whose title names the place first
             # Jamaica only: the photo itself must say so, or name the place (Dunn's River, Devon House...) and pass the AI's Jamaica check
             items = [i for i in items if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) or (_V.ai_on() and _named(i) and not TH.NOT_JAMAICA.search(i.get("text", "")))]
             good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]

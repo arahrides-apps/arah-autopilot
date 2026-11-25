@@ -14,10 +14,10 @@ import types
 from PIL import Image
 
 log = logging.getLogger("generate")
-EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍", "deal": "🚗", "deposits": "🔑"}
+EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍", "deal": "🚗", "deposits": "🔑", "guide": "📌"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
             "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel", "spotlight": "#VisitJamaica", "deal": "#JamaicaCarRental", "deposits": "#JamaicaCarRental"}
-FALLBACK = {"deal": "car_hero", "deposits": "carousel", "journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
+FALLBACK = {"guide": "spotlight", "deal": "car_hero", "deposits": "carousel", "journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
 def _pick(rng, lst, n=1, avoid=()):
@@ -472,7 +472,7 @@ class DayBuilder:
                     break
             e = A[i]; n = e["name"]
             words = [w for w in re.findall(r"[a-z']+", n.lower()) if len(w) > 3 and w not in ("beach", "river", "falls", "great", "house", "park", "gardens", "botanical", "historic", "district")][:2] or [n.lower()]
-            ph = self.pk.scene(f"{n} Jamaica", n, strict=True, words=words)
+            ph = self._guide_photo(post, {"name": n, "q": f"{n} Jamaica", "what": str(e.get("about", "")) + " " + str(e.get("cat", ""))})
             if not ph and e.get("photo"):                # food stop: a real photo of the dish it is known for
                 ph = self.pk.scene(e["photo"], None, words=[w for w in e["photo"].lower().split() if len(w) > 4 and w not in ("jamaica", "jamaican")][:2])
             self.led.copy_record("poi", i, self.today)              # tried today: a place without a photo is not retried for a year
@@ -488,6 +488,90 @@ class DayBuilder:
             post["caption"] = self.cap(post, "spotlight", post["copy_text"], place=loc)
             post["story_done"] = False
             return [(T.ccover(ph.path, kick, head, "Places to see with your Arah rental. Swipe →"), 1350)]
+        return None
+
+    KINDS = [(r"falls|waterfall", "a waterfall"), (r"beach|cove|cay|bay\b", "a beach or the sea shore"), (r"lagoon", "a lagoon"),
+             (r"river|rafting|black river|martha brae", "a river"), (r"blue hole", "a natural swimming hole or river pools"),
+             (r"great house|rose hall|greenwood|good hope|devon house|firefly", "a historic great house or estate"), (r"castle", "a castle"),
+             (r"museum|gallery", "the museum or gallery building"), (r"market", "a market with produce"), (r"pelican bar", "a wooden bar built on stilts in the sea"),
+             (r"lighthouse", "a lighthouse"), (r"fort|port royal", "a fort or Port Royal"), (r"holywell|newcastle|blue mountain|craighton|strawberry hill", "the Blue Mountains: hills, forest or a mountain view"),
+             (r"jerk|boston", "jerk food or a jerk stand"), (r"shrimp|middle quarters", "pepper shrimp"), (r"fish|hellshire|ochie", "fried fish or seafood by the sea"),
+             (r"faith's pen", "roadside food stalls"), (r"cave|grotto", "a cave"), (r"bamboo", "a road lined with tall bamboo"), (r"lovers' leap", "high sea cliffs"),
+             (r"mystic mountain", "a forest chairlift or bobsled"), (r"dolphin", "dolphins"), (r"park", "a park")]
+
+    def _guide_photo(self, post, s):
+        """A photo of exactly this stop: searched by the place name (own library first, then Wikimedia, Openverse, Pixabay...),
+        and the AI must say yes, it shows this place and this kind of place (a waterfall for a falls, a beach for a beach). Up to 4 tries."""
+        from . import vision as V
+        words = [w for w in re.findall(r"[a-z']+", s["name"].lower()) if len(w) > 3 and w not in ("beach", "river", "falls", "great", "house", "park", "estate", "national", "rafting")][:2] or [s["name"].lower()]
+        kind = next((k for rx, k in self.KINDS if re.search(rx, s["name"].lower() + " " + s.get("what", "").lower())), "this place")
+        for q in (s["q"], f"{s['name']} Jamaica", s["name"]):
+            for _ in range(2):
+                ph = self.pk.scene(q, s["name"], strict=True, words=words)
+                if not ph:
+                    break
+                if not V.ai_on():
+                    return ph
+                if V.shows(ph.path, f"{kind}, and it could be {s['name']} in Jamaica ({s.get('what', '')}). A real recent photo of that kind of place; "
+                                    "no tennis courts, sports events, hotel rooms or a different kind of place") is True:
+                    return ph
+                self.led.data["photos"].pop(ph.id, None)              # not the place: give it back and try the next photo
+                post["flags"].append(f"Left out a photo that did not show {s['name']}")
+        return None
+
+    def guide(self, post):
+        """Drive Guide (content/guides.yaml): a save-worthy magazine-style carousel. Cover = the destination (never a car), slide 2 = the route
+        with drive times, one slide per stop (photo, what it is, drive time, parking, best time), last slide = save this route + book the car.
+        A stop with no fitting photo is left out; a guide needs at least 3 stops with real photos of those places."""
+        G = load_yaml("guides.yaml")["guides"]
+        today = self.__dict__.setdefault("_guides_today", set())
+        for _ in range(4):
+            i, _c = self.led.copy_pick("guide", len(G), self.today, self.rng, 12)
+            g = G[i]
+            if g["id"] in today:
+                continue
+            self.led.copy_record("guide", i, self.today); today.add(g["id"])
+            got = []
+            for s in g["stops"]:
+                ph = self._guide_photo(post, s)
+                if ph:
+                    got.append((s, ph))
+            if len(got) < 3:
+                self.notes.append(f"Drive guide '{g['title']}' skipped on {self.date}: only {len(got)} of its stops had a fitting photo.")
+                continue
+            n = len(got); style = g.get("style", "list")
+            title = re.sub(r"^\d+", str(n), g["title"]) if re.match(r"^\d+ ", g["title"]) else g["title"]
+            sub = re.sub(r"\b\d+ (stops|drives)\b", lambda m: f"{n} {m.group(1)}", g["sub"])
+            first = got[0][1]
+            cover = self._guide_photo(post, got[0][0]) or first
+            self.photo_flags(post, cover)
+            for s, ph in got:
+                if ph is not cover:
+                    self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
+                    post.setdefault("photos_extra", []).append({"id": ph.id, "name": ph.name})
+                post["flags"] += [f for f in ph.flags if f not in post["flags"]]
+            car = None
+            try:
+                car = self.pk._own("car", exterior=True)
+            except Exception:
+                car = None
+            if car:
+                self.led.record(car.keys(), car.hash, self.today, car.source, car.series)
+                post.setdefault("photos_extra", []).append({"id": car.id, "name": car.name})
+            pr = promo_mod.active(self.date)
+            pages = [(T.guide_cover(cover.path, title, sub, style, n if style == "list" else None), 1350),
+                     (T.guide_route(cover.path, title, [s for s, _ in got], g.get("car")), 1350)]
+            pages += [(T.guide_stop(ph.path, k + 1, n, s, style), 1350) for k, (s, ph) in enumerate(got)]
+            pages.append((T.guide_end((car or got[-1][1]).path, title, g.get("car"), pr), 1350))
+            stops_txt = "\n".join(f"{k + 1}. {s['name']}: {s['what']} (about {s['drive']})" for k, (s, _p) in enumerate(got))
+            post["copy_text"] = (f"{title} {EMOJI['guide']}\n\n{sub}\n\n{stops_txt}\n\n"
+                                 "📌 Save this route and send it to who you are going with.\n"
+                                 "🚗 Book the car for this drive in minutes at arahrides.com, or ask Winston on WhatsApp.\n"
+                                 "Drive times are approximate.")
+            post["alt"] = f"{title}: a Jamaica drive guide"
+            post["guide"] = g["id"]; post["story_done"] = False
+            post["caption"] = self.cap(post, "guide", post["copy_text"], place=got[0][0]["name"])
+            return pages
         return None
 
     def journey(self, post):
@@ -777,6 +861,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             elif t == "moment": pages = b.moment(post, *cur)
             elif t == "journey": pages = b.journey(post)
             elif t == "spotlight": pages = b.spotlight(post)
+            elif t == "guide": pages = b.guide(post)
             elif t == "deal": pages = b.deal(post, post.get("_deal_k", 0))
             elif t == "deposits": pages = b.deposits(post)
             elif t == "offer": pages = b.offer(post, *offer)
@@ -793,9 +878,20 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 ol = (b.last_offer, "")
             pages = b.expand(post, post["type"], pages, ol)
         post["raw"] = list(dict.fromkeys(str(x) for x in b.pk.picked))
+        if (not pages or '<img src="file:' not in pages[0][0]) and camp and cfg["photos"].get("car_post_when_short", True):
+            # no fresh photo that fits this post: rather than leave the slot empty, push one more car from the fleet list (we have hundreds of fleet photos)
+            extra_deal = locals().get("extra_deal", 0) + 1
+            b.pk.picked = []
+            post.update(type="deal", id=f"{date}_{hhmm.replace(':', '')}_deal", _deal_k=10 + extra_deal)
+            alt = b.deal(post, 10 + extra_deal)
+            if alt and cfg.get("all_carousels", True):
+                alt = b.expand(post, "deal", alt, None)
+            if alt and '<img src="file:' in alt[0][0]:
+                pages = alt; post["raw"] = list(dict.fromkeys(str(x) for x in b.pk.picked))
+                b.notes.append(f"No fresh photo that fits the planned {hhmm} post on {date}: made it a car deal post instead.")
         if not pages or '<img src="file:' not in pages[0][0]:
             if not cfg["photos"].get("allow_text_cover", False):        # every post opens on a real photo; no fresh photo = no post (never a text card cover)
-                b.notes.append(f"Skipped the {hhmm} post on {date}: no fresh Jamaica photo for its cover. Add photos to Drive or check the Unsplash/Pexels/Pixabay keys.")
+                b.notes.append(f"Skipped the {hhmm} post on {date}: no fresh photo for its cover (the free photo sources ran dry this run; the next run tries again).")
                 continue
         nph = sum('<img src="file:' in h_ for h_, _ in pages)
         if nph < len(pages):
@@ -804,6 +900,21 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             rel = f"media/{date}/{post['id']}_{i + 1}.jpg"
             post["images"].append(rel)
             jobs.append((html_, h, Q.DOCS / rel))
+        try:                                            # credit every credited photo in the post (inner slides too), as CC BY and the JTB ask
+            cr = getattr(b.pk, "credits", {})
+            creds = [c for c in dict.fromkeys(cr.get(x) for x in post.get("raw", []) + [str(x) for x in b.pk.picked]) if c]
+            creds = [c.replace("Photo: ", "") for c in creds if c.replace("Photo: ", "").split(" (")[0].lower() not in post["caption"].lower()]
+            if creds:
+                parts = post["caption"].rstrip().split("\n\n")
+                at = len(parts) - 1 if parts and parts[-1].lstrip().startswith("#") else len(parts)
+                line = "📷 Photos: " + "; ".join(creds)
+                room = 2150 - len(post["caption"])
+                if len(line) > room:
+                    line = line[:max(0, room - 1)].rsplit(";", 1)[0]
+                if len(line) > 15:
+                    parts.insert(at, line); post["caption"] = "\n\n".join(parts)
+        except Exception as e:
+            log.warning("photo credits not added: %s", e)
         if len(post["caption"]) > 2200 or post["caption"].count("#") > 5:
             raise ValueError("caption rules broken for " + post["id"])
         post.pop("story_done", None)
