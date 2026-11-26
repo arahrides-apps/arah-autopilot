@@ -1,5 +1,7 @@
 name: Index new photos
 on:
+  schedule:
+    - cron: "17 15 * * *"       # 10:17 am Jamaica time, every day: new Drive photos are indexed here (no longer at the start of every Draft and Redo)
   workflow_dispatch:
     inputs:
       deep:
