@@ -1,53 +1,53 @@
 {
- "elapsed_min": 44.0,
+ "elapsed_min": 40.5,
  "times": {
-  "reels": {
-   "count": 1,
-   "secs": 1467
-  },
   "post deal": {
-   "count": 1,
-   "secs": 658
+   "count": 4,
+   "secs": 2119
   },
   "search openverse": {
-   "count": 142,
-   "secs": 552
+   "count": 171,
+   "secs": 1507
   },
-  "post chat": {
+  "post moment": {
    "count": 1,
-   "secs": 510
+   "secs": 303
   },
   "search pixabay": {
-   "count": 159,
-   "secs": 37
+   "count": 195,
+   "secs": 62
   },
   "search wikimedia": {
-   "count": 47,
-   "secs": 13
+   "count": 54,
+   "secs": 29
   },
   "render pictures": {
-   "count": 9,
-   "secs": 3
+   "count": 24,
+   "secs": 6
   },
   "search unsplash": {
    "count": 15,
-   "secs": 2
+   "secs": 5
   },
   "art director checks": {
+   "count": 1,
+   "secs": 0
+  },
+  "reels": {
    "count": 1,
    "secs": 0
   }
  },
  "ai": {
-  "ok": 48,
+  "ok": 15,
   "fail": 0,
   "limit": 0,
   "streak": 0,
-  "secs": 219,
-  "read": 20
+  "secs": 81,
+  "read": 13
  },
  "run": "redo",
  "days_done": [
-  "2026-11-27"
+  "2026-11-29"
  ]
 }
