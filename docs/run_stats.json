@@ -1,46 +1,50 @@
 {
- "elapsed_min": 40.4,
+ "elapsed_min": 44.0,
  "times": {
+  "reels": {
+   "count": 1,
+   "secs": 1467
+  },
   "post deal": {
-   "count": 4,
-   "secs": 2418
+   "count": 1,
+   "secs": 658
   },
   "search openverse": {
-   "count": 147,
-   "secs": 1043
+   "count": 142,
+   "secs": 552
+  },
+  "post chat": {
+   "count": 1,
+   "secs": 510
   },
   "search pixabay": {
-   "count": 183,
-   "secs": 40
+   "count": 159,
+   "secs": 37
   },
   "search wikimedia": {
-   "count": 72,
-   "secs": 29
-  },
-  "search unsplash": {
-   "count": 28,
-   "secs": 9
+   "count": 47,
+   "secs": 13
   },
   "render pictures": {
-   "count": 19,
-   "secs": 5
+   "count": 9,
+   "secs": 3
+  },
+  "search unsplash": {
+   "count": 15,
+   "secs": 2
   },
   "art director checks": {
-   "count": 1,
-   "secs": 0
-  },
-  "reels": {
    "count": 1,
    "secs": 0
   }
  },
  "ai": {
-  "ok": 81,
+  "ok": 48,
   "fail": 0,
   "limit": 0,
   "streak": 0,
-  "secs": 411,
-  "read": 41
+  "secs": 219,
+  "read": 20
  },
  "run": "redo",
  "days_done": [
