@@ -148,6 +148,114 @@
    "reel": "media/2026-11-26/2026-11-26_0700_place.mp4"
   },
   {
+   "id": "2026-11-26_0900_deal",
+   "date": "2026-11-26",
+   "slot": "2026-11-26T09:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: Duplicate swipe indicator at top right; Unfinished colored bar at bottom edge. Look closely before approving.",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar 7 seater shown for the Nissan X-Trail (same body style, from our fleet photos)",
+    "1 of 5 slides have photos",
+    "Goes out as a Reel (animated slideshow (dynamic))."
+   ],
+   "images": [
+    "media/2026-11-26/2026-11-26_0900_deal_1.jpg",
+    "media/2026-11-26/2026-11-26_0900_deal_2.jpg",
+    "media/2026-11-26/2026-11-26_0900_deal_3.jpg",
+    "media/2026-11-26/2026-11-26_0900_deal_4.jpg",
+    "media/2026-11-26/2026-11-26_0900_deal_5.jpg"
+   ],
+   "copy_text": "7-seaters from US$95 a day 🚗\n\nNissan X-Trail, Toyota Wish, Honda Stepwgn and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "7-seaters for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "7-seaters from US$95 a day 🚗\n\nNissan X-Trail, Toyota Wish, Honda Stepwgn and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#MontegoBayJamaica #CarRentalJamaica #RentJamaican #JamaicaItinerary #JamaicaTravel",
+   "beat_lines": [
+    "From US$95 a day",
+    "Nissan X-Trail, Toyota Wish",
+    "Seats seven.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/a9f9a7a8490093bb.jpg"
+   ],
+   "_deal_k": 13,
+   "photo": {
+    "id": "local:arah_b2_2_toyota-voxy-black",
+    "name": "arah_b2_2_toyota-voxy-black",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending",
+   "reel_format": "price story",
+   "reel_kind": "animated slideshow (dynamic)",
+   "reel": "media/2026-11-26/2026-11-26_0900_deal.mp4"
+  },
+  {
+   "id": "2026-11-26_1100_spotlight",
+   "date": "2026-11-26",
+   "slot": "2026-11-26T11:00:00-05:00",
+   "type": "spotlight",
+   "flags": [
+    "⚠ Art director check: Photo shows open water instead of Scotchies restaurant or food; Duplicate swipe buttons in top right. Look closely before approving.",
+    "Left out a photo that did not match: Where it is. Scotchies, Drax Hall, St. Ann. Open-air jerk sp",
+    "Left out a photo that did not match: Where it is. Scotchies, Drax Hall, St. Ann. Open-air jerk sp",
+    "Left out a photo that did not match: What to order. Jerk chicken, pork and sausage with festival ",
+    "Left out a photo that did not match: What to order. Jerk chicken, pork and sausage with festival ",
+    "Left out a photo that did not match: Getting there. Pick up your car at Ocho Rios and drive yours",
+    "Slide photo (culture): watts_photos (CC BY, via Openverse)",
+    "2 of 7 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-26/2026-11-26_1100_spotlight_1.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_2.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_3.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_4.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_5.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_6.jpg",
+    "media/2026-11-26/2026-11-26_1100_spotlight_7.jpg"
+   ],
+   "photo": {
+    "id": "drive:1cFy0B4ecoWScuE6Bqq_04t2mT17cXztP",
+    "name": "063_JTB_Spring_2025_Kingston_Lime_Cay_Boat",
+    "source": "drive",
+    "credit": "Photo: Jamaica Tourist Board"
+   },
+   "copy_text": "Scotchies, Drax Hall. Come hungry. 📍\n\nScotchies, Drax Hall, St. Ann. Open-air jerk spot cooking slowly over pimento wood.\nWhat to order: Jerk chicken, pork and sausage with festival and roast breadfruit.\nPick up your car at Ocho Rios and drive there on your own time.",
+   "alt": "Scotchies, Drax Hall, St. Ann, Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
+   },
+   "caption": "Scotchies, Drax Hall. Come hungry. 📍\n\nScotchies, Drax Hall, St. Ann. Open-air jerk spot cooking slowly over pimento wood.\nWhat to order: Jerk chicken, pork and sausage with festival and roast breadfruit.\nPick up your car at Ocho Rios and drive there on your own time.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n📷 Photos: Jamaica Tourist Board; Photo by ignartonosbg on Pixabay; Photo by LoboStudioHamburg on Pixabay; Photo by Jason Lawrence  from New York, Wikimedia Commons (CC BY 2.0); watts_photos (CC BY, via Openverse)\n\n#OchoRios #IanFlemingAirport #AirportPickupJamaica #ArahRides #JamaicaVacation",
+   "beat_lines": [
+    "📍 Scotchies, Drax Hall, St. Ann",
+    "Order: Jerk chicken",
+    "Pick up your car at Ocho Rios.",
+    "Book in minutes at arahrides.com"
+   ],
+   "photos_extra": [
+    {
+     "id": "openverse:dbefeae0-c80f-4aef-bc2f-05d30f42a1a4",
+     "name": "openverse-dbefeae0-c80f-4aef-bc2f-05d30f42a1a4"
+    }
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/ac3ea2117ba6b9fd.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/bef7e536dee5347c.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/drive/ea66fd47ff066835.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/766d0891aaecdbb5.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/pixabay/7df851e287f693e2.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/62f4af95c34272c0.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/openverse/418e74c27247a73e.jpg"
+   ],
+   "status": "pending"
+  },
+  {
    "id": "2026-11-26_1400_deposits",
    "date": "2026-11-26",
    "slot": "2026-11-26T14:00:00-05:00",
@@ -191,6 +299,150 @@
     "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/497c030a1f37a2f7.jpg"
    ],
    "status": "pending"
+  },
+  {
+   "id": "2026-11-26_1600_deal",
+   "date": "2026-11-26",
+   "slot": "2026-11-26T16:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: duplicate swipe button in top right corner; awkwardly cropped amateur photo. Look closely before approving.",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "2 of 5 slides have photos",
+    "Goes out as a Reel (animated slideshow (punchy))."
+   ],
+   "images": [
+    "media/2026-11-26/2026-11-26_1600_deal_1.jpg",
+    "media/2026-11-26/2026-11-26_1600_deal_2.jpg",
+    "media/2026-11-26/2026-11-26_1600_deal_3.jpg",
+    "media/2026-11-26/2026-11-26_1600_deal_4.jpg",
+    "media/2026-11-26/2026-11-26_1600_deal_5.jpg"
+   ],
+   "copy_text": "Toyota Voxy from US$95 a day 🚗\n\nSecurity deposit: US$300.\n7 Seater. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "Toyota Voxy rental car in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Sangster International Airport",
+    "id": "106111078512570"
+   },
+   "caption": "Toyota Voxy from US$95 a day 🚗\n\nSecurity deposit: US$300.\n7 Seater. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nSend this to someone who needs a car in Jamaica 🚗 and save it for later 🔖. What would you add to the list? 👇\n\nCar rental at Sangster Airport, Montego Bay | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#SangsterAirport #AirportPickupJamaica #RentJamaican #VisitJamaica #JamaicaTravel",
+   "beat_lines": [
+    "From US$95 a day",
+    "Deposit just US$300",
+    "Seats seven.",
+    "Book in minutes: website or WhatsApp Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/d3535cd8041a28f5.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/e3589d02e801a333.jpg"
+   ],
+   "_deal_k": 14,
+   "photo": {
+    "id": "local:arah_listing_208_2_2017-toyota-voxy",
+    "name": "arah_listing_208_2_2017-toyota-voxy",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending",
+   "reel_format": "price story",
+   "reel_kind": "animated slideshow (punchy)",
+   "reel": "media/2026-11-26/2026-11-26_1600_deal.mp4"
+  },
+  {
+   "id": "2026-11-26_1800_deal",
+   "date": "2026-11-26",
+   "slot": "2026-11-26T18:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: duplicate SWIPE button at top; unattractive rusty container background. Look closely before approving.",
+    "Left out a photo that did not match: Tag who you are travelling with. Then choose the car you wan",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar suv shown for the Hyundai Creta (same body style, from our fleet photos)",
+    "1 of 5 slides have photos",
+    "Goes out as a Reel (sale video (Drive clip))."
+   ],
+   "images": [
+    "media/2026-11-26/2026-11-26_1800_deal_1.jpg",
+    "media/2026-11-26/2026-11-26_1800_deal_2.jpg",
+    "media/2026-11-26/2026-11-26_1800_deal_3.jpg",
+    "media/2026-11-26/2026-11-26_1800_deal_4.jpg",
+    "media/2026-11-26/2026-11-26_1800_deal_5.jpg"
+   ],
+   "promo": "PureCyber",
+   "copy_text": "SUVs from US$85 a day 🚗\n\nHyundai Creta, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "SUVs for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Norman Manley International Airport",
+    "id": "583154638527853"
+   },
+   "caption": "SUVs from US$85 a day 🚗\n\nHyundai Creta, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nWhich stop would you hit first? Tell us below 👇 Then save this 🔖 and send it to who you're bringing to Jamaica.\n\nCar rental at Norman Manley Airport, Kingston | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#NormanManleyAirport #JamaicaRentalCar #DiscoverTheRealJamaica #TravelJamaica #JamaicaCarRental",
+   "beat_lines": [
+    "From US$85 a day",
+    "Hyundai Creta, Suzuki Vitara",
+    "A higher seat and more room for the family and the bags.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/2f6aba519bd39406.jpg"
+   ],
+   "_deal_k": 11,
+   "photo": {
+    "id": "local:arah_listing_189_1_2023-toyota-rav4",
+    "name": "arah_listing_189_1_2023-toyota-rav4",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending",
+   "reel_kind": "sale video (Drive clip)",
+   "reel": "media/2026-11-26/2026-11-26_1800_deal.mp4"
+  },
+  {
+   "id": "2026-11-26_2000_deal",
+   "date": "2026-11-26",
+   "slot": "2026-11-26T20:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: Duplicate swipe buttons in top right corner; Unfinished colored bar cropped at the bottom edge. Look closely before approving.",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar 7 seater shown for the Honda Stepwgn (same body style, from our fleet photos)",
+    "1 of 5 slides have photos",
+    "Goes out as a Reel (animated slideshow (dynamic))."
+   ],
+   "images": [
+    "media/2026-11-26/2026-11-26_2000_deal_1.jpg",
+    "media/2026-11-26/2026-11-26_2000_deal_2.jpg",
+    "media/2026-11-26/2026-11-26_2000_deal_3.jpg",
+    "media/2026-11-26/2026-11-26_2000_deal_4.jpg",
+    "media/2026-11-26/2026-11-26_2000_deal_5.jpg"
+   ],
+   "copy_text": "7-seaters from US$95 a day 🚗\n\nHonda Stepwgn, Toyota Wish, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "7-seaters for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
+   },
+   "caption": "7-seaters from US$95 a day 🚗\n\nHonda Stepwgn, Toyota Wish, Nissan X-Trail and more.\nDeposits from US$60. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#OchoRios #AirportPickupJamaica #RentJamaican #JamaicaRoadTrip #CarRentalJamaica",
+   "beat_lines": [
+    "From US$95 a day",
+    "Honda Stepwgn, Toyota Wish",
+    "Seats seven.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/d1f6662c147ea5d3.jpg"
+   ],
+   "_deal_k": 12,
+   "photo": {
+    "id": "local:arah_listing_187_2_2021-suzuki-xl7",
+    "name": "arah_listing_187_2_2021-suzuki-xl7",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending",
+   "reel_format": "POV",
+   "reel_kind": "animated slideshow (dynamic)",
+   "reel": "media/2026-11-26/2026-11-26_2000_deal.mp4"
   },
   {
    "id": "2026-11-26_2200_deal",
