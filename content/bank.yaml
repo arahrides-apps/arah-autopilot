@@ -554,6 +554,1006 @@ place:
   h1: Faith's Pen.
   h2: The road food stop.
   sub: Food stalls on the hill road between Kingston and Ocho Rios. Come hungry.
+- place: Hope Botanical Gardens
+  query: Hope Botanical Gardens Kingston Jamaica
+  h1: Hope Botanical Gardens.
+  h2: A walk in the garden.
+  sub: Bring the camera. Hope Botanical Gardens is a peaceful Kingston stop on your drive.
+- place: National Heroes Park
+  query: National Heroes Park Kingston Jamaica
+  h1: National Heroes Park.
+  h2: A walk in the garden.
+  sub: Bring the camera. National Heroes Park is a peaceful Kingston stop on your drive.
+- place: Maiden Cay
+  query: Maiden Cay Kingston Jamaica
+  h1: Maiden Cay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Maiden Cay, Kingston.
+- place: Fort Rocky
+  query: Fort Rocky Kingston Jamaica
+  h1: Fort Rocky.
+  h2: Jamaica's story, up close.
+  sub: Fort Rocky in Kingston. History you can walk through, on your own schedule.
+- place: Ward Theatre
+  query: Ward Theatre Kingston Jamaica
+  h1: Ward Theatre.
+  h2: Step back in time.
+  sub: A Kingston heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Holy Trinity Cathedral
+  query: Holy Trinity Cathedral Kingston Jamaica
+  h1: Holy Trinity Cathedral.
+  h2: Step back in time.
+  sub: A Kingston heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Coke Methodist Church
+  query: Coke Methodist Church Kingston Jamaica
+  h1: Coke Methodist Church.
+  h2: Worth the stop.
+  sub: 'Coke Methodist Church: one of Kingston''s stories, an easy add to your road trip.'
+- place: Hope Zoo
+  query: Hope Zoo Kingston Jamaica
+  h1: Hope Zoo.
+  h2: Slow down here.
+  sub: 'Hope Zoo, Kingston: an easy, green break between beach days.'
+- place: Rockfort Mineral Bath
+  query: Rockfort Mineral Bath Kingston Jamaica
+  h1: Rockfort Mineral Bath.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Rockfort Mineral Bath, Kingston.
+- place: Ferry River Cave
+  query: Ferry River Cave Kingston Jamaica
+  h1: Ferry River Cave.
+  h2: Go underground.
+  sub: A Kingston cave stop. Wear good shoes and bring a sense of adventure.
+- place: Skyline Drive
+  query: Skyline Drive Kingston Jamaica
+  h1: Skyline Drive.
+  h2: Views worth the climb.
+  sub: A Kingston hill drive. Go in the morning for clear skies.
+- place: Holywell National Park
+  query: Holywell National Park St. Andrew Jamaica
+  h1: Holywell National Park.
+  h2: Views worth the climb.
+  sub: A St. Andrew hill drive. Go in the morning for clear skies.
+- place: Cinchona Botanical Gardens
+  query: Cinchona Botanical Gardens St. Andrew Jamaica
+  h1: Cinchona Botanical Gardens.
+  h2: A walk in the garden.
+  sub: Bring the camera. Cinchona Botanical Gardens is a peaceful St. Andrew stop on your drive.
+- place: Wag Water River
+  query: Wag Water River St. Andrew Jamaica
+  h1: Wag Water River.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Wag Water River, St. Andrew.
+- place: Red Light District mountain viewpoints
+  query: Red Light District mountain viewpoints St. Andrew Jamaica
+  h1: Red Light District mountain viewpoints.
+  h2: Up in the hills.
+  sub: Red Light District mountain viewpoints in St. Andrew. Cooler air and big views. Take your time on the bends.
+- place: Dallas Castle
+  query: Dallas Castle St. Andrew Jamaica
+  h1: Dallas Castle.
+  h2: Step back in time.
+  sub: A St. Andrew heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Cane River Park
+  query: Cane River Park St. Andrew Jamaica
+  h1: Cane River Park.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Cane River Park, St. Andrew.
+- place: Blue Mountain coffee farms
+  query: Blue Mountain coffee farms St. Andrew Jamaica
+  h1: Blue Mountain coffee farms.
+  h2: Views worth the climb.
+  sub: A St. Andrew hill drive. Go in the morning for clear skies.
+- place: Papine Market
+  query: Papine Market St. Andrew Jamaica
+  h1: Papine Market.
+  h2: Road trip fuel.
+  sub: 'Papine Market: real Jamaican food in St. Andrew, easy to reach with your own car.'
+- place: Gordon Town Mineral Spring
+  query: Gordon Town Mineral Spring St. Andrew Jamaica
+  h1: Gordon Town Mineral Spring.
+  h2: Take a dip.
+  sub: 'Gordon Town Mineral Spring in St. Andrew: fresh water and shade, a short drive off the main road.'
+- place: Portland Gap hiking area
+  query: Portland Gap hiking area St. Andrew Jamaica
+  h1: Portland Gap hiking area.
+  h2: Cool air, wide views.
+  sub: 'Portland Gap hiking area: the other side of Jamaica, up in St. Andrew. Bring a light jacket.'
+- place: Reggae Falls
+  query: Reggae Falls St. Thomas Jamaica
+  h1: Reggae Falls.
+  h2: Cool off in St. Thomas.
+  sub: 'Reggae Falls: cold water and green views, an easy drive with your own car.'
+- place: Bath Fountain and Mineral Spa
+  query: Bath Fountain and Mineral Spa St. Thomas Jamaica
+  h1: Bath Fountain and Mineral Spa.
+  h2: Cool water, green banks.
+  sub: A St. Thomas river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Bath Botanical Gardens
+  query: Bath Botanical Gardens St. Thomas Jamaica
+  h1: Bath Botanical Gardens.
+  h2: Green, calm, beautiful.
+  sub: Bath Botanical Gardens in St. Thomas. Flowers, shade and quiet. A slow morning with your own car.
+- place: Morant Bay Courthouse
+  query: Morant Bay Courthouse St. Thomas Jamaica
+  h1: Morant Bay Courthouse.
+  h2: Jamaica's story, up close.
+  sub: Morant Bay Courthouse in St. Thomas. History you can walk through, on your own schedule.
+- place: Lyssons Beach
+  query: Lyssons Beach St. Thomas Jamaica
+  h1: Lyssons Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Lyssons Beach is an easy day out in St. Thomas with your own car.
+- place: Holland Bay
+  query: Holland Bay St. Thomas Jamaica
+  h1: Holland Bay.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Holland Bay is an easy day out in St. Thomas with your own car.
+- place: Yallahs Salt Ponds
+  query: Yallahs Salt Ponds St. Thomas Jamaica
+  h1: Yallahs Salt Ponds.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Yallahs Salt Ponds, St. Thomas.
+- place: Prospect Beach
+  query: Prospect Beach St. Thomas Jamaica
+  h1: Prospect Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Thomas beach worth the drive. Pick up your car and make a day of it.
+- place: Albion Mountain scenery
+  query: Albion Mountain scenery St. Thomas Jamaica
+  h1: Albion Mountain scenery.
+  h2: Up in the hills.
+  sub: Albion Mountain scenery in St. Thomas. Cooler air and big views. Take your time on the bends.
+- place: Plantain Garden River
+  query: Plantain Garden River St. Thomas Jamaica
+  h1: Plantain Garden River.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Plantain Garden River, St. Thomas.
+- place: Potosi Springs
+  query: Potosi Springs St. Thomas Jamaica
+  h1: Potosi Springs.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Potosi Springs, St. Thomas.
+- place: Morant Point Lighthouse
+  query: Morant Point Lighthouse St. Thomas Jamaica
+  h1: Morant Point Lighthouse.
+  h2: End of the road views.
+  sub: 'Morant Point Lighthouse: a St. Thomas landmark on your coastal drive.'
+- place: Hector's River
+  query: Hector's River St. Thomas Jamaica
+  h1: Hector's River.
+  h2: Cool water, green banks.
+  sub: A St. Thomas river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Banana River Cave
+  query: Banana River Cave St. Thomas Jamaica
+  h1: Banana River Cave.
+  h2: Go underground.
+  sub: A St. Thomas cave stop. Wear good shoes and bring a sense of adventure.
+- place: Rio Grande Rafting
+  query: Rio Grande Rafting Portland Jamaica
+  h1: Rio Grande Rafting.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Rio Grande Rafting, Portland.
+- place: Boston Beach
+  query: Boston Beach Portland Jamaica
+  h1: Boston Beach.
+  h2: Sand, sea, your pace.
+  sub: A Portland beach worth the drive. Pick up your car and make a day of it.
+- place: Nonsuch Caves
+  query: Nonsuch Caves Portland Jamaica
+  h1: Nonsuch Caves.
+  h2: Into the cool dark.
+  sub: Nonsuch Caves in Portland. A cave visit is a different kind of Jamaica day.
+- place: Nonsuch Falls
+  query: Nonsuch Falls Portland Jamaica
+  h1: Nonsuch Falls.
+  h2: Hear it before you see it.
+  sub: Nonsuch Falls in Portland. Climb, swim or just look. Drive there on your own time.
+- place: Turtle Bay
+  query: Turtle Bay Portland Jamaica
+  h1: Turtle Bay.
+  h2: Sand, sea, your pace.
+  sub: A Portland beach worth the drive. Pick up your car and make a day of it.
+- place: Fairy Hill Beach
+  query: Fairy Hill Beach Portland Jamaica
+  h1: Fairy Hill Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Fairy Hill Beach, Portland.
+- place: Long Bay Beach
+  query: Long Bay Beach Portland Jamaica
+  h1: Long Bay Beach.
+  h2: Sand, sea, your pace.
+  sub: A Portland beach worth the drive. Pick up your car and make a day of it.
+- place: Norwich Public Beach
+  query: Norwich Public Beach Portland Jamaica
+  h1: Norwich Public Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Norwich Public Beach, Portland.
+- place: Folly Point Lighthouse
+  query: Folly Point Lighthouse Portland Jamaica
+  h1: Folly Point Lighthouse.
+  h2: Coast views from the top.
+  sub: Folly Point Lighthouse in Portland. A short stop with long views over the sea.
+- place: San San Lagoon
+  query: San San Lagoon Portland Jamaica
+  h1: San San Lagoon.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. San San Lagoon, Portland.
+- place: Moore Town Maroon community
+  query: Moore Town Maroon community Portland Jamaica
+  h1: Moore Town Maroon community.
+  h2: Step back in time.
+  sub: A Portland heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Charles Town Maroon community
+  query: Charles Town Maroon community Portland Jamaica
+  h1: Charles Town Maroon community.
+  h2: Step back in time.
+  sub: A Portland heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Buff Bay
+  query: Buff Bay Portland Jamaica
+  h1: Buff Bay.
+  h2: Sand, sea, your pace.
+  sub: A Portland beach worth the drive. Pick up your car and make a day of it.
+- place: Rio Grande Valley viewpoints
+  query: Rio Grande Valley viewpoints Portland Jamaica
+  h1: Rio Grande Valley viewpoints.
+  h2: Up in the hills.
+  sub: Rio Grande Valley viewpoints in Portland. Cooler air and big views. Take your time on the bends.
+- place: Blue Mountains coffee farms
+  query: Blue Mountains coffee farms Portland Jamaica
+  h1: Blue Mountains coffee farms.
+  h2: Cool air, wide views.
+  sub: 'Blue Mountains coffee farms: the other side of Jamaica, up in Portland. Bring a light jacket.'
+- place: White River
+  query: White River St. Mary Jamaica
+  h1: White River.
+  h2: Take a dip.
+  sub: 'White River in St. Mary: fresh water and shade, a short drive off the main road.'
+- place: GoldenEye
+  query: GoldenEye St. Mary Jamaica
+  h1: GoldenEye.
+  h2: Slow down here.
+  sub: 'GoldenEye, St. Mary: an easy, green break between beach days.'
+- place: Cranbrook Flower Forest
+  query: Cranbrook Flower Forest St. Mary Jamaica
+  h1: Cranbrook Flower Forest.
+  h2: Slow down here.
+  sub: 'Cranbrook Flower Forest, St. Mary: an easy, green break between beach days.'
+- place: Castleton Botanical Gardens
+  query: Castleton Botanical Gardens St. Mary Jamaica
+  h1: Castleton Botanical Gardens.
+  h2: Green, calm, beautiful.
+  sub: Castleton Botanical Gardens in St. Mary. Flowers, shade and quiet. A slow morning with your own car.
+- place: Robin's Bay
+  query: Robin's Bay St. Mary Jamaica
+  h1: Robin's Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Robin's Bay, St. Mary.
+- place: Pagee Beach
+  query: Pagee Beach St. Mary Jamaica
+  h1: Pagee Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Pagee Beach is an easy day out in St. Mary with your own car.
+- place: Galina Lighthouse
+  query: Galina Lighthouse St. Mary Jamaica
+  h1: Galina Lighthouse.
+  h2: End of the road views.
+  sub: 'Galina Lighthouse: a St. Mary landmark on your coastal drive.'
+- place: Annotto Bay
+  query: Annotto Bay St. Mary Jamaica
+  h1: Annotto Bay.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Annotto Bay is an easy day out in St. Mary with your own car.
+- place: Fort Haldane
+  query: Fort Haldane St. Mary Jamaica
+  h1: Fort Haldane.
+  h2: Jamaica's story, up close.
+  sub: Fort Haldane in St. Mary. History you can walk through, on your own schedule.
+- place: Oracabessa Fish Sanctuary
+  query: Oracabessa Fish Sanctuary St. Mary Jamaica
+  h1: Oracabessa Fish Sanctuary.
+  h2: Green, calm, beautiful.
+  sub: Oracabessa Fish Sanctuary in St. Mary. Flowers, shade and quiet. A slow morning with your own car.
+- place: Boscobel Beach
+  query: Boscobel Beach St. Mary Jamaica
+  h1: Boscobel Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Mary beach worth the drive. Pick up your car and make a day of it.
+- place: White River Valley
+  query: White River Valley St. Mary Jamaica
+  h1: White River Valley.
+  h2: Take a dip.
+  sub: 'White River Valley in St. Mary: fresh water and shade, a short drive off the main road.'
+- place: Castleton River
+  query: Castleton River St. Mary Jamaica
+  h1: Castleton River.
+  h2: Cool water, green banks.
+  sub: A St. Mary river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Port Maria heritage buildings
+  query: Port Maria heritage buildings St. Mary Jamaica
+  h1: Port Maria heritage buildings.
+  h2: Step back in time.
+  sub: A St. Mary heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Athenry Gardens
+  query: Athenry Gardens St. Mary Jamaica
+  h1: Athenry Gardens.
+  h2: Slow down here.
+  sub: 'Athenry Gardens, St. Mary: an easy, green break between beach days.'
+- place: Mystic Mountain
+  query: Mystic Mountain St. Ann Jamaica
+  h1: Mystic Mountain.
+  h2: Cool air, wide views.
+  sub: 'Mystic Mountain: the other side of Jamaica, up in St. Ann. Bring a light jacket.'
+- place: Dolphin Cove
+  query: Dolphin Cove St. Ann Jamaica
+  h1: Dolphin Cove.
+  h2: Big day out.
+  sub: A St. Ann adventure stop. Go early and make a day of it.
+- place: Konoko Falls
+  query: Konoko Falls St. Ann Jamaica
+  h1: Konoko Falls.
+  h2: Hear it before you see it.
+  sub: Konoko Falls in St. Ann. Climb, swim or just look. Drive there on your own time.
+- place: Seville Heritage Park
+  query: Seville Heritage Park St. Ann Jamaica
+  h1: Seville Heritage Park.
+  h2: Worth the stop.
+  sub: 'Seville Heritage Park: one of St. Ann''s stories, an easy add to your road trip.'
+- place: Nine Mile Bob Marley Mausoleum
+  query: Nine Mile Bob Marley Mausoleum St. Ann Jamaica
+  h1: Nine Mile Bob Marley Mausoleum.
+  h2: Worth the stop.
+  sub: 'Nine Mile Bob Marley Mausoleum: one of St. Ann''s stories, an easy add to your road trip.'
+- place: Puerto Seco Beach
+  query: Puerto Seco Beach St. Ann Jamaica
+  h1: Puerto Seco Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Puerto Seco Beach, St. Ann.
+- place: Shaw Park Gardens
+  query: Shaw Park Gardens St. Ann Jamaica
+  h1: Shaw Park Gardens.
+  h2: A walk in the garden.
+  sub: Bring the camera. Shaw Park Gardens is a peaceful St. Ann stop on your drive.
+- place: Turtle River Falls and Gardens
+  query: Turtle River Falls and Gardens St. Ann Jamaica
+  h1: Turtle River Falls and Gardens.
+  h2: Hear it before you see it.
+  sub: Turtle River Falls and Gardens in St. Ann. Climb, swim or just look. Drive there on your own time.
+- place: Little Dunn's River Beach
+  query: Little Dunn's River Beach St. Ann Jamaica
+  h1: Little Dunn's River Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Ann beach worth the drive. Pick up your car and make a day of it.
+- place: Reggae Beach
+  query: Reggae Beach St. Ann Jamaica
+  h1: Reggae Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Ann beach worth the drive. Pick up your car and make a day of it.
+- place: Cardiff Hall Beach
+  query: Cardiff Hall Beach St. Ann Jamaica
+  h1: Cardiff Hall Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Ann beach worth the drive. Pick up your car and make a day of it.
+- place: Priory Beach
+  query: Priory Beach St. Ann Jamaica
+  h1: Priory Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Priory Beach is an easy day out in St. Ann with your own car.
+- place: Salem Beach
+  query: Salem Beach St. Ann Jamaica
+  h1: Salem Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Ann beach worth the drive. Pick up your car and make a day of it.
+- place: Runaway Bay Beach
+  query: Runaway Bay Beach St. Ann Jamaica
+  h1: Runaway Bay Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Runaway Bay Beach, St. Ann.
+- place: Chukka Cove
+  query: Chukka Cove St. Ann Jamaica
+  h1: Chukka Cove.
+  h2: Try something new.
+  sub: 'Chukka Cove, St. Ann: thrills first, then lunch on the way back.'
+- place: Cranbrook River
+  query: Cranbrook River St. Ann Jamaica
+  h1: Cranbrook River.
+  h2: Take a dip.
+  sub: 'Cranbrook River in St. Ann: fresh water and shade, a short drive off the main road.'
+- place: White River Valley swimming areas
+  query: White River Valley swimming areas St. Ann Jamaica
+  h1: White River Valley swimming areas.
+  h2: Cool water, green banks.
+  sub: A St. Ann river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Discovery Bay historical sites
+  query: Discovery Bay historical sites St. Ann Jamaica
+  h1: Discovery Bay historical sites.
+  h2: Jamaica's story, up close.
+  sub: Discovery Bay historical sites in St. Ann. History you can walk through, on your own schedule.
+- place: 32 Market Street heritage site
+  query: 32 Market Street heritage site St. Ann Jamaica
+  h1: 32 Market Street heritage site.
+  h2: Jamaica's story, up close.
+  sub: 32 Market Street heritage site in St. Ann. History you can walk through, on your own schedule.
+- place: Marcus Garvey birthplace area
+  query: Marcus Garvey birthplace area St. Ann Jamaica
+  h1: Marcus Garvey birthplace area.
+  h2: Worth the stop.
+  sub: 'Marcus Garvey birthplace area: one of St. Ann''s stories, an easy add to your road trip.'
+- place: Shaw Park lookout points
+  query: Shaw Park lookout points St. Ann Jamaica
+  h1: Shaw Park lookout points.
+  h2: Views worth the climb.
+  sub: A St. Ann hill drive. Go in the morning for clear skies.
+- place: Martha Brae River Rafting
+  query: Martha Brae River Rafting Trelawny Jamaica
+  h1: Martha Brae River Rafting.
+  h2: Take a dip.
+  sub: 'Martha Brae River Rafting in Trelawny: fresh water and shade, a short drive off the main road.'
+- place: Glistening Waters Luminous Lagoon
+  query: Glistening Waters Luminous Lagoon Trelawny Jamaica
+  h1: Glistening Waters Luminous Lagoon.
+  h2: Cool water, green banks.
+  sub: A Trelawny river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Good Hope Estate
+  query: Good Hope Estate Trelawny Jamaica
+  h1: Good Hope Estate.
+  h2: Slow down here.
+  sub: 'Good Hope Estate, Trelawny: an easy, green break between beach days.'
+- place: Falmouth Historic District
+  query: Falmouth Historic District Trelawny Jamaica
+  h1: Falmouth Historic District.
+  h2: Step back in time.
+  sub: A Trelawny heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Bengal Beach
+  query: Bengal Beach Trelawny Jamaica
+  h1: Bengal Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Bengal Beach, Trelawny.
+- place: Greenwood Great House
+  query: Greenwood Great House Trelawny Jamaica
+  h1: Greenwood Great House.
+  h2: Worth the stop.
+  sub: 'Greenwood Great House: one of Trelawny''s stories, an easy add to your road trip.'
+- place: Silver Sands Beach
+  query: Silver Sands Beach Trelawny Jamaica
+  h1: Silver Sands Beach.
+  h2: Sand, sea, your pace.
+  sub: A Trelawny beach worth the drive. Pick up your car and make a day of it.
+- place: Duncans Bay
+  query: Duncans Bay Trelawny Jamaica
+  h1: Duncans Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Duncans Bay, Trelawny.
+- place: Coral Spring
+  query: Coral Spring Trelawny Jamaica
+  h1: Coral Spring.
+  h2: Cool water, green banks.
+  sub: A Trelawny river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Bengal Bay
+  query: Bengal Bay Trelawny Jamaica
+  h1: Bengal Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Bengal Bay, Trelawny.
+- place: Hampden Estate
+  query: Hampden Estate Trelawny Jamaica
+  h1: Hampden Estate.
+  h2: A walk in the garden.
+  sub: Bring the camera. Hampden Estate is a peaceful Trelawny stop on your drive.
+- place: Luminous Lagoon shoreline
+  query: Luminous Lagoon shoreline Trelawny Jamaica
+  h1: Luminous Lagoon shoreline.
+  h2: Take a dip.
+  sub: 'Luminous Lagoon shoreline in Trelawny: fresh water and shade, a short drive off the main road.'
+- place: Windsor Cave
+  query: Windsor Cave Trelawny Jamaica
+  h1: Windsor Cave.
+  h2: Hidden Jamaica.
+  sub: 'Windsor Cave, Trelawny: worth the drive for something different.'
+- place: White Cave
+  query: White Cave Trelawny Jamaica
+  h1: White Cave.
+  h2: Go underground.
+  sub: A Trelawny cave stop. Wear good shoes and bring a sense of adventure.
+- place: Maroon Town
+  query: Maroon Town Trelawny Jamaica
+  h1: Maroon Town.
+  h2: Worth the stop.
+  sub: 'Maroon Town: one of Trelawny''s stories, an easy add to your road trip.'
+- place: Historic Falmouth buildings and Georgian architecture
+  query: Historic Falmouth buildings and Georgian architecture Trelawny Jamaica
+  h1: Historic Falmouth buildings and Georgian architecture.
+  h2: Jamaica's story, up close.
+  sub: Historic Falmouth buildings and Georgian architecture in Trelawny. History you can walk through, on your own schedule.
+- place: Rose Hall Great House
+  query: Rose Hall Great House St. James Jamaica
+  h1: Rose Hall Great House.
+  h2: Jamaica's story, up close.
+  sub: Rose Hall Great House in St. James. History you can walk through, on your own schedule.
+- place: Martha Brae and Great River excursions
+  query: Martha Brae and Great River excursions St. James Jamaica
+  h1: Martha Brae and Great River excursions.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Martha Brae and Great River excursions, St. James.
+- place: Rocklands Bird Sanctuary
+  query: Rocklands Bird Sanctuary St. James Jamaica
+  h1: Rocklands Bird Sanctuary.
+  h2: Green, calm, beautiful.
+  sub: Rocklands Bird Sanctuary in St. James. Flowers, shade and quiet. A slow morning with your own car.
+- place: Ahhh…Ras Natango Gallery and Garden
+  query: Ahhh…Ras Natango Gallery and Garden St. James Jamaica
+  h1: Ahhh…Ras Natango Gallery and Garden.
+  h2: Slow down here.
+  sub: 'Ahhh…Ras Natango Gallery and Garden, St. James: an easy, green break between beach days.'
+- place: Montego Bay Marine Park
+  query: Montego Bay Marine Park St. James Jamaica
+  h1: Montego Bay Marine Park.
+  h2: Try something new.
+  sub: 'Montego Bay Marine Park, St. James: thrills first, then lunch on the way back.'
+- place: Sam Sharpe Square
+  query: Sam Sharpe Square St. James Jamaica
+  h1: Sam Sharpe Square.
+  h2: Worth the stop.
+  sub: 'Sam Sharpe Square: one of St. James''s stories, an easy add to your road trip.'
+- place: Bellefield Great House
+  query: Bellefield Great House St. James Jamaica
+  h1: Bellefield Great House.
+  h2: Step back in time.
+  sub: A St. James heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Montego Bay Cultural Centre
+  query: Montego Bay Cultural Centre St. James Jamaica
+  h1: Montego Bay Cultural Centre.
+  h2: Step back in time.
+  sub: A St. James heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Dead End Beach
+  query: Dead End Beach St. James Jamaica
+  h1: Dead End Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Dead End Beach, St. James.
+- place: Walter Fletcher Beach
+  query: Walter Fletcher Beach St. James Jamaica
+  h1: Walter Fletcher Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Walter Fletcher Beach, St. James.
+- place: Harmony Beach Park
+  query: Harmony Beach Park St. James Jamaica
+  h1: Harmony Beach Park.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Harmony Beach Park, St. James.
+- place: Dump-Up Beach and Events Park
+  query: Dump-Up Beach and Events Park St. James Jamaica
+  h1: Dump-Up Beach and Events Park.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Dump-Up Beach and Events Park is an easy day out in St. James with your own car.
+- place: One Man Beach
+  query: One Man Beach St. James Jamaica
+  h1: One Man Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. One Man Beach, St. James.
+- place: Tropical Bliss Beach
+  query: Tropical Bliss Beach St. James Jamaica
+  h1: Tropical Bliss Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Tropical Bliss Beach is an easy day out in St. James with your own car.
+- place: Reading Beach
+  query: Reading Beach St. James Jamaica
+  h1: Reading Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Reading Beach, St. James.
+- place: Montpelier Jungle Outpost
+  query: Montpelier Jungle Outpost St. James Jamaica
+  h1: Montpelier Jungle Outpost.
+  h2: Big day out.
+  sub: A St. James adventure stop. Go early and make a day of it.
+- place: Lethe River
+  query: Lethe River St. James Jamaica
+  h1: Lethe River.
+  h2: Take a dip.
+  sub: 'Lethe River in St. James: fresh water and shade, a short drive off the main road.'
+- place: Great River rafting
+  query: Great River rafting St. James Jamaica
+  h1: Great River rafting.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Great River rafting, St. James.
+- place: Barry Cave
+  query: Barry Cave St. James Jamaica
+  h1: Barry Cave.
+  h2: Into the cool dark.
+  sub: Barry Cave in St. James. A cave visit is a different kind of Jamaica day.
+- place: Barnett Estate historic areas
+  query: Barnett Estate historic areas St. James Jamaica
+  h1: Barnett Estate historic areas.
+  h2: Step back in time.
+  sub: A St. James heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Fort Charlotte
+  query: Fort Charlotte Hanover Jamaica
+  h1: Fort Charlotte.
+  h2: Worth the stop.
+  sub: 'Fort Charlotte: one of Hanover''s stories, an easy add to your road trip.'
+- place: Half Moon Beach
+  query: Half Moon Beach Hanover Jamaica
+  h1: Half Moon Beach.
+  h2: Sand, sea, your pace.
+  sub: A Hanover beach worth the drive. Pick up your car and make a day of it.
+- place: Bloody Bay
+  query: Bloody Bay Hanover Jamaica
+  h1: Bloody Bay.
+  h2: Sand, sea, your pace.
+  sub: A Hanover beach worth the drive. Pick up your car and make a day of it.
+- place: Lucea Clock Tower
+  query: Lucea Clock Tower Hanover Jamaica
+  h1: Lucea Clock Tower.
+  h2: Jamaica's story, up close.
+  sub: Lucea Clock Tower in Hanover. History you can walk through, on your own schedule.
+- place: Blenheim Birthplace of Alexander Bustamante
+  query: Blenheim Birthplace of Alexander Bustamante Hanover Jamaica
+  h1: Blenheim Birthplace of Alexander Bustamante.
+  h2: Step back in time.
+  sub: A Hanover heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Dolphin Head Mountain
+  query: Dolphin Head Mountain Hanover Jamaica
+  h1: Dolphin Head Mountain.
+  h2: Cool air, wide views.
+  sub: 'Dolphin Head Mountain: the other side of Jamaica, up in Hanover. Bring a light jacket.'
+- place: Orange Bay
+  query: Orange Bay Hanover Jamaica
+  h1: Orange Bay.
+  h2: Sand, sea, your pace.
+  sub: A Hanover beach worth the drive. Pick up your car and make a day of it.
+- place: Sandy Bay
+  query: Sandy Bay Hanover Jamaica
+  h1: Sandy Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Sandy Bay, Hanover.
+- place: Cousins Cove
+  query: Cousins Cove Hanover Jamaica
+  h1: Cousins Cove.
+  h2: Sand, sea, your pace.
+  sub: A Hanover beach worth the drive. Pick up your car and make a day of it.
+- place: Flint River
+  query: Flint River Hanover Jamaica
+  h1: Flint River.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Flint River, Hanover.
+- place: Rejoin Cave
+  query: Rejoin Cave Hanover Jamaica
+  h1: Rejoin Cave.
+  h2: Hidden Jamaica.
+  sub: 'Rejoin Cave, Hanover: worth the drive for something different.'
+- place: Mosquito Cove
+  query: Mosquito Cove Hanover Jamaica
+  h1: Mosquito Cove.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Mosquito Cove, Hanover.
+- place: Little Bay
+  query: Little Bay Hanover Jamaica
+  h1: Little Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Little Bay, Hanover.
+- place: Round Hill coastal scenery
+  query: Round Hill coastal scenery Hanover Jamaica
+  h1: Round Hill coastal scenery.
+  h2: Cool air, wide views.
+  sub: 'Round Hill coastal scenery: the other side of Jamaica, up in Hanover. Bring a light jacket.'
+- place: Negril Lighthouse
+  query: Negril Lighthouse Westmoreland Jamaica
+  h1: Negril Lighthouse.
+  h2: End of the road views.
+  sub: 'Negril Lighthouse: a Westmoreland landmark on your coastal drive.'
+- place: Roaring River and Blue Hole
+  query: Roaring River and Blue Hole Westmoreland Jamaica
+  h1: Roaring River and Blue Hole.
+  h2: Cool water, green banks.
+  sub: A Westmoreland river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Peter Tosh Memorial
+  query: Peter Tosh Memorial Westmoreland Jamaica
+  h1: Peter Tosh Memorial.
+  h2: Step back in time.
+  sub: A Westmoreland heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Savanna-la-Mar
+  query: Savanna-la-Mar Westmoreland Jamaica
+  h1: Savanna-la-Mar.
+  h2: Step back in time.
+  sub: A Westmoreland heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Bluefields Bay
+  query: Bluefields Bay Westmoreland Jamaica
+  h1: Bluefields Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Bluefields Bay, Westmoreland.
+- place: Paradise Park
+  query: Paradise Park Westmoreland Jamaica
+  h1: Paradise Park.
+  h2: A walk in the garden.
+  sub: Bring the camera. Paradise Park is a peaceful Westmoreland stop on your drive.
+- place: Belmont Beach
+  query: Belmont Beach Westmoreland Jamaica
+  h1: Belmont Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Belmont Beach is an easy day out in Westmoreland with your own car.
+- place: Negril Royal Palm Reserve
+  query: Negril Royal Palm Reserve Westmoreland Jamaica
+  h1: Negril Royal Palm Reserve.
+  h2: Green, calm, beautiful.
+  sub: Negril Royal Palm Reserve in Westmoreland. Flowers, shade and quiet. A slow morning with your own car.
+- place: Cabarita River
+  query: Cabarita River Westmoreland Jamaica
+  h1: Cabarita River.
+  h2: Take a dip.
+  sub: 'Cabarita River in Westmoreland: fresh water and shade, a short drive off the main road.'
+- place: Roaring River Cave
+  query: Roaring River Cave Westmoreland Jamaica
+  h1: Roaring River Cave.
+  h2: Go underground.
+  sub: A Westmoreland cave stop. Wear good shoes and bring a sense of adventure.
+- place: Negril Great Morass
+  query: Negril Great Morass Westmoreland Jamaica
+  h1: Negril Great Morass.
+  h2: Cool water, green banks.
+  sub: A Westmoreland river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Morgan's Bridge
+  query: Morgan's Bridge Westmoreland Jamaica
+  h1: Morgan's Bridge.
+  h2: Up in the hills.
+  sub: Morgan's Bridge in Westmoreland. Cooler air and big views. Take your time on the bends.
+- place: Black River Safari
+  query: Black River Safari St. Elizabeth Jamaica
+  h1: Black River Safari.
+  h2: Cool water, green banks.
+  sub: A St. Elizabeth river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Appleton Estate Rum Experience
+  query: Appleton Estate Rum Experience St. Elizabeth Jamaica
+  h1: Appleton Estate Rum Experience.
+  h2: A walk in the garden.
+  sub: Bring the camera. Appleton Estate Rum Experience is a peaceful St. Elizabeth stop on your drive.
+- place: Floyd's Pelican Bar
+  query: Floyd's Pelican Bar St. Elizabeth Jamaica
+  h1: Floyd's Pelican Bar.
+  h2: Worth the detour.
+  sub: A St. Elizabeth food stop. Pull over, eat well, keep driving.
+- place: Accompong Maroon Village
+  query: Accompong Maroon Village St. Elizabeth Jamaica
+  h1: Accompong Maroon Village.
+  h2: Step back in time.
+  sub: A St. Elizabeth heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Parottee Beach
+  query: Parottee Beach St. Elizabeth Jamaica
+  h1: Parottee Beach.
+  h2: Sand, sea, your pace.
+  sub: A St. Elizabeth beach worth the drive. Pick up your car and make a day of it.
+- place: Billy's Bay
+  query: Billy's Bay St. Elizabeth Jamaica
+  h1: Billy's Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Billy's Bay, St. Elizabeth.
+- place: Frenchman's Bay
+  query: Frenchman's Bay St. Elizabeth Jamaica
+  h1: Frenchman's Bay.
+  h2: Sand, sea, your pace.
+  sub: A St. Elizabeth beach worth the drive. Pick up your car and make a day of it.
+- place: Calabash Bay
+  query: Calabash Bay St. Elizabeth Jamaica
+  h1: Calabash Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Calabash Bay, St. Elizabeth.
+- place: Great Bay
+  query: Great Bay St. Elizabeth Jamaica
+  h1: Great Bay.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Great Bay is an easy day out in St. Elizabeth with your own car.
+- place: Jack Sprat Beach
+  query: Jack Sprat Beach St. Elizabeth Jamaica
+  h1: Jack Sprat Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Jack Sprat Beach is an easy day out in St. Elizabeth with your own car.
+- place: Wallingford Main Cave
+  query: Wallingford Main Cave St. Elizabeth Jamaica
+  h1: Wallingford Main Cave.
+  h2: Go underground.
+  sub: A St. Elizabeth cave stop. Wear good shoes and bring a sense of adventure.
+- place: Apple Valley Park
+  query: Apple Valley Park St. Elizabeth Jamaica
+  h1: Apple Valley Park.
+  h2: A walk in the garden.
+  sub: Bring the camera. Apple Valley Park is a peaceful St. Elizabeth stop on your drive.
+- place: Black River historic town and waterfront
+  query: Black River historic town and waterfront St. Elizabeth Jamaica
+  h1: Black River historic town and waterfront.
+  h2: Take a dip.
+  sub: 'Black River historic town and waterfront in St. Elizabeth: fresh water and shade, a short drive off the main road.'
+- place: The Black River Great Morass
+  query: The Black River Great Morass St. Elizabeth Jamaica
+  h1: The Black River Great Morass.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. The Black River Great Morass, St. Elizabeth.
+- place: Cecil Charlton Park
+  query: Cecil Charlton Park Manchester Jamaica
+  h1: Cecil Charlton Park.
+  h2: Green, calm, beautiful.
+  sub: Cecil Charlton Park in Manchester. Flowers, shade and quiet. A slow morning with your own car.
+- place: Marshall's Pen Great House
+  query: Marshall's Pen Great House Manchester Jamaica
+  h1: Marshall's Pen Great House.
+  h2: Jamaica's story, up close.
+  sub: Marshall's Pen Great House in Manchester. History you can walk through, on your own schedule.
+- place: Roxborough
+  query: Roxborough Manchester Jamaica
+  h1: Roxborough.
+  h2: Jamaica's story, up close.
+  sub: Roxborough in Manchester. History you can walk through, on your own schedule.
+- place: Spur Tree Hill viewpoint
+  query: Spur Tree Hill viewpoint Manchester Jamaica
+  h1: Spur Tree Hill viewpoint.
+  h2: Up in the hills.
+  sub: Spur Tree Hill viewpoint in Manchester. Cooler air and big views. Take your time on the bends.
+- place: Manchester Parish Church
+  query: Manchester Parish Church Manchester Jamaica
+  h1: Manchester Parish Church.
+  h2: Step back in time.
+  sub: A Manchester heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Milk River Mineral Bath
+  query: Milk River Mineral Bath Clarendon Jamaica
+  h1: Milk River Mineral Bath.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Milk River Mineral Bath, Clarendon.
+- place: Portland Ridge
+  query: Portland Ridge Clarendon Jamaica
+  h1: Portland Ridge.
+  h2: Views worth the climb.
+  sub: A Clarendon hill drive. Go in the morning for clear skies.
+- place: Halse Hall Great House
+  query: Halse Hall Great House Clarendon Jamaica
+  h1: Halse Hall Great House.
+  h2: Worth the stop.
+  sub: 'Halse Hall Great House: one of Clarendon''s stories, an easy add to your road trip.'
+- place: Jackson Bay
+  query: Jackson Bay Clarendon Jamaica
+  h1: Jackson Bay.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Jackson Bay is an easy day out in Clarendon with your own car.
+- place: Salt River
+  query: Salt River Clarendon Jamaica
+  h1: Salt River.
+  h2: Cool water, green banks.
+  sub: A Clarendon river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Longville Park
+  query: Longville Park Clarendon Jamaica
+  h1: Longville Park.
+  h2: Slow down here.
+  sub: 'Longville Park, Clarendon: an easy, green break between beach days.'
+- place: Milk River waterfront
+  query: Milk River waterfront Clarendon Jamaica
+  h1: Milk River waterfront.
+  h2: Cool water, green banks.
+  sub: A Clarendon river stop for a slow afternoon. Drive in, cool off, drive on.
+- place: Salt River mineral springs
+  query: Salt River mineral springs Clarendon Jamaica
+  h1: Salt River mineral springs.
+  h2: Take a dip.
+  sub: 'Salt River mineral springs in Clarendon: fresh water and shade, a short drive off the main road.'
+- place: White Goat Cave
+  query: White Goat Cave Clarendon Jamaica
+  h1: White Goat Cave.
+  h2: Go underground.
+  sub: A Clarendon cave stop. Wear good shoes and bring a sense of adventure.
+- place: Mason River Protected Area
+  query: Mason River Protected Area Clarendon Jamaica
+  h1: Mason River Protected Area.
+  h2: River day, your way.
+  sub: Bring your swimsuit and go when you are ready. Mason River Protected Area, Clarendon.
+- place: Spanish Town Historic District
+  query: Spanish Town Historic District St. Catherine Jamaica
+  h1: Spanish Town Historic District.
+  h2: Worth the stop.
+  sub: 'Spanish Town Historic District: one of St. Catherine''s stories, an easy add to your road trip.'
+- place: Emancipation Square
+  query: Emancipation Square St. Catherine Jamaica
+  h1: Emancipation Square.
+  h2: Worth the stop.
+  sub: 'Emancipation Square: one of St. Catherine''s stories, an easy add to your road trip.'
+- place: Old King's House
+  query: Old King's House St. Catherine Jamaica
+  h1: Old King's House.
+  h2: Jamaica's story, up close.
+  sub: Old King's House in St. Catherine. History you can walk through, on your own schedule.
+- place: Hellshire Beach
+  query: Hellshire Beach St. Catherine Jamaica
+  h1: Hellshire Beach.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Hellshire Beach, St. Catherine.
+- place: Fort Clarence Beach
+  query: Fort Clarence Beach St. Catherine Jamaica
+  h1: Fort Clarence Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Fort Clarence Beach is an easy day out in St. Catherine with your own car.
+- place: Worthy Park Estate
+  query: Worthy Park Estate St. Catherine Jamaica
+  h1: Worthy Park Estate.
+  h2: Slow down here.
+  sub: 'Worthy Park Estate, St. Catherine: an easy, green break between beach days.'
+- place: Colbeck Castle
+  query: Colbeck Castle St. Catherine Jamaica
+  h1: Colbeck Castle.
+  h2: Step back in time.
+  sub: A St. Catherine heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Bog Walk Gorge
+  query: Bog Walk Gorge St. Catherine Jamaica
+  h1: Bog Walk Gorge.
+  h2: Big day out.
+  sub: A St. Catherine adventure stop. Go early and make a day of it.
+- place: Flat Bridge
+  query: Flat Bridge St. Catherine Jamaica
+  h1: Flat Bridge.
+  h2: Views worth the climb.
+  sub: A St. Catherine hill drive. Go in the morning for clear skies.
+- place: White Marl Taino Museum
+  query: White Marl Taino Museum St. Catherine Jamaica
+  h1: White Marl Taino Museum.
+  h2: Worth the stop.
+  sub: 'White Marl Taino Museum: one of St. Catherine''s stories, an easy add to your road trip.'
+- place: Old Harbour Bay
+  query: Old Harbour Bay St. Catherine Jamaica
+  h1: Old Harbour Bay.
+  h2: Your beach day, your schedule.
+  sub: Leave when you want, stay for sunset. Old Harbour Bay, St. Catherine.
+- place: Salt Pond Beach
+  query: Salt Pond Beach St. Catherine Jamaica
+  h1: Salt Pond Beach.
+  h2: Pack a towel and go.
+  sub: Swim, eat, relax. Salt Pond Beach is an easy day out in St. Catherine with your own car.
+- place: Linstead Market
+  query: Linstead Market St. Catherine Jamaica
+  h1: Linstead Market.
+  h2: Road trip fuel.
+  sub: 'Linstead Market: real Jamaican food in St. Catherine, easy to reach with your own car.'
+- place: Spanish Town historic churches
+  query: Spanish Town historic churches St. Catherine Jamaica
+  h1: Spanish Town historic churches.
+  h2: Worth the stop.
+  sub: 'Spanish Town historic churches: one of St. Catherine''s stories, an easy add to your road trip.'
+- place: Mount Nebo Baptist Church
+  query: Mount Nebo Baptist Church St. Catherine Jamaica
+  h1: Mount Nebo Baptist Church.
+  h2: Step back in time.
+  sub: A St. Catherine heritage stop. Drive in, take the tour, drive on to lunch.
+- place: Gloria's, Port Royal
+  query: Gloria's, Port Royal Kingston Jamaica
+  h1: Gloria's, Port Royal.
+  h2: Road trip fuel.
+  sub: 'Gloria''s, Port Royal: real Jamaican food in Kingston, easy to reach with your own car.'
+- place: Boston Bay jerk
+  query: Boston Bay jerk Portland Jamaica
+  h1: Boston Bay jerk.
+  h2: Come hungry.
+  sub: Boston Bay jerk in Portland. The kind of food stop you plan the drive around.
+- place: Hellshire Beach fried fish
+  query: Hellshire Beach fried fish St. Catherine Jamaica
+  h1: Hellshire Beach fried fish.
+  h2: Road trip fuel.
+  sub: 'Hellshire Beach fried fish: real Jamaican food in St. Catherine, easy to reach with your own car.'
+- place: Little Ochie, Alligator Pond
+  query: Little Ochie, Alligator Pond St. Elizabeth Jamaica
+  h1: Little Ochie, Alligator Pond.
+  h2: Worth the detour.
+  sub: A St. Elizabeth food stop. Pull over, eat well, keep driving.
+- place: Scotchies, Drax Hall
+  query: Scotchies, Drax Hall St. Ann Jamaica
+  h1: Scotchies, Drax Hall.
+  h2: Road trip fuel.
+  sub: 'Scotchies, Drax Hall: real Jamaican food in St. Ann, easy to reach with your own car.'
+- place: Negril jerk and seafood
+  query: Negril jerk and seafood Westmoreland Jamaica
+  h1: Negril jerk and seafood.
+  h2: Come hungry.
+  sub: Negril jerk and seafood in Westmoreland. The kind of food stop you plan the drive around.
+- place: Port Antonio and the Rio Grande
+  query: Port Antonio and the Rio Grande Portland Jamaica
+  h1: Port Antonio and the Rio Grande.
+  h2: Road trip fuel.
+  sub: 'Port Antonio and the Rio Grande: real Jamaican food in Portland, easy to reach with your own car.'
+- place: Blue Mountain coffee stop
+  query: Blue Mountain coffee stop St. Andrew Jamaica
+  h1: Blue Mountain coffee stop.
+  h2: Come hungry.
+  sub: Blue Mountain coffee stop in St. Andrew. The kind of food stop you plan the drive around.
 neutral:
 - h1: Discover
   h2: the real Jamaica.
@@ -720,6 +1720,30 @@ qa:
   a: Treasure Beach, YS Falls, Black River, Pelican Bar and pepper shrimp at Middle Quarters.
 - q: What should I eat on a road trip?
   a: Jerk in Boston Bay, pepper shrimp in Middle Quarters, fried fish and festival in Hellshire, and a patty anywhere.
+- q: How long can I rent for?
+  a: Choose your dates on arahrides.com. The shortest rental depends on the car and host; Winston can check it for you.
+- q: Do I get unlimited mileage?
+  a: Yes. Unlimited mileage is included, so you can drive the whole island.
+- q: Can I pick up at the airport?
+  a: Yes. MBJ, Norman Manley and OCJ pickups are available. Choose it when you book.
+- q: Can I pay with Apple Pay?
+  a: Yes. Apple Pay, Google Pay, Link, Klarna, Affirm and cards all work at checkout.
+- q: How fast is booking?
+  a: Minutes. Choose your car on arahrides.com, pay at checkout, done.
+- q: Is there a holiday deal?
+  a: Yes. Code PureCyber gives up to US$40 off at checkout. Conditions apply.
+- q: Can someone else drive?
+  a: Ask your host when you book. Each driver needs a valid licence held for at least 2 years.
+- q: Do you have 7 seaters?
+  a: Yes, some hosts list 7 seaters. Ask Winston with your dates.
+- q: Do you have SUVs?
+  a: Yes. Ask Winston with your dates and he will show you the SUVs that are free.
+- q: Is there a security deposit?
+  a: Yes. It is held at pickup and released after return. Many cars have low deposits.
+- q: Can I return the car somewhere else?
+  a: Yes. One-way rentals are available; the fee shows in your quote.
+- q: Who is Winston?
+  a: Winston is our booking assistant on WhatsApp. He answers 24/7 and gets you a quote in minutes.
 tip:
 - k: DRIVING TIP
   h: Keep left.
@@ -946,6 +1970,81 @@ tip:
 - k: BOOKING TIP
   h: Questions at midnight?
   b: Winston answers on WhatsApp 24/7. Get a quote in minutes, any time.
+- k: DRIVING TIP
+  h: Roundabouts go clockwise.
+  b: Give way to traffic already on the roundabout, coming from your right.
+- k: DRIVING TIP
+  h: Mind the goats.
+  b: In the country, goats and cows share the road. Slow down on blind bends.
+- k: DRIVING TIP
+  h: Night drives, take it easy.
+  b: Many country roads have no street lights. Drive slower after dark.
+- k: DRIVING TIP
+  h: Seat belts on.
+  b: Everyone in the car buckles up, front and back.
+- k: DRIVING TIP
+  h: No phone in hand.
+  b: Set your map before you drive and use a phone holder.
+- k: DRIVING TIP
+  h: Rain changes roads.
+  b: After a heavy shower, roads get slippery. Leave more space.
+- k: DRIVING TIP
+  h: Flash means go ahead.
+  b: A quick flash of headlights from another driver often means they are letting you through. Still check before you go.
+- k: DRIVING TIP
+  h: Plan your fuel.
+  b: Fill up in the towns before a long country drive.
+- k: TRAVEL TIP
+  h: Start early.
+  b: The best beaches and falls are quietest before 10 am.
+- k: TRAVEL TIP
+  h: Sunscreen and water.
+  b: The Jamaican sun is strong. Keep water in the car.
+- k: TRAVEL TIP
+  h: Keep it light.
+  b: Pack a small bag for day trips so the car stays tidy and bags stay out of sight.
+- k: TRAVEL TIP
+  h: Say yes to the roadside fruit.
+  b: 'Mangoes, june plum, otaheite apple: buy from the roadside stands when in season.'
+- k: TRAVEL TIP
+  h: Try the patty.
+  b: Every town has a patty shop. Grab one for the road.
+- k: TRAVEL TIP
+  h: Sunday is family day.
+  b: Beaches and food spots fill up on Sundays. Go early.
+- k: TRAVEL TIP
+  h: See more than one parish.
+  b: With your own car, you can see three parishes in a day.
+- k: TRAVEL TIP
+  h: Bring cash for entrance fees.
+  b: Some attractions take cash only. Keep some Jamaican dollars.
+- k: BOOKING TIP
+  h: Book your dates first.
+  b: Holiday dates fill fast. Lock in your car, then plan the trip.
+- k: BOOKING TIP
+  h: Airport pickup made easy.
+  b: Pick up at MBJ, Norman Manley or OCJ. Choose it when you book.
+- k: BOOKING TIP
+  h: Delivery to your stay.
+  b: Hotels, resorts, Airbnbs and homes. Choose delivery when you book.
+- k: BOOKING TIP
+  h: Ask Winston anything.
+  b: Winston answers on WhatsApp 24/7. Prices, cars, pickup, all in minutes.
+- k: BOOKING TIP
+  h: One-way works.
+  b: Pick up in MoBay, drop off in Kingston. One-way rentals are available.
+- k: BOOKING TIP
+  h: Choose the car you want to drive.
+  b: Every listing shows photos, so you choose the car you want.
+- k: BOOKING TIP
+  h: Pay later options.
+  b: Klarna and Affirm at checkout let you split the cost.
+- k: BOOKING TIP
+  h: Unlimited miles.
+  b: Drive the whole island. Unlimited mileage is included.
+- k: BOOKING TIP
+  h: Cyber deal now.
+  b: Use code PureCyber at checkout for up to US$40 off. Conditions apply.
 brand:
 - k: RENT JAMAICAN
   h: Discover the real Jamaica.
@@ -1351,6 +2450,51 @@ chat:
 - h: Back home for Christmas?
   u: I am coming home for Christmas.
   b: Welcome home! Book early, cars go fast around the holidays.
+- h: Coming for a wedding?
+  u: We need a car for a wedding in Negril.
+  b: Congratulations! Tell me the dates and how many people, and I will show you the best fits.
+- h: Business trip?
+  u: I have meetings in Kingston all week.
+  b: Easy. Pick up at Norman Manley and drive straight to your meetings. What are your dates?
+- h: Late flight?
+  u: My flight lands at 11 pm.
+  b: No problem. Tell me your flight and I will help set up your pickup.
+- h: Need a big car?
+  u: We are 7 people.
+  b: A 7 seater works. Tell me your dates and pickup spot.
+- h: Cheapest car?
+  u: What is your cheapest car?
+  b: Tell me your dates and I will show you the lowest prices and the lowest deposits.
+- h: Want a deal?
+  u: Is there a code?
+  b: Yes! PureCyber at checkout gives up to US$40 off. Conditions apply.
+- h: Pay later?
+  u: Can I pay with Affirm?
+  b: Yes. Affirm, Klarna, Link, Google Pay and Apple Pay all work at checkout.
+- h: Road trip?
+  u: We want to see the whole island.
+  b: Love it. Unlimited mileage is included. Want a route idea too?
+- h: Kids coming?
+  u: Do you have car seats?
+  b: Ask me with your dates and I will check what your host offers.
+- h: Students visiting?
+  u: I am 21, can I rent?
+  b: Tell me your dates and I will check the cars that fit your age and licence.
+- h: Visiting family?
+  u: I am going to see my cousins in Clarendon.
+  b: Nice! Pick up at Kingston and drive down. What are your dates?
+- h: SUV for the hills?
+  u: We are going to the Blue Mountains.
+  b: An SUV is best for the hills. Tell me your dates.
+- h: Same day booking?
+  u: Can I book a car for today?
+  b: Try me. Tell me where you are and I will check what is free.
+- h: Extending your trip?
+  u: Can I keep the car 2 more days?
+  b: Tell me the new return date and I will check it with your host.
+- h: Back for the holidays?
+  u: Home for Christmas, need a car.
+  b: Welcome home! Book early, December cars go fast.
 carousel:
 - k: 3 ROAD TRIPS FROM KINGSTON
   title: Where to this weekend?
