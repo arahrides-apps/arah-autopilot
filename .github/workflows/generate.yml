@@ -27,6 +27,7 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
       - name: Draft posts (photos, wording, images)
+        timeout-minutes: 58                       # the run itself stops at 40 min to save; this is only a safety net
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -35,8 +36,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_API_KE || secrets.GOOGLE_API_KEY }}
         run: |
+          git rm -q --ignore-unmatch autopilot/arahapi.py autopilot/compose.py autopilot/fetch_jtb.py "autopilot/generate 2.py" autopilot/illustrate.py content/index-photos.yml || true   # old code no longer used
           python -m autopilot prune
           python -m autopilot generate
       - name: Save to repository
+        if: always()                              # save whatever was finished, even if the step above was stopped
         run: |
           bash scripts/save.sh "Draft posts for review"

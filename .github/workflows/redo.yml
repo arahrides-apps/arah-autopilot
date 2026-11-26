@@ -1,11 +1,21 @@
 name: Redo posts not approved yet
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "Leave empty. (Used by the follow-up run: the first day still to redo.)"
+        required: false
+        default: ""
+      hop:
+        description: "Leave at 0."
+        required: false
+        default: "0"
 concurrency:
   group: autopilot
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: write                                  # lets a run that ran out of time start its own follow-up run
 jobs:
   draft:
     runs-on: ubuntu-latest
@@ -22,6 +32,7 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
       - name: Draft posts (photos, wording, images)
+        timeout-minutes: 58                       # the run itself stops at 40 min to save; this is only a safety net
         env:
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -30,9 +41,23 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_API_KE || secrets.GOOGLE_API_KEY }}
         run: |
+          git rm -q --ignore-unmatch autopilot/arahapi.py autopilot/compose.py autopilot/fetch_jtb.py "autopilot/generate 2.py" autopilot/illustrate.py content/index-photos.yml || true   # old code no longer used
           python -m autopilot prune
-          python -m autopilot regenerate
+          FROM="${{ inputs.from }}"
+          python -m autopilot regenerate ${FROM:+--from "$FROM"}
           python -m autopilot recaption
       - name: Save to repository
+        if: always()                              # save whatever was finished, even if the step above was stopped
         run: |
           bash scripts/save.sh "Redo posts that were not approved"
+      - name: Carry on with the days still to redo
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          F="$RUNNER_TEMP/arah_continue_from"; HOP="${{ inputs.hop || '0' }}"
+          if [ -s "$F" ] && [ "$HOP" -lt 3 ]; then
+            gh workflow run redo.yml --ref "${{ github.ref_name }}" -f from="$(cat "$F")" -f hop=$((HOP + 1)) && echo "follow-up run started from $(cat "$F")"
+          else
+            echo "all days done"
+          fi
