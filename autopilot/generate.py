@@ -1,7 +1,7 @@
 """Builds a day of posts: picks wording and photos, renders images, writes the queue."""
 import re, random, datetime as dt, logging, shutil
 from pathlib import Path
-from . import templates as T, queue as Q
+from . import templates as T, queue as Q, config
 from .config import ROOT, load_yaml, now as now_fn, tz
 from .ledger import Ledger
 from .photos import Picker, Photo, rule_for
@@ -806,6 +806,7 @@ def upcoming_events(moments, date):
     return sorted(out, key=lambda x: (max(x[1], 0), x[0]["date"]))
 
 def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
+    import time as _tm
     T.CURRENT_DATE = date                     # posts dated Nov 22 - Dec 26 carry the Christmas logo
     rng = random.Random(f"{date}-{now.timestamp() // 60}")
     b = DayBuilder(cfg, led, picker, date, rng, load_yaml("moments.yaml"))
@@ -830,7 +831,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         if hhmm in skip or (past and not (cfg.get("draft_past_slots_today", True) and date == now.date())):
             continue
         import time as _tm
-        if cfg.get("_deadline") and _tm.time() > cfg["_deadline"]:
+        if config.out_of_time():
             break                                       # out of time: keep what this day has so far, the next run fills the rest
         typ = typ0; cur = (mom, left); is_promo = False
         if camp and idx in camp.get("deal_slots", []):
@@ -851,7 +852,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         if is_promo: post["promo"] = promo["code"]
         if typ == "deal": post["_deal_k"] = deal_k
         b.pk.picked = []
-        pages = None; t = typ
+        pages = None; t = typ; _p0 = _tm.time()
         while pages is None:
             if t == "car_hero": pages = b.car_hero(post)
             elif t == "place": pages = b.place(post)
@@ -921,11 +922,13 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
         post.pop("story_done", None)
         post["status"] = "pending"
         posts.append(post)
+        config.tick("post " + post["type"], _tm.time() - _p0)
     if render and jobs:
-        render_all(jobs)
+        _r0 = _tm.time(); render_all(jobs); config.tick("render pictures", _tm.time() - _r0, len(jobs))
         from . import reel
-        rn = reel.add_reels(cfg, posts, date)
+        _r0 = _tm.time(); rn = reel.add_reels(cfg, posts, date); config.tick("reels", _tm.time() - _r0)
         b.notes += rn
+        _r0 = _tm.time()
         if cfg.get("art_director", True):            # Claude checks every finished cover like an agency art director; problems show on the review card
             from . import vision as V
             for p in posts:
@@ -937,6 +940,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                     p["flags"].insert(0, "⚠ Art director check: " + "; ".join(iss) + ". Look closely before approving.")
                 elif iss == []:
                     p["flags"].append("Art director check: cover looks good")
+        config.tick("art director checks", _tm.time() - _r0)
     if notes is not None:
         notes += b.notes
     return posts
@@ -945,11 +949,11 @@ def run(cfg, picker=None, led=None, render=True, days=None):
     now = now_fn(cfg); led = led or Ledger(); notes = []
     picker = picker or Picker(cfg, led, now.date(), random.Random())
     made = []
-    import time as _time; _t0 = _time.time(); cfg["_deadline"] = _t0 + cfg.get("max_run_minutes", 50) * 60
+    import time as _time; _t0 = _time.time(); config.start_clock(cfg)
     for off in range(0, (days if days is not None else cfg["days_ahead"]) + 1):
         d = now.date() + dt.timedelta(days=off)
-        if _time.time() - _t0 > cfg.get("max_run_minutes", 50) * 60:     # stop in time to save: the run limit cancels everything unsaved
-            notes.append(f"Run check · stopped early after {cfg.get('max_run_minutes', 50)} minutes to save what was made; the next run fills the rest")
+        if config.out_of_time():                          # stop in time to save: the run limit cancels everything unsaved
+            notes.append(f"Run check · stopped early after {cfg.get('max_run_minutes', 40)} minutes to save what was made; the next run fills the rest")
             break
         day = Q.load_day(str(d))
         keep = day["posts"] if day else []
@@ -962,6 +966,10 @@ def run(cfg, picker=None, led=None, render=True, days=None):
         posts = generate_day(cfg, led, picker, d, now, render, notes, skip=skip)
         if posts:
             Q.save_day(str(d), sorted(keep + posts, key=lambda p: p["slot"])); made.append((str(d), len(posts)))
+            led.save()                                    # saved day by day: a run stopped part-way keeps everything it finished
+            config.write_stats({"run": "draft", "days_done": [m[0] for m in made]})
+            try: Q.write_index(sorted(set(notes)), now.isoformat())
+            except Exception as e: log.warning("index not written: %s", e)
     notes += picker.notes
     notes.append(picker.health() + (f" · {SWAPS[0]} planned posts became another type (no fitting photo)" if SWAPS[0] else ""))
     try:

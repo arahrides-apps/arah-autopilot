@@ -159,7 +159,7 @@ def _labels():
         except Exception: _LAB = {}
     return _LAB
 
-def _label_new(creds, most=40):
+def _label_new(creds, most=25):
     """Phone clips are named like IMG_4521.MOV, so their names say nothing. Gemini looks at each clip's Drive preview image ONCE and
     describes it in keywords (beach, road, car, family, jerk, waterfall...); the words are saved in content/clip_labels.json and used to
     match clips to posts. Up to 40 new clips a run."""
@@ -200,6 +200,9 @@ def _own(q):
 
 def _search(q):
     if q not in _CACHE_Q:
+        from . import config as _C
+        if _C.out_of_time(margin=60):
+            return _own(q)
         _CACHE_Q[q] = _own(q) + _pexels(q) + _wikimedia(q) + _pixabay(q)
     return _CACHE_Q[q]
 

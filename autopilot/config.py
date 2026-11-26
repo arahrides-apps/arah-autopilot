@@ -38,3 +38,36 @@ def load_yaml(name):
     if k not in _YC:
         _YC[k] = yaml.safe_load(open(f)) or ({} if name.endswith("meta.yaml") else [])
     return copy.deepcopy(_YC[k])
+
+
+# ---- run clock: every slow step (photo searches, Gemini lookups, Reels) checks it, so a run stops in time to save its work
+_DEADLINE = [None]
+def start_clock(cfg):
+    import time
+    _DEADLINE[0] = time.time() + cfg.get("max_run_minutes", 40) * 60
+    cfg["_deadline"] = _DEADLINE[0]; _T0[0] = time.time()
+
+def out_of_time(margin=0):
+    import time
+    return _DEADLINE[0] is not None and time.time() > _DEADLINE[0] - margin
+
+# ---- where a run's minutes go: written to docs/run_stats.json after each day, so a slow run can be read back afterwards
+TIMES = {}
+_T0 = [None]
+def tick(key, secs, n=1):
+    t = TIMES.setdefault(key, [0, 0.0]); t[0] += n; t[1] += secs
+
+def write_stats(extra=None):
+    import time, json
+    from . import queue as Q
+    try:
+        from . import vision as V
+        g = dict(V.STATS)
+    except Exception:
+        g = {}
+    d = {"elapsed_min": round((time.time() - (_T0[0] or time.time())) / 60, 1),
+         "times": {k: {"count": v[0], "secs": round(v[1])} for k, v in sorted(TIMES.items(), key=lambda kv: -kv[1][1])},
+         "ai": {k: (round(v) if isinstance(v, float) else v) for k, v in g.items() if k != "why"}}
+    d.update(extra or {})
+    try: (Q.DOCS / "run_stats.json").write_text(json.dumps(d, indent=1))
+    except Exception: pass

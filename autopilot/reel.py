@@ -210,7 +210,10 @@ def add_reels(cfg, posts, date):
     used_lib = False
     from . import reel2
     reel2.DEFER = []                                   # hook Reels are encoded together at the end, several at once
+    from . import config as _C
     for p in pick:
+        if _C.out_of_time(margin=240):                  # little time left: the rest stay carousels (still fine to approve)
+            break
         rel = p["images"][0].rsplit("_", 1)[0] + ".mp4"
         try:
             if p.get("promo"):

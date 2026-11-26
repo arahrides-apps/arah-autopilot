@@ -182,6 +182,10 @@ def ask(parts, max_tokens=600):
     so a bad key can never make a run crawl into its time limit again; the run then uses the stricter no-AI photo rules."""
     if _BROKEN:
         raise RuntimeError("AI switched off for this run: " + _BROKEN[0])
+    from . import config as _C
+    if _C.out_of_time(margin=60):
+        raise RuntimeError("out of time for this run")
+    import time as _t; _t0 = _t.time()
     try:
         out = _ask(parts, max_tokens)
         STATS["streak"] = 0
@@ -192,6 +196,8 @@ def ask(parts, max_tokens=600):
         if STATS["streak"] >= 15 and STATS["ok"] == 0:
             _BROKEN.append(STATS["why"]); log.error("AI checks switched off for this run: %s", STATS["why"])
         raise
+    finally:
+        STATS["secs"] = STATS.get("secs", 0.0) + (_t.time() - _t0)
 
 def _ask(parts, max_tokens=600):
     import os, base64, requests
@@ -213,16 +219,20 @@ def _ask(parts, max_tokens=600):
     # Every Gemini model has its own free-tier limit, so when one is used up (429) the next one answers.
     models = [m for m in ([os.environ.get("GEMINI_MODEL")] + GEMINI_MODELS) if m and m not in _GDEAD]
     import time
+    from . import config as _C
     for rnd in range(2):
+        busy = False
         for m in models:
             if m in _GDEAD:
                 continue
+            if _REST.get(m, 0) > time.time():                             # this model said "too many this minute": let it rest
+                busy = True; continue
             for think in (True, False):
                 gen = {"maxOutputTokens": max(max_tokens, 2048), "temperature": 0}   # newer Gemini models think before answering: room for both
                 if think:
                     gen["thinkingConfig"] = {"thinkingBudget": 0}          # answer straight away (thinking would eat the reply's tokens)
                 try:
-                    r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=90,
+                    r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=45,
                                       headers={"x-goog-api-key": key, "content-type": "application/json"},
                                       json={"contents": [{"role": "user", "parts": gparts}], "generationConfig": gen})
                 except Exception:
@@ -235,6 +245,8 @@ def _ask(parts, max_tokens=600):
                     STATS["limit"] += 1
                     if "PerDay" in r.text or "per day" in r.text.lower():
                         _GDEAD.add(m)                                     # used up for today
+                    else:
+                        _REST[m] = time.time() + 20; busy = True          # busy this minute: other models answer meanwhile
                     break                                                 # try the next model
                 if r.status_code >= 400:
                     STATS["fail"] += 1
@@ -248,7 +260,13 @@ def _ask(parts, max_tokens=600):
                     continue                                              # empty reply (thinking used it all up): ask again the other way
                 STATS["ok"] += 1
                 return txt
-        time.sleep(15)                                                    # every model busy: wait a moment, then one more round
+        if models and all(m in _GDEAD for m in models):                   # every model's free daily limit is used up: stop asking (no more waiting)
+            _BROKEN.append("the free Gemini daily limit is used up for today"); break
+        if rnd == 1 or not busy or _C.out_of_time(margin=120):
+            break                                                         # only a busy model is worth waiting for, and only once
+        wait = max(1.0, min(15.0, min([_REST.get(m, 0) for m in models if m not in _GDEAD] or [0]) - time.time()))
+        time.sleep(wait)                                                  # every model busy this minute: wait for the first to be free, then one more round
+        STATS["waited"] = STATS.get("waited", 0) + wait
     STATS["fail"] += 1
     raise RuntimeError("Gemini did not answer (rate limit or error)")
 
@@ -282,6 +300,7 @@ def search_web(prompt, max_tokens=1500):
 
 GEMINI_MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-lite"]
 _GDEAD = set()
+_REST = {}
 STATS = {"ok": 0, "fail": 0, "limit": 0}
 
 def status():
@@ -376,7 +395,11 @@ def art_check(path, headline, model=None):
         return None
     try:
         txt = ask([_jpeg(path, 900), ART_PROMPT % headline[:160]], 400) or ""
-        import re as _re; d = json.loads(_re.search(r"\{.*\}", txt, _re.S).group(0))
+        import re as _re; m = _re.search(r"\{.*\}", txt, _re.S)
+        if not m:                                          # no JSON (reply cut short): fall back to reading a plain yes / no
+            v = yes_no(txt)
+            return None if v is None else [] if v else ["the cover does not look right"]
+        d = json.loads(m.group(0))
         return [] if d.get("ok") else [str(i) for i in d.get("issues", [])][:4]
     except Exception as e:
         log.warning("art check failed: %s", e); return None

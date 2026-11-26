@@ -536,14 +536,19 @@ class Picker:
             return []
         k = (web.name, query)
         if k not in self._sc:
+            from . import config as _C
+            if _C.out_of_time(margin=60):                 # out of time: no new searches, the run wraps up and saves
+                return []
             st = self.stats.setdefault(web.name, [0, 0])
             if web.name == "unsplash":                     # the free key allows 50 searches an hour: at most 45 a run, most of them kept for place photos
                 cap = self.cfg["sources"].get("unsplash", {}).get("max_searches_per_run", 45)
                 if st[0] >= cap or (st[0] >= cap // 3 and not getattr(self, "_place_mode", False)):
                     return []
+            import time as _t; _t0 = _t.time()
             try:
                 self._sc[k] = web.search(query, self.rng)
                 st[0] += 1; st[1] += len(self._sc[k])
+                _C.tick("search " + web.name, _t.time() - _t0)
             except Exception as e:
                 log.warning("%s search failed: %s", web.name, str(e)[:120])
                 if any(c in str(e) for c in ("429", "403", "401")): self._dead.add(web.name)
@@ -892,8 +897,11 @@ class Picker:
             try: self._hint_db = _j.loads(f.read_text())
             except Exception: self._hint_db = {}
         k = place.lower().strip()
-        if k in self._hint_db or not _V.ai_on():
+        from . import config as _C
+        self.__dict__.setdefault("_hints_asked", 0)
+        if k in self._hint_db or not _V.ai_on() or _C.out_of_time(margin=300) or self._hints_asked >= self.cfg["photos"].get("gemini_place_lookups_per_run", 25):
             return self._hint_db.get(k) or {}
+        self._hints_asked += 1
         h = {"aliases": [], "queries": [], "files": []}
         try:
             t = _V.ask([f"The place '{place}' in Jamaica{(' (' + what + ')') if what else ''}. Reply with ONLY JSON: "

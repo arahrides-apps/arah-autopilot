@@ -27,6 +27,9 @@ def main(argv=None):
     elif a.cmd == "regenerate":
         from .regen import run as regen
         made, kept, dropped, notes = regen(cfg, a.start, render=not a.no_render, wipe=a.wipe)
+        from . import regen as _R
+        if _R.CONTINUE[0] and not a.wipe:                  # out of time: tell the workflow where the follow-up run starts
+            open(os.environ.get("RUNNER_TEMP", "/tmp") + "/arah_continue_from", "w").write(_R.CONTINUE[0])
         print(f"kept {kept} approved/published posts, redid {dropped}, new drafts:", made or "none"); [print("note:", n) for n in notes]
     elif a.cmd == "publish":
         from .instagram import get_poster, publish_due
