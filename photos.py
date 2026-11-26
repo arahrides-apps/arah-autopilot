@@ -1,0 +1,1004 @@
+"""Finds a fresh photo: Google Drive first (your own shoots), then free web photos (Pexels, Openverse CC0)."""
+import os, io, re, json, random, hashlib, logging
+from dataclasses import dataclass, field
+from pathlib import Path
+from PIL import Image, ImageOps
+from . import ledger as L
+from .config import ROOT, load_yaml
+
+log = logging.getLogger("photos")
+IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
+
+from . import themes as TH
+
+# ---- what a photo shows, so the picture can match the words ("drive" copy never gets a beach photo)
+SETTING_WORDS = {
+    "beach": r"beach|sand|shore|\bsea\b|ocean|\bbay\b|loungers|thatch|coast|lagoon|palm frond",
+    "road": r"\broad|highway|route|\bdrive|windshield|dash",
+    "mountain": r"mountain|hills|hillside|green hills|valley",
+    "water": r"river|waterfall|falls|raft|pool|boat",
+    "city": r"kingston|downtown|buildings|villa|carport|pavers|harbour",
+    "palms": r"palm|coconut",
+}
+
+def settings_of(text):
+    t = (text or "").lower()
+    return {k for k, rx in SETTING_WORDS.items() if re.search(rx, t)}
+
+# ---- geography: a post about an inland town never gets a beach/sea photo, and no photo may name a different place than the post
+INLAND = re.compile(r"mandeville|christiana|cockpit|maggotty|accompong|spanish town|may pen|mavis bank|newcastle|holywell|blue mountain|bog walk|flat bridge|"
+                    r"bamboo avenue|moneague|linstead|williamsfield|porus|balaclava|santa cruz(?! beach)|junction|manchester|clarendon|st\.? catherine|st\.? thomas", re.I)
+COASTAL_PHOTO = re.compile(r"beach|sand\b|shore|\bsea\b|ocean|\bbay\b|coast|lagoon|lime cay|cay\b|snorkel|cruise|pier|harbou?r|boat|sailing|resort|loungers|palm fringed|seven mile|treasure beach", re.I)
+KNOWN_PLACES = ["negril", "montego bay", "ocho rios", "port antonio", "portland", "treasure beach", "kingston", "mandeville", "blue mountain", "dunn", "blue hole",
+                "falmouth", "black river", "runaway bay", "boston bay", "frenchman", "lime cay", "bob marley", "nine mile", "rio grande", "reach falls", "cockpit", "devon house",
+                "milk river", "bluefields", "whitehouse", "rose hall", "st. ann", "st ann", "hellshire", "port royal", "holywell", "mystic mountain", "appleton", "y.s."]
+OLD_PHOTO = re.compile(r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|\bretro\b|\bold\b|1[6-9]\d\d|colonial|engraving|postcard|circa|\bca\.|"
+                       r"museum collection|library of congress|nypl|wikimedia commons archive|film grain|scan(ned)?\b", re.I)
+
+def too_old_looking(path):
+    """Black-and-white, sepia or faded scans are rejected by the picture itself, whatever the description says."""
+    try:
+        im = Image.open(path).convert("RGB"); im.thumbnail((200, 200))
+        hsv = im.convert("HSV"); S = hsv.getchannel("S"); H = hsv.getchannel("H")
+        n = S.size[0] * S.size[1]; hist = S.histogram()
+        mean_s = sum(i * c for i, c in enumerate(hist)) / n / 255
+        if mean_s < 0.13:                     # (almost) no colour: black and white
+            return True
+        hh = H.histogram(); top = max(hh[i] for i in range(256)) / n
+        return mean_s < 0.28 and top > 0.55  # one brownish tone over the whole picture: sepia
+    except Exception:
+        return False
+
+import unicodedata as _ud
+def _norm(s):
+    s = _ud.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    s = re.sub(r"[.'`\u2019]", "", s)
+    return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+_GENERIC = {"falls", "fall", "river", "beach", "bay", "cove", "great", "house", "park", "estate", "national", "rafting", "museum", "market", "the", "of",
+            "and", "cafe", "bar", "hill", "gardens", "garden", "caves", "cave", "lagoon", "jamaica", "fort", "town", "lighthouse", "beaches", "castle"}
+_COMMON = {"blue", "long", "black", "green", "port", "little", "white", "seven", "middle", "new", "old", "red", "hope", "good", "lime", "bath", "holland", "royal",
+           "mile", "hole", "pen", "san", "james", "james", "faiths", "doctors", "lovers"}
+
+def place_match(place, text):
+    """Does a photo's own title/description name this place? 'Dunn's River Falls' matches 'Dunns River Falls 2012.jpg';
+    'YS Falls' matches 'Y.S. Falls'; a vague word alone ('Blue') never counts."""
+    p = _norm(place); t = " " + _norm(text) + " "
+    if not p:
+        return False
+    for v in {p, re.sub(r"^the ", "", p)}:
+        if f" {v} " in t:
+            return True
+    keys = [w for w in p.split() if w not in _GENERIC and len(w) > 2]
+    strong = [w for w in keys if w not in _COMMON]
+    if strong:
+        return all(re.search(r"\b" + re.escape(w), t) for w in strong) and (len(keys) == len(strong) or any(f" {w} " in t for w in keys if w in _COMMON))
+    return False
+
+DRAWN = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|\brender|3d model|poster|\blogo\b|\bicon\b|\bmap of|\bmap\b|locator|engraving|lithograph|\bflag\b|diagram|coat of arms", re.I)
+REALLY_OLD = re.compile(r"sepia|black and white|black & white|monochrome|\bb&w\b|vintage|archiv|engraving|postcard|lithograph|\b1[5-9]\d\d\b|daguerreotype|glass plate|stereograph", re.I)
+
+def text_ok(text, month):
+    """True when a photo's own words (name, description, tags) are fine to use now: nothing historical, no drawings, no event from another time of year."""
+    return not TH.JUNK.search(text or "") and not TH.out_of_season(text, month)
+
+def is_inland(*texts):
+    return bool(INLAND.search(" ".join(t for t in texts if t)))
+
+def names_other_place(text, place_words):
+    """True when the photo's own description names a known place that is not the one the post is about."""
+    t = (text or "").lower(); mine = " ".join(w.lower() for w in place_words if w)
+    return any(k in t and k.split()[0] not in mine for k in KNOWN_PLACES)
+
+def rule_for(text):
+    """Turn the words of a post into a rule about which photos fit. Returns a function(settings)->bool, or None for no rule."""
+    t = (text or "").lower()
+    if re.search(r"beyond the beach|past the resort|skip the beach|beyond the resort", t):
+        return lambda s: "beach" not in s or "road" in s
+    need = set()
+    if re.search(r"blue mountain|mountain", t): need |= {"mountain", "road"}
+    if re.search(r"waterfall|\bfalls\b|river", t): need |= {"water", "mountain"}
+    if re.search(r"\bbeach|\bsand\b|coastline|\bsea\b|ocean|treasure beach|negril|seven mile", t): need |= {"beach"}
+    if re.search(r"kingston", t) and not need: need |= {"city", "mountain", "road"}
+    drive = re.search(r"drive|driving|road trip|\broad\b|\broads\b|highway|route|windows down|long way|back road|countryside|point it at", t)
+    if need and drive and "beach" in need and len(need) == 1:
+        return lambda s: bool(s & need)              # a beach drive is fine on a beach
+    if need and len(need) <= 2 and not (drive and "beach" in need):
+        return lambda s, n=need: bool(s & n)
+    if drive:
+        return lambda s: "beach" not in s or "road" in s    # a drive never gets a beach-only photo
+    return None
+
+NEVER_USE = re.compile(r"tennis|jamaica[ _-]?cup|pickleball|racket|racquet", re.I)      # never used again, from any source (owner's rule)
+
+@dataclass
+class Photo:
+    id: str                 # e.g. drive:<fileId>, local:<stem>, pexels:123
+    name: str               # file stem (also stored in the ledger)
+    source: str             # drive | local | pexels | openverse
+    path: str               # local file, already downsized
+    kind: str = "car"       # car | scenery
+    credit: str = ""
+    text: str = ""          # title/alt text from the source (used to confirm the place)
+    flags: list = field(default_factory=list)
+    hash: int = 0
+    series: str = ""        # photos from the same shoot share a series; a series is spaced out (photos.series_days)
+    w: int = 0
+    h: int = 0
+    setting: set = field(default_factory=set)
+
+    @property
+    def portrait(self):
+        return self.h >= self.w * 1.1
+
+    def keys(self):
+        return [self.id, "name:" + self.name]
+
+# ---------------------------------------------------------------- helpers
+def exif_info(path):
+    """GPS point and date a phone stored in the photo: {'lat','lon','date'} (empty when none). The converted copies lose this, so it is read first."""
+    out = {}
+    try:
+        ex = Image.open(path).getexif()
+        g = ex.get_ifd(0x8825) if hasattr(ex, "get_ifd") else {}
+        def deg(v):
+            return float(v[0]) + float(v[1]) / 60 + float(v[2]) / 3600
+        if g and 2 in g and 4 in g:
+            lat, lon = deg(g[2]), deg(g[4])
+            if str(g.get(1, "N")).upper().startswith("S"): lat = -lat
+            if str(g.get(3, "E")).upper().startswith("W"): lon = -lon
+            if lat or lon:
+                out.update(lat=round(lat, 5), lon=round(lon, 5))
+        d = ex.get_ifd(0x8769).get(36867) if hasattr(ex, "get_ifd") else None
+        d = d or ex.get(306)
+        if d:
+            out["date"] = str(d)[:10].replace(":", "-")
+    except Exception:
+        pass
+    return out
+
+def prep(src, dest, max_side=1800):
+    """Auto-rotate, shrink and save as JPEG. Never alters the picture itself (no blur, no overlays)."""
+    info = exif_info(src)
+    if info:
+        Path(dest).parent.mkdir(parents=True, exist_ok=True)
+        Path(str(dest) + ".exif.json").write_text(json.dumps(info))
+    im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+    im.thumbnail((max_side, max_side), Image.LANCZOS)
+    Path(dest).parent.mkdir(parents=True, exist_ok=True)
+    im.save(dest, "JPEG", quality=90)
+    return im.size
+
+_cascade = None
+def has_face(path):
+    """Best-effort face check (OpenCV, open source). Returns None when OpenCV is not installed."""
+    global _cascade
+    try:
+        import cv2
+        if _cascade is None:
+            _cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        if _cascade.empty():          # a build of OpenCV without its face file: skip the check rather than crash
+            return None
+    except Exception:
+        return None
+    g = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
+    if g is None:
+        return None
+    s = 800 / max(g.shape)
+    if s < 1:
+        g = cv2.resize(g, None, fx=s, fy=s)
+    faces = _cascade.detectMultiScale(g, 1.1, 6, minSize=(max(24, g.shape[1] // 30),) * 2)
+    return len(faces) > 0
+
+def http_json(url, headers=None, params=None, timeout=25):
+    import requests
+    r = requests.get(url, headers=headers, params=params, timeout=timeout)
+    r.raise_for_status()
+    return r.json()
+
+def http_file(url, dest, timeout=60, max_mb=40):
+    import requests
+    with requests.get(url, stream=True, timeout=timeout) as r:
+        r.raise_for_status()
+        Path(dest).parent.mkdir(parents=True, exist_ok=True)
+        n = 0
+        with open(dest, "wb") as f:
+            for ch in r.iter_content(1 << 16):
+                n += len(ch)
+                if n > max_mb << 20:
+                    raise IOError("file too large")
+                f.write(ch)
+
+# ---------------------------------------------------------------- sources
+class LocalSource:
+    """A folder of photos (optional extra pool; the tests use it as a stand-in for Drive)."""
+    name = "local"
+    def __init__(self, cfg):
+        c = cfg["sources"]["local"]
+        d = Path(c["dir"]); self.dir = d if d.is_absolute() else ROOT / d
+    def list(self):
+        if not self.dir.exists():
+            return []
+        return [{"id": "local:" + p.stem, "name": p.stem, "ref": str(p)} for p in sorted(self.dir.rglob("*")) if p.suffix.lower() in IMG_EXT]
+    def fetch(self, item, dest):
+        return prep(item["ref"], dest)
+
+class DriveSource:
+    """Reads every image under the Drive folder(s) with a service account (read-only)."""
+    name = "drive"
+    def __init__(self, cfg):
+        self.c = cfg["sources"]["drive"]; self._svc = None; self._items = None
+    def _service(self):
+        if self._svc is None:
+            from google.oauth2 import service_account
+            from googleapiclient.discovery import build
+            raw = os.environ.get(self.c["service_account_env"], "")
+            if not raw:
+                raise RuntimeError("Drive secret %s is empty" % self.c["service_account_env"])
+            creds = service_account.Credentials.from_service_account_info(
+                json.loads(raw), scopes=["https://www.googleapis.com/auth/drive.readonly"])
+            self._svc = build("drive", "v3", credentials=creds, cache_discovery=False)
+        return self._svc
+    def list(self):
+        if self._items is not None:
+            return self._items
+        s = self._service(); out = []; seen = set(); stack = list(self.c["folder_ids"])
+        cap = self.c.get("max_download_mb", 40) << 20
+        while stack:
+            fid = stack.pop()
+            if fid in seen:
+                continue
+            seen.add(fid); tok = None
+            while True:
+                r = s.files().list(q=f"'{fid}' in parents and trashed=false", pageSize=200, pageToken=tok,
+                                   fields="nextPageToken,files(id,name,mimeType,size)",
+                                   supportsAllDrives=True, includeItemsFromAllDrives=True).execute()
+                for f in r.get("files", []):
+                    if f["mimeType"] == "application/vnd.google-apps.folder":
+                        stack.append(f["id"])
+                    elif f["name"].lower().endswith(IMG_EXT) and int(f.get("size", 0)) <= cap:
+                        out.append({"id": "drive:" + f["id"], "name": os.path.splitext(f["name"])[0], "ref": f["id"]})
+                tok = r.get("nextPageToken")
+                if not tok:
+                    break
+        self._items = out
+        log.info("Drive: %d images found", len(out))
+        return out
+    def fetch(self, item, dest):
+        from googleapiclient.http import MediaIoBaseDownload
+        buf = io.BytesIO()
+        dl = MediaIoBaseDownload(buf, self._service().files().get_media(fileId=item["ref"], supportsAllDrives=True))
+        done = False
+        while not done:
+            _, done = dl.next_chunk()
+        tmp = Path(dest).with_suffix(".orig")
+        tmp.parent.mkdir(parents=True, exist_ok=True); tmp.write_bytes(buf.getvalue())
+        try:
+            return prep(tmp, dest)
+        finally:
+            tmp.unlink(missing_ok=True)
+
+class PexelsSource:
+    name = "pexels"
+    def __init__(self, cfg):
+        self.key = os.environ.get(cfg["sources"]["pexels"]["api_key_env"], "")
+    def search(self, query, rng):
+        if not self.key:
+            return []
+        d = http_json("https://api.pexels.com/v1/search", headers={"Authorization": self.key},
+                      params={"query": query, "per_page": 40, "page": rng.randint(1, 4)})
+        return [{"id": "pexels:%s" % p["id"], "name": "pexels-%s" % p["id"], "url": p["src"].get("large2x") or p["src"]["original"],
+                 "w": p["width"], "h": p["height"], "text": " ".join([p.get("alt") or "", p.get("url") or ""]),
+                 "credit": "Photo by %s on Pexels" % p.get("photographer", "?")} for p in d.get("photos", [])]
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
+
+class UnsplashSource:
+    """Unsplash: free key (unsplash.com/developers). Licence allows commercial use; the API rules ask for a photo credit and a download ping."""
+    name = "unsplash"
+    JAM = ("jamaica", "kingston", "montego", "negril", "ocho rios", "port antonio", "portland", "blue mountain", "treasure beach", "dunn", "reggae", "rasta", "marley", "jerk", "ackee", "blue hole", "falls", "st. ann", "mandeville", "black river")
+    def __init__(self, cfg):
+        self.key = os.environ.get(cfg["sources"]["unsplash"]["api_key_env"], "")
+        self.h = {"Authorization": "Client-ID " + self.key, "Accept-Version": "v1"}
+    def search(self, query, rng):
+        if not self.key:
+            return []
+        if "jamaica" not in query.lower():
+            query += " Jamaica"
+        d = http_json("https://api.unsplash.com/search/photos", headers=self.h,
+                      params={"query": query, "per_page": 30, "page": rng.randint(1, 2), "content_filter": "high"})
+        out = []
+        for p in d.get("results", []):
+            loc = (p.get("location") or {}).get("name") or ""
+            tags = " ".join(t.get("title", "") for t in p.get("tags", []) if isinstance(t, dict))
+            blob = " ".join([p.get("description") or "", p.get("alt_description") or "", loc, tags]).lower()
+            if not any(w in blob for w in self.JAM):          # Jamaica only: the photo must say so
+                continue
+            out.append({"id": "unsplash:%s" % p["id"], "name": "unsplash-%s" % p["id"], "url": p["urls"]["raw"] + "&w=1800&q=85&fm=jpg",
+                        "dl": (p.get("links") or {}).get("download_location", ""), "w": p["width"], "h": p["height"],
+                        "text": " ".join([p.get("description") or "", p.get("alt_description") or "", loc, tags]),
+                        "credit": "Photo by %s on Unsplash" % (p.get("user") or {}).get("name", "?")})
+        return out
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig")
+        if item.get("dl"):
+            try:
+                http_json(item["dl"], headers=self.h)      # Unsplash asks apps to report each download
+            except Exception:
+                pass
+        return _finish(dest)
+
+class PixabaySource:
+    """Pixabay: free key (pixabay.com/api/docs). Free for commercial use, no credit needed; we still name the photographer."""
+    name = "pixabay"
+    def __init__(self, cfg):
+        self.key = os.environ.get(cfg["sources"].get("pixabay", {}).get("api_key_env", "PIXABAY_API_KEY"), "")
+    def search(self, query, rng):
+        if not self.key:
+            return []
+        d = http_json("https://pixabay.com/api/", params={"key": self.key, "q": query[:100], "image_type": "photo", "per_page": 50,
+                                                          "page": 1, "safesearch": "true", "min_width": 1000})
+        return [{"id": "pixabay:%s" % p["id"], "name": "pixabay-%s" % p["id"], "url": p.get("largeImageURL") or p["webformatURL"],
+                 "w": p.get("imageWidth", 0), "h": p.get("imageHeight", 0), "text": p.get("tags", "") + " " + (p.get("pageURL") or ""),
+                 "credit": "Photo by %s on Pixabay" % p.get("user", "?")} for p in d.get("hits", [])]
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
+
+class OpenverseSource:
+    """Openverse (the open-source WordPress search over ~800 million openly licensed images, including Flickr's Creative Commons photos
+    of Jamaica). Search is public, so no key is needed; free keys (OPENVERSE_CLIENT_ID / OPENVERSE_CLIENT_SECRET) only raise the rate limit.
+    Licences: CC BY (credited in the caption), CC0 and public domain. No NonCommercial, no NoDerivatives, no ShareAlike."""
+    name = "openverse"
+    UA = {"User-Agent": "ArahAutopilot/1.0 (https://arahrides.com; marketing)"}
+    def __init__(self, cfg):
+        lic = cfg["sources"]["openverse"].get("licenses", "by,by-sa,cc0,pdm")
+        self.lic = "by,by-sa,cc0,pdm" if lic in ("cc0,pdm", "cc0", "pdm", "by,cc0,pdm") else lic
+        self.cid = os.environ.get("OPENVERSE_CLIENT_ID", ""); self.sec = os.environ.get("OPENVERSE_CLIENT_SECRET", "")
+        self._tok = None; self._off = False
+    def _headers(self):
+        h = dict(self.UA)
+        if self.cid and self.sec and self._tok is not False:
+            try:
+                if self._tok is None:
+                    import requests
+                    r = requests.post("https://api.openverse.org/v1/auth_tokens/token/", timeout=25,
+                                      data={"grant_type": "client_credentials", "client_id": self.cid, "client_secret": self.sec})
+                    r.raise_for_status(); self._tok = r.json()["access_token"]
+                h["Authorization"] = "Bearer " + self._tok
+            except Exception:
+                self._tok = False                       # keys not working: carry on without them
+        return h
+    def search(self, query, rng):
+        if self._off:
+            return []
+        import requests, time
+        for attempt in range(2):
+            r = requests.get("https://api.openverse.org/v1/images/", headers=self._headers(), timeout=30, params={
+                "q": query, "license": self.lic, "category": "photograph", "page_size": 20, "page": rng.randint(1, 2), "mature": "false"})
+            if r.status_code == 429:
+                if attempt == 0:
+                    time.sleep(15); continue
+                self._off = True                         # daily limit reached: skip Openverse for the rest of this run
+                return []
+            r.raise_for_status(); d = r.json(); break
+        out = []
+        for p in d.get("results", []):
+            if not p.get("url") or (p.get("filetype") or "jpg").lower() not in ("jpg", "jpeg", "png", ""):
+                continue
+            lic = (p.get("license") or "").lower()
+            if lic not in ("by", "by-sa", "cc0", "pdm"):
+                continue
+            out.append({"id": "openverse:%s" % p["id"], "name": "openverse-%s" % p["id"], "url": p["url"],
+                        "w": p.get("width") or 9999, "h": p.get("height") or 9999,          # size not given: checked after download instead
+                        "text": " ".join([p.get("title") or ""] + [t.get("name", "") for t in p.get("tags") or []]),
+                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", {"by": "CC BY", "by-sa": "CC BY-SA"}.get(lic, lic.upper()))})
+        return out
+    def fetch(self, item, dest):
+        http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
+
+class WikimediaSource:
+    """Wikimedia Commons: free, no key. Public domain, CC0 and CC BY files only (CC BY needs the photographer credited, which the caption does)."""
+    name = "wikimedia"
+    UA = {"User-Agent": "ArahAutopilot/1.0 (https://arahrides.com; marketing bot)"}
+    def __init__(self, cfg):
+        pass
+    @staticmethod
+    def free(meta):
+        lic = ((meta.get("LicenseShortName") or {}).get("value") or "").lower()
+        return lic.startswith("cc0") or "public domain" in lic or lic.startswith("pd") or \
+            (lic.startswith("cc by") and "nc" not in lic.replace("-", " ").split() and "nd" not in lic.replace("-", " ").split())   # CC BY and CC BY-SA (credited); never NonCommercial / NoDerivatives
+    def search(self, query, rng):
+        d = http_json("https://commons.wikimedia.org/w/api.php", headers=self.UA, params={
+            "action": "query", "format": "json", "generator": "search", "gsrsearch": query + " filetype:bitmap",
+            "gsrnamespace": 6, "gsrlimit": 40, "gsroffset": rng.choice([0, 0, 20, 40]),
+            "prop": "imageinfo", "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1800})
+        out = []
+        for p in (d.get("query", {}).get("pages") or {}).values():
+            ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata") or {}
+            if not ii.get("thumburl") or ii.get("mime") not in ("image/jpeg", "image/png") or not self.free(md):
+                continue
+            desc = re_tags((md.get("ImageDescription") or {}).get("value") or "") + " " + re_tags((md.get("Categories") or {}).get("value") or "").replace("|", " ")
+            ym = re.search(r"(1[5-9]\d\d|20\d\d)", (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or "")
+            out.append({"year": int(ym.group(1)) if ym else 0, "id": "wikimedia:%s" % p["pageid"], "name": "wikimedia-%s" % p["pageid"], "url": ii["thumburl"],
+                        "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0,
+                        "text": (p.get("title") or "") + " " + desc,
+                        "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
+        return out
+    def article_images(self, place, rng=None):
+        """Photos used in the Wikipedia article about the place (e.g. 'Dunn's River Falls'): those are photos OF the place.
+        Same licence rules as Commons search (public domain, CC0, CC BY, CC BY-SA: always credited)."""
+        s = http_json("https://en.wikipedia.org/w/api.php", headers=self.UA, params={
+            "action": "query", "format": "json", "list": "search", "srsearch": place + " Jamaica", "srlimit": 2})
+        hits = [h["title"] for h in (s.get("query", {}).get("search") or [])]
+        hits = [h for h in hits if place_match(place, h)] or hits[:1]
+        out = []
+        for title in hits[:1]:
+            d = http_json("https://en.wikipedia.org/w/api.php", headers=self.UA, params={
+                "action": "query", "format": "json", "titles": title, "generator": "images", "gimlimit": 40,
+                "prop": "imageinfo", "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1800})
+            for p in (d.get("query", {}).get("pages") or {}).values():
+                ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata") or {}
+                if not ii.get("thumburl") or ii.get("mime") not in ("image/jpeg", "image/png") or not self.free(md):
+                    continue
+                desc = re_tags((md.get("ImageDescription") or {}).get("value") or "")
+                ym = re.search(r"(1[5-9]\d\d|20\d\d)", (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or "")
+                out.append({"year": int(ym.group(1)) if ym else 0, "id": "wikimedia-file:%s" % (p.get("title") or ""), "name": "wikimedia-%s" % hashlib.md5((p.get("title") or "").encode()).hexdigest()[:12],
+                            "url": ii["thumburl"], "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0, "article": title,
+                            "text": f"{place} (photo from the Wikipedia article '{title}') " + (p.get("title") or "") + " " + desc,
+                            "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
+        return out
+
+    def fetch(self, item, dest):
+        import requests
+        with requests.get(item["url"], headers=self.UA, stream=True, timeout=60) as r:
+            r.raise_for_status()
+            Path(str(dest) + ".orig").parent.mkdir(parents=True, exist_ok=True)
+            with open(str(dest) + ".orig", "wb") as f:
+                for ch in r.iter_content(1 << 16):
+                    f.write(ch)
+        return _finish(dest)
+
+def re_tags(t):
+    return re.sub(r"<[^>]+>", " ", t)
+
+def _finish(dest):
+    o = Path(str(dest) + ".orig")
+    try:
+        return prep(o, dest)
+    finally:
+        o.unlink(missing_ok=True)
+
+# ---------------------------------------------------------------- picker
+class Picker:
+    def __init__(self, cfg, ledger, today, rng, cache=None, drive=None, web=None):
+        self.cfg, self.led, self.today, self.rng = cfg, ledger, today, rng
+        self.cache = Path(cache or ROOT / "cache")
+        self.meta = dict(load_yaml("photo_meta.yaml"))
+        for f in sorted((ROOT / "content").glob("photo_meta_*.yaml")):          # extra hand-made label files (e.g. photo_meta_jamaica_cup.yaml); the auto file is read below
+            if f.name != "photo_meta_auto.yaml":
+                try:
+                    for k, v in (load_yaml(f.name) or {}).items():
+                        self.meta.setdefault(k, v)
+                except Exception:
+                    pass
+        try:
+            for k, v in (load_yaml("photo_meta_auto.yaml") or {}).items():      # labels made from each photo's GPS point (index-photos); hand labels win
+                self.meta.setdefault(k, v)
+        except Exception:
+            pass
+        try:
+            self.tags = load_yaml("photo_tags_auto.yaml") or {}         # what each photo looks like (index-photos picture recognition)
+        except Exception:
+            self.tags = {}
+        self.tag_names = {v.get("name"): v for v in self.tags.values() if isinstance(v, dict)}
+        s = cfg["sources"]
+        self.pool = []          # own photos (Drive / local)
+        if drive is not None:
+            self.pool.append(drive)
+        else:
+            if s["drive"]["enabled"] and os.environ.get(s["drive"]["service_account_env"]):
+                self.pool.append(DriveSource(cfg))
+            if s["local"]["enabled"]:
+                self.pool.append(LocalSource(cfg))
+        order = (("pixabay", PixabaySource), ("unsplash", UnsplashSource), ("pexels", PexelsSource),        # Pixabay first: 100 searches a minute; Unsplash allows only 50 an hour
+                 ("wikimedia", WikimediaSource), ("openverse", OpenverseSource))
+        self.web = web if web is not None else [x(cfg) for k, x in order if s.get(k, {"enabled": k != "pixabay"})["enabled"]]
+        self.notes = []
+        self.tried = set()
+        self.picked = []          # every photo handed out for the post being built (the Reel is made from these, not from the slides)
+        self.credits = {}         # photo path -> credit line (CC BY photographers, Jamaica Tourist Board...) so every slide's photo is credited
+        self._lenient = False; self.stats = {}; self.loaded = 0
+        self._sc = {}; self._dead = set()          # search results are reused within a run; a source that errors (rate limit) is skipped for the run
+
+    def _search(self, web, query):
+        """One web search, cached for the run. Returns [] when the source is unavailable."""
+        if web.name in self._dead:
+            return []
+        k = (web.name, query)
+        if k not in self._sc:
+            st = self.stats.setdefault(web.name, [0, 0])
+            try:
+                self._sc[k] = web.search(query, self.rng)
+                st[0] += 1; st[1] += len(self._sc[k])
+            except Exception as e:
+                self.notes.append("%s search failed: %s" % (web.name, str(e)[:80]))
+                if any(c in str(e) for c in ("429", "403", "401")): self._dead.add(web.name)
+                self._sc[k] = []
+        return list(self._sc[k])
+
+    MIN_YEAR = 2014
+
+    def _web_ok(self, web, i):
+        """Rules for any web photo: modern (dated 2014 or later when the source gives a date), nothing historical or drawn, nothing from another season,
+        and Wikimedia files (the usual source of odd archive pictures) need a known recent date."""
+        txt = i.get("text", "") + " " + i.get("name", "")
+        if not text_ok(txt, self.today.month) or OLD_PHOTO.search(txt):
+            return False
+        y = i.get("year")
+        if web.name == "wikimedia" and not y:
+            from . import vision as _V
+            return _V.ai_on()                    # undated Commons file: only when the AI checks it (old-looking photos are refused there)
+        return not (y and y < self.MIN_YEAR)
+
+    def _meta(self, name, item=None):
+        m = (item and self.meta.get(item["id"])) or self.meta.get(name) or self.meta.get(name.split(".")[0])
+        tg = (item and self.tags.get(item["id"])) or self.tag_names.get(name) if getattr(self, "tags", None) else None
+        if m and tg and tg.get("words") and (tg.get("confidence", 0) >= 0.6 or tg.get("claude")) and tg["words"].split()[0].lower() not in (m.get("about", "")).lower():
+            m = dict(m, about=m.get("about", "") + " | looks like: " + tg["words"] + " | categories: " + " ".join(tg.get("cats") or []))
+            if "people" in (tg.get("cats") or []) and not m.get("people") and tg.get("claude"):
+                m["people"] = True
+        return m
+
+    def _series(self, name):
+        m = self._meta(name)
+        mm = re.match(r"arah_listing_(\d+)_", name)
+        if mm:
+            return "listing-" + mm.group(1)     # every photo of one fleet listing is the same car: they are spaced out (photos.series_days_cars)
+        if m and re.search(r"tourist board|jtb", (m.get("credit") or "") + " " + (m.get("about") or "") + " " + (m.get("series") or ""), re.I):
+            return name.split(".")[0]          # JTB library photos are separate pictures, not one shoot: each is its own (never repeated, no 21-day group wait)
+        return (m or {}).get("series") or re.sub(r"[_\-]?\d+(_\d+)?$", "", name.split(".")[0]) or name
+
+    def _load(self, src, item, kind, flags, extra=None):
+        _m = self._meta(item.get("name", "")) or {}
+        if NEVER_USE.search(" ".join([item.get("name", ""), item.get("text", ""), str(_m.get("about", "")), str(_m.get("series", ""))])):
+            return None
+        dest = self.cache / src.name / (hashlib.md5(item["id"].encode()).hexdigest()[:16] + ".jpg")
+        try:
+            if not dest.exists():
+                src.fetch(item, dest)
+            im = Image.open(dest); w, h = im.size
+        except Exception as e:
+            log.warning("fetch failed %s: %s", item["id"], e); return None
+        if min(w, h) < self.cfg["photos"]["min_short_side"]:
+            return None
+        if kind != "car" and too_old_looking(dest):
+            log.info("skip %s: black-and-white or sepia look", item["id"]); return None
+        if kind != "car" and src.name not in ("drive", "local"):
+            from . import themes as _TH
+            meta = " ".join(str(x) for x in (item.get("name", ""), (extra or {}).get("credit", ""), (extra or {}).get("text", ""), item.get("title", ""), item.get("description", "")))
+            if _TH.NOT_JAMAICA.search(meta) and "jamaica" not in meta.lower():
+                log.info("skip %s: its own title/credit names another place", item["id"]); return None
+        if kind != "car" and src.name not in ("drive", "local") and getattr(self, "_lenient", False):
+            try:                                                            # people / food / activity photo: it must look like it could be Jamaica
+                from . import vision as _V
+                if _V.shows(str(dest), "a real photo (not a drawing) that could have been taken in Jamaica or the Caribbean: a tropical or neutral setting, no snow, no landmarks, signs or flags of another country, "
+                                       "and any people in it look like they could be Jamaican (mostly Black or mixed-race Caribbean people); a recent colour photo, not historical or archive; nothing about drugs, smoking or bare feet close-ups") is not True:
+                    log.info("skip %s: the AI says it does not look like Jamaica (or could not check it)", item["id"]); return None
+            except Exception as e:
+                log.warning("Jamaica look check failed, photo left out: %s", e); return None
+        elif kind != "car" and src.name not in ("drive", "local"):          # a photo from the web: Claude must confirm it was taken in Jamaica
+            try:
+                from . import vision as _V
+                if not _V.jamaica_gate(str(dest), src.name + ":" + item["id"]):
+                    log.info("skip %s: Claude says it is not Jamaica", item["id"]); return None
+            except Exception as e:
+                log.warning("Jamaica check failed, photo left out: %s", e); return None
+        hv = L.dhash(dest)
+        why = self.led.blocked(["name:" + item["name"], item["id"]], hv, self.today, self.cfg)
+        if why:
+            log.info("skip %s: %s", item["id"], why); return None
+        if not self.cfg["photos"]["allow_people_photos"] and not (kind == "scenery" and self.cfg["photos"].get("allow_people_scenery")) and has_face(dest):
+            log.info("skip %s: face detected", item["id"]); return None
+        e = extra or {}
+        use = dest
+        if kind == "car" and src.name in ("drive", "local") and self.cfg["photos"].get("remove_plate_boxes", True):      # paint out the 'Arah Rides' box some fleet photos carry over the plate
+            try:
+                from . import deplate as _D
+                use = _D.clean(dest, src.name + ":" + item["id"])
+            except Exception as ex:
+                log.warning("plate box check skipped: %s", ex)
+        ph = Photo(item["id"], item["name"], src.name, str(use), kind, e.get("credit", "Arah Rides" if src.name in ("drive", "local") else ""),
+                   e.get("text", ""), flags, hv, self._series(item["name"]) if src.name in ("drive", "local") else "", w, h)
+        self.picked.append(ph.path); self.loaded += 1
+        if ph.credit and ph.credit != "Arah Rides":
+            self.__dict__.setdefault("credits", {})[ph.path] = ph.credit
+        self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)      # every photo handed out is marked used at once, from any source, so no post can pick it again
+        return ph
+
+    INTERIOR = re.compile(r"interior|console|dashboard|dash\b|steering|seats?\b|cabin|boot|trunk|cargo|screen|gear|odometer|rear view|back seat", re.I)
+
+    def _own(self, want, tag=None, ok=None, about=None, about_not=None, exterior=False):
+        cands = []
+        for src in self.pool:
+            try:
+                items = src.list()
+            except Exception as e:
+                self.notes.append("%s unavailable: %s" % (src.name, e)); continue
+            for it in items:
+                if it["id"] in self.tried or self.led.blocked(["name:" + it["name"], it["id"]], None, self.today, self.cfg):
+                    continue
+                if any(r.lower() in it["name"].lower() for r in self.cfg["photos"].get("retired", [])):
+                    continue                                        # photos of an event that is over (see photos.retired in config.yaml)
+                m = self._meta(it["name"], it); q = 3
+                if tag and (not m or m.get("tag") != tag):
+                    continue
+                if m and m.get("tag") == "cyber-promo" and tag != "cyber-promo":
+                    continue                                        # new cars not on the site yet: only the cyber promo posts may show them
+                if m:
+                    if m["kind"] != want or (m["people"] and not self.cfg["photos"]["allow_people_photos"] and not (want == "scenery" and self.cfg["photos"].get("allow_people_scenery"))) or m["quality"] < 3:
+                        continue
+                    if ok and not ok(self._settings(m, it["name"])):
+                        continue
+                    _txt = ((m.get("about") or "") + " " + it["name"]).lower().replace("_", " ")
+                    if about and not any(w in _txt for w in about):
+                        continue
+                    if about_not and any(w in _txt for w in about_not):
+                        continue
+                    if exterior and self.INTERIOR.search(_txt):              # car covers show the outside of the car
+                        continue
+                    if want == "scenery" and not text_ok((m.get("about") or "") + " " + it["name"].replace("_", " "), self.today.month):
+                        continue
+                    if want == "scenery" and getattr(self, "_inland", False) and COASTAL_PHOTO.search((m.get("about") or "") + " " + it["name"].replace("_", " ")):
+                        continue
+                    if want == "scenery" and getattr(self, "_place_words", None) and names_other_place((m.get("about") or "") + " " + it["name"].replace("_", " "), self._place_words):
+                        continue
+                    q = m["quality"]; flags = [] 
+                else:
+                    if want != "car" or not self.cfg["photos"]["allow_unreviewed_drive"] or (ok and not ok(set())):
+                        continue
+                    flags = ["New Drive photo I have not looked at: check the picture"]
+                cands.append([-q, self.rng.random(), src, it, flags])
+        # Spread the picks out: prefer shoots (series) not used recently, then mix at random with a mild lean to better photos.
+        gap = self.cfg["photos"].get("series_days_cars", 3) if want == "car" else self.cfg["photos"].get("series_days", 21)   # the same car may appear again after a few days, in a different photo
+        for c in cands:
+            c.append(self.led.series_age(self._series(c[3]["name"]), self.today))
+        fresh = [c for c in cands if c[5] >= gap]
+        if not fresh and cands:
+            n = "Photo library is running thin: similar photos from the same shoot are coming back sooner than %d days. Add new photos to the Drive folder." % gap
+            if n not in self.notes: self.notes.append(n)
+            fresh = [] if self.cfg["photos"].get("series_strict", True) else sorted(cands, key=lambda c: -c[5])[:max(3, len(cands) // 3)]
+        fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
+        for q, _, src, it, flags, _age in fresh[:25]:
+            self.tried.add(it["id"])
+            _m = self._meta(it["name"], it) or {}
+            p = self._load(src, it, want, flags, {"credit": _m.get("credit"), "text": _m.get("about") or ""} if _m.get("credit") else {"text": _m.get("about") or ""})
+            if p:
+                if self._meta(it["name"], it) and self._meta(it["name"], it).get("plate_visible"):
+                    p.flags.append("Number plate visible (kept sharp on purpose)")
+                return p
+        return None
+
+    def _settings(self, m, name):
+        if m.get("setting"):
+            v = m["setting"]
+            return set(v if isinstance(v, list) else str(v).split())
+        return settings_of((m.get("about") or "") + " " + name)
+
+    def car(self, tag=None, ok=None):
+        return self._own("car", tag, ok)
+
+    BAD_WEB = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|3d|poster|logo|icon|graphic|"
+                         r"spider|insect|bug|beetle|butterfl|snake|lizard|frog|animal|dog|cat\b|bird|food|plate|dish|drink|cocktail|"
+                         r"portrait|selfie|model|woman|man\b|girl|boy|people|person|crowd|hand|finger|macro|close[- ]?up|texture|pattern|map|text|sign", re.I)
+    BAD_WEB_PEOPLE_OK = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|3d|poster|logo|icon|graphic|spider|insect|bug|beetle|butterfl|snake|lizard|frog|"
+                                   r"selfie|nude|naked|bikini|topless|macro|texture|pattern|\bmap\b|\btext\b|sign\b", re.I)
+    SCENIC = re.compile(r"fall|waterfall|cascade|river|beach|sea|ocean|bay|mountain|hill|cliff|cave|pool|lagoon|valley|forest|road|coast|sunset|view|landscape|palm|island|town|city|harbou?r", re.I)
+
+    BAD_CAR = re.compile(r"vintage|classic|antique|old\b|histor|retro|illustrat|drawing|vector|cartoon|sketch|clip ?art|render|3d|toy|miniature|diecast|logo|icon|poster|"
+                         r"crash|accident|wreck|damage|junk|scrap|rust|burn|flood|police|taxi|"
+                         r"portrait|selfie|woman|man\b|girl|boy|people|person|crowd|driver|passenger|family|couple", re.I)
+
+    CN_MAKES = ("gwm", "haval", "jetour", "chery", "omoda", "jaecoo", "mg", "byd", "changan", "geely", "foton", "tank", "great wall", "baic", "dongfeng", "gac", "jac")
+
+    def car_stock(self, models, ok_models=None):
+        """A clean web photo of one of our fleet models (e.g. 'Toyota Corolla'), for when our own photos of it are thin or used lately.
+        The photo's description must name both the make and the model, and show a plain car photo: no people, drawings or damage."""
+        order = list(models); self.rng.shuffle(order)
+        for model in order[:6]:
+            make, _, name = model.partition(" ")
+            need = [make.lower(), name.lower().split()[0]]
+            for web in self.web:
+                try:
+                    items = web.search(model + " car", self.rng)
+                except Exception as e:
+                    self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
+                self.rng.shuffle(items)
+                cn = make.lower() in self.CN_MAKES or any(m in model.lower() for m in self.CN_MAKES)
+                min_year = 2024 if cn else 2017                     # nothing on the site is older than 2017; the Chinese models are 2024-2026
+                def _year_ok(t):
+                    ys = [int(y) for y in re.findall(r"\b(19[5-9]\d|20[0-3]\d)\b", t)]
+                    return not ys or max(ys) >= min_year
+                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"] * 0.8
+                        and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
+                        and all(n in i.get("text", "").lower() for n in need) and not self.BAD_CAR.search(i.get("text", "")) and _year_ok(i.get("text", ""))]
+                for it in good[:8]:
+                    self.tried.add(it["id"])
+                    p = self._load(web, it, "car", ["Stock photo of the %s (same make and model as on the site)" % model],
+                                   {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                    if not p:
+                        continue
+                    from . import vision as _V
+                    if _V.ai_on() and _V.shows(p.path, f"a {model} car (this exact make and model, not another model), current generation: it looks {min_year} or newer; "
+                                               "a real photo where the whole car is the main subject; not a race car, rally car, concept car, old or modified car; no people in front of it") is not True:
+                        self.led.data["photos"].pop(it["id"], None); continue      # not the right car: give it back, try the next one
+                    return p
+        return None
+
+    def composite_car(self, car):
+        """A stock photo of a fleet model (car) placed on a real Jamaica background photo. Returns (Photo, background Photo) or (None, None)
+        when the cut-out is not clean or no Jamaica background is free. The caller then uses one of our own car photos instead."""
+        from . import compose as CP
+        bg = None
+        bg = self.theme_photo("road")                    # Holland Bamboo, highways, roadside scenes: the car sits on a Jamaican road
+        if bg is None:
+            bg = self._own("scenery", None, lambda st: "beach" not in st or "road" in st)
+        if bg is None:
+            return None, None
+        out = self.cache / "composite" / (hashlib.md5((car.id + bg.id).encode()).hexdigest()[:16] + ".jpg")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            ok = CP.compose(car.path, bg.path, str(out))
+        except Exception as e:
+            log.warning("composite failed: %s", e); ok = None
+        if not ok:
+            return None, None
+        c = Photo(car.id, car.name, car.source, str(out), "car", "Car: " + (car.credit or "stock") + "; background: " + (bg.credit or "Arah Rides"), car.text, list(car.flags), car.hash, "", 1080, 1350)
+        c.flags.append("Composite: a stock photo of this model placed on a Jamaica background. It is not one of our own cars: check it looks natural")
+        return c, bg
+
+    def theme_photo(self, theme, ok_extra=None):
+        """Every topic photo is written to the ledger the moment it is picked, so it cannot come back for 90 days (promo, event, story and Christmas posts used to skip this)."""
+        ph = self._theme_photo(theme, ok_extra)
+        if not ph and self.web:                                        # nothing tagged 'Jamaica' left: widen to people / food / activity photos for the topic
+            qs = list(TH.THEMES.get(theme, ([],))[0])
+            self.rng.shuffle(qs)
+            for q in qs[:3]:
+                w = [x for x in re.sub(r"\b(jamaica|jamaican|caribbean)\b", "", q, flags=re.I).lower().split() if len(x) > 3][:2]
+                ph = self.topic(q, w)
+                if ph:
+                    break
+        if ph:
+            self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
+        return ph
+
+    def _theme_photo(self, theme, ok_extra=None):
+        """A Jamaica photo for a topic (road trip, food, river, culture, couple, family, group, solo): our own labelled photos first, then web photos
+        whose description says Jamaica AND matches the topic. People are welcome here."""
+        queries, rx, _people = TH.THEMES[theme]
+        need = re.compile(rx, re.I)
+        own_first = self.rng.random() >= self.cfg["photos"].get("web_share", 0.5)
+        def own():
+            return self._own("scenery", None, None, about=[w for w in re.findall(r"[a-z]+", rx) if len(w) > 3] or None)
+        if own_first:
+            p = own()
+            if p:
+                p.flags.append("Own photo matched to topic: " + theme); return p
+        qs = list(queries); self.rng.shuffle(qs)
+        for web in self.web:
+            if web.name in self._dead or (web.name == "wikimedia" and theme in TH.PEOPLE):
+                continue                 # Wikimedia people pictures were the source of random strangers: people come from our own photos, Unsplash, Pexels, Pixabay
+            items = []
+            for q in qs[:3]:
+                items += self._search(web, q)
+            self.rng.shuffle(items)
+            good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
+                    and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
+            from . import vision as _V
+            ai = _V.ai_on()
+            # stock sites almost never tag 'Jamaica': with the AI on, the photo only has to match the topic and not name another country, and the AI judges the look
+            good = [i for i in good if (TH.JA.search(i.get("text", "") + " " + i.get("name", "")) or (ai and not TH.NOT_JAMAICA.search(i.get("text", ""))))
+                    and need.search(i.get("text", "") + " " + i.get("name", "")) and not TH.JUNK.search(i.get("text", ""))
+                    and not self.BAD_WEB_PEOPLE_OK.search(i.get("text", "")) and self._web_ok(web, i)]
+            good.sort(key=lambda i: not TH.JA.search(i.get("text", "") + " " + i.get("name", "")))     # photos tagged Jamaica first
+            for it in good[:12]:
+                self.tried.add(it["id"])
+                self._lenient = ai and not TH.JA.search(it.get("text", "") + " " + it.get("name", ""))
+                try:
+                    p = self._load(web, it, "scenery", ["Web photo (%s): checked by AI" % theme], {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                finally:
+                    self._lenient = False
+                if p:
+                    return p
+        if not own_first:
+            p = own()
+            if p:
+                p.flags.append("Own photo matched to topic: " + theme); return p
+        return None
+
+    def drawn(self, text, why=""):
+        """No suitable free photo: an accurate illustration of the place or topic instead of a photo of somewhere else. Flagged for review."""
+        if not self.cfg["photos"].get("illustrations", False):
+            return None                  # real photos only (set photos.illustrations: true to allow drawn placeholders)
+        from . import illustrate as IL
+        dest = self.cache / "drawn" / (hashlib.md5((text + str(self.today)).encode()).hexdigest()[:14] + ".jpg")
+        kind = IL.make(text, dest)
+        return Photo("drawn:" + dest.stem, "drawn-" + dest.stem, "drawn", str(dest), "scenery", "Arah Rides illustration", text,
+                     ["Illustration (%s scene): no free photo of %s could be confirmed, so this is a drawing, not a photo. Swap in a real photo if you have one" % (kind, text or "this place")], 0, "", 1080, 1350)
+
+    DRAWN = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|\b3d\b|poster|logo|icon|graphic|ai generated|"
+                       r"generative|midjourney|nude|naked|topless|lingerie|bikini|snow|winter|skiing|christmas tree farm", re.I)
+
+    def health(self):
+        """One line for the review page: which photo sources answered this run, and whether Claude's checks ran."""
+        import os
+        src = ", ".join(f"{k} {v[0]} searches / {v[1]} results" for k, v in sorted(self.stats.items())) or "no web searches"
+        dead = (" · stopped early (limit or error): " + ", ".join(sorted(self._dead))) if self._dead else ""
+        from . import vision as _V
+        claude = (f"{_V.ai_name()} photo checks ON" if _V.ai_on() else "AI photo checks OFF: add your Gemini key as a GitHub secret named GEMINI_API_KEY (Settings → Secrets → Actions) and check the workflow files pass it")
+        return f"Run check · photos used {self.loaded} · {src}{dead} · {_V.status()}"
+
+    def topic(self, query, words=None):
+        """A web photo of people, food or an activity (a dad and his daughter, jerk chicken, rafting) when no Jamaica-tagged photo exists.
+        Stock sites rarely tag these 'Jamaica', so the search widens: the query as written, then Caribbean, then the subject alone.
+        The photo must name the subject in its tags, must not name another country, and Claude checks it could be Jamaica and fits the words."""
+        from . import vision as _V
+        if not _V.ai_on():                                              # without an AI to look at the photo, never widen beyond Jamaica-tagged photos
+            return None
+        base = re.sub(r"\b(jamaica|jamaican)\b", "", query, flags=re.I).strip()
+        qs = list(dict.fromkeys([query, base + " Caribbean", base]))
+        need = [w.lower() for w in (words or []) if w]
+        for web in self.web:
+            if web.name in self._dead or web.name == "wikimedia":          # Wikimedia people photos are archive shots: skip
+                continue
+            for q in qs:
+                items = self._search(web, q)
+                self.rng.shuffle(items)
+                good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"] * 0.8
+                        and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)
+                        and not self.DRAWN.search(i.get("text", "")) and self._web_ok(web, i)
+                        and (not need or any(w[:5] in i.get("text", "").lower() for w in need))]      # grandmother ~ grandma, daughters ~ daughter
+                for it in good[:6]:
+                    self.tried.add(it["id"])
+                    self._lenient = True
+                    try:
+                        p = self._load(web, it, "scenery", ["Web photo (people, food or activity): checked by AI"],
+                                       {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                    finally:
+                        self._lenient = False
+                    if p:
+                        return p
+        return None
+
+    def scene(self, query, place=None, ok=None, strict=False, words=None):
+        try:
+            return self._scene(query, place, ok, strict, words)
+        finally:
+            self._inland = False; self._place_words = None
+
+    def _place_web(self, place, query, inland=False):
+        """A real photo OF a named place, found online. Order: the photos in the place's Wikipedia article, then Wikimedia Commons, Openverse
+        (Flickr's Creative Commons photos), Unsplash, Pixabay. A photo's own title or description must name the place (apostrophes, accents and
+        dots ignored). Only light filters run before the AI: no drawings or maps, nothing clearly old, no junk; the AI then checks it is Jamaica."""
+        from . import vision as _V
+        ai = _V.ai_on()
+        order = {"wikimedia": 0, "openverse": 1, "unsplash": 2, "pixabay": 3}
+        qs = list(dict.fromkeys([query, place + " Jamaica", place]))
+        min_side = self.cfg["photos"]["min_short_side"] * 0.8
+        for web in sorted(self.web, key=lambda w: order.get(w.name, 9)):
+            if web.name in self._dead:
+                continue
+            items = []
+            if web.name == "wikimedia":
+                k = ("wiki-article", place)
+                if k not in self._sc:
+                    try: self._sc[k] = web.article_images(place)
+                    except Exception as e: log.warning("wikipedia article photos failed (%s): %s", place, e); self._sc[k] = []
+                items += list(self._sc[k])
+            for q in qs:
+                items += self._search(web, q)
+            seen = set(); cands = []
+            for i in items:
+                if i["id"] in seen:
+                    continue
+                seen.add(i["id"])
+                t = i.get("text", "") + " " + i.get("name", "")
+                if not (i.get("article") or place_match(place, t)):
+                    continue
+                if DRAWN.search(t) or REALLY_OLD.search(t) or TH.JUNK.search(t) or NEVER_USE.search(t) or TH.out_of_season(t, self.today.month):
+                    continue
+                if not ai and not TH.JA.search(t):
+                    continue                                # without the AI, the photo itself must say Jamaica
+                if TH.NOT_JAMAICA.search(t) and not TH.JA.search(t):
+                    continue
+                if inland and COASTAL_PHOTO.search(t) and not i.get("article"):
+                    continue
+                if min(i.get("w") or 9999, i.get("h") or 9999) < min_side or (i.get("year") and i["year"] < 2008):
+                    continue
+                if i["id"] in self.tried or self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg):
+                    continue
+                cands.append(i)
+            cands.sort(key=lambda i: (0 if i.get("article") else 1, -(i.get("year") or 0)))
+            for it in cands[:10]:
+                self.tried.add(it["id"])
+                self._lenient = ai                          # people at the place are welcome; the AI checks it looks like Jamaica
+                try:
+                    ph = self._load(web, it, "scenery", ["Photo of %s found online (%s), checked by AI" % (place, web.name)],
+                                    {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                finally:
+                    self._lenient = False
+                if ph:
+                    ph.flags.append("Place named in the photo's own title or article")
+                    return ph
+        return None
+
+    def _scene(self, query, place=None, ok=None, strict=False, words=None):
+        """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
+        names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
+        inland = is_inland(place, query) and not re.search(r"beach|coast|\bbay\b|\bsea\b", (place or "").lower())
+        if inland:
+            _ok = ok
+            ok = lambda st, _o=_ok: "beach" not in st and (_o is None or _o(st))
+        self._inland = inland; self._place_words = names if place else None
+        # photos of a named place come from the web first (Wikimedia / Openverse titles name the actual place); the Drive library is the fallback
+        web_first = bool(self.web) and (bool(place) or self.rng.random() < self.cfg["photos"].get("web_share", 0.5))
+        if place and not web_first:
+            key = [place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()]
+            p = self._own("scenery", None, ok, about=key)
+            if p:
+                p.flags.append("Place confirmed by photo description")
+                return p
+        if place and self.web:
+            p = self._place_web(place, query, inland)
+            if p:
+                return p
+            if web_first:                                  # nothing on the web: our own photos of the place
+                p = self._own("scenery", None, ok, about=[place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()])
+                if p:
+                    p.flags.append("Place confirmed by photo description")
+                    return p
+            return None
+        city, atts = TH.attractions_for(place)
+        if city:                                           # Kingston => Art Walk, Devon House, Emancipation Park...; Ocho Rios => Dunn's River, Fern Gully...
+            names = sorted(set(names) | set(TH.attraction_words(city)))
+        qs = [query] + (self.rng.sample(atts, min(3, len(atts))) if atts else [])
+        order = {"wikimedia": 0, "openverse": 1, "unsplash": 2, "pixabay": 3}
+        for web in (sorted(self.web, key=lambda w: order.get(w.name, 9)) if place else self.web):
+            if web.name in self._dead:
+                continue
+            items = []
+            for q in qs:
+                items += self._search(web, q)
+            if len(items) < 6 and place and place.lower() not in query.lower():
+                items += self._search(web, place + " Jamaica")
+            self.rng.shuffle(items)
+            from . import vision as _V
+            _named = lambda i: bool(place) and any(n in (i.get("text", "") + " " + i.get("name", "")).lower() for n in names)
+            items.sort(key=lambda i: not _named(i))         # photos whose title names the place first
+            # Jamaica only: the photo itself must say so, or name the place (Dunn's River, Devon House...) and pass the AI's Jamaica check
+            items = [i for i in items if TH.JA.search(i.get("text", "") + " " + i.get("name", "")) or (_V.ai_on() and _named(i) and not TH.NOT_JAMAICA.search(i.get("text", "")))]
+            good = [i for i in items if min(i.get("w", 9999), i.get("h", 9999)) >= self.cfg["photos"]["min_short_side"]
+                    and i["id"] not in self.tried and not self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg)]
+            # never use drawings, animals, close-ups or people; the description must show a real landscape
+            bad = self.BAD_WEB_PEOPLE_OK if (self.cfg["photos"].get("allow_people_scenery") and web.name != "wikimedia") else self.BAD_WEB
+            good = [i for i in good if not bad.search(i.get("text", "")) and (self.SCENIC.search(i.get("text", "")) or _named(i)) and self._web_ok(web, i)]
+            if inland:      # no beach, sea or boat photo for a town that is not on the coast
+                good = [i for i in good if not COASTAL_PHOTO.search(i.get("text", ""))]
+            if place:   # the description must name the place (or a word that belongs to it)
+                good = [i for i in good if any(n in i.get("text", "").lower() for n in names) and not names_other_place(i.get("text", ""), names)]
+            if ok:
+                good = [i for i in good if ok(settings_of(i.get("text", "")))]
+            for it in good[:12]:
+                self.tried.add(it["id"])
+                p = self._load(web, it, "scenery", ["Web photo of the place: checked by AI"],
+                               {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                if p:
+                    p.flags.append("Place confirmed by photo description" if place else "Web photo checked against its description")
+                    return p
+        if place and web_first:          # nothing suitable on the web: fall back to our own photos of the place
+            p = self._own("scenery", None, ok, about=[place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()])
+            if p:
+                p.flags.append("Place confirmed by photo description")
+                return p
+        if place:        # a named place never gets a random photo of somewhere else: the story falls back to a plain cover instead
+            return None
+        return self._own("scenery", None, ok)
