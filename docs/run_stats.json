@@ -1,0 +1,49 @@
+{
+ "elapsed_min": 40.4,
+ "times": {
+  "post deal": {
+   "count": 4,
+   "secs": 2418
+  },
+  "search openverse": {
+   "count": 147,
+   "secs": 1043
+  },
+  "search pixabay": {
+   "count": 183,
+   "secs": 40
+  },
+  "search wikimedia": {
+   "count": 72,
+   "secs": 29
+  },
+  "search unsplash": {
+   "count": 28,
+   "secs": 9
+  },
+  "render pictures": {
+   "count": 19,
+   "secs": 5
+  },
+  "art director checks": {
+   "count": 1,
+   "secs": 0
+  },
+  "reels": {
+   "count": 1,
+   "secs": 0
+  }
+ },
+ "ai": {
+  "ok": 81,
+  "fail": 0,
+  "limit": 0,
+  "streak": 0,
+  "secs": 411,
+  "read": 41
+ },
+ "run": "redo",
+ "days_done": [
+  "2026-11-27"
+ ]
+}
