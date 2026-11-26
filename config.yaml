@@ -2,6 +2,7 @@
 timezone: America/Jamaica          # UTC-5 all year, no daylight saving
 posts_per_day: 10                  # most bookings happen late at night, so 00:00, 02:00 and 22:00 always have a post
 days_ahead: 3                      # keep this many future days drafted for your review
+max_run_minutes: 40                # a run stops starting new work after this and saves; GitHub cancels jobs at 75 min, so nothing is lost
 publish_grace_hours: 4             # posts from earlier days that were never approved are skipped after this long
 late_same_day: true                 # today's posts whose time has passed still post once you approve them (one every late_gap_minutes)
 late_gap_minutes: 30
