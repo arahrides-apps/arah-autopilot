@@ -74,7 +74,10 @@ async function load(){
 }
 function status(p){const u=PUB[p.id];if(u&&["published","failed"].includes(u.status))return u.status;const d=DEC[p.id];if(d&&d.decision!=="pending")return d.decision==="approve"?"approved":"rejected";return "pending"}   // your latest choice always wins until the post is live
 function render(){
-  $("#notes").innerHTML=(IDX.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join("")+(S.tok&&S.repo?"":'<div class="note">Tap <b>Settings</b> and add your GitHub token so Approve works.</div>');
+  // run diagnostics stay out of the way: one closed "Run details" line; only a missing GitHub token is shown up top
+  const NN=(IDX.notes||[]);
+  $("#notes").innerHTML=(S.tok&&S.repo?"":'<div class="note">Tap <b>Settings</b> and add your GitHub token so Approve works.</div>')+
+    (NN.length?`<details style="margin:6px 0 10px;opacity:.7"><summary style="cursor:pointer;font-size:13px">Run details (${NN.length})</summary>${NN.map(n=>`<div class="note" style="font-size:13px">${esc(n)}</div>`).join("")}</details>`:"");
   const tz=(IDX.tz||"America/Jamaica"),iso=t=>new Intl.DateTimeFormat("en-CA",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit"}).format(t);
   const today=iso(new Date()),last=iso(new Date(Date.now()+10*864e5));      // only today and the next 10 days are shown
   const days=[...new Set(IDX.posts.map(p=>p.date))].filter(d=>d>=today&&d<=last).sort();
