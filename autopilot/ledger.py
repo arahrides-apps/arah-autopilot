@@ -126,10 +126,6 @@ class Ledger:
         if h is not None:
             self.data["hashes"].append({"h": format(h, "016x"), "date": today.isoformat(), "id": keys[0]})
 
-    def earliest_reuse(self, key, cfg):
-        e = self.data["photos"].get(key)
-        return (_d(e["last_used"]) + dt.timedelta(days=cfg["photos"]["reuse_days"])).isoformat() if e else None
-
     # ---- copy (wording)
     def copy_pick(self, kind, n, today, rng, cooldown):
         """Index of the least recently used entry. Returns (index, cycled) where cycled=True means the bank ran out of fresh wording."""

@@ -29,5 +29,12 @@ def media_base(cfg):
     branch = os.environ.get("MEDIA_BRANCH", "main")
     return f"https://raw.githubusercontent.com/{repo}/{branch}/docs/"
 
+_YC = {}
 def load_yaml(name):
-    return yaml.safe_load(open(ROOT / "content" / name)) or ({} if name.endswith("meta.yaml") else [])
+    """Content files are read once per run (they were re-read 150+ times); callers get their own copy, so changing it changes nothing on disk."""
+    import copy
+    f = ROOT / "content" / name
+    k = (str(f), f.stat().st_mtime if f.exists() else 0)
+    if k not in _YC:
+        _YC[k] = yaml.safe_load(open(f)) or ({} if name.endswith("meta.yaml") else [])
+    return copy.deepcopy(_YC[k])

@@ -17,6 +17,7 @@ log = logging.getLogger("generate")
 EMOJI = {"review": "⭐", "trip": "🗺️", "experience": "✨", "car_hero": "🚗", "place": "🌴", "qa": "🤔", "tip": "💡", "brand": "🇯🇲", "engage": "💬", "list": "✅", "chat": "💬", "carousel": "👉", "moment": "🇯🇲", "offer": "🎟️", "trust": "🎥", "versus": "🆚", "journey": "🧳", "spotlight": "📍", "deal": "🚗", "deposits": "🔑", "guide": "📌"}
 TYPE_TAG = {"experience": "#VisitJamaica", "car_hero": "#RoadTrip", "place": "#VisitJamaica", "qa": "#QandA", "tip": "#TravelTips", "brand": "#Jamaica", "engage": "#JamaicaVibes",
             "list": "#TravelJamaica", "chat": "#Winston", "carousel": "#VisitJamaica", "moment": "#Jamaica", "offer": "#Jamaica", "trust": "#Jamaica", "versus": "#Jamaica", "journey": "#JamaicaTravel", "spotlight": "#VisitJamaica", "deal": "#JamaicaCarRental", "deposits": "#JamaicaCarRental"}
+SWAPS = [0]           # planned posts that became another type this run (shown once, in the Run check line)
 FALLBACK = {"guide": "spotlight", "deal": "car_hero", "deposits": "carousel", "journey": "place", "spotlight": "place", "review": "trust", "car_hero": "brand", "place": "tip", "experience": "tip", "trip": "carousel"}
 BGS = ["green", "dark", "gold", "cream"]
 
@@ -92,16 +93,14 @@ class DayBuilder:
             opts = str(slot).split("|")
             per_day += sum(1 for o in opts if o == want) / len(opts)
         if per_day <= 0:
-            return self.cfg["copy_cooldown_days"]
+            per_day = 2.0                                  # wording also used as a fallback (place, tip...) can run a couple of times a day
         return max(1, min(self.cfg["copy_cooldown_days"], int(n / per_day)))
 
     def pick(self, kind):
         lst = self.bank[kind]
         i, cycled = self.led.copy_pick(kind, len(lst), self.today, self.rng, self.cooldown(kind, len(lst)))
         if cycled:
-            n = f"Wording for '{kind}' is running low: older posts are being repeated. Ask Claude to add more to content/bank.yaml."
-            if n not in self.notes:
-                self.notes.append(n)
+            log.info("wording for '%s' came round again (pool of %d)", kind, len(lst))
         self.led.copy_record(kind, i, self.today)
         return lst[i]
 
@@ -175,16 +174,6 @@ class DayBuilder:
             ph = self.pk.car(tag="big")
             if ph:
                 e = self.pick("hero_big")
-        if not ph and self.pk.web and self.cfg["photos"].get("stock_composites", False) and self.rng.random() < self.cfg["photos"].get("stock_car_share", 0.25):
-            ph = self.pk.car_stock(self.cfg["photos"].get("fleet_models", []))      # a clean stock photo of one of our models...
-            if ph:
-                comp, bg = self.pk.composite_car(ph)                                 # ...placed on a real Jamaica background
-                if comp:
-                    self.led.record(bg.keys(), bg.hash, self.today, bg.source, bg.series)
-                    post.setdefault("photos_extra", []).append({"id": bg.id, "name": bg.name})
-                    ph = comp; e = self.pick("hero")
-                else:
-                    ph = None
         if not ph:
             for _ in range(8):                      # the picture must fit the words: "drive" copy never gets a beach photo
                 e = self.pick("hero")
@@ -401,7 +390,7 @@ class DayBuilder:
                 continue
             ph, stock = self.camp_car_photo(e["model"], e["category"])
             if not ph:
-                self.notes.append(f"No fleet photo of a {e['model']} or another {e['category'].lower()} left for the {self.date} deal post: run 'Fetch fleet' or add car photos to Drive. Showed the next car instead.")
+                log.info(f"No fleet photo of a {e['model']} or another {e['category'].lower()} left for the {self.date} deal post: run 'Fetch fleet' or add car photos to Drive. Showed the next car instead.")
                 continue
             done.add(e["model"]); self.photo_flags(post, ph)
             pr = promo_mod.active(self.date)
@@ -517,7 +506,22 @@ class DayBuilder:
                     return ph
                 self.led.data["photos"].pop(ph.id, None)              # not the place: give it back and try the next photo
                 post["flags"].append(f"Left out a photo that did not show {s['name']}")
+        food = next((f for rx, f in self.FOOD_SHOTS if re.search(rx, (s["name"] + " " + s.get("what", "")).lower())), None)
+        if food and V.ai_on():                                          # a food stop: a real photo of that food, checked by the AI
+            for _ in range(3):
+                ph = self.pk.topic(food[0], words=food[1])
+                if not ph:
+                    break
+                if V.shows(ph.path, f"{kind}: a real photo of {food[0]}, Jamaican style; appetising; no burger, pizza or other food") is True:
+                    return ph
+                self.led.data["photos"].pop(ph.id, None)
         return None
+
+    FOOD_SHOTS = [(r"jerk", ("Jamaican jerk chicken grill", ["jerk"])), (r"shrimp", ("Jamaican pepper shrimp", ["shrimp"])),
+                  (r"fried fish|fish and festival|seafood|fish", ("Jamaican fried fish and festival", ["fish"])),
+                  (r"patt(y|ies)", ("Jamaican beef patty", ["patty", "patties"])), (r"ice cream", ("ice cream cone", ["ice cream"])),
+                  (r"coffee", ("Blue Mountain coffee", ["coffee"])), (r"curry goat", ("Jamaican curry goat", ["curry"])),
+                  (r"food stalls|roadside", ("Jamaican roadside food stall", ["food", "stall", "vendor"])), (r"market", ("Jamaican market fruit stall", ["market", "fruit"]))]
 
     def guide(self, post):
         """Drive Guide (content/guides.yaml): a save-worthy magazine-style carousel. Cover = the destination (never a car), slide 2 = the route
@@ -537,7 +541,7 @@ class DayBuilder:
                 if ph:
                     got.append((s, ph))
             if len(got) < 3:
-                self.notes.append(f"Drive guide '{g['title']}' skipped on {self.date}: only {len(got)} of its stops had a fitting photo.")
+                log.info(f"Drive guide '{g['title']}' passed over on {self.date}: only {len(got)} of its stops had a fitting photo")
                 continue
             n = len(got); style = g.get("style", "list")
             title = re.sub(r"^\d+", str(n), g["title"]) if re.match(r"^\d+ ", g["title"]) else g["title"]
@@ -654,10 +658,7 @@ class DayBuilder:
             self.led.record(ph.keys(), ph.hash, self.today, ph.source, ph.series)
             post.setdefault("flags", []).append("Slide photo from %s (licence-free): %s" % (ph.source, ph.credit or "no credit needed"))
             return ph
-        ph = self.pk.drawn(story.nice(key))
-        if ph:
-            post.setdefault("flags", []).append(ph.flags[0])
-        return ph
+        return None
 
     def review(self, post):
         """Real renter reviews from arahrides.com, one per slide, on a cover with a real photo of the car; then how to book."""
@@ -868,7 +869,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
             else: pages = b.simple(post, t)
             if pages is None:
                 nt = FALLBACK.get(t)
-                b.notes.append(f"No fresh photo for a {t} post on {date}: made a {nt} post instead.")
+                log.info(f"No fitting photo for a {t} post on {date}: made a {nt} post instead"); SWAPS[0] += 1
                 t = nt; post["type"] = nt; post["id"] = f"{date}_{hhmm.replace(':', '')}_{nt}"
         if idx in cfg.get("single_slots", []) and len(pages) == 1 and date.toordinal() % 5 < cfg.get("single_days_per_5", 5):
             post["single"] = True                       # a deliberate single-picture post (about 20% of the day), not turned into a carousel
@@ -888,7 +889,7 @@ def generate_day(cfg, led, picker, date, now, render=True, notes=None, skip=()):
                 alt = b.expand(post, "deal", alt, None)
             if alt and '<img src="file:' in alt[0][0]:
                 pages = alt; post["raw"] = list(dict.fromkeys(str(x) for x in b.pk.picked))
-                b.notes.append(f"No fresh photo that fits the planned {hhmm} post on {date}: made it a car deal post instead.")
+                log.info(f"No fitting photo for the planned {hhmm} post on {date}: made it a car deal post instead"); SWAPS[0] += 1
         if not pages or '<img src="file:' not in pages[0][0]:
             if not cfg["photos"].get("allow_text_cover", False):        # every post opens on a real photo; no fresh photo = no post (never a text card cover)
                 b.notes.append(f"Skipped the {hhmm} post on {date}: no fresh photo for its cover (the free photo sources ran dry this run; the next run tries again).")
@@ -962,15 +963,15 @@ def run(cfg, picker=None, led=None, render=True, days=None):
         if posts:
             Q.save_day(str(d), sorted(keep + posts, key=lambda p: p["slot"])); made.append((str(d), len(posts)))
     notes += picker.notes
-    notes.append(picker.health())
+    notes.append(picker.health() + (f" · {SWAPS[0]} planned posts became another type (no fitting photo)" if SWAPS[0] else ""))
     try:
         from . import music as _M, webvideo as _WV
-        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · {_WV.status()}")
+        notes.append(f"Run check · {_WV.status()}")
     except Exception:
         pass
     try:
         freed = led.reconcile(now.date())
-        if freed: notes.append(f"Run check · gave back {freed} photos that were looked at but not used in any post (they can be used again)")
+        if freed: log.info("gave back %d photos that were looked at but not used in any post", freed)
     except Exception as e:
         log.warning("photo give-back failed: %s", e)
     led.prune(now.date()); led.save()

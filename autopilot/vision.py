@@ -252,6 +252,34 @@ def _ask(parts, max_tokens=600):
     STATS["fail"] += 1
     raise RuntimeError("Gemini did not answer (rate limit or error)")
 
+def search_web(prompt, max_tokens=1500):
+    """Gemini with Google Search: used to FIND things online (e.g. the Wikimedia Commons photo files of a named place).
+    Gemini only; returns the text answer or None."""
+    import os, requests
+    prov, key = ai_provider()
+    if prov != "gemini":
+        return None
+    for m in ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash"):
+        if m in _GDEAD:
+            continue
+        try:
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", timeout=90,
+                              headers={"x-goog-api-key": key, "content-type": "application/json"},
+                              json={"contents": [{"role": "user", "parts": [{"text": prompt}]}], "tools": [{"google_search": {}}],
+                                    "generationConfig": {"maxOutputTokens": max_tokens, "temperature": 0}})
+        except Exception:
+            continue
+        if r.status_code in (404, 403):
+            _GDEAD.add(m); continue
+        if r.status_code >= 400:
+            STATS["limit" if r.status_code == 429 else "fail"] += 1; continue
+        c = (r.json().get("candidates") or [{}])[0]
+        txt = "".join(x.get("text", "") for x in (c.get("content") or {}).get("parts", []) if not x.get("thought"))
+        if txt.strip():
+            STATS["ok"] += 1
+            return txt
+    return None
+
 GEMINI_MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-lite"]
 _GDEAD = set()
 STATS = {"ok": 0, "fail": 0, "limit": 0}

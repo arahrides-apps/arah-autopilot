@@ -90,14 +90,14 @@ JUNK = re.compile(r"cannabis|marijuana|\bweed\b|ganja|hemp|\bdrugs?\b|smoking|ci
                   r"cartoon|animation|animated|\b3d\b|render|vector|motion graphic|abstract|particles|\bloop\b|green screen|chroma|"
                   r"tennis|pickleball|racket|racquet|jamaica cup|"
                   r"bikini|lingerie|\bsexy\b|\bfeet\b|\bfoot\b|toes|"
-                  r"\bsnow|snowy|winter|\bski|glacier|alps|alpine|autumn|\bfall foliage|fall colou?rs|pine forest|\bdesert|dune|iceland|norway|switzerland|"
+                  r"\bsnow|snowy|\bski(ing|er|ers|s)?\b|glacier|alps|alpine|autumn|\bfall foliage|fall colou?rs|pine forest|\bdesert|dune|iceland|norway|switzerland|"
                   r"burger|hamburger|pizza|sushi|hot ?dog|fries|kebab|taco|noodle|"
                   r"polic|\bmask|covid|protest|riot|soldier|military|army|\bgun|weapon|funeral|coffin|hospital|accident|crash|arrest|prison|"
                   r"illustrat|drawing|painting|painted|engraving|lithograph|oil on|watercolo|sketch|poster|postcard|stamp|coin|banknote|"
-                  r"portrait of|\bbust\b|statue|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
-                  r"railroad|railway|rail yard|rail tracks|train station|subway|\bmetro\b|locomotive|jamaica station|jamaica avenue|jamaica plain|queens|new york|\bnyc\b|long island|lirr|brooklyn|manhattan|boston|"
-                  r"\brac(e|es|ing)\b|race ?car|rally|motorsport|formula|nascar|drift|drag race|go-?kart|karting|speedway|circuit|grand prix|hot ?rod|muscle car|classic car|old car|oldtimer|car show|rusty|rust\b|wreck|junkyard|abandoned car|"
-                  r"histor|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|colonial|slave|plantation ruins|\b(?:18|19)\d\d\b|\b20[01]\d\b", re.I)
+                  r"portrait of|\bbust\b|\bmap\b|diagram|chart|flag of|coat of arms|logo|screenshot|\bmeme\b|"
+                  r"railroad|railway|rail yard|rail tracks|train station|subway|\bmetro\b|locomotive|jamaica station|jamaica avenue|jamaica plain|queens|new york|\bnyc\b|long island|lirr|brooklyn|manhattan|boston(?! bay| beach)|"
+                  r"\brac(e|es|ing)\b|race ?car|rally|motorsport|formula|nascar|\bdrift(ing)?\b|drag race|go-?kart|karting|speedway|circuit|grand prix|hot ?rod|muscle car|classic car|old car|oldtimer|car show|rusty|rust\b|wreck|junkyard|abandoned car|"
+                  r"history photo|historical photo|vintage|archiv|antique|sepia|black and white|black & white|monochrome|b&w|plantation ruins|\b(?:18|19)\d\d\b|\b200[0-7]\b", re.I)
 
 EVENT_THEMES = [(re.compile(r"fashion", re.I), "fashion")]
 def event_theme(*texts):

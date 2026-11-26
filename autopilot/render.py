@@ -2,12 +2,29 @@
 import tempfile, os
 from pathlib import Path
 
+_PW = {}
+
+def page(w=1080, h=1350):
+    """A new tab in ONE Chromium kept open for the whole run (starting Chromium for every post cost ~2 s each time)."""
+    if "b" not in _PW:
+        import atexit
+        from playwright.sync_api import sync_playwright
+        _PW["pw"] = sync_playwright().start()
+        _PW["b"] = _PW["pw"].chromium.launch(args=["--allow-file-access-from-files"])
+        atexit.register(close)
+    return _PW["b"].new_page(viewport={"width": w, "height": h})
+
+def close():
+    try:
+        if "b" in _PW: _PW.pop("b").close()
+        if "pw" in _PW: _PW.pop("pw").stop()
+    except Exception:
+        pass
+
 def render_all(jobs):
     """jobs: list of (html, height, out_path). Writes 1080-wide JPEGs."""
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as p:
-        b = p.chromium.launch(args=["--allow-file-access-from-files"])
-        pg = b.new_page(viewport={"width": 1080, "height": 1350})
+    pg = page(1080, 1350)
+    try:
         for html_, h, out in jobs:
             Path(out).parent.mkdir(parents=True, exist_ok=True)
             with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
@@ -21,4 +38,5 @@ def render_all(jobs):
                 pg.screenshot(path=str(out), type="jpeg", quality=90, clip={"x": 0, "y": 0, "width": 1080, "height": h})
             finally:
                 os.unlink(name)
-        b.close()
+    finally:
+        pg.close()

@@ -190,13 +190,6 @@ def _fresh_file(files, date, peek=False):
     return Path(k) if k else None
 
 def add_reels(cfg, posts, date):
-    try:                                                       # instrumental, commercial-use music for every Reel (Openverse, no key needed)
-        from . import music as _M
-        _n = cfg.get("reels", {}).get("music_tracks", 20)
-        if _M.fetch(_n) < _n:
-            _M.fetch_ccmixter(_n)
-    except Exception as _e:
-        log.warning("music fetch skipped: %s", _e) if "log" in globals() else None
     """Marks some of the day's posts to go out as Reels. Returns notes. A reel replaces that slot's carousel on Instagram; the review page still shows the slides."""
     rc = cfg.get("reels") or {}
     n = rc.get("per_day", 0)
@@ -215,6 +208,8 @@ def add_reels(cfg, posts, date):
     pick = (first + [p for p in cand if p not in first and p not in keepers])[:n]
     clips = sorted((Q.ROOT / "content" / "reels").glob("clip_*.mp4")) if rc.get("clips", True) else []
     used_lib = False
+    from . import reel2
+    reel2.DEFER = []                                   # hook Reels are encoded together at the end, several at once
     for p in pick:
         rel = p["images"][0].rsplit("_", 1)[0] + ".mp4"
         try:
@@ -247,4 +242,11 @@ def add_reels(cfg, posts, date):
             p.setdefault("flags", []).append("Goes out as a Reel (%s)." % p["reel_kind"])
         except Exception as e:
             notes.append("Reel for %s failed, stays a carousel: %s" % (p["id"], str(e)[:120]))
+    jobs, reel2.DEFER = reel2.DEFER or [], None
+    if jobs:
+        bad = reel2.run_deferred(jobs)
+        for p in pick:
+            if p.get("reel") and str(Q.DOCS / p["reel"]) in bad:
+                p.pop("reel", None); p["flags"] = [f for f in p.get("flags", []) if not f.startswith("Goes out as a Reel")]
+                notes.append("Reel for %s failed, stays a carousel" % p["id"])
     return notes

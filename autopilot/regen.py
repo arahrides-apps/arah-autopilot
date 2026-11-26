@@ -55,15 +55,16 @@ def run(cfg, start=None, picker=None, led=None, render=True, wipe=False):
         if new:
             Q.save_day(str(d), sorted(keep + new, key=lambda p: p["slot"])); made.append((str(d), len(new)))
     notes += picker.notes
-    notes.append(picker.health())
+    from .generate import SWAPS
+    notes.append(picker.health() + (f" · {SWAPS[0]} planned posts became another type (no fitting photo)" if SWAPS[0] else ""))
     try:
         from . import music as _M, webvideo as _WV
-        notes.append(f"Run check · music tracks ready {len(_M.tracks())} · {_WV.status()}")
+        notes.append(f"Run check · {_WV.status()}")
     except Exception:
         pass
     try:
         freed = led.reconcile(now.date())
-        if freed: notes.append(f"Run check · gave back {freed} photos that were looked at but not used in any post (they can be used again)")
+        if freed: log.info("gave back %d photos that were looked at but not used in any post", freed)
     except Exception as e:
         log.warning("photo give-back failed: %s", e)
     led.prune(now.date()); led.save()

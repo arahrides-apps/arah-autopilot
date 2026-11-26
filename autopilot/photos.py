@@ -49,6 +49,35 @@ def too_old_looking(path):
     except Exception:
         return False
 
+import unicodedata as _ud
+def _norm(s):
+    s = _ud.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    s = re.sub(r"[.'`\u2019]", "", s)
+    return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+_GENERIC = {"falls", "fall", "river", "beach", "bay", "cove", "great", "house", "park", "estate", "national", "rafting", "museum", "market", "the", "of",
+            "and", "cafe", "bar", "hill", "gardens", "garden", "caves", "cave", "lagoon", "jamaica", "fort", "town", "lighthouse", "beaches", "castle"}
+_COMMON = {"blue", "long", "black", "green", "port", "little", "white", "seven", "middle", "new", "old", "red", "hope", "good", "lime", "bath", "holland", "royal",
+           "mile", "hole", "pen", "san", "james", "james", "faiths", "doctors", "lovers"}
+
+def place_match(place, text):
+    """Does a photo's own title/description name this place? 'Dunn's River Falls' matches 'Dunns River Falls 2012.jpg';
+    'YS Falls' matches 'Y.S. Falls'; a vague word alone ('Blue') never counts."""
+    p = _norm(place); t = " " + _norm(text) + " "
+    if not p:
+        return False
+    for v in {p, re.sub(r"^the ", "", p)}:
+        if f" {v} " in t:
+            return True
+    keys = [w for w in p.split() if w not in _GENERIC and len(w) > 2]
+    strong = [w for w in keys if w not in _COMMON]
+    if strong:
+        return all(re.search(r"\b" + re.escape(w), t) for w in strong) and (len(keys) == len(strong) or any(f" {w} " in t for w in keys if w in _COMMON))
+    return False
+
+DRAWN = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|\brender|3d model|poster|\blogo\b|\bicon\b|\bmap of|\bmap\b|locator|engraving|lithograph|\bflag\b|diagram|coat of arms", re.I)
+REALLY_OLD = re.compile(r"sepia|black and white|black & white|monochrome|\bb&w\b|vintage|archiv|engraving|postcard|lithograph|\b1[5-9]\d\d\b|daguerreotype|glass plate|stereograph", re.I)
+
 def text_ok(text, month):
     """True when a photo's own words (name, description, tags) are fine to use now: nothing historical, no drawings, no event from another time of year."""
     return not TH.JUNK.search(text or "") and not TH.out_of_season(text, month)
@@ -322,8 +351,8 @@ class OpenverseSource:
     name = "openverse"
     UA = {"User-Agent": "ArahAutopilot/1.0 (https://arahrides.com; marketing)"}
     def __init__(self, cfg):
-        lic = cfg["sources"]["openverse"].get("licenses", "by,cc0,pdm")
-        self.lic = "by,cc0,pdm" if lic in ("cc0,pdm", "cc0", "pdm") else lic
+        lic = cfg["sources"]["openverse"].get("licenses", "by,by-sa,cc0,pdm")
+        self.lic = "by,by-sa,cc0,pdm" if lic in ("cc0,pdm", "cc0", "pdm", "by,cc0,pdm") else lic
         self.cid = os.environ.get("OPENVERSE_CLIENT_ID", ""); self.sec = os.environ.get("OPENVERSE_CLIENT_SECRET", "")
         self._tok = None; self._off = False
     def _headers(self):
@@ -357,12 +386,12 @@ class OpenverseSource:
             if not p.get("url") or (p.get("filetype") or "jpg").lower() not in ("jpg", "jpeg", "png", ""):
                 continue
             lic = (p.get("license") or "").lower()
-            if lic not in ("by", "cc0", "pdm"):
+            if lic not in ("by", "by-sa", "cc0", "pdm"):
                 continue
             out.append({"id": "openverse:%s" % p["id"], "name": "openverse-%s" % p["id"], "url": p["url"],
-                        "w": p.get("width") or 0, "h": p.get("height") or 0,
+                        "w": p.get("width") or 9999, "h": p.get("height") or 9999,          # size not given: checked after download instead
                         "text": " ".join([p.get("title") or ""] + [t.get("name", "") for t in p.get("tags") or []]),
-                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", ("CC BY" if lic == "by" else lic.upper()))})
+                        "credit": "%s (%s, via Openverse)" % (p.get("creator") or "unknown", {"by": "CC BY", "by-sa": "CC BY-SA"}.get(lic, lic.upper()))})
         return out
     def fetch(self, item, dest):
         http_file(item["url"], str(dest) + ".orig"); return _finish(dest)
@@ -377,7 +406,7 @@ class WikimediaSource:
     def free(meta):
         lic = ((meta.get("LicenseShortName") or {}).get("value") or "").lower()
         return lic.startswith("cc0") or "public domain" in lic or lic.startswith("pd") or \
-            (lic.startswith("cc by") and "sa" not in lic.split() and "-sa" not in lic and "nc" not in lic and "nd" not in lic)
+            (lic.startswith("cc by") and "nc" not in lic.replace("-", " ").split() and "nd" not in lic.replace("-", " ").split())   # CC BY and CC BY-SA (credited); never NonCommercial / NoDerivatives
     def search(self, query, rng):
         d = http_json("https://commons.wikimedia.org/w/api.php", headers=self.UA, params={
             "action": "query", "format": "json", "generator": "search", "gsrsearch": query + " filetype:bitmap",
@@ -395,6 +424,50 @@ class WikimediaSource:
                         "text": (p.get("title") or "") + " " + desc,
                         "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
         return out
+    def article_images(self, place, rng=None):
+        """Photos used in the Wikipedia article about the place (e.g. 'Dunn's River Falls'): those are photos OF the place.
+        Same licence rules as Commons search (public domain, CC0, CC BY, CC BY-SA: always credited)."""
+        s = http_json("https://en.wikipedia.org/w/api.php", headers=self.UA, params={
+            "action": "query", "format": "json", "list": "search", "srsearch": place + " Jamaica", "srlimit": 2})
+        hits = [h["title"] for h in (s.get("query", {}).get("search") or [])]
+        hits = [h for h in hits if place_match(place, h)] or hits[:1]
+        out = []
+        for title in hits[:1]:
+            d = http_json("https://en.wikipedia.org/w/api.php", headers=self.UA, params={
+                "action": "query", "format": "json", "titles": title, "generator": "images", "gimlimit": 40,
+                "prop": "imageinfo", "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1800})
+            for p in (d.get("query", {}).get("pages") or {}).values():
+                ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata") or {}
+                if not ii.get("thumburl") or ii.get("mime") not in ("image/jpeg", "image/png") or not self.free(md):
+                    continue
+                desc = re_tags((md.get("ImageDescription") or {}).get("value") or "")
+                ym = re.search(r"(1[5-9]\d\d|20\d\d)", (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or "")
+                out.append({"year": int(ym.group(1)) if ym else 0, "id": "wikimedia-file:%s" % (p.get("title") or ""), "name": "wikimedia-%s" % hashlib.md5((p.get("title") or "").encode()).hexdigest()[:12],
+                            "url": ii["thumburl"], "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0, "article": title,
+                            "text": f"{place} (photo from the Wikipedia article '{title}') " + (p.get("title") or "") + " " + desc,
+                            "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
+        return out
+
+    def files_by_title(self, titles, place):
+        """Commons photo files named by Gemini (searched with Google): looked up by their exact title. Files that do not exist are skipped."""
+        titles = [t if t.startswith("File:") else "File:" + t for t in titles if t][:20]
+        if not titles:
+            return []
+        d = http_json("https://commons.wikimedia.org/w/api.php", headers=self.UA, params={
+            "action": "query", "format": "json", "titles": "|".join(titles), "prop": "imageinfo",
+            "iiprop": "url|size|extmetadata|mime", "iiurlwidth": 1800})
+        out = []
+        for p in (d.get("query", {}).get("pages") or {}).values():
+            ii = (p.get("imageinfo") or [{}])[0]; md = ii.get("extmetadata") or {}
+            if "missing" in p or not ii.get("thumburl") or ii.get("mime") not in ("image/jpeg", "image/png") or not self.free(md):
+                continue
+            ym = re.search(r"(1[5-9]\d\d|20\d\d)", (md.get("DateTimeOriginal") or {}).get("value") or (md.get("DateTime") or {}).get("value") or "")
+            out.append({"year": int(ym.group(1)) if ym else 0, "id": "wikimedia:%s" % p.get("pageid"), "name": "wikimedia-%s" % p.get("pageid"),
+                        "url": ii["thumburl"], "w": ii.get("thumbwidth") or 0, "h": ii.get("thumbheight") or 0, "article": "gemini",
+                        "text": f"{place} (found by Gemini) " + (p.get("title") or "") + " " + re_tags((md.get("ImageDescription") or {}).get("value") or ""),
+                        "credit": "Photo by %s, Wikimedia Commons (%s)" % (re_tags((md.get("Artist") or {}).get("value") or "unknown").strip()[:60] or "unknown", (md.get("LicenseShortName") or {}).get("value") or "public domain")})
+        return out
+
     def fetch(self, item, dest):
         import requests
         with requests.get(item["url"], headers=self.UA, stream=True, timeout=60) as r:
@@ -464,14 +537,33 @@ class Picker:
         k = (web.name, query)
         if k not in self._sc:
             st = self.stats.setdefault(web.name, [0, 0])
+            if web.name == "unsplash":                     # the free key allows 50 searches an hour: at most 45 a run, most of them kept for place photos
+                cap = self.cfg["sources"].get("unsplash", {}).get("max_searches_per_run", 45)
+                if st[0] >= cap or (st[0] >= cap // 3 and not getattr(self, "_place_mode", False)):
+                    return []
             try:
                 self._sc[k] = web.search(query, self.rng)
                 st[0] += 1; st[1] += len(self._sc[k])
             except Exception as e:
-                self.notes.append("%s search failed: %s" % (web.name, str(e)[:80]))
+                log.warning("%s search failed: %s", web.name, str(e)[:120])
                 if any(c in str(e) for c in ("429", "403", "401")): self._dead.add(web.name)
                 self._sc[k] = []
         return list(self._sc[k])
+
+    def _prefetch(self, qs, webs):
+        """Search all the photo sites at the same time (each site still gets its queries one by one, so its rate limit holds)."""
+        todo = {}
+        for w in webs:
+            if w.name in self._dead:
+                continue
+            lst = [q for q in qs if (w.name, q) not in self._sc]
+            if lst:
+                todo[w] = lst
+        if len(todo) < 2:
+            return
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(len(todo)) as ex:
+            list(ex.map(lambda wq: [self._search(wq[0], q) for q in wq[1]], todo.items()))
 
     MIN_YEAR = 2014
 
@@ -612,7 +704,7 @@ class Picker:
         fresh = [c for c in cands if c[5] >= gap]
         if not fresh and cands:
             n = "Photo library is running thin: similar photos from the same shoot are coming back sooner than %d days. Add new photos to the Drive folder." % gap
-            if n not in self.notes: self.notes.append(n)
+            log.info(n)
             fresh = [] if self.cfg["photos"].get("series_strict", True) else sorted(cands, key=lambda c: -c[5])[:max(3, len(cands) // 3)]
         fresh.sort(key=lambda c: c[1] - 0.12 * (-c[0]))
         for q, _, src, it, flags, _age in fresh[:25]:
@@ -658,7 +750,7 @@ class Picker:
                 try:
                     items = web.search(model + " car", self.rng)
                 except Exception as e:
-                    self.notes.append("%s search failed: %s" % (web.name, str(e)[:80])); continue
+                    log.warning("%s search failed: %s", web.name, str(e)[:80]); continue
                 self.rng.shuffle(items)
                 cn = make.lower() in self.CN_MAKES or any(m in model.lower() for m in self.CN_MAKES)
                 min_year = 2024 if cn else 2017                     # nothing on the site is older than 2017; the Chinese models are 2024-2026
@@ -680,28 +772,6 @@ class Picker:
                         self.led.data["photos"].pop(it["id"], None); continue      # not the right car: give it back, try the next one
                     return p
         return None
-
-    def composite_car(self, car):
-        """A stock photo of a fleet model (car) placed on a real Jamaica background photo. Returns (Photo, background Photo) or (None, None)
-        when the cut-out is not clean or no Jamaica background is free. The caller then uses one of our own car photos instead."""
-        from . import compose as CP
-        bg = None
-        bg = self.theme_photo("road")                    # Holland Bamboo, highways, roadside scenes: the car sits on a Jamaican road
-        if bg is None:
-            bg = self._own("scenery", None, lambda st: "beach" not in st or "road" in st)
-        if bg is None:
-            return None, None
-        out = self.cache / "composite" / (hashlib.md5((car.id + bg.id).encode()).hexdigest()[:16] + ".jpg")
-        out.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            ok = CP.compose(car.path, bg.path, str(out))
-        except Exception as e:
-            log.warning("composite failed: %s", e); ok = None
-        if not ok:
-            return None, None
-        c = Photo(car.id, car.name, car.source, str(out), "car", "Car: " + (car.credit or "stock") + "; background: " + (bg.credit or "Arah Rides"), car.text, list(car.flags), car.hash, "", 1080, 1350)
-        c.flags.append("Composite: a stock photo of this model placed on a Jamaica background. It is not one of our own cars: check it looks natural")
-        return c, bg
 
     def theme_photo(self, theme, ok_extra=None):
         """Every topic photo is written to the ledger the moment it is picked, so it cannot come back for 90 days (promo, event, story and Christmas posts used to skip this)."""
@@ -762,16 +832,6 @@ class Picker:
                 p.flags.append("Own photo matched to topic: " + theme); return p
         return None
 
-    def drawn(self, text, why=""):
-        """No suitable free photo: an accurate illustration of the place or topic instead of a photo of somewhere else. Flagged for review."""
-        if not self.cfg["photos"].get("illustrations", False):
-            return None                  # real photos only (set photos.illustrations: true to allow drawn placeholders)
-        from . import illustrate as IL
-        dest = self.cache / "drawn" / (hashlib.md5((text + str(self.today)).encode()).hexdigest()[:14] + ".jpg")
-        kind = IL.make(text, dest)
-        return Photo("drawn:" + dest.stem, "drawn-" + dest.stem, "drawn", str(dest), "scenery", "Arah Rides illustration", text,
-                     ["Illustration (%s scene): no free photo of %s could be confirmed, so this is a drawing, not a photo. Swap in a real photo if you have one" % (kind, text or "this place")], 0, "", 1080, 1350)
-
     DRAWN = re.compile(r"illustrat|drawing|drawn|painting|painted|vector|cartoon|sketch|clip ?art|render|\b3d\b|poster|logo|icon|graphic|ai generated|"
                        r"generative|midjourney|nude|naked|topless|lingerie|bikini|snow|winter|skiing|christmas tree farm", re.I)
 
@@ -822,6 +882,109 @@ class Picker:
         finally:
             self._inland = False; self._place_words = None
 
+    def _hints(self, place, what=""):
+        """Ask Gemini once per place (answers are kept in content/place_hints.json):
+        other names and spellings, the best search phrases, and (with Google Search) real Wikimedia Commons photo files of the place."""
+        import json as _j
+        from . import vision as _V
+        f = ROOT / "content" / "place_hints.json"
+        if not hasattr(self, "_hint_db"):
+            try: self._hint_db = _j.loads(f.read_text())
+            except Exception: self._hint_db = {}
+        k = place.lower().strip()
+        if k in self._hint_db or not _V.ai_on():
+            return self._hint_db.get(k) or {}
+        h = {"aliases": [], "queries": [], "files": []}
+        try:
+            t = _V.ask([f"The place '{place}' in Jamaica{(' (' + what + ')') if what else ''}. Reply with ONLY JSON: "
+                        '{"aliases": [up to 5 other names or spellings people and photo sites use for it], '
+                        '"queries": [up to 4 short photo-search phrases that would find real photos of exactly this place]}'], 400) or ""
+            m = re.search(r"\{.*\}", t, re.S)
+            if m:
+                d = _j.loads(m.group(0))
+                h["aliases"] = [str(a) for a in d.get("aliases", []) if a][:5]
+                h["queries"] = [str(q) for q in d.get("queries", []) if q][:4]
+        except Exception as e:
+            log.warning("place hints failed (%s): %s", place, e)
+        try:
+            t = _V.search_web(f"Search Wikimedia Commons for photographs of {place}, Jamaica{(' (' + what + ')') if what else ''}. "
+                              "Reply with ONLY the exact Commons file titles of real photos of this place (not maps, logos or drawings), "
+                              "up to 12, one per line, each starting with File:") or ""
+            h["files"] = list(dict.fromkeys(re.findall(r"File:[^\n|\]\[]+?\.(?:jpe?g|JPE?G|png|PNG)", t)))[:12]
+        except Exception as e:
+            log.warning("photo search by Gemini failed (%s): %s", place, e)
+        self._hint_db[k] = h
+        try:
+            f.write_text(_j.dumps(self._hint_db, indent=1, ensure_ascii=False))
+        except Exception:
+            pass
+        return h
+
+    def _place_web(self, place, query, inland=False):
+        """A real photo OF a named place, found online. Order: the photos in the place's Wikipedia article, then Wikimedia Commons, Openverse
+        (Flickr's Creative Commons photos), Unsplash, Pixabay. A photo's own title or description must name the place (apostrophes, accents and
+        dots ignored). Only light filters run before the AI: no drawings or maps, nothing clearly old, no junk; the AI then checks it is Jamaica."""
+        from . import vision as _V
+        ai = _V.ai_on()
+        order = {"wikimedia": 0, "openverse": 1, "unsplash": 2, "pixabay": 3}
+        hints = self._hints(place)
+        names = [place] + list(hints.get("aliases") or [])
+        qs = list(dict.fromkeys([query, place + " Jamaica", place] + list(hints.get("queries") or [])[:3]))
+        min_side = self.cfg["photos"]["min_short_side"] * 0.8
+        self._place_mode = True
+        self._prefetch(qs, self.web)
+        for web in sorted(self.web, key=lambda w: order.get(w.name, 9)):
+            if web.name in self._dead:
+                continue
+            items = []
+            if web.name == "wikimedia":
+                k = ("wiki-article", place)
+                if k not in self._sc:
+                    try: self._sc[k] = web.article_images(place)
+                    except Exception as e: log.warning("wikipedia article photos failed (%s): %s", place, e); self._sc[k] = []
+                    if hints.get("files"):
+                        try: self._sc[k] += web.files_by_title(hints["files"], place)
+                        except Exception as e: log.warning("Gemini photo files failed (%s): %s", place, e)
+                items += list(self._sc[k])
+            for q in qs:
+                items += self._search(web, q)
+            seen = set(); cands = []
+            for i in items:
+                if i["id"] in seen:
+                    continue
+                seen.add(i["id"])
+                t = i.get("text", "") + " " + i.get("name", "")
+                if not (i.get("article") or any(place_match(n, t) for n in names)):
+                    continue
+                if DRAWN.search(t) or REALLY_OLD.search(t) or TH.JUNK.search(t) or NEVER_USE.search(t) or TH.out_of_season(t, self.today.month):
+                    continue
+                if not ai and not TH.JA.search(t):
+                    continue                                # without the AI, the photo itself must say Jamaica
+                if TH.NOT_JAMAICA.search(t) and not TH.JA.search(t):
+                    continue
+                if inland and COASTAL_PHOTO.search(t) and not i.get("article"):
+                    continue
+                if min(i.get("w") or 9999, i.get("h") or 9999) < min_side or (i.get("year") and i["year"] < 2008):
+                    continue
+                if i["id"] in self.tried or self.led.blocked(["name:" + i["name"], i["id"]], None, self.today, self.cfg):
+                    continue
+                cands.append(i)
+            cands.sort(key=lambda i: (0 if i.get("article") else 1, -(i.get("year") or 0)))
+            for it in cands[:10]:
+                self.tried.add(it["id"])
+                self._lenient = ai                          # people at the place are welcome; the AI checks it looks like Jamaica
+                try:
+                    ph = self._load(web, it, "scenery", ["Photo of %s found online (%s), checked by AI" % (place, web.name)],
+                                    {"credit": it.get("credit", ""), "text": it.get("text", "")})
+                finally:
+                    self._lenient = False
+                if ph:
+                    ph.flags.append("Place named in the photo's own title or article")
+                    self._place_mode = False
+                    return ph
+        self._place_mode = False
+        return None
+
     def _scene(self, query, place=None, ok=None, strict=False, words=None):
         """Scenery photo for a place: own labelled photos of that place first, then strictly checked web photos, then any own scenery."""
         names = [w.lower() for w in ([place] if place else []) + list(words or []) if w]
@@ -838,11 +1001,22 @@ class Picker:
             if p:
                 p.flags.append("Place confirmed by photo description")
                 return p
+        if place and self.web:
+            p = self._place_web(place, query, inland)
+            if p:
+                return p
+            if web_first:                                  # nothing on the web: our own photos of the place
+                p = self._own("scenery", None, ok, about=[place.lower().split("'")[0].split()[0]] + [w for w in names if w != place.lower()])
+                if p:
+                    p.flags.append("Place confirmed by photo description")
+                    return p
+            return None
         city, atts = TH.attractions_for(place)
         if city:                                           # Kingston => Art Walk, Devon House, Emancipation Park...; Ocho Rios => Dunn's River, Fern Gully...
             names = sorted(set(names) | set(TH.attraction_words(city)))
         qs = [query] + (self.rng.sample(atts, min(3, len(atts))) if atts else [])
         order = {"wikimedia": 0, "openverse": 1, "unsplash": 2, "pixabay": 3}
+        self._prefetch(qs, self.web)
         for web in (sorted(self.web, key=lambda w: order.get(w.name, 9)) if place else self.web):
             if web.name in self._dead:
                 continue

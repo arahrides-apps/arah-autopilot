@@ -87,21 +87,24 @@ def reel_end_html(head, sub=""):
 <div class="abs" style="left:64px;right:64px;top:1660px;text-align:center;font-size:22px;opacity:.65">Check availability and book at www.arahrides.com or with Winston on WhatsApp.</div>""", True)
 
 def render_reel_end(head, sub, out):
-    from playwright.sync_api import sync_playwright
+    from .render import page
     out = Path(out); out.parent.mkdir(parents=True, exist_ok=True)
-    with sync_playwright() as pw:
-        br = pw.chromium.launch(); pg = br.new_page(viewport={"width": 1080, "height": 1920})
-        pg.set_content(reel_end_html(head, sub)); pg.wait_for_timeout(250); pg.screenshot(path=str(out), omit_background=True); br.close()   # see-through: the opening shot shows behind it, so the Reel loops
+    pg = page(1080, 1920)
+    try:
+        pg.set_content(reel_end_html(head, sub)); pg.wait_for_timeout(250); pg.screenshot(path=str(out), omit_background=True)   # see-through: the opening shot shows behind it, so the Reel loops
+    finally:
+        pg.close()
     return out
 
 def render(p, outdir):
     """Writes banner.png (transparent) and end.png into outdir. Returns (banner, end)."""
-    from playwright.sync_api import sync_playwright
+    from .render import page
     outdir = Path(outdir); outdir.mkdir(parents=True, exist_ok=True)
     b, e = outdir / "banner.png", outdir / "end.png"
-    with sync_playwright() as pw:
-        br = pw.chromium.launch(); pg = br.new_page(viewport={"width": 1080, "height": 1920})
+    pg = page(1080, 1920)
+    try:
         pg.set_content(banner_html(p)); pg.wait_for_timeout(250); pg.screenshot(path=str(b), omit_background=True)
         pg.set_content(end_html(p)); pg.wait_for_timeout(250); pg.screenshot(path=str(e))
-        br.close()
+    finally:
+        pg.close()
     return b, e

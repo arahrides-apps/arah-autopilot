@@ -131,7 +131,7 @@ def _own_list():
             seen.add(fid); tok = None
             while True:
                 r = s.files().list(q=f"'{fid}' in parents and trashed=false", pageSize=200, pageToken=tok,
-                                   fields="nextPageToken,files(id,name,mimeType,size,videoMediaMetadata)",
+                                   fields="nextPageToken,files(id,name,mimeType,size,videoMediaMetadata,thumbnailLink)",
                                    supportsAllDrives=True, includeItemsFromAllDrives=True).execute()
                 for f in r.get("files", []):
                     if f["mimeType"] == "application/vnd.google-apps.folder":
@@ -139,14 +139,58 @@ def _own_list():
                     elif f["name"].lower().endswith(VID_EXT) and int(f.get("size", 0)) <= (300 << 20):
                         dur = int((f.get("videoMediaMetadata") or {}).get("durationMillis", 0)) / 1000 or 10
                         words = re.sub(r"[_\-.]", " ", path + " " + os.path.splitext(f["name"])[0]).lower()
-                        _OWN.append({"key": "drive-video:" + f["id"], "tags": words, "duration": dur, "drive": f["id"], "own": True, "via": "own"})
+                        _OWN.append({"key": "drive-video:" + f["id"], "tags": words + " " + _labels().get(f["id"], ""), "duration": dur, "drive": f["id"],
+                                     "own": True, "via": "own", "thumb": f.get("thumbnailLink")})
                 tok = r.get("nextPageToken")
                 if not tok:
                     break
         log.info("Drive: %d video clips found", len(_OWN))
+        _label_new(creds)
     except Exception as e:
         log.warning("Drive clip listing failed: %s", e)
     return _OWN
+
+LABELS = ROOT / "content" / "clip_labels.json"
+_LAB = None
+def _labels():
+    global _LAB
+    if _LAB is None:
+        try: _LAB = json.loads(LABELS.read_text())
+        except Exception: _LAB = {}
+    return _LAB
+
+def _label_new(creds, most=40):
+    """Phone clips are named like IMG_4521.MOV, so their names say nothing. Gemini looks at each clip's Drive preview image ONCE and
+    describes it in keywords (beach, road, car, family, jerk, waterfall...); the words are saved in content/clip_labels.json and used to
+    match clips to posts. Up to 40 new clips a run."""
+    from . import vision as V
+    if not V.ai_on():
+        return
+    lab = _labels(); todo = [h for h in _OWN if h["drive"] not in lab and h.get("thumb")][:most]
+    if not todo:
+        return
+    try:
+        import requests
+        from google.auth.transport.requests import Request
+        creds.refresh(Request())
+    except Exception as e:
+        log.warning("clip labels: could not get a Drive token: %s", e); return
+    n = 0
+    for h in todo:
+        try:
+            r = requests.get(h["thumb"].replace("=s220", "=s800"), headers={"Authorization": "Bearer " + creds.token}, timeout=30)
+            r.raise_for_status()
+            txt = V.ask([r.content, "This is a frame from a short video. Describe what it shows in 6 to 12 lowercase keywords separated by spaces "
+                         "(the place, the activity, people, food, vehicles, e.g. 'beach sea sand family swimming' or 'car road driving hills'). Keywords only."], 120) or ""
+            words = " ".join(w for w in re.findall(r"[a-z]+", txt.lower()) if len(w) > 2)[:200]
+            if words:
+                lab[h["drive"]] = words; h["tags"] += " " + words; n += 1
+        except Exception as e:
+            log.warning("clip label failed: %s", e)
+    if n:
+        try: LABELS.write_text(json.dumps(lab, indent=0))
+        except Exception: pass
+        log.info("labelled %d Drive clips", n)
 
 def _own(q):
     words = [w for w in re.findall(r"[a-z]{4,}", q.lower()) if w not in ("jamaica", "jamaican", "caribbean")]

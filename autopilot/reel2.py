@@ -48,15 +48,16 @@ body{{width:{W}px;height:{HH}px;background:transparent;font-family:'Poppins','In
 </style></head><body><div class=shade></div>{_brand()}<div class=cap>{body}</div><div class=dots>{dots}</div></body></html>"""
 
 def render_captions(lines, outdir):
-    from playwright.sync_api import sync_playwright
+    from .render import page
     outdir = Path(outdir); outdir.mkdir(parents=True, exist_ok=True); out = []
-    with sync_playwright() as pw:
-        br = pw.chromium.launch(); pg = br.new_page(viewport={"width": W, "height": HH})
+    pg = page(W, HH)
+    try:
         for i, t in enumerate(lines):
             f = outdir / f"cap_{i}.png"
             pg.set_content(_caption_html(t, i == 0, i - 1, len(lines) - 1)); pg.wait_for_timeout(120)
             pg.screenshot(path=str(f), omit_background=True); out.append(f)
-        br.close()
+    finally:
+        pg.close()
     return out
 
 MOVES = [  # (zoom expression, x expression, y expression) over N frames: push in, pull out, pan right, pan left, push to top
@@ -67,6 +68,22 @@ MOVES = [  # (zoom expression, x expression, y expression) over N frames: push i
     ("1.0+0.12*on/N", "iw/2-(iw/zoom/2)", "(ih-ih/zoom)*0.25"),
 ]
 TRANS = ["fadewhite", "slideleft", "zoomin", "smoothup", "slideright", "circleopen"]
+
+DEFER = None        # a list while add_reels collects Reels: their ffmpeg jobs then run 3-4 at a time instead of one by one
+
+def run_deferred(jobs, workers=None):
+    """Run collected ffmpeg jobs in parallel. Returns the set of outputs that failed."""
+    import os
+    from concurrent.futures import ThreadPoolExecutor
+    workers = workers or max(2, min(4, (os.cpu_count() or 2)))
+    def one(job):
+        cmd, out = job
+        try:
+            subprocess.run(cmd, check=True, timeout=600); return None
+        except Exception:
+            return str(out)
+    with ThreadPoolExecutor(workers) as ex:
+        return {r for r in ex.map(one, jobs) if r}
 
 def pick_music(seed):
     tracks = sorted(MUSIC.glob("*.mp3")) + sorted(MUSIC.glob("*.m4a")) if MUSIC.exists() else []
@@ -146,6 +163,9 @@ def make_hook_reel(photos, lines, end_img, out, seed=0, hook_s=3 * BEAT, beat_s=
         a = 2 * n + 2
         cmd += ["-map", f"{a}:a", "-af", f"afade=t=in:d=0.4,afade=t=out:st={total - 0.8:.2f}:d=0.8", "-c:a", "aac", "-b:a", "160k"]
     cmd += ["-t", f"{total:.2f}", "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
-    subprocess.run(cmd, check=True, timeout=600)
+    if DEFER is not None:
+        DEFER.append((cmd, out))
+    else:
+        subprocess.run(cmd, check=True, timeout=600)
     make_hook_reel.credit = credit if music else None
     return out, bool(music)
