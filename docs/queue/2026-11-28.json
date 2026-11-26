@@ -96,6 +96,106 @@
    "reel": "media/2026-11-28/2026-11-28_0200_deal.mp4"
   },
   {
+   "id": "2026-11-28_0700_deal",
+   "date": "2026-11-28",
+   "slot": "2026-11-28T07:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: Duplicate swipe buttons in top right; Harsh shadows make front bumper dark; Messy background with stacked tires looks amateur; Unblurred visible license plate. Look closely before approving.",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar suv shown for the Toyota C-HR (same body style, from our fleet photos)",
+    "1 of 5 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-28/2026-11-28_0700_deal_1.jpg",
+    "media/2026-11-28/2026-11-28_0700_deal_2.jpg",
+    "media/2026-11-28/2026-11-28_0700_deal_3.jpg",
+    "media/2026-11-28/2026-11-28_0700_deal_4.jpg",
+    "media/2026-11-28/2026-11-28_0700_deal_5.jpg"
+   ],
+   "copy_text": "SUVs from US$95 a day 🚗\n\nToyota C-HR, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "SUVs for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
+   },
+   "caption": "SUVs from US$95 a day 🚗\n\nToyota C-HR, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Ocho Rios and the north coast\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n#OchoRios #JamaicaRentalCar #RentJamaican #JamaicaVacation #RentACarJamaica",
+   "beat_lines": [
+    "From US$95 a day",
+    "Toyota C-HR, Suzuki Vitara",
+    "A higher seat and more room for the family and the bags.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/ea311aa9de28cdf0.jpg"
+   ],
+   "_deal_k": 11,
+   "photo": {
+    "id": "local:arah_listing_194_1_2024-toyota-rav4",
+    "name": "arah_listing_194_1_2024-toyota-rav4",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-28_1100_deal",
+   "date": "2026-11-28",
+   "slot": "2026-11-28T11:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "⚠ Art director check: Unappealing, dirty concrete wall background; Crowded shot parked next to another car; Duplicate swipe indicator in top right corner; Amateur snapshot lighting with harsh shadows. Look closely before approving.",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar suv shown for the Honda CR-V (same body style, from our fleet photos)",
+    "1 of 5 slides have photos",
+    "No music on this Reel: add a trending sound in the Instagram app after it posts (cuts are on a 120 BPM beat, so most trending sounds line up).",
+    "Goes out as a Reel (POV Reel, about 5s-7s, loops: 4 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app)."
+   ],
+   "images": [
+    "media/2026-11-28/2026-11-28_1100_deal_1.jpg",
+    "media/2026-11-28/2026-11-28_1100_deal_2.jpg",
+    "media/2026-11-28/2026-11-28_1100_deal_3.jpg",
+    "media/2026-11-28/2026-11-28_1100_deal_4.jpg",
+    "media/2026-11-28/2026-11-28_1100_deal_5.jpg"
+   ],
+   "copy_text": "SUVs from US$100 a day 🚗\n\nHonda CR-V, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "SUVs for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Montego Bay, Jamaica",
+    "id": "115773858436055"
+   },
+   "caption": "SUVs from US$100 a day 🚗\n\nHonda CR-V, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends Nov 30. Conditions apply.\n\nPlanning Jamaica? Save this post 🔖 and send it to your travel partner. Where is your first stop? 👇\n\nCar rental in Montego Bay, Jamaica | Airport pickup\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n📷 Photos: Photo by Retired electrician, Wikimedia Commons (CC0); Photo by 玄史生, Wikimedia Commons (CC BY 3.0)\n\n#MontegoBayJamaica #JamaicaRentalCar #ArahRides #TravelJamaica #JamaicaTravel",
+   "beat_lines": [
+    "From US$100 a day",
+    "Honda CR-V, Suzuki Vitara",
+    "A higher seat and more room for the family and the bags.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/9700fd270a5d1da8.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b579b27284f8ea79.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/5fd04513a9918cee.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/3de742ee14c8f064.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b31ff8ec32ac0e25.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/e9c1fd4a86da1617.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/1ccc80d1766f824e.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/be3d9f00d21b1016.jpg"
+   ],
+   "_deal_k": 12,
+   "photo": {
+    "id": "local:arah_b3_12_suzuki-vitara-red",
+    "name": "arah_b3_12_suzuki-vitara-red",
+    "source": "local",
+    "credit": "Arah Rides"
+   },
+   "status": "pending",
+   "reel_format": "POV",
+   "reel_kind": "POV Reel, about 5s-7s, loops: 4 photos + 0 video clips, cuts on a 120 BPM beat, add a trending sound in the Instagram app",
+   "reel": "media/2026-11-28/2026-11-28_1100_deal.mp4"
+  },
+  {
    "id": "2026-11-28_1400_deposits",
    "date": "2026-11-28",
    "slot": "2026-11-28T14:00:00-05:00",
