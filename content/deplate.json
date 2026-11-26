@@ -94,12 +94,19 @@
 "local:local:arah_listing_207_1_2021-toyota-rush": [],
 "local:local:arah_listing_114_2_2021-suzuki-xl7": [],
 "local:local:arah_listing_180_2_2018-toyota-mark-x": [],
-"local:local:arah_listing_161_2_2017-bmw-3-series": [],
-"local:local:arah_listing_165_2_2018-subaru-xv": [],
-"local:local:arah_listing_206_1_2018-suzuki-vitara": [],
-"local:local:arah_listing_76_1_2021-honda-cr-v": [],
+"local:local:arah_listing_161_1_2017-bmw-3-series": [],
+"local:local:arah_listing_165_1_2018-subaru-xv": [],
+"local:local:arah_listing_64_2_2023-toyota-rav4": [],
+"local:local:arah_listing_76_2_2021-honda-cr-v": [],
 "local:local:arah_listing_255_2_honda-vezel-hrv": [],
-"local:local:arah_listing_254_2_honda-vezel-hrv": [],
-"local:local:arah_listing_194_1_2024-toyota-rav4": [],
-"local:local:arah_b3_12_suzuki-vitara-red": []
+"local:local:arah_listing_268_2_2016-honda-vezel-hrv": [],
+"local:local:arah_b4_7_kia-seltos-red": [
+[
+0.619,
+0.697,
+0.826,
+0.771
+]
+],
+"local:local:arah_listing_171_2_2022-kia-seltos": []
 }
