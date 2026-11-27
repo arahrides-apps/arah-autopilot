@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-26T13:48:03.818776-05:00",
+ "generated": "2026-11-26T23:59:38.673559-05:00",
  "notes": [
-  "Run check · photos used 31 · openverse 171 searches / 609 results, pixabay 195 searches / 9750 results, unsplash 15 searches / 7 results, wikimedia 54 searches / 581 results · Gemini checks answered 15 · 2 planned posts became another type (no fitting photo)",
+  "Run check · photos used 38 · openverse 138 searches / 421 results, pixabay 140 searches / 6844 results, unsplash 45 searches / 15 results, wikimedia 124 searches / 1509 results · Gemini checks answered 165 · 6 planned posts became another type (no fitting photo)",
   "Run check · video clips added to Reels 0 (your Drive clips 0, Pexels 0, Wikimedia 0, Pixabay 0) · Drive clips found 0 · video libraries on: Pixabay, Wikimedia"
  ],
  "posts": [
@@ -7175,6 +7175,95 @@
    "reel": "media/2026-11-29/2026-11-29_0700_deal.mp4"
   },
   {
+   "id": "2026-11-29_0900_place",
+   "date": "2026-11-29",
+   "slot": "2026-11-29T09:00:00-05:00",
+   "type": "place",
+   "flags": [
+    "Left out a photo that did not show Luminous Lagoon",
+    "Left out a photo that did not show Luminous Lagoon",
+    "Left out a photo that did not show Lovers' Leap",
+    "Left out a photo that did not show Black River",
+    "Left out a photo that did not show Black River",
+    "Left out a photo that did not show Blue Hole",
+    "Left out a photo that did not show Blue Hole",
+    "Left out a photo that did not show Somerset Falls",
+    "Left out a photo that did not show Middle Quarters",
+    "Left out a photo that did not show Middle Quarters",
+    "Left out a photo that did not show Holy Trinity Cathedral",
+    "Left out a photo that did not show Holy Trinity Cathedral",
+    "Left out a photo that did not show Holy Trinity Cathedral",
+    "Left out a photo that did not show Frenchman's Cove",
+    "Photo of Frenchman's Bay found online (wikimedia), checked by AI",
+    "Place named in the photo's own title or article",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "Left out a photo that did not match: Getting there. Pick up at Kingston, Norman Manley, Montego B",
+    "1 of 6 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-29/2026-11-29_0900_place_1.jpg",
+    "media/2026-11-29/2026-11-29_0900_place_2.jpg",
+    "media/2026-11-29/2026-11-29_0900_place_3.jpg",
+    "media/2026-11-29/2026-11-29_0900_place_4.jpg",
+    "media/2026-11-29/2026-11-29_0900_place_5.jpg",
+    "media/2026-11-29/2026-11-29_0900_place_6.jpg"
+   ],
+   "photo": {
+    "id": "wikimedia-file:File:Fog hangs over the village of Section in the Blue Mountains of Portland Parish, Jamaica.jpg",
+    "name": "wikimedia-e3cf2c195e2f",
+    "source": "wikimedia",
+    "credit": "Photo by Matthew.kowal, Wikimedia Commons (CC BY-SA 4.0)"
+   },
+   "copy_text": "Frenchman's Bay Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nFrenchman's Bay. Sand, sea, your pace. 🌴\n\nA St. Elizabeth beach worth the drive. Pick up your car and make a day of it.\n\nHills, villages and views you cannot see from a resort. Your own car means your own timetable.\n\nGetting there: Pick up at Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ and choose a road.\n\nLeave room for roadside stops. Waterfalls, beaches, jerk and coffee are all a drive away.",
+   "alt": "Scenery in Frenchman's Bay, Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Ocho Rios, Jamaica",
+    "id": "111964835488149"
+   },
+   "caption": "Frenchman's Bay Jamaica by rental car: how to get there, what to do nearby and how to book.\n\nFrenchman's Bay. Sand, sea, your pace. 🌴\n\nA St. Elizabeth beach worth the drive. Pick up your car and make a day of it.\n\nHills, villages and views you cannot see from a resort. Your own car means your own timetable.\n\nGetting there: Pick up at Kingston, Norman Manley, Montego Bay offices, MBJ or OCJ and choose a road.\n\nLeave room for roadside stops. Waterfalls, beaches, jerk and coffee are all a drive away.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends tomorrow. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental for Frenchman's Bay, Jamaica\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n📷 Photos: Photo by Thank You (23 Millions+) views, Wikimedia Commons (CC BY 2.0); Photo by SpaceEconomist192, Wikimedia Commons (CC BY-SA 4.0); Photo by Paul Dober, Wikimedia Commons (CC BY 3.0); Photo by Avishka, Wikimedia Commons (CC BY-SA 4.0); Photo by Carey C, Wikimedia Commons (CC BY-SA 3.0); Photo by Mattstone911, Wikimedia Commons (CC BY-SA 3.0); Photo by Stufffreak, Wikimedia Commons (CC BY-SA 4.0); Photo by MizoWNA, Wikimedia Commons (CC BY 4.0); Photo by Diego Delso, Wikimedia Commons (CC BY-SA 4.0); Photo by nigel burgher, Wikimedia Commons (CC BY 2.0); Photo by Tchombem, Wikimedia Commons (CC BY-SA 4.0); Photo by Acampbell3000, Wikimedia Commons (CC BY 3.0); Photo by pismay, Wikimedia Commons (CC BY-SA 3.0); kurmanstaff (CC BY, via Openverse); Photo by Ikaros1975, Wikimedia Commons (CC BY-SA 3.0)\n\n#FrenchmansBay #JamaicaCarRental #ArahRides #VisitJamaica #AirportPickupJamaica",
+   "beat_lines": [
+    "What you will love.",
+    "Getting there.",
+    "Make a day of it.",
+    "Know the price before you land."
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/2fdc1799459a9714.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b041634e58f2d257.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/70bd73cdd46c20ed.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/eadecab12269a82e.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/213e5d209968b1d9.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/1991efd238150b4f.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/ae2b2d3f0cc6bd66.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/c2ee0fd2c66a74c4.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/58c293b5aa008d14.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/f14909bf61163836.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/e6344076ac6d243f.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/276bef81526c8f48.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/bd4717e99c7b020b.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/5bc837f685c2f892.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/8c6fe60ed4ecb591.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/openverse/9b5def3378af3514.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/6c073593854a7d7b.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/82e3e3eb1c957210.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b03665b6e3146cee.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/e6df4fcb4262626f.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/140eabfd27eb1c1f.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/205224cd95c8d0fa.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/883758cc383b9f7d.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/11a61a88a508ecfa.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/50241393ee9024b0.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/72957c6ec19eb003.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/dba48f747e98cf38.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/9541c0d5ff5a2ba3.jpg"
+   ],
+   "status": "pending"
+  },
+  {
    "id": "2026-11-29_1100_deal",
    "date": "2026-11-29",
    "slot": "2026-11-29T11:00:00-05:00",
@@ -7262,6 +7351,58 @@
     "name": "wikimedia-126486858",
     "source": "wikimedia",
     "credit": "Photo by Alandislands, Wikimedia Commons (CC BY-SA 4.0)"
+   },
+   "status": "pending"
+  },
+  {
+   "id": "2026-11-29_1600_deal",
+   "date": "2026-11-29",
+   "slot": "2026-11-29T16:00:00-05:00",
+   "type": "deal",
+   "flags": [
+    "Left out a photo that did not show Treasure Beach",
+    "NO COVER PHOTO FOUND: add photos to the library, this cover is text only",
+    "Number plate visible (kept sharp on purpose)",
+    "Similar suv shown for the Kia Seltos (same body style, from our fleet photos)",
+    "1 of 5 slides have photos"
+   ],
+   "images": [
+    "media/2026-11-29/2026-11-29_1600_deal_1.jpg",
+    "media/2026-11-29/2026-11-29_1600_deal_2.jpg",
+    "media/2026-11-29/2026-11-29_1600_deal_3.jpg",
+    "media/2026-11-29/2026-11-29_1600_deal_4.jpg",
+    "media/2026-11-29/2026-11-29_1600_deal_5.jpg"
+   ],
+   "copy_text": "SUVs from US$110 a day 🚗\n\nKia Seltos, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.",
+   "alt": "SUVs for rent in Jamaica (carousel: swipe for more)",
+   "location": {
+    "name": "Kingston, Jamaica",
+    "id": "109489972411518"
+   },
+   "caption": "SUVs from US$110 a day 🚗\n\nKia Seltos, Suzuki Vitara, MG ZS and more.\nDeposits from US$100. Choose the car you want to drive at arahrides.com, or ask Winston on WhatsApp.\n\nDecember dates are filling fast. Lock in your car now.\nBase daily rate; holiday and date-specific prices can differ. Your quote shows the full price before you pay.\n\n🎄🔥 Holiday Black Friday + Cyber Monday: up to US$40 off with code PureCyber at checkout. Ends tomorrow. Conditions apply.\n\nTap the bookmark 🔖 so you can find this when you plan your trip. Tag who's coming with you and tell us your pick 👇\n\nCar rental in Kingston, Jamaica | Pickup at Norman Manley Airport\n\nBook your car rental in minutes on ArahRides.com 🚗\n💻 Online: arahrides.com\n💬 WhatsApp Winston, 24/7: https://wa.me/12013713152 (quote, book and pay in one chat)\n💳 Pay your way at checkout: Klarna, Affirm, Link, Google Pay and Apple Pay\n\n📍 Car rental in Jamaica · Airport pickup at Montego Bay (MBJ), Kingston (KIN) and Ocho Rios\n\nAvailability changes daily. Check availability and book your vehicle at www.arahrides.com or with Winston on WhatsApp.\n\n📷 Photos: Photo by AIMHO'S REBELLION 8490s, Wikimedia Commons (CC BY-SA 4.0); Photo by Aaaatu, Wikimedia Commons (CC BY-SA 4.0); Photo by 이재림의 카잼TV_Studio CAR JAM, Wikimedia Commons (CC BY 3.0); Photo by Greg Gjerdingen  from Willmar, USA, Wikimedia Commons (CC BY 2.0); Photo by JustAnotherCarDesigner, Wikimedia Commons (CC BY-SA 4.0); Photo by Retired electrician, Wikimedia Commons (CC0); Photo by Dhaval Surana, Wikimedia Commons (CC BY 4.0)\n\n#KingstonJamaica #SelfDriveJamaica #RentJamaican #TravelJamaica #CarRentalJamaica",
+   "beat_lines": [
+    "From US$110 a day",
+    "Kia Seltos, Suzuki Vitara",
+    "A higher seat and more room for the family and the bags.",
+    "Check availability: arahrides.com or Winston"
+   ],
+   "raw": [
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/f94bfdc1ba25883f.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/56b4eadec78a4080.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/b316bcbc14e0e82b.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/d8d0832e682b5f60.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/1e075c6990a66cd5.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/a8ba6e00732480f8.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/813376ddc0423085.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/wikimedia/eee7c705869688d8.jpg",
+    "/home/runner/work/arah-autopilot/arah-autopilot/cache/local/9f47da1a97933592.jpg"
+   ],
+   "_deal_k": 11,
+   "photo": {
+    "id": "local:arah_listing_204_2_2022-suzuki-vitara",
+    "name": "arah_listing_204_2_2022-suzuki-vitara",
+    "source": "local",
+    "credit": "Arah Rides"
    },
    "status": "pending"
   },
