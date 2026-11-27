@@ -75,12 +75,12 @@
    "Falmouth Trelawny",
    "Port of Falmouth",
    "Historic Falmouth",
-   "Falmouth Harbour"
+   "Falmouth Harbour Jamaica"
   ],
   "queries": [
    "Falmouth Jamaica town",
-   "Historic Falmouth Jamaica architecture",
-   "Port of Falmouth cruise terminal",
+   "Historic Falmouth Jamaica",
+   "Port of Falmouth Jamaica",
    "Water Square Falmouth Jamaica"
   ],
   "files": [
@@ -95,250 +95,94 @@
    "File:Falmouth, Jamaica I.jpg",
    "File:Falmouth, Jamaica II.jpg",
    "File:Falmouth, Jamaica III.jpg",
-   "File:Falmouth, Jamaica.jpg"
+   "File:Road in Falmouth, Jamaica, Apr 2014.jpg"
   ]
  },
  "martha brae": {
   "aliases": [
    "Martha Brae River",
    "Rio Martha Brae",
+   "Martha Brae Village",
    "Rafter's Village",
-   "Martha Brea",
-   "Marthae Brae"
+   "Martha Brea"
   ],
   "queries": [
-   "Martha Brae Jamaica bamboo rafting",
-   "Martha Brae River Falmouth",
-   "bamboo raft Martha Brae",
-   "Rafters Village Martha Brae"
+   "Martha Brae bamboo rafting",
+   "Martha Brae River Jamaica",
+   "Rafters Village Martha Brae",
+   "bamboo raft Martha Brae"
   ],
-  "files": []
+  "files": [
+   "File:Jamaica Martha Brea River.jpg",
+   "File:Dr James Johnston - Martha Brae Bridge, Trelawny, Jamaica 7248705622.jpg"
+  ]
  },
  "luminous lagoon": {
   "aliases": [
    "Glistening Waters",
    "Falmouth Luminous Lagoon",
-   "Glistening Waters Luminous Lagoon",
+   "Rocklands Lagoon",
+   "Glistening Waters Marina",
    "Oyster Bay Lagoon"
   ],
   "queries": [
-   "Luminous Lagoon Jamaica bioluminescence",
-   "Glistening Waters Falmouth night",
-   "Luminous Lagoon Jamaica glowing water",
-   "Falmouth Jamaica bioluminescent bay"
+   "Luminous Lagoon Jamaica night",
+   "Glistening Waters Falmouth Jamaica",
+   "Luminous Lagoon bioluminescence Jamaica",
+   "Falmouth Jamaica glowing water"
   ],
   "files": []
  },
- "bamboo avenue": {
+ "frenchman's cove": {
   "aliases": [
-   "Holland Bamboo",
-   "Holland Bamboo Avenue",
-   "Holland Bamboo Shrine",
-   "Bamboo Grove Jamaica",
-   "Bamboo Cathedral Jamaica"
+   "Frenchmans Cove",
+   "Frenchman's Cove Resort",
+   "Frenchman's Cove Beach",
+   "Frenchmans Cove Jamaica",
+   "Frenchmans Bay"
   ],
   "queries": [
-   "Holland Bamboo Jamaica",
-   "Bamboo Avenue St Elizabeth Jamaica",
-   "Holland Bamboo Avenue road",
-   "Bamboo Avenue Jamaica"
+   "Frenchman's Cove Jamaica",
+   "Frenchman's Cove beach river",
+   "Frenchman's Cove Portland",
+   "Frenchmans Cove swing river"
   ],
   "files": [
-   "File:Dr James Johnston - Bamboo Avenue, Holland Estate, St Elizabeth, Jamaica 7145839635.jpg",
-   "File:Bamboo Ave in Jamaica south - panoramio.jpg"
+   "File:Frenchman's Cove (32306710322).jpg",
+   "File:Frenchman's cove1.JPG",
+   "File:Frenchman's cove2.JPG",
+   "File:Port Antonio banner Frenchman's Cove.jpg"
   ]
  },
- "holywell": {
+ "winnifred beach": {
   "aliases": [
-   "Holywell Recreational Park",
-   "Holywell National Park",
-   "Holywell Park Jamaica",
-   "Holywell Recreation Area"
+   "Winifred Beach",
+   "Fairy Hill Beach",
+   "Winnifred Bay"
   ],
   "queries": [
-   "Holywell Recreational Park Jamaica",
-   "Holywell Blue Mountains Jamaica",
-   "Holywell park Jamaica cabins",
-   "Holywell trail Blue Mountains"
+   "Winnifred Beach Jamaica",
+   "Winifred Beach Portland",
+   "Winnifred Beach Fairy Hill",
+   "Winnifred Beach Port Antonio"
   ],
   "files": [
-   "File:Blue Mountains, Jamaica.jpg",
-   "File:Sven.Littkowski.2011.Holywell.Jamaica.jpg"
-  ]
- },
- "trident castle": {
-  "aliases": [
-   "The Trident Castle",
-   "Trident Hotel Castle",
-   "Trident Villas and Castle",
-   "Trident Castle Port Antonio"
-  ],
-  "queries": [
-   "Trident Castle Jamaica",
-   "Trident Castle Port Antonio",
-   "Trident Castle oceanfront",
-   "The Trident Castle Portland"
-  ],
-  "files": []
- },
- "lovers' leap": {
-  "aliases": [
-   "Lover's Leap",
-   "Lovers Leap Jamaica",
-   "Lovers Leap Lighthouse",
-   "Lover's Leap St Elizabeth",
-   "Lovers Leap Cliff"
-  ],
-  "queries": [
-   "Lovers Leap Jamaica lighthouse",
-   "Lovers Leap St Elizabeth cliff view",
-   "Lovers Leap Jamaica coastline",
-   "Lovers Leap lookout Jamaica"
-  ],
-  "files": [
-   "File:Lovers' Leap.jpg"
-  ]
- },
- "black river": {
-  "aliases": [
-   "Black River Jamaica",
-   "Rio Caobana",
-   "Black River Town",
-   "Saint Elizabeth Black River"
-  ],
-  "queries": [
-   "Black River Jamaica",
-   "Black River safari Jamaica",
-   "Black River crocodiles Jamaica",
-   "Black River St Elizabeth Jamaica"
-  ],
-  "files": [
-   "File:Waterloo Guest House, Black River, Jamaica.JPG",
-   "File:Blackriver.JPG",
-   "File:Wildlife on Black River, Jamaica.JPG",
-   "File:St. John's Anglican Church - panoramio.jpg",
-   "File:JTF-Bravo and 1-228 transports supplies to Black River, Jamaica (9378187).jpg",
-   "File:JTF-Bravo and 1-228 transports supplies to Black River, Jamaica (9378188).jpg",
-   "File:JTF-Bravo and 1-228 transports supplies to Black River, Jamaica (9378189).jpg",
-   "File:Black River – Boot mit Safari-Gästen auf dem Black River (1998).jpg",
-   "File:Black River – Ausflugsboot im Hafen (1998).jpg",
-   "File:American Crocodile in Jamaica.jpg"
-  ]
- },
- "ys falls": {
-  "aliases": [
-   "Y.S. Falls",
-   "YS Waterfalls",
-   "YS Estate Falls",
-   "Y S Falls",
-   "YS River Falls"
-  ],
-  "queries": [
-   "YS Falls Jamaica",
-   "YS Falls St Elizabeth",
-   "YS Falls waterfall Jamaica",
-   "swimming YS Falls Jamaica"
-  ],
-  "files": [
-   "File:YS Falls.jpg",
-   "File:Y.S. Falls.jpg",
-   "File:A. Duperly & Sons - YS Falls, St Elizabeth, Jamaica 8323741460.jpg"
-  ]
- },
- "blue hole": {
-  "aliases": [
-   "Irie Blue Hole",
-   "Cool Blue Hole",
-   "Secret Falls",
-   "Island Gully Falls",
-   "Ocho Rios Blue Hole"
-  ],
-  "queries": [
-   "Blue Hole Jamaica waterfalls",
-   "Irie Blue Hole Ocho Rios",
-   "Island Gully Falls Jamaica",
-   "Secret Falls Ocho Rios Jamaica"
-  ],
-  "files": []
- },
- "rio grande rafting": {
-  "aliases": [
-   "Rio Grande Bamboo Rafting",
-   "Rio Grande River Rafting",
-   "Bamboo Rafting Portland Jamaica",
-   "Rio Grande Valley Jamaica"
-  ],
-  "queries": [
-   "Rio Grande rafting Jamaica",
-   "bamboo raft Rio Grande Portland",
-   "Rio Grande river Jamaica raft",
-   "Port Antonio Rio Grande rafting"
-  ],
-  "files": [
-   "File:Jamaica, Rio Grande1.JPG",
-   "File:Jamaica, Rio Grande2.JPG"
-  ]
- },
- "somerset falls": {
-  "aliases": [
-   "Somerset Waterfall",
-   "Somerset Falls Portland",
-   "Somerset Falls Hope Bay"
-  ],
-  "queries": [
-   "Somerset Falls Jamaica",
-   "Somerset Falls Portland",
-   "Somerset Falls Hope Bay Jamaica",
-   "Daniels River Somerset Falls"
-  ],
-  "files": []
- },
- "appleton estate": {
-  "aliases": [
-   "Appleton Sugar Estate",
-   "Appleton Rum Distillery",
-   "Joy Spence Appleton Estate Rum Experience",
-   "Appleton Estate Rum Tour"
-  ],
-  "queries": [
-   "Appleton Estate Jamaica distillery",
-   "Appleton Estate rum tour",
-   "Joy Spence Appleton Estate",
-   "Appleton Estate copper stills"
-  ],
-  "files": []
- },
- "middle quarters": {
-  "aliases": [
-   "Middlequarters",
-   "Middle Quarters Pepper Shrimp Village",
-   "Shrimp Country",
-   "Middle Quarters St Elizabeth"
-  ],
-  "queries": [
-   "Middle Quarters Jamaica",
-   "Middle Quarters pepper shrimp",
-   "Middle Quarters St Elizabeth",
-   "pepper shrimp vendors Middle Quarters"
-  ],
-  "files": [
-   "File:Middle Quarters Junction - panoramio.jpg",
-   "File:Bar at Middle Quarters - panoramio.jpg"
+   "File:Dungu's Fish Tea shack.jpg"
   ]
  },
  "treasure beach": {
   "aliases": [
    "Calabash Bay",
-   "Frenchmans Bay",
-   "Billys Bay",
-   "Great Bay Jamaica",
+   "Frenchman's Bay",
+   "Billy's Bay",
+   "Great Bay",
    "Pedro Plains"
   ],
   "queries": [
    "Treasure Beach Jamaica",
    "Calabash Bay Treasure Beach",
-   "Frenchmans Bay Jamaica",
-   "Treasure Beach St Elizabeth"
+   "Treasure Beach St Elizabeth",
+   "Frenchmans Bay Treasure Beach"
   ],
   "files": [
    "File:Treasure Beach Jamaica 2023.jpg",
@@ -349,72 +193,241 @@
    "File:Floyd's Pelican Bar.jpg"
   ]
  },
- "holy trinity cathedral": {
+ "seven mile beach": {
   "aliases": [
-   "Holy Trinity Cathedral Kingston",
-   "Kingston Cathedral",
-   "Cathedral of the Most Holy Trinity",
-   "Holy Trinity Roman Catholic Cathedral",
-   "Holy Trinity Church Kingston"
+   "Negril Beach",
+   "7 Mile Beach",
+   "Negril Seven Mile Beach",
+   "Long Bay Beach Negril",
+   "Seven Mile Beach Negril"
   ],
   "queries": [
-   "Holy Trinity Cathedral Kingston Jamaica",
-   "Holy Trinity Cathedral Jamaica interior",
-   "Holy Trinity Roman Catholic Cathedral Kingston",
-   "Holy Trinity Cathedral North Street Kingston"
+   "Seven Mile Beach Negril Jamaica",
+   "Negril Beach Jamaica coastline",
+   "Seven Mile Beach Jamaica turquoise water",
+   "Seven Mile Beach Negril sunset"
   ],
   "files": []
  },
- "frenchman's cove": {
+ "lime cay": {
   "aliases": [
-   "Frenchmans Cove",
-   "Frenchman's Cove Resort",
-   "Frenchman's Cove Beach",
-   "Frenchmans Cove Beach",
-   "Frenchman Cove"
+   "Cayo Lime",
+   "Lime Key",
+   "Lime Caye"
   ],
   "queries": [
-   "Frenchman's Cove Jamaica",
-   "Frenchmans Cove beach river",
-   "Frenchman's Cove Port Antonio",
-   "Frenchmans Cove swing Jamaica"
+   "Lime Cay Jamaica",
+   "Lime Cay Kingston",
+   "Lime Cay beach",
+   "Lime Cay island Jamaica"
   ],
   "files": [
-   "File:Frenchman's Cove (32306710322).jpg",
-   "File:Frenchman's cove1.JPG",
-   "File:Frenchman's cove2.JPG",
-   "File:Port Antonio banner Frenchman's Cove.jpg"
+   "File:Lime Cay-Kingston-Jamaica-gm.jpg"
   ]
  },
- "cinchona botanical gardens": {
+ "dunn's river falls": {
   "aliases": [
-   "Cinchona Gardens",
-   "Hill Gardens",
-   "Cinchona Botanical Garden",
-   "Cinchona Jamaica",
-   "Hill Gardens Cinchona"
+   "Dunns River Falls",
+   "Dunn's River",
+   "Dunns Falls",
+   "Las Chorreras"
   ],
   "queries": [
-   "Cinchona Botanical Gardens Jamaica",
-   "Cinchona Gardens Blue Mountains",
-   "Cinchona Jamaica view",
-   "Hill Gardens Cinchona Jamaica"
+   "Dunns River Falls Jamaica",
+   "climbing Dunns River Falls",
+   "Dunns River Falls Ocho Rios",
+   "Dunns River Falls cascade"
+  ],
+  "files": [
+   "File:Dunn's River Falls.jpg",
+   "File:Dunns River Falls climb.JPG",
+   "File:Dunns River Falls Photo Don Ramey Logan.jpg",
+   "File:Dunns River Falls wide Photo Don Ramey Logan.jpg",
+   "File:Jamaica Ocho Rios Dunn's River Falls 1.jpg",
+   "File:Jamaica Ocho Rios Dunn's River Falls 2.jpg",
+   "File:Jamaica - Ochos Rios, Dunn's River Falls - panoramio.jpg",
+   "File:Dunnsriverfalls.jpg",
+   "File:Jamaica Dunns River Falls.jpg",
+   "File:Dunn's River Falls, Ocho Rios, Jamaica.jpg",
+   "File:Dunn´s river falls and park 03.jpg",
+   "File:DunnsRiverFalls Jamaica1969 05.jpg"
+  ]
+ },
+ "ys falls": {
+  "aliases": [
+   "Y.S. Falls",
+   "YS Waterfalls",
+   "YS Estate Falls",
+   "YS River Falls"
+  ],
+  "queries": [
+   "YS Falls Jamaica",
+   "YS Falls St Elizabeth",
+   "YS Falls waterfall Jamaica",
+   "YS Falls rope swing"
+  ],
+  "files": [
+   "File:Y.S. Falls.jpg",
+   "File:YS Falls.jpg",
+   "File:A. Duperly & Sons - YS Falls, St Elizabeth, Jamaica 8323741460.jpg"
+  ]
+ },
+ "reach falls": {
+  "aliases": [
+   "Reich Falls",
+   "Reach Waterfalls",
+   "Reach Falls Portland"
+  ],
+  "queries": [
+   "Reach Falls Jamaica",
+   "Reach Falls Portland Jamaica",
+   "Reach Falls cascade pool",
+   "Reach Falls waterfall Jamaica"
+  ],
+  "files": [
+   "File:Reach Falls - panoramio.jpg"
+  ]
+ },
+ "mayfield falls": {
+  "aliases": [
+   "Mayfield River",
+   "Mayfield Falls Jamaica",
+   "The Original Mayfield Falls",
+   "Mayfield Falls and Mineral Spring"
+  ],
+  "queries": [
+   "Mayfield Falls Jamaica",
+   "Mayfield Falls cascade",
+   "Mayfield River waterfalls",
+   "Mayfield Falls Westmoreland"
+  ],
+  "files": [
+   "File:P1220021-The rope bridge at The River Walk.jpg"
+  ]
+ },
+ "konoko falls": {
+  "aliases": [
+   "Coyaba River Garden and Falls",
+   "Coyaba Falls",
+   "Konoko Falls and Park",
+   "Konoko Falls & Rainforest",
+   "Mahoe Falls"
+  ],
+  "queries": [
+   "Konoko Falls Jamaica",
+   "Konoko Falls Ocho Rios",
+   "Coyaba River Garden Falls",
+   "Mahoe Falls Konoko Jamaica"
   ],
   "files": []
  },
- "fort rocky": {
+ "somerset falls": {
   "aliases": [
-   "Rocky Fort",
-   "Fort Rocky Entertainment Zone",
-   "Rocky Point Fort",
-   "Fort Rocky Palisadoes"
+   "Somerset Falls Jamaica",
+   "Somerset Waterfalls",
+   "Somerset Falls Port Antonio"
   ],
   "queries": [
-   "Fort Rocky Jamaica",
-   "Fort Rocky Kingston",
-   "Rocky Fort Jamaica",
-   "Fort Rocky Palisadoes"
+   "Somerset Falls Jamaica",
+   "Somerset Falls Port Antonio",
+   "Somerset Falls cave boat",
+   "Somerset Falls Portland Jamaica"
   ],
   "files": []
+ },
+ "blue hole": {
+  "aliases": [
+   "Irie Blue Hole",
+   "Cool Blue Hole",
+   "Secret Falls",
+   "Ocho Rios Blue Hole",
+   "Island Gully Falls"
+  ],
+  "queries": [
+   "Irie Blue Hole Ocho Rios",
+   "Cool Blue Hole Jamaica",
+   "Island Gully Falls Jamaica",
+   "Secret Falls Jamaica Blue Hole"
+  ],
+  "files": []
+ },
+ "spur tree hill": {
+  "aliases": [
+   "Spurtree Hill",
+   "Spur Tree",
+   "Spurtree",
+   "Spur Tree Hill Road"
+  ],
+  "queries": [
+   "Spur Tree Hill Jamaica",
+   "view from Spur Tree Hill",
+   "Spur Tree Hill Manchester Jamaica",
+   "Spurtree Hill Jamaica road"
+  ],
+  "files": []
+ },
+ "mandeville": {
+  "aliases": [
+   "Mandeville, Jamaica",
+   "Mandeville Manchester",
+   "Manchester Capital"
+  ],
+  "queries": [
+   "Mandeville Jamaica town square",
+   "Mandeville Manchester Parish Jamaica",
+   "Mandeville Jamaica courthouse",
+   "Mandeville Jamaica Cecil Charlton Park"
+  ],
+  "files": [
+   "File:Mandeville-courthouse.jpg",
+   "File:Mandeville-panorama.jpg",
+   "File:Mandeville Square showing the Courthouse 1899.png",
+   "File:Park Crescent, Mandeville.jpg",
+   "File:Perth Road.jpg",
+   "File:Mandeville Church by AAlexander.jpg",
+   "File:MegaMart, Mandeville.jpg",
+   "File:Valentine & Sons - Mandeville, Jamaica, 1891 16312739672.jpg",
+   "File:Valentine and Sons - Mandeville, Jamaica, 1891 3005134579.jpg",
+   "File:A. Duperly & Son - Mandeville, Jamaica 8345843037.jpg",
+   "File:Market Scene, Mandeville, Jamaica 6824273316.jpg",
+   "File:Market Scene, Mandeville, Jamaica 6824272378.jpg"
+  ]
+ },
+ "bamboo avenue": {
+  "aliases": [
+   "Holland Bamboo",
+   "Holland Bamboo Avenue",
+   "Bamboo Grove St Elizabeth",
+   "Bamboo Walk Jamaica",
+   "Holland Bamboo Shrine"
+  ],
+  "queries": [
+   "Holland Bamboo Avenue Jamaica",
+   "Bamboo Avenue St Elizabeth",
+   "Holland Bamboo tunnel road",
+   "Bamboo Avenue Jamaica road"
+  ],
+  "files": [
+   "File:Bamboo Ave in Jamaica south - panoramio.jpg",
+   "File:Dr James Johnston - Bamboo Avenue, Holland Estate, St Elizabeth, Jamaica 7145839635.jpg"
+  ]
+ },
+ "lovers' leap": {
+  "aliases": [
+   "Lover's Leap Jamaica",
+   "Lovers Leap St Elizabeth",
+   "Lovers Leap Lighthouse",
+   "Lover's Leap St Elizabeth",
+   "Lovers Leap Lookout"
+  ],
+  "queries": [
+   "Lovers Leap Jamaica lighthouse",
+   "Lovers Leap St Elizabeth view",
+   "Lovers Leap cliff Jamaica",
+   "Lover's Leap Jamaica lookout"
+  ],
+  "files": [
+   "File:Lovers' Leap.jpg"
+  ]
  }
 }
