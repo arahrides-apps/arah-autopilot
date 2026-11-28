@@ -1,61 +1,56 @@
 {
- "elapsed_min": 40.2,
+ "elapsed_min": 12.5,
  "times": {
-  "post deal": {
-   "count": 3,
-   "secs": 1533
-  },
-  "post spotlight": {
-   "count": 2,
-   "secs": 750
-  },
-  "post deposits": {
+  "reels": {
    "count": 1,
-   "secs": 89
+   "secs": 412
+  },
+  "post deal": {
+   "count": 7,
+   "secs": 268
   },
   "search wikimedia": {
-   "count": 171,
-   "secs": 88
-  },
-  "search pixabay": {
-   "count": 336,
+   "count": 150,
    "secs": 60
   },
-  "search openverse": {
-   "count": 336,
-   "secs": 39
+  "post guide": {
+   "count": 2,
+   "secs": 49
   },
-  "post place": {
-   "count": 1,
-   "secs": 30
+  "search pixabay": {
+   "count": 258,
+   "secs": 42
+  },
+  "search openverse": {
+   "count": 258,
+   "secs": 33
+  },
+  "render pictures": {
+   "count": 54,
+   "secs": 13
   },
   "search unsplash": {
    "count": 45,
-   "secs": 11
+   "secs": 9
   },
-  "render pictures": {
-   "count": 36,
+  "post spotlight": {
+   "count": 1,
    "secs": 8
   },
   "art director checks": {
    "count": 1,
    "secs": 0
-  },
-  "reels": {
-   "count": 1,
-   "secs": 0
   }
  },
  "ai": {
-  "ok": 138,
-  "fail": 149,
+  "ok": 0,
+  "fail": 108,
   "limit": 0,
-  "streak": 24,
-  "secs": 716,
-  "read": 80
+  "streak": 15,
+  "secs": 6
  },
  "run": "draft",
  "days_done": [
-  "2026-11-30"
+  "2026-12-01"
  ]
 }
